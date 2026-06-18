@@ -689,6 +689,37 @@ function DetailPanel({ batch, onClose, acknowledged, onAcknowledge }) {
             </div>
           </div>
         )}
+
+        {/* Basecamp Alerts */}
+        {batch.basecampAlerts && batch.basecampAlerts.length > 0 && (
+          <div style={{ padding:'0 18px 20px' }}>
+            <div style={{ fontSize:10, fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase',
+                          color:'var(--muted)', marginBottom:8 }}>
+              Basecamp Alerts ({batch.basecampAlerts.length})
+            </div>
+            <div style={{ display:'flex', flexDirection:'column', gap:6 }}>
+              {batch.basecampAlerts.map((a, i) => (
+                <a key={i} href={a.basecampUrl} target="_blank" rel="noreferrer"
+                   style={{ display:'flex', justifyContent:'space-between', alignItems:'center',
+                            padding:'7px 10px', borderRadius:6, textDecoration:'none',
+                            border: `1px solid ${a.acknowledged ? 'var(--border2)' : 'var(--red-br)'}`,
+                            background: a.acknowledged ? 'var(--card)' : 'var(--red-bg)' }}>
+                  <span style={{ fontSize:11, color:'var(--text)' }}>
+                    <span style={{ fontFamily:'IBM Plex Mono', fontWeight:600 }}>{a.metric}</span>
+                    {' '}{fmt(a.value,3)} <span style={{ color:'var(--muted)' }}>({fmtDate(a.date)})</span>
+                    {a.acknowledged && a.ackBy && (
+                      <span style={{ color:'var(--muted)' }}> — acked by {a.ackBy}</span>
+                    )}
+                  </span>
+                  <span style={{ fontSize:10, fontWeight:700, letterSpacing:'0.05em', textTransform:'uppercase',
+                                  color: a.acknowledged ? 'var(--green)' : 'var(--red)', whiteSpace:'nowrap', marginLeft:10 }}>
+                    {a.acknowledged ? 'Acknowledged' : 'Open in Basecamp →'}
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -874,6 +905,16 @@ function App() {
   // Enrich batches with live-computed OOS counts
   const enrichedBatches = useMemo(() =>
     BATCHES.map(b => ({ ...b, oosCount: computeOOS(b.readings, b.product).length })), []);
+
+  // Deep-link from Basecamp: ?product=TBD&brew=3 auto-opens that batch's detail panel
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const product = params.get('product');
+    const brew = params.get('brew') ? parseInt(params.get('brew'), 10) : null;
+    if (!product || !brew) return;
+    const match = enrichedBatches.find(b => b.product === product && b.brewNums.includes(brew));
+    if (match) setSelected(match.id);
+  }, [enrichedBatches]);
 
   const filtered = useMemo(() => {
     if (config.stageFilter === 'All') return enrichedBatches;

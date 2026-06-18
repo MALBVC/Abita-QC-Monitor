@@ -1078,7 +1078,8 @@ const BATCHES = [
         "project": "cellar",
         "completed": true
       }
-    ]
+    ],
+    "basecampAlerts": []
   },
   {
     "id": "ALG 004",
@@ -1165,7 +1166,8 @@ const BATCHES = [
         "project": "brewhouse",
         "completed": true
       }
-    ]
+    ],
+    "basecampAlerts": []
   },
   {
     "id": "JOC 008",
@@ -1332,7 +1334,8 @@ const BATCHES = [
         "project": "brewhouse",
         "completed": true
       }
-    ]
+    ],
+    "basecampAlerts": []
   },
   {
     "id": "TBD 004",
@@ -1476,7 +1479,8 @@ const BATCHES = [
         "project": "brewhouse",
         "completed": true
       }
-    ]
+    ],
+    "basecampAlerts": []
   },
   {
     "id": "BEC 002, 003",
@@ -1646,7 +1650,8 @@ const BATCHES = [
         "project": "brewhouse",
         "completed": true
       }
-    ]
+    ],
+    "basecampAlerts": []
   },
   {
     "id": "AND 025, 026",
@@ -1811,7 +1816,8 @@ const BATCHES = [
         "project": "brewhouse",
         "completed": true
       }
-    ]
+    ],
+    "basecampAlerts": []
   },
   {
     "id": "STG 008",
@@ -2009,7 +2015,8 @@ const BATCHES = [
         "project": "brewhouse",
         "completed": true
       }
-    ]
+    ],
+    "basecampAlerts": []
   },
   {
     "id": "STG 009",
@@ -2266,7 +2273,8 @@ const BATCHES = [
         "project": "cellar",
         "completed": true
       }
-    ]
+    ],
+    "basecampAlerts": []
   },
   {
     "id": "AND 027, 028",
@@ -2282,10 +2290,21 @@ const BATCHES = [
     "tank": "BH33",
     "labTank": "BH33",
     "tankSource": "lab",
-    "lastReading": "2026-06-17",
-    "lastSource": "GC",
-    "numReadings": 12,
+    "lastReading": "2026-06-18",
+    "lastSource": "FERM",
+    "numReadings": 13,
     "readings": [
+      {
+        "date": "2026-06-18",
+        "sample": "AND 27-28 BH33",
+        "stage": "FERM",
+        "tank": "BH33",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 7.81,
+        "Turbidity": 682.8535394668579,
+        "FG": 3.85
+      },
       {
         "date": "2026-06-17",
         "sample": "AND 27,28 33",
@@ -2435,7 +2454,8 @@ const BATCHES = [
         "project": "brewhouse",
         "completed": true
       }
-    ]
+    ],
+    "basecampAlerts": []
   },
   {
     "id": "STG 007",
@@ -2633,7 +2653,8 @@ const BATCHES = [
         "project": "brewhouse",
         "completed": true
       }
-    ]
+    ],
+    "basecampAlerts": []
   },
   {
     "id": "GLD 041, 042",
@@ -2809,7 +2830,8 @@ const BATCHES = [
         "project": "brewhouse",
         "completed": true
       }
-    ]
+    ],
+    "basecampAlerts": []
   },
   {
     "id": "AMB 021, 022",
@@ -3234,7 +3256,8 @@ const BATCHES = [
         "project": "packaging",
         "completed": true
       }
-    ]
+    ],
+    "basecampAlerts": []
   },
   {
     "id": "GLD 031, 032",
@@ -3439,7 +3462,8 @@ const BATCHES = [
         "project": "cellar",
         "completed": true
       }
-    ]
+    ],
+    "basecampAlerts": []
   },
   {
     "id": "AMB 035, 036",
@@ -3609,7 +3633,8 @@ const BATCHES = [
         "project": "brewhouse",
         "completed": true
       }
-    ]
+    ],
+    "basecampAlerts": []
   },
   {
     "id": "GLD 033, 034, 035, 036, 043, 044, 045, 046",
@@ -4027,7 +4052,8 @@ const BATCHES = [
         "project": "brewhouse",
         "completed": true
       }
-    ]
+    ],
+    "basecampAlerts": []
   },
   {
     "id": "GLD 025, 028",
@@ -4251,7 +4277,8 @@ const BATCHES = [
         "project": "cellar",
         "completed": true
       }
-    ]
+    ],
+    "basecampAlerts": []
   },
   {
     "id": "GLD 037, 038, 039, 040",
@@ -4471,7 +4498,8 @@ const BATCHES = [
         "project": "cellar",
         "completed": true
       }
-    ]
+    ],
+    "basecampAlerts": []
   },
   {
     "id": "ALG 003",
@@ -4901,7 +4929,8 @@ const BATCHES = [
         "project": "cellar",
         "completed": true
       }
-    ]
+    ],
+    "basecampAlerts": []
   },
   {
     "id": "AND 011, 012",
@@ -5416,7 +5445,8 @@ const BATCHES = [
         "project": "packaging",
         "completed": true
       }
-    ]
+    ],
+    "basecampAlerts": []
   },
   {
     "id": "AND 023, 024",
@@ -5702,7 +5732,8 @@ const BATCHES = [
         "project": "packaging",
         "completed": true
       }
-    ]
+    ],
+    "basecampAlerts": []
   },
   {
     "id": "AND 021, 022",
@@ -6127,7 +6158,8 @@ const BATCHES = [
         "project": "packaging",
         "completed": true
       }
-    ]
+    ],
+    "basecampAlerts": []
   },
   {
     "id": "STG 010",
@@ -6328,7 +6360,8 @@ const BATCHES = [
         "project": "cellar",
         "completed": true
       }
-    ]
+    ],
+    "basecampAlerts": []
   },
   {
     "id": "AMB 019, 020",
@@ -6756,7 +6789,8 @@ const BATCHES = [
         "project": "cellar",
         "completed": true
       }
-    ]
+    ],
+    "basecampAlerts": []
   },
   {
     "id": "TBD 003",
@@ -7130,7 +7164,8 @@ const BATCHES = [
         "project": "packaging",
         "completed": true
       }
-    ]
+    ],
+    "basecampAlerts": []
   },
   {
     "id": "AMB 029",
@@ -7538,7 +7573,8 @@ const BATCHES = [
         "project": "packaging",
         "completed": true
       }
-    ]
+    ],
+    "basecampAlerts": []
   },
   {
     "id": "AMB 025, 026, 027, 028, 031, 032",
@@ -8539,7 +8575,8 @@ const BATCHES = [
         "project": "packaging",
         "completed": false
       }
-    ]
+    ],
+    "basecampAlerts": []
   },
   {
     "id": "AMB 030, 033, 034",
@@ -9170,7 +9207,8 @@ const BATCHES = [
         "project": "packaging",
         "completed": false
       }
-    ]
+    ],
+    "basecampAlerts": []
   }
 ];
 
@@ -9187,7 +9225,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-06-18",
-  "lastSync": "Jun 18, 2026 \u00b7 12:06 PM",
+  "lastSync": "Jun 18, 2026 \u00b7 12:39 PM",
   "dbPath": "data/qc_monitor.db",
   "apiBase": "/api"
 };
