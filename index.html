@@ -281,10 +281,10 @@ function BatchSection({ title, batches, selectedId, onSelect, compact }) {
 }
 
 // ─── Detail Panel ─────────────────────────────────────────────────────────────
-function DetailPanel({ batch, onClose, acknowledged, onAcknowledge }) {
-  const oos = useMemo(() => computeOOS(batch.readings, batch.product), [batch]);
-  const unackedOOS = oos.filter(f => !acknowledged[`${batch.id}:${f.metric}:${f.date}:${f.sample}`]);
-  const ackedOOS   = oos.filter(f =>  acknowledged[`${batch.id}:${f.metric}:${f.date}:${f.sample}`]);
+function DetailPanel({ batch, onClose }) {
+  const basecampAlerts = batch.basecampAlerts || [];
+  const unackedAlerts = basecampAlerts.filter(a => !a.acknowledged);
+  const ackedAlerts   = basecampAlerts.filter(a =>  a.acknowledged);
 
   const [sourcePopup, setSourcePopup] = useState(null); // { text, x, y }
   useEffect(() => {
@@ -355,20 +355,20 @@ function DetailPanel({ batch, onClose, acknowledged, onAcknowledge }) {
           }}>{'✕'}</button>
         </div>
         <div style={{ display:'flex', gap:6, marginTop:10, flexWrap:'wrap' }}>
-          {unackedOOS.length > 0 &&
+          {unackedAlerts.length > 0 &&
             <span style={{ padding:'3px 10px', borderRadius:4, fontSize:12, fontWeight:700,
                             background:'var(--red-bg)', border:'1px solid var(--red-br)', color:'var(--red)',
                             fontFamily:'Barlow, sans-serif', letterSpacing:'0.03em' }}>
-              ⚠ {unackedOOS.length} OOS UNACKNOWLEDGED
+              ⚠ {unackedAlerts.length} OOS UNACKNOWLEDGED
             </span>
           }
-          {ackedOOS.length > 0 &&
+          {ackedAlerts.length > 0 &&
             <span style={{ padding:'3px 10px', borderRadius:4, fontSize:11,
                             background:'rgba(122,109,88,0.1)', border:'1px solid var(--border2)', color:'var(--muted)' }}>
-              {ackedOOS.length} acknowledged
+              {ackedAlerts.length} acknowledged
             </span>
           }
-          {oos.length === 0 &&
+          {basecampAlerts.length === 0 &&
             <span style={{ padding:'3px 10px', borderRadius:4, fontSize:12, fontWeight:600,
                             background:'var(--green-bg)', border:'1px solid var(--green-br)', color:'var(--green)' }}>
               ✓ All In Spec
@@ -378,46 +378,35 @@ function DetailPanel({ batch, onClose, acknowledged, onAcknowledge }) {
       </div>
 
       <div style={{ flex:1, overflowY:'auto', padding:'0 0 40px' }}>
-        {/* OOS Flags */}
-        {oos.length > 0 && (
+        {/* Basecamp Alerts — replaces the old client-side-only Out-of-Spec Flags list.
+            Acknowledged here means a real Basecamp comment exists, not a local click. */}
+        {basecampAlerts.length > 0 && (
           <div style={{ padding:'14px 18px 4px' }}>
             <div style={{ fontSize:10, fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase',
-                          color:'var(--muted)', marginBottom:8 }}>Out-of-Spec Flags</div>
-            {oos.map((f,i) => {
-              const key = `${batch.id}:${f.metric}:${f.date}:${f.sample}`;
-              const isAcked = !!acknowledged[key];
-              const dir = f.status === 'HIGH' ? '↑' : '↓';
-              const refStr = f.status === 'HIGH' ? `>${f.spec.high}` : `<${f.spec.low}`;
-              return (
-                <div key={i} style={{
-                  display:'flex', alignItems:'center', gap:8,
-                  padding:'7px 10px', borderRadius:6, marginBottom:5,
-                  background: isAcked ? 'rgba(122,109,88,0.07)' : 'var(--red-bg)',
-                  border: `1px solid ${isAcked ? 'var(--border)' : 'var(--red-br)'}`,
-                  opacity: isAcked ? 0.55 : 1,
-                }}>
-                  <span style={{ fontFamily:'IBM Plex Mono', fontSize:12, fontWeight:700,
-                                  color: isAcked ? 'var(--muted)' : 'var(--red)', minWidth:100 }}>
-                    {f.metric} {dir}
+                          color:'var(--muted)', marginBottom:8 }}>
+              Basecamp Alerts ({basecampAlerts.length})
+            </div>
+            <div style={{ display:'flex', flexDirection:'column', gap:6 }}>
+              {basecampAlerts.map((a, i) => (
+                <a key={i} href={a.basecampUrl} target="_blank" rel="noreferrer"
+                   style={{ display:'flex', justifyContent:'space-between', alignItems:'center',
+                            padding:'7px 10px', borderRadius:6, textDecoration:'none',
+                            border: `1px solid ${a.acknowledged ? 'var(--border2)' : 'var(--red-br)'}`,
+                            background: a.acknowledged ? 'var(--card)' : 'var(--red-bg)' }}>
+                  <span style={{ fontSize:11, color:'var(--text)' }}>
+                    <span style={{ fontFamily:'IBM Plex Mono', fontWeight:600 }}>{a.metric}</span>
+                    {' '}{fmt(a.value,3)} <span style={{ color:'var(--muted)' }}>({fmtDate(a.date)})</span>
+                    {a.acknowledged && a.ackBy && (
+                      <span style={{ color:'var(--muted)' }}> — acked by {a.ackBy}</span>
+                    )}
                   </span>
-                  <span style={{ fontFamily:'IBM Plex Mono', fontSize:13, color:'var(--text)', fontWeight:600 }}>
-                    {fmt(f.value)}{f.spec.unit}
+                  <span style={{ fontSize:10, fontWeight:700, letterSpacing:'0.05em', textTransform:'uppercase',
+                                  color: a.acknowledged ? 'var(--green)' : 'var(--red)', whiteSpace:'nowrap', marginLeft:10 }}>
+                    {a.acknowledged ? 'Acknowledged' : 'Open in Basecamp →'}
                   </span>
-                  <span style={{ fontSize:11, color:'var(--muted)' }}>spec: {refStr}{f.spec.unit}</span>
-                  <span style={{ fontSize:11, color:'var(--muted)', marginLeft:4 }}>{f.stage}</span>
-                  <span style={{ fontSize:11, color:'var(--muted2)', marginLeft:'auto', whiteSpace:'nowrap' }}>
-                    {fmtDate(f.date)} · {f.sample}
-                  </span>
-                  <button onClick={() => onAcknowledge(key)} style={{
-                    background:'none', border:'1px solid var(--border2)', borderRadius:3,
-                    color: isAcked ? 'var(--green)' : 'var(--muted)', fontSize:10, padding:'2px 6px',
-                    flexShrink:0, fontFamily:'Barlow', fontWeight:600
-                  }}>
-                    {isAcked ? '✓ ACK' : 'ACK'}
-                  </button>
-                </div>
-              );
-            })}
+                </a>
+              ))}
+            </div>
           </div>
         )}
 
@@ -686,37 +675,6 @@ function DetailPanel({ batch, onClose, acknowledged, onAcknowledge }) {
                   ))}
                 </tbody>
               </table>
-            </div>
-          </div>
-        )}
-
-        {/* Basecamp Alerts */}
-        {batch.basecampAlerts && batch.basecampAlerts.length > 0 && (
-          <div style={{ padding:'0 18px 20px' }}>
-            <div style={{ fontSize:10, fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase',
-                          color:'var(--muted)', marginBottom:8 }}>
-              Basecamp Alerts ({batch.basecampAlerts.length})
-            </div>
-            <div style={{ display:'flex', flexDirection:'column', gap:6 }}>
-              {batch.basecampAlerts.map((a, i) => (
-                <a key={i} href={a.basecampUrl} target="_blank" rel="noreferrer"
-                   style={{ display:'flex', justifyContent:'space-between', alignItems:'center',
-                            padding:'7px 10px', borderRadius:6, textDecoration:'none',
-                            border: `1px solid ${a.acknowledged ? 'var(--border2)' : 'var(--red-br)'}`,
-                            background: a.acknowledged ? 'var(--card)' : 'var(--red-bg)' }}>
-                  <span style={{ fontSize:11, color:'var(--text)' }}>
-                    <span style={{ fontFamily:'IBM Plex Mono', fontWeight:600 }}>{a.metric}</span>
-                    {' '}{fmt(a.value,3)} <span style={{ color:'var(--muted)' }}>({fmtDate(a.date)})</span>
-                    {a.acknowledged && a.ackBy && (
-                      <span style={{ color:'var(--muted)' }}> — acked by {a.ackBy}</span>
-                    )}
-                  </span>
-                  <span style={{ fontSize:10, fontWeight:700, letterSpacing:'0.05em', textTransform:'uppercase',
-                                  color: a.acknowledged ? 'var(--green)' : 'var(--red)', whiteSpace:'nowrap', marginLeft:10 }}>
-                    {a.acknowledged ? 'Acknowledged' : 'Open in Basecamp →'}
-                  </span>
-                </a>
-              ))}
             </div>
           </div>
         )}
@@ -1013,8 +971,7 @@ function App() {
         {selectedBatch && (
           <div style={{ width:'var(--panel-w)', flexShrink:0, height:'100%', overflowY:'auto',
                         transition:'transform 0.2s ease' }}>
-            <DetailPanel batch={selectedBatch} onClose={() => setSelected(null)}
-              acknowledged={acknowledged} onAcknowledge={handleAck}/>
+            <DetailPanel batch={selectedBatch} onClose={() => setSelected(null)}/>
           </div>
         )}
 

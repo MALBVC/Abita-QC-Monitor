@@ -932,7 +932,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": "2026-04-17",
     "lastSource": "FERM",
-    "numReadings": 13,
+    "numReadings": 14,
     "readings": [
       {
         "date": "2026-04-17",
@@ -944,6 +944,17 @@ const BATCHES = [
         "ABV": 4.17,
         "Turbidity": 188.10686945915222,
         "FG": 2.1
+      },
+      {
+        "date": "2026-04-17",
+        "sample": "BBW 5 BH3",
+        "stage": "GC",
+        "tank": "BH3",
+        "sourceFile": "gc 2026.xlsx",
+        "sourceSheet": "APR",
+        "Diacetyl": 0.0,
+        "Pentanedione": 0.0852,
+        "Total VDK": 0.0
       },
       {
         "date": "2026-04-16",
@@ -1208,7 +1219,7 @@ const BATCHES = [
       },
       {
         "date": "2026-06-05",
-        "sample": "JOC 8 9",
+        "sample": "JOC 8 BH9",
         "stage": "GC",
         "tank": "BH9",
         "sourceFile": "gc 2026.xlsx",
@@ -1356,7 +1367,7 @@ const BATCHES = [
     "readings": [
       {
         "date": "2026-06-15",
-        "sample": "TBD 4 11",
+        "sample": "TBD 4 BH11",
         "stage": "GC",
         "tank": "BH11",
         "sourceFile": "gc 2026.xlsx",
@@ -1498,7 +1509,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": "2026-06-13",
     "lastSource": "FERM",
-    "numReadings": 13,
+    "numReadings": 14,
     "readings": [
       {
         "date": "2026-06-13",
@@ -1510,6 +1521,17 @@ const BATCHES = [
         "ABV": 4.72,
         "Turbidity": 621.0680408477783,
         "FG": 2.42
+      },
+      {
+        "date": "2026-06-12",
+        "sample": "BEC 2 BH19",
+        "stage": "GC",
+        "tank": "BH19",
+        "sourceFile": "gc 2026.xlsx",
+        "sourceSheet": "JUN",
+        "Diacetyl": 0.0,
+        "Pentanedione": 0.0,
+        "Total VDK": 0.0
       },
       {
         "date": "2026-06-12",
@@ -1673,7 +1695,7 @@ const BATCHES = [
     "readings": [
       {
         "date": "2026-06-02",
-        "sample": "AND 25,26 21",
+        "sample": "AND 25,26 BH21",
         "stage": "GC",
         "tank": "BH21",
         "sourceFile": "gc 2026.xlsx",
@@ -2307,7 +2329,7 @@ const BATCHES = [
       },
       {
         "date": "2026-06-17",
-        "sample": "AND 27,28 33",
+        "sample": "AND 27,28 BH33",
         "stage": "GC",
         "tank": "BH33",
         "sourceFile": "gc 2026.xlsx",
@@ -2676,7 +2698,7 @@ const BATCHES = [
     "readings": [
       {
         "date": "2026-05-26",
-        "sample": "GLD 41,42 39",
+        "sample": "GLD 41,42 BH39",
         "stage": "GC",
         "tank": "BH39",
         "sourceFile": "gc 2026.xlsx",
@@ -3485,7 +3507,7 @@ const BATCHES = [
     "readings": [
       {
         "date": "2026-06-15",
-        "sample": "AMB 35,36 43",
+        "sample": "AMB 35,36 BH43",
         "stage": "GC",
         "tank": "BH43",
         "sourceFile": "gc 2026.xlsx",
@@ -3662,7 +3684,7 @@ const BATCHES = [
     "readings": [
       {
         "date": "2026-06-05",
-        "sample": "GLD 43,44,45,46 47",
+        "sample": "GLD 43,44,45,46 BH47",
         "stage": "GC",
         "tank": "BH47",
         "sourceFile": "gc 2026.xlsx",
@@ -5563,7 +5585,7 @@ const BATCHES = [
       },
       {
         "date": "2026-05-26",
-        "sample": "AND 23,24 32",
+        "sample": "AND 23,24 BH32",
         "stage": "GC",
         "tank": "BH32",
         "sourceFile": "gc 2026.xlsx",
@@ -8801,7 +8823,7 @@ const BATCHES = [
       },
       {
         "date": "2026-06-02",
-        "sample": "AMB 33,34 41",
+        "sample": "AMB 33,34 BH41",
         "stage": "GC",
         "tank": "BH41",
         "sourceFile": "gc 2026.xlsx",
@@ -9237,7 +9259,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-06-18",
-  "lastSync": "Jun 18, 2026 \u00b7 12:54 PM",
+  "lastSync": "Jun 18, 2026 \u00b7 1:29 PM",
   "dbPath": "data/qc_monitor.db",
   "apiBase": "/api"
 };
