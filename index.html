@@ -294,15 +294,12 @@ function BatchSection({ title, batches, selectedId, onSelect, compact, detailOpe
 function DetailPanel({ batch, onClose }) {
   const oos = useMemo(() => computeOOS(batch.readings, batch.product), [batch]);
   const basecampAlerts = batch.basecampAlerts || [];
-  const unackedAlerts = basecampAlerts.filter(a => !a.acknowledged);
-  const ackedAlerts   = basecampAlerts.filter(a =>  a.acknowledged);
   // Best-effort match: computeOOS() flags have no event id to link against
   // basecampAlerts directly, so approximate identity via metric+date+value.
   const basecampKeys = useMemo(() =>
     new Set(basecampAlerts.map(a => `${a.metric}|${a.date}|${a.value}`)), [basecampAlerts]);
   const untrackedFlags = useMemo(() =>
     oos.filter(f => !basecampKeys.has(`${f.metric}|${f.date}|${f.value}`)), [oos, basecampKeys]);
-  const untrackedOOS = untrackedFlags.length;
 
   const [sourcePopup, setSourcePopup] = useState(null); // { text, x, y }
   useEffect(() => {
@@ -371,34 +368,6 @@ function DetailPanel({ batch, onClose }) {
             background:'none', border:'none', color:'var(--muted)', fontSize:18,
             lineHeight:1, padding:'2px 4px', borderRadius:3
           }}>{'✕'}</button>
-        </div>
-        <div style={{ display:'flex', gap:6, marginTop:10, flexWrap:'wrap' }}>
-          {unackedAlerts.length > 0 &&
-            <span style={{ padding:'3px 10px', borderRadius:4, fontSize:12, fontWeight:700,
-                            background:'var(--red-bg)', border:'1px solid var(--red-br)', color:'var(--red)',
-                            fontFamily:'Barlow, sans-serif', letterSpacing:'0.03em' }}>
-              ⚠ {unackedAlerts.length} OOS UNACKNOWLEDGED
-            </span>
-          }
-          {ackedAlerts.length > 0 &&
-            <span style={{ padding:'3px 10px', borderRadius:4, fontSize:11,
-                            background:'rgba(122,109,88,0.1)', border:'1px solid var(--border2)', color:'var(--muted)' }}>
-              {ackedAlerts.length} acknowledged
-            </span>
-          }
-          {untrackedOOS > 0 &&
-            <span title="Out-of-spec readings detected before Basecamp alerting existed, or otherwise not yet posted as a to-do"
-                  style={{ padding:'3px 10px', borderRadius:4, fontSize:11, cursor:'help',
-                            background:'rgba(160,120,32,0.1)', border:'1px solid var(--yellow)', color:'var(--yellow)' }}>
-              {untrackedOOS} pre-Basecamp (untracked)
-            </span>
-          }
-          {oos.length === 0 &&
-            <span style={{ padding:'3px 10px', borderRadius:4, fontSize:12, fontWeight:600,
-                            background:'var(--green-bg)', border:'1px solid var(--green-br)', color:'var(--green)' }}>
-              ✓ All In Spec
-            </span>
-          }
         </div>
       </div>
 
