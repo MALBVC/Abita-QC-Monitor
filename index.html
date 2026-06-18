@@ -874,6 +874,20 @@ function App() {
     if (match) setSelected(match.id);
   }, [enrichedBatches]);
 
+  // Keep the URL in sync with the open detail panel — selecting a batch
+  // updates it to that batch's deep link, closing resets to the bare URL.
+  useEffect(() => {
+    if (selected) {
+      const sb = enrichedBatches.find(b => b.id === selected);
+      if (sb) {
+        const url = `${window.location.pathname}?product=${encodeURIComponent(sb.product)}&brew=${sb.brewNums[0]}`;
+        window.history.replaceState(null, '', url);
+      }
+    } else {
+      window.history.replaceState(null, '', window.location.pathname);
+    }
+  }, [selected, enrichedBatches]);
+
   const filtered = useMemo(() => {
     if (config.stageFilter === 'All') return enrichedBatches;
     return enrichedBatches.filter(b => b.stage === config.stageFilter);
