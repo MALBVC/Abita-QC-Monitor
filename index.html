@@ -158,7 +158,7 @@ function BatchRow({ batch, selected, onClick, compact, detailOpen }) {
     <div onClick={() => onClick(batch)}
       style={{
         display:'grid',
-        gridTemplateColumns: detailOpen ? '190px 110px 64px 44px 72px' : '190px 110px 64px 44px 48px 1fr 72px',
+        gridTemplateColumns: detailOpen ? '190px 110px 64px 44px 72px 1fr' : '190px 110px 64px 44px 48px minmax(240px,460px) 72px 1fr',
         alignItems:'center', gap:10, padding:`0 18px`, height:h,
         cursor:'pointer', borderBottom:'1px solid var(--border)',
         background: selected ? 'rgba(212,134,26,0.07)' : 'transparent',
@@ -199,9 +199,10 @@ function BatchRow({ batch, selected, onClick, compact, detailOpen }) {
           ))}
         </div>
       )}
-      <div style={{ textAlign:'right' }}>
+      <div style={{ textAlign:'left' }}>
         <OOSBadge count={oos.length}/>
       </div>
+      <div/>
     </div>
   );
 }
@@ -264,7 +265,7 @@ function BatchSection({ title, batches, selectedId, onSelect, compact, detailOpe
       </div>
       {/* Column headers */}
       <div style={{ display:'grid',
-                    gridTemplateColumns: detailOpen ? '190px 110px 64px 44px 72px' : '190px 110px 64px 44px 48px 1fr 72px',
+                    gridTemplateColumns: detailOpen ? '190px 110px 64px 44px 72px 1fr' : '190px 110px 64px 44px 48px minmax(240px,460px) 72px 1fr',
                     gap:10, padding:'0 18px', height:30, alignItems:'center',
                     background:'var(--surface)', borderBottom:'1px solid var(--border)',
                     position:'sticky', top:31, zIndex:4 }}>
@@ -274,11 +275,12 @@ function BatchSection({ title, batches, selectedId, onSelect, compact, detailOpe
             style={{ fontSize:10, fontWeight:600, letterSpacing:'0.08em', textTransform:'uppercase',
                      userSelect:'none', whiteSpace:'nowrap',
                      color: sortable && sort.key === key ? 'var(--amber)' : 'var(--muted)',
-                     textAlign: i===colDefs.length-1 ? 'right' : 'left',
+                     textAlign:'left',
                      cursor: sortable ? 'pointer' : 'default' }}>
             {label}{sortable ? (sort.key === key ? (sort.dir === 'asc' ? ' ↑' : ' ↓') : ' ↕') : ''}
           </span>
         ))}
+        <span/>
       </div>
       {sorted.map(b => (
         <BatchRow key={b.id} batch={b} selected={selectedId===b.id}
@@ -290,9 +292,11 @@ function BatchSection({ title, batches, selectedId, onSelect, compact, detailOpe
 
 // ─── Detail Panel ─────────────────────────────────────────────────────────────
 function DetailPanel({ batch, onClose }) {
+  const oos = useMemo(() => computeOOS(batch.readings, batch.product), [batch]);
   const basecampAlerts = batch.basecampAlerts || [];
   const unackedAlerts = basecampAlerts.filter(a => !a.acknowledged);
   const ackedAlerts   = basecampAlerts.filter(a =>  a.acknowledged);
+  const untrackedOOS  = Math.max(0, oos.length - basecampAlerts.length);
 
   const [sourcePopup, setSourcePopup] = useState(null); // { text, x, y }
   useEffect(() => {
@@ -376,7 +380,14 @@ function DetailPanel({ batch, onClose }) {
               {ackedAlerts.length} acknowledged
             </span>
           }
-          {basecampAlerts.length === 0 &&
+          {untrackedOOS > 0 &&
+            <span title="Out-of-spec readings detected before Basecamp alerting existed, or otherwise not yet posted as a to-do"
+                  style={{ padding:'3px 10px', borderRadius:4, fontSize:11, cursor:'help',
+                            background:'rgba(160,120,32,0.1)', border:'1px solid var(--yellow)', color:'var(--yellow)' }}>
+              {untrackedOOS} pre-Basecamp (untracked)
+            </span>
+          }
+          {oos.length === 0 &&
             <span style={{ padding:'3px 10px', borderRadius:4, fontSize:12, fontWeight:600,
                             background:'var(--green-bg)', border:'1px solid var(--green-br)', color:'var(--green)' }}>
               ✓ All In Spec
