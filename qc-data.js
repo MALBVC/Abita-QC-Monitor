@@ -7194,6 +7194,8 @@ const BATCHES = [
         "low": 2.8,
         "high": 3.2,
         "date": "2026-06-18",
+        "stage": "FIN",
+        "sample": "TBD 003 TK22",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10011642505",
         "acknowledged": false,
         "ackBy": null,
@@ -9259,7 +9261,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-06-18",
-  "lastSync": "Jun 18, 2026 \u00b7 2:52 PM",
+  "lastSync": "Jun 18, 2026 \u00b7 2:57 PM",
   "dbPath": "data/qc_monitor.db",
   "apiBase": "/api"
 };
