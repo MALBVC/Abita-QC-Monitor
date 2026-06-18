@@ -469,7 +469,7 @@ function DetailPanel({ batch, onClose }) {
                 </tr>
               </thead>
               <tbody>
-                {batch.readings.map((r,i) => {
+                {[...batch.readings].reverse().map((r,i) => {
                   const cells = [
                     r['OG'], r['Wort pH'], r['IBU (W)'],
                     r['ABV'], r['FG'], r['pH'], r['IBU'], r['CO2'], r['Total VDK']
