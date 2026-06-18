@@ -7195,9 +7195,9 @@ const BATCHES = [
         "high": 3.2,
         "date": "2026-06-18",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10011642505",
-        "acknowledged": true,
-        "ackBy": "Levi Funk",
-        "ackAt": "2026-06-18T17:24"
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null
       }
     ]
   },
@@ -9259,7 +9259,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-06-18",
-  "lastSync": "Jun 18, 2026 \u00b7 1:29 PM",
+  "lastSync": "Jun 18, 2026 \u00b7 1:38 PM",
   "dbPath": "data/qc_monitor.db",
   "apiBase": "/api"
 };
