@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QC Monitor — Abita Brewing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet"/>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="qc-data.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:      #f5f2ee;
+      --surface: #ffffff;
+      --card:    #faf8f5;
+      --card2:   #f0ece6;
+      --border:  #e0d9d0;
+      --border2: #ccc4b8;
+      --text:    #1e1a14;
+      --muted:   #5c5040;
+      --muted2:  #7a6d58;
+      --amber:   #b86e0a;
+      --amber2:  #9a5c06;
+      --red:     #b83030;
+      --red-bg:  rgba(184,48,48,0.07);
+      --red-br:  rgba(184,48,48,0.25);
+      --green:   #2e7d4f;
+      --green-bg:rgba(46,125,79,0.08);
+      --green-br:rgba(46,125,79,0.25);
+      --yellow:  #a07820;
+      --panel-w: 700px;
+    }
+    html, body, #root { height: 100%; }
+    body { background: var(--bg); color: var(--text); font-family: 'Barlow', sans-serif;
+           -webkit-font-smoothing: antialiased; overflow: hidden; }
+    ::-webkit-scrollbar { width: 5px; height: 5px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
+    select { appearance: auto; }
+    input[type=checkbox] { accent-color: var(--amber); }
+    button { cursor: pointer; font-family: inherit; }
+  .hub-back{position:fixed;top:14px;left:14px;display:inline-flex;align-items:center;gap:5px;padding:5px 11px;background:#fff;border:1px solid #e0d9d0;border-radius:6px;text-decoration:none;color:#999;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;z-index:9999;transition:color .15s,border-color .15s;}
+  .hub-back:hover{color:#c8872b;border-color:#c8872b;}
+  </style>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+const { useState, useEffect, useRef, useCallback, useMemo } = React;
+
+// ─── Constants ───────────────────────────────────────────────────────────────
+const STAGE_COLORS = {
+  Wort: '#5b7ab5', Fermenting: '#6b9b5a', Brite: '#d4861a', Packaged: '#7a8a6a',
+};
+const STAGE_ORDER = ['Wort','Fermenting','Brite','Packaged'];
+const ALL_METRICS  = ['OG','Wort pH','IBU (W)','ABV','FG','IBU','CO2','pH','Total VDK'];
+
+const fmt = (v, d=2) => v != null ? Number(v).toFixed(d) : '—';
+const fmtDate = s => {
+  if (!s) return '—';
+  // Bare 'YYYY-MM-DD' strings parse as UTC midnight in JS but display in
+  // local time, silently rolling back a day in any timezone behind UTC.
+  // Forcing a local-time component avoids that off-by-one.
+  const iso = String(s).length <= 10 ? s + 'T00:00:00' : s;
+  const d = new Date(iso);
+  return d.toLocaleDateString('en-US',{month:'short',day:'numeric'});
+};
+
+// ─── Spec Bar ────────────────────────────────────────────────────────────────
+function SpecBar({ metric, value, stage, product }) {
+  const spec = (SPECS[product] || {})[metric];
+  if (!spec || value == null) return null;
+  const { low, high, maxOnly } = spec;
+  if (!maxOnly && (low == null || high == null)) return null;
+
+  const span   = maxOnly ? high : (high - low);
+  const margin = maxOnly ? 0 : span * 0.45;
+  const rMin   = maxOnly ? 0 : low - margin;
+  const rMax   = maxOnly ? high * 1.6 : high + margin;
+  const total  = rMax - rMin;
+
+  const pct   = v => Math.max(1, Math.min(99, ((v - rMin) / total) * 100));
+  const valPct = pct(value);
+  const lowPct = maxOnly ? 0 : pct(low);
+  const hiPct  = pct(high);
+
+  const status = checkSpec(metric, value, stage, product);
+  const dot    = status === 'OK' ? 'var(--green)' : 'var(--red)';
+
+  return (
+    <div style={{ position:'relative', height:5, borderRadius:3,
+                  background:'var(--card)', margin:'5px 0 2px' }}>
+      <div style={{ position:'absolute', top:0, bottom:0, borderRadius:3,
+                    left:`${lowPct}%`, width:`${hiPct - lowPct}%`,
+                    background:'rgba(77,150,104,0.35)' }}/>
+      <div style={{ position:'absolute', top:'50%', left:`${valPct}%`,
+                    transform:'translate(-50%,-50%)',
+                    width:10, height:10, borderRadius:'50%',
+                    background:dot, border:'2px solid var(--bg)',
+                    boxShadow:`0 0 7px ${dot}`, zIndex:1 }}/>
+    </div>
+  );
+}
+
+// ─── OOS Badge ───────────────────────────────────────────────────────────────
+function OOSBadge({ count }) {
+  if (count === 0 || count === '—') return (
+    <span style={{ padding:'2px 8px', borderRadius:4, fontSize:11, fontWeight:600,
+                   background:'var(--green-bg)', border:'1px solid var(--green-br)',
+                   color:'var(--green)', fontFamily:'IBM Plex Mono' }}>✓ OK</span>
+  );
+  return (
+    <span style={{ padding:'2px 8px', borderRadius:4, fontSize:12, fontWeight:700,
+                   background:'var(--red-bg)', border:'1px solid var(--red-br)',
+                   color:'var(--red)', fontFamily:'IBM Plex Mono' }}>⚠ {count}</span>
+  );
+}
+
+// ─── Stage Pill ──────────────────────────────────────────────────────────────
+function StagePill({ stage, small }) {
+  const c = STAGE_COLORS[stage] || '#7a6d58';
+  return (
+    <span style={{ display:'inline-flex', alignItems:'center', gap:5,
+                   color:c, fontSize: small ? 11 : 12, fontWeight:600,
+                   letterSpacing:'0.05em', textTransform:'uppercase' }}>
+      <span style={{ width:6, height:6, borderRadius:'50%', background:c, flexShrink:0 }}/>
+      {stage}
+    </span>
+  );
+}
+
+// ─── Batch Row ────────────────────────────────────────────────────────────────
+function BatchRow({ batch, selected, onClick, compact }) {
+  const h = compact ? 38 : 46;
+  const latest = batch.readings[0];
+  const oos    = useMemo(() => computeOOS(batch.readings, batch.product), [batch]);
+
+  // Build quick metric snippets from the most recent relevant reading
+  const chips = useMemo(() => {
+    const out = [];
+    const mShow = ['OG','Wort pH','IBU (W)','ABV','FG','IBU','Total VDK'];
+    if (!latest) return out;
+    for (const m of mShow) {
+      const v = latest[m];
+      if (v == null) continue;
+      const s = checkSpec(m, v, latest.stage, batch.product);
+      const oos = s && s !== 'OK';
+      out.push({ m, v, oos, dir: s });
+    }
+    return out;
+  }, [latest]);
+
+  return (
+    <div onClick={() => onClick(batch)}
+      style={{
+        display:'grid', gridTemplateColumns:'190px 110px 64px 44px 48px 1fr 72px',
+        alignItems:'center', gap:10, padding:`0 18px`, height:h,
+        cursor:'pointer', borderBottom:'1px solid var(--border)',
+        background: selected ? 'rgba(212,134,26,0.07)' : 'transparent',
+        transition:'background 0.12s',
+        borderLeft: selected ? '2px solid var(--amber)' : '2px solid transparent',
+      }}
+      onMouseEnter={e => { if (!selected) e.currentTarget.style.background='rgba(255,255,255,0.025)'; }}
+      onMouseLeave={e => { if (!selected) e.currentTarget.style.background='transparent'; }}
+    >
+      <span style={{ fontFamily:'IBM Plex Mono', fontSize:13, fontWeight:600, color:'var(--text)',
+                     whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>
+        {batch.id}
+      </span>
+      <StagePill stage={batch.stage}/>
+      <span style={{ color:'var(--muted)', fontSize:12, fontFamily:'IBM Plex Mono' }}>
+        {batch.tank}{batch.tankSource === 'basecamp' && <span title="via Basecamp transfer log" style={{ color:'var(--amber)' }}> *</span>}
+      </span>
+      <span style={{ color:'var(--muted)', fontSize:12 }}>{batch.age}d</span>
+      <span style={{ color:'var(--muted)', fontSize:12, textAlign:'center' }}>{batch.numReadings}</span>
+      <div style={{ display:'flex', gap:8, overflow:'hidden', flexWrap:'nowrap', alignItems:'center' }}>
+        {latest && (
+          <span style={{ fontSize:11, color:'var(--muted2)', fontFamily:'IBM Plex Mono',
+                         whiteSpace:'nowrap', flexShrink:0 }}>
+            {fmtDate(latest.date)}
+          </span>
+        )}
+        {latest && chips.length > 0 && (
+          <span style={{ color:'var(--border2)', fontSize:11, flexShrink:0 }}>·</span>
+        )}
+        {chips.map(({m,v,oos,dir}) => (
+          <span key={m} style={{ fontSize:11, fontFamily:'IBM Plex Mono', whiteSpace:'nowrap',
+                                  color: oos ? 'var(--red)' : 'var(--muted)', fontWeight: oos ? 700 : 400 }}>
+            {m}:{fmt(v)}{oos ? (dir==='HIGH'?'↑':'↓') : ''}
+          </span>
+        ))}
+      </div>
+      <div style={{ textAlign:'right' }}>
+        <OOSBadge count={oos.length}/>
+      </div>
+    </div>
+  );
+}
+
+// ─── Section ─────────────────────────────────────────────────────────────────
+function BatchSection({ title, batches, selectedId, onSelect, compact }) {
+  const [sort, setSort] = useState({ key: 'age', dir: 'desc' });
+  const totalOOS = batches.reduce((s,b) => s + (b.oosCount||0), 0);
+
+  const toggleSort = key => setSort(prev =>
+    prev.key === key
+      ? { key, dir: prev.dir === 'asc' ? 'desc' : 'asc' }
+      : { key, dir: 'asc' }
+  );
+
+  const sorted = useMemo(() => [...batches].sort((a, b) => {
+    let cmp = 0;
+    if      (sort.key === 'age')    cmp = (a.age ?? -1) - (b.age ?? -1);
+    else if (sort.key === 'stage')  cmp = STAGE_ORDER.indexOf(a.stage) - STAGE_ORDER.indexOf(b.stage);
+    else if (sort.key === 'tank')   cmp = (a.tank||'').localeCompare(b.tank||'', undefined, {numeric:true});
+    else if (sort.key === 'rdgs')   cmp = (a.numReadings ?? 0) - (b.numReadings ?? 0);
+    else if (sort.key === 'latest') cmp = (a.lastReading||'').localeCompare(b.lastReading||'');
+    else                            cmp = a.id.localeCompare(b.id);
+    return sort.dir === 'asc' ? cmp : -cmp;
+  }), [batches, sort]);
+
+  const colDefs = [
+    { label:'Brew / Batch',    key:'id',     sortable:true  },
+    { label:'Stage',           key:'stage',  sortable:true  },
+    { label:'Tank',            key:'tank',   sortable:true  },
+    { label:'Age',             key:'age',    sortable:true  },
+    { label:'Rdgs',            key:'rdgs',   sortable:true  },
+    { label:'Latest Readings', key:'latest', sortable:true  },
+    { label:'OOS',             key:null,     sortable:false },
+  ];
+
+  return (
+    <div style={{ marginBottom:2 }}>
+      {/* Section header */}
+      <div style={{ display:'flex', flexDirection:'row', alignItems:'center', gap:16, padding:'7px 18px',
+                    background:'var(--surface)', borderBottom:'1px solid var(--border)',
+                    borderTop:'1px solid var(--border)', position:'sticky', top:0, zIndex:5,
+                    minHeight:32 }}>
+        <span style={{ fontFamily:'Barlow Condensed', fontWeight:700, fontSize:13,
+                        letterSpacing:'0.12em', textTransform:'uppercase', color:'var(--amber)',
+                        whiteSpace:'nowrap', flexShrink:0 }}>
+          {title}
+        </span>
+        <span style={{ fontSize:11, color:'var(--muted)', fontFamily:'IBM Plex Mono', marginLeft:14, flexShrink:0, whiteSpace:'nowrap' }}>
+          · {batches.length} {batches.length === 1 ? 'brew' : 'brews'}
+        </span>
+        {totalOOS > 0 && (
+          <span style={{ marginLeft:'auto', fontSize:11, fontFamily:'IBM Plex Mono',
+                          color:'var(--red)' }}>
+            {totalOOS} OOS flags
+          </span>
+        )}
+      </div>
+      {/* Column headers */}
+      <div style={{ display:'grid', gridTemplateColumns:'190px 110px 64px 44px 48px 1fr 72px',
+                    gap:10, padding:'0 18px', height:30, alignItems:'center',
+                    background:'var(--surface)', borderBottom:'1px solid var(--border)',
+                    position:'sticky', top:31, zIndex:4 }}>
+        {colDefs.map(({ label, key, sortable }, i) => (
+          <span key={label}
+            onClick={sortable ? () => toggleSort(key) : undefined}
+            style={{ fontSize:10, fontWeight:600, letterSpacing:'0.08em', textTransform:'uppercase',
+                     userSelect:'none', whiteSpace:'nowrap',
+                     color: sortable && sort.key === key ? 'var(--amber)' : 'var(--muted)',
+                     textAlign: i===6 ? 'right' : 'left',
+                     cursor: sortable ? 'pointer' : 'default' }}>
+            {label}{sortable ? (sort.key === key ? (sort.dir === 'asc' ? ' ↑' : ' ↓') : ' ↕') : ''}
+          </span>
+        ))}
+      </div>
+      {sorted.map(b => (
+        <BatchRow key={b.id} batch={b} selected={selectedId===b.id}
+                  onClick={onSelect} compact={compact}/>
+      ))}
+    </div>
+  );
+}
+
+// ─── Detail Panel ─────────────────────────────────────────────────────────────
+function DetailPanel({ batch, onClose, acknowledged, onAcknowledge }) {
+  const oos = useMemo(() => computeOOS(batch.readings, batch.product), [batch]);
+  const unackedOOS = oos.filter(f => !acknowledged[`${batch.id}:${f.metric}:${f.date}:${f.sample}`]);
+  const ackedOOS   = oos.filter(f =>  acknowledged[`${batch.id}:${f.metric}:${f.date}:${f.sample}`]);
+
+  const [sourcePopup, setSourcePopup] = useState(null); // { text, x, y }
+  useEffect(() => {
+    if (!sourcePopup) return;
+    const dismiss = () => setSourcePopup(null);
+    document.addEventListener('click', dismiss);
+    return () => document.removeEventListener('click', dismiss);
+  }, [sourcePopup]);
+
+  // Latest value per metric
+  const latestVals = useMemo(() => {
+    const vals = {};
+    for (const r of batch.readings) {
+      for (const m of ALL_METRICS) {
+        if (r[m] != null && vals[m] == null) vals[m] = { v: r[m], stage: r.stage, date: r.date };
+      }
+    }
+    return vals;
+  }, [batch]);
+
+  const specMetrics = Object.keys(latestVals).filter(m => (SPECS[batch.product]||{})[m]);
+
+  const stageC = STAGE_COLORS[batch.stage] || '#7a6d58';
+
+  return (
+    <div style={{ height:'100%', display:'flex', flexDirection:'column',
+                  background:'var(--surface)', borderLeft:'1px solid var(--border2)' }}
+      onClick={() => setSourcePopup(null)}>
+      {sourcePopup && (
+        <div style={{
+          position:'fixed', top: sourcePopup.y + 14, left: sourcePopup.x,
+          background:'var(--surface)', border:'1px solid var(--border2)',
+          borderRadius:5, padding:'5px 10px',
+          fontSize:11, fontFamily:'IBM Plex Mono', color:'var(--text)',
+          boxShadow:'0 2px 10px rgba(0,0,0,0.18)',
+          zIndex:9999, whiteSpace:'nowrap', pointerEvents:'none',
+        }}>
+          {sourcePopup.text}
+        </div>
+      )}
+      {/* Panel header */}
+      <div style={{ padding:'14px 18px 12px', borderBottom:'1px solid var(--border)',
+                    background:'var(--card)', flexShrink:0 }}>
+        <div style={{ display:'flex', alignItems:'flex-start', justifyContent:'space-between' }}>
+          <div>
+            <div style={{ fontFamily:'IBM Plex Mono', fontSize:18, fontWeight:600, color:'var(--text)' }}>
+              {batch.id}
+            </div>
+            <div style={{ display:'flex', alignItems:'center', gap:10, marginTop:4 }}>
+              <StagePill stage={batch.stage}/>
+              <span style={{ fontSize:12, color:'var(--muted)', fontFamily:'IBM Plex Mono' }}>{batch.tank}</span>
+              {batch.tankSource === 'basecamp' && (
+                <span title={`Lab reading last showed ${batch.labTank || '—'}; Basecamp transfer log is more recent`}
+                      style={{ padding:'1px 6px', borderRadius:3, fontSize:9, fontWeight:700,
+                                letterSpacing:'0.05em', textTransform:'uppercase',
+                                background:'rgba(122,109,88,0.12)', border:'1px solid var(--border2)',
+                                color:'var(--muted)', cursor:'help' }}>
+                  via Basecamp
+                </span>
+              )}
+              <span style={{ fontSize:12, color:'var(--muted)' }}>Age: <strong style={{color:'var(--text)'}}>{batch.age}d</strong></span>
+              <span style={{ fontSize:12, color:'var(--muted)' }}>Brewed {fmtDate(batch.brewDate)}</span>
+            </div>
+          </div>
+          <button onClick={onClose} style={{
+            background:'none', border:'none', color:'var(--muted)', fontSize:18,
+            lineHeight:1, padding:'2px 4px', borderRadius:3
+          }}>{'✕'}</button>
+        </div>
+        <div style={{ display:'flex', gap:6, marginTop:10, flexWrap:'wrap' }}>
+          {unackedOOS.length > 0 &&
+            <span style={{ padding:'3px 10px', borderRadius:4, fontSize:12, fontWeight:700,
+                            background:'var(--red-bg)', border:'1px solid var(--red-br)', color:'var(--red)',
+                            fontFamily:'Barlow, sans-serif', letterSpacing:'0.03em' }}>
+              ⚠ {unackedOOS.length} OOS UNACKNOWLEDGED
+            </span>
+          }
+          {ackedOOS.length > 0 &&
+            <span style={{ padding:'3px 10px', borderRadius:4, fontSize:11,
+                            background:'rgba(122,109,88,0.1)', border:'1px solid var(--border2)', color:'var(--muted)' }}>
+              {ackedOOS.length} acknowledged
+            </span>
+          }
+          {oos.length === 0 &&
+            <span style={{ padding:'3px 10px', borderRadius:4, fontSize:12, fontWeight:600,
+                            background:'var(--green-bg)', border:'1px solid var(--green-br)', color:'var(--green)' }}>
+              ✓ All In Spec
+            </span>
+          }
+        </div>
+      </div>
+
+      <div style={{ flex:1, overflowY:'auto', padding:'0 0 40px' }}>
+        {/* OOS Flags */}
+        {oos.length > 0 && (
+          <div style={{ padding:'14px 18px 4px' }}>
+            <div style={{ fontSize:10, fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase',
+                          color:'var(--muted)', marginBottom:8 }}>Out-of-Spec Flags</div>
+            {oos.map((f,i) => {
+              const key = `${batch.id}:${f.metric}:${f.date}:${f.sample}`;
+              const isAcked = !!acknowledged[key];
+              const dir = f.status === 'HIGH' ? '↑' : '↓';
+              const refStr = f.status === 'HIGH' ? `>${f.spec.high}` : `<${f.spec.low}`;
+              return (
+                <div key={i} style={{
+                  display:'flex', alignItems:'center', gap:8,
+                  padding:'7px 10px', borderRadius:6, marginBottom:5,
+                  background: isAcked ? 'rgba(122,109,88,0.07)' : 'var(--red-bg)',
+                  border: `1px solid ${isAcked ? 'var(--border)' : 'var(--red-br)'}`,
+                  opacity: isAcked ? 0.55 : 1,
+                }}>
+                  <span style={{ fontFamily:'IBM Plex Mono', fontSize:12, fontWeight:700,
+                                  color: isAcked ? 'var(--muted)' : 'var(--red)', minWidth:100 }}>
+                    {f.metric} {dir}
+                  </span>
+                  <span style={{ fontFamily:'IBM Plex Mono', fontSize:13, color:'var(--text)', fontWeight:600 }}>
+                    {fmt(f.value)}{f.spec.unit}
+                  </span>
+                  <span style={{ fontSize:11, color:'var(--muted)' }}>spec: {refStr}{f.spec.unit}</span>
+                  <span style={{ fontSize:11, color:'var(--muted)', marginLeft:4 }}>{f.stage}</span>
+                  <span style={{ fontSize:11, color:'var(--muted2)', marginLeft:'auto', whiteSpace:'nowrap' }}>
+                    {fmtDate(f.date)} · {f.sample}
+                  </span>
+                  <button onClick={() => onAcknowledge(key)} style={{
+                    background:'none', border:'1px solid var(--border2)', borderRadius:3,
+                    color: isAcked ? 'var(--green)' : 'var(--muted)', fontSize:10, padding:'2px 6px',
+                    flexShrink:0, fontFamily:'Barlow', fontWeight:600
+                  }}>
+                    {isAcked ? '✓ ACK' : 'ACK'}
+                  </button>
+                </div>
+              );
+            })}
+          </div>
+        )}
+
+        {/* Latest Values with Spec Bars */}
+        {specMetrics.length > 0 && (
+          <div style={{ padding:'14px 18px 4px' }}>
+            <div style={{ fontSize:10, fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase',
+                          color:'var(--muted)', marginBottom:10 }}>Latest Values vs Spec</div>
+            <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10 }}>
+              {specMetrics.map(m => {
+                const { v, stage } = latestVals[m];
+                const status = checkSpec(m, v, stage, batch.product);
+                const isOOS = status && status !== 'OK';
+                const spec = (SPECS[batch.product]||{})[m];
+                return (
+                  <div key={m} style={{ background:'var(--card)', borderRadius:7, padding:'10px 12px',
+                                         border:`1px solid ${isOOS ? 'var(--red-br)' : 'var(--border)'}` }}>
+                    <div style={{ display:'flex', justifyContent:'space-between', alignItems:'baseline' }}>
+                      <span style={{ fontSize:11, color:'var(--muted)', fontWeight:600 }}>{m}</span>
+                      <span style={{ fontFamily:'IBM Plex Mono', fontSize:15, fontWeight:600,
+                                      color: isOOS ? 'var(--red)' : 'var(--text)' }}>
+                        {fmt(v)}{spec.unit}
+                      </span>
+                    </div>
+                    <SpecBar metric={m} value={v} stage={stage} product={batch.product}/>
+                    {spec.low != null && (
+                      <div style={{ display:'flex', justifyContent:'space-between', fontSize:11, color:'var(--muted2)', marginTop:2 }}>
+                        <span>{spec.low}</span>
+                        {spec.target && <span style={{color:'var(--muted)'}}>tgt {spec.target}</span>}
+                        <span>{spec.high}</span>
+                      </div>
+                    )}
+                    {spec.maxOnly && (
+                      <div style={{ fontSize:11, color:'var(--muted2)', marginTop:2 }}>
+                        max {spec.high}{spec.unit}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* Readings History */}
+        <div style={{ padding:'14px 18px 4px' }}>
+          <div style={{ fontSize:10, fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase',
+                        color:'var(--muted)', marginBottom:10 }}>
+            Readings History ({batch.readings.length})
+          </div>
+          <div style={{ overflowX:'auto' }}>
+            <table style={{ width:'100%', borderCollapse:'collapse', fontSize:11 }}>
+              <thead>
+                <tr style={{ borderBottom:'1px solid var(--border2)' }}>
+                  {['Date','Sample','Stg','Tank','OG','WpH','IBU(W)','ABV','FG','pH','IBU','CO2','VDK'].map(h => (
+                    <th key={h} style={{ padding:'4px 6px', textAlign:'left', color:'var(--muted)',
+                                          fontWeight:600, letterSpacing:'0.05em', whiteSpace:'nowrap',
+                                          fontSize:10, textTransform:'uppercase' }}>{h}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {batch.readings.map((r,i) => {
+                  const cells = [
+                    r['OG'], r['Wort pH'], r['IBU (W)'],
+                    r['ABV'], r['FG'], r['pH'], r['IBU'], r['CO2'], r['Total VDK']
+                  ];
+                  const metricKeys = ['OG','Wort pH','IBU (W)','ABV','FG','IBU','IBU','CO2','Total VDK'];
+                  // note: IBU (W) for wort, IBU for brite - use stage to decide
+                  const actualMetrics = ['OG','Wort pH','IBU (W)','ABV','FG',null,'IBU',null,'Total VDK'];
+                  const handleRowClick = e => {
+                    e.stopPropagation();
+                    const text = r.sourceFile
+                      ? (r.sourceSheet ? `${r.sourceFile} · ${r.sourceSheet}` : r.sourceFile)
+                      : 'Source unknown';
+                    setSourcePopup(prev =>
+                      prev && prev.text === text ? null : { text, x: e.clientX, y: e.clientY }
+                    );
+                  };
+                  return (
+                    <tr key={i} onClick={handleRowClick}
+                      style={{ borderBottom:'1px solid var(--border)', cursor:'pointer',
+                                background: i%2===0 ? 'transparent' : 'rgba(255,255,255,0.01)' }}>
+                      <td style={{ padding:'5px 6px', color:'var(--muted)', whiteSpace:'nowrap', fontFamily:'IBM Plex Mono', fontSize:11 }}>
+                        {fmtDate(r.date)}
+                      </td>
+                      <td style={{ padding:'5px 6px', color:'var(--text)', whiteSpace:'nowrap', maxWidth:160,
+                                    overflow:'hidden', textOverflow:'ellipsis', fontSize:11 }}>{r.sample}</td>
+                      <td style={{ padding:'5px 6px' }}>
+                        <span style={{ fontSize:10, fontWeight:700, letterSpacing:'0.05em',
+                                        color: STAGE_COLORS[r.stage] || r.stage === 'GC' ? '#a87d50' : 'var(--muted)' }}>
+                          {r.stage}
+                        </span>
+                      </td>
+                      <td style={{ padding:'5px 6px', color:'var(--muted)', fontFamily:'IBM Plex Mono', fontSize:11 }}>{r.tank}</td>
+                      {[
+                        {val:r['OG'],         m:'OG'},
+                        {val:r['Wort pH'],    m:'Wort pH'},
+                        {val:r['IBU (W)'],    m:'IBU (W)'},
+                        {val:r['ABV'],        m:'ABV'},
+                        {val:r['FG'],         m:'FG'},
+                        {val:r['pH'],         m:null},
+                        {val:r['IBU'],        m:'IBU'},
+                        {val:r['CO2'],        m:null},
+                        {val:r['Total VDK'],  m:'Total VDK'},
+                      ].map(({val,m},ci) => {
+                        const status = m ? checkSpec(m, val, r.stage, batch.product) : null;
+                        const isOOS  = status && status !== 'OK';
+                        const dir    = status === 'HIGH' ? '↑' : status === 'LOW' ? '↓' : '';
+                        return (
+                          <td key={ci} style={{ padding:'5px 6px', fontFamily:'IBM Plex Mono', fontSize:11,
+                                                 color: isOOS ? 'var(--red)' : val != null ? 'var(--text)' : 'var(--muted2)',
+                                                 fontWeight: isOOS ? 700 : 400,
+                                                 background: isOOS ? 'var(--red-bg)' : 'transparent',
+                                                 borderRadius:3, whiteSpace:'nowrap' }}>
+                            {val != null ? `${fmt(val, m==='Total VDK'?3:2)}${dir}` : '—'}
+                          </td>
+                        );
+                      })}
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        {/* Fermentation Stats */}
+        {((batch.fermLog && batch.fermLog.length > 0) || (batch.yeastPitches && batch.yeastPitches.length > 0)) && (
+          <div style={{ padding:'14px 18px 20px' }}>
+            <div style={{ fontSize:10, fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase',
+                          color:'var(--muted)', marginBottom:12 }}>Fermentation Stats</div>
+
+            {/* Yeast pitch info */}
+            {batch.yeastPitches && batch.yeastPitches.filter(y => y.yeastGen || y.yeastSource).length > 0 && (
+              <div style={{ marginBottom:14 }}>
+                <div style={{ fontSize:11, fontWeight:700, letterSpacing:'0.08em', textTransform:'uppercase',
+                              color:'var(--muted2)', marginBottom:6 }}>Yeast</div>
+                {batch.yeastPitches.filter(y => y.yeastGen || y.yeastSource).slice(0, 3).map((y, i) => (
+                  <div key={i} style={{ background:'var(--card)', borderRadius:7, padding:'10px 14px',
+                                         border:'1px solid var(--border)', marginBottom:6,
+                                         display:'flex', flexWrap:'wrap', gap:'8px 18px', alignItems:'baseline' }}>
+                    {y.yeastGen && (
+                      <span style={{ fontFamily:'IBM Plex Mono', fontSize:15, fontWeight:700, color:'var(--amber)' }}>
+                        {y.yeastGen}
+                      </span>
+                    )}
+                    {y.yeastSource && (
+                      <span style={{ fontSize:12 }}>
+                        <span style={{ color:'var(--muted)', fontSize:10 }}>from </span>
+                        <strong style={{ fontFamily:'IBM Plex Mono' }}>{y.yeastSource}</strong>
+                      </span>
+                    )}
+                    {y.viability != null && (
+                      <span style={{ fontSize:12 }}>
+                        <strong style={{ fontFamily:'IBM Plex Mono',
+                          color: y.viability >= 0.85 ? 'var(--green)' : y.viability >= 0.75 ? 'var(--yellow)' : 'var(--red)' }}>
+                          {(y.viability * 100).toFixed(1)}%
+                        </strong>
+                        <span style={{ color:'var(--muted)', fontSize:10 }}> viable</span>
+                      </span>
+                    )}
+                    {y.pitchRate != null && (
+                      <span style={{ fontSize:12 }}>
+                        <strong style={{ fontFamily:'IBM Plex Mono' }}>{fmt(y.pitchRate, 1)}</strong>
+                        <span style={{ color:'var(--muted)', fontSize:10 }}> gal pitched</span>
+                      </span>
+                    )}
+                    {y.cellCount != null && (
+                      <span style={{ fontFamily:'IBM Plex Mono', fontSize:10, color:'var(--muted)' }}>
+                        {(y.cellCount / 1e9).toFixed(2)}B cells
+                      </span>
+                    )}
+                    {y.yeastBrewNum && (
+                      <span style={{ fontSize:10, color:'var(--muted2)' }}>prev: {y.yeastBrewNum}</span>
+                    )}
+                    <span style={{ fontSize:11, color:'var(--muted2)', marginLeft:'auto', whiteSpace:'nowrap' }}>
+                      {fmtDate(y.date)} · {y.tank}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Fermentation log */}
+            {batch.fermLog && batch.fermLog.length > 0 && (
+              <div>
+                <div style={{ fontSize:11, fontWeight:700, letterSpacing:'0.08em', textTransform:'uppercase',
+                              color:'var(--muted2)', marginBottom:6 }}>
+                  Fermentation Log ({batch.fermLog.length})
+                </div>
+                <div style={{ overflowX:'auto' }}>
+                  <table style={{ width:'100%', borderCollapse:'collapse', fontSize:11 }}>
+                    <thead>
+                      <tr style={{ borderBottom:'1px solid var(--border2)' }}>
+                        {['Date','Tank','Temp','Gravity','pH','Actions'].map(h => (
+                          <th key={h} style={{ padding:'4px 6px', textAlign:'left', color:'var(--muted)',
+                                                fontWeight:600, letterSpacing:'0.05em', whiteSpace:'nowrap',
+                                                fontSize:10, textTransform:'uppercase' }}>{h}</th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {batch.fermLog.map((r, i) => (
+                        <tr key={i} style={{ borderBottom:'1px solid var(--border)',
+                                              background: i%2===0 ? 'transparent' : 'rgba(255,255,255,0.01)' }}>
+                          <td style={{ padding:'4px 6px', color:'var(--muted)', fontFamily:'IBM Plex Mono',
+                                        fontSize:11, whiteSpace:'nowrap' }}>{fmtDate(r.date)}</td>
+                          <td style={{ padding:'4px 6px', color:'var(--muted)', fontFamily:'IBM Plex Mono', fontSize:11 }}>{r.tank}</td>
+                          <td style={{ padding:'4px 6px', fontFamily:'IBM Plex Mono', fontSize:11 }}>
+                            {r.temp != null ? r.temp + '°F' : '—'}
+                          </td>
+                          <td style={{ padding:'4px 6px', fontFamily:'IBM Plex Mono', fontSize:11 }}>
+                            {r.gravity != null ? fmt(r.gravity, 2) + '°P' : '—'}
+                          </td>
+                          <td style={{ padding:'4px 6px', fontFamily:'IBM Plex Mono', fontSize:11 }}>
+                            {r.ph != null ? fmt(r.ph, 2) : '—'}
+                          </td>
+                          <td style={{ padding:'4px 6px', color:'var(--amber)', fontSize:11,
+                                        fontWeight: r.actions ? 600 : 400 }}>
+                            {r.actions || ''}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Transfer Log (Basecamp) */}
+        {batch.transferLog && batch.transferLog.length > 0 && (
+          <div style={{ padding:'0 18px 20px' }}>
+            <div style={{ fontSize:10, fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase',
+                          color:'var(--muted)', marginBottom:8 }}>
+              Transfer Log ({batch.transferLog.length}) <span style={{ fontWeight:400, textTransform:'none', letterSpacing:0 }}>· via Basecamp</span>
+            </div>
+            <div style={{ overflowX:'auto' }}>
+              <table style={{ width:'100%', borderCollapse:'collapse', fontSize:11 }}>
+                <thead>
+                  <tr style={{ borderBottom:'1px solid var(--border2)' }}>
+                    {['Date','Action','From','To','Qty','Source'].map(h => (
+                      <th key={h} style={{ padding:'4px 6px', textAlign:'left', color:'var(--muted)',
+                                            fontWeight:600, letterSpacing:'0.05em', whiteSpace:'nowrap',
+                                            fontSize:10, textTransform:'uppercase' }}>{h}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {batch.transferLog.map((r, i) => (
+                    <tr key={i} style={{ borderBottom:'1px solid var(--border)',
+                                          background: i%2===0 ? 'transparent' : 'rgba(255,255,255,0.01)' }}>
+                      <td style={{ padding:'4px 6px', color:'var(--muted)', fontFamily:'IBM Plex Mono',
+                                    fontSize:11, whiteSpace:'nowrap' }}>{fmtDate(r.date)}</td>
+                      <td style={{ padding:'4px 6px', fontFamily:'IBM Plex Mono', fontSize:11 }}>{r.action}</td>
+                      <td style={{ padding:'4px 6px', fontFamily:'IBM Plex Mono', fontSize:11 }}>{r.from || '—'}</td>
+                      <td style={{ padding:'4px 6px', fontFamily:'IBM Plex Mono', fontSize:11, color:'var(--amber)', fontWeight:600 }}>{r.to || '—'}</td>
+                      <td style={{ padding:'4px 6px', fontFamily:'IBM Plex Mono', fontSize:11 }}>
+                        {r.volume != null ? fmt(r.volume,0) + ' BBL' : (r.detail || '—')}
+                      </td>
+                      <td style={{ padding:'4px 6px', color:'var(--muted)', fontSize:11 }}>
+                        {({brewhouse:'Brew House', cellar:'Cellar', packaging:'Packaging', kegging:'Kegging'})[r.project] || r.project}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ─── Stage Summary ───────────────────────────────────────────────────────────
+function StageSummary({ batches, acknowledged }) {
+  const byStage = useMemo(() => STAGE_ORDER.map(stage => {
+    const sb = batches.filter(b => b.stage === stage);
+    const totalOOS = sb.reduce((s,b) => s + (b.oosCount||0), 0);
+    const ackedOOS = sb.reduce((s,b) => {
+      return s + b.readings.reduce((rs, r) => {
+        return rs + ALL_METRICS.filter(m => {
+          const st = checkSpec(m, r[m], r.stage, b.product);
+          return st && st !== 'OK' && acknowledged[`${b.id}:${m}:${r.date}:${r.sample}`];
+        }).length;
+      }, 0);
+    }, 0);
+    const metrics = {};
+    for (const b of sb) for (const r of b.readings) {
+      for (const m of ALL_METRICS) {
+        if (r[m] != null) { if (!metrics[m]) metrics[m]=[]; metrics[m].push(r[m]); }
+      }
+    }
+    const avgMetrics = Object.entries(metrics).slice(0,4).map(([m,vals]) => ({
+      m, avg: vals.reduce((a,v)=>a+v,0)/vals.length
+    }));
+    return { stage, count: sb.length, totalOOS, ackedOOS, avgMetrics };
+  }).filter(s => s.count > 0), [batches, acknowledged]);
+
+  if (byStage.length === 0) return null;
+
+  return (
+    <div style={{ padding:'18px 18px 24px', borderTop:'1px solid var(--border)', marginTop:4 }}>
+      <div style={{ fontSize:10, fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase',
+                    color:'var(--muted)', marginBottom:12 }}>Stage Summary</div>
+      <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(200px, 1fr))', gap:10 }}>
+        {byStage.map(({ stage, count, totalOOS, ackedOOS, avgMetrics }) => {
+          const c = STAGE_COLORS[stage] || '#7a6d58';
+          const unacked = totalOOS - ackedOOS;
+          return (
+            <div key={stage} style={{ background:'var(--card)', border:'1px solid var(--border)',
+                                       borderRadius:8, padding:'12px 14px',
+                                       borderTop: `3px solid ${c}` }}>
+              <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:8 }}>
+                <span style={{ fontFamily:'Barlow Condensed', fontWeight:700, fontSize:13,
+                                letterSpacing:'0.08em', textTransform:'uppercase', color:c }}>
+                  {stage}
+                </span>
+                <span style={{ fontFamily:'IBM Plex Mono', fontSize:11, color:'var(--muted)' }}>
+                  {count} {count===1?'brew':'brews'}
+                </span>
+              </div>
+              <div style={{ display:'flex', gap:8, marginBottom:avgMetrics.length?8:0 }}>
+                {unacked > 0
+                  ? <span style={{ fontSize:11, fontFamily:'IBM Plex Mono', fontWeight:700,
+                                    color:'var(--red)', background:'var(--red-bg)',
+                                    border:'1px solid var(--red-br)', borderRadius:4,
+                                    padding:'1px 7px' }}>⚠ {unacked} OOS</span>
+                  : <span style={{ fontSize:11, fontFamily:'IBM Plex Mono', fontWeight:600,
+                                    color:'var(--green)', background:'var(--green-bg)',
+                                    border:'1px solid var(--green-br)', borderRadius:4,
+                                    padding:'1px 7px' }}>✓ OK</span>
+                }
+                {ackedOOS > 0 && (
+                  <span style={{ fontSize:11, color:'var(--muted2)', fontFamily:'IBM Plex Mono' }}>
+                    {ackedOOS} ack'd
+                  </span>
+                )}
+              </div>
+              {avgMetrics.length > 0 && (
+                <div style={{ display:'flex', gap:12, flexWrap:'wrap' }}>
+                  {avgMetrics.map(({m, avg}) => (
+                    <span key={m} style={{ fontSize:10, fontFamily:'IBM Plex Mono', color:'var(--muted)' }}>
+                      {m} <strong style={{color:'var(--text)'}}>{fmt(avg)}</strong>
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+// ─── KPI Card ────────────────────────────────────────────────────────────────
+function KPICard({ label, value, sub, accent }) {
+  return (
+    <div style={{ background:'var(--card)', border:'1px solid var(--border)',
+                  borderRadius:7, padding:'10px 16px', minWidth:130, minHeight:80,
+                  display:'flex', flexDirection:'column', justifyContent:'space-between' }}>
+      <div style={{ fontFamily:'IBM Plex Mono', fontSize:22, fontWeight:600,
+                    color: accent || 'var(--text)', lineHeight:1 }}>{value}</div>
+      <div>
+        <div style={{ fontSize:10, fontWeight:700, letterSpacing:'0.05em', textTransform:'uppercase',
+                      color:'var(--muted)', whiteSpace:'nowrap' }}>{label}</div>
+        {sub && <div style={{ fontSize:10, color:'var(--muted2)', marginTop:1 }}>{sub}</div>}
+      </div>
+    </div>
+  );
+}
+
+// ─── Tweaks Panel ────────────────────────────────────────────────────────────
+function TweaksPanel({ config, onChange }) {
+  return (
+    <div style={{ padding:18, display:'flex', flexDirection:'column', gap:14 }}>
+      <div style={{ fontSize:12, fontWeight:700, letterSpacing:'0.08em', textTransform:'uppercase',
+                    color:'var(--amber)', marginBottom:2 }}>Tweaks</div>
+      <label style={{ display:'flex', flexDirection:'column', gap:4 }}>
+        <span style={{ fontSize:11, color:'var(--muted)', fontWeight:600, textTransform:'uppercase', letterSpacing:'0.06em' }}>Row Density</span>
+        <select value={config.density} onChange={e => onChange({...config, density:e.target.value})}
+          style={{ background:'var(--card)', border:'1px solid var(--border2)', borderRadius:4,
+                   color:'var(--text)', fontSize:12, padding:'4px 8px' }}>
+          <option value="comfortable">Comfortable</option>
+          <option value="compact">Compact</option>
+        </select>
+      </label>
+      <label style={{ display:'flex', alignItems:'center', gap:8, cursor:'pointer' }}>
+        <input type="checkbox" checked={config.showAcked} onChange={e => onChange({...config, showAcked:e.target.checked})}/>
+        <span style={{ fontSize:12, color:'var(--text)' }}>Show acknowledged OOS in panel</span>
+      </label>
+      <label style={{ display:'flex', alignItems:'center', gap:8, cursor:'pointer' }}>
+        <input type="checkbox" checked={config.highlightOOS} onChange={e => onChange({...config, highlightOOS:e.target.checked})}/>
+        <span style={{ fontSize:12, color:'var(--text)' }}>Highlight OOS rows</span>
+      </label>
+      <div>
+        <div style={{ fontSize:11, color:'var(--muted)', fontWeight:600, textTransform:'uppercase',
+                      letterSpacing:'0.06em', marginBottom:6 }}>Stage Filter</div>
+        {['All',...STAGE_ORDER].map(s => (
+          <label key={s} style={{ display:'flex', alignItems:'center', gap:8, marginBottom:4, cursor:'pointer' }}>
+            <input type="checkbox"
+              checked={config.stageFilter === 'All' || config.stageFilter === s}
+              onChange={() => onChange({...config, stageFilter: s === config.stageFilter ? 'All' : s})}/>
+            <span style={{ fontSize:12, color: s==='All' ? 'var(--text)' : STAGE_COLORS[s]||'var(--muted)' }}>{s}</span>
+          </label>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ─── App ──────────────────────────────────────────────────────────────────────
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "density": "comfortable",
+  "showAcked": true,
+  "highlightOOS": true,
+  "stageFilter": "All"
+}/*EDITMODE-END*/;
+
+function App() {
+  const [selected,  setSelected]  = useState(null);
+  const [tweaksOpen, setTweaksOpen] = useState(false);
+  const [config, setConfig]       = useState(TWEAK_DEFAULTS);
+  const [acknowledged, setAcked]  = useState(() => {
+    try { return JSON.parse(localStorage.getItem('qc_ack') || '{}'); }
+    catch { return {}; }
+  });
+  const [now, setNow] = useState(new Date());
+
+  // Tweaks host bridge
+  useEffect(() => {
+    const handler = ({data}) => {
+      if (data?.type === '__activate_edit_mode')   setTweaksOpen(true);
+      if (data?.type === '__deactivate_edit_mode') setTweaksOpen(false);
+    };
+    window.addEventListener('message', handler);
+    window.parent.postMessage({type:'__edit_mode_available'}, '*');
+    return () => window.removeEventListener('message', handler);
+  }, []);
+
+  const handleAck = useCallback(key => {
+    setAcked(prev => {
+      const next = prev[key] ? {...prev} : {...prev, [key]:true};
+      if (prev[key]) delete next[key];
+      localStorage.setItem('qc_ack', JSON.stringify(next));
+      window.parent.postMessage({type:'__edit_mode_set_keys', edits:{}}, '*');
+      return next;
+    });
+  }, []);
+
+  // Enrich batches with live-computed OOS counts
+  const enrichedBatches = useMemo(() =>
+    BATCHES.map(b => ({ ...b, oosCount: computeOOS(b.readings, b.product).length })), []);
+
+  const filtered = useMemo(() => {
+    if (config.stageFilter === 'All') return enrichedBatches;
+    return enrichedBatches.filter(b => b.stage === config.stageFilter);
+  }, [config.stageFilter, enrichedBatches]);
+
+  const brewhouse = filtered.filter(b => b.section === 'brewhouse');
+  const brite     = filtered.filter(b => b.section === 'brite');
+
+  const totalBatches = enrichedBatches.length;
+  const totalOOS     = enrichedBatches.reduce((s,b) => s + b.oosCount, 0);
+  const totalReadings= enrichedBatches.reduce((s,b) => s + b.numReadings, 0);
+  const oosBrews     = enrichedBatches.filter(b => b.oosCount > 0).length;
+  const inSpecPct    = Math.round(((totalBatches - oosBrews) / totalBatches) * 100);
+
+  const selectedBatch = selected ? enrichedBatches.find(b => b.id === selected) : null;
+  const compact = config.density === 'compact';
+
+  return (
+    <div style={{ height:'100vh', display:'flex', flexDirection:'column', background:'var(--bg)' }}>
+      {/* ── Header ── */}
+      <div style={{ display:'flex', alignItems:'center', padding:'0 20px', height:52,
+                    background:'var(--surface)', borderBottom:'1px solid var(--border)',
+                    flexShrink:0, zIndex:10 }}>
+        <a href="../../index.html" style={{ display:'inline-flex', alignItems:'center', gap:5,
+            padding:'5px 11px', border:'1px solid var(--border)', borderRadius:6,
+            textDecoration:'none', color:'var(--muted)', fontFamily:'Barlow Condensed',
+            fontSize:12, fontWeight:600, letterSpacing:'.06em', textTransform:'uppercase',
+            flexShrink:0, whiteSpace:'nowrap' }}>&#8592; Hub</a>
+        <div style={{ flex:1, display:'flex', justifyContent:'center', alignItems:'center', gap:10 }}>
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <rect x="7" y="1" width="8" height="3" rx="1" fill="var(--amber)"/>
+            <rect x="5" y="4" width="12" height="16" rx="3" fill="none" stroke="var(--amber)" strokeWidth="1.5"/>
+            <line x1="8" y1="8" x2="14" y2="8" stroke="var(--amber)" strokeWidth="1" strokeDasharray="2 2"/>
+            <line x1="8" y1="11" x2="14" y2="11" stroke="var(--amber)" strokeWidth="1" strokeDasharray="2 2"/>
+            <line x1="8" y1="14" x2="12" y2="14" stroke="var(--amber)" strokeWidth="1" strokeDasharray="2 2"/>
+          </svg>
+          <span style={{ fontFamily:'Barlow Condensed', fontWeight:700, fontSize:16,
+                          letterSpacing:'0.1em', textTransform:'uppercase', color:'var(--amber)' }}>
+            Abita Brewing
+          </span>
+          <span style={{ color:'var(--border2)', fontSize:14 }}>|</span>
+          <span style={{ fontFamily:'Barlow Condensed', fontWeight:600, fontSize:15,
+                          letterSpacing:'0.06em', color:'var(--text)' }}>QC Monitor</span>
+        </div>
+        <div style={{ display:'flex', alignItems:'center', gap:16 }}>
+          <div style={{ display:'flex', alignItems:'center', gap:6, fontSize:11, color:'var(--muted)' }}>
+            <span style={{ width:6, height:6, borderRadius:'50%', background:'var(--green)',
+                            boxShadow:'0 0 6px var(--green)', display:'inline-block' }}/>
+            Last sync: {PIPELINE_META.lastSync}
+          </div>
+          <div style={{ fontSize:11, color:'var(--muted)', fontFamily:'IBM Plex Mono' }}>
+            {(PIPELINE_META.products || []).join(' · ')}
+          </div>
+        </div>
+      </div>
+
+      {/* ── KPI Strip ── */}
+      <div style={{ display:'flex', gap:8, padding:'10px 20px',
+                    background:'var(--surface)', borderBottom:'1px solid var(--border)',
+                    flexShrink:0, alignItems:'flex-start' }}>
+        <KPICard label="Active Brews"    value={totalBatches} sub={`${brewhouse.length} BH · ${brite.length} brite`}/>
+        <KPICard label="OOS Flags"       value={totalOOS}     accent={totalOOS > 0 ? 'var(--red)' : 'var(--green)'}
+                 sub={`${oosBrews} of ${totalBatches} brews affected`}/>
+        <KPICard label="In Spec"         value={`${inSpecPct}%`} accent='var(--green)'
+                 sub={`${totalBatches - oosBrews} ${totalBatches - oosBrews === 1 ? 'brew' : 'brews'} clean`}/>
+        <KPICard label="Total Readings"  value={totalReadings} sub="all active brews"/>
+        <div style={{ flex:1 }}/>
+      </div>
+
+      {/* ── Body ── */}
+      <div style={{ flex:1, display:'flex', overflow:'hidden' }}>
+        {/* Main table area */}
+        <div style={{ flex:1, overflowY:'auto', overflowX:'hidden' }}>
+          {brewhouse.length > 0 && (
+            <BatchSection title="Brewhouse" batches={brewhouse}
+              selectedId={selected} onSelect={b => setSelected(b.id === selected ? null : b.id)}
+              compact={compact}/>
+          )}
+          {brite.length > 0 && (
+            <BatchSection title="Brite / Packaging" batches={brite}
+              selectedId={selected} onSelect={b => setSelected(b.id === selected ? null : b.id)}
+              compact={compact}/>
+          )}
+          {filtered.length === 0 && (
+            <div style={{ display:'flex', alignItems:'center', justifyContent:'center',
+                          height:200, color:'var(--muted)', fontSize:13 }}>
+              No batches match the current filter.
+            </div>
+          )}
+          {/* Stage Summary — fills remaining space */}
+          <StageSummary batches={enrichedBatches} acknowledged={acknowledged}/>
+        </div>
+
+        {/* Detail panel */}
+        {selectedBatch && (
+          <div style={{ width:'var(--panel-w)', flexShrink:0, height:'100%', overflowY:'auto',
+                        transition:'transform 0.2s ease' }}>
+            <DetailPanel batch={selectedBatch} onClose={() => setSelected(null)}
+              acknowledged={acknowledged} onAcknowledge={handleAck}/>
+          </div>
+        )}
+
+        {/* Tweaks sidebar — inline, never overlaps data */}
+        {tweaksOpen && (
+          <div style={{ width:220, flexShrink:0, borderLeft:'1px solid var(--border2)',
+                        background:'var(--card)', overflowY:'auto' }}>
+            <TweaksPanel config={config} onChange={setConfig}/>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body>
+</html>
+
