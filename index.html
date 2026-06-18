@@ -31,7 +31,7 @@
       --green-bg:rgba(46,125,79,0.08);
       --green-br:rgba(46,125,79,0.25);
       --yellow:  #a07820;
-      --panel-w: 700px;
+      --panel-w: 1000px;
     }
     html, body, #root { height: 100%; }
     body { background: var(--bg); color: var(--text); font-family: 'Barlow', sans-serif;
@@ -134,7 +134,7 @@ function StagePill({ stage, small }) {
 }
 
 // ─── Batch Row ────────────────────────────────────────────────────────────────
-function BatchRow({ batch, selected, onClick, compact }) {
+function BatchRow({ batch, selected, onClick, compact, detailOpen }) {
   const h = compact ? 38 : 46;
   const latest = batch.readings[0];
   const oos    = useMemo(() => computeOOS(batch.readings, batch.product), [batch]);
@@ -157,7 +157,8 @@ function BatchRow({ batch, selected, onClick, compact }) {
   return (
     <div onClick={() => onClick(batch)}
       style={{
-        display:'grid', gridTemplateColumns:'190px 110px 64px 44px 48px 1fr 72px',
+        display:'grid',
+        gridTemplateColumns: detailOpen ? '190px 110px 64px 44px 72px' : '190px 110px 64px 44px 48px 1fr 72px',
         alignItems:'center', gap:10, padding:`0 18px`, height:h,
         cursor:'pointer', borderBottom:'1px solid var(--border)',
         background: selected ? 'rgba(212,134,26,0.07)' : 'transparent',
@@ -176,24 +177,28 @@ function BatchRow({ batch, selected, onClick, compact }) {
         {batch.tank}{batch.tankSource === 'basecamp' && <span title="via Basecamp transfer log" style={{ color:'var(--amber)' }}> *</span>}
       </span>
       <span style={{ color:'var(--muted)', fontSize:12 }}>{batch.age}d</span>
-      <span style={{ color:'var(--muted)', fontSize:12, textAlign:'center' }}>{batch.numReadings}</span>
-      <div style={{ display:'flex', gap:8, overflow:'hidden', flexWrap:'nowrap', alignItems:'center' }}>
-        {latest && (
-          <span style={{ fontSize:11, color:'var(--muted2)', fontFamily:'IBM Plex Mono',
-                         whiteSpace:'nowrap', flexShrink:0 }}>
-            {fmtDate(latest.date)}
-          </span>
-        )}
-        {latest && chips.length > 0 && (
-          <span style={{ color:'var(--border2)', fontSize:11, flexShrink:0 }}>·</span>
-        )}
-        {chips.map(({m,v,oos,dir}) => (
-          <span key={m} style={{ fontSize:11, fontFamily:'IBM Plex Mono', whiteSpace:'nowrap',
-                                  color: oos ? 'var(--red)' : 'var(--muted)', fontWeight: oos ? 700 : 400 }}>
-            {m}:{fmt(v)}{oos ? (dir==='HIGH'?'↑':'↓') : ''}
-          </span>
-        ))}
-      </div>
+      {!detailOpen && (
+        <span style={{ color:'var(--muted)', fontSize:12, textAlign:'center' }}>{batch.numReadings}</span>
+      )}
+      {!detailOpen && (
+        <div style={{ display:'flex', gap:8, overflow:'hidden', flexWrap:'nowrap', alignItems:'center' }}>
+          {latest && (
+            <span style={{ fontSize:11, color:'var(--muted2)', fontFamily:'IBM Plex Mono',
+                           whiteSpace:'nowrap', flexShrink:0 }}>
+              {fmtDate(latest.date)}
+            </span>
+          )}
+          {latest && chips.length > 0 && (
+            <span style={{ color:'var(--border2)', fontSize:11, flexShrink:0 }}>·</span>
+          )}
+          {chips.map(({m,v,oos,dir}) => (
+            <span key={m} style={{ fontSize:11, fontFamily:'IBM Plex Mono', whiteSpace:'nowrap',
+                                    color: oos ? 'var(--red)' : 'var(--muted)', fontWeight: oos ? 700 : 400 }}>
+              {m}:{fmt(v)}{oos ? (dir==='HIGH'?'↑':'↓') : ''}
+            </span>
+          ))}
+        </div>
+      )}
       <div style={{ textAlign:'right' }}>
         <OOSBadge count={oos.length}/>
       </div>
@@ -202,7 +207,7 @@ function BatchRow({ batch, selected, onClick, compact }) {
 }
 
 // ─── Section ─────────────────────────────────────────────────────────────────
-function BatchSection({ title, batches, selectedId, onSelect, compact }) {
+function BatchSection({ title, batches, selectedId, onSelect, compact, detailOpen }) {
   const [sort, setSort] = useState({ key: 'age', dir: 'desc' });
   const totalOOS = batches.reduce((s,b) => s + (b.oosCount||0), 0);
 
@@ -228,8 +233,10 @@ function BatchSection({ title, batches, selectedId, onSelect, compact }) {
     { label:'Stage',           key:'stage',  sortable:true  },
     { label:'Tank',            key:'tank',   sortable:true  },
     { label:'Age',             key:'age',    sortable:true  },
-    { label:'Rdgs',            key:'rdgs',   sortable:true  },
-    { label:'Latest Readings', key:'latest', sortable:true  },
+    ...(detailOpen ? [] : [
+      { label:'Rdgs',            key:'rdgs',   sortable:true  },
+      { label:'Latest Readings', key:'latest', sortable:true  },
+    ]),
     { label:'OOS',             key:null,     sortable:false },
   ];
 
@@ -256,7 +263,8 @@ function BatchSection({ title, batches, selectedId, onSelect, compact }) {
         )}
       </div>
       {/* Column headers */}
-      <div style={{ display:'grid', gridTemplateColumns:'190px 110px 64px 44px 48px 1fr 72px',
+      <div style={{ display:'grid',
+                    gridTemplateColumns: detailOpen ? '190px 110px 64px 44px 72px' : '190px 110px 64px 44px 48px 1fr 72px',
                     gap:10, padding:'0 18px', height:30, alignItems:'center',
                     background:'var(--surface)', borderBottom:'1px solid var(--border)',
                     position:'sticky', top:31, zIndex:4 }}>
@@ -266,7 +274,7 @@ function BatchSection({ title, batches, selectedId, onSelect, compact }) {
             style={{ fontSize:10, fontWeight:600, letterSpacing:'0.08em', textTransform:'uppercase',
                      userSelect:'none', whiteSpace:'nowrap',
                      color: sortable && sort.key === key ? 'var(--amber)' : 'var(--muted)',
-                     textAlign: i===6 ? 'right' : 'left',
+                     textAlign: i===colDefs.length-1 ? 'right' : 'left',
                      cursor: sortable ? 'pointer' : 'default' }}>
             {label}{sortable ? (sort.key === key ? (sort.dir === 'asc' ? ' ↑' : ' ↓') : ' ↕') : ''}
           </span>
@@ -274,7 +282,7 @@ function BatchSection({ title, batches, selectedId, onSelect, compact }) {
       </div>
       {sorted.map(b => (
         <BatchRow key={b.id} batch={b} selected={selectedId===b.id}
-                  onClick={onSelect} compact={compact}/>
+                  onClick={onSelect} compact={compact} detailOpen={detailOpen}/>
       ))}
     </div>
   );
@@ -964,12 +972,12 @@ function App() {
           {brewhouse.length > 0 && (
             <BatchSection title="Brewhouse" batches={brewhouse}
               selectedId={selected} onSelect={b => setSelected(b.id === selected ? null : b.id)}
-              compact={compact}/>
+              compact={compact} detailOpen={!!selected}/>
           )}
           {brite.length > 0 && (
             <BatchSection title="Brite / Packaging" batches={brite}
               selectedId={selected} onSelect={b => setSelected(b.id === selected ? null : b.id)}
-              compact={compact}/>
+              compact={compact} detailOpen={!!selected}/>
           )}
           {filtered.length === 0 && (
             <div style={{ display:'flex', alignItems:'center', justifyContent:'center',
