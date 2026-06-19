@@ -3,6 +3,16 @@
 
 const SPECS = {
   "AMB": {
+    "CO2 Vols": {
+      "stages": [
+        "FIN"
+      ],
+      "target": 2.67,
+      "low": 2.6,
+      "high": 2.74,
+      "unit": "",
+      "maxOnly": false
+    },
     "OG": {
       "stages": [
         "WORT"
@@ -13,62 +23,7 @@ const SPECS = {
       "unit": "\u00b0P",
       "maxOnly": false
     },
-    "FG": {
-      "stages": [
-        "BBT",
-        "FIN"
-      ],
-      "target": 2.0,
-      "low": 1.8,
-      "high": 2.2,
-      "unit": "\u00b0P",
-      "maxOnly": false
-    },
-    "ABV": {
-      "stages": [
-        "BBT",
-        "FIN"
-      ],
-      "target": 4.5,
-      "low": 4.2,
-      "high": 4.8,
-      "unit": "%",
-      "maxOnly": false
-    },
-    "IBU": {
-      "stages": [
-        "BBT",
-        "FIN"
-      ],
-      "target": 17.0,
-      "low": 15.0,
-      "high": 19.0,
-      "unit": "IBU",
-      "maxOnly": false
-    },
-    "CO2 Vols": {
-      "stages": [
-        "BBT",
-        "FIN"
-      ],
-      "target": null,
-      "low": null,
-      "high": null,
-      "unit": "",
-      "maxOnly": false
-    },
     "Turbidity": {
-      "stages": [
-        "BBT",
-        "FIN"
-      ],
-      "target": null,
-      "low": null,
-      "high": null,
-      "unit": "",
-      "maxOnly": false
-    },
-    "SRM": {
       "stages": [
         "BBT",
         "FIN"
@@ -98,6 +53,72 @@ const SPECS = {
       "high": 0.075,
       "unit": "mg/L",
       "maxOnly": true
+    },
+    "ABV": {
+      "stages": [
+        "BBT",
+        "FIN"
+      ],
+      "target": 4.5,
+      "low": 4.2,
+      "high": 4.8,
+      "unit": "%",
+      "maxOnly": false
+    },
+    "FG": {
+      "stages": [
+        "BBT",
+        "FIN"
+      ],
+      "target": 1.8,
+      "low": 1.6,
+      "high": 2.0,
+      "unit": "\u00b0P",
+      "maxOnly": false
+    },
+    "pH": {
+      "stages": [
+        "BBT",
+        "FIN"
+      ],
+      "target": 4.2,
+      "low": 4.0,
+      "high": 4.4,
+      "unit": "",
+      "maxOnly": false
+    },
+    "IBU": {
+      "stages": [
+        "BBT",
+        "FIN"
+      ],
+      "target": 13.8,
+      "low": 11.73,
+      "high": 15.87,
+      "unit": "IBU",
+      "maxOnly": false
+    },
+    "HAZE": {
+      "stages": [
+        "BBT",
+        "FIN"
+      ],
+      "target": 30.0,
+      "low": 25.5,
+      "high": 34.5,
+      "unit": "",
+      "maxOnly": false
+    },
+    "SRM": {
+      "stages": [
+        "BBT",
+        "FIN"
+      ],
+      "target": 14.0,
+      "low": 12.6,
+      "high": 15.4,
+      "unit": "",
+      "maxOnly": false
     }
   },
   "ALG": {
@@ -1508,7 +1529,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": null,
     "lastSource": null,
-    "numReadings": 1,
+    "numReadings": 2,
     "readings": [],
     "fermLog": [],
     "yeastPitches": [
@@ -1522,6 +1543,17 @@ const BATCHES = [
         "yeastSource": "BH43",
         "yeastBrewNum": "AMB35-36",
         "countType": "YEAST"
+      },
+      {
+        "date": "2026-06-19",
+        "tank": "BH16",
+        "cellCount": 83350802.33333333,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "FV"
       }
     ],
     "transferLog": [
@@ -2354,6 +2386,51 @@ const BATCHES = [
     "basecampAlerts": []
   },
   {
+    "id": "GLD 047",
+    "product": "GLD",
+    "section": "brewhouse",
+    "brewNums": [
+      47
+    ],
+    "brewDate": "2026-06-18",
+    "age": 1,
+    "stage": "Fermenting",
+    "tank": "BH30",
+    "labTank": "BH30",
+    "tankSource": "lab",
+    "lastReading": null,
+    "lastSource": null,
+    "numReadings": 1,
+    "readings": [],
+    "fermLog": [],
+    "yeastPitches": [
+      {
+        "date": "2026-06-19",
+        "tank": "BH30",
+        "cellCount": 22905564.0,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": "L-New",
+        "yeastSource": "Prop 4",
+        "yeastBrewNum": "New Lager Yeast",
+        "countType": "FV"
+      }
+    ],
+    "transferLog": [
+      {
+        "date": "2026-06-18",
+        "action": "BREW",
+        "from": "",
+        "to": "BH30",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "completed": true
+      }
+    ],
+    "basecampAlerts": []
+  },
+  {
     "id": "AND 027, 028",
     "product": "AND",
     "section": "brewhouse",
@@ -2367,10 +2444,21 @@ const BATCHES = [
     "tank": "BH33",
     "labTank": "BH33",
     "tankSource": "lab",
-    "lastReading": "2026-06-18",
+    "lastReading": "2026-06-19",
     "lastSource": "FERM",
-    "numReadings": 13,
+    "numReadings": 14,
     "readings": [
+      {
+        "date": "2026-06-19",
+        "sample": "AND 27-28 BH33",
+        "stage": "FERM",
+        "tank": "BH33",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 7.84,
+        "Turbidity": 682.335599899292,
+        "FG": 3.82
+      },
       {
         "date": "2026-06-18",
         "sample": "AND 27-28 BH33",
@@ -2975,7 +3063,7 @@ const BATCHES = [
         "tank": "BT28",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "A",
-        "SRM": 1.013,
+        "SRM": 12.855329949238577,
         "IBU": 16.5,
         "pH": 4.27,
         "DO": 41.0,
@@ -2997,7 +3085,7 @@ const BATCHES = [
         "tank": "BT30",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "A",
-        "SRM": 1.086,
+        "SRM": 13.781725888324875,
         "IBU": 12.950000000000001,
         "pH": 4.26,
         "DO": 36.0,
@@ -3019,7 +3107,7 @@ const BATCHES = [
         "tank": "BT31",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "A",
-        "SRM": 1.122,
+        "SRM": 14.238578680203048,
         "IBU": 14.249999999999998,
         "pH": 4.19,
         "DO": 34.0,
@@ -3041,7 +3129,7 @@ const BATCHES = [
         "tank": "BT26",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "A",
-        "SRM": 1.108,
+        "SRM": 14.060913705583758,
         "IBU": 14.05,
         "pH": 4.2,
         "DO": 44.0,
@@ -3062,7 +3150,7 @@ const BATCHES = [
         "tank": "BT28",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "A",
-        "SRM": 1.086,
+        "SRM": 13.781725888324875,
         "IBU": 13.950000000000001,
         "pH": 4.2,
         "DO": 41.0,
@@ -3084,7 +3172,7 @@ const BATCHES = [
         "tank": "BT30",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "A",
-        "SRM": 1.06,
+        "SRM": 13.451776649746193,
         "IBU": 14.399999999999999,
         "pH": 4.21,
         "DO": 27.0,
@@ -4602,7 +4690,7 @@ const BATCHES = [
         "tank": "BT23",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "ALPHA",
-        "SRM": 0.444,
+        "SRM": 5.634517766497462,
         "IBU": 17.349999999999998,
         "pH": 4.59,
         "DO": 33.0,
@@ -4644,7 +4732,7 @@ const BATCHES = [
         "tank": "BT27",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "ALPHA",
-        "SRM": 0.444,
+        "SRM": 5.634517766497462,
         "IBU": 17.349999999999998,
         "pH": 4.57,
         "DO": 33.0,
@@ -4686,7 +4774,7 @@ const BATCHES = [
         "tank": "BT27",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "ALPHA",
-        "SRM": 0.502,
+        "SRM": 6.370558375634518,
         "IBU": 17.25,
         "pH": 4.65,
         "DO": 41.0,
@@ -5074,7 +5162,7 @@ const BATCHES = [
         "tank": "BT28",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "AG",
-        "SRM": 0.608,
+        "SRM": 7.715736040609137,
         "IBU": 18.9,
         "pH": 4.62,
         "DO": 30.0,
@@ -5096,7 +5184,7 @@ const BATCHES = [
         "tank": "BT27",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "AG",
-        "SRM": 0.606,
+        "SRM": 7.690355329949239,
         "IBU": 19.25,
         "pH": 4.61,
         "DO": 33.0,
@@ -5341,7 +5429,7 @@ const BATCHES = [
         "tank": "BT29",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "AG",
-        "SRM": 0.702,
+        "SRM": 8.908629441624365,
         "IBU": 21.5,
         "pH": 4.51,
         "DO": 49.0,
@@ -5383,7 +5471,7 @@ const BATCHES = [
         "tank": "BT29",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "AG",
-        "SRM": 0.693,
+        "SRM": 8.794416243654823,
         "IBU": 21.5,
         "pH": 4.65,
         "DO": 0.0,
@@ -5405,7 +5493,7 @@ const BATCHES = [
         "tank": "BT28",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "AG",
-        "SRM": 0.608,
+        "SRM": 7.715736040609137,
         "IBU": 18.9,
         "pH": 4.62,
         "DO": 30.0,
@@ -5447,7 +5535,7 @@ const BATCHES = [
         "tank": "BT31",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "AG",
-        "SRM": 0.667,
+        "SRM": 8.464467005076143,
         "IBU": 19.900000000000002,
         "pH": 4.63,
         "DO": 31.0,
@@ -5489,7 +5577,7 @@ const BATCHES = [
         "tank": "BT28",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "AG",
-        "SRM": 0.606,
+        "SRM": 7.690355329949239,
         "IBU": 18.35,
         "pH": 4.62,
         "DO": 27.0,
@@ -5806,7 +5894,7 @@ const BATCHES = [
         "tank": "BT29",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "SG",
-        "SRM": 0.487,
+        "SRM": 6.180203045685278,
         "IBU": 35.949999999999996,
         "pH": 4.02,
         "DO": 33.0,
@@ -5988,7 +6076,7 @@ const BATCHES = [
         "tank": "BT22",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "TD",
-        "SRM": 5.15,
+        "SRM": 65.35532994923858,
         "IBU": 24.65,
         "pH": 4.36,
         "DO": 35.0,
@@ -6030,7 +6118,7 @@ const BATCHES = [
         "tank": "BT27",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "TD",
-        "SRM": 4.41,
+        "SRM": 55.964467005076145,
         "IBU": 21.85,
         "pH": 4.29,
         "DO": 29.0,
@@ -6417,7 +6505,7 @@ const BATCHES = [
         "tank": "BT30",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "A",
-        "SRM": 1.002,
+        "SRM": 12.715736040609137,
         "IBU": 13.600000000000001,
         "pH": 4.25,
         "DO": 30.0,
@@ -6439,7 +6527,7 @@ const BATCHES = [
         "tank": "BT24",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "A",
-        "SRM": 1.032,
+        "SRM": 13.096446700507615,
         "IBU": 13.100000000000001,
         "pH": 4.13,
         "DO": 33.0,
@@ -6461,7 +6549,7 @@ const BATCHES = [
         "tank": "BT31",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "A",
-        "SRM": 0.977,
+        "SRM": 12.398477157360407,
         "IBU": 11.700000000000001,
         "pH": 4.24,
         "DO": 31.0,
@@ -6483,7 +6571,7 @@ const BATCHES = [
         "tank": "UV30",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "A",
-        "SRM": 1.004,
+        "SRM": 12.741116751269036,
         "IBU": 14.35,
         "pH": 4.21,
         "DO": 35.0,
@@ -6811,7 +6899,7 @@ const BATCHES = [
         "tank": "UV30",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "A",
-        "SRM": 1.086,
+        "SRM": 13.781725888324875,
         "IBU": 17.150000000000002,
         "pH": 4.2,
         "DO": 45.0,
@@ -6833,7 +6921,7 @@ const BATCHES = [
         "tank": "BT31",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "A",
-        "SRM": 1.018,
+        "SRM": 12.918781725888325,
         "IBU": 14.05,
         "pH": 4.25,
         "DO": 27.0,
@@ -6855,7 +6943,7 @@ const BATCHES = [
         "tank": "UV35",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "A",
-        "SRM": 1.075,
+        "SRM": 13.642131979695431,
         "IBU": 15.049999999999999,
         "pH": 4.2,
         "DO": 0.0,
@@ -6917,7 +7005,7 @@ const BATCHES = [
         "tank": "BT24",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "A",
-        "SRM": 1.032,
+        "SRM": 13.096446700507615,
         "IBU": 13.100000000000001,
         "pH": 4.13,
         "DO": 33.0,
@@ -6939,7 +7027,7 @@ const BATCHES = [
         "tank": "BT30",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "A",
-        "SRM": 0.995,
+        "SRM": 12.626903553299492,
         "IBU": 14.85,
         "pH": 4.14,
         "DO": 34.0,
@@ -6961,7 +7049,7 @@ const BATCHES = [
         "tank": "BT26",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "A",
-        "SRM": 1.007,
+        "SRM": 12.779187817258881,
         "IBU": 13.25,
         "pH": 4.14,
         "DO": 32.0,
@@ -6983,7 +7071,7 @@ const BATCHES = [
         "tank": "BT30",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "A",
-        "SRM": 0.998,
+        "SRM": 12.66497461928934,
         "IBU": 14.7,
         "pH": 4.17,
         "Calories": 136.66,
@@ -7003,7 +7091,7 @@ const BATCHES = [
         "tank": "UV30",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "A",
-        "SRM": 1.004,
+        "SRM": 12.741116751269036,
         "IBU": 14.35,
         "pH": 4.21,
         "DO": 35.0,
@@ -7025,7 +7113,7 @@ const BATCHES = [
         "tank": "BT27",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "A",
-        "SRM": 0.983,
+        "SRM": 12.474619289340101,
         "IBU": 15.4,
         "pH": 4.15,
         "DO": 33.0,
@@ -7147,7 +7235,7 @@ const BATCHES = [
         "tank": "BT23",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "A",
-        "SRM": 0.959,
+        "SRM": 12.170050761421319,
         "IBU": 14.399999999999999,
         "pH": 4.19,
         "DO": 33.0,
@@ -7169,7 +7257,7 @@ const BATCHES = [
         "tank": "BT25",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "A",
-        "SRM": 0.999,
+        "SRM": 12.67766497461929,
         "IBU": 16.150000000000002,
         "pH": 4.15,
         "DO": 44.0,
@@ -7191,7 +7279,7 @@ const BATCHES = [
         "tank": "BT27",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "A",
-        "SRM": 1.006,
+        "SRM": 12.766497461928934,
         "IBU": 14.75,
         "pH": 4.19,
         "DO": 29.0,
@@ -7213,7 +7301,7 @@ const BATCHES = [
         "tank": "BT30",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "A",
-        "SRM": 1.012,
+        "SRM": 12.84263959390863,
         "IBU": 15.85,
         "pH": 4.18,
         "DO": 33.0,
@@ -7790,7 +7878,7 @@ const BATCHES = [
         "tank": "UV30",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "A",
-        "SRM": 1.086,
+        "SRM": 13.781725888324875,
         "IBU": 17.150000000000002,
         "pH": 4.2,
         "DO": 45.0,
@@ -7872,7 +7960,7 @@ const BATCHES = [
         "tank": "BT30",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "A",
-        "SRM": 1.002,
+        "SRM": 12.715736040609137,
         "IBU": 13.600000000000001,
         "pH": 4.25,
         "DO": 30.0,
@@ -7894,7 +7982,7 @@ const BATCHES = [
         "tank": "BT24",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "A",
-        "SRM": 1.032,
+        "SRM": 13.096446700507615,
         "IBU": 13.100000000000001,
         "pH": 4.13,
         "DO": 33.0,
@@ -7916,7 +8004,7 @@ const BATCHES = [
         "tank": "BT31",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "A",
-        "SRM": 0.977,
+        "SRM": 12.398477157360407,
         "IBU": 11.700000000000001,
         "pH": 4.24,
         "DO": 31.0,
@@ -7938,7 +8026,7 @@ const BATCHES = [
         "tank": "UV30",
         "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
         "sourceSheet": "A",
-        "SRM": 1.004,
+        "SRM": 12.741116751269036,
         "IBU": 14.35,
         "pH": 4.21,
         "DO": 35.0,
@@ -8391,7 +8479,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-06-19",
-  "lastSync": "Jun 19, 2026 \u00b7 12:04 AM",
+  "lastSync": "Jun 19, 2026 \u00b7 11:51 AM",
   "dbPath": "data/qc_monitor.db",
   "apiBase": "/api"
 };
