@@ -57,7 +57,28 @@ const STAGE_COLORS = {
   Wort: '#5b7ab5', Fermenting: '#6b9b5a', Brite: '#d4861a', Packaged: '#7a8a6a',
 };
 const STAGE_ORDER = ['Wort','Fermenting','Brite','Packaged'];
-const ALL_METRICS  = ['OG','Wort pH','IBU (W)','ABV','FG','IBU','CO2','pH','Total VDK'];
+const ALL_METRICS  = ['OG','Wort pH','IBU (W)','ABV','FG','IBU','CO2','pH','Total VDK','HAZE','SRM','DO'];
+
+// Readings History column sets — split by stage so wort-only and
+// finished-only columns don't show as blank '—' cells in the other group.
+const WORT_FERM_GC_COLS = [
+  { label:'OG',     key:'OG',        specKey:'OG' },
+  { label:'WpH',    key:'Wort pH',   specKey:'Wort pH' },
+  { label:'IBU(W)', key:'IBU (W)',   specKey:'IBU (W)' },
+  { label:'ABV',    key:'ABV',       specKey:'ABV' },
+  { label:'FG',     key:'FG',        specKey:'FG' },
+  { label:'VDK',    key:'Total VDK', specKey:'Total VDK', decimals:3 },
+];
+const BBT_FIN_COLS = [
+  { label:'ABV',  key:'ABV',  specKey:'ABV' },
+  { label:'FG',   key:'FG',   specKey:'FG' },
+  { label:'pH',   key:'pH',   specKey:'pH' },
+  { label:'IBU',  key:'IBU',  specKey:'IBU' },
+  { label:'Haze', key:'HAZE', specKey:'HAZE' },
+  { label:'SRM',  key:'SRM',  specKey:'SRM' },
+  { label:'CO2',  key:'CO2',  specKey:'CO2 Vols' },
+  { label:'DO',   key:'DO',   specKey:'DO' },
+];
 
 const fmt = (v, d=2) => v != null ? Number(v).toFixed(d) : '—';
 const fmtDate = s => {
@@ -290,6 +311,60 @@ function BatchSection({ title, batches, selectedId, onSelect, compact, detailOpe
   );
 }
 
+// ─── Readings Table (used twice in DetailPanel — split by stage group) ───────
+function ReadingsTable({ rows, product, metricCols, onSourceClick }) {
+  return (
+    <div style={{ overflowX:'auto' }}>
+      <table style={{ width:'100%', borderCollapse:'collapse', fontSize:11 }}>
+        <thead>
+          <tr style={{ borderBottom:'1px solid var(--border2)' }}>
+            {['Date','Sample','Stg','Tank', ...metricCols.map(c => c.label)].map(h => (
+              <th key={h} style={{ padding:'4px 6px', textAlign:'left', color:'var(--muted)',
+                                    fontWeight:600, letterSpacing:'0.05em', whiteSpace:'nowrap',
+                                    fontSize:10, textTransform:'uppercase' }}>{h}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {[...rows].reverse().map((r,i) => (
+            <tr key={i} onClick={e => onSourceClick(e, r)}
+              style={{ borderBottom:'1px solid var(--border)', cursor:'pointer',
+                        background: i%2===0 ? 'transparent' : 'rgba(255,255,255,0.01)' }}>
+              <td style={{ padding:'5px 6px', color:'var(--muted)', whiteSpace:'nowrap', fontFamily:'IBM Plex Mono', fontSize:11 }}>
+                {fmtDate(r.date)}
+              </td>
+              <td style={{ padding:'5px 6px', color:'var(--text)', whiteSpace:'nowrap', maxWidth:160,
+                            overflow:'hidden', textOverflow:'ellipsis', fontSize:11 }}>{r.sample}</td>
+              <td style={{ padding:'5px 6px' }}>
+                <span style={{ fontSize:10, fontWeight:700, letterSpacing:'0.05em',
+                                color: STAGE_COLORS[r.stage] || r.stage === 'GC' ? '#a87d50' : 'var(--muted)' }}>
+                  {r.stage}
+                </span>
+              </td>
+              <td style={{ padding:'5px 6px', color:'var(--muted)', fontFamily:'IBM Plex Mono', fontSize:11 }}>{r.tank}</td>
+              {metricCols.map(({key, specKey, decimals}, ci) => {
+                const val = r[key];
+                const status = specKey ? checkSpec(specKey, val, r.stage, product) : null;
+                const isOOS  = status && status !== 'OK';
+                const dir    = status === 'HIGH' ? '↑' : status === 'LOW' ? '↓' : '';
+                return (
+                  <td key={ci} style={{ padding:'5px 6px', fontFamily:'IBM Plex Mono', fontSize:11,
+                                         color: isOOS ? 'var(--red)' : val != null ? 'var(--text)' : 'var(--muted2)',
+                                         fontWeight: isOOS ? 700 : 400,
+                                         background: isOOS ? 'var(--red-bg)' : 'transparent',
+                                         borderRadius:3, whiteSpace:'nowrap' }}>
+                    {val != null ? `${fmt(val, decimals ?? 2)}${dir}` : '—'}
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
 // ─── Detail Panel ─────────────────────────────────────────────────────────────
 function DetailPanel({ batch, onClose }) {
   const oos = useMemo(() => computeOOS(batch.readings, batch.product), [batch]);
@@ -308,6 +383,21 @@ function DetailPanel({ batch, onClose }) {
     document.addEventListener('click', dismiss);
     return () => document.removeEventListener('click', dismiss);
   }, [sourcePopup]);
+
+  const handleSourceClick = (e, r) => {
+    e.stopPropagation();
+    const text = r.sourceFile
+      ? (r.sourceSheet ? `${r.sourceFile} · ${r.sourceSheet}` : r.sourceFile)
+      : 'Source unknown';
+    setSourcePopup(prev =>
+      prev && prev.text === text ? null : { text, x: e.clientX, y: e.clientY }
+    );
+  };
+
+  const wortFermGcReadings = useMemo(() =>
+    batch.readings.filter(r => r.stage === 'WORT' || r.stage === 'FERM' || r.stage === 'GC'), [batch]);
+  const bbtFinReadings = useMemo(() =>
+    batch.readings.filter(r => r.stage === 'BBT' || r.stage === 'FIN'), [batch]);
 
   // Latest value per metric
   const latestVals = useMemo(() => {
@@ -489,87 +579,36 @@ function DetailPanel({ batch, onClose }) {
           </div>
         )}
 
-        {/* Readings History */}
+        {/* Readings History — split by stage group so wort-only columns
+            (WpH, IBU(W)) don't show blank in BBT/FIN rows and vice versa */}
         <div style={{ padding:'14px 18px 4px' }}>
           <div style={{ fontSize:10, fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase',
                         color:'var(--muted)', marginBottom:10 }}>
             Readings History ({batch.readings.length})
           </div>
-          <div style={{ overflowX:'auto' }}>
-            <table style={{ width:'100%', borderCollapse:'collapse', fontSize:11 }}>
-              <thead>
-                <tr style={{ borderBottom:'1px solid var(--border2)' }}>
-                  {['Date','Sample','Stg','Tank','OG','WpH','IBU(W)','ABV','FG','pH','IBU','CO2','VDK'].map(h => (
-                    <th key={h} style={{ padding:'4px 6px', textAlign:'left', color:'var(--muted)',
-                                          fontWeight:600, letterSpacing:'0.05em', whiteSpace:'nowrap',
-                                          fontSize:10, textTransform:'uppercase' }}>{h}</th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {[...batch.readings].reverse().map((r,i) => {
-                  const cells = [
-                    r['OG'], r['Wort pH'], r['IBU (W)'],
-                    r['ABV'], r['FG'], r['pH'], r['IBU'], r['CO2'], r['Total VDK']
-                  ];
-                  const metricKeys = ['OG','Wort pH','IBU (W)','ABV','FG','IBU','IBU','CO2','Total VDK'];
-                  // note: IBU (W) for wort, IBU for brite - use stage to decide
-                  const actualMetrics = ['OG','Wort pH','IBU (W)','ABV','FG',null,'IBU',null,'Total VDK'];
-                  const handleRowClick = e => {
-                    e.stopPropagation();
-                    const text = r.sourceFile
-                      ? (r.sourceSheet ? `${r.sourceFile} · ${r.sourceSheet}` : r.sourceFile)
-                      : 'Source unknown';
-                    setSourcePopup(prev =>
-                      prev && prev.text === text ? null : { text, x: e.clientX, y: e.clientY }
-                    );
-                  };
-                  return (
-                    <tr key={i} onClick={handleRowClick}
-                      style={{ borderBottom:'1px solid var(--border)', cursor:'pointer',
-                                background: i%2===0 ? 'transparent' : 'rgba(255,255,255,0.01)' }}>
-                      <td style={{ padding:'5px 6px', color:'var(--muted)', whiteSpace:'nowrap', fontFamily:'IBM Plex Mono', fontSize:11 }}>
-                        {fmtDate(r.date)}
-                      </td>
-                      <td style={{ padding:'5px 6px', color:'var(--text)', whiteSpace:'nowrap', maxWidth:160,
-                                    overflow:'hidden', textOverflow:'ellipsis', fontSize:11 }}>{r.sample}</td>
-                      <td style={{ padding:'5px 6px' }}>
-                        <span style={{ fontSize:10, fontWeight:700, letterSpacing:'0.05em',
-                                        color: STAGE_COLORS[r.stage] || r.stage === 'GC' ? '#a87d50' : 'var(--muted)' }}>
-                          {r.stage}
-                        </span>
-                      </td>
-                      <td style={{ padding:'5px 6px', color:'var(--muted)', fontFamily:'IBM Plex Mono', fontSize:11 }}>{r.tank}</td>
-                      {[
-                        {val:r['OG'],         m:'OG'},
-                        {val:r['Wort pH'],    m:'Wort pH'},
-                        {val:r['IBU (W)'],    m:'IBU (W)'},
-                        {val:r['ABV'],        m:'ABV'},
-                        {val:r['FG'],         m:'FG'},
-                        {val:r['pH'],         m:null},
-                        {val:r['IBU'],        m:'IBU'},
-                        {val:r['CO2'],        m:null},
-                        {val:r['Total VDK'],  m:'Total VDK'},
-                      ].map(({val,m},ci) => {
-                        const status = m ? checkSpec(m, val, r.stage, batch.product) : null;
-                        const isOOS  = status && status !== 'OK';
-                        const dir    = status === 'HIGH' ? '↑' : status === 'LOW' ? '↓' : '';
-                        return (
-                          <td key={ci} style={{ padding:'5px 6px', fontFamily:'IBM Plex Mono', fontSize:11,
-                                                 color: isOOS ? 'var(--red)' : val != null ? 'var(--text)' : 'var(--muted2)',
-                                                 fontWeight: isOOS ? 700 : 400,
-                                                 background: isOOS ? 'var(--red-bg)' : 'transparent',
-                                                 borderRadius:3, whiteSpace:'nowrap' }}>
-                            {val != null ? `${fmt(val, m==='Total VDK'?3:2)}${dir}` : '—'}
-                          </td>
-                        );
-                      })}
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
+
+          {wortFermGcReadings.length > 0 && (
+            <>
+              <div style={{ fontSize:9, fontWeight:700, letterSpacing:'0.08em', textTransform:'uppercase',
+                            color:'var(--muted2)', margin:'2px 0 6px' }}>
+                Wort / Ferm / GC ({wortFermGcReadings.length})
+              </div>
+              <ReadingsTable rows={wortFermGcReadings} product={batch.product}
+                metricCols={WORT_FERM_GC_COLS} onSourceClick={handleSourceClick}/>
+            </>
+          )}
+
+          {bbtFinReadings.length > 0 && (
+            <>
+              <div style={{ fontSize:9, fontWeight:700, letterSpacing:'0.08em', textTransform:'uppercase',
+                            color:'var(--muted2)',
+                            margin: wortFermGcReadings.length > 0 ? '16px 0 6px' : '2px 0 6px' }}>
+                BBT / Finished ({bbtFinReadings.length})
+              </div>
+              <ReadingsTable rows={bbtFinReadings} product={batch.product}
+                metricCols={BBT_FIN_COLS} onSourceClick={handleSourceClick}/>
+            </>
+          )}
         </div>
         {/* Fermentation Stats */}
         {((batch.fermLog && batch.fermLog.length > 0) || (batch.yeastPitches && batch.yeastPitches.length > 0)) && (
