@@ -119,6 +119,16 @@ const SPECS = {
       "high": 15.4,
       "unit": "",
       "maxOnly": false
+    },
+    "DO": {
+      "stages": [
+        "FIN"
+      ],
+      "target": null,
+      "low": null,
+      "high": 80.0,
+      "unit": "",
+      "maxOnly": true
     }
   },
   "ALG": {
@@ -2817,6 +2827,52 @@ const BATCHES = [
         "detail": null,
         "project": "brewhouse",
         "completed": true
+      }
+    ],
+    "basecampAlerts": []
+  },
+  {
+    "id": "AND 029, 030",
+    "product": "AND",
+    "section": "brewhouse",
+    "brewNums": [
+      29,
+      30
+    ],
+    "brewDate": "2026-06-19",
+    "age": 0,
+    "stage": "Fermenting",
+    "tank": "BH35",
+    "labTank": "BH35",
+    "tankSource": "lab",
+    "lastReading": null,
+    "lastSource": null,
+    "numReadings": 1,
+    "readings": [],
+    "fermLog": [],
+    "yeastPitches": [
+      {
+        "date": "2026-06-19",
+        "tank": "BH35",
+        "cellCount": 1397930947.0000002,
+        "viability": 0.72,
+        "pitchRate": 498.95,
+        "yeastGen": "L-10",
+        "yeastSource": "BH43",
+        "yeastBrewNum": "AMB35-36",
+        "countType": "Yeast"
+      }
+    ],
+    "transferLog": [
+      {
+        "date": "2026-06-19",
+        "action": "BREW",
+        "from": "",
+        "to": "BH35",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "completed": false
       }
     ],
     "basecampAlerts": []
@@ -8479,7 +8535,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-06-19",
-  "lastSync": "Jun 19, 2026 \u00b7 12:05 PM",
+  "lastSync": "Jun 19, 2026 \u00b7 2:54 PM",
   "dbPath": "data/qc_monitor.db",
   "apiBase": "/api"
 };
