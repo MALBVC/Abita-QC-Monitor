@@ -8479,7 +8479,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-06-19",
-  "lastSync": "Jun 19, 2026 \u00b7 11:51 AM",
+  "lastSync": "Jun 19, 2026 \u00b7 12:05 PM",
   "dbPath": "data/qc_monitor.db",
   "apiBase": "/api"
 };
