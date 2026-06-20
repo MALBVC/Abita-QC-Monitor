@@ -158,9 +158,9 @@ const SPECS = {
         "BBT",
         "FIN"
       ],
-      "target": 8.0,
-      "low": 7.6,
-      "high": 8.4,
+      "target": 9.0,
+      "low": 8.6,
+      "high": 9.4,
       "unit": "%",
       "maxOnly": false
     },
@@ -5177,19 +5177,6 @@ const BATCHES = [
     ],
     "basecampAlerts": [
       {
-        "metric": "IBU",
-        "value": 18.55,
-        "low": 11.73,
-        "high": 15.87,
-        "date": "2026-06-19",
-        "stage": "BBT",
-        "sample": "AMB 33-34 BT25",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10016996657",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null
-      },
-      {
         "metric": "FG",
         "value": 2.25,
         "low": 1.6,
@@ -5216,19 +5203,6 @@ const BATCHES = [
         "ackAt": null
       },
       {
-        "metric": "IBU",
-        "value": 17.549999999999997,
-        "low": 11.73,
-        "high": 15.87,
-        "date": "2026-06-19",
-        "stage": "BBT",
-        "sample": "AMB 33-34 BT27",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10016996659",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null
-      },
-      {
         "metric": "FG",
         "value": 2.25,
         "low": 1.6,
@@ -5250,19 +5224,6 @@ const BATCHES = [
         "stage": "BBT",
         "sample": "AMB 33-34 BT27",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10016996648",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null
-      },
-      {
-        "metric": "IBU",
-        "value": 17.5,
-        "low": 11.73,
-        "high": 15.87,
-        "date": "2026-06-19",
-        "stage": "BBT",
-        "sample": "AMB 33-34 BT29",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10016996663",
         "acknowledged": false,
         "ackBy": null,
         "ackAt": null
@@ -5294,19 +5255,6 @@ const BATCHES = [
         "ackAt": null
       },
       {
-        "metric": "IBU",
-        "value": 18.55,
-        "low": 11.73,
-        "high": 15.87,
-        "date": "2026-06-19",
-        "stage": "BBT",
-        "sample": "AMB 33-34 BT25",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10016996657",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null
-      },
-      {
         "metric": "FG",
         "value": 2.25,
         "low": 1.6,
@@ -5333,19 +5281,6 @@ const BATCHES = [
         "ackAt": null
       },
       {
-        "metric": "IBU",
-        "value": 17.549999999999997,
-        "low": 11.73,
-        "high": 15.87,
-        "date": "2026-06-19",
-        "stage": "BBT",
-        "sample": "AMB 33-34 BT27",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10016996659",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null
-      },
-      {
         "metric": "FG",
         "value": 2.25,
         "low": 1.6,
@@ -5367,19 +5302,6 @@ const BATCHES = [
         "stage": "BBT",
         "sample": "AMB 33-34 BT27",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10016996648",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null
-      },
-      {
-        "metric": "IBU",
-        "value": 17.5,
-        "low": 11.73,
-        "high": 15.87,
-        "date": "2026-06-19",
-        "stage": "BBT",
-        "sample": "AMB 33-34 BT29",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10016996663",
         "acknowledged": false,
         "ackBy": null,
         "ackAt": null
@@ -7198,19 +7120,6 @@ const BATCHES = [
         "acknowledged": false,
         "ackBy": null,
         "ackAt": null
-      },
-      {
-        "metric": "ABV",
-        "value": 8.85,
-        "low": 7.6,
-        "high": 8.4,
-        "date": "2026-06-19",
-        "stage": "FIN",
-        "sample": "ALG 003 TK23",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10016767769",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null
       }
     ]
   },
@@ -8660,7 +8569,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-06-20",
-  "lastSync": "Jun 20, 2026 \u00b7 4:05 AM",
+  "lastSync": "Jun 20, 2026 \u00b7 10:55 AM",
   "dbPath": "data/qc_monitor.db",
   "apiBase": "/api"
 };
