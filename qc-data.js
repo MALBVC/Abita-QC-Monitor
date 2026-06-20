@@ -1632,7 +1632,8 @@ const BATCHES = [
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10016767800",
         "acknowledged": false,
         "ackBy": null,
-        "ackAt": null
+        "ackAt": null,
+        "also": []
       }
     ]
   },
@@ -3589,7 +3590,29 @@ const BATCHES = [
         "completed": true
       }
     ],
-    "basecampAlerts": []
+    "basecampAlerts": [
+      {
+        "metric": "IBU",
+        "value": 16.5,
+        "low": 11.73,
+        "high": 15.87,
+        "date": "2026-05-06",
+        "stage": "BBT",
+        "sample": "AMB 21-22/23-24 BT28",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10017201511",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "also": [
+          {
+            "value": 16.5,
+            "date": "2026-05-06",
+            "stage": "BBT",
+            "sample": "AMB 21-22/23-24 BT28"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "GLD 031, 032",
@@ -5187,7 +5210,39 @@ const BATCHES = [
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10016996637",
         "acknowledged": false,
         "ackBy": null,
-        "ackAt": null
+        "ackAt": null,
+        "also": [
+          {
+            "value": 2.25,
+            "date": "2026-06-19",
+            "stage": "BBT",
+            "sample": "AMB 33-34 BT27"
+          },
+          {
+            "value": 2.24,
+            "date": "2026-06-19",
+            "stage": "BBT",
+            "sample": "AMB 33-34 BT29"
+          },
+          {
+            "value": 2.25,
+            "date": "2026-06-19",
+            "stage": "BBT",
+            "sample": "AMB 33-34 BT25"
+          },
+          {
+            "value": 2.25,
+            "date": "2026-06-19",
+            "stage": "BBT",
+            "sample": "AMB 33-34 BT27"
+          },
+          {
+            "value": 2.24,
+            "date": "2026-06-19",
+            "stage": "BBT",
+            "sample": "AMB 33-34 BT29"
+          }
+        ]
       },
       {
         "metric": "HAZE",
@@ -5200,137 +5255,141 @@ const BATCHES = [
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10016996645",
         "acknowledged": false,
         "ackBy": null,
-        "ackAt": null
+        "ackAt": null,
+        "also": [
+          {
+            "value": 37.9912514090538,
+            "date": "2026-06-19",
+            "stage": "BBT",
+            "sample": "AMB 33-34 BT27"
+          },
+          {
+            "value": 25.26862460374832,
+            "date": "2026-06-19",
+            "stage": "BBT",
+            "sample": "AMB 33-34 BT29"
+          },
+          {
+            "value": 44.134459018707275,
+            "date": "2026-06-19",
+            "stage": "BBT",
+            "sample": "AMB 33-34 BT25"
+          },
+          {
+            "value": 37.9912514090538,
+            "date": "2026-06-19",
+            "stage": "BBT",
+            "sample": "AMB 33-34 BT27"
+          },
+          {
+            "value": 25.26862460374832,
+            "date": "2026-06-19",
+            "stage": "BBT",
+            "sample": "AMB 33-34 BT29"
+          }
+        ]
       },
       {
-        "metric": "FG",
-        "value": 2.25,
-        "low": 1.6,
-        "high": 2.0,
-        "date": "2026-06-19",
-        "stage": "BBT",
-        "sample": "AMB 33-34 BT27",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10016996640",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null
-      },
-      {
-        "metric": "HAZE",
-        "value": 37.9912514090538,
-        "low": 25.5,
-        "high": 34.5,
-        "date": "2026-06-19",
-        "stage": "BBT",
-        "sample": "AMB 33-34 BT27",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10016996648",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null
-      },
-      {
-        "metric": "FG",
-        "value": 2.24,
-        "low": 1.6,
-        "high": 2.0,
-        "date": "2026-06-19",
-        "stage": "BBT",
-        "sample": "AMB 33-34 BT29",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10016996642",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null
-      },
-      {
-        "metric": "HAZE",
-        "value": 25.26862460374832,
-        "low": 25.5,
-        "high": 34.5,
-        "date": "2026-06-19",
-        "stage": "BBT",
-        "sample": "AMB 33-34 BT29",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10016996654",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null
-      },
-      {
-        "metric": "FG",
-        "value": 2.25,
-        "low": 1.6,
-        "high": 2.0,
+        "metric": "IBU",
+        "value": 18.55,
+        "low": 11.73,
+        "high": 15.87,
         "date": "2026-06-19",
         "stage": "BBT",
         "sample": "AMB 33-34 BT25",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10016996637",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null
-      },
-      {
-        "metric": "HAZE",
-        "value": 44.134459018707275,
-        "low": 25.5,
-        "high": 34.5,
-        "date": "2026-06-19",
-        "stage": "BBT",
-        "sample": "AMB 33-34 BT25",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10016996645",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10016996657",
+        "acknowledged": true,
+        "ackBy": "QC Monitor",
+        "ackAt": "2026-06-20T16:14",
+        "also": [
+          {
+            "value": 17.549999999999997,
+            "date": "2026-06-19",
+            "stage": "BBT",
+            "sample": "AMB 33-34 BT27"
+          },
+          {
+            "value": 17.5,
+            "date": "2026-06-19",
+            "stage": "BBT",
+            "sample": "AMB 33-34 BT29"
+          },
+          {
+            "value": 18.55,
+            "date": "2026-06-19",
+            "stage": "BBT",
+            "sample": "AMB 33-34 BT25"
+          },
+          {
+            "value": 17.549999999999997,
+            "date": "2026-06-19",
+            "stage": "BBT",
+            "sample": "AMB 33-34 BT27"
+          },
+          {
+            "value": 17.5,
+            "date": "2026-06-19",
+            "stage": "BBT",
+            "sample": "AMB 33-34 BT29"
+          },
+          {
+            "value": 17.150000000000002,
+            "date": "2026-06-17",
+            "stage": "BBT",
+            "sample": "AMB 31-32/33-34 UV30"
+          },
+          {
+            "value": 17.150000000000002,
+            "date": "2026-06-17",
+            "stage": "BBT",
+            "sample": "AMB 31-32/33-34 UV30"
+          },
+          {
+            "value": 20.3,
+            "date": "2026-05-29",
+            "stage": "WORT",
+            "sample": "AMB 034 BH41"
+          },
+          {
+            "value": 20.8,
+            "date": "2026-05-28",
+            "stage": "WORT",
+            "sample": "AMB 033 BH41"
+          }
+        ]
       },
       {
         "metric": "FG",
-        "value": 2.25,
+        "value": 2.08,
         "low": 1.6,
         "high": 2.0,
-        "date": "2026-06-19",
-        "stage": "BBT",
-        "sample": "AMB 33-34 BT27",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10016996640",
+        "date": "2026-06-18",
+        "stage": "FIN",
+        "sample": "AMB 31-32/33-34 UV 30",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10017201516",
         "acknowledged": false,
         "ackBy": null,
-        "ackAt": null
-      },
-      {
-        "metric": "HAZE",
-        "value": 37.9912514090538,
-        "low": 25.5,
-        "high": 34.5,
-        "date": "2026-06-19",
-        "stage": "BBT",
-        "sample": "AMB 33-34 BT27",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10016996648",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null
-      },
-      {
-        "metric": "FG",
-        "value": 2.24,
-        "low": 1.6,
-        "high": 2.0,
-        "date": "2026-06-19",
-        "stage": "BBT",
-        "sample": "AMB 33-34 BT29",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10016996642",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null
-      },
-      {
-        "metric": "HAZE",
-        "value": 25.26862460374832,
-        "low": 25.5,
-        "high": 34.5,
-        "date": "2026-06-19",
-        "stage": "BBT",
-        "sample": "AMB 33-34 BT29",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10016996654",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null
+        "ackAt": null,
+        "also": [
+          {
+            "value": 2.08,
+            "date": "2026-06-18",
+            "stage": "FIN",
+            "sample": "AMB 31-32/33-34 UV 30"
+          },
+          {
+            "value": 2.12,
+            "date": "2026-06-17",
+            "stage": "BBT",
+            "sample": "AMB 31-32/33-34 UV30"
+          },
+          {
+            "value": 2.12,
+            "date": "2026-06-17",
+            "stage": "BBT",
+            "sample": "AMB 31-32/33-34 UV30"
+          }
+        ]
       }
     ]
   },
@@ -6654,7 +6713,8 @@ const BATCHES = [
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10011642505",
         "acknowledged": false,
         "ackBy": null,
-        "ackAt": null
+        "ackAt": null,
+        "also": []
       }
     ]
   },
@@ -7119,7 +7179,8 @@ const BATCHES = [
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10016767777",
         "acknowledged": false,
         "ackBy": null,
-        "ackAt": null
+        "ackAt": null,
+        "also": []
       }
     ]
   },
@@ -8123,7 +8184,107 @@ const BATCHES = [
         "completed": true
       }
     ],
-    "basecampAlerts": []
+    "basecampAlerts": [
+      {
+        "metric": "FG",
+        "value": 2.08,
+        "low": 1.6,
+        "high": 2.0,
+        "date": "2026-06-18",
+        "stage": "FIN",
+        "sample": "AMB 31-32/33-34 UV 30",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10017201516",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "also": [
+          {
+            "value": 2.08,
+            "date": "2026-06-18",
+            "stage": "FIN",
+            "sample": "AMB 31-32/33-34 UV 30"
+          },
+          {
+            "value": 2.12,
+            "date": "2026-06-17",
+            "stage": "BBT",
+            "sample": "AMB 31-32/33-34 UV30"
+          },
+          {
+            "value": 2.12,
+            "date": "2026-06-17",
+            "stage": "BBT",
+            "sample": "AMB 31-32/33-34 UV30"
+          },
+          {
+            "value": 2.08,
+            "date": "2026-06-15",
+            "stage": "BBT",
+            "sample": "AMB 31-32 UV35"
+          },
+          {
+            "value": 2.08,
+            "date": "2026-06-15",
+            "stage": "BBT",
+            "sample": "AMB 31-32 UV35"
+          }
+        ]
+      },
+      {
+        "metric": "IBU",
+        "value": 17.150000000000002,
+        "low": 11.73,
+        "high": 15.87,
+        "date": "2026-06-17",
+        "stage": "BBT",
+        "sample": "AMB 31-32/33-34 UV30",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10016996657",
+        "acknowledged": true,
+        "ackBy": "QC Monitor",
+        "ackAt": "2026-06-20T16:14",
+        "also": [
+          {
+            "value": 17.150000000000002,
+            "date": "2026-06-17",
+            "stage": "BBT",
+            "sample": "AMB 31-32/33-34 UV30"
+          }
+        ]
+      },
+      {
+        "metric": "IBU",
+        "value": 16.150000000000002,
+        "low": 11.73,
+        "high": 15.87,
+        "date": "2026-05-27",
+        "stage": "BBT",
+        "sample": "AMB 25-28 BT25",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10017201514",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "also": [
+          {
+            "value": 16.150000000000002,
+            "date": "2026-05-27",
+            "stage": "BBT",
+            "sample": "AMB 25-28 BT25"
+          },
+          {
+            "value": 16.150000000000002,
+            "date": "2026-05-27",
+            "stage": "BBT",
+            "sample": "AMB 25-28 BT25"
+          },
+          {
+            "value": 16.150000000000002,
+            "date": "2026-05-27",
+            "stage": "BBT",
+            "sample": "AMB 25-28 BT25"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "AMB 030",
@@ -8552,7 +8713,22 @@ const BATCHES = [
         "completed": true
       }
     ],
-    "basecampAlerts": []
+    "basecampAlerts": [
+      {
+        "metric": "FG",
+        "value": 2.08,
+        "low": 1.6,
+        "high": 2.0,
+        "date": "2026-06-18",
+        "stage": "FIN",
+        "sample": "AMB 31-32/33-34 UV 30",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10017201516",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "also": []
+      }
+    ]
   }
 ];
 
@@ -8569,7 +8745,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-06-20",
-  "lastSync": "Jun 20, 2026 \u00b7 10:55 AM",
+  "lastSync": "Jun 20, 2026 \u00b7 11:14 AM",
   "dbPath": "data/qc_monitor.db",
   "apiBase": "/api"
 };
