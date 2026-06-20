@@ -8525,7 +8525,7 @@ const BATCHES = [
         "volume": 170.0,
         "detail": null,
         "project": "cellar",
-        "completed": false
+        "completed": true
       },
       {
         "date": "2026-06-19",
@@ -8533,6 +8533,16 @@ const BATCHES = [
         "from": "BH41",
         "to": "BT27",
         "volume": 112.0,
+        "detail": null,
+        "project": "cellar",
+        "completed": false
+      },
+      {
+        "date": "2026-06-19",
+        "action": "FILTER",
+        "from": "BH41",
+        "to": "BT25",
+        "volume": null,
         "detail": null,
         "project": "cellar",
         "completed": false
@@ -8555,7 +8565,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-06-19",
-  "lastSync": "Jun 19, 2026 \u00b7 4:05 PM",
+  "lastSync": "Jun 19, 2026 \u00b7 8:05 PM",
   "dbPath": "data/qc_monitor.db",
   "apiBase": "/api"
 };
