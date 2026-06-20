@@ -2984,7 +2984,7 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": false
+        "completed": true
       }
     ],
     "basecampAlerts": []
@@ -8745,7 +8745,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-06-20",
-  "lastSync": "Jun 20, 2026 \u00b7 12:05 PM",
+  "lastSync": "Jun 20, 2026 \u00b7 4:05 PM",
   "dbPath": "data/qc_monitor.db",
   "apiBase": "/api"
 };
