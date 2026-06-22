@@ -1533,14 +1533,25 @@ const BATCHES = [
     ],
     "brewDate": "2026-06-19",
     "age": 3,
-    "stage": "Wort",
+    "stage": "Fermenting",
     "tank": "BH16",
     "labTank": "BH16",
     "tankSource": "lab",
-    "lastReading": "2026-06-19",
-    "lastSource": "WORT",
-    "numReadings": 4,
+    "lastReading": "2026-06-22",
+    "lastSource": "FERM",
+    "numReadings": 5,
     "readings": [
+      {
+        "date": "2026-06-22",
+        "sample": "STG 011 BH16",
+        "stage": "FERM",
+        "tank": "BH16",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 7.54,
+        "Turbidity": 362.3440661430359,
+        "FG": 2.25
+      },
       {
         "date": "2026-06-19",
         "sample": "STG 11 BH16",
@@ -2451,14 +2462,25 @@ const BATCHES = [
     ],
     "brewDate": "2026-06-19",
     "age": 3,
-    "stage": "Wort",
+    "stage": "Fermenting",
     "tank": "BH30",
     "labTank": "BH30",
     "tankSource": "lab",
-    "lastReading": "2026-06-19",
-    "lastSource": "WORT",
-    "numReadings": 3,
+    "lastReading": "2026-06-22",
+    "lastSource": "FERM",
+    "numReadings": 4,
     "readings": [
+      {
+        "date": "2026-06-22",
+        "sample": "GLD 047 BH30",
+        "stage": "FERM",
+        "tank": "BH30",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 3.92,
+        "Turbidity": 853.5674343109131,
+        "FG": 2.43
+      },
       {
         "date": "2026-06-19",
         "sample": "GLD 47 BH30",
@@ -8095,7 +8117,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-06-22",
-  "lastSync": "Jun 22, 2026 \u00b7 8:05 AM",
+  "lastSync": "Jun 22, 2026 \u00b7 12:05 PM",
   "dbPath": "data/qc_monitor.db",
   "apiBase": "/api"
 };
