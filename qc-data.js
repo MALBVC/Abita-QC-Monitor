@@ -1525,6 +1525,120 @@ const BATCHES = [
     "basecampAlerts": []
   },
   {
+    "id": "AND 030",
+    "product": "AND",
+    "section": "brewhouse",
+    "brewNums": [
+      30
+    ],
+    "brewDate": "2026-06-22",
+    "age": 0,
+    "stage": "Wort",
+    "tank": "BH13",
+    "labTank": "BH13",
+    "tankSource": "lab",
+    "lastReading": "2026-06-22",
+    "lastSource": "WORT",
+    "numReadings": 5,
+    "readings": [
+      {
+        "date": "2026-06-22",
+        "sample": "AND 26030 BH13 ****",
+        "stage": "WORT",
+        "tank": "BH13",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "AG",
+        "Wort pH": 5.39,
+        "SRM": 8.324873096446701,
+        "IBU (W)": 20.849999999999998,
+        "Calories": 149.96,
+        "ADF": -0.18,
+        "RDF": -0.16,
+        "OG": 10.25,
+        "FG": 10.27,
+        "RE": 10.27,
+        "HAZE": 155.74198007583618,
+        "SG": 1.04111,
+        "ABV": -0.01
+      }
+    ],
+    "fermLog": [],
+    "yeastPitches": [
+      {
+        "date": "2026-06-19",
+        "tank": "BH35",
+        "cellCount": 1397930947.0000002,
+        "viability": 0.72,
+        "pitchRate": 498.95,
+        "yeastGen": "L-10",
+        "yeastSource": "BH43",
+        "yeastBrewNum": "AMB35-36",
+        "countType": "Yeast"
+      },
+      {
+        "date": "2026-06-19",
+        "tank": "BH35",
+        "cellCount": 80805739.66666667,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "FV"
+      },
+      {
+        "date": "2026-06-19",
+        "tank": "BH13",
+        "cellCount": 2163920507.0000005,
+        "viability": 0.3669,
+        "pitchRate": null,
+        "yeastGen": "L-10",
+        "yeastSource": "BH17",
+        "yeastBrewNum": "BGLL01",
+        "countType": "Yeast"
+      },
+      {
+        "date": "2026-06-19",
+        "tank": "BH13",
+        "cellCount": 39448471.333333336,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "FV"
+      }
+    ],
+    "transferLog": [
+      {
+        "date": "2026-06-19",
+        "action": "BREW",
+        "from": "",
+        "to": "BH35",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "completed": true
+      }
+    ],
+    "basecampAlerts": [
+      {
+        "metric": "OG",
+        "value": 10.25,
+        "low": 17.7,
+        "high": 18.3,
+        "date": "2026-06-22",
+        "stage": "WORT",
+        "sample": "AND 26030 BH13 ****",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10022916128",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "also": []
+      }
+    ]
+  },
+  {
     "id": "STG 011",
     "product": "STG",
     "section": "brewhouse",
@@ -1841,9 +1955,9 @@ const BATCHES = [
     "brewDate": "2026-05-28",
     "age": 25,
     "stage": "Fermenting",
-    "tank": "BH21",
+    "tank": "UV36",
     "labTank": "BH21",
-    "tankSource": "lab",
+    "tankSource": "basecamp",
     "lastReading": "2026-06-02",
     "lastSource": "GC",
     "numReadings": 12,
@@ -1992,6 +2106,26 @@ const BATCHES = [
         "detail": null,
         "project": "brewhouse",
         "completed": true
+      },
+      {
+        "date": "2026-06-22",
+        "action": "PACKAGE",
+        "from": "UV37,UV36",
+        "to": "",
+        "volume": null,
+        "detail": "3295 CASES",
+        "project": "packaging",
+        "completed": false
+      },
+      {
+        "date": "2026-06-22",
+        "action": "FILTER",
+        "from": "BH21",
+        "to": "UV36",
+        "volume": null,
+        "detail": null,
+        "project": "cellar",
+        "completed": false
       }
     ],
     "basecampAlerts": []
@@ -2933,23 +3067,43 @@ const BATCHES = [
     "basecampAlerts": []
   },
   {
-    "id": "AND 029, 030",
+    "id": "AND 029",
     "product": "AND",
     "section": "brewhouse",
     "brewNums": [
-      29,
-      30
+      29
     ],
-    "brewDate": "2026-06-19",
-    "age": 3,
-    "stage": "Fermenting",
+    "brewDate": "2026-06-22",
+    "age": 0,
+    "stage": "Wort",
     "tank": "BH35",
     "labTank": "BH35",
     "tankSource": "lab",
-    "lastReading": null,
-    "lastSource": null,
-    "numReadings": 4,
-    "readings": [],
+    "lastReading": "2026-06-22",
+    "lastSource": "WORT",
+    "numReadings": 5,
+    "readings": [
+      {
+        "date": "2026-06-22",
+        "sample": "AND 26029 BH35",
+        "stage": "WORT",
+        "tank": "BH35",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "AG",
+        "Wort pH": 5.06,
+        "SRM": 9.98730964467005,
+        "IBU (W)": 24.85,
+        "Calories": 274.74,
+        "ADF": 0.04,
+        "RDF": 0.03,
+        "OG": 18.12,
+        "FG": 18.11,
+        "RE": 18.11,
+        "HAZE": 1787.1162929534912,
+        "SG": 1.07454,
+        "ABV": 0.0
+      }
+    ],
     "fermLog": [],
     "yeastPitches": [
       {
@@ -3009,7 +3163,22 @@ const BATCHES = [
         "completed": true
       }
     ],
-    "basecampAlerts": []
+    "basecampAlerts": [
+      {
+        "metric": "Wort pH",
+        "value": 5.06,
+        "low": 5.29,
+        "high": 5.51,
+        "date": "2026-06-22",
+        "stage": "WORT",
+        "sample": "AND 26029 BH35",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10022916133",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "also": []
+      }
+    ]
   },
   {
     "id": "GLD 041, 042",
@@ -4770,6 +4939,26 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "completed": true
+      },
+      {
+        "date": "2026-06-22",
+        "action": "PACKAGE",
+        "from": "BT27,UV35",
+        "to": "",
+        "volume": null,
+        "detail": "2039 CASES",
+        "project": "packaging",
+        "completed": false
+      },
+      {
+        "date": "2026-06-22",
+        "action": "PACKAGE",
+        "from": "UV35,BT29",
+        "to": "",
+        "volume": null,
+        "detail": "2457 CASES",
+        "project": "packaging",
+        "completed": false
       }
     ],
     "basecampAlerts": [
@@ -4978,9 +5167,9 @@ const BATCHES = [
     "brewDate": "2026-05-21",
     "age": 32,
     "stage": "Packaged",
-    "tank": "BT28",
+    "tank": "BT22",
     "labTank": "BT28",
-    "tankSource": "lab",
+    "tankSource": "basecamp",
     "lastReading": "2026-06-17",
     "lastSource": "FIN",
     "numReadings": 17,
@@ -5250,6 +5439,26 @@ const BATCHES = [
         "detail": "3254 CASES",
         "project": "packaging",
         "completed": true
+      },
+      {
+        "date": "2026-06-22",
+        "action": "PACKAGE",
+        "from": "BT22,UV37",
+        "to": "",
+        "volume": null,
+        "detail": "2025 CASES",
+        "project": "packaging",
+        "completed": false
+      },
+      {
+        "date": "2026-06-22",
+        "action": "FILTER",
+        "from": "BH32",
+        "to": "BT22",
+        "volume": 56.0,
+        "detail": null,
+        "project": "cellar",
+        "completed": false
       }
     ],
     "basecampAlerts": []
@@ -7554,6 +7763,26 @@ const BATCHES = [
         "detail": "3133 CASES",
         "project": "packaging",
         "completed": true
+      },
+      {
+        "date": "2026-06-22",
+        "action": "PACKAGE",
+        "from": "BT27,UV35",
+        "to": "",
+        "volume": null,
+        "detail": "2039 CASES",
+        "project": "packaging",
+        "completed": false
+      },
+      {
+        "date": "2026-06-22",
+        "action": "PACKAGE",
+        "from": "UV35,BT29",
+        "to": "",
+        "volume": null,
+        "detail": "2457 CASES",
+        "project": "packaging",
+        "completed": false
       }
     ],
     "basecampAlerts": [
@@ -8117,7 +8346,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-06-22",
-  "lastSync": "Jun 22, 2026 \u00b7 4:05 PM",
+  "lastSync": "Jun 22, 2026 \u00b7 8:05 PM",
   "dbPath": "data/qc_monitor.db",
   "apiBase": "/api"
 };
