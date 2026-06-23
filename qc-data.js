@@ -1182,7 +1182,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": null,
+        "yeastBrewNum": "8 days",
         "countType": "FV"
       },
       {
@@ -1583,7 +1583,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": null,
+        "yeastBrewNum": "4 DAYS",
         "countType": "FV"
       },
       {
@@ -1605,7 +1605,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": null,
+        "yeastBrewNum": "5 DAYS",
         "countType": "FV"
       }
     ],
@@ -1708,7 +1708,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": null,
+        "yeastBrewNum": "3 days",
         "countType": "FV"
       },
       {
@@ -3125,7 +3125,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": null,
+        "yeastBrewNum": "4 DAYS",
         "countType": "FV"
       },
       {
@@ -3147,7 +3147,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": null,
+        "yeastBrewNum": "5 DAYS",
         "countType": "FV"
       }
     ],
@@ -4600,6 +4600,52 @@ const BATCHES = [
     "basecampAlerts": []
   },
   {
+    "id": "GLD 048, 051",
+    "product": "GLD",
+    "section": "brewhouse",
+    "brewNums": [
+      48,
+      51
+    ],
+    "brewDate": "2026-06-23",
+    "age": 0,
+    "stage": "Fermenting",
+    "tank": "BH58",
+    "labTank": "BH58",
+    "tankSource": "lab",
+    "lastReading": null,
+    "lastSource": null,
+    "numReadings": 1,
+    "readings": [],
+    "fermLog": [],
+    "yeastPitches": [
+      {
+        "date": "2026-06-23",
+        "tank": "BH58",
+        "cellCount": 2282648888.8,
+        "viability": 0.83,
+        "pitchRate": 130.9,
+        "yeastGen": "K-11",
+        "yeastSource": "BH57",
+        "yeastBrewNum": "TBOL 61-64",
+        "countType": "Yeast"
+      }
+    ],
+    "transferLog": [
+      {
+        "date": "2026-06-23",
+        "action": "BREW",
+        "from": "",
+        "to": "BH58",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "completed": false
+      }
+    ],
+    "basecampAlerts": []
+  },
+  {
     "id": "AND 023, 024",
     "product": "AND",
     "section": "brite",
@@ -4999,8 +5045,8 @@ const BATCHES = [
         "SRM": 14.02284263959391,
         "IBU": 18.55,
         "pH": 4.38,
-        "DO": 0.0,
-        "CO2": 0.0,
+        "DO": 31.0,
+        "CO2": 2.69,
         "Calories": 140.29,
         "ADF": 78.98,
         "RDF": 65.05,
@@ -5043,8 +5089,8 @@ const BATCHES = [
         "SRM": 13.667512690355329,
         "IBU": 17.5,
         "pH": 4.39,
-        "DO": 0.0,
-        "CO2": 0.0,
+        "DO": 34.0,
+        "CO2": 2.65,
         "Calories": 140.39,
         "ADF": 79.03,
         "RDF": 65.1,
@@ -5618,8 +5664,8 @@ const BATCHES = [
         "SRM": 8.794416243654823,
         "IBU": 21.5,
         "pH": 4.65,
-        "DO": 0.0,
-        "CO2": 0.0,
+        "DO": 49.0,
+        "CO2": 2.64,
         "Calories": 243.32,
         "ADF": 80.57,
         "RDF": 67.32,
@@ -8411,7 +8457,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-06-23",
-  "lastSync": "Jun 23, 2026 \u00b7 8:06 AM",
+  "lastSync": "Jun 23, 2026 \u00b7 12:05 PM",
   "dbPath": "data/qc_monitor.db",
   "apiBase": "/api"
 };
