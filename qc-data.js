@@ -2115,7 +2115,7 @@ const BATCHES = [
         "volume": null,
         "detail": "2835 CASES",
         "project": "packaging",
-        "completed": false
+        "completed": true
       },
       {
         "date": "2026-06-22",
@@ -8411,7 +8411,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-06-23",
-  "lastSync": "Jun 23, 2026 \u00b7 4:05 AM",
+  "lastSync": "Jun 23, 2026 \u00b7 8:06 AM",
   "dbPath": "data/qc_monitor.db",
   "apiBase": "/api"
 };
