@@ -3743,7 +3743,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": null,
     "lastSource": null,
-    "numReadings": 2,
+    "numReadings": 3,
     "readings": [],
     "fermLog": [],
     "yeastPitches": [
@@ -3768,6 +3768,17 @@ const BATCHES = [
         "yeastSource": "BH33",
         "yeastBrewNum": "AND27-28",
         "countType": "Yeast"
+      },
+      {
+        "date": "2026-06-25",
+        "tank": "BH40",
+        "cellCount": 35965754.0,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "FV"
       }
     ],
     "transferLog": [
@@ -3779,7 +3790,7 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": false
+        "completed": true
       }
     ],
     "basecampAlerts": []
@@ -5058,7 +5069,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": null,
     "lastSource": null,
-    "numReadings": 3,
+    "numReadings": 4,
     "readings": [],
     "fermLog": [],
     "yeastPitches": [
@@ -5094,6 +5105,17 @@ const BATCHES = [
         "yeastSource": null,
         "yeastBrewNum": null,
         "countType": "12 hr cell count"
+      },
+      {
+        "date": "2026-06-25",
+        "tank": "BH58",
+        "cellCount": 76954658.0,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "24hr cell count"
       }
     ],
     "transferLog": [
@@ -9388,7 +9410,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-06-25",
-  "lastSync": "Jun 25, 2026 \u00b7 12:03 AM",
+  "lastSync": "Jun 25, 2026 \u00b7 4:05 AM",
   "dbPath": "data/qc_monitor.db",
   "apiBase": "/api"
 };
