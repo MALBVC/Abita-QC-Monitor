@@ -3752,15 +3752,6 @@ const BATCHES = [
         "tank": "BH40",
         "sourceFile": "yeast cell counts 2026.xlsx",
         "sourceSheet": "A",
-        "Count_Type": "12hr"
-      },
-      {
-        "date": "2026-06-25",
-        "sample": "AMB 37,38 BH40",
-        "stage": "FERM",
-        "tank": "BH40",
-        "sourceFile": "yeast cell counts 2026.xlsx",
-        "sourceSheet": "A",
         "Count_Type": "24hr"
       }
     ],
@@ -3798,6 +3789,17 @@ const BATCHES = [
         "yeastSource": null,
         "yeastBrewNum": null,
         "countType": "FV"
+      },
+      {
+        "date": "2026-06-25",
+        "tank": "BH40",
+        "cellCount": 49561746.666666664,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "12hr"
       }
     ],
     "transferLog": [
@@ -4867,10 +4869,21 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": null,
     "lastSource": null,
-    "numReadings": 1,
+    "numReadings": 2,
     "readings": [],
     "fermLog": [],
     "yeastPitches": [
+      {
+        "date": "2026-06-25",
+        "tank": "BH55",
+        "cellCount": 70926878.0,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "1st K.O FV"
+      },
       {
         "date": "2026-06-25",
         "tank": "BH55",
@@ -9587,7 +9600,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-06-25",
-  "lastSync": "Jun 25, 2026 \u00b7 12:08 PM"
+  "lastSync": "Jun 25, 2026 \u00b7 2:31 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
