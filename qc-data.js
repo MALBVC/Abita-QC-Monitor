@@ -3741,10 +3741,29 @@ const BATCHES = [
     "tank": "BH40",
     "labTank": "BH40",
     "tankSource": "lab",
-    "lastReading": null,
-    "lastSource": null,
-    "numReadings": 3,
-    "readings": [],
+    "lastReading": "2026-06-25",
+    "lastSource": "FERM",
+    "numReadings": 5,
+    "readings": [
+      {
+        "date": "2026-06-25",
+        "sample": "AMB 37,38 BH40",
+        "stage": "FERM",
+        "tank": "BH40",
+        "sourceFile": "yeast cell counts 2026.xlsx",
+        "sourceSheet": "A",
+        "Count_Type": "12hr"
+      },
+      {
+        "date": "2026-06-25",
+        "sample": "AMB 37,38 BH40",
+        "stage": "FERM",
+        "tank": "BH40",
+        "sourceFile": "yeast cell counts 2026.xlsx",
+        "sourceSheet": "A",
+        "Count_Type": "24hr"
+      }
+    ],
     "fermLog": [],
     "yeastPitches": [
       {
@@ -5054,23 +5073,106 @@ const BATCHES = [
     "basecampAlerts": []
   },
   {
-    "id": "GLD 048, 051",
+    "id": "GLD 048, 049, 050, 051",
     "product": "GLD",
     "section": "brewhouse",
     "brewNums": [
       48,
+      49,
+      50,
       51
     ],
-    "brewDate": "2026-06-23",
-    "age": 2,
+    "brewDate": "2026-06-24",
+    "age": 1,
     "stage": "Fermenting",
     "tank": "BH58",
     "labTank": "BH58",
     "tankSource": "lab",
-    "lastReading": null,
-    "lastSource": null,
-    "numReadings": 4,
-    "readings": [],
+    "lastReading": "2026-06-24",
+    "lastSource": "WORT",
+    "numReadings": 8,
+    "readings": [
+      {
+        "date": "2026-06-24",
+        "sample": "GLD 048 BH58",
+        "stage": "WORT",
+        "tank": "BH58",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "G",
+        "Wort pH": 5.29,
+        "SRM": 4.213197969543148,
+        "IBU (W)": 14.549999999999999,
+        "Calories": 149.15,
+        "ADF": -0.68,
+        "RDF": -0.59,
+        "OG": 10.19,
+        "FG": 10.26,
+        "RE": 10.25,
+        "HAZE": 804.3538312911987,
+        "SG": 1.04107,
+        "ABV": -0.04
+      },
+      {
+        "date": "2026-06-24",
+        "sample": "GLD 049 BH58",
+        "stage": "WORT",
+        "tank": "BH58",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "G",
+        "Wort pH": 5.51,
+        "SRM": 4.2639593908629445,
+        "IBU (W)": 15.25,
+        "Calories": 147.99,
+        "ADF": -0.66,
+        "RDF": -0.56,
+        "OG": 10.12,
+        "FG": 10.18,
+        "RE": 10.17,
+        "HAZE": 620.3333444595337,
+        "SG": 1.04075,
+        "ABV": -0.04
+      },
+      {
+        "date": "2026-06-24",
+        "sample": "GLD 050 BH58",
+        "stage": "WORT",
+        "tank": "BH58",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "G",
+        "Wort pH": 5.44,
+        "SRM": 4.467005076142131,
+        "IBU (W)": 15.65,
+        "Calories": 151.38,
+        "ADF": -0.57,
+        "RDF": -0.49,
+        "OG": 10.34,
+        "FG": 10.4,
+        "RE": 10.39,
+        "HAZE": 553.4527444839478,
+        "SG": 1.04164,
+        "ABV": -0.03
+      },
+      {
+        "date": "2026-06-24",
+        "sample": "GLD 051 BH58",
+        "stage": "WORT",
+        "tank": "BH58",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "G",
+        "Wort pH": 5.54,
+        "SRM": 4.073604060913706,
+        "IBU (W)": 14.75,
+        "Calories": 146.31,
+        "ADF": -0.94,
+        "RDF": -0.8,
+        "OG": 10.0,
+        "FG": 10.1,
+        "RE": 10.08,
+        "HAZE": 1755.3213443756104,
+        "SG": 1.0404,
+        "ABV": -0.05
+      }
+    ],
     "fermLog": [],
     "yeastPitches": [
       {
@@ -5130,7 +5232,36 @@ const BATCHES = [
         "completed": true
       }
     ],
-    "basecampAlerts": []
+    "basecampAlerts": [
+      {
+        "metric": "OG",
+        "value": 10.34,
+        "low": 9.7,
+        "high": 10.3,
+        "date": "2026-06-24",
+        "stage": "WORT",
+        "sample": "GLD 050 BH58",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10033833362",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "also": []
+      },
+      {
+        "metric": "Wort pH",
+        "value": 5.54,
+        "low": 5.29,
+        "high": 5.51,
+        "date": "2026-06-24",
+        "stage": "WORT",
+        "sample": "GLD 051 BH58",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10033833387",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "also": []
+      }
+    ]
   },
   {
     "id": "AMB 033, 034",
@@ -9410,7 +9541,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-06-25",
-  "lastSync": "Jun 25, 2026 \u00b7 4:05 AM",
+  "lastSync": "Jun 25, 2026 \u00b7 8:05 AM",
   "dbPath": "data/qc_monitor.db",
   "apiBase": "/api"
 };
