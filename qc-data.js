@@ -5201,10 +5201,21 @@ const BATCHES = [
     "tank": "BH58",
     "labTank": "BH58",
     "tankSource": "lab",
-    "lastReading": "2026-06-24",
-    "lastSource": "WORT",
-    "numReadings": 8,
+    "lastReading": "2026-06-26",
+    "lastSource": "FERM",
+    "numReadings": 9,
     "readings": [
+      {
+        "date": "2026-06-26",
+        "sample": "GLD 48-51 BH58",
+        "stage": "FERM",
+        "tank": "BH58",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 4.39,
+        "Turbidity": 378.52242279052734,
+        "FG": 1.67
+      },
       {
         "date": "2026-06-24",
         "sample": "GLD 048 BH58",
@@ -6583,7 +6594,7 @@ const BATCHES = [
         "volume": null,
         "detail": "2150 CASES",
         "project": "packaging",
-        "completed": false
+        "completed": true
       },
       {
         "date": "2026-06-25",
@@ -7634,7 +7645,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-06-26",
-  "lastSync": "Jun 26, 2026 \u00b7 8:07 AM"
+  "lastSync": "Jun 26, 2026 \u00b7 12:05 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
