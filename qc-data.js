@@ -3735,16 +3735,56 @@ const BATCHES = [
       37,
       38
     ],
-    "brewDate": "2026-06-24",
-    "age": 1,
-    "stage": "Fermenting",
+    "brewDate": "2026-06-25",
+    "age": 0,
+    "stage": "Wort",
     "tank": "BH40",
     "labTank": "BH40",
     "tankSource": "lab",
     "lastReading": "2026-06-25",
-    "lastSource": "FERM",
-    "numReadings": 5,
+    "lastSource": "WORT",
+    "numReadings": 7,
     "readings": [
+      {
+        "date": "2026-06-25",
+        "sample": "AMB 38 BH40",
+        "stage": "WORT",
+        "tank": "BH40",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "A",
+        "Wort pH": 5.35,
+        "SRM": 14.898477157360405,
+        "IBU (W)": 19.05,
+        "Calories": 156.06,
+        "ADF": -0.54,
+        "RDF": -0.47,
+        "OG": 10.64,
+        "FG": 10.7,
+        "RE": 10.69,
+        "HAZE": 585.0781831741333,
+        "SG": 1.0429,
+        "ABV": -0.03
+      },
+      {
+        "date": "2026-06-25",
+        "sample": "AMB 37 BH40",
+        "stage": "WORT",
+        "tank": "BH40",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "A",
+        "Wort pH": 5.3,
+        "SRM": 16.82741116751269,
+        "IBU (W)": 21.4,
+        "Calories": 151.86,
+        "ADF": -1.05,
+        "RDF": -0.9,
+        "OG": 10.36,
+        "FG": 10.47,
+        "RE": 10.45,
+        "HAZE": 1671.2460193634033,
+        "SG": 1.04195,
+        "ABV": -0.06
+      },
       {
         "date": "2026-06-25",
         "sample": "AMB 37,38 BH40",
@@ -5333,9 +5373,9 @@ const BATCHES = [
     "brewDate": "2026-05-28",
     "age": 28,
     "stage": "Packaged",
-    "tank": "BT27",
+    "tank": "UV35",
     "labTank": "BT27",
-    "tankSource": "lab",
+    "tankSource": "basecamp",
     "lastReading": "2026-06-23",
     "lastSource": "FIN",
     "numReadings": 21,
@@ -5701,6 +5741,16 @@ const BATCHES = [
         "volume": null,
         "detail": "2150 CASES",
         "project": "packaging",
+        "completed": false
+      },
+      {
+        "date": "2026-06-25",
+        "action": "XFER",
+        "from": "BT29",
+        "to": "UV35",
+        "volume": null,
+        "detail": null,
+        "project": "cellar",
         "completed": false
       }
     ],
@@ -9600,7 +9650,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-06-25",
-  "lastSync": "Jun 25, 2026 \u00b7 4:05 PM"
+  "lastSync": "Jun 25, 2026 \u00b7 8:07 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
