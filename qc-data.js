@@ -5871,8 +5871,28 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": "2026-06-26",
     "lastSource": "FIN",
-    "numReadings": 44,
+    "numReadings": 45,
     "readings": [
+      {
+        "date": "2026-06-26",
+        "sample": "AMB 31-32/33-34 TK UV35 restart",
+        "stage": "FIN",
+        "tank": "UV35",
+        "sourceFile": "finished abita beer 2026.xlsx",
+        "sourceSheet": "A",
+        "pH": 4.27,
+        "DO": 38.0,
+        "CO2 Vols": 2.55,
+        "Calories": 136.42,
+        "ADF": 80.0,
+        "RDF": 65.83,
+        "OG": 10.43,
+        "FG": 2.09,
+        "RE": 3.7,
+        "HAZE": 36.42031145095825,
+        "SG": 1.00813,
+        "ABV": 4.39
+      },
       {
         "date": "2026-06-26",
         "sample": "AMB 31-32/33-34 UV35",
@@ -6594,7 +6614,7 @@ const BATCHES = [
         "volume": null,
         "detail": "2150 CASES",
         "project": "packaging",
-        "completed": true
+        "completed": false
       },
       {
         "date": "2026-06-25",
@@ -6609,18 +6629,87 @@ const BATCHES = [
     ],
     "basecampAlerts": [
       {
+        "metric": "CO2 Vols",
+        "value": 2.55,
+        "low": 2.6,
+        "high": 2.74,
+        "date": "2026-06-26",
+        "stage": "FIN",
+        "sample": "AMB 31-32/33-34 TK UV35 restart",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10031315612",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "also": [
+          {
+            "value": 2.55,
+            "date": "2026-06-26",
+            "stage": "FIN",
+            "sample": "AMB 31-32/33-34 TK UV35 restart"
+          },
+          {
+            "value": 2.55,
+            "date": "2026-06-26",
+            "stage": "FIN",
+            "sample": "AMB 31-32/33-34 TK UV35 restart"
+          },
+          {
+            "value": 2.55,
+            "date": "2026-06-26",
+            "stage": "FIN",
+            "sample": "AMB 31-32/33-34 TK UV35 restart"
+          },
+          {
+            "value": 2.75,
+            "date": "2026-06-24",
+            "stage": "FIN",
+            "sample": "AMB 31-32 UV35"
+          },
+          {
+            "value": 2.75,
+            "date": "2026-06-24",
+            "stage": "FIN",
+            "sample": "AMB 31-32 UV35"
+          }
+        ]
+      },
+      {
         "metric": "FG",
-        "value": 2.07,
+        "value": 2.09,
         "low": 1.6,
         "high": 2.0,
         "date": "2026-06-26",
         "stage": "FIN",
-        "sample": "AMB 31-32/33-34 UV35",
+        "sample": "AMB 31-32/33-34 TK UV35 restart",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10017201516",
         "acknowledged": false,
         "ackBy": null,
         "ackAt": null,
         "also": [
+          {
+            "value": 2.09,
+            "date": "2026-06-26",
+            "stage": "FIN",
+            "sample": "AMB 31-32/33-34 TK UV35 restart"
+          },
+          {
+            "value": 2.09,
+            "date": "2026-06-26",
+            "stage": "FIN",
+            "sample": "AMB 31-32/33-34 TK UV35 restart"
+          },
+          {
+            "value": 2.09,
+            "date": "2026-06-26",
+            "stage": "FIN",
+            "sample": "AMB 31-32/33-34 TK UV35 restart"
+          },
+          {
+            "value": 2.07,
+            "date": "2026-06-26",
+            "stage": "FIN",
+            "sample": "AMB 31-32/33-34 UV35"
+          },
           {
             "value": 2.07,
             "date": "2026-06-26",
@@ -6715,17 +6804,41 @@ const BATCHES = [
       },
       {
         "metric": "HAZE",
-        "value": 36.09613859653473,
+        "value": 36.42031145095825,
         "low": 25.5,
         "high": 34.5,
         "date": "2026-06-26",
         "stage": "FIN",
-        "sample": "AMB 31-32/33-34 UV35",
+        "sample": "AMB 31-32/33-34 TK UV35 restart",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10031315625",
         "acknowledged": false,
         "ackBy": null,
         "ackAt": null,
         "also": [
+          {
+            "value": 36.42031145095825,
+            "date": "2026-06-26",
+            "stage": "FIN",
+            "sample": "AMB 31-32/33-34 TK UV35 restart"
+          },
+          {
+            "value": 36.42031145095825,
+            "date": "2026-06-26",
+            "stage": "FIN",
+            "sample": "AMB 31-32/33-34 TK UV35 restart"
+          },
+          {
+            "value": 36.42031145095825,
+            "date": "2026-06-26",
+            "stage": "FIN",
+            "sample": "AMB 31-32/33-34 TK UV35 restart"
+          },
+          {
+            "value": 36.09613859653473,
+            "date": "2026-06-26",
+            "stage": "FIN",
+            "sample": "AMB 31-32/33-34 UV35"
+          },
           {
             "value": 36.09613859653473,
             "date": "2026-06-26",
@@ -6824,27 +6937,6 @@ const BATCHES = [
             "date": "2026-06-19",
             "stage": "BBT",
             "sample": "AMB 33-34 BT29"
-          }
-        ]
-      },
-      {
-        "metric": "CO2 Vols",
-        "value": 2.75,
-        "low": 2.6,
-        "high": 2.74,
-        "date": "2026-06-24",
-        "stage": "FIN",
-        "sample": "AMB 31-32 UV35",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10031315612",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "also": [
-          {
-            "value": 2.75,
-            "date": "2026-06-24",
-            "stage": "FIN",
-            "sample": "AMB 31-32 UV35"
           }
         ]
       },
@@ -7516,7 +7608,7 @@ const BATCHES = [
         "volume": null,
         "detail": "2025 CASES",
         "project": "packaging",
-        "completed": false
+        "completed": true
       },
       {
         "date": "2026-06-22",
@@ -7645,7 +7737,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-06-26",
-  "lastSync": "Jun 26, 2026 \u00b7 12:05 PM"
+  "lastSync": "Jun 26, 2026 \u00b7 4:05 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
