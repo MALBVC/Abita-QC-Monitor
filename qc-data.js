@@ -3412,14 +3412,25 @@ const BATCHES = [
     ],
     "brewDate": "2026-06-22",
     "age": 5,
-    "stage": "Wort",
+    "stage": "Fermenting",
     "tank": "BH35",
     "labTank": "BH35",
     "tankSource": "lab",
-    "lastReading": "2026-06-22",
-    "lastSource": "WORT",
-    "numReadings": 8,
+    "lastReading": "2026-06-27",
+    "lastSource": "FERM",
+    "numReadings": 9,
     "readings": [
+      {
+        "date": "2026-06-27",
+        "sample": "AND 029 BH35",
+        "stage": "FERM",
+        "tank": "BH35",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 7.51,
+        "Turbidity": 504.3625888824463,
+        "FG": 4.15
+      },
       {
         "date": "2026-06-22",
         "sample": "AND 26029 BH35",
@@ -4244,6 +4255,52 @@ const BATCHES = [
     "basecampAlerts": []
   },
   {
+    "id": "AMB 039, 040",
+    "product": "AMB",
+    "section": "brewhouse",
+    "brewNums": [
+      39,
+      40
+    ],
+    "brewDate": "2026-06-26",
+    "age": 1,
+    "stage": "Fermenting",
+    "tank": "BH47",
+    "labTank": "BH47",
+    "tankSource": "lab",
+    "lastReading": null,
+    "lastSource": null,
+    "numReadings": 1,
+    "readings": [],
+    "fermLog": [],
+    "yeastPitches": [
+      {
+        "date": "2026-06-27",
+        "tank": "BH47",
+        "cellCount": 2370000000.0,
+        "viability": 0.97,
+        "pitchRate": 113.27,
+        "yeastGen": "L-1",
+        "yeastSource": "BH30",
+        "yeastBrewNum": "GLD047",
+        "countType": "Yeast"
+      }
+    ],
+    "transferLog": [
+      {
+        "date": "2026-06-26",
+        "action": "BREW",
+        "from": "",
+        "to": "BH41",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "completed": false
+      }
+    ],
+    "basecampAlerts": []
+  },
+  {
     "id": "GLD 033, 036, 043, 044, 045, 046",
     "product": "GLD",
     "section": "brewhouse",
@@ -4870,7 +4927,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": "2026-06-26",
     "lastSource": "WORT",
-    "numReadings": 6,
+    "numReadings": 7,
     "readings": [
       {
         "date": "2026-06-26",
@@ -4958,6 +5015,17 @@ const BATCHES = [
         "yeastSource": null,
         "yeastBrewNum": null,
         "countType": "FV"
+      },
+      {
+        "date": "2026-06-27",
+        "tank": "BH55",
+        "cellCount": 54810173.36666667,
+        "viability": 0.76,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "12hr ferm check"
       }
     ],
     "transferLog": [
@@ -7192,7 +7260,7 @@ const BATCHES = [
         "volume": null,
         "detail": "2025 CASES",
         "project": "packaging",
-        "completed": false
+        "completed": true
       },
       {
         "date": "2026-06-22",
@@ -7333,7 +7401,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-06-27",
-  "lastSync": "Jun 27, 2026 \u00b7 8:06 AM"
+  "lastSync": "Jun 27, 2026 \u00b7 12:05 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
