@@ -3885,7 +3885,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": null,
     "lastSource": null,
-    "numReadings": 2,
+    "numReadings": 3,
     "readings": [],
     "fermLog": [],
     "yeastPitches": [
@@ -3910,6 +3910,17 @@ const BATCHES = [
         "yeastSource": null,
         "yeastBrewNum": null,
         "countType": "FV"
+      },
+      {
+        "date": "2026-06-28",
+        "tank": "BH41",
+        "cellCount": 29335196.0,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "12hr"
       }
     ],
     "transferLog": [
@@ -4922,12 +4933,13 @@ const BATCHES = [
     "basecampAlerts": []
   },
   {
-    "id": "AND 031, 032, 034",
+    "id": "AND 031, 032, 033, 034",
     "product": "AND",
     "section": "brewhouse",
     "brewNums": [
       31,
       32,
+      33,
       34
     ],
     "brewDate": "2026-06-26",
@@ -4936,10 +4948,50 @@ const BATCHES = [
     "tank": "BH55",
     "labTank": "BH55",
     "tankSource": "lab",
-    "lastReading": "2026-06-26",
+    "lastReading": "2026-06-27",
     "lastSource": "WORT",
-    "numReadings": 7,
+    "numReadings": 10,
     "readings": [
+      {
+        "date": "2026-06-27",
+        "sample": "AND 034 BH55",
+        "stage": "WORT",
+        "tank": "BH55",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "AG",
+        "Wort pH": 5.24,
+        "SRM": 8.413705583756345,
+        "IBU (W)": 23.200000000000003,
+        "Calories": 272.95,
+        "ADF": 0.22,
+        "RDF": 0.19,
+        "OG": 18.01,
+        "FG": 17.97,
+        "RE": 17.98,
+        "HAZE": 750.7648859024048,
+        "SG": 1.07393,
+        "ABV": 0.02
+      },
+      {
+        "date": "2026-06-27",
+        "sample": "AND 033 BH55",
+        "stage": "WORT",
+        "tank": "BH55",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "AG",
+        "Wort pH": 5.26,
+        "SRM": 9.213197969543147,
+        "IBU (W)": 27.750000000000004,
+        "Calories": 274.59,
+        "ADF": 0.56,
+        "RDF": 0.49,
+        "OG": 18.12,
+        "FG": 18.02,
+        "RE": 18.04,
+        "HAZE": 1464.3389339447021,
+        "SG": 1.07413,
+        "ABV": 0.06
+      },
       {
         "date": "2026-06-26",
         "sample": "AND 32 BH55",
@@ -5037,6 +5089,17 @@ const BATCHES = [
         "yeastSource": null,
         "yeastBrewNum": null,
         "countType": "12hr ferm check"
+      },
+      {
+        "date": "2026-06-27",
+        "tank": "BH55",
+        "cellCount": 62889838.0,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "24hr"
       }
     ],
     "transferLog": [
@@ -5051,7 +5114,36 @@ const BATCHES = [
         "completed": true
       }
     ],
-    "basecampAlerts": []
+    "basecampAlerts": [
+      {
+        "metric": "Wort pH",
+        "value": 5.24,
+        "low": 5.29,
+        "high": 5.51,
+        "date": "2026-06-27",
+        "stage": "WORT",
+        "sample": "AND 034 BH55",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10041731059",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "also": []
+      },
+      {
+        "metric": "Wort pH",
+        "value": 5.26,
+        "low": 5.29,
+        "high": 5.51,
+        "date": "2026-06-27",
+        "stage": "WORT",
+        "sample": "AND 033 BH55",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10041731062",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "also": []
+      }
+    ]
   },
   {
     "id": "GLD 037, 038, 039, 040",
@@ -7509,7 +7601,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-06-28",
-  "lastSync": "Jun 28, 2026 \u00b7 12:03 AM"
+  "lastSync": "Jun 28, 2026 \u00b7 4:05 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
