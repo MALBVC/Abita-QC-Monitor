@@ -3899,16 +3899,57 @@ const BATCHES = [
       39,
       40
     ],
-    "brewDate": "2026-06-26",
-    "age": 3,
-    "stage": "Fermenting",
+    "brewDate": "2026-06-29",
+    "age": 0,
+    "stage": "Wort",
     "tank": "BH41",
     "labTank": "BH41",
     "tankSource": "lab",
-    "lastReading": null,
-    "lastSource": null,
-    "numReadings": 4,
-    "readings": [],
+    "lastReading": "2026-06-29",
+    "lastSource": "WORT",
+    "numReadings": 6,
+    "readings": [
+      {
+        "date": "2026-06-29",
+        "sample": "AMB 040 BH41",
+        "stage": "WORT",
+        "tank": "BH41",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "A",
+        "Wort pH": 5.25,
+        "SRM": 15.532994923857867,
+        "IBU (W)": 20.05,
+        "Calories": 149.9,
+        "ADF": -1.2,
+        "RDF": -1.02,
+        "OG": 10.23,
+        "FG": 10.36,
+        "RE": 10.33,
+        "HAZE": 2221.377857208252,
+        "SG": 1.04147,
+        "ABV": -0.07
+      },
+      {
+        "date": "2026-06-29",
+        "sample": "AMB 039 BH41",
+        "stage": "WORT",
+        "tank": "BH41",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "A",
+        "Wort pH": 5.25,
+        "SRM": 15.36802030456853,
+        "IBU (W)": 20.9,
+        "Calories": 154.53,
+        "ADF": -0.89,
+        "RDF": -0.77,
+        "OG": 10.54,
+        "FG": 10.63,
+        "RE": 10.62,
+        "HAZE": 1105.427541732788,
+        "SG": 1.04262,
+        "ABV": -0.05
+      }
+    ],
     "fermLog": [],
     "yeastPitches": [
       {
@@ -3968,7 +4009,36 @@ const BATCHES = [
         "completed": true
       }
     ],
-    "basecampAlerts": []
+    "basecampAlerts": [
+      {
+        "metric": "Wort pH",
+        "value": 5.25,
+        "low": 5.29,
+        "high": 5.51,
+        "date": "2026-06-29",
+        "stage": "WORT",
+        "sample": "AMB 040 BH41",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10043095476",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "also": []
+      },
+      {
+        "metric": "Wort pH",
+        "value": 5.25,
+        "low": 5.29,
+        "high": 5.51,
+        "date": "2026-06-29",
+        "stage": "WORT",
+        "sample": "AMB 039 BH41",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10043095496",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "also": []
+      }
+    ]
   },
   {
     "id": "GLD 033, 036, 043, 044, 045, 046",
@@ -7334,7 +7404,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-06-29",
-  "lastSync": "Jun 29, 2026 \u00b7 12:30 AM"
+  "lastSync": "Jun 29, 2026 \u00b7 4:06 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
