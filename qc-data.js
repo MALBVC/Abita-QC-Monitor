@@ -3851,7 +3851,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": null,
+        "yeastBrewNum": "5 days",
         "countType": "FV"
       },
       {
@@ -4426,6 +4426,52 @@ const BATCHES = [
     "basecampAlerts": []
   },
   {
+    "id": "AND 035, 038",
+    "product": "AND",
+    "section": "brewhouse",
+    "brewNums": [
+      35,
+      38
+    ],
+    "brewDate": "2026-07-01",
+    "age": 0,
+    "stage": "Fermenting",
+    "tank": "BH54",
+    "labTank": "BH54",
+    "tankSource": "lab",
+    "lastReading": null,
+    "lastSource": null,
+    "numReadings": 1,
+    "readings": [],
+    "fermLog": [],
+    "yeastPitches": [
+      {
+        "date": "2026-07-01",
+        "tank": "BH54",
+        "cellCount": 2137110872.4000003,
+        "viability": 0.73,
+        "pitchRate": 643.81,
+        "yeastGen": "L-11",
+        "yeastSource": "BH40",
+        "yeastBrewNum": "AMB37-38",
+        "countType": "Yeast"
+      }
+    ],
+    "transferLog": [
+      {
+        "date": "2026-07-01",
+        "action": "BREW",
+        "from": "",
+        "to": "BH54",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "completed": false
+      }
+    ],
+    "basecampAlerts": []
+  },
+  {
     "id": "AND 031, 032, 033, 034",
     "product": "AND",
     "section": "brewhouse",
@@ -4992,7 +5038,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": null,
+        "yeastBrewNum": "4 days",
         "countType": "FV"
       },
       {
@@ -5089,8 +5135,8 @@ const BATCHES = [
         "SRM": 13.159898477157359,
         "IBU": 14.05,
         "pH": 4.21,
-        "DO": 0.0,
-        "CO2 Vols": 0.0,
+        "DO": 39.0,
+        "CO2 Vols": 2.61,
         "Calories": 137.19,
         "ADF": 80.8,
         "RDF": 66.48,
@@ -5111,8 +5157,8 @@ const BATCHES = [
         "SRM": 13.604060913705585,
         "IBU": 12.9,
         "pH": 4.21,
-        "DO": 0.0,
-        "CO2 Vols": 0.0,
+        "DO": 36.0,
+        "CO2 Vols": 2.62,
         "Calories": 136.08,
         "ADF": 80.65,
         "RDF": 66.35,
@@ -5441,8 +5487,8 @@ const BATCHES = [
         "SRM": 13.730964467005077,
         "IBU": 14.7,
         "pH": 4.23,
-        "DO": 0.0,
-        "CO2 Vols": 0.0,
+        "DO": 27.0,
+        "CO2 Vols": 2.23,
         "Calories": 137.05,
         "ADF": 79.81,
         "RDF": 65.68,
@@ -6687,8 +6733,8 @@ const BATCHES = [
         "SRM": 8.451776649746193,
         "IBU": 18.3,
         "pH": 4.64,
-        "DO": 0.0,
-        "CO2 Vols": 0.0,
+        "DO": 33.0,
+        "CO2 Vols": 2.05,
         "Calories": 242.52,
         "ADF": 80.25,
         "RDF": 67.06,
@@ -6709,8 +6755,8 @@ const BATCHES = [
         "SRM": 8.68020304568528,
         "IBU": 17.4,
         "pH": 4.64,
-        "DO": 0.0,
-        "CO2 Vols": 0.0,
+        "DO": 32.0,
+        "CO2 Vols": 2.0,
         "Calories": 241.82,
         "ADF": 80.31,
         "RDF": 67.1,
@@ -6991,8 +7037,8 @@ const BATCHES = [
         "SRM": 8.451776649746193,
         "IBU": 18.3,
         "pH": 4.64,
-        "DO": 0.0,
-        "CO2 Vols": 0.0,
+        "DO": 33.0,
+        "CO2 Vols": 2.05,
         "Calories": 242.52,
         "ADF": 80.25,
         "RDF": 67.06,
@@ -7404,7 +7450,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-01",
-  "lastSync": "Jul 1, 2026 \u00b7 8:07 AM"
+  "lastSync": "Jul 1, 2026 \u00b7 12:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
