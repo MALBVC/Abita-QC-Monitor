@@ -3456,10 +3456,21 @@ const BATCHES = [
     "tank": "BH35",
     "labTank": "BH35",
     "tankSource": "lab",
-    "lastReading": "2026-06-28",
+    "lastReading": "2026-07-02",
     "lastSource": "FERM",
-    "numReadings": 10,
+    "numReadings": 11,
     "readings": [
+      {
+        "date": "2026-07-02",
+        "sample": "AND 29 BH35",
+        "stage": "FERM",
+        "tank": "BH35",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 7.68,
+        "Turbidity": 182.28577423095703,
+        "FG": 4.01
+      },
       {
         "date": "2026-06-28",
         "sample": "AND 29 BH35",
@@ -7349,7 +7360,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-02",
-  "lastSync": "Jul 2, 2026 \u00b7 8:06 AM"
+  "lastSync": "Jul 2, 2026 \u00b7 12:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
