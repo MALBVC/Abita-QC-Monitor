@@ -4343,12 +4343,12 @@ const BATCHES = [
       35,
       38
     ],
-    "brewDate": "2026-07-01",
-    "age": 1,
+    "brewDate": "2026-07-02",
+    "age": 0,
     "stage": "Fermenting",
     "tank": "BH54",
     "labTank": "BH54",
-    "tankSource": "lab",
+    "tankSource": "basecamp",
     "lastReading": null,
     "lastSource": null,
     "numReadings": 1,
@@ -4369,7 +4369,7 @@ const BATCHES = [
     ],
     "transferLog": [
       {
-        "date": "2026-07-01",
+        "date": "2026-07-02",
         "action": "BREW",
         "from": "",
         "to": "BH54",
@@ -7360,7 +7360,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-02",
-  "lastSync": "Jul 2, 2026 \u00b7 12:06 PM"
+  "lastSync": "Jul 2, 2026 \u00b7 4:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
