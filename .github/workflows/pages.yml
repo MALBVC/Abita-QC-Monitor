@@ -18,17 +18,45 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: https://malbvc.github.io/Abita-QC-Monitor/
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
-      - name: Deploy to GitHub Pages
-        id: deployment
+
+      - name: Deploy to GitHub Pages (attempt 1)
+        id: attempt1
+        continue-on-error: true
         uses: actions/deploy-pages@v4
+        with:
+          timeout: 120000
+
+      - name: Wait before retry
+        if: steps.attempt1.outcome == 'failure'
+        run: sleep 90
+
+      - name: Deploy to GitHub Pages (attempt 2)
+        id: attempt2
+        if: steps.attempt1.outcome == 'failure'
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+        with:
+          timeout: 120000
+
+      - name: Wait before second retry
+        if: steps.attempt1.outcome == 'failure' && steps.attempt2.outcome == 'failure'
+        run: sleep 90
+
+      - name: Deploy to GitHub Pages (attempt 3)
+        if: steps.attempt1.outcome == 'failure' && steps.attempt2.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+        with:
+          timeout: 120000
