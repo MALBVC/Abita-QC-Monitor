@@ -1221,9 +1221,9 @@ const BATCHES = [
     "brewDate": "2026-06-17",
     "age": 14,
     "stage": "Fermenting",
-    "tank": "BH7",
+    "tank": "BT29",
     "labTank": "BH7",
-    "tankSource": "lab",
+    "tankSource": "basecamp",
     "lastReading": "2026-06-17",
     "lastSource": "WORT",
     "numReadings": 11,
@@ -1355,6 +1355,16 @@ const BATCHES = [
         "detail": null,
         "project": "brewhouse",
         "completed": true
+      },
+      {
+        "date": "2026-07-02",
+        "action": "CENT",
+        "from": "BH7",
+        "to": "BT29",
+        "volume": null,
+        "detail": null,
+        "project": "cellar",
+        "completed": false
       }
     ],
     "basecampAlerts": []
@@ -1369,9 +1379,9 @@ const BATCHES = [
     "brewDate": "2026-06-03",
     "age": 28,
     "stage": "Fermenting",
-    "tank": "BH9",
+    "tank": "BT28",
     "labTank": "BH9",
-    "tankSource": "lab",
+    "tankSource": "basecamp",
     "lastReading": "2026-06-08",
     "lastSource": "FERM",
     "numReadings": 13,
@@ -1523,6 +1533,26 @@ const BATCHES = [
         "detail": null,
         "project": "brewhouse",
         "completed": true
+      },
+      {
+        "date": "2026-07-02",
+        "action": "CENT",
+        "from": "BH9",
+        "to": "BT28",
+        "volume": 92.0,
+        "detail": null,
+        "project": "cellar",
+        "completed": false
+      },
+      {
+        "date": "2026-07-02",
+        "action": "CENT",
+        "from": "BH9",
+        "to": "BT26",
+        "volume": null,
+        "detail": null,
+        "project": "cellar",
+        "completed": false
       }
     ],
     "basecampAlerts": []
@@ -2983,9 +3013,9 @@ const BATCHES = [
     "brewDate": "2026-06-11",
     "age": 20,
     "stage": "Fermenting",
-    "tank": "BH33",
+    "tank": "BT25",
     "labTank": "BH33",
-    "tankSource": "lab",
+    "tankSource": "basecamp",
     "lastReading": "2026-06-19",
     "lastSource": "FERM",
     "numReadings": 19,
@@ -3200,6 +3230,16 @@ const BATCHES = [
         "detail": null,
         "project": "brewhouse",
         "completed": true
+      },
+      {
+        "date": "2026-07-02",
+        "action": "FILTER",
+        "from": "BH33",
+        "to": "BT25",
+        "volume": 100.0,
+        "detail": null,
+        "project": "cellar",
+        "completed": false
       }
     ],
     "basecampAlerts": []
@@ -7450,7 +7490,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-01",
-  "lastSync": "Jul 1, 2026 \u00b7 4:07 PM"
+  "lastSync": "Jul 1, 2026 \u00b7 8:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
