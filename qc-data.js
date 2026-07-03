@@ -3503,25 +3503,18 @@ const BATCHES = [
         "date": "2026-06-29",
         "stage": "WORT",
         "sample": "AMB 040 BH41",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10043095476",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "also": []
-      },
-      {
-        "metric": "Wort pH",
-        "value": 5.25,
-        "low": 5.29,
-        "high": 5.51,
-        "date": "2026-06-29",
-        "stage": "WORT",
-        "sample": "AMB 039 BH41",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10043095496",
         "acknowledged": false,
         "ackBy": null,
         "ackAt": null,
-        "also": []
+        "also": [
+          {
+            "value": 5.25,
+            "date": "2026-06-29",
+            "stage": "WORT",
+            "sample": "AMB 039 BH41"
+          }
+        ]
       }
     ]
   },
@@ -3895,7 +3888,26 @@ const BATCHES = [
         "acknowledged": false,
         "ackBy": null,
         "ackAt": null,
-        "also": []
+        "also": [
+          {
+            "value": 5.27,
+            "date": "2026-07-02",
+            "stage": "WORT",
+            "sample": "AND 036 BH54"
+          },
+          {
+            "value": 5.28,
+            "date": "2026-07-02",
+            "stage": "WORT",
+            "sample": "AND 037 BH54"
+          },
+          {
+            "value": 5.27,
+            "date": "2026-07-02",
+            "stage": "WORT",
+            "sample": "AND 038 BH54"
+          }
+        ]
       },
       {
         "metric": "OG",
@@ -3909,77 +3921,20 @@ const BATCHES = [
         "acknowledged": false,
         "ackBy": null,
         "ackAt": null,
-        "also": []
-      },
-      {
-        "metric": "Wort pH",
-        "value": 5.27,
-        "low": 5.29,
-        "high": 5.51,
-        "date": "2026-07-02",
-        "stage": "WORT",
-        "sample": "AND 036 BH54",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10060603456",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "also": []
-      },
-      {
-        "metric": "OG",
-        "value": 17.6,
-        "low": 17.7,
-        "high": 18.3,
-        "date": "2026-07-02",
-        "stage": "WORT",
-        "sample": "AND 036 BH54",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10060603435",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "also": []
-      },
-      {
-        "metric": "Wort pH",
-        "value": 5.28,
-        "low": 5.29,
-        "high": 5.51,
-        "date": "2026-07-02",
-        "stage": "WORT",
-        "sample": "AND 037 BH54",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10060603471",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "also": []
-      },
-      {
-        "metric": "Wort pH",
-        "value": 5.27,
-        "low": 5.29,
-        "high": 5.51,
-        "date": "2026-07-02",
-        "stage": "WORT",
-        "sample": "AND 038 BH54",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10060603509",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "also": []
-      },
-      {
-        "metric": "OG",
-        "value": 18.39,
-        "low": 17.7,
-        "high": 18.3,
-        "date": "2026-07-02",
-        "stage": "WORT",
-        "sample": "AND 038 BH54",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10060603486",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "also": []
+        "also": [
+          {
+            "value": 17.6,
+            "date": "2026-07-02",
+            "stage": "WORT",
+            "sample": "AND 036 BH54"
+          },
+          {
+            "value": 18.39,
+            "date": "2026-07-02",
+            "stage": "WORT",
+            "sample": "AND 038 BH54"
+          }
+        ]
       }
     ]
   },
@@ -4174,25 +4129,18 @@ const BATCHES = [
         "date": "2026-06-27",
         "stage": "WORT",
         "sample": "AND 034 BH55",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10041731059",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "also": []
-      },
-      {
-        "metric": "Wort pH",
-        "value": 5.26,
-        "low": 5.29,
-        "high": 5.51,
-        "date": "2026-06-27",
-        "stage": "WORT",
-        "sample": "AND 033 BH55",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10041731062",
         "acknowledged": false,
         "ackBy": null,
         "ackAt": null,
-        "also": []
+        "also": [
+          {
+            "value": 5.26,
+            "date": "2026-06-27",
+            "stage": "WORT",
+            "sample": "AND 033 BH55"
+          }
+        ]
       }
     ]
   },
@@ -6512,9 +6460,9 @@ const BATCHES = [
         "stage": "FIN",
         "sample": "AMB 31-32/33-34 TK UV35 restart",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10017201516",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
+        "acknowledged": true,
+        "ackBy": "QC Monitor",
+        "ackAt": "2026-07-03T16:37",
         "also": [
           {
             "value": 2.09,
@@ -7716,7 +7664,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-03",
-  "lastSync": "Jul 3, 2026 \u00b7 8:06 AM"
+  "lastSync": "Jul 3, 2026 \u00b7 12:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
