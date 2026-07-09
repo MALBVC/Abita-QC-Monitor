@@ -3302,14 +3302,36 @@ const BATCHES = [
     ],
     "brewDate": "2026-07-08",
     "age": 1,
-    "stage": "Wort",
+    "stage": "Fermenting",
     "tank": "BH44",
     "labTank": "BH44",
     "tankSource": "lab",
-    "lastReading": "2026-07-08",
-    "lastSource": "WORT",
-    "numReadings": 8,
+    "lastReading": "2026-07-09",
+    "lastSource": "FERM",
+    "numReadings": 10,
     "readings": [
+      {
+        "date": "2026-07-09",
+        "sample": "AMB 41-42 BH44",
+        "stage": "FERM",
+        "tank": "BH44",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 4.3,
+        "Turbidity": 140.52678966522217,
+        "FG": 2.13
+      },
+      {
+        "date": "2026-07-09",
+        "sample": "AMB 41,42 BH44",
+        "stage": "GC",
+        "tank": "BH44",
+        "sourceFile": "gc 2026.xlsx",
+        "sourceSheet": "JUL",
+        "Diacetyl": 0.0,
+        "Pentanedione": 0.2635,
+        "Total VDK": 0.0
+      },
       {
         "date": "2026-07-08",
         "sample": "AMB 041 BH44",
@@ -7835,7 +7857,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-09",
-  "lastSync": "Jul 9, 2026 \u00b7 8:06 AM"
+  "lastSync": "Jul 9, 2026 \u00b7 12:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
