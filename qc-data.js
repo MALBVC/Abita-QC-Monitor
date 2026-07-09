@@ -3293,6 +3293,52 @@ const BATCHES = [
     ]
   },
   {
+    "id": "GLD 052, 053",
+    "product": "GLD",
+    "section": "brewhouse",
+    "brewNums": [
+      52,
+      53
+    ],
+    "brewDate": "2026-07-09",
+    "age": 0,
+    "stage": "Fermenting",
+    "tank": "BH42",
+    "labTank": "BH42",
+    "tankSource": "lab",
+    "lastReading": null,
+    "lastSource": null,
+    "numReadings": 1,
+    "readings": [],
+    "fermLog": [],
+    "yeastPitches": [
+      {
+        "date": "2026-07-09",
+        "tank": "BH42",
+        "cellCount": 1614322997.7,
+        "viability": 0.7552,
+        "pitchRate": 101.71,
+        "yeastGen": "K-12",
+        "yeastSource": "BH46",
+        "yeastBrewNum": "GRBB25-26",
+        "countType": "Yeast"
+      }
+    ],
+    "transferLog": [
+      {
+        "date": "2026-07-09",
+        "action": "BREW",
+        "from": "",
+        "to": "BH42",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "completed": false
+      }
+    ],
+    "basecampAlerts": []
+  },
+  {
     "id": "AMB 041, 042",
     "product": "AMB",
     "section": "brewhouse",
@@ -7857,7 +7903,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-09",
-  "lastSync": "Jul 9, 2026 \u00b7 12:06 PM"
+  "lastSync": "Jul 9, 2026 \u00b7 4:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
