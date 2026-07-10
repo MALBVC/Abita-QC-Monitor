@@ -2297,6 +2297,75 @@ const BATCHES = [
     "basecampAlerts": []
   },
   {
+    "id": "AND 039, 040",
+    "product": "AND",
+    "section": "brewhouse",
+    "brewNums": [
+      39,
+      40
+    ],
+    "brewDate": null,
+    "age": null,
+    "stage": "Fermenting",
+    "tank": "BH32",
+    "labTank": "BH32",
+    "tankSource": "lab",
+    "lastReading": "2026-07-10",
+    "lastSource": "FERM",
+    "numReadings": 1,
+    "readings": [
+      {
+        "date": "2026-07-10",
+        "sample": "AND 39,40 BH32",
+        "stage": "FERM",
+        "tank": "BH32",
+        "sourceFile": "yeast cell counts 2026.xlsx",
+        "sourceSheet": "AG",
+        "Yeast_Gen": "L-2",
+        "Yeast_Source": "BH41",
+        "Yeast_Brew_Num": "AMB 39-40",
+        "Count_Type": "Yeast"
+      }
+    ],
+    "fermLog": [],
+    "yeastPitches": [],
+    "transferLog": [],
+    "basecampAlerts": []
+  },
+  {
+    "id": "AND 041, 042",
+    "product": "AND",
+    "section": "brewhouse",
+    "brewNums": [
+      41,
+      42
+    ],
+    "brewDate": null,
+    "age": null,
+    "stage": "Fermenting",
+    "tank": "BH34",
+    "labTank": "BH34",
+    "tankSource": "lab",
+    "lastReading": "2026-07-10",
+    "lastSource": "FERM",
+    "numReadings": 1,
+    "readings": [
+      {
+        "date": "2026-07-10",
+        "sample": "AND 41,42 BH34",
+        "stage": "FERM",
+        "tank": "BH34",
+        "sourceFile": "yeast cell counts 2026.xlsx",
+        "sourceSheet": "AG",
+        "Count_Type": "Yeast"
+      }
+    ],
+    "fermLog": [],
+    "yeastPitches": [],
+    "transferLog": [],
+    "basecampAlerts": []
+  },
+  {
     "id": "STG 007",
     "product": "STG",
     "section": "brewhouse",
@@ -7940,7 +8009,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-10",
-  "lastSync": "Jul 10, 2026 \u00b7 8:06 AM"
+  "lastSync": "Jul 10, 2026 \u00b7 12:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
