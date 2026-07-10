@@ -2310,25 +2310,24 @@ const BATCHES = [
     "tank": "BH32",
     "labTank": "BH32",
     "tankSource": "lab",
-    "lastReading": "2026-07-10",
-    "lastSource": "FERM",
+    "lastReading": null,
+    "lastSource": null,
     "numReadings": 1,
-    "readings": [
+    "readings": [],
+    "fermLog": [],
+    "yeastPitches": [
       {
         "date": "2026-07-10",
-        "sample": "AND 39,40 BH32",
-        "stage": "FERM",
         "tank": "BH32",
-        "sourceFile": "yeast cell counts 2026.xlsx",
-        "sourceSheet": "AG",
-        "Yeast_Gen": "L-2",
-        "Yeast_Source": "BH41",
-        "Yeast_Brew_Num": "AMB 39-40",
-        "Count_Type": "Yeast"
+        "cellCount": 1694751901.5,
+        "viability": 0.3749,
+        "pitchRate": null,
+        "yeastGen": "L-2",
+        "yeastSource": "BH41",
+        "yeastBrewNum": "AMB 39-40",
+        "countType": "Yeast"
       }
     ],
-    "fermLog": [],
-    "yeastPitches": [],
     "transferLog": [],
     "basecampAlerts": []
   },
@@ -3377,7 +3376,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": null,
     "lastSource": null,
-    "numReadings": 2,
+    "numReadings": 3,
     "readings": [],
     "fermLog": [],
     "yeastPitches": [
@@ -3402,6 +3401,17 @@ const BATCHES = [
         "yeastSource": "BH46",
         "yeastBrewNum": "GRBB25-26",
         "countType": "FV"
+      },
+      {
+        "date": "2026-07-10",
+        "tank": "BH42",
+        "cellCount": 48417399.80000001,
+        "viability": 0.7493,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "12hr"
       }
     ],
     "transferLog": [
@@ -7325,6 +7335,16 @@ const BATCHES = [
         "detail": "1013 12 PACKS",
         "project": "packaging",
         "completed": true
+      },
+      {
+        "date": "2026-07-10",
+        "action": "FILTER",
+        "from": "BH33",
+        "to": "UV30",
+        "volume": null,
+        "detail": null,
+        "project": "cellar",
+        "completed": false
       }
     ],
     "basecampAlerts": [
@@ -8009,7 +8029,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-10",
-  "lastSync": "Jul 10, 2026 \u00b7 12:06 PM"
+  "lastSync": "Jul 10, 2026 \u00b7 4:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
