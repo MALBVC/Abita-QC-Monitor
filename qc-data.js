@@ -5016,9 +5016,9 @@ const BATCHES = [
         "stage": "BBT",
         "sample": "TBD 004 BT25",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10069426275",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
+        "acknowledged": true,
+        "ackBy": "QC Monitor",
+        "ackAt": "2026-07-08T05:04",
         "also": [
           {
             "value": 2.56,
@@ -5695,9 +5695,9 @@ const BATCHES = [
         "stage": "BBT",
         "sample": "AMB 35-36 BT31",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10042285330",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
+        "acknowledged": true,
+        "ackBy": "QC Monitor",
+        "ackAt": "2026-07-09T04:38",
         "also": [
           {
             "value": 2.05,
@@ -7257,9 +7257,9 @@ const BATCHES = [
         "stage": "FIN",
         "sample": "AND 27-28 TK25 19.2 Cans",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10060603355",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
+        "acknowledged": true,
+        "ackBy": "QC Monitor",
+        "ackAt": "2026-07-06T21:06",
         "also": [
           {
             "value": 3.71,
@@ -7573,9 +7573,9 @@ const BATCHES = [
         "stage": "FIN",
         "sample": "JOC 008 TK26",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10060113808",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
+        "acknowledged": true,
+        "ackBy": "QC Monitor",
+        "ackAt": "2026-07-07T13:05",
         "also": [
           {
             "value": 2.96,
@@ -7621,9 +7621,9 @@ const BATCHES = [
         "stage": "BBT",
         "sample": "JOC 008 BT26",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10060113797",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
+        "acknowledged": true,
+        "ackBy": "QC Monitor",
+        "ackAt": "2026-07-03T05:04",
         "also": [
           {
             "value": 6.33,
@@ -7648,10 +7648,30 @@ const BATCHES = [
     "tank": "TK29",
     "labTank": "TK29",
     "tankSource": "lab",
-    "lastReading": "2026-07-08",
+    "lastReading": "2026-07-09",
     "lastSource": "FIN",
-    "numReadings": 9,
+    "numReadings": 10,
     "readings": [
+      {
+        "date": "2026-07-09",
+        "sample": "SGT 011 TK29",
+        "stage": "FIN",
+        "tank": "TK29",
+        "sourceFile": "finished abita beer 2026.xlsx",
+        "sourceSheet": "SG",
+        "pH": 3.9,
+        "DO": 38.0,
+        "CO2 Vols": 2.72,
+        "Calories": 227.23,
+        "ADF": 84.91,
+        "RDF": 70.61,
+        "OG": 16.95,
+        "FG": 2.56,
+        "RE": 5.31,
+        "HAZE": 457.81659507751465,
+        "SG": 1.00997,
+        "ABV": 7.88
+      },
       {
         "date": "2026-07-08",
         "sample": "STG 011 TK29",
@@ -7839,17 +7859,23 @@ const BATCHES = [
     "basecampAlerts": [
       {
         "metric": "FG",
-        "value": 2.55,
+        "value": 2.56,
         "low": 3.3,
         "high": 3.7,
-        "date": "2026-07-08",
+        "date": "2026-07-09",
         "stage": "FIN",
-        "sample": "STG 011 TK29",
+        "sample": "SGT 011 TK29",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10073380381",
         "acknowledged": false,
         "ackBy": null,
         "ackAt": null,
         "also": [
+          {
+            "value": 2.55,
+            "date": "2026-07-08",
+            "stage": "FIN",
+            "sample": "STG 011 TK29"
+          },
           {
             "value": 2.59,
             "date": "2026-07-07",
@@ -7903,7 +7929,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-09",
-  "lastSync": "Jul 9, 2026 \u00b7 4:06 PM"
+  "lastSync": "Jul 9, 2026 \u00b7 8:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
