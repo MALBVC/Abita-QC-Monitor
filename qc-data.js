@@ -2347,7 +2347,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": "2026-07-10",
     "lastSource": "FERM",
-    "numReadings": 1,
+    "numReadings": 2,
     "readings": [
       {
         "date": "2026-07-10",
@@ -2360,7 +2360,19 @@ const BATCHES = [
       }
     ],
     "fermLog": [],
-    "yeastPitches": [],
+    "yeastPitches": [
+      {
+        "date": "2026-07-10",
+        "tank": "BH34",
+        "cellCount": 1882419343.7,
+        "viability": 0.6729,
+        "pitchRate": 396.4703076431313,
+        "yeastGen": "L-12",
+        "yeastSource": "BH54",
+        "yeastBrewNum": "AND35-38",
+        "countType": "Yeast"
+      }
+    ],
     "transferLog": [],
     "basecampAlerts": []
   },
@@ -5423,9 +5435,9 @@ const BATCHES = [
     "brewDate": "2026-06-11",
     "age": 29,
     "stage": "Brite",
-    "tank": "BT31",
+    "tank": "UV37",
     "labTank": "BT31",
-    "tankSource": "lab",
+    "tankSource": "basecamp",
     "lastReading": "2026-07-08",
     "lastSource": "BBT",
     "numReadings": 20,
@@ -5773,6 +5785,16 @@ const BATCHES = [
         "detail": "1890 CASES",
         "project": "packaging",
         "completed": true
+      },
+      {
+        "date": "2026-07-10",
+        "action": "FILTER",
+        "from": "BH43",
+        "to": "UV37",
+        "volume": null,
+        "detail": null,
+        "project": "cellar",
+        "completed": false
       }
     ],
     "basecampAlerts": [
@@ -7402,9 +7424,9 @@ const BATCHES = [
         "stage": "BBT",
         "sample": "AND 27-28 BT25",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10060603373",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
+        "acknowledged": true,
+        "ackBy": "QC Monitor",
+        "ackAt": "2026-07-10T21:06",
         "also": [
           {
             "value": 21.55,
@@ -8029,7 +8051,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-10",
-  "lastSync": "Jul 10, 2026 \u00b7 4:06 PM"
+  "lastSync": "Jul 10, 2026 \u00b7 8:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
