@@ -90,6 +90,14 @@ const fmtDate = s => {
   const d = new Date(iso);
   return d.toLocaleDateString('en-US',{month:'short',day:'numeric'});
 };
+// Basecamp comment content is rich-text HTML (e.g. '<p dir="auto">text</p>')
+// -- strip tags/entities down to plain text for display.
+const stripHtml = html => {
+  if (!html) return '';
+  const div = document.createElement('div');
+  div.innerHTML = html;
+  return (div.textContent || div.innerText || '').replace(/\s+/g, ' ').trim();
+};
 
 // ─── Spec Bar ────────────────────────────────────────────────────────────────
 function SpecBar({ metric, value, stage, product }) {
@@ -523,7 +531,7 @@ function DetailPanel({ batch, onClose }) {
                     </a>
                     {a.acknowledged && a.ackNote && (
                       <div style={{ fontSize:11, color:'var(--muted)', padding:'4px 10px 0', fontStyle:'italic' }}>
-                        "{a.ackNote}"
+                        {fmtDate(a.ackAt)} - {a.ackBy ? a.ackBy.split(' ')[0] : '—'} - {stripHtml(a.ackNote)}
                       </div>
                     )}
                     {also.length > 0 && (
