@@ -530,7 +530,7 @@ function DetailPanel({ batch, onClose }) {
                       </span>
                     </a>
                     {a.acknowledged && a.ackNote && (
-                      <div style={{ fontSize:11, color:'var(--muted)', padding:'4px 10px 0', fontStyle:'italic' }}>
+                      <div style={{ fontSize:11, color:'var(--muted)', padding:'4px 10px 0' }}>
                         {fmtDate(a.ackAt)} - {a.ackBy ? a.ackBy.split(' ')[0] : '—'} - {stripHtml(a.ackNote)}
                       </div>
                     )}
