@@ -1381,6 +1381,7 @@ const BATCHES = [
         "acknowledged": true,
         "ackBy": "Mitch Steele",
         "ackAt": "2026-07-06T15:15",
+        "ackNote": "<p dir=\"auto\">Brew overboiled onto roof, significant wort loss, was subsequently diluted with liquor to hit minimum KF volume  and is being downgraded to Abita Golden</p>",
         "also": []
       }
     ]
@@ -2403,6 +2404,7 @@ const BATCHES = [
         "acknowledged": false,
         "ackBy": null,
         "ackAt": null,
+        "ackNote": null,
         "also": []
       }
     ]
@@ -2516,6 +2518,7 @@ const BATCHES = [
         "acknowledged": false,
         "ackBy": null,
         "ackAt": null,
+        "ackNote": null,
         "also": []
       },
       {
@@ -2530,6 +2533,7 @@ const BATCHES = [
         "acknowledged": false,
         "ackBy": null,
         "ackAt": null,
+        "ackNote": null,
         "also": []
       }
     ]
@@ -2781,6 +2785,7 @@ const BATCHES = [
         "acknowledged": true,
         "ackBy": "Mitch Steele",
         "ackAt": "2026-07-08T12:32",
+        "ackNote": "<p dir=\"auto\">Wort pH's being adjusted down to 5.0-5.2. Specs haven't been changed yet</p>",
         "also": []
       }
     ]
@@ -3340,6 +3345,7 @@ const BATCHES = [
         "acknowledged": true,
         "ackBy": "Mitch Steele",
         "ackAt": "2026-07-06T15:11",
+        "ackNote": "<p dir=\"auto\">In process of lowering wort pH targets across the board</p>",
         "also": [
           {
             "value": 5.25,
@@ -3668,6 +3674,7 @@ const BATCHES = [
         "acknowledged": false,
         "ackBy": null,
         "ackAt": null,
+        "ackNote": null,
         "also": [
           {
             "value": 5.25,
@@ -4148,6 +4155,7 @@ const BATCHES = [
         "acknowledged": true,
         "ackBy": "QC Monitor",
         "ackAt": "2026-07-03T16:24",
+        "ackNote": "<strong>Consolidated from duplicate to-do:</strong><br>OOS: AND 038 \u2014 Wort pH 5.27 (spec 5.29\u20135.51)<br><strong>AND brew 038</strong> \u2014 WORT stage, sampled 2026-07-02<br><strong>Wort pH</strong>: 5.27 (spec 5.29\u20135.51)<br>Sample: AND 038 BH54<br><a href=\"https://malbvc.github.io/Abita-QC-Monitor/?product=AND&amp;brew=38\" target=\"_blank\" rel=\"noreferrer\">View in QC Dashboard</a>",
         "also": [
           {
             "value": 5.27,
@@ -4181,6 +4189,7 @@ const BATCHES = [
         "acknowledged": false,
         "ackBy": null,
         "ackAt": null,
+        "ackNote": null,
         "also": [
           {
             "value": 17.6,
@@ -4488,6 +4497,7 @@ const BATCHES = [
         "acknowledged": true,
         "ackBy": "QC Monitor",
         "ackAt": "2026-07-03T16:24",
+        "ackNote": "<strong>Consolidated from duplicate to-do:</strong><br>OOS: AND 034 \u2014 Wort pH 5.24 (spec 5.29\u20135.51)<br><strong>AND brew 034</strong> \u2014 WORT stage, sampled 2026-06-27<br><strong>Wort pH</strong>: 5.24 (spec 5.29\u20135.51)<br>Sample: AND 034 BH55<br><a href=\"https://malbvc.github.io/Abita-QC-Monitor/?product=AND&amp;brew=34\" target=\"_blank\" rel=\"noreferrer\">View in QC Dashboard</a>",
         "also": [
           {
             "value": 5.26,
@@ -4906,6 +4916,7 @@ const BATCHES = [
         "acknowledged": true,
         "ackBy": "Mitch Steele",
         "ackAt": "2026-07-08T12:33",
+        "ackNote": "<p dir=\"auto\">In spec. Will track abv.</p>",
         "also": []
       },
       {
@@ -4920,6 +4931,7 @@ const BATCHES = [
         "acknowledged": true,
         "ackBy": "Mitch Steele",
         "ackAt": "2026-07-06T15:17",
+        "ackNote": "<p dir=\"auto\">pH adjustments to lower wort pH's in progress. Have not brewed Golden yet.</p>",
         "also": []
       }
     ]
@@ -5174,6 +5186,7 @@ const BATCHES = [
         "acknowledged": true,
         "ackBy": "QC Monitor",
         "ackAt": "2026-07-08T05:04",
+        "ackNote": "<strong>Another OOS reading for this issue:</strong><br><strong>TBD brew 004</strong> \u2014 FIN stage, sampled 2026-07-07<br><strong>FG</strong>: 2.56 (spec 2.8\u20133.2)<br>Tank: TK25<br><a href=\"https://malbvc.github.io/Abita-QC-Monitor/?product=TBD&amp;brew=4\" target=\"_blank\" rel=\"noreferrer\">View in QC Dashboard</a>",
         "also": [
           {
             "value": 2.56,
@@ -5460,6 +5473,7 @@ const BATCHES = [
         "acknowledged": false,
         "ackBy": null,
         "ackAt": null,
+        "ackNote": null,
         "also": [
           {
             "value": 3.27,
@@ -5883,6 +5897,7 @@ const BATCHES = [
         "acknowledged": true,
         "ackBy": "QC Monitor",
         "ackAt": "2026-07-09T04:38",
+        "ackNote": "<strong>Another OOS reading for this issue:</strong><br><strong>AMB brew 035-036</strong> \u2014 FIN stage, sampled 2026-07-08<br><strong>FG</strong>: 2.01 (spec 1.6\u20132)<br>Tank: TK26<br><a href=\"https://malbvc.github.io/Abita-QC-Monitor/?product=AMB&amp;brew=35\" target=\"_blank\" rel=\"noreferrer\">View in QC Dashboard</a>",
         "also": [
           {
             "value": 2.05,
@@ -5952,6 +5967,7 @@ const BATCHES = [
         "acknowledged": false,
         "ackBy": null,
         "ackAt": null,
+        "ackNote": null,
         "also": [
           {
             "value": 40.43413746356964,
@@ -5985,6 +6001,7 @@ const BATCHES = [
         "acknowledged": true,
         "ackBy": "QC Monitor",
         "ackAt": "2026-06-29T01:05",
+        "ackNote": "<strong>Another OOS reading for this issue:</strong><br><strong>AMB brew 035-036</strong> \u2014 BBT stage, sampled 2026-06-28<br><strong>HAZE</strong>: 56.8 (spec 25.5\u201334.5)<br>Sample: AMB 35-36 BT26<br><a href=\"https://malbvc.github.io/Abita-QC-Monitor/?product=AMB&amp;brew=35\" target=\"_blank\" rel=\"noreferrer\">View in QC Dashboard</a>",
         "also": [
           {
             "value": 56.82113242149353,
@@ -6313,6 +6330,7 @@ const BATCHES = [
         "acknowledged": false,
         "ackBy": null,
         "ackAt": null,
+        "ackNote": null,
         "also": []
       }
     ]
@@ -7455,6 +7473,7 @@ const BATCHES = [
         "acknowledged": true,
         "ackBy": "QC Monitor",
         "ackAt": "2026-07-06T21:06",
+        "ackNote": "<strong>Another OOS reading for this issue:</strong><br><strong>AND brew 002, 019, 027, 028</strong> \u2014 FIN stage, sampled 2026-07-06<br><strong>FG</strong>: 3.71 (spec 3.3\u20133.7)<br>Tank: TK25<br><a href=\"https://malbvc.github.io/Abita-QC-Monitor/?product=AND&amp;brew=2\" target=\"_blank\" rel=\"noreferrer\">View in QC Dashboard</a>",
         "also": [
           {
             "value": 3.71,
@@ -7500,6 +7519,7 @@ const BATCHES = [
         "acknowledged": true,
         "ackBy": "QC Monitor",
         "ackAt": "2026-07-10T21:06",
+        "ackNote": "This was marked done without an explanation, so I've re-opened it. Please add a comment explaining the root cause \u2014 what caused this reading to be out of spec? \u2014 then mark it complete again.",
         "also": [
           {
             "value": 21.55,
@@ -7771,6 +7791,7 @@ const BATCHES = [
         "acknowledged": true,
         "ackBy": "QC Monitor",
         "ackAt": "2026-07-07T13:05",
+        "ackNote": "<strong>Another OOS reading for this issue:</strong><br><strong>JOC brew 008</strong> \u2014 FIN stage, sampled 2026-07-07<br><strong>FG</strong>: 2.93 (spec 3\u20133.4)<br>Tank: TK26<br><a href=\"https://malbvc.github.io/Abita-QC-Monitor/?product=JOC&amp;brew=8\" target=\"_blank\" rel=\"noreferrer\">View in QC Dashboard</a>",
         "also": [
           {
             "value": 2.96,
@@ -7798,6 +7819,7 @@ const BATCHES = [
         "acknowledged": false,
         "ackBy": null,
         "ackAt": null,
+        "ackNote": null,
         "also": [
           {
             "value": 22.05,
@@ -7819,6 +7841,7 @@ const BATCHES = [
         "acknowledged": true,
         "ackBy": "QC Monitor",
         "ackAt": "2026-07-03T05:04",
+        "ackNote": "<strong>Another OOS reading for this issue:</strong><br><strong>JOC brew 008</strong> \u2014 BBT stage, sampled 2026-07-02<br><strong>ABV</strong>: 6.33 (spec 5.7\u20136.3)<br>Sample: JOC 008 BT28<br><a href=\"https://malbvc.github.io/Abita-QC-Monitor/?product=JOC&amp;brew=8\" target=\"_blank\" rel=\"noreferrer\">View in QC Dashboard</a>",
         "also": [
           {
             "value": 6.33,
@@ -8064,6 +8087,7 @@ const BATCHES = [
         "acknowledged": false,
         "ackBy": null,
         "ackAt": null,
+        "ackNote": null,
         "also": [
           {
             "value": 2.55,
@@ -8091,6 +8115,7 @@ const BATCHES = [
         "acknowledged": false,
         "ackBy": null,
         "ackAt": null,
+        "ackNote": null,
         "also": []
       },
       {
@@ -8105,6 +8130,7 @@ const BATCHES = [
         "acknowledged": true,
         "ackBy": "Mitch Steele",
         "ackAt": "2026-07-06T15:05",
+        "ackNote": "<p dir=\"auto\">OG target came from Brewsheet, we haven't been targeting 17\u00b0P. Average all year is 16.73\u00b0P. Will investigate adjusting target</p>",
         "also": []
       }
     ]
@@ -8124,7 +8150,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-13",
-  "lastSync": "Jul 13, 2026 \u00b7 10:54 AM"
+  "lastSync": "Jul 13, 2026 \u00b7 11:08 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
