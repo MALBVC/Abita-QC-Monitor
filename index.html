@@ -139,10 +139,19 @@ function hasUnacknowledgedOOS(oos, basecampAlerts) {
 }
 
 function OOSBadge({ count, unacknowledged }) {
-  if (count === 0 || count === '—' || !unacknowledged) return (
+  // Three states, not two: OK means no OOS readings at all (count===0).
+  // A resolved/pre-Basecamp OOS history still shows its count, just without
+  // the alarming triangle — it should never collapse back to "OK", since
+  // that would read as "no OOS ever happened here."
+  if (count === 0 || count === '—') return (
     <span style={{ padding:'2px 8px', borderRadius:4, fontSize:11, fontWeight:600,
                    background:'var(--green-bg)', border:'1px solid var(--green-br)',
                    color:'var(--green)', fontFamily:'IBM Plex Mono' }}>✓ OK</span>
+  );
+  if (!unacknowledged) return (
+    <span style={{ padding:'2px 8px', borderRadius:4, fontSize:12, fontWeight:700,
+                   background:'var(--card)', border:'1px solid var(--border2)',
+                   color:'var(--muted)', fontFamily:'IBM Plex Mono' }}>{count}</span>
   );
   return (
     <span style={{ padding:'2px 8px', borderRadius:4, fontSize:12, fontWeight:700,
