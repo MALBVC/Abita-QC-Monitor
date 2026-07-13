@@ -4152,10 +4152,10 @@ const BATCHES = [
         "stage": "WORT",
         "sample": "AND 035 BH54",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10060603405",
-        "acknowledged": true,
-        "ackBy": "QC Monitor",
-        "ackAt": "2026-07-03T16:24",
-        "ackNote": "<strong>Consolidated from duplicate to-do:</strong><br>OOS: AND 038 \u2014 Wort pH 5.27 (spec 5.29\u20135.51)<br><strong>AND brew 038</strong> \u2014 WORT stage, sampled 2026-07-02<br><strong>Wort pH</strong>: 5.27 (spec 5.29\u20135.51)<br>Sample: AND 038 BH54<br><a href=\"https://malbvc.github.io/Abita-QC-Monitor/?product=AND&amp;brew=38\" target=\"_blank\" rel=\"noreferrer\">View in QC Dashboard</a>",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
         "also": [
           {
             "value": 5.27,
@@ -4494,10 +4494,10 @@ const BATCHES = [
         "stage": "WORT",
         "sample": "AND 034 BH55",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10041731062",
-        "acknowledged": true,
-        "ackBy": "QC Monitor",
-        "ackAt": "2026-07-03T16:24",
-        "ackNote": "<strong>Consolidated from duplicate to-do:</strong><br>OOS: AND 034 \u2014 Wort pH 5.24 (spec 5.29\u20135.51)<br><strong>AND brew 034</strong> \u2014 WORT stage, sampled 2026-06-27<br><strong>Wort pH</strong>: 5.24 (spec 5.29\u20135.51)<br>Sample: AND 034 BH55<br><a href=\"https://malbvc.github.io/Abita-QC-Monitor/?product=AND&amp;brew=34\" target=\"_blank\" rel=\"noreferrer\">View in QC Dashboard</a>",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
         "also": [
           {
             "value": 5.26,
@@ -5183,10 +5183,10 @@ const BATCHES = [
         "stage": "BBT",
         "sample": "TBD 004 BT25",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10069426275",
-        "acknowledged": true,
-        "ackBy": "QC Monitor",
-        "ackAt": "2026-07-08T05:04",
-        "ackNote": "<strong>Another OOS reading for this issue:</strong><br><strong>TBD brew 004</strong> \u2014 FIN stage, sampled 2026-07-07<br><strong>FG</strong>: 2.56 (spec 2.8\u20133.2)<br>Tank: TK25<br><a href=\"https://malbvc.github.io/Abita-QC-Monitor/?product=TBD&amp;brew=4\" target=\"_blank\" rel=\"noreferrer\">View in QC Dashboard</a>",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
         "also": [
           {
             "value": 2.56,
@@ -5894,10 +5894,10 @@ const BATCHES = [
         "stage": "BBT",
         "sample": "AMB 35-36 BT31",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10042285330",
-        "acknowledged": true,
-        "ackBy": "QC Monitor",
-        "ackAt": "2026-07-09T04:38",
-        "ackNote": "<strong>Another OOS reading for this issue:</strong><br><strong>AMB brew 035-036</strong> \u2014 FIN stage, sampled 2026-07-08<br><strong>FG</strong>: 2.01 (spec 1.6\u20132)<br>Tank: TK26<br><a href=\"https://malbvc.github.io/Abita-QC-Monitor/?product=AMB&amp;brew=35\" target=\"_blank\" rel=\"noreferrer\">View in QC Dashboard</a>",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
         "also": [
           {
             "value": 2.05,
@@ -5998,10 +5998,10 @@ const BATCHES = [
         "stage": "BBT",
         "sample": "AMB 35-36 BT23",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10042285358",
-        "acknowledged": true,
-        "ackBy": "QC Monitor",
-        "ackAt": "2026-06-29T01:05",
-        "ackNote": "<strong>Another OOS reading for this issue:</strong><br><strong>AMB brew 035-036</strong> \u2014 BBT stage, sampled 2026-06-28<br><strong>HAZE</strong>: 56.8 (spec 25.5\u201334.5)<br>Sample: AMB 35-36 BT26<br><a href=\"https://malbvc.github.io/Abita-QC-Monitor/?product=AMB&amp;brew=35\" target=\"_blank\" rel=\"noreferrer\">View in QC Dashboard</a>",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
         "also": [
           {
             "value": 56.82113242149353,
@@ -7470,10 +7470,10 @@ const BATCHES = [
         "stage": "FIN",
         "sample": "AND 27-28 TK25 19.2 Cans",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10060603355",
-        "acknowledged": true,
-        "ackBy": "QC Monitor",
-        "ackAt": "2026-07-06T21:06",
-        "ackNote": "<strong>Another OOS reading for this issue:</strong><br><strong>AND brew 002, 019, 027, 028</strong> \u2014 FIN stage, sampled 2026-07-06<br><strong>FG</strong>: 3.71 (spec 3.3\u20133.7)<br>Tank: TK25<br><a href=\"https://malbvc.github.io/Abita-QC-Monitor/?product=AND&amp;brew=2\" target=\"_blank\" rel=\"noreferrer\">View in QC Dashboard</a>",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
         "also": [
           {
             "value": 3.71,
@@ -7516,10 +7516,10 @@ const BATCHES = [
         "stage": "BBT",
         "sample": "AND 27-28 BT25",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10060603373",
-        "acknowledged": true,
-        "ackBy": "QC Monitor",
-        "ackAt": "2026-07-10T21:06",
-        "ackNote": "This was marked done without an explanation, so I've re-opened it. Please add a comment explaining the root cause \u2014 what caused this reading to be out of spec? \u2014 then mark it complete again.",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
         "also": [
           {
             "value": 21.55,
@@ -7788,10 +7788,10 @@ const BATCHES = [
         "stage": "FIN",
         "sample": "JOC 008 TK26",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10060113808",
-        "acknowledged": true,
-        "ackBy": "QC Monitor",
-        "ackAt": "2026-07-07T13:05",
-        "ackNote": "<strong>Another OOS reading for this issue:</strong><br><strong>JOC brew 008</strong> \u2014 FIN stage, sampled 2026-07-07<br><strong>FG</strong>: 2.93 (spec 3\u20133.4)<br>Tank: TK26<br><a href=\"https://malbvc.github.io/Abita-QC-Monitor/?product=JOC&amp;brew=8\" target=\"_blank\" rel=\"noreferrer\">View in QC Dashboard</a>",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
         "also": [
           {
             "value": 2.96,
@@ -7838,10 +7838,10 @@ const BATCHES = [
         "stage": "BBT",
         "sample": "JOC 008 BT26",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10060113797",
-        "acknowledged": true,
-        "ackBy": "QC Monitor",
-        "ackAt": "2026-07-03T05:04",
-        "ackNote": "<strong>Another OOS reading for this issue:</strong><br><strong>JOC brew 008</strong> \u2014 BBT stage, sampled 2026-07-02<br><strong>ABV</strong>: 6.33 (spec 5.7\u20136.3)<br>Sample: JOC 008 BT28<br><a href=\"https://malbvc.github.io/Abita-QC-Monitor/?product=JOC&amp;brew=8\" target=\"_blank\" rel=\"noreferrer\">View in QC Dashboard</a>",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
         "also": [
           {
             "value": 6.33,
@@ -8150,7 +8150,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-13",
-  "lastSync": "Jul 13, 2026 \u00b7 11:08 AM"
+  "lastSync": "Jul 13, 2026 \u00b7 11:38 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });

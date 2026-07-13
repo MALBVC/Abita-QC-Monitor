@@ -128,8 +128,18 @@ function SpecBar({ metric, value, stage, product }) {
 }
 
 // ─── OOS Badge ───────────────────────────────────────────────────────────────
-function OOSBadge({ count }) {
-  if (count === 0 || count === '—') return (
+// computeOOS() flags carry no event id, so they're matched to Basecamp alerts
+// via metric+date+value (same approach as DetailPanel's untrackedFlags split).
+// A flag with no matching Basecamp alert is pre-Basecamp history and is
+// treated as already acknowledged — the warning triangle should only appear
+// when a Basecamp-tracked OOS event is still genuinely open.
+function hasUnacknowledgedOOS(oos, basecampAlerts) {
+  const ackMap = new Map((basecampAlerts || []).map(a => [`${a.metric}|${a.date}|${a.value}`, a.acknowledged]));
+  return oos.some(f => ackMap.get(`${f.metric}|${f.date}|${f.value}`) === false);
+}
+
+function OOSBadge({ count, unacknowledged }) {
+  if (count === 0 || count === '—' || !unacknowledged) return (
     <span style={{ padding:'2px 8px', borderRadius:4, fontSize:11, fontWeight:600,
                    background:'var(--green-bg)', border:'1px solid var(--green-br)',
                    color:'var(--green)', fontFamily:'IBM Plex Mono' }}>✓ OK</span>
@@ -159,6 +169,7 @@ function BatchRow({ batch, selected, onClick, compact, detailOpen }) {
   const h = compact ? 38 : 46;
   const latest = batch.readings[0];
   const oos    = useMemo(() => computeOOS(batch.readings, batch.product), [batch]);
+  const unacked = useMemo(() => hasUnacknowledgedOOS(oos, batch.basecampAlerts), [oos, batch.basecampAlerts]);
 
   // Build quick metric snippets from the most recent relevant reading
   const chips = useMemo(() => {
@@ -221,7 +232,7 @@ function BatchRow({ batch, selected, onClick, compact, detailOpen }) {
         </div>
       )}
       <div style={{ textAlign:'left' }}>
-        <OOSBadge count={oos.length}/>
+        <OOSBadge count={oos.length} unacknowledged={unacked}/>
       </div>
       <div/>
     </div>
