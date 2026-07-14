@@ -1235,7 +1235,7 @@ const BATCHES = [
         "tank": "BH9",
         "cellCount": 1504211998.45,
         "viability": 0.73,
-        "pitchRate": 241.38,
+        "pitchRate": 120.69,
         "yeastGen": "K-13",
         "yeastSource": "BH42",
         "yeastBrewNum": "GLD 52-53",
@@ -1694,12 +1694,12 @@ const BATCHES = [
     "brewNums": [
       3
     ],
-    "brewDate": null,
-    "age": null,
+    "brewDate": "2026-07-15",
+    "age": -1,
     "stage": "Fermenting",
-    "tank": "BH19",
+    "tank": "BH16",
     "labTank": "BH19",
-    "tankSource": "lab",
+    "tankSource": "basecamp",
     "lastReading": "2026-06-13",
     "lastSource": "FERM",
     "numReadings": 1,
@@ -1718,7 +1718,18 @@ const BATCHES = [
     ],
     "fermLog": [],
     "yeastPitches": [],
-    "transferLog": [],
+    "transferLog": [
+      {
+        "date": "2026-07-15",
+        "action": "BREW",
+        "from": "",
+        "to": "BH16",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "completed": false
+      }
+    ],
     "basecampAlerts": []
   },
   {
@@ -4837,14 +4848,34 @@ const BATCHES = [
     ],
     "brewDate": "2026-06-22",
     "age": 22,
-    "stage": "Brite",
+    "stage": "Packaged",
     "tank": "BT28",
     "labTank": "BT28",
     "tankSource": "lab",
     "lastReading": "2026-07-14",
-    "lastSource": "BBT",
-    "numReadings": 22,
+    "lastSource": "FIN",
+    "numReadings": 24,
     "readings": [
+      {
+        "date": "2026-07-14",
+        "sample": "AND 29 TK BT28",
+        "stage": "FIN",
+        "tank": "BT28",
+        "sourceFile": "finished abita beer 2026.xlsx",
+        "sourceSheet": "AG",
+        "pH": 4.8,
+        "DO": 46.0,
+        "CO2 Vols": 2.66,
+        "Calories": 243.87,
+        "ADF": 78.27,
+        "RDF": 65.5,
+        "OG": 17.93,
+        "FG": 3.9,
+        "RE": 6.59,
+        "HAZE": 46.84829521179199,
+        "SG": 1.01526,
+        "ABV": 7.77
+      },
       {
         "date": "2026-07-14",
         "sample": "AND 29 BT28",
@@ -4888,6 +4919,26 @@ const BATCHES = [
         "SG": 1.01542,
         "ABV": 7.81,
         "OG": 18.04
+      },
+      {
+        "date": "2026-07-14",
+        "sample": "AND 029 TK23",
+        "stage": "FIN",
+        "tank": "TK23",
+        "sourceFile": "finished abita beer 2026.xlsx",
+        "sourceSheet": "AG",
+        "pH": 4.8,
+        "DO": 39.0,
+        "CO2 Vols": 2.75,
+        "Calories": 243.02,
+        "ADF": 78.44,
+        "RDF": 65.62,
+        "OG": 17.88,
+        "FG": 3.85,
+        "RE": 6.54,
+        "HAZE": 47.94913065433502,
+        "SG": 1.01509,
+        "ABV": 7.76
       },
       {
         "date": "2026-07-13",
@@ -5155,10 +5206,50 @@ const BATCHES = [
         "volume": null,
         "detail": "4321 CASES",
         "project": "packaging",
-        "completed": false
+        "completed": true
       }
     ],
     "basecampAlerts": [
+      {
+        "metric": "FG",
+        "value": 3.9,
+        "low": 3.3,
+        "high": 3.7,
+        "date": "2026-07-14",
+        "stage": "FIN",
+        "sample": "AND 29 TK BT28",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10091789361",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
+        "also": [
+          {
+            "value": 3.95,
+            "date": "2026-07-14",
+            "stage": "BBT",
+            "sample": "AND 29 BT28"
+          },
+          {
+            "value": 3.94,
+            "date": "2026-07-14",
+            "stage": "BBT",
+            "sample": "AND 29 BT23"
+          },
+          {
+            "value": 3.85,
+            "date": "2026-07-14",
+            "stage": "FIN",
+            "sample": "AND 029 TK23"
+          },
+          {
+            "value": 3.94,
+            "date": "2026-07-13",
+            "stage": "BBT",
+            "sample": "AND 029 UV36"
+          }
+        ]
+      },
       {
         "metric": "IBU",
         "value": 18.45,
@@ -5181,34 +5272,6 @@ const BATCHES = [
           },
           {
             "value": 20.849999999999998,
-            "date": "2026-07-13",
-            "stage": "BBT",
-            "sample": "AND 029 UV36"
-          }
-        ]
-      },
-      {
-        "metric": "FG",
-        "value": 3.95,
-        "low": 3.3,
-        "high": 3.7,
-        "date": "2026-07-14",
-        "stage": "BBT",
-        "sample": "AND 29 BT28",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10091789361",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
-        "also": [
-          {
-            "value": 3.94,
-            "date": "2026-07-14",
-            "stage": "BBT",
-            "sample": "AND 29 BT23"
-          },
-          {
-            "value": 3.94,
             "date": "2026-07-13",
             "stage": "BBT",
             "sample": "AND 029 UV36"
@@ -7492,7 +7555,7 @@ const BATCHES = [
         "volume": null,
         "detail": "4321 CASES",
         "project": "packaging",
-        "completed": false
+        "completed": true
       }
     ],
     "basecampAlerts": [
@@ -7593,7 +7656,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-14",
-  "lastSync": "Jul 14, 2026 \u00b7 12:07 PM"
+  "lastSync": "Jul 14, 2026 \u00b7 4:07 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
