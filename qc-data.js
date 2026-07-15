@@ -1046,9 +1046,9 @@ const BATCHES = [
     "brewDate": "2026-04-16",
     "age": 90,
     "stage": "Fermenting",
-    "tank": "BH3",
+    "tank": "BT28",
     "labTank": "BH3",
-    "tankSource": "lab",
+    "tankSource": "basecamp",
     "lastReading": "2026-04-17",
     "lastSource": "FERM",
     "numReadings": 14,
@@ -1207,6 +1207,16 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "completed": true
+      },
+      {
+        "date": "2026-07-15",
+        "action": "CENT",
+        "from": "BH3",
+        "to": "BT28",
+        "volume": 40.0,
+        "detail": null,
+        "project": "cellar",
+        "completed": false
       }
     ],
     "basecampAlerts": []
@@ -4820,9 +4830,9 @@ const BATCHES = [
     "brewDate": "2026-06-24",
     "age": 21,
     "stage": "Fermenting",
-    "tank": "BH58",
+    "tank": "BT27",
     "labTank": "BH58",
-    "tankSource": "lab",
+    "tankSource": "basecamp",
     "lastReading": "2026-06-27",
     "lastSource": "FERM",
     "numReadings": 15,
@@ -5028,6 +5038,16 @@ const BATCHES = [
         "detail": null,
         "project": "brewhouse",
         "completed": true
+      },
+      {
+        "date": "2026-07-15",
+        "action": "CENT",
+        "from": "BH58",
+        "to": "BT27",
+        "volume": 40.0,
+        "detail": null,
+        "project": "cellar",
+        "completed": false
       }
     ],
     "basecampAlerts": [
@@ -7526,7 +7546,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-15",
-  "lastSync": "Jul 15, 2026 \u00b7 4:06 AM"
+  "lastSync": "Jul 15, 2026 \u00b7 8:06 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
