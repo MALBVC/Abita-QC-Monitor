@@ -1236,7 +1236,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": null,
     "lastSource": null,
-    "numReadings": 2,
+    "numReadings": 3,
     "readings": [],
     "fermLog": [],
     "yeastPitches": [
@@ -1261,6 +1261,17 @@ const BATCHES = [
         "yeastSource": "BH42",
         "yeastBrewNum": "GLD 52-53",
         "countType": "FV"
+      },
+      {
+        "date": "2026-07-15",
+        "tank": "BH9",
+        "cellCount": 125811879.78333335,
+        "viability": 0.7717,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "12hr"
       }
     ],
     "transferLog": [],
@@ -1440,6 +1451,129 @@ const BATCHES = [
         "also": []
       }
     ]
+  },
+  {
+    "id": "STG 012",
+    "product": "STG",
+    "section": "brewhouse",
+    "brewNums": [
+      12
+    ],
+    "brewDate": "2026-07-15",
+    "age": 0,
+    "stage": "Fermenting",
+    "tank": "BH14",
+    "labTank": "BH14",
+    "tankSource": "lab",
+    "lastReading": "2026-04-24",
+    "lastSource": "FIN",
+    "numReadings": 2,
+    "readings": [
+      {
+        "date": "2026-04-24",
+        "sample": "STG 005 TK30 12oz cans",
+        "stage": "FIN",
+        "tank": "TK30",
+        "sourceFile": "finished abita beer 2026.xlsx",
+        "sourceSheet": "SG",
+        "pH": 4.02,
+        "DO": 90.0,
+        "CO2 Vols": 2.6,
+        "Calories": 239.14,
+        "ADF": 84.03,
+        "RDF": 70.03,
+        "OG": 17.74,
+        "FG": 2.83,
+        "RE": 5.68,
+        "HAZE": 919.314305305481,
+        "SG": 1.01106,
+        "ABV": 8.22
+      }
+    ],
+    "fermLog": [],
+    "yeastPitches": [
+      {
+        "date": "2026-07-15",
+        "tank": "BH14",
+        "cellCount": 2289351297.4500003,
+        "viability": 0.7739,
+        "pitchRate": 133.85256792687562,
+        "yeastGen": "L-3",
+        "yeastSource": "BH44",
+        "yeastBrewNum": "AMB41-42",
+        "countType": "yeast"
+      }
+    ],
+    "transferLog": [
+      {
+        "date": "2026-07-15",
+        "action": "BREW",
+        "from": "",
+        "to": "BH14",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "completed": false
+      }
+    ],
+    "basecampAlerts": []
+  },
+  {
+    "id": "BEC 003",
+    "product": "BEC",
+    "section": "brewhouse",
+    "brewNums": [
+      3
+    ],
+    "brewDate": "2026-07-15",
+    "age": 0,
+    "stage": "Fermenting",
+    "tank": "BH16",
+    "labTank": "BH16",
+    "tankSource": "lab",
+    "lastReading": "2026-06-13",
+    "lastSource": "FERM",
+    "numReadings": 2,
+    "readings": [
+      {
+        "date": "2026-06-13",
+        "sample": "BEC 003 BH19",
+        "stage": "FERM",
+        "tank": "BH19",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 4.72,
+        "Turbidity": 621.0680408477783,
+        "FG": 2.42
+      }
+    ],
+    "fermLog": [],
+    "yeastPitches": [
+      {
+        "date": "2026-07-15",
+        "tank": "BH16",
+        "cellCount": 2289351297.4500003,
+        "viability": 0.7739,
+        "pitchRate": 30.18,
+        "yeastGen": "L-3",
+        "yeastSource": "BH44",
+        "yeastBrewNum": "AMB41-42",
+        "countType": "yeast"
+      }
+    ],
+    "transferLog": [
+      {
+        "date": "2026-07-15",
+        "action": "BREW",
+        "from": "",
+        "to": "BH16",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "completed": false
+      }
+    ],
+    "basecampAlerts": []
   },
   {
     "id": "STG 010",
@@ -1709,12 +1843,11 @@ const BATCHES = [
     "basecampAlerts": []
   },
   {
-    "id": "BEC 002, 003",
+    "id": "BEC 002",
     "product": "BEC",
     "section": "brewhouse",
     "brewNums": [
-      2,
-      3
+      2
     ],
     "brewDate": "2026-06-10",
     "age": 35,
@@ -1724,7 +1857,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": "2026-07-07",
     "lastSource": "FIN",
-    "numReadings": 22,
+    "numReadings": 21,
     "readings": [
       {
         "date": "2026-07-07",
@@ -1787,17 +1920,6 @@ const BATCHES = [
         "SG": 1.0089,
         "ABV": 4.88,
         "OG": 11.5
-      },
-      {
-        "date": "2026-06-13",
-        "sample": "BEC 003 BH19",
-        "stage": "FERM",
-        "tank": "BH19",
-        "sourceFile": "bh samples 2026.xlsx",
-        "sourceSheet": "Abita Brews",
-        "ABV": 4.72,
-        "Turbidity": 621.0680408477783,
-        "FG": 2.42
       },
       {
         "date": "2026-06-12",
@@ -2018,16 +2140,6 @@ const BATCHES = [
         "detail": "270 CASES",
         "project": "packaging",
         "completed": true
-      },
-      {
-        "date": "2026-07-15",
-        "action": "BREW",
-        "from": "",
-        "to": "BH16",
-        "volume": null,
-        "detail": null,
-        "project": "brewhouse",
-        "completed": false
       }
     ],
     "basecampAlerts": [
@@ -5047,7 +5159,7 @@ const BATCHES = [
         "volume": 40.0,
         "detail": null,
         "project": "cellar",
-        "completed": false
+        "completed": true
       }
     ],
     "basecampAlerts": [
@@ -7546,7 +7658,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-15",
-  "lastSync": "Jul 15, 2026 \u00b7 8:06 AM"
+  "lastSync": "Jul 15, 2026 \u00b7 12:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
