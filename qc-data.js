@@ -1222,22 +1222,111 @@ const BATCHES = [
     "basecampAlerts": []
   },
   {
+    "id": "JOC 009",
+    "product": "JOC",
+    "section": "brewhouse",
+    "brewNums": [
+      9
+    ],
+    "brewDate": "2026-07-16",
+    "age": 0,
+    "stage": "Wort",
+    "tank": "BH8",
+    "labTank": "BH8",
+    "tankSource": "lab",
+    "lastReading": "2026-07-16",
+    "lastSource": "WORT",
+    "numReadings": 1,
+    "readings": [
+      {
+        "date": "2026-07-16",
+        "sample": "JOC 009 BH8",
+        "stage": "WORT",
+        "tank": "BH8",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "JJ",
+        "Wort pH": 5.26,
+        "SRM": 5.126903553299493,
+        "IBU (W)": 17.150000000000002,
+        "Calories": 210.24,
+        "ADF": -0.56,
+        "RDF": -0.49,
+        "OG": 14.1,
+        "FG": 14.18,
+        "RE": 14.17,
+        "SG": 1.05756,
+        "ABV": -0.04
+      }
+    ],
+    "fermLog": [],
+    "yeastPitches": [],
+    "transferLog": [
+      {
+        "date": "2026-07-14",
+        "action": "BREW",
+        "from": "",
+        "to": "BH8",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "completed": true
+      }
+    ],
+    "basecampAlerts": [
+      {
+        "metric": "Wort pH",
+        "value": 5.26,
+        "low": 5.29,
+        "high": 5.51,
+        "date": "2026-07-16",
+        "stage": "WORT",
+        "sample": "JOC 009 BH8",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10101092828",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
+        "also": []
+      }
+    ]
+  },
+  {
     "id": "ALG 005",
     "product": "ALG",
     "section": "brewhouse",
     "brewNums": [
       5
     ],
-    "brewDate": null,
-    "age": null,
-    "stage": "Fermenting",
+    "brewDate": "2026-07-16",
+    "age": 0,
+    "stage": "Wort",
     "tank": "BH9",
     "labTank": "BH9",
     "tankSource": "lab",
-    "lastReading": null,
-    "lastSource": null,
-    "numReadings": 3,
-    "readings": [],
+    "lastReading": "2026-07-16",
+    "lastSource": "WORT",
+    "numReadings": 5,
+    "readings": [
+      {
+        "date": "2026-07-16",
+        "sample": "ALG 005 BH9",
+        "stage": "WORT",
+        "tank": "BH9",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "Alpha",
+        "Wort pH": 5.29,
+        "SRM": 7.068527918781727,
+        "IBU (W)": 12.55,
+        "Calories": 287.87,
+        "ADF": -1.14,
+        "RDF": -1.02,
+        "OG": 18.89,
+        "FG": 19.1,
+        "RE": 19.06,
+        "SG": 1.07891,
+        "ABV": -0.13
+      }
+    ],
     "fermLog": [],
     "yeastPitches": [
       {
@@ -1272,6 +1361,17 @@ const BATCHES = [
         "yeastSource": null,
         "yeastBrewNum": null,
         "countType": "12hr"
+      },
+      {
+        "date": "2026-07-15",
+        "tank": "BH9",
+        "cellCount": 216363814.33333334,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "24hr"
       }
     ],
     "transferLog": [],
@@ -1467,7 +1567,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": "2026-04-24",
     "lastSource": "FIN",
-    "numReadings": 2,
+    "numReadings": 3,
     "readings": [
       {
         "date": "2026-04-24",
@@ -1502,6 +1602,17 @@ const BATCHES = [
         "yeastSource": "BH44",
         "yeastBrewNum": "AMB41-42",
         "countType": "yeast"
+      },
+      {
+        "date": "2026-07-15",
+        "tank": "BH14",
+        "cellCount": 78704474.56666666,
+        "viability": 0.87,
+        "pitchRate": null,
+        "yeastGen": "L-3",
+        "yeastSource": "BH44",
+        "yeastBrewNum": "AMB41-42",
+        "countType": "FV"
       }
     ],
     "transferLog": [
@@ -7669,7 +7780,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-16",
-  "lastSync": "Jul 16, 2026 \u00b7 12:04 AM"
+  "lastSync": "Jul 16, 2026 \u00b7 4:06 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
