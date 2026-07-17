@@ -1559,16 +1559,36 @@ const BATCHES = [
     "brewNums": [
       3
     ],
-    "brewDate": "2026-07-15",
-    "age": 2,
-    "stage": "Fermenting",
+    "brewDate": "2026-07-16",
+    "age": 1,
+    "stage": "Wort",
     "tank": "BH16",
     "labTank": "BH16",
     "tankSource": "lab",
-    "lastReading": "2026-06-13",
-    "lastSource": "FERM",
-    "numReadings": 4,
+    "lastReading": "2026-07-16",
+    "lastSource": "WORT",
+    "numReadings": 5,
     "readings": [
+      {
+        "date": "2026-07-16",
+        "sample": "BEC 003 BH16",
+        "stage": "WORT",
+        "tank": "BH16",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "BC",
+        "Wort pH": 5.19,
+        "SRM": 3.324873096446701,
+        "IBU (W)": 19.75,
+        "Calories": 169.7,
+        "ADF": -0.34,
+        "RDF": -0.3,
+        "OG": 11.53,
+        "FG": 11.56,
+        "RE": 11.56,
+        "HAZE": 3135.935817718506,
+        "SG": 1.0465,
+        "ABV": -0.02
+      },
       {
         "date": "2026-06-13",
         "sample": "BEC 003 BH19",
@@ -1629,7 +1649,23 @@ const BATCHES = [
         "completed": true
       }
     ],
-    "basecampAlerts": []
+    "basecampAlerts": [
+      {
+        "metric": "Wort pH",
+        "value": 5.19,
+        "low": 5.29,
+        "high": 5.51,
+        "date": "2026-07-16",
+        "stage": "WORT",
+        "sample": "BEC 003 BH16",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10105823473",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
+        "also": []
+      }
+    ]
   },
   {
     "id": "STG 010",
@@ -2453,10 +2489,30 @@ const BATCHES = [
     "tank": "BH25",
     "labTank": "BH25",
     "tankSource": "lab",
-    "lastReading": "2026-05-25",
-    "lastSource": "FERM",
-    "numReadings": 28,
+    "lastReading": "2026-07-16",
+    "lastSource": "WORT",
+    "numReadings": 29,
     "readings": [
+      {
+        "date": "2026-07-16",
+        "sample": "STG 012 BH25",
+        "stage": "WORT",
+        "tank": "BH25",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "SG",
+        "Wort pH": 5.37,
+        "SRM": 8.15989847715736,
+        "IBU (W)": 17.8,
+        "Calories": 253.84,
+        "ADF": -0.37,
+        "RDF": -0.33,
+        "OG": 16.82,
+        "FG": 16.89,
+        "RE": 16.88,
+        "HAZE": 4754.405960083008,
+        "SG": 1.0692,
+        "ABV": -0.04
+      },
       {
         "date": "2026-05-25",
         "sample": "STG 9 BH25",
@@ -7507,7 +7563,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-17",
-  "lastSync": "Jul 17, 2026 \u00b7 4:06 AM"
+  "lastSync": "Jul 17, 2026 \u00b7 8:06 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
