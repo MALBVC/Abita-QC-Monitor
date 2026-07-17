@@ -1592,7 +1592,7 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": false
+        "completed": true
       }
     ],
     "basecampAlerts": []
@@ -7630,7 +7630,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-17",
-  "lastSync": "Jul 17, 2026 \u00b7 12:06 PM"
+  "lastSync": "Jul 17, 2026 \u00b7 4:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
