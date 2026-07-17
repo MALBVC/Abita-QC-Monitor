@@ -1553,6 +1553,51 @@ const BATCHES = [
     ]
   },
   {
+    "id": "GLD 054",
+    "product": "GLD",
+    "section": "brewhouse",
+    "brewNums": [
+      54
+    ],
+    "brewDate": "2026-07-17",
+    "age": 0,
+    "stage": "Fermenting",
+    "tank": "BH14",
+    "labTank": "BH14",
+    "tankSource": "lab",
+    "lastReading": null,
+    "lastSource": null,
+    "numReadings": 1,
+    "readings": [],
+    "fermLog": [],
+    "yeastPitches": [
+      {
+        "date": "2026-07-17",
+        "tank": "BH14",
+        "cellCount": 208000000.0,
+        "viability": 0.97,
+        "pitchRate": 307.3,
+        "yeastGen": "NEW",
+        "yeastSource": "Prop 4",
+        "yeastBrewNum": "NEW Kolsch Yeast",
+        "countType": "Yeast"
+      }
+    ],
+    "transferLog": [
+      {
+        "date": "2026-07-17",
+        "action": "BREW",
+        "from": "",
+        "to": "BH14",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "completed": false
+      }
+    ],
+    "basecampAlerts": []
+  },
+  {
     "id": "BEC 003",
     "product": "BEC",
     "section": "brewhouse",
@@ -3124,10 +3169,32 @@ const BATCHES = [
     "tank": "BH34",
     "labTank": "BH34",
     "tankSource": "lab",
-    "lastReading": "2026-07-11",
-    "lastSource": "WORT",
-    "numReadings": 8,
+    "lastReading": "2026-07-17",
+    "lastSource": "FERM",
+    "numReadings": 10,
     "readings": [
+      {
+        "date": "2026-07-17",
+        "sample": "AND 41-42 BH34",
+        "stage": "FERM",
+        "tank": "BH34",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 8.17,
+        "Turbidity": 550.5423860549927,
+        "FG": 3.71
+      },
+      {
+        "date": "2026-07-17",
+        "sample": "AND 41,42 BH34",
+        "stage": "GC",
+        "tank": "BH34",
+        "sourceFile": "gc 2026.xlsx",
+        "sourceSheet": "JUL",
+        "Diacetyl": 0.0251,
+        "Pentanedione": 0.0,
+        "Total VDK": 0.0251
+      },
       {
         "date": "2026-07-11",
         "sample": "AND 042 BH34",
@@ -7563,7 +7630,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-17",
-  "lastSync": "Jul 17, 2026 \u00b7 8:06 AM"
+  "lastSync": "Jul 17, 2026 \u00b7 12:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
