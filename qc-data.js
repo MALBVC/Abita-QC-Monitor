@@ -1567,7 +1567,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": null,
     "lastSource": null,
-    "numReadings": 1,
+    "numReadings": 5,
     "readings": [],
     "fermLog": [],
     "yeastPitches": [
@@ -1581,6 +1581,50 @@ const BATCHES = [
         "yeastSource": "Prop 4",
         "yeastBrewNum": "NEW Kolsch Yeast",
         "countType": "Yeast"
+      },
+      {
+        "date": "2026-07-17",
+        "tank": "BH14",
+        "cellCount": 11632751.9,
+        "viability": 0.585,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "FV"
+      },
+      {
+        "date": "2026-07-17",
+        "tank": "BH14",
+        "cellCount": 10479956.666666666,
+        "viability": 0.6458,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "FV"
+      },
+      {
+        "date": "2026-07-17",
+        "tank": "BH14",
+        "cellCount": 13076127.75,
+        "viability": 0.5612,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "FV"
+      },
+      {
+        "date": "2026-07-17",
+        "tank": "BH14",
+        "cellCount": 7600000.0,
+        "viability": 0.9868,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "FV (manual)"
       }
     ],
     "transferLog": [
@@ -7630,7 +7674,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-17",
-  "lastSync": "Jul 17, 2026 \u00b7 4:06 PM"
+  "lastSync": "Jul 17, 2026 \u00b7 8:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
