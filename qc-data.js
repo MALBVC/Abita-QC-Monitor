@@ -1565,10 +1565,31 @@ const BATCHES = [
     "tank": "BH14",
     "labTank": "BH14",
     "tankSource": "lab",
-    "lastReading": null,
-    "lastSource": null,
-    "numReadings": 5,
-    "readings": [],
+    "lastReading": "2026-07-20",
+    "lastSource": "GC",
+    "numReadings": 7,
+    "readings": [
+      {
+        "date": "2026-07-20",
+        "sample": "GLD 54 BH14",
+        "stage": "GC",
+        "tank": "BH14",
+        "sourceFile": "gc 2026.xlsx",
+        "sourceSheet": "JUL",
+        "Total VDK": 0.0
+      },
+      {
+        "date": "2026-07-20",
+        "sample": "GLD 54 BH14",
+        "stage": "FERM",
+        "tank": "BH14",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 4.37,
+        "Turbidity": 448.0465478897095,
+        "FG": 1.74
+      }
+    ],
     "fermLog": [],
     "yeastPitches": [
       {
@@ -1650,14 +1671,34 @@ const BATCHES = [
     ],
     "brewDate": "2026-07-16",
     "age": 4,
-    "stage": "Wort",
+    "stage": "Fermenting",
     "tank": "BH16",
     "labTank": "BH16",
     "tankSource": "lab",
-    "lastReading": "2026-07-16",
-    "lastSource": "WORT",
-    "numReadings": 5,
+    "lastReading": "2026-07-20",
+    "lastSource": "GC",
+    "numReadings": 7,
     "readings": [
+      {
+        "date": "2026-07-20",
+        "sample": "BEC 3 BH16",
+        "stage": "GC",
+        "tank": "BH16",
+        "sourceFile": "gc 2026.xlsx",
+        "sourceSheet": "JUL",
+        "Total VDK": 0.0
+      },
+      {
+        "date": "2026-07-20",
+        "sample": "BEC 003 BH16",
+        "stage": "FERM",
+        "tank": "BH16",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 4.81,
+        "Turbidity": 308.44206047058105,
+        "FG": 2.43
+      },
       {
         "date": "2026-07-16",
         "sample": "BEC 003 BH16",
@@ -2578,10 +2619,30 @@ const BATCHES = [
     "tank": "BH25",
     "labTank": "BH25",
     "tankSource": "lab",
-    "lastReading": "2026-07-16",
-    "lastSource": "WORT",
-    "numReadings": 29,
+    "lastReading": "2026-07-20",
+    "lastSource": "GC",
+    "numReadings": 31,
     "readings": [
+      {
+        "date": "2026-07-20",
+        "sample": "SGT 12 BH25",
+        "stage": "GC",
+        "tank": "BH25",
+        "sourceFile": "gc 2026.xlsx",
+        "sourceSheet": "JUL",
+        "Total VDK": 0.0
+      },
+      {
+        "date": "2026-07-20",
+        "sample": "SGT 012 BH25",
+        "stage": "FERM",
+        "tank": "BH25",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 7.8,
+        "Turbidity": 302.2388606071472,
+        "FG": 2.52
+      },
       {
         "date": "2026-07-16",
         "sample": "STG 012 BH25",
@@ -3086,10 +3147,30 @@ const BATCHES = [
     "tank": "BH32",
     "labTank": "BH32",
     "tankSource": "lab",
-    "lastReading": "2026-07-11",
-    "lastSource": "WORT",
-    "numReadings": 7,
+    "lastReading": "2026-07-20",
+    "lastSource": "GC",
+    "numReadings": 9,
     "readings": [
+      {
+        "date": "2026-07-20",
+        "sample": "AND 39,40 BH32",
+        "stage": "GC",
+        "tank": "BH32",
+        "sourceFile": "gc 2026.xlsx",
+        "sourceSheet": "JUL",
+        "Total VDK": 0.0
+      },
+      {
+        "date": "2026-07-20",
+        "sample": "AND 39-40 BH32",
+        "stage": "FERM",
+        "tank": "BH32",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 8.18,
+        "Turbidity": 720.834282875061,
+        "FG": 3.67
+      },
       {
         "date": "2026-07-11",
         "sample": "AND 040 BH32",
@@ -7674,7 +7755,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-20",
-  "lastSync": "Jul 20, 2026 \u00b7 12:05 PM"
+  "lastSync": "Jul 20, 2026 \u00b7 4:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
