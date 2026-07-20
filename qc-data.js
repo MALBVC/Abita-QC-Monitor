@@ -6574,8 +6574,8 @@ const BATCHES = [
         "SRM": 13.48984771573604,
         "IBU": 12.7,
         "pH": 4.2,
-        "DO": 0.0,
-        "CO2 Vols": 0.0,
+        "DO": 32.0,
+        "CO2 Vols": 2.62,
         "Calories": 139.01,
         "ADF": 80.66,
         "RDF": 66.38,
@@ -7674,7 +7674,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-20",
-  "lastSync": "Jul 20, 2026 \u00b7 4:02 AM"
+  "lastSync": "Jul 20, 2026 \u00b7 8:04 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
