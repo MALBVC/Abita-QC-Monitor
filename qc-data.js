@@ -1576,6 +1576,8 @@ const BATCHES = [
         "tank": "BH14",
         "sourceFile": "gc 2026.xlsx",
         "sourceSheet": "JUL",
+        "Diacetyl": 0.0,
+        "Pentanedione": 0.0294,
         "Total VDK": 0.0
       },
       {
@@ -1686,6 +1688,8 @@ const BATCHES = [
         "tank": "BH16",
         "sourceFile": "gc 2026.xlsx",
         "sourceSheet": "JUL",
+        "Diacetyl": 0.0,
+        "Pentanedione": 0.0275,
         "Total VDK": 0.0
       },
       {
@@ -2630,6 +2634,8 @@ const BATCHES = [
         "tank": "BH25",
         "sourceFile": "gc 2026.xlsx",
         "sourceSheet": "JUL",
+        "Diacetyl": 0.0,
+        "Pentanedione": 0.165,
         "Total VDK": 0.0
       },
       {
@@ -3158,6 +3164,8 @@ const BATCHES = [
         "tank": "BH32",
         "sourceFile": "gc 2026.xlsx",
         "sourceSheet": "JUL",
+        "Diacetyl": 0.0,
+        "Pentanedione": 0.0,
         "Total VDK": 0.0
       },
       {
@@ -7755,7 +7763,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-20",
-  "lastSync": "Jul 20, 2026 \u00b7 4:06 PM"
+  "lastSync": "Jul 20, 2026 \u00b7 8:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
