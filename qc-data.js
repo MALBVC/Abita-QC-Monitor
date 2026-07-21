@@ -4818,9 +4818,9 @@ const BATCHES = [
     "brewDate": "2026-06-26",
     "age": 25,
     "stage": "Fermenting",
-    "tank": "BH55",
+    "tank": "BT24",
     "labTank": "BH55",
-    "tankSource": "lab",
+    "tankSource": "basecamp",
     "lastReading": "2026-07-06",
     "lastSource": "FERM",
     "numReadings": 22,
@@ -5088,6 +5088,26 @@ const BATCHES = [
         "detail": null,
         "project": "brewhouse",
         "completed": true
+      },
+      {
+        "date": "2026-07-21",
+        "action": "FILTER",
+        "from": "BH55",
+        "to": "BT24",
+        "volume": 56.0,
+        "detail": null,
+        "project": "cellar",
+        "completed": false
+      },
+      {
+        "date": "2026-07-21",
+        "action": "FILTER",
+        "from": "BH55",
+        "to": "UV37",
+        "volume": 145.0,
+        "detail": null,
+        "project": "cellar",
+        "completed": false
       }
     ],
     "basecampAlerts": [
@@ -6110,9 +6130,9 @@ const BATCHES = [
     "brewDate": "2026-06-25",
     "age": 26,
     "stage": "Packaged",
-    "tank": "TK25",
+    "tank": "UV30",
     "labTank": "TK25",
-    "tankSource": "lab",
+    "tankSource": "basecamp",
     "lastReading": "2026-07-14",
     "lastSource": "FIN",
     "numReadings": 11,
@@ -6321,6 +6341,16 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "completed": true
+      },
+      {
+        "date": "2026-07-21",
+        "action": "FILTER",
+        "from": "BH40",
+        "to": "UV30",
+        "volume": 200.0,
+        "detail": null,
+        "project": "cellar",
+        "completed": false
       }
     ],
     "basecampAlerts": [
@@ -7562,7 +7592,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-21",
-  "lastSync": "Jul 21, 2026 \u00b7 8:06 AM"
+  "lastSync": "Jul 21, 2026 \u00b7 12:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
