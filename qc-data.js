@@ -1559,16 +1559,36 @@ const BATCHES = [
     "brewNums": [
       54
     ],
-    "brewDate": "2026-07-17",
-    "age": 4,
-    "stage": "Fermenting",
+    "brewDate": "2026-07-20",
+    "age": 1,
+    "stage": "Wort",
     "tank": "BH14",
     "labTank": "BH14",
     "tankSource": "lab",
     "lastReading": "2026-07-20",
-    "lastSource": "GC",
-    "numReadings": 7,
+    "lastSource": "WORT",
+    "numReadings": 8,
     "readings": [
+      {
+        "date": "2026-07-20",
+        "sample": "GLD 054 BH14",
+        "stage": "WORT",
+        "tank": "BH14",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "G",
+        "Wort pH": 5.41,
+        "SRM": 4.060913705583756,
+        "IBU (W)": 15.25,
+        "Calories": 149.35,
+        "ADF": 1.25,
+        "RDF": 1.05,
+        "OG": 10.23,
+        "FG": 10.1,
+        "RE": 10.13,
+        "HAZE": 1893.2417221069336,
+        "SG": 1.04041,
+        "ABV": 0.07
+      },
       {
         "date": "2026-07-20",
         "sample": "GLD 54 BH14",
@@ -7542,7 +7562,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-21",
-  "lastSync": "Jul 21, 2026 \u00b7 12:04 AM"
+  "lastSync": "Jul 21, 2026 \u00b7 4:06 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
