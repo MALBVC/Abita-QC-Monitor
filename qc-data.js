@@ -1230,14 +1230,24 @@ const BATCHES = [
     ],
     "brewDate": "2026-07-16",
     "age": 5,
-    "stage": "Wort",
+    "stage": "Fermenting",
     "tank": "BH8",
     "labTank": "BH8",
     "tankSource": "lab",
-    "lastReading": "2026-07-16",
-    "lastSource": "WORT",
-    "numReadings": 1,
+    "lastReading": "2026-07-21",
+    "lastSource": "FERM",
+    "numReadings": 2,
     "readings": [
+      {
+        "date": "2026-07-21",
+        "sample": "JOC 009 BH8",
+        "stage": "FERM",
+        "tank": "BH8",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 6.08,
+        "FG": 3.03
+      },
       {
         "date": "2026-07-16",
         "sample": "JOC 009 BH8",
@@ -1299,14 +1309,25 @@ const BATCHES = [
     ],
     "brewDate": "2026-07-16",
     "age": 5,
-    "stage": "Wort",
+    "stage": "Fermenting",
     "tank": "BH9",
     "labTank": "BH9",
     "tankSource": "lab",
-    "lastReading": "2026-07-16",
-    "lastSource": "WORT",
-    "numReadings": 5,
+    "lastReading": "2026-07-21",
+    "lastSource": "FERM",
+    "numReadings": 6,
     "readings": [
+      {
+        "date": "2026-07-21",
+        "sample": "ALG 005 BH9",
+        "stage": "FERM",
+        "tank": "BH9",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 8.9,
+        "Turbidity": 4845.34538269043,
+        "FG": 3.17
+      },
       {
         "date": "2026-07-16",
         "sample": "ALG 005 BH9",
@@ -7592,7 +7613,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-21",
-  "lastSync": "Jul 21, 2026 \u00b7 4:07 PM"
+  "lastSync": "Jul 21, 2026 \u00b7 8:05 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
