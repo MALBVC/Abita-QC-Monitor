@@ -6000,7 +6000,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": "2026-07-22",
     "lastSource": "BBT",
-    "numReadings": 13,
+    "numReadings": 14,
     "readings": [
       {
         "date": "2026-07-22",
@@ -6045,6 +6045,28 @@ const BATCHES = [
         "SG": 1.0076,
         "ABV": 4.67,
         "OG": 10.8
+      },
+      {
+        "date": "2026-07-22",
+        "sample": "AMB 37-38/39-40 BT31",
+        "stage": "BBT",
+        "tank": "BT31",
+        "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
+        "sourceSheet": "A",
+        "SRM": 13.81979695431472,
+        "IBU": 17.299999999999997,
+        "pH": 4.22,
+        "DO": 34.0,
+        "CO2 Vols": 2.62,
+        "Calories": 139.91,
+        "ADF": 81.91,
+        "RDF": 67.39,
+        "FG": 1.94,
+        "RE": 3.63,
+        "HAZE": 34.95707952976227,
+        "SG": 1.00755,
+        "ABV": 4.62,
+        "OG": 10.71
       },
       {
         "date": "2026-07-14",
@@ -6405,7 +6427,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": "2026-07-22",
     "lastSource": "BBT",
-    "numReadings": 18,
+    "numReadings": 19,
     "readings": [
       {
         "date": "2026-07-22",
@@ -6428,6 +6450,28 @@ const BATCHES = [
         "SG": 1.0076,
         "ABV": 4.67,
         "OG": 10.8
+      },
+      {
+        "date": "2026-07-22",
+        "sample": "AMB 37-38/39-40 BT31",
+        "stage": "BBT",
+        "tank": "BT31",
+        "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
+        "sourceSheet": "A",
+        "SRM": 13.81979695431472,
+        "IBU": 17.299999999999997,
+        "pH": 4.22,
+        "DO": 34.0,
+        "CO2 Vols": 2.62,
+        "Calories": 139.91,
+        "ADF": 81.91,
+        "RDF": 67.39,
+        "FG": 1.94,
+        "RE": 3.63,
+        "HAZE": 34.95707952976227,
+        "SG": 1.00755,
+        "ABV": 4.62,
+        "OG": 10.71
       },
       {
         "date": "2026-07-01",
@@ -6708,7 +6752,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-22",
-  "lastSync": "Jul 22, 2026 \u00b7 4:07 PM"
+  "lastSync": "Jul 22, 2026 \u00b7 8:05 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
