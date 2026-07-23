@@ -4855,26 +4855,65 @@ const BATCHES = [
     ]
   },
   {
-    "id": "AND 029, 031, 032, 033, 034",
+    "id": "AND 031, 032, 033, 034",
     "product": "AND",
     "section": "brite",
     "brewNums": [
-      29,
       31,
       32,
       33,
       34
     ],
-    "brewDate": "2026-06-22",
-    "age": 31,
-    "stage": "Brite",
-    "tank": "BT23",
-    "labTank": "BT23",
+    "brewDate": "2026-06-26",
+    "age": 27,
+    "stage": "Packaged",
+    "tank": "BT24",
+    "labTank": "BT24",
     "tankSource": "lab",
-    "lastReading": "2026-07-22",
-    "lastSource": "BBT",
-    "numReadings": 49,
+    "lastReading": "2026-07-23",
+    "lastSource": "FIN",
+    "numReadings": 27,
     "readings": [
+      {
+        "date": "2026-07-23",
+        "sample": "AND 31-34 TK BT24",
+        "stage": "FIN",
+        "tank": "BT24",
+        "sourceFile": "finished abita beer 2026.xlsx",
+        "sourceSheet": "AG",
+        "pH": 4.66,
+        "DO": 36.0,
+        "CO2 Vols": 2.6,
+        "Calories": 247.44,
+        "ADF": 80.85,
+        "RDF": 67.58,
+        "OG": 18.24,
+        "FG": 3.49,
+        "RE": 6.31,
+        "HAZE": 56.69902986288071,
+        "SG": 1.01365,
+        "ABV": 8.17
+      },
+      {
+        "date": "2026-07-23",
+        "sample": "AND 029/31-34 TK23",
+        "stage": "FIN",
+        "tank": "TK23",
+        "sourceFile": "finished abita beer 2026.xlsx",
+        "sourceSheet": "AG",
+        "pH": 4.7,
+        "DO": 39.0,
+        "CO2 Vols": 2.75,
+        "Calories": 244.7,
+        "ADF": 80.83,
+        "RDF": 67.54,
+        "OG": 18.05,
+        "FG": 3.46,
+        "RE": 6.25,
+        "HAZE": 57.14276361465454,
+        "SG": 1.01353,
+        "ABV": 8.07
+      },
       {
         "date": "2026-07-22",
         "sample": "AND 29/31-34 BT23",
@@ -4942,112 +4981,6 @@ const BATCHES = [
         "OG": 18.3
       },
       {
-        "date": "2026-07-14",
-        "sample": "AND 29 TK BT28",
-        "stage": "FIN",
-        "tank": "BT28",
-        "sourceFile": "finished abita beer 2026.xlsx",
-        "sourceSheet": "AG",
-        "pH": 4.8,
-        "DO": 46.0,
-        "CO2 Vols": 2.66,
-        "Calories": 243.87,
-        "ADF": 78.27,
-        "RDF": 65.5,
-        "OG": 17.93,
-        "FG": 3.9,
-        "RE": 6.59,
-        "HAZE": 46.84829521179199,
-        "SG": 1.01526,
-        "ABV": 7.77
-      },
-      {
-        "date": "2026-07-14",
-        "sample": "AND 29 BT28",
-        "stage": "BBT",
-        "tank": "BT28",
-        "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
-        "sourceSheet": "AG",
-        "SRM": 9.923857868020304,
-        "IBU": 18.45,
-        "pH": 4.77,
-        "DO": 53.0,
-        "CO2 Vols": 2.61,
-        "Calories": 245.85,
-        "ADF": 78.14,
-        "RDF": 65.41,
-        "FG": 3.95,
-        "RE": 6.65,
-        "HAZE": 49.34877169132233,
-        "SG": 1.01546,
-        "ABV": 7.82,
-        "OG": 18.07
-      },
-      {
-        "date": "2026-07-14",
-        "sample": "AND 29 BT23",
-        "stage": "BBT",
-        "tank": "BT23",
-        "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
-        "sourceSheet": "AG",
-        "SRM": 9.733502538071066,
-        "IBU": 19.05,
-        "pH": 4.76,
-        "DO": 50.0,
-        "CO2 Vols": 2.69,
-        "Calories": 245.47,
-        "ADF": 78.18,
-        "RDF": 65.44,
-        "FG": 3.94,
-        "RE": 6.64,
-        "HAZE": 49.136238634586334,
-        "SG": 1.01542,
-        "ABV": 7.81,
-        "OG": 18.04
-      },
-      {
-        "date": "2026-07-14",
-        "sample": "AND 029 TK23",
-        "stage": "FIN",
-        "tank": "TK23",
-        "sourceFile": "finished abita beer 2026.xlsx",
-        "sourceSheet": "AG",
-        "pH": 4.8,
-        "DO": 39.0,
-        "CO2 Vols": 2.75,
-        "Calories": 243.02,
-        "ADF": 78.44,
-        "RDF": 65.62,
-        "OG": 17.88,
-        "FG": 3.85,
-        "RE": 6.54,
-        "HAZE": 47.94913065433502,
-        "SG": 1.01509,
-        "ABV": 7.76
-      },
-      {
-        "date": "2026-07-13",
-        "sample": "AND 029 UV36",
-        "stage": "BBT",
-        "tank": "UV36",
-        "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
-        "sourceSheet": "AG",
-        "SRM": 9.733502538071066,
-        "IBU": 20.849999999999998,
-        "pH": 4.77,
-        "DO": 0.0,
-        "CO2 Vols": 0.0,
-        "Calories": 244.51,
-        "ADF": 78.06,
-        "RDF": 65.33,
-        "FG": 3.94,
-        "RE": 6.63,
-        "HAZE": 51.43387985229492,
-        "SG": 1.01545,
-        "ABV": 7.77,
-        "OG": 17.97
-      },
-      {
         "date": "2026-07-06",
         "sample": "AND 31-34 BH55",
         "stage": "FERM",
@@ -5060,17 +4993,6 @@ const BATCHES = [
       },
       {
         "date": "2026-07-06",
-        "sample": "AND 29 BH35",
-        "stage": "FERM",
-        "tank": "BH35",
-        "sourceFile": "bh samples 2026.xlsx",
-        "sourceSheet": "Abita Brews",
-        "ABV": 7.81,
-        "Turbidity": 174.3755156993866,
-        "FG": 3.97
-      },
-      {
-        "date": "2026-07-06",
         "sample": "AND 31,32,33,34 BH55",
         "stage": "GC",
         "tank": "BH55",
@@ -5079,28 +5001,6 @@ const BATCHES = [
         "Diacetyl": 0.0731,
         "Pentanedione": 0.0,
         "Total VDK": 0.0731
-      },
-      {
-        "date": "2026-07-02",
-        "sample": "AND 29 BH35",
-        "stage": "FERM",
-        "tank": "BH35",
-        "sourceFile": "bh samples 2026.xlsx",
-        "sourceSheet": "Abita Brews",
-        "ABV": 7.68,
-        "Turbidity": 182.28577423095703,
-        "FG": 4.01
-      },
-      {
-        "date": "2026-06-28",
-        "sample": "AND 29 BH35",
-        "stage": "FERM",
-        "tank": "BH35",
-        "sourceFile": "bh samples 2026.xlsx",
-        "sourceSheet": "Abita Brews",
-        "ABV": 7.54,
-        "Turbidity": 290.3383255004883,
-        "FG": 4.11
       },
       {
         "date": "2026-06-27",
@@ -5143,17 +5043,6 @@ const BATCHES = [
         "ABV": 0.06
       },
       {
-        "date": "2026-06-27",
-        "sample": "AND 029 BH35",
-        "stage": "FERM",
-        "tank": "BH35",
-        "sourceFile": "bh samples 2026.xlsx",
-        "sourceSheet": "Abita Brews",
-        "ABV": 7.51,
-        "Turbidity": 504.3625888824463,
-        "FG": 4.15
-      },
-      {
         "date": "2026-06-26",
         "sample": "AND 32 BH55",
         "stage": "WORT",
@@ -5192,93 +5081,15 @@ const BATCHES = [
         "HAZE": 1725.9987659454346,
         "SG": 1.07415,
         "ABV": -0.01
-      },
-      {
-        "date": "2026-06-24",
-        "sample": "AND 29 BH35",
-        "stage": "FERM",
-        "tank": "BH35",
-        "sourceFile": "cellar records 2026.xlsx",
-        "sourceSheet": "AND",
-        "Ferm_Temp": 57.0,
-        "Ferm_pH": 4.52
-      },
-      {
-        "date": "2026-06-22",
-        "sample": "AND 26029 BH35",
-        "stage": "WORT",
-        "tank": "BH35",
-        "sourceFile": "wort abita samples 2026.xlsx",
-        "sourceSheet": "AG",
-        "Wort pH": 5.06,
-        "SRM": 9.98730964467005,
-        "IBU (W)": 24.85,
-        "Calories": 274.74,
-        "ADF": 0.04,
-        "RDF": 0.03,
-        "OG": 18.12,
-        "FG": 18.11,
-        "RE": 18.11,
-        "HAZE": 1787.1162929534912,
-        "SG": 1.07454,
-        "ABV": 0.0
       }
     ],
     "fermLog": [
-      {
-        "date": "2026-06-20",
-        "tank": "BH35",
-        "temp": 56.0,
-        "gravity": 14.8,
-        "ph": 4.45,
-        "actions": null
-      },
-      {
-        "date": "2026-06-23",
-        "tank": "BH35",
-        "temp": 57.0,
-        "gravity": 7.5,
-        "ph": 4.4,
-        "actions": null
-      },
-      {
-        "date": "2026-06-25",
-        "tank": "BH35",
-        "temp": 56.0,
-        "gravity": 5.6,
-        "ph": 4.49,
-        "actions": null
-      },
-      {
-        "date": "2026-06-26",
-        "tank": "BH35",
-        "temp": 56.0,
-        "gravity": 5.1,
-        "ph": 4.46,
-        "actions": null
-      },
-      {
-        "date": "2026-06-27",
-        "tank": "BH35",
-        "temp": 56.0,
-        "gravity": 4.7,
-        "ph": 4.52,
-        "actions": null
-      },
       {
         "date": "2026-06-27",
         "tank": "BH55",
         "temp": 53.0,
         "gravity": 16.7,
         "ph": 4.31,
-        "actions": null
-      },
-      {
-        "date": "2026-06-28",
-        "tank": "BH35",
-        "temp": 56.0,
-        "gravity": 4.7,
-        "ph": 4.54,
         "actions": null
       },
       {
@@ -5331,27 +5142,11 @@ const BATCHES = [
       },
       {
         "date": "2026-07-06",
-        "tank": "BH35",
-        "temp": 57.0,
-        "gravity": 3.9,
-        "ph": 4.61,
-        "actions": null
-      },
-      {
-        "date": "2026-07-06",
         "tank": "BH55",
         "temp": 56.0,
         "gravity": 4.5,
         "ph": 4.58,
         "actions": null
-      },
-      {
-        "date": "2026-07-07",
-        "tank": "BH35",
-        "temp": 56.0,
-        "gravity": 3.9,
-        "ph": 4.65,
-        "actions": "DROPPED"
       },
       {
         "date": "2026-07-07",
@@ -5363,14 +5158,6 @@ const BATCHES = [
       },
       {
         "date": "2026-07-10",
-        "tank": "BH35",
-        "temp": 34.0,
-        "gravity": 4.3,
-        "ph": 4.64,
-        "actions": null
-      },
-      {
-        "date": "2026-07-10",
         "tank": "BH55",
         "temp": 37.0,
         "gravity": 3.8,
@@ -5379,50 +5166,6 @@ const BATCHES = [
       }
     ],
     "yeastPitches": [
-      {
-        "date": "2026-06-19",
-        "tank": "BH35",
-        "cellCount": 1397930947.0000002,
-        "viability": 0.72,
-        "pitchRate": 498.95,
-        "yeastGen": "L-10",
-        "yeastSource": "BH43",
-        "yeastBrewNum": "AMB35-36",
-        "countType": "Yeast"
-      },
-      {
-        "date": "2026-06-19",
-        "tank": "BH35",
-        "cellCount": 80805739.66666667,
-        "viability": null,
-        "pitchRate": null,
-        "yeastGen": null,
-        "yeastSource": null,
-        "yeastBrewNum": "4 DAYS",
-        "countType": "FV"
-      },
-      {
-        "date": "2026-06-19",
-        "tank": "BH13",
-        "cellCount": 2163920507.0000005,
-        "viability": 0.3669,
-        "pitchRate": null,
-        "yeastGen": "L-10",
-        "yeastSource": "BH17",
-        "yeastBrewNum": "BGLL01",
-        "countType": "Yeast"
-      },
-      {
-        "date": "2026-06-19",
-        "tank": "BH13",
-        "cellCount": 39448471.333333336,
-        "viability": null,
-        "pitchRate": null,
-        "yeastGen": null,
-        "yeastSource": null,
-        "yeastBrewNum": "5 DAYS",
-        "countType": "FV"
-      },
       {
         "date": "2026-06-25",
         "tank": "BH55",
@@ -5492,16 +5235,6 @@ const BATCHES = [
     ],
     "transferLog": [
       {
-        "date": "2026-06-19",
-        "action": "BREW",
-        "from": "",
-        "to": "BH35",
-        "volume": null,
-        "detail": null,
-        "project": "brewhouse",
-        "completed": true
-      },
-      {
         "date": "2026-06-25",
         "action": "BREW",
         "from": "",
@@ -5509,46 +5242,6 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": true
-      },
-      {
-        "date": "2026-07-13",
-        "action": "FILTER",
-        "from": "BH35",
-        "to": "UV36",
-        "volume": 146.0,
-        "detail": null,
-        "project": "cellar",
-        "completed": true
-      },
-      {
-        "date": "2026-07-13",
-        "action": "XFER",
-        "from": "UV36",
-        "to": "BT28",
-        "volume": 112.0,
-        "detail": null,
-        "project": "cellar",
-        "completed": true
-      },
-      {
-        "date": "2026-07-13",
-        "action": "XFER",
-        "from": "UV36",
-        "to": "BT23",
-        "volume": null,
-        "detail": null,
-        "project": "cellar",
-        "completed": true
-      },
-      {
-        "date": "2026-07-14",
-        "action": "PACKAGE",
-        "from": "UV30,BT28,BT23",
-        "to": "",
-        "volume": null,
-        "detail": "4321 CASES",
-        "project": "packaging",
         "completed": true
       },
       {
@@ -5598,12 +5291,6 @@ const BATCHES = [
         "ackNote": null,
         "also": [
           {
-            "value": 22.6,
-            "date": "2026-07-22",
-            "stage": "BBT",
-            "sample": "AND 29/31-34 BT23"
-          },
-          {
             "value": 27.1,
             "date": "2026-07-22",
             "stage": "BBT",
@@ -5668,64 +5355,6 @@ const BATCHES = [
             "date": "2026-07-22",
             "stage": "BBT",
             "sample": "AND 31-34 UV37"
-          },
-          {
-            "value": 18.45,
-            "date": "2026-07-14",
-            "stage": "BBT",
-            "sample": "AND 29 BT28"
-          },
-          {
-            "value": 19.05,
-            "date": "2026-07-14",
-            "stage": "BBT",
-            "sample": "AND 29 BT23"
-          },
-          {
-            "value": 20.849999999999998,
-            "date": "2026-07-13",
-            "stage": "BBT",
-            "sample": "AND 029 UV36"
-          }
-        ]
-      },
-      {
-        "metric": "FG",
-        "value": 3.9,
-        "low": 3.3,
-        "high": 3.7,
-        "date": "2026-07-14",
-        "stage": "FIN",
-        "sample": "AND 29 TK BT28",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10091789361",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
-        "also": [
-          {
-            "value": 3.95,
-            "date": "2026-07-14",
-            "stage": "BBT",
-            "sample": "AND 29 BT28"
-          },
-          {
-            "value": 3.94,
-            "date": "2026-07-14",
-            "stage": "BBT",
-            "sample": "AND 29 BT23"
-          },
-          {
-            "value": 3.85,
-            "date": "2026-07-14",
-            "stage": "FIN",
-            "sample": "AND 029 TK23"
-          },
-          {
-            "value": 3.94,
-            "date": "2026-07-13",
-            "stage": "BBT",
-            "sample": "AND 029 UV36"
           }
         ]
       },
@@ -5750,21 +5379,6 @@ const BATCHES = [
             "sample": "AND 033 BH55"
           }
         ]
-      },
-      {
-        "metric": "Wort pH",
-        "value": 5.06,
-        "low": 5.29,
-        "high": 5.51,
-        "date": "2026-06-22",
-        "stage": "WORT",
-        "sample": "AND 26029 BH35",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10022916133",
-        "acknowledged": true,
-        "ackBy": "Mitch Steele",
-        "ackAt": "2026-07-08T12:32",
-        "ackNote": "<p dir=\"auto\">Wort pH's being adjusted down to 5.0-5.2. Specs haven't been changed yet</p>",
-        "also": []
       }
     ]
   },
@@ -6031,23 +5645,579 @@ const BATCHES = [
     ]
   },
   {
-    "id": "AMB 037, 038",
+    "id": "AND 029",
+    "product": "AND",
+    "section": "brite",
+    "brewNums": [
+      29
+    ],
+    "brewDate": "2026-06-22",
+    "age": 31,
+    "stage": "Packaged",
+    "tank": "TK23",
+    "labTank": "TK23",
+    "tankSource": "lab",
+    "lastReading": "2026-07-23",
+    "lastSource": "FIN",
+    "numReadings": 26,
+    "readings": [
+      {
+        "date": "2026-07-23",
+        "sample": "AND 029/31-34 TK23",
+        "stage": "FIN",
+        "tank": "TK23",
+        "sourceFile": "finished abita beer 2026.xlsx",
+        "sourceSheet": "AG",
+        "pH": 4.7,
+        "DO": 39.0,
+        "CO2 Vols": 2.75,
+        "Calories": 244.7,
+        "ADF": 80.83,
+        "RDF": 67.54,
+        "OG": 18.05,
+        "FG": 3.46,
+        "RE": 6.25,
+        "HAZE": 57.14276361465454,
+        "SG": 1.01353,
+        "ABV": 8.07
+      },
+      {
+        "date": "2026-07-22",
+        "sample": "AND 29/31-34 BT23",
+        "stage": "BBT",
+        "tank": "BT23",
+        "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
+        "sourceSheet": "AG",
+        "SRM": 8.324873096446701,
+        "IBU": 22.6,
+        "pH": 4.68,
+        "DO": 34.0,
+        "CO2 Vols": 2.66,
+        "Calories": 247.03,
+        "ADF": 80.6,
+        "RDF": 67.38,
+        "FG": 3.53,
+        "RE": 6.34,
+        "HAZE": 63.51831114292145,
+        "SG": 1.01381,
+        "ABV": 8.12,
+        "OG": 18.2
+      },
+      {
+        "date": "2026-07-14",
+        "sample": "AND 29 TK BT28",
+        "stage": "FIN",
+        "tank": "BT28",
+        "sourceFile": "finished abita beer 2026.xlsx",
+        "sourceSheet": "AG",
+        "pH": 4.8,
+        "DO": 46.0,
+        "CO2 Vols": 2.66,
+        "Calories": 243.87,
+        "ADF": 78.27,
+        "RDF": 65.5,
+        "OG": 17.93,
+        "FG": 3.9,
+        "RE": 6.59,
+        "HAZE": 46.84829521179199,
+        "SG": 1.01526,
+        "ABV": 7.77
+      },
+      {
+        "date": "2026-07-14",
+        "sample": "AND 29 BT28",
+        "stage": "BBT",
+        "tank": "BT28",
+        "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
+        "sourceSheet": "AG",
+        "SRM": 9.923857868020304,
+        "IBU": 18.45,
+        "pH": 4.77,
+        "DO": 53.0,
+        "CO2 Vols": 2.61,
+        "Calories": 245.85,
+        "ADF": 78.14,
+        "RDF": 65.41,
+        "FG": 3.95,
+        "RE": 6.65,
+        "HAZE": 49.34877169132233,
+        "SG": 1.01546,
+        "ABV": 7.82,
+        "OG": 18.07
+      },
+      {
+        "date": "2026-07-14",
+        "sample": "AND 29 BT23",
+        "stage": "BBT",
+        "tank": "BT23",
+        "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
+        "sourceSheet": "AG",
+        "SRM": 9.733502538071066,
+        "IBU": 19.05,
+        "pH": 4.76,
+        "DO": 50.0,
+        "CO2 Vols": 2.69,
+        "Calories": 245.47,
+        "ADF": 78.18,
+        "RDF": 65.44,
+        "FG": 3.94,
+        "RE": 6.64,
+        "HAZE": 49.136238634586334,
+        "SG": 1.01542,
+        "ABV": 7.81,
+        "OG": 18.04
+      },
+      {
+        "date": "2026-07-14",
+        "sample": "AND 029 TK23",
+        "stage": "FIN",
+        "tank": "TK23",
+        "sourceFile": "finished abita beer 2026.xlsx",
+        "sourceSheet": "AG",
+        "pH": 4.8,
+        "DO": 39.0,
+        "CO2 Vols": 2.75,
+        "Calories": 243.02,
+        "ADF": 78.44,
+        "RDF": 65.62,
+        "OG": 17.88,
+        "FG": 3.85,
+        "RE": 6.54,
+        "HAZE": 47.94913065433502,
+        "SG": 1.01509,
+        "ABV": 7.76
+      },
+      {
+        "date": "2026-07-13",
+        "sample": "AND 029 UV36",
+        "stage": "BBT",
+        "tank": "UV36",
+        "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
+        "sourceSheet": "AG",
+        "SRM": 9.733502538071066,
+        "IBU": 20.849999999999998,
+        "pH": 4.77,
+        "DO": 0.0,
+        "CO2 Vols": 0.0,
+        "Calories": 244.51,
+        "ADF": 78.06,
+        "RDF": 65.33,
+        "FG": 3.94,
+        "RE": 6.63,
+        "HAZE": 51.43387985229492,
+        "SG": 1.01545,
+        "ABV": 7.77,
+        "OG": 17.97
+      },
+      {
+        "date": "2026-07-06",
+        "sample": "AND 29 BH35",
+        "stage": "FERM",
+        "tank": "BH35",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 7.81,
+        "Turbidity": 174.3755156993866,
+        "FG": 3.97
+      },
+      {
+        "date": "2026-07-02",
+        "sample": "AND 29 BH35",
+        "stage": "FERM",
+        "tank": "BH35",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 7.68,
+        "Turbidity": 182.28577423095703,
+        "FG": 4.01
+      },
+      {
+        "date": "2026-06-28",
+        "sample": "AND 29 BH35",
+        "stage": "FERM",
+        "tank": "BH35",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 7.54,
+        "Turbidity": 290.3383255004883,
+        "FG": 4.11
+      },
+      {
+        "date": "2026-06-27",
+        "sample": "AND 029 BH35",
+        "stage": "FERM",
+        "tank": "BH35",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 7.51,
+        "Turbidity": 504.3625888824463,
+        "FG": 4.15
+      },
+      {
+        "date": "2026-06-24",
+        "sample": "AND 29 BH35",
+        "stage": "FERM",
+        "tank": "BH35",
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "AND",
+        "Ferm_Temp": 57.0,
+        "Ferm_pH": 4.52
+      },
+      {
+        "date": "2026-06-22",
+        "sample": "AND 26029 BH35",
+        "stage": "WORT",
+        "tank": "BH35",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "AG",
+        "Wort pH": 5.06,
+        "SRM": 9.98730964467005,
+        "IBU (W)": 24.85,
+        "Calories": 274.74,
+        "ADF": 0.04,
+        "RDF": 0.03,
+        "OG": 18.12,
+        "FG": 18.11,
+        "RE": 18.11,
+        "HAZE": 1787.1162929534912,
+        "SG": 1.07454,
+        "ABV": 0.0
+      }
+    ],
+    "fermLog": [
+      {
+        "date": "2026-06-20",
+        "tank": "BH35",
+        "temp": 56.0,
+        "gravity": 14.8,
+        "ph": 4.45,
+        "actions": null
+      },
+      {
+        "date": "2026-06-23",
+        "tank": "BH35",
+        "temp": 57.0,
+        "gravity": 7.5,
+        "ph": 4.4,
+        "actions": null
+      },
+      {
+        "date": "2026-06-25",
+        "tank": "BH35",
+        "temp": 56.0,
+        "gravity": 5.6,
+        "ph": 4.49,
+        "actions": null
+      },
+      {
+        "date": "2026-06-26",
+        "tank": "BH35",
+        "temp": 56.0,
+        "gravity": 5.1,
+        "ph": 4.46,
+        "actions": null
+      },
+      {
+        "date": "2026-06-27",
+        "tank": "BH35",
+        "temp": 56.0,
+        "gravity": 4.7,
+        "ph": 4.52,
+        "actions": null
+      },
+      {
+        "date": "2026-06-28",
+        "tank": "BH35",
+        "temp": 56.0,
+        "gravity": 4.7,
+        "ph": 4.54,
+        "actions": null
+      },
+      {
+        "date": "2026-07-06",
+        "tank": "BH35",
+        "temp": 57.0,
+        "gravity": 3.9,
+        "ph": 4.61,
+        "actions": null
+      },
+      {
+        "date": "2026-07-07",
+        "tank": "BH35",
+        "temp": 56.0,
+        "gravity": 3.9,
+        "ph": 4.65,
+        "actions": "DROPPED"
+      },
+      {
+        "date": "2026-07-10",
+        "tank": "BH35",
+        "temp": 34.0,
+        "gravity": 4.3,
+        "ph": 4.64,
+        "actions": null
+      }
+    ],
+    "yeastPitches": [
+      {
+        "date": "2026-06-19",
+        "tank": "BH35",
+        "cellCount": 1397930947.0000002,
+        "viability": 0.72,
+        "pitchRate": 498.95,
+        "yeastGen": "L-10",
+        "yeastSource": "BH43",
+        "yeastBrewNum": "AMB35-36",
+        "countType": "Yeast"
+      },
+      {
+        "date": "2026-06-19",
+        "tank": "BH35",
+        "cellCount": 80805739.66666667,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": "4 DAYS",
+        "countType": "FV"
+      },
+      {
+        "date": "2026-06-19",
+        "tank": "BH13",
+        "cellCount": 2163920507.0000005,
+        "viability": 0.3669,
+        "pitchRate": null,
+        "yeastGen": "L-10",
+        "yeastSource": "BH17",
+        "yeastBrewNum": "BGLL01",
+        "countType": "Yeast"
+      },
+      {
+        "date": "2026-06-19",
+        "tank": "BH13",
+        "cellCount": 39448471.333333336,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": "5 DAYS",
+        "countType": "FV"
+      }
+    ],
+    "transferLog": [
+      {
+        "date": "2026-06-19",
+        "action": "BREW",
+        "from": "",
+        "to": "BH35",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "completed": true
+      },
+      {
+        "date": "2026-07-13",
+        "action": "FILTER",
+        "from": "BH35",
+        "to": "UV36",
+        "volume": 146.0,
+        "detail": null,
+        "project": "cellar",
+        "completed": true
+      },
+      {
+        "date": "2026-07-13",
+        "action": "XFER",
+        "from": "UV36",
+        "to": "BT28",
+        "volume": 112.0,
+        "detail": null,
+        "project": "cellar",
+        "completed": true
+      },
+      {
+        "date": "2026-07-13",
+        "action": "XFER",
+        "from": "UV36",
+        "to": "BT23",
+        "volume": null,
+        "detail": null,
+        "project": "cellar",
+        "completed": true
+      },
+      {
+        "date": "2026-07-14",
+        "action": "PACKAGE",
+        "from": "UV30,BT28,BT23",
+        "to": "",
+        "volume": null,
+        "detail": "4321 CASES",
+        "project": "packaging",
+        "completed": true
+      },
+      {
+        "date": "2026-07-22",
+        "action": "PACKAGE",
+        "from": "BT23,BT24,UV37",
+        "to": "",
+        "volume": null,
+        "detail": "not carbed) (3254 CASES",
+        "project": "packaging",
+        "completed": false
+      }
+    ],
+    "basecampAlerts": [
+      {
+        "metric": "IBU",
+        "value": 22.6,
+        "low": 23.0,
+        "high": 27.0,
+        "date": "2026-07-22",
+        "stage": "BBT",
+        "sample": "AND 29/31-34 BT23",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10091789366",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
+        "also": [
+          {
+            "value": 18.45,
+            "date": "2026-07-14",
+            "stage": "BBT",
+            "sample": "AND 29 BT28"
+          },
+          {
+            "value": 19.05,
+            "date": "2026-07-14",
+            "stage": "BBT",
+            "sample": "AND 29 BT23"
+          },
+          {
+            "value": 20.849999999999998,
+            "date": "2026-07-13",
+            "stage": "BBT",
+            "sample": "AND 029 UV36"
+          }
+        ]
+      },
+      {
+        "metric": "FG",
+        "value": 3.9,
+        "low": 3.3,
+        "high": 3.7,
+        "date": "2026-07-14",
+        "stage": "FIN",
+        "sample": "AND 29 TK BT28",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10091789361",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
+        "also": [
+          {
+            "value": 3.95,
+            "date": "2026-07-14",
+            "stage": "BBT",
+            "sample": "AND 29 BT28"
+          },
+          {
+            "value": 3.94,
+            "date": "2026-07-14",
+            "stage": "BBT",
+            "sample": "AND 29 BT23"
+          },
+          {
+            "value": 3.85,
+            "date": "2026-07-14",
+            "stage": "FIN",
+            "sample": "AND 029 TK23"
+          },
+          {
+            "value": 3.94,
+            "date": "2026-07-13",
+            "stage": "BBT",
+            "sample": "AND 029 UV36"
+          }
+        ]
+      },
+      {
+        "metric": "Wort pH",
+        "value": 5.06,
+        "low": 5.29,
+        "high": 5.51,
+        "date": "2026-06-22",
+        "stage": "WORT",
+        "sample": "AND 26029 BH35",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10022916133",
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-07-08T12:32",
+        "ackNote": "<p dir=\"auto\">Wort pH's being adjusted down to 5.0-5.2. Specs haven't been changed yet</p>",
+        "also": []
+      }
+    ]
+  },
+  {
+    "id": "AMB 037, 038, 039, 040",
     "product": "AMB",
     "section": "brite",
     "brewNums": [
       37,
-      38
+      38,
+      39,
+      40
     ],
     "brewDate": "2026-06-25",
     "age": 28,
-    "stage": "Brite",
-    "tank": "UV30",
-    "labTank": "UV30",
+    "stage": "Packaged",
+    "tank": "TK36",
+    "labTank": "TK36",
     "tankSource": "lab",
-    "lastReading": "2026-07-22",
-    "lastSource": "BBT",
-    "numReadings": 14,
+    "lastReading": "2026-07-23",
+    "lastSource": "FIN",
+    "numReadings": 33,
     "readings": [
+      {
+        "date": "2026-07-23",
+        "sample": "AMB 37-40 TK36",
+        "stage": "FIN",
+        "tank": "TK36",
+        "sourceFile": "finished abita beer 2026.xlsx",
+        "sourceSheet": "A",
+        "pH": 4.26,
+        "DO": 51.0,
+        "CO2 Vols": 2.69,
+        "Calories": 139.96,
+        "ADF": 82.07,
+        "RDF": 67.52,
+        "OG": 10.72,
+        "FG": 1.92,
+        "RE": 3.62,
+        "HAZE": 36.70587819814682,
+        "SG": 1.00748,
+        "ABV": 4.64
+      },
+      {
+        "date": "2026-07-23",
+        "sample": "AMB 37-38 UV30",
+        "stage": "FIN",
+        "tank": "UV30",
+        "sourceFile": "finished abita beer 2026.xlsx",
+        "sourceSheet": "A",
+        "pH": 4.2,
+        "DO": 47.0,
+        "CO2 Vols": 2.63,
+        "Calories": 139.41,
+        "ADF": 82.52,
+        "RDF": 67.88,
+        "OG": 10.69,
+        "FG": 1.87,
+        "RE": 3.57,
+        "HAZE": 35.759183406829834,
+        "SG": 1.00727,
+        "ABV": 4.65
+      },
       {
         "date": "2026-07-22",
         "sample": "AMB 37-38 UV30",
@@ -6179,347 +6349,6 @@ const BATCHES = [
         "OG": 10.68
       },
       {
-        "date": "2026-06-28",
-        "sample": "AMB 37-38 BH40",
-        "stage": "FERM",
-        "tank": "BH40",
-        "sourceFile": "bh samples 2026.xlsx",
-        "sourceSheet": "Abita Brews",
-        "ABV": 4.56,
-        "Turbidity": 468.8694820404053,
-        "FG": 1.98
-      },
-      {
-        "date": "2026-06-25",
-        "sample": "AMB 38 BH40",
-        "stage": "WORT",
-        "tank": "BH40",
-        "sourceFile": "wort abita samples 2026.xlsx",
-        "sourceSheet": "A",
-        "Wort pH": 5.35,
-        "SRM": 14.898477157360405,
-        "IBU (W)": 19.05,
-        "Calories": 156.06,
-        "ADF": -0.54,
-        "RDF": -0.47,
-        "OG": 10.64,
-        "FG": 10.7,
-        "RE": 10.69,
-        "HAZE": 585.0781831741333,
-        "SG": 1.0429,
-        "ABV": -0.03
-      },
-      {
-        "date": "2026-06-25",
-        "sample": "AMB 37 BH40",
-        "stage": "WORT",
-        "tank": "BH40",
-        "sourceFile": "wort abita samples 2026.xlsx",
-        "sourceSheet": "A",
-        "Wort pH": 5.3,
-        "SRM": 16.82741116751269,
-        "IBU (W)": 21.4,
-        "Calories": 151.86,
-        "ADF": -1.05,
-        "RDF": -0.9,
-        "OG": 10.36,
-        "FG": 10.47,
-        "RE": 10.45,
-        "HAZE": 1671.2460193634033,
-        "SG": 1.04195,
-        "ABV": -0.06
-      }
-    ],
-    "fermLog": [],
-    "yeastPitches": [
-      {
-        "date": "2026-06-24",
-        "tank": "BH40",
-        "cellCount": 194369850.85000002,
-        "viability": 0.5847,
-        "pitchRate": 2291.2888903116395,
-        "yeastGen": "L-10",
-        "yeastSource": "BH18",
-        "yeastBrewNum": "BGAL001",
-        "countType": "YEAST"
-      },
-      {
-        "date": "2026-06-24",
-        "tank": "BH40",
-        "cellCount": 2046149612.1500003,
-        "viability": 0.7204,
-        "pitchRate": 176.65696089102659,
-        "yeastGen": "L-10",
-        "yeastSource": "BH33",
-        "yeastBrewNum": "AND27-28",
-        "countType": "Yeast"
-      },
-      {
-        "date": "2026-06-25",
-        "tank": "BH40",
-        "cellCount": 35965754.0,
-        "viability": null,
-        "pitchRate": null,
-        "yeastGen": null,
-        "yeastSource": null,
-        "yeastBrewNum": "5 days",
-        "countType": "FV"
-      },
-      {
-        "date": "2026-06-25",
-        "tank": "BH40",
-        "cellCount": 49561746.666666664,
-        "viability": null,
-        "pitchRate": null,
-        "yeastGen": null,
-        "yeastSource": null,
-        "yeastBrewNum": null,
-        "countType": "12hr"
-      },
-      {
-        "date": "2026-06-26",
-        "tank": "BH40",
-        "cellCount": 62387523.0,
-        "viability": null,
-        "pitchRate": null,
-        "yeastGen": null,
-        "yeastSource": null,
-        "yeastBrewNum": null,
-        "countType": "24hr"
-      }
-    ],
-    "transferLog": [
-      {
-        "date": "2026-06-24",
-        "action": "BREW",
-        "from": "",
-        "to": "BH40",
-        "volume": null,
-        "detail": null,
-        "project": "brewhouse",
-        "completed": true
-      },
-      {
-        "date": "2026-07-13",
-        "action": "PACKAGE",
-        "from": "BT25,BT31",
-        "to": "",
-        "volume": null,
-        "detail": "2511 CASES",
-        "project": "packaging",
-        "completed": true
-      },
-      {
-        "date": "2026-07-13",
-        "action": "FILTER",
-        "from": "BH40",
-        "to": "BT25",
-        "volume": 75.0,
-        "detail": null,
-        "project": "cellar",
-        "completed": true
-      },
-      {
-        "date": "2026-07-21",
-        "action": "FILTER",
-        "from": "BH40",
-        "to": "UV30",
-        "volume": 200.0,
-        "detail": null,
-        "project": "cellar",
-        "completed": true
-      },
-      {
-        "date": "2026-07-22",
-        "action": "PACKAGE",
-        "from": "UV30",
-        "to": "",
-        "volume": null,
-        "detail": "carbed), UV36 (not carbed) (3038 CASES",
-        "project": "packaging",
-        "completed": false
-      }
-    ],
-    "basecampAlerts": [
-      {
-        "metric": "IBU",
-        "value": 16.7,
-        "low": 11.73,
-        "high": 15.87,
-        "date": "2026-07-22",
-        "stage": "BBT",
-        "sample": "AMB 37-38 UV30",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10091789320",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
-        "also": [
-          {
-            "value": 17.299999999999997,
-            "date": "2026-07-22",
-            "stage": "BBT",
-            "sample": "AMB 37-38/39-40 UV36"
-          },
-          {
-            "value": 16.7,
-            "date": "2026-07-22",
-            "stage": "BBT",
-            "sample": "AMB 37-38 UV30"
-          },
-          {
-            "value": 17.299999999999997,
-            "date": "2026-07-22",
-            "stage": "BBT",
-            "sample": "AMB 37-38/39-40 UV36"
-          },
-          {
-            "value": 16.2,
-            "date": "2026-07-13",
-            "stage": "BBT",
-            "sample": "AMB 37-38 BT25"
-          },
-          {
-            "value": 16.2,
-            "date": "2026-07-13",
-            "stage": "BBT",
-            "sample": "AMB 37-38 BT25"
-          }
-        ]
-      },
-      {
-        "metric": "HAZE",
-        "value": 35.827088534832,
-        "low": 25.5,
-        "high": 34.5,
-        "date": "2026-07-22",
-        "stage": "BBT",
-        "sample": "AMB 37-38 UV30",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10091789296",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
-        "also": [
-          {
-            "value": 44.7980917096138,
-            "date": "2026-07-22",
-            "stage": "BBT",
-            "sample": "AMB 37-38/39-40 UV36"
-          },
-          {
-            "value": 35.827088534832,
-            "date": "2026-07-22",
-            "stage": "BBT",
-            "sample": "AMB 37-38 UV30"
-          },
-          {
-            "value": 44.7980917096138,
-            "date": "2026-07-22",
-            "stage": "BBT",
-            "sample": "AMB 37-38/39-40 UV36"
-          },
-          {
-            "value": 40.522038638591766,
-            "date": "2026-07-13",
-            "stage": "BBT",
-            "sample": "AMB 35-36 BT26"
-          },
-          {
-            "value": 40.522038638591766,
-            "date": "2026-07-13",
-            "stage": "BBT",
-            "sample": "AMB 35-36 BT26"
-          }
-        ]
-      },
-      {
-        "metric": "FG",
-        "value": 2.05,
-        "low": 1.6,
-        "high": 2.0,
-        "date": "2026-07-13",
-        "stage": "BBT",
-        "sample": "AMB 35-36 BT26",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10091789272",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
-        "also": [
-          {
-            "value": 2.05,
-            "date": "2026-07-13",
-            "stage": "BBT",
-            "sample": "AMB 35-36 BT26"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "AMB 039, 040",
-    "product": "AMB",
-    "section": "brite",
-    "brewNums": [
-      39,
-      40
-    ],
-    "brewDate": "2026-06-29",
-    "age": 24,
-    "stage": "Brite",
-    "tank": "UV36",
-    "labTank": "UV36",
-    "tankSource": "lab",
-    "lastReading": "2026-07-22",
-    "lastSource": "BBT",
-    "numReadings": 19,
-    "readings": [
-      {
-        "date": "2026-07-22",
-        "sample": "AMB 37-38/39-40 UV36",
-        "stage": "BBT",
-        "tank": "UV36",
-        "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
-        "sourceSheet": "A",
-        "SRM": 13.81979695431472,
-        "IBU": 17.299999999999997,
-        "pH": 4.22,
-        "DO": 41.0,
-        "CO2 Vols": 1.87,
-        "Calories": 141.16,
-        "ADF": 81.93,
-        "RDF": 67.42,
-        "FG": 1.95,
-        "RE": 3.66,
-        "HAZE": 44.7980917096138,
-        "SG": 1.0076,
-        "ABV": 4.67,
-        "OG": 10.8
-      },
-      {
-        "date": "2026-07-22",
-        "sample": "AMB 37-38/39-40 BT31",
-        "stage": "BBT",
-        "tank": "BT31",
-        "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
-        "sourceSheet": "A",
-        "SRM": 13.81979695431472,
-        "IBU": 17.299999999999997,
-        "pH": 4.22,
-        "DO": 34.0,
-        "CO2 Vols": 2.62,
-        "Calories": 139.91,
-        "ADF": 81.91,
-        "RDF": 67.39,
-        "FG": 1.94,
-        "RE": 3.63,
-        "HAZE": 34.95707952976227,
-        "SG": 1.00755,
-        "ABV": 4.62,
-        "OG": 10.71
-      },
-      {
         "date": "2026-07-01",
         "sample": "AMB 39,40 BH41",
         "stage": "GC",
@@ -6580,6 +6409,57 @@ const BATCHES = [
         "HAZE": 1105.427541732788,
         "SG": 1.04262,
         "ABV": -0.05
+      },
+      {
+        "date": "2026-06-28",
+        "sample": "AMB 37-38 BH40",
+        "stage": "FERM",
+        "tank": "BH40",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 4.56,
+        "Turbidity": 468.8694820404053,
+        "FG": 1.98
+      },
+      {
+        "date": "2026-06-25",
+        "sample": "AMB 38 BH40",
+        "stage": "WORT",
+        "tank": "BH40",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "A",
+        "Wort pH": 5.35,
+        "SRM": 14.898477157360405,
+        "IBU (W)": 19.05,
+        "Calories": 156.06,
+        "ADF": -0.54,
+        "RDF": -0.47,
+        "OG": 10.64,
+        "FG": 10.7,
+        "RE": 10.69,
+        "HAZE": 585.0781831741333,
+        "SG": 1.0429,
+        "ABV": -0.03
+      },
+      {
+        "date": "2026-06-25",
+        "sample": "AMB 37 BH40",
+        "stage": "WORT",
+        "tank": "BH40",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "A",
+        "Wort pH": 5.3,
+        "SRM": 16.82741116751269,
+        "IBU (W)": 21.4,
+        "Calories": 151.86,
+        "ADF": -1.05,
+        "RDF": -0.9,
+        "OG": 10.36,
+        "FG": 10.47,
+        "RE": 10.45,
+        "HAZE": 1671.2460193634033,
+        "SG": 1.04195,
+        "ABV": -0.06
       }
     ],
     "fermLog": [
@@ -6658,6 +6538,61 @@ const BATCHES = [
     ],
     "yeastPitches": [
       {
+        "date": "2026-06-24",
+        "tank": "BH40",
+        "cellCount": 194369850.85000002,
+        "viability": 0.5847,
+        "pitchRate": 2291.2888903116395,
+        "yeastGen": "L-10",
+        "yeastSource": "BH18",
+        "yeastBrewNum": "BGAL001",
+        "countType": "YEAST"
+      },
+      {
+        "date": "2026-06-24",
+        "tank": "BH40",
+        "cellCount": 2046149612.1500003,
+        "viability": 0.7204,
+        "pitchRate": 176.65696089102659,
+        "yeastGen": "L-10",
+        "yeastSource": "BH33",
+        "yeastBrewNum": "AND27-28",
+        "countType": "Yeast"
+      },
+      {
+        "date": "2026-06-25",
+        "tank": "BH40",
+        "cellCount": 35965754.0,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": "5 days",
+        "countType": "FV"
+      },
+      {
+        "date": "2026-06-25",
+        "tank": "BH40",
+        "cellCount": 49561746.666666664,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "12hr"
+      },
+      {
+        "date": "2026-06-26",
+        "tank": "BH40",
+        "cellCount": 62387523.0,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "24hr"
+      },
+      {
         "date": "2026-06-27",
         "tank": "BH41",
         "cellCount": 2370000000.0,
@@ -6704,6 +6639,16 @@ const BATCHES = [
     ],
     "transferLog": [
       {
+        "date": "2026-06-24",
+        "action": "BREW",
+        "from": "",
+        "to": "BH40",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "completed": true
+      },
+      {
         "date": "2026-06-26",
         "action": "BREW",
         "from": "",
@@ -6712,17 +6657,151 @@ const BATCHES = [
         "detail": null,
         "project": "brewhouse",
         "completed": true
+      },
+      {
+        "date": "2026-07-13",
+        "action": "PACKAGE",
+        "from": "BT25,BT31",
+        "to": "",
+        "volume": null,
+        "detail": "2511 CASES",
+        "project": "packaging",
+        "completed": true
+      },
+      {
+        "date": "2026-07-13",
+        "action": "FILTER",
+        "from": "BH40",
+        "to": "BT25",
+        "volume": 75.0,
+        "detail": null,
+        "project": "cellar",
+        "completed": true
+      },
+      {
+        "date": "2026-07-21",
+        "action": "FILTER",
+        "from": "BH40",
+        "to": "UV30",
+        "volume": 200.0,
+        "detail": null,
+        "project": "cellar",
+        "completed": true
+      },
+      {
+        "date": "2026-07-22",
+        "action": "PACKAGE",
+        "from": "UV30",
+        "to": "",
+        "volume": null,
+        "detail": "carbed), UV36 (not carbed) (3038 CASES",
+        "project": "packaging",
+        "completed": true
       }
     ],
     "basecampAlerts": [
       {
+        "metric": "HAZE",
+        "value": 36.70587819814682,
+        "low": 25.5,
+        "high": 34.5,
+        "date": "2026-07-23",
+        "stage": "FIN",
+        "sample": "AMB 37-40 TK36",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10091789296",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
+        "also": [
+          {
+            "value": 36.70587819814682,
+            "date": "2026-07-23",
+            "stage": "FIN",
+            "sample": "AMB 37-40 TK36"
+          },
+          {
+            "value": 36.70587819814682,
+            "date": "2026-07-23",
+            "stage": "FIN",
+            "sample": "AMB 37-40 TK36"
+          },
+          {
+            "value": 36.70587819814682,
+            "date": "2026-07-23",
+            "stage": "FIN",
+            "sample": "AMB 37-40 TK36"
+          },
+          {
+            "value": 35.759183406829834,
+            "date": "2026-07-23",
+            "stage": "FIN",
+            "sample": "AMB 37-38 UV30"
+          },
+          {
+            "value": 35.759183406829834,
+            "date": "2026-07-23",
+            "stage": "FIN",
+            "sample": "AMB 37-38 UV30"
+          },
+          {
+            "value": 35.827088534832,
+            "date": "2026-07-22",
+            "stage": "BBT",
+            "sample": "AMB 37-38 UV30"
+          },
+          {
+            "value": 44.7980917096138,
+            "date": "2026-07-22",
+            "stage": "BBT",
+            "sample": "AMB 37-38/39-40 UV36"
+          },
+          {
+            "value": 35.827088534832,
+            "date": "2026-07-22",
+            "stage": "BBT",
+            "sample": "AMB 37-38 UV30"
+          },
+          {
+            "value": 44.7980917096138,
+            "date": "2026-07-22",
+            "stage": "BBT",
+            "sample": "AMB 37-38/39-40 UV36"
+          },
+          {
+            "value": 44.7980917096138,
+            "date": "2026-07-22",
+            "stage": "BBT",
+            "sample": "AMB 37-38/39-40 UV36"
+          },
+          {
+            "value": 44.7980917096138,
+            "date": "2026-07-22",
+            "stage": "BBT",
+            "sample": "AMB 37-38/39-40 UV36"
+          },
+          {
+            "value": 40.522038638591766,
+            "date": "2026-07-13",
+            "stage": "BBT",
+            "sample": "AMB 35-36 BT26"
+          },
+          {
+            "value": 40.522038638591766,
+            "date": "2026-07-13",
+            "stage": "BBT",
+            "sample": "AMB 35-36 BT26"
+          }
+        ]
+      },
+      {
         "metric": "IBU",
-        "value": 17.299999999999997,
+        "value": 16.7,
         "low": 11.73,
         "high": 15.87,
         "date": "2026-07-22",
         "stage": "BBT",
-        "sample": "AMB 37-38/39-40 UV36",
+        "sample": "AMB 37-38 UV30",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10091789320",
         "acknowledged": false,
         "ackBy": null,
@@ -6734,28 +6813,64 @@ const BATCHES = [
             "date": "2026-07-22",
             "stage": "BBT",
             "sample": "AMB 37-38/39-40 UV36"
+          },
+          {
+            "value": 16.7,
+            "date": "2026-07-22",
+            "stage": "BBT",
+            "sample": "AMB 37-38 UV30"
+          },
+          {
+            "value": 17.299999999999997,
+            "date": "2026-07-22",
+            "stage": "BBT",
+            "sample": "AMB 37-38/39-40 UV36"
+          },
+          {
+            "value": 17.299999999999997,
+            "date": "2026-07-22",
+            "stage": "BBT",
+            "sample": "AMB 37-38/39-40 UV36"
+          },
+          {
+            "value": 17.299999999999997,
+            "date": "2026-07-22",
+            "stage": "BBT",
+            "sample": "AMB 37-38/39-40 UV36"
+          },
+          {
+            "value": 16.2,
+            "date": "2026-07-13",
+            "stage": "BBT",
+            "sample": "AMB 37-38 BT25"
+          },
+          {
+            "value": 16.2,
+            "date": "2026-07-13",
+            "stage": "BBT",
+            "sample": "AMB 37-38 BT25"
           }
         ]
       },
       {
-        "metric": "HAZE",
-        "value": 44.7980917096138,
-        "low": 25.5,
-        "high": 34.5,
-        "date": "2026-07-22",
+        "metric": "FG",
+        "value": 2.05,
+        "low": 1.6,
+        "high": 2.0,
+        "date": "2026-07-13",
         "stage": "BBT",
-        "sample": "AMB 37-38/39-40 UV36",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10091789296",
+        "sample": "AMB 35-36 BT26",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10091789272",
         "acknowledged": false,
         "ackBy": null,
         "ackAt": null,
         "ackNote": null,
         "also": [
           {
-            "value": 44.7980917096138,
-            "date": "2026-07-22",
+            "value": 2.05,
+            "date": "2026-07-13",
             "stage": "BBT",
-            "sample": "AMB 37-38/39-40 UV36"
+            "sample": "AMB 35-36 BT26"
           }
         ]
       },
@@ -6798,7 +6913,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-23",
-  "lastSync": "Jul 23, 2026 \u00b7 8:06 AM"
+  "lastSync": "Jul 23, 2026 \u00b7 12:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
