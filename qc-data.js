@@ -2663,7 +2663,7 @@ const BATCHES = [
     "stage": "Fermenting",
     "tank": "BH25",
     "labTank": "BH25",
-    "tankSource": "lab",
+    "tankSource": "basecamp",
     "lastReading": "2026-07-20",
     "lastSource": "GC",
     "numReadings": 31,
@@ -3029,6 +3029,16 @@ const BATCHES = [
         "detail": null,
         "project": "brewhouse",
         "completed": true
+      },
+      {
+        "date": "2026-07-24",
+        "action": "XFER",
+        "from": "BH22",
+        "to": "BH25",
+        "volume": null,
+        "detail": null,
+        "project": "cellar",
+        "completed": false
       }
     ],
     "basecampAlerts": []
@@ -3328,6 +3338,74 @@ const BATCHES = [
         "also": []
       }
     ]
+  },
+  {
+    "id": "AMB 043, 044",
+    "product": "AMB",
+    "section": "brewhouse",
+    "brewNums": [
+      43,
+      44
+    ],
+    "brewDate": null,
+    "age": null,
+    "stage": "Fermenting",
+    "tank": "BH33",
+    "labTank": "BH33",
+    "tankSource": "lab",
+    "lastReading": null,
+    "lastSource": null,
+    "numReadings": 4,
+    "readings": [],
+    "fermLog": [],
+    "yeastPitches": [
+      {
+        "date": "2026-07-24",
+        "tank": "BH33",
+        "cellCount": 758329664.4,
+        "viability": 0.3139,
+        "pitchRate": null,
+        "yeastGen": "L-4",
+        "yeastSource": "BH16",
+        "yeastBrewNum": "BEC03",
+        "countType": "YEAST (CELLOMETER)"
+      },
+      {
+        "date": "2026-07-24",
+        "tank": "BH33",
+        "cellCount": 766947046.9500002,
+        "viability": 0.2147,
+        "pitchRate": null,
+        "yeastGen": "L-4",
+        "yeastSource": "BH16",
+        "yeastBrewNum": "BEC03",
+        "countType": "YEAST (CELLOMETER)"
+      },
+      {
+        "date": "2026-07-24",
+        "tank": "BH33",
+        "cellCount": 670000000.0,
+        "viability": 0.3433,
+        "pitchRate": 1132.1220223231062,
+        "yeastGen": "L-4",
+        "yeastSource": "BH16",
+        "yeastBrewNum": "BEC03",
+        "countType": "YEAST (MANUAL)"
+      },
+      {
+        "date": "2026-07-24",
+        "tank": "BH33",
+        "cellCount": 940000000.0,
+        "viability": 0.595,
+        "pitchRate": 465.58,
+        "yeastGen": "L-4",
+        "yeastSource": "BH16",
+        "yeastBrewNum": "BEC03",
+        "countType": "YEAST (MANUAL)"
+      }
+    ],
+    "transferLog": [],
+    "basecampAlerts": []
   },
   {
     "id": "AND 041, 042",
@@ -6911,7 +6989,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-24",
-  "lastSync": "Jul 24, 2026 \u00b7 12:06 PM"
+  "lastSync": "Jul 24, 2026 \u00b7 4:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
