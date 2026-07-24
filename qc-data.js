@@ -1380,7 +1380,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": null,
+        "yeastBrewNum": "1 DAY",
         "countType": "12hr"
       },
       {
@@ -1808,7 +1808,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": null,
+        "yeastBrewNum": "5 DAYS",
         "countType": "24hr"
       }
     ],
@@ -2984,7 +2984,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": null,
+        "yeastBrewNum": "5 DAYS",
         "countType": "12hr"
       },
       {
@@ -3456,7 +3456,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": null,
+        "yeastBrewNum": "3 DAYS",
         "countType": "12hr ferm check"
       },
       {
@@ -6688,6 +6688,26 @@ const BATCHES = [
         "detail": "not carbed) (3254 CASES",
         "project": "packaging",
         "completed": false
+      },
+      {
+        "date": "2026-07-24",
+        "action": "XFER",
+        "from": "UV37",
+        "to": "BT23",
+        "volume": 56.0,
+        "detail": null,
+        "project": "cellar",
+        "completed": false
+      },
+      {
+        "date": "2026-07-24",
+        "action": "XFER",
+        "from": "UV37",
+        "to": "BT31",
+        "volume": null,
+        "detail": null,
+        "project": "cellar",
+        "completed": false
       }
     ],
     "basecampAlerts": [
@@ -6891,7 +6911,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-24",
-  "lastSync": "Jul 24, 2026 \u00b7 8:06 AM"
+  "lastSync": "Jul 24, 2026 \u00b7 12:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
