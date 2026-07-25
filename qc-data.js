@@ -3355,7 +3355,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": null,
     "lastSource": null,
-    "numReadings": 4,
+    "numReadings": 5,
     "readings": [],
     "fermLog": [],
     "yeastPitches": [
@@ -3402,6 +3402,17 @@ const BATCHES = [
         "yeastSource": "BH16",
         "yeastBrewNum": "BEC03",
         "countType": "YEAST (MANUAL)"
+      },
+      {
+        "date": "2026-07-24",
+        "tank": "BH33",
+        "cellCount": 1480000000.0,
+        "viability": 0.905,
+        "pitchRate": null,
+        "yeastGen": "L-4",
+        "yeastSource": "BH25",
+        "yeastBrewNum": "SGT012",
+        "countType": "Yeast (manual)"
       }
     ],
     "transferLog": [],
@@ -3959,16 +3970,57 @@ const BATCHES = [
       55,
       56
     ],
-    "brewDate": null,
-    "age": null,
-    "stage": "Fermenting",
+    "brewDate": "2026-07-24",
+    "age": 0,
+    "stage": "Wort",
     "tank": "BH43",
     "labTank": "BH43",
     "tankSource": "lab",
-    "lastReading": null,
-    "lastSource": null,
-    "numReadings": 2,
-    "readings": [],
+    "lastReading": "2026-07-24",
+    "lastSource": "WORT",
+    "numReadings": 4,
+    "readings": [
+      {
+        "date": "2026-07-24",
+        "sample": "GLD 056 BH43",
+        "stage": "WORT",
+        "tank": "BH43",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "G",
+        "Wort pH": 5.46,
+        "SRM": 4.111675126903553,
+        "IBU (W)": 15.25,
+        "Calories": 144.58,
+        "ADF": -1.76,
+        "RDF": -1.5,
+        "OG": 9.88,
+        "FG": 10.06,
+        "RE": 10.02,
+        "HAZE": 2100.364906311035,
+        "SG": 1.04022,
+        "ABV": -0.09
+      },
+      {
+        "date": "2026-07-24",
+        "sample": "GLD 055 BH43",
+        "stage": "WORT",
+        "tank": "BH43",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "G",
+        "Wort pH": 5.45,
+        "SRM": 4.2639593908629445,
+        "IBU (W)": 14.149999999999999,
+        "Calories": 143.62,
+        "ADF": -1.72,
+        "RDF": -1.47,
+        "OG": 9.82,
+        "FG": 9.99,
+        "RE": 9.96,
+        "HAZE": 1776.413480758667,
+        "SG": 1.03994,
+        "ABV": -0.09
+      }
+    ],
     "fermLog": [],
     "yeastPitches": [
       {
@@ -6989,7 +7041,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-24",
-  "lastSync": "Jul 24, 2026 \u00b7 4:06 PM"
+  "lastSync": "Jul 24, 2026 \u00b7 8:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
