@@ -81,9 +81,9 @@ const SPECS = {
         "BBT",
         "FIN"
       ],
-      "target": 4.2,
-      "low": 4.0,
-      "high": 4.4,
+      "target": 4.3,
+      "low": 4.1,
+      "high": 4.5,
       "unit": "",
       "maxOnly": false
     },
@@ -7000,7 +7000,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-27",
-  "lastSync": "Jul 27, 2026 \u00b7 8:06 AM"
+  "lastSync": "Jul 27, 2026 \u00b7 12:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
