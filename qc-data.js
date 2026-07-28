@@ -2795,14 +2795,36 @@ const BATCHES = [
     ],
     "brewDate": "2026-07-27",
     "age": 1,
-    "stage": "Wort",
+    "stage": "Fermenting",
     "tank": "BH33",
     "labTank": "BH33",
     "tankSource": "lab",
-    "lastReading": "2026-07-27",
-    "lastSource": "WORT",
-    "numReadings": 10,
+    "lastReading": "2026-07-28",
+    "lastSource": "FERM",
+    "numReadings": 12,
     "readings": [
+      {
+        "date": "2026-07-28",
+        "sample": "AMB 43-44 BH33",
+        "stage": "FERM",
+        "tank": "BH33",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 4.4,
+        "Turbidity": 484.945086479187,
+        "FG": 2.27
+      },
+      {
+        "date": "2026-07-28",
+        "sample": "AMB 43,44 BH33",
+        "stage": "GC",
+        "tank": "BH33",
+        "sourceFile": "gc 2026.xlsx",
+        "sourceSheet": "JUL",
+        "Diacetyl": 0.0,
+        "Pentanedione": 0.1183,
+        "Total VDK": 0.1183
+      },
       {
         "date": "2026-07-27",
         "sample": "AMB 44 BH33",
@@ -2938,6 +2960,40 @@ const BATCHES = [
     "transferLog": [],
     "basecampAlerts": [
       {
+        "metric": "Total VDK",
+        "value": 0.1183,
+        "low": null,
+        "high": 0.075,
+        "date": "2026-07-28",
+        "stage": "GC",
+        "sample": "AMB 43,44 BH33",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10137916531",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
+        "also": [
+          {
+            "value": 0.1183,
+            "date": "2026-07-28",
+            "stage": "GC",
+            "sample": "AMB 43,44 BH33"
+          },
+          {
+            "value": 0.3257,
+            "date": "2026-07-27",
+            "stage": "GC",
+            "sample": "AMB 43,44 BH33"
+          },
+          {
+            "value": 0.3257,
+            "date": "2026-07-27",
+            "stage": "GC",
+            "sample": "AMB 43,44 BH33"
+          }
+        ]
+      },
+      {
         "metric": "Wort pH",
         "value": 5.11,
         "low": 5.29,
@@ -2956,28 +3012,6 @@ const BATCHES = [
             "date": "2026-07-27",
             "stage": "WORT",
             "sample": "AMB 43 BH33"
-          }
-        ]
-      },
-      {
-        "metric": "Total VDK",
-        "value": 0.3257,
-        "low": null,
-        "high": 0.075,
-        "date": "2026-07-27",
-        "stage": "GC",
-        "sample": "AMB 43,44 BH33",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10137916531",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
-        "also": [
-          {
-            "value": 0.3257,
-            "date": "2026-07-27",
-            "stage": "GC",
-            "sample": "AMB 43,44 BH33"
           }
         ]
       }
@@ -5264,7 +5298,7 @@ const BATCHES = [
         "volume": 54.0,
         "detail": null,
         "project": "cellar",
-        "completed": false
+        "completed": true
       },
       {
         "date": "2026-07-28",
@@ -5287,10 +5321,10 @@ const BATCHES = [
         "stage": "BBT",
         "sample": "BEC 002 BT26",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10068905728",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-07-13T21:09",
+        "ackNote": "<p dir=\"auto\">There is no root cause, IBUs have been running low all year.</p>",
         "also": [
           {
             "value": 11.450000000000001,
@@ -5315,9 +5349,9 @@ const BATCHES = [
     "brewDate": "2026-06-26",
     "age": 32,
     "stage": "Brite",
-    "tank": "BT31",
+    "tank": "UV35",
     "labTank": "BT31",
-    "tankSource": "lab",
+    "tankSource": "basecamp",
     "lastReading": "2026-07-27",
     "lastSource": "BBT",
     "numReadings": 31,
@@ -5866,6 +5900,16 @@ const BATCHES = [
         "volume": null,
         "detail": "1270 CASES",
         "project": "packaging",
+        "completed": false
+      },
+      {
+        "date": "2026-07-28",
+        "action": "FILTER",
+        "from": "BH55",
+        "to": "UV35",
+        "volume": 100.0,
+        "detail": null,
+        "project": "cellar",
         "completed": false
       }
     ],
@@ -7337,7 +7381,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-28",
-  "lastSync": "Jul 28, 2026 \u00b7 8:06 AM"
+  "lastSync": "Jul 28, 2026 \u00b7 12:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
