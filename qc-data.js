@@ -3121,16 +3121,56 @@ const BATCHES = [
       43,
       44
     ],
-    "brewDate": null,
-    "age": null,
-    "stage": "Fermenting",
+    "brewDate": "2026-07-27",
+    "age": 0,
+    "stage": "Wort",
     "tank": "BH33",
     "labTank": "BH33",
     "tankSource": "lab",
     "lastReading": "2026-07-27",
-    "lastSource": "FERM",
-    "numReadings": 8,
+    "lastSource": "WORT",
+    "numReadings": 10,
     "readings": [
+      {
+        "date": "2026-07-27",
+        "sample": "AMB 44 BH33",
+        "stage": "WORT",
+        "tank": "BH33",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "A",
+        "Wort pH": 5.11,
+        "SRM": 14.454314720812183,
+        "IBU (W)": 18.95,
+        "Calories": 154.32,
+        "ADF": -0.69,
+        "RDF": -0.59,
+        "OG": 10.53,
+        "FG": 10.6,
+        "RE": 10.59,
+        "HAZE": 659.6907634735107,
+        "SG": 1.04248,
+        "ABV": -0.04
+      },
+      {
+        "date": "2026-07-27",
+        "sample": "AMB 43 BH33",
+        "stage": "WORT",
+        "tank": "BH33",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "A",
+        "Wort pH": 5.14,
+        "SRM": 14.733502538071066,
+        "IBU (W)": 20.0,
+        "Calories": 152.79,
+        "ADF": -0.69,
+        "RDF": -0.59,
+        "OG": 10.43,
+        "FG": 10.5,
+        "RE": 10.49,
+        "HAZE": 921.510892868042,
+        "SG": 1.04206,
+        "ABV": -0.04
+      },
       {
         "date": "2026-07-27",
         "sample": "AMB 43-44 BH33",
@@ -3225,6 +3265,28 @@ const BATCHES = [
     ],
     "transferLog": [],
     "basecampAlerts": [
+      {
+        "metric": "Wort pH",
+        "value": 5.11,
+        "low": 5.29,
+        "high": 5.51,
+        "date": "2026-07-27",
+        "stage": "WORT",
+        "sample": "AMB 44 BH33",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10138411909",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
+        "also": [
+          {
+            "value": 5.14,
+            "date": "2026-07-27",
+            "stage": "WORT",
+            "sample": "AMB 43 BH33"
+          }
+        ]
+      },
       {
         "metric": "Total VDK",
         "value": 0.3257,
@@ -7170,7 +7232,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-27",
-  "lastSync": "Jul 27, 2026 \u00b7 4:07 PM"
+  "lastSync": "Jul 27, 2026 \u00b7 8:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
