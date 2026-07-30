@@ -3277,7 +3277,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": null,
     "lastSource": null,
-    "numReadings": 1,
+    "numReadings": 2,
     "readings": [],
     "fermLog": [],
     "yeastPitches": [
@@ -3291,6 +3291,17 @@ const BATCHES = [
         "yeastSource": "AND",
         "yeastBrewNum": "AND 40",
         "countType": "Yeast"
+      },
+      {
+        "date": "2026-07-29",
+        "tank": "BH40",
+        "cellCount": 660000000.0,
+        "viability": 0.7576,
+        "pitchRate": 495.9851160506863,
+        "yeastGen": "L-3/L-4",
+        "yeastSource": "BH32/BH1",
+        "yeastBrewNum": "AND40/SBOM02",
+        "countType": "Yeast (manual)"
       }
     ],
     "transferLog": [],
@@ -4985,8 +4996,8 @@ const BATCHES = [
         "SRM": 7.563451776649746,
         "IBU": 24.75,
         "pH": 4.72,
-        "DO": 0.0,
-        "CO2 Vols": 0.0,
+        "DO": 31.0,
+        "CO2 Vols": 2.64,
         "Calories": 249.65,
         "ADF": 81.11,
         "RDF": 67.81,
@@ -5603,7 +5614,7 @@ const BATCHES = [
         "volume": null,
         "detail": "1270 CASES",
         "project": "packaging",
-        "completed": false
+        "completed": true
       },
       {
         "date": "2026-07-28",
@@ -7889,7 +7900,7 @@ const BATCHES = [
         "volume": 56.0,
         "detail": null,
         "project": "cellar",
-        "completed": false
+        "completed": true
       },
       {
         "date": "2026-07-29",
@@ -8126,7 +8137,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-29",
-  "lastSync": "Jul 29, 2026 \u00b7 4:06 PM"
+  "lastSync": "Jul 29, 2026 \u00b7 8:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
