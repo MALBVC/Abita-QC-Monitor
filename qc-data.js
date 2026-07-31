@@ -1719,16 +1719,26 @@ const BATCHES = [
     "brewNums": [
       5
     ],
-    "brewDate": null,
-    "age": null,
-    "stage": "Fermenting",
+    "brewDate": "2026-07-31",
+    "age": 0,
+    "stage": "Wort",
     "tank": "BH18",
     "labTank": "BH18",
     "tankSource": "lab",
-    "lastReading": null,
-    "lastSource": null,
-    "numReadings": 2,
-    "readings": [],
+    "lastReading": "2026-07-31",
+    "lastSource": "WORT",
+    "numReadings": 3,
+    "readings": [
+      {
+        "date": "2026-07-31",
+        "sample": "TBD 005 BH18 w/out Wurzberger",
+        "stage": "WORT",
+        "tank": "BH18",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "TD",
+        "SRM": 26.903553299492387
+      }
+    ],
     "fermLog": [],
     "yeastPitches": [
       {
@@ -2748,14 +2758,25 @@ const BATCHES = [
     ],
     "brewDate": "2026-07-31",
     "age": 0,
-    "stage": "Wort",
+    "stage": "Fermenting",
     "tank": "BH40",
     "labTank": "BH40",
     "tankSource": "lab",
     "lastReading": "2026-07-31",
-    "lastSource": "WORT",
-    "numReadings": 6,
+    "lastSource": "FERM",
+    "numReadings": 7,
     "readings": [
+      {
+        "date": "2026-07-31",
+        "sample": "GLD 57-58 BH40",
+        "stage": "FERM",
+        "tank": "BH40",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 4.47,
+        "Turbidity": 556.0386915206909,
+        "FG": 1.76
+      },
       {
         "date": "2026-07-31",
         "sample": "GLD 057 BH40",
@@ -7634,7 +7655,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-31",
-  "lastSync": "Jul 31, 2026 \u00b7 8:07 AM"
+  "lastSync": "Jul 31, 2026 \u00b7 12:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
