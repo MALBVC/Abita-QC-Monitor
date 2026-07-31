@@ -1113,6 +1113,16 @@ const BATCHES = [
         "detail": null,
         "project": "brewhouse",
         "completed": true
+      },
+      {
+        "date": "2026-07-31",
+        "action": "CENT",
+        "from": "BH8",
+        "to": "BT29",
+        "volume": null,
+        "detail": null,
+        "project": "cellar",
+        "completed": false
       }
     ],
     "basecampAlerts": [
@@ -1237,7 +1247,18 @@ const BATCHES = [
         "countType": "24hr"
       }
     ],
-    "transferLog": [],
+    "transferLog": [
+      {
+        "date": "2026-07-31",
+        "action": "CENT",
+        "from": "BH9",
+        "to": "BT25",
+        "volume": 68.0,
+        "detail": null,
+        "project": "cellar",
+        "completed": false
+      }
+    ],
     "basecampAlerts": []
   },
   {
@@ -2764,7 +2785,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": "2026-07-31",
     "lastSource": "FERM",
-    "numReadings": 7,
+    "numReadings": 8,
     "readings": [
       {
         "date": "2026-07-31",
@@ -2816,6 +2837,17 @@ const BATCHES = [
         "HAZE": 1546.953815460205,
         "SG": 1.04117,
         "ABV": -0.03
+      },
+      {
+        "date": "2026-07-31",
+        "sample": "GLD 57,58 BH40",
+        "stage": "GC",
+        "tank": "BH40",
+        "sourceFile": "gc 2026.xlsx",
+        "sourceSheet": "JUL",
+        "Diacetyl": 0.0162,
+        "Pentanedione": 0.0501,
+        "Total VDK": 0.0663
       }
     ],
     "fermLog": [],
@@ -7655,7 +7687,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-31",
-  "lastSync": "Jul 31, 2026 \u00b7 12:06 PM"
+  "lastSync": "Jul 31, 2026 \u00b7 4:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
