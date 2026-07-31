@@ -2735,16 +2735,57 @@ const BATCHES = [
       57,
       58
     ],
-    "brewDate": null,
-    "age": null,
-    "stage": "Fermenting",
+    "brewDate": "2026-07-31",
+    "age": 0,
+    "stage": "Wort",
     "tank": "BH40",
     "labTank": "BH40",
     "tankSource": "lab",
-    "lastReading": null,
-    "lastSource": null,
-    "numReadings": 4,
-    "readings": [],
+    "lastReading": "2026-07-31",
+    "lastSource": "WORT",
+    "numReadings": 6,
+    "readings": [
+      {
+        "date": "2026-07-31",
+        "sample": "GLD 057 BH40",
+        "stage": "WORT",
+        "tank": "BH40",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "G",
+        "Wort pH": 5.34,
+        "SRM": 4.251269035532995,
+        "IBU (W)": 14.149999999999999,
+        "Calories": 148.37,
+        "ADF": -0.57,
+        "RDF": -0.49,
+        "OG": 10.14,
+        "FG": 10.2,
+        "RE": 10.19,
+        "HAZE": 1594.8831310272217,
+        "SG": 1.04082,
+        "ABV": -0.03
+      },
+      {
+        "date": "2026-07-31",
+        "sample": "GLD 058 BH40",
+        "stage": "WORT",
+        "tank": "BH40",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "G",
+        "Wort pH": 5.34,
+        "SRM": 4.162436548223351,
+        "IBU (W)": 13.900000000000002,
+        "Calories": 149.8,
+        "ADF": -0.47,
+        "RDF": -0.4,
+        "OG": 10.24,
+        "FG": 10.29,
+        "RE": 10.28,
+        "HAZE": 1546.953815460205,
+        "SG": 1.04117,
+        "ABV": -0.03
+      }
+    ],
     "fermLog": [],
     "yeastPitches": [
       {
@@ -3579,12 +3620,13 @@ const BATCHES = [
     "basecampAlerts": []
   },
   {
-    "id": "AMB 045, 046, 048",
+    "id": "AMB 045, 046, 047, 048",
     "product": "AMB",
     "section": "brewhouse",
     "brewNums": [
       45,
       46,
+      47,
       48
     ],
     "brewDate": "2026-07-29",
@@ -3593,10 +3635,50 @@ const BATCHES = [
     "tank": "BH48",
     "labTank": "BH48",
     "tankSource": "lab",
-    "lastReading": "2026-07-29",
+    "lastReading": "2026-07-31",
     "lastSource": "WORT",
-    "numReadings": 6,
+    "numReadings": 8,
     "readings": [
+      {
+        "date": "2026-07-31",
+        "sample": "AMB 047 BH48",
+        "stage": "WORT",
+        "tank": "BH48",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "A",
+        "Wort pH": 5.06,
+        "SRM": 14.225888324873097,
+        "IBU (W)": 20.349999999999998,
+        "Calories": 153.67,
+        "ADF": -0.6,
+        "RDF": -0.52,
+        "OG": 10.49,
+        "FG": 10.55,
+        "RE": 10.54,
+        "HAZE": 1822.5708389282227,
+        "SG": 1.04227,
+        "ABV": -0.03
+      },
+      {
+        "date": "2026-07-31",
+        "sample": "AMB 048 BH48",
+        "stage": "WORT",
+        "tank": "BH48",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "A",
+        "Wort pH": 5.09,
+        "SRM": 13.845177664974619,
+        "IBU (W)": 19.25,
+        "Calories": 151.43,
+        "ADF": -0.44,
+        "RDF": -0.38,
+        "OG": 10.34,
+        "FG": 10.39,
+        "RE": 10.38,
+        "HAZE": 1449.982578277588,
+        "SG": 1.0416,
+        "ABV": -0.03
+      },
       {
         "date": "2026-07-29",
         "sample": "AMB 045 BH48",
@@ -3687,6 +3769,28 @@ const BATCHES = [
     ],
     "transferLog": [],
     "basecampAlerts": [
+      {
+        "metric": "Wort pH",
+        "value": 5.06,
+        "low": 5.29,
+        "high": 5.51,
+        "date": "2026-07-31",
+        "stage": "WORT",
+        "sample": "AMB 047 BH48",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10153430190",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
+        "also": [
+          {
+            "value": 5.09,
+            "date": "2026-07-31",
+            "stage": "WORT",
+            "sample": "AMB 048 BH48"
+          }
+        ]
+      },
       {
         "metric": "Wort pH",
         "value": 5.01,
@@ -7519,7 +7623,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-07-31",
-  "lastSync": "Jul 31, 2026 \u00b7 12:06 AM"
+  "lastSync": "Jul 31, 2026 \u00b7 4:06 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
