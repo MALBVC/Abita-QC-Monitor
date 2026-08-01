@@ -7208,13 +7208,33 @@ const BATCHES = [
     "brewDate": "2026-05-08",
     "age": 85,
     "stage": "Packaged",
-    "tank": "TK30",
-    "labTank": "TK30",
+    "tank": "TK27",
+    "labTank": "TK27",
     "tankSource": "lab",
-    "lastReading": "2026-07-30",
+    "lastReading": "2026-08-01",
     "lastSource": "FIN",
-    "numReadings": 37,
+    "numReadings": 38,
     "readings": [
+      {
+        "date": "2026-08-01",
+        "sample": "STG 009/012 TK27",
+        "stage": "FIN",
+        "tank": "TK27",
+        "sourceFile": "finished abita beer 2026.xlsx",
+        "sourceSheet": "SG",
+        "pH": 3.89,
+        "DO": 49.0,
+        "CO2 Vols": 2.76,
+        "Calories": 238.95,
+        "ADF": 83.66,
+        "RDF": 69.73,
+        "OG": 17.72,
+        "FG": 2.9,
+        "RE": 5.73,
+        "HAZE": 2464.306583404541,
+        "SG": 1.0113,
+        "ABV": 8.17
+      },
       {
         "date": "2026-07-30",
         "sample": "STG 009/012 TK30",
@@ -7700,15 +7720,27 @@ const BATCHES = [
         "value": 2.9,
         "low": 3.3,
         "high": 3.7,
-        "date": "2026-07-30",
+        "date": "2026-08-01",
         "stage": "FIN",
-        "sample": "STG 009/012 TK30",
+        "sample": "STG 009/012 TK27",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10146838903",
         "acknowledged": false,
         "ackBy": null,
         "ackAt": null,
         "ackNote": null,
         "also": [
+          {
+            "value": 2.9,
+            "date": "2026-08-01",
+            "stage": "FIN",
+            "sample": "STG 009/012 TK27"
+          },
+          {
+            "value": 2.9,
+            "date": "2026-07-30",
+            "stage": "FIN",
+            "sample": "STG 009/012 TK30"
+          },
           {
             "value": 2.9,
             "date": "2026-07-30",
@@ -7807,7 +7839,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-01",
-  "lastSync": "Aug 1, 2026 \u00b7 4:06 AM"
+  "lastSync": "Aug 1, 2026 \u00b7 8:06 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
