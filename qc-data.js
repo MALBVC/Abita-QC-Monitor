@@ -1036,6 +1036,208 @@ function computeOOS(readings, product) {
 
 const BATCHES = [
   {
+    "id": "BBW 005, 006",
+    "product": "BBW",
+    "section": "brewhouse",
+    "brewNums": [
+      5,
+      6
+    ],
+    "brewDate": "2026-04-16",
+    "age": 109,
+    "stage": "Fermenting",
+    "tank": "BH3",
+    "labTank": "BH3",
+    "tankSource": "lab",
+    "lastReading": "2026-04-17",
+    "lastSource": "FERM",
+    "numReadings": 16,
+    "readings": [
+      {
+        "date": "2026-04-17",
+        "sample": "BBW 005 BH3",
+        "stage": "FERM",
+        "tank": "BH3",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 4.17,
+        "Turbidity": 188.10686945915222,
+        "FG": 2.1
+      },
+      {
+        "date": "2026-04-17",
+        "sample": "BBW 5 BH3",
+        "stage": "GC",
+        "tank": "BH3",
+        "sourceFile": "gc 2026.xlsx",
+        "sourceSheet": "APR",
+        "Diacetyl": 0.0,
+        "Pentanedione": 0.0852,
+        "Total VDK": 0.0
+      },
+      {
+        "date": "2026-04-16",
+        "sample": "BBW 005 BH3",
+        "stage": "WORT",
+        "tank": "BH3",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "BW",
+        "Wort pH": 5.87,
+        "SRM": 4.403553299492385,
+        "IBU (W)": 14.75,
+        "Calories": 147.0,
+        "ADF": -2.69,
+        "RDF": -2.29,
+        "OG": 10.03,
+        "FG": 10.3,
+        "RE": 10.24,
+        "HAZE": 5309.922500610352,
+        "SG": 1.04122,
+        "ABV": -0.15
+      }
+    ],
+    "fermLog": [
+      {
+        "date": "2026-04-16",
+        "tank": "BH3",
+        "temp": 69.0,
+        "gravity": 8.3,
+        "ph": 4.55,
+        "actions": null
+      },
+      {
+        "date": "2026-04-17",
+        "tank": "BH3",
+        "temp": 69.0,
+        "gravity": 2.6,
+        "ph": 4.0,
+        "actions": "SHUT-IN"
+      },
+      {
+        "date": "2026-04-18",
+        "tank": "BH3",
+        "temp": 69.0,
+        "gravity": 2.1,
+        "ph": 4.09,
+        "actions": "DROPPED"
+      },
+      {
+        "date": "2026-04-21",
+        "tank": "BH3",
+        "temp": 37.0,
+        "gravity": 2.6,
+        "ph": 4.04,
+        "actions": null
+      },
+      {
+        "date": "2026-04-28",
+        "tank": "BH3",
+        "temp": 32.0,
+        "gravity": 2.2,
+        "ph": 3.99,
+        "actions": null
+      },
+      {
+        "date": "2026-05-04",
+        "tank": "BH3",
+        "temp": 33.0,
+        "gravity": 2.2,
+        "ph": 3.98,
+        "actions": null
+      },
+      {
+        "date": "2026-05-11",
+        "tank": "BH3",
+        "temp": 32.0,
+        "gravity": 2.2,
+        "ph": 3.98,
+        "actions": null
+      },
+      {
+        "date": "2026-05-18",
+        "tank": "BH3",
+        "temp": 35.0,
+        "gravity": 2.2,
+        "ph": 3.9,
+        "actions": null
+      },
+      {
+        "date": "2026-06-01",
+        "tank": "BH3",
+        "temp": 36.0,
+        "gravity": 2.1,
+        "ph": 4.0,
+        "actions": null
+      },
+      {
+        "date": "2026-06-08",
+        "tank": "BH3",
+        "temp": 35.0,
+        "gravity": 2.2,
+        "ph": 4.07,
+        "actions": null
+      },
+      {
+        "date": "2026-06-15",
+        "tank": "BH3",
+        "temp": 34.0,
+        "gravity": 2.0,
+        "ph": 4.06,
+        "actions": null
+      },
+      {
+        "date": "2026-07-10",
+        "tank": "BH3",
+        "temp": 35.0,
+        "gravity": 2.2,
+        "ph": 4.15,
+        "actions": null
+      },
+      {
+        "date": "2026-07-24",
+        "tank": "BH3",
+        "temp": 24.0,
+        "gravity": 1.9,
+        "ph": 4.07,
+        "actions": null
+      }
+    ],
+    "yeastPitches": [],
+    "transferLog": [
+      {
+        "date": "2026-04-15",
+        "action": "BREW",
+        "from": "",
+        "to": "BH3",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "completed": true
+      },
+      {
+        "date": "2026-06-03",
+        "action": "CENT",
+        "from": "BH3",
+        "to": "BT28",
+        "volume": 57.0,
+        "detail": null,
+        "project": "cellar",
+        "completed": true
+      },
+      {
+        "date": "2026-07-15",
+        "action": "CENT",
+        "from": "BH3",
+        "to": "BT28",
+        "volume": 40.0,
+        "detail": null,
+        "project": "cellar",
+        "completed": true
+      }
+    ],
+    "basecampAlerts": []
+  },
+  {
     "id": "JOC 009",
     "product": "JOC",
     "section": "brewhouse",
@@ -1050,7 +1252,7 @@ const BATCHES = [
     "tankSource": "basecamp",
     "lastReading": "2026-07-21",
     "lastSource": "FERM",
-    "numReadings": 4,
+    "numReadings": 11,
     "readings": [
       {
         "date": "2026-07-21",
@@ -1071,6 +1273,15 @@ const BATCHES = [
         "sourceSheet": "Abita Brews",
         "ABV": 6.08,
         "FG": 3.03
+      },
+      {
+        "date": "2026-07-20",
+        "sample": "JOC 9 BH8",
+        "stage": "FERM",
+        "tank": "BH8",
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "JOC",
+        "Ferm_Temp": 70.0
       },
       {
         "date": "2026-07-16",
@@ -1099,6 +1310,54 @@ const BATCHES = [
         "temp": 71.0,
         "gravity": 10.1,
         "ph": 4.14,
+        "actions": null
+      },
+      {
+        "date": "2026-07-16",
+        "tank": "BH8",
+        "temp": 70.0,
+        "gravity": 4.6,
+        "ph": 3.86,
+        "actions": null
+      },
+      {
+        "date": "2026-07-17",
+        "tank": "BH8",
+        "temp": 71.0,
+        "gravity": 3.8,
+        "ph": 4.2,
+        "actions": null
+      },
+      {
+        "date": "2026-07-18",
+        "tank": "BH8",
+        "temp": 70.0,
+        "gravity": 3.7,
+        "ph": null,
+        "actions": null
+      },
+      {
+        "date": "2026-07-19",
+        "tank": "BH8",
+        "temp": 71.0,
+        "gravity": 3.3,
+        "ph": 4.19,
+        "actions": null
+      },
+      {
+        "date": "2026-07-21",
+        "tank": "BH8",
+        "temp": 70.0,
+        "gravity": 3.0,
+        "ph": 4.46,
+        "actions": "DROPPED NEXT DAY"
+      },
+      {
+        "date": "2026-08-01",
+        "tank": "BH8",
+        "temp": 36.0,
+        "gravity": 3.3,
+        "ph": 4.5,
         "actions": null
       }
     ],
@@ -1144,6 +1403,230 @@ const BATCHES = [
     ]
   },
   {
+    "id": "ALG 005",
+    "product": "ALG",
+    "section": "brewhouse",
+    "brewNums": [
+      5
+    ],
+    "brewDate": "2026-07-16",
+    "age": 18,
+    "stage": "Fermenting",
+    "tank": "BH9",
+    "labTank": "BH9",
+    "tankSource": "lab",
+    "lastReading": "2026-07-31",
+    "lastSource": "BBT",
+    "numReadings": 15,
+    "readings": [
+      {
+        "date": "2026-07-31",
+        "sample": "ALG 005 BT25",
+        "stage": "BBT",
+        "tank": "BT25",
+        "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
+        "sourceSheet": "ALPHA",
+        "SRM": 6.370558375634518,
+        "IBU": 20.25,
+        "pH": 4.45,
+        "DO": 56.0,
+        "CO2 Vols": 2.64,
+        "Calories": 262.66,
+        "ADF": 84.24,
+        "RDF": 70.4,
+        "FG": 3.05,
+        "RE": 6.16,
+        "HAZE": 3999.7142486572266,
+        "SG": 1.01191,
+        "ABV": 9.07,
+        "OG": 19.35
+      },
+      {
+        "date": "2026-07-21",
+        "sample": "ALG 005 BH9",
+        "stage": "FERM",
+        "tank": "BH9",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 8.9,
+        "Turbidity": 4845.34538269043,
+        "FG": 3.17
+      },
+      {
+        "date": "2026-07-20",
+        "sample": "ALG 5 BH9",
+        "stage": "FERM",
+        "tank": "BH9",
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "ALG",
+        "Ferm_Temp": 70.0
+      },
+      {
+        "date": "2026-07-17",
+        "sample": "ALG 5 BH9",
+        "stage": "FERM",
+        "tank": "BH9",
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "ALG",
+        "Ferm_Temp": 70.0
+      },
+      {
+        "date": "2026-07-16",
+        "sample": "ALG 005 BH9",
+        "stage": "WORT",
+        "tank": "BH9",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "Alpha",
+        "Wort pH": 5.29,
+        "SRM": 7.068527918781727,
+        "IBU (W)": 12.55,
+        "Calories": 287.87,
+        "ADF": -1.14,
+        "RDF": -1.02,
+        "OG": 18.89,
+        "FG": 19.1,
+        "RE": 19.06,
+        "SG": 1.07891,
+        "ABV": -0.13
+      }
+    ],
+    "fermLog": [
+      {
+        "date": "2026-07-15",
+        "tank": "BH9",
+        "temp": 71.0,
+        "gravity": 15.1,
+        "ph": 4.17,
+        "actions": null
+      },
+      {
+        "date": "2026-07-16",
+        "tank": "BH9",
+        "temp": 70.0,
+        "gravity": 6.2,
+        "ph": 3.88,
+        "actions": null
+      },
+      {
+        "date": "2026-07-18",
+        "tank": "BH9",
+        "temp": 70.0,
+        "gravity": 3.7,
+        "ph": null,
+        "actions": null
+      },
+      {
+        "date": "2026-07-19",
+        "tank": "BH9",
+        "temp": 71.0,
+        "gravity": 3.2,
+        "ph": 3.93,
+        "actions": "SHUT-IN"
+      },
+      {
+        "date": "2026-07-21",
+        "tank": "BH9",
+        "temp": 70.0,
+        "gravity": 3.2,
+        "ph": 4.49,
+        "actions": "DROPPED NEXT DAY"
+      },
+      {
+        "date": "2026-08-01",
+        "tank": "BH9",
+        "temp": 37.0,
+        "gravity": 3.3,
+        "ph": 4.47,
+        "actions": null
+      }
+    ],
+    "yeastPitches": [
+      {
+        "date": "2026-07-14",
+        "tank": "BH9",
+        "cellCount": 1504211998.45,
+        "viability": 0.73,
+        "pitchRate": 120.69,
+        "yeastGen": "K-13",
+        "yeastSource": "BH42",
+        "yeastBrewNum": "GLD 52-53",
+        "countType": "Yeast"
+      },
+      {
+        "date": "2026-07-14",
+        "tank": "BH9",
+        "cellCount": 63036939.35,
+        "viability": 0.69,
+        "pitchRate": null,
+        "yeastGen": "K-13",
+        "yeastSource": "BH42",
+        "yeastBrewNum": "GLD 52-53",
+        "countType": "FV"
+      },
+      {
+        "date": "2026-07-15",
+        "tank": "BH9",
+        "cellCount": 125811879.78333335,
+        "viability": 0.7717,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": "1 DAY",
+        "countType": "12hr"
+      },
+      {
+        "date": "2026-07-15",
+        "tank": "BH9",
+        "cellCount": 216363814.33333334,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "24hr"
+      }
+    ],
+    "transferLog": [
+      {
+        "date": "2026-07-31",
+        "action": "CENT",
+        "from": "BH9",
+        "to": "BT25",
+        "volume": 68.0,
+        "detail": null,
+        "project": "cellar",
+        "completed": true
+      },
+      {
+        "date": "2026-08-03",
+        "action": "PACKAGE",
+        "from": "BT25",
+        "to": "",
+        "volume": null,
+        "detail": "1109 CASES",
+        "project": "packaging",
+        "completed": false
+      }
+    ],
+    "basecampAlerts": [
+      {
+        "metric": "FG",
+        "value": 3.05,
+        "low": 3.8,
+        "high": 4.2,
+        "date": "2026-07-31",
+        "stage": "BBT",
+        "sample": "ALG 005 BT25",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10156573050",
+        "acknowledged": true,
+        "ackBy": "Keeyan Majdi",
+        "ackAt": "2026-08-02T14:52",
+        "ackNote": "<p dir=\"auto\">spec is incorrect, recipe needs reformulation to hit label claim abv. new FG spec to follow.</p>",
+        "also": []
+      }
+    ]
+  },
+  {
     "id": "AND 030",
     "product": "AND",
     "section": "brewhouse",
@@ -1158,7 +1641,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": "2026-06-23",
     "lastSource": "FERM",
-    "numReadings": 12,
+    "numReadings": 15,
     "readings": [
       {
         "date": "2026-06-23",
@@ -1239,6 +1722,30 @@ const BATCHES = [
         "temp": 33.0,
         "gravity": 2.0,
         "ph": 4.26,
+        "actions": null
+      },
+      {
+        "date": "2026-07-17",
+        "tank": "BH13",
+        "temp": 36.0,
+        "gravity": 2.0,
+        "ph": 4.33,
+        "actions": null
+      },
+      {
+        "date": "2026-07-24",
+        "tank": "BH13",
+        "temp": 37.0,
+        "gravity": 1.9,
+        "ph": 4.32,
+        "actions": null
+      },
+      {
+        "date": "2026-07-29",
+        "tank": "BH13",
+        "temp": 37.0,
+        "gravity": 2.0,
+        "ph": 4.45,
         "actions": null
       }
     ],
@@ -1327,13 +1834,13 @@ const BATCHES = [
     ],
     "brewDate": "2026-07-20",
     "age": 14,
-    "stage": "Wort",
-    "tank": "BT32",
+    "stage": "Fermenting",
+    "tank": "BH14",
     "labTank": "BH14",
-    "tankSource": "basecamp",
+    "tankSource": "lab",
     "lastReading": "2026-07-20",
     "lastSource": "WORT",
-    "numReadings": 9,
+    "numReadings": 10,
     "readings": [
       {
         "date": "2026-07-20",
@@ -1380,11 +1887,19 @@ const BATCHES = [
     ],
     "fermLog": [
       {
-        "date": "2026-07-18",
+        "date": "2026-07-24",
         "tank": "BH14",
-        "temp": 60.0,
-        "gravity": 7.9,
-        "ph": null,
+        "temp": 38.0,
+        "gravity": 1.9,
+        "ph": 3.94,
+        "actions": null
+      },
+      {
+        "date": "2026-07-29",
+        "tank": "BH14",
+        "temp": 34.0,
+        "gravity": 2.0,
+        "ph": 3.98,
         "actions": null
       }
     ],
@@ -1484,7 +1999,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": "2026-07-20",
     "lastSource": "GC",
-    "numReadings": 8,
+    "numReadings": 14,
     "readings": [
       {
         "date": "2026-07-20",
@@ -1547,6 +2062,54 @@ const BATCHES = [
         "temp": 56.0,
         "gravity": 10.5,
         "ph": 4.43,
+        "actions": null
+      },
+      {
+        "date": "2026-07-17",
+        "tank": "BH16",
+        "temp": 56.0,
+        "gravity": 7.6,
+        "ph": 4.18,
+        "actions": null
+      },
+      {
+        "date": "2026-07-18",
+        "tank": "BH16",
+        "temp": 56.0,
+        "gravity": 4.2,
+        "ph": null,
+        "actions": null
+      },
+      {
+        "date": "2026-07-19",
+        "tank": "BH16",
+        "temp": 56.0,
+        "gravity": 3.2,
+        "ph": 3.59,
+        "actions": "Shut-in"
+      },
+      {
+        "date": "2026-07-20",
+        "tank": "BH16",
+        "temp": 56.0,
+        "gravity": 3.0,
+        "ph": 4.01,
+        "actions": "DROPPED NEXT DAY"
+      },
+      {
+        "date": "2026-07-24",
+        "tank": "BH16",
+        "temp": 38.0,
+        "gravity": 2.7,
+        "ph": 4.02,
+        "actions": null
+      },
+      {
+        "date": "2026-07-29",
+        "tank": "BH16",
+        "temp": 36.0,
+        "gravity": 2.5,
+        "ph": 4.19,
         "actions": null
       }
     ],
@@ -1624,13 +2187,13 @@ const BATCHES = [
     ],
     "brewDate": "2026-07-31",
     "age": 3,
-    "stage": "Wort",
+    "stage": "Fermenting",
     "tank": "BH18",
     "labTank": "BH18",
     "tankSource": "lab",
     "lastReading": "2026-08-01",
     "lastSource": "WORT",
-    "numReadings": 6,
+    "numReadings": 9,
     "readings": [
       {
         "date": "2026-08-01",
@@ -1670,7 +2233,24 @@ const BATCHES = [
         "SRM": 67.13197969543147
       }
     ],
-    "fermLog": [],
+    "fermLog": [
+      {
+        "date": "2026-08-01",
+        "tank": "BH18",
+        "temp": 65.0,
+        "gravity": 6.8,
+        "ph": 4.13,
+        "actions": null
+      },
+      {
+        "date": "2026-08-02",
+        "tank": "BH18",
+        "temp": 65.0,
+        "gravity": 4.1,
+        "ph": 3.9,
+        "actions": null
+      }
+    ],
     "yeastPitches": [
       {
         "date": "2026-07-30",
@@ -1693,6 +2273,17 @@ const BATCHES = [
         "yeastSource": "BH43",
         "yeastBrewNum": "GLD56",
         "countType": "Yeast re-check"
+      },
+      {
+        "date": "2026-07-31",
+        "tank": "BH18",
+        "cellCount": 28866368.666666668,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "FV"
       },
       {
         "date": "2026-07-31",
@@ -1903,7 +2494,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": "2026-07-31",
     "lastSource": "WORT",
-    "numReadings": 5,
+    "numReadings": 8,
     "readings": [
       {
         "date": "2026-07-31",
@@ -1946,7 +2537,32 @@ const BATCHES = [
         "ABV": -0.02
       }
     ],
-    "fermLog": [],
+    "fermLog": [
+      {
+        "date": "2026-07-31",
+        "tank": "BH31",
+        "temp": 60.0,
+        "gravity": 9.1,
+        "ph": 4.73,
+        "actions": null
+      },
+      {
+        "date": "2026-08-01",
+        "tank": "BH31",
+        "temp": 60.0,
+        "gravity": 4.0,
+        "ph": 4.02,
+        "actions": null
+      },
+      {
+        "date": "2026-08-02",
+        "tank": "BH31",
+        "temp": 61.0,
+        "gravity": 2.4,
+        "ph": 3.93,
+        "actions": "shut-in"
+      }
+    ],
     "yeastPitches": [
       {
         "date": "2026-07-30",
@@ -2001,7 +2617,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": "2026-07-20",
     "lastSource": "GC",
-    "numReadings": 9,
+    "numReadings": 12,
     "readings": [
       {
         "date": "2026-07-20",
@@ -2067,27 +2683,51 @@ const BATCHES = [
     ],
     "fermLog": [
       {
-        "date": "2026-07-13",
+        "date": "2026-07-11",
         "tank": "BH32",
         "temp": 56.0,
-        "gravity": 10.8,
-        "ph": 4.29,
+        "gravity": 16.9,
+        "ph": 4.59,
         "actions": null
       },
       {
-        "date": "2026-07-14",
+        "date": "2026-07-12",
         "tank": "BH32",
-        "temp": 57.0,
-        "gravity": 8.9,
-        "ph": 4.25,
+        "temp": 56.0,
+        "gravity": 12.3,
+        "ph": null,
         "actions": null
       },
       {
-        "date": "2026-07-15",
+        "date": "2026-07-19",
         "tank": "BH32",
-        "temp": 57.0,
-        "gravity": 7.2,
-        "ph": 4.33,
+        "temp": 56.0,
+        "gravity": 4.2,
+        "ph": 4.16,
+        "actions": null
+      },
+      {
+        "date": "2026-07-20",
+        "tank": "BH32",
+        "temp": 56.0,
+        "gravity": 3.7,
+        "ph": 4.17,
+        "actions": "DROPPED NEXT DAY"
+      },
+      {
+        "date": "2026-07-24",
+        "tank": "BH32",
+        "temp": 36.0,
+        "gravity": 3.7,
+        "ph": 4.43,
+        "actions": null
+      },
+      {
+        "date": "2026-07-31",
+        "tank": "BH32",
+        "temp": 33.0,
+        "gravity": 3.8,
+        "ph": 4.6,
         "actions": null
       }
     ],
@@ -2150,7 +2790,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": "2026-07-29",
     "lastSource": "FERM",
-    "numReadings": 14,
+    "numReadings": 19,
     "readings": [
       {
         "date": "2026-07-29",
@@ -2259,7 +2899,48 @@ const BATCHES = [
         "Total VDK": 0.3257
       }
     ],
-    "fermLog": [],
+    "fermLog": [
+      {
+        "date": "2026-07-26",
+        "tank": "BH33",
+        "temp": 56.0,
+        "gravity": 4.5,
+        "ph": 3.99,
+        "actions": null
+      },
+      {
+        "date": "2026-07-27",
+        "tank": "BH33",
+        "temp": 56.0,
+        "gravity": 2.6,
+        "ph": 3.96,
+        "actions": "SHUT-IN"
+      },
+      {
+        "date": "2026-07-28",
+        "tank": "BH33",
+        "temp": 56.0,
+        "gravity": 2.6,
+        "ph": 4.32,
+        "actions": null
+      },
+      {
+        "date": "2026-07-29",
+        "tank": "BH33",
+        "temp": 56.0,
+        "gravity": 2.6,
+        "ph": 4.04,
+        "actions": "dropped"
+      },
+      {
+        "date": "2026-08-01",
+        "tank": "BH33",
+        "temp": 35.0,
+        "gravity": 2.2,
+        "ph": 4.24,
+        "actions": null
+      }
+    ],
     "yeastPitches": [
       {
         "date": "2026-07-24",
@@ -2404,7 +3085,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": "2026-07-17",
     "lastSource": "FERM",
-    "numReadings": 12,
+    "numReadings": 17,
     "readings": [
       {
         "date": "2026-07-17",
@@ -2508,6 +3189,46 @@ const BATCHES = [
         "temp": 56.0,
         "gravity": 4.8,
         "ph": 4.53,
+        "actions": null
+      },
+      {
+        "date": "2026-07-16",
+        "tank": "BH34",
+        "temp": 56.0,
+        "gravity": 4.7,
+        "ph": 4.31,
+        "actions": null
+      },
+      {
+        "date": "2026-07-17",
+        "tank": "BH34",
+        "temp": 56.0,
+        "gravity": 4.5,
+        "ph": 4.45,
+        "actions": "SHUT-IN"
+      },
+      {
+        "date": "2026-07-18",
+        "tank": "BH34",
+        "temp": 56.0,
+        "gravity": 4.3,
+        "ph": null,
+        "actions": "DROPPED"
+      },
+      {
+        "date": "2026-07-22",
+        "tank": "BH34",
+        "temp": 35.0,
+        "gravity": 4.1,
+        "ph": 4.38,
+        "actions": null
+      },
+      {
+        "date": "2026-07-28",
+        "tank": "BH34",
+        "temp": 37.0,
+        "gravity": 4.0,
+        "ph": 4.5,
         "actions": null
       }
     ],
@@ -2789,7 +3510,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": "2026-07-31",
     "lastSource": "FERM",
-    "numReadings": 8,
+    "numReadings": 12,
     "readings": [
       {
         "date": "2026-07-31",
@@ -2854,7 +3575,40 @@ const BATCHES = [
         "Total VDK": 0.0663
       }
     ],
-    "fermLog": [],
+    "fermLog": [
+      {
+        "date": "2026-07-30",
+        "tank": "BH40",
+        "temp": 56.0,
+        "gravity": 5.6,
+        "ph": 4.17,
+        "actions": null
+      },
+      {
+        "date": "2026-07-31",
+        "tank": "BH40",
+        "temp": 68.0,
+        "gravity": 2.3,
+        "ph": 3.94,
+        "actions": null
+      },
+      {
+        "date": "2026-08-01",
+        "tank": "BH40",
+        "temp": 67.0,
+        "gravity": 2.3,
+        "ph": 3.95,
+        "actions": "shut-in"
+      },
+      {
+        "date": "2026-08-02",
+        "tank": "BH40",
+        "temp": 67.0,
+        "gravity": 2.0,
+        "ph": 3.89,
+        "actions": null
+      }
+    ],
     "yeastPitches": [
       {
         "date": "2026-07-29",
@@ -2920,7 +3674,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": "2026-07-13",
     "lastSource": "FERM",
-    "numReadings": 14,
+    "numReadings": 13,
     "readings": [
       {
         "date": "2026-07-13",
@@ -2995,22 +3749,6 @@ const BATCHES = [
         "actions": null
       },
       {
-        "date": "2026-07-10",
-        "tank": "BH42",
-        "temp": 60.0,
-        "gravity": 9.1,
-        "ph": 4.53,
-        "actions": null
-      },
-      {
-        "date": "2026-07-11",
-        "tank": "BH42",
-        "temp": 60.0,
-        "gravity": 4.0,
-        "ph": 3.84,
-        "actions": null
-      },
-      {
         "date": "2026-07-11",
         "tank": "BH42",
         "temp": 60.0,
@@ -3033,6 +3771,14 @@ const BATCHES = [
         "gravity": 1.9,
         "ph": 3.9,
         "actions": "DROPPED"
+      },
+      {
+        "date": "2026-07-31",
+        "tank": "BH42",
+        "temp": 32.0,
+        "gravity": 1.6,
+        "ph": null,
+        "actions": null
       }
     ],
     "yeastPitches": [
@@ -3111,7 +3857,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": "2026-07-27",
     "lastSource": "FERM",
-    "numReadings": 7,
+    "numReadings": 10,
     "readings": [
       {
         "date": "2026-07-27",
@@ -3184,6 +3930,30 @@ const BATCHES = [
         "gravity": 9.1,
         "ph": 4.49,
         "actions": null
+      },
+      {
+        "date": "2026-07-26",
+        "tank": "BH43",
+        "temp": 61.0,
+        "gravity": 2.0,
+        "ph": 3.98,
+        "actions": "SHUT-IN"
+      },
+      {
+        "date": "2026-07-27",
+        "tank": "BH43",
+        "temp": 60.0,
+        "gravity": 1.6,
+        "ph": 3.96,
+        "actions": "DROPPED"
+      },
+      {
+        "date": "2026-07-31",
+        "tank": "BH43",
+        "temp": 35.0,
+        "gravity": 1.9,
+        "ph": 4.02,
+        "actions": null
       }
     ],
     "yeastPitches": [
@@ -3229,7 +3999,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": "2026-07-09",
     "lastSource": "FERM",
-    "numReadings": 16,
+    "numReadings": 15,
     "readings": [
       {
         "date": "2026-07-09",
@@ -3304,22 +4074,6 @@ const BATCHES = [
         "actions": null
       },
       {
-        "date": "2026-07-07",
-        "tank": "BH44",
-        "temp": 54.0,
-        "gravity": 9.4,
-        "ph": 4.49,
-        "actions": null
-      },
-      {
-        "date": "2026-07-08",
-        "tank": "BH44",
-        "temp": 56.0,
-        "gravity": 5.6,
-        "ph": 4.05,
-        "actions": null
-      },
-      {
         "date": "2026-07-08",
         "tank": "BH44",
         "temp": 56.0,
@@ -3342,6 +4096,14 @@ const BATCHES = [
         "gravity": 2.6,
         "ph": 3.97,
         "actions": "DROPPED"
+      },
+      {
+        "date": "2026-07-27",
+        "tank": "BH44",
+        "temp": 36.0,
+        "gravity": 2.1,
+        "ph": 4.06,
+        "actions": null
       }
     ],
     "yeastPitches": [
@@ -3705,7 +4467,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": "2026-07-31",
     "lastSource": "WORT",
-    "numReadings": 8,
+    "numReadings": 13,
     "readings": [
       {
         "date": "2026-07-31",
@@ -3788,7 +4550,48 @@ const BATCHES = [
         "ABV": -0.07
       }
     ],
-    "fermLog": [],
+    "fermLog": [
+      {
+        "date": "2026-07-29",
+        "tank": "BH48",
+        "temp": 57.0,
+        "gravity": 9.1,
+        "ph": 4.41,
+        "actions": null
+      },
+      {
+        "date": "2026-07-30",
+        "tank": "BH48",
+        "temp": 56.0,
+        "gravity": 7.5,
+        "ph": 4.43,
+        "actions": null
+      },
+      {
+        "date": "2026-07-31",
+        "tank": "BH48",
+        "temp": 56.0,
+        "gravity": 4.8,
+        "ph": 4.15,
+        "actions": null
+      },
+      {
+        "date": "2026-08-01",
+        "tank": "BH48",
+        "temp": 57.0,
+        "gravity": 3.2,
+        "ph": 4.12,
+        "actions": null
+      },
+      {
+        "date": "2026-08-02",
+        "tank": "BH48",
+        "temp": 57.0,
+        "gravity": 3.1,
+        "ph": 4.09,
+        "actions": "shut-in"
+      }
+    ],
     "yeastPitches": [
       {
         "date": "2026-07-28",
@@ -3901,7 +4704,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": "2026-07-06",
     "lastSource": "FERM",
-    "numReadings": 16,
+    "numReadings": 13,
     "readings": [
       {
         "date": "2026-07-06",
@@ -4029,14 +4832,6 @@ const BATCHES = [
         "actions": null
       },
       {
-        "date": "2026-07-04",
-        "tank": "BH54",
-        "temp": 57.0,
-        "gravity": 7.2,
-        "ph": null,
-        "actions": null
-      },
-      {
         "date": "2026-07-05",
         "tank": "BH54",
         "temp": 57.0,
@@ -4045,28 +4840,12 @@ const BATCHES = [
         "actions": "Shut-in"
       },
       {
-        "date": "2026-07-05",
+        "date": "2026-07-28",
         "tank": "BH54",
-        "temp": 57.0,
-        "gravity": 4.9,
-        "ph": 4.35,
-        "actions": "Shut-in"
-      },
-      {
-        "date": "2026-07-06",
-        "tank": "BH54",
-        "temp": 56.0,
-        "gravity": 4.4,
-        "ph": 4.32,
+        "temp": 36.0,
+        "gravity": 3.7,
+        "ph": 4.5,
         "actions": null
-      },
-      {
-        "date": "2026-07-07",
-        "tank": "BH54",
-        "temp": 56.0,
-        "gravity": 4.3,
-        "ph": 4.4,
-        "actions": "DROPPED"
       }
     ],
     "yeastPitches": [
@@ -4222,7 +5001,7 @@ const BATCHES = [
     "tankSource": "basecamp",
     "lastReading": "2026-06-27",
     "lastSource": "FERM",
-    "numReadings": 15,
+    "numReadings": 17,
     "readings": [
       {
         "date": "2026-06-27",
@@ -4367,6 +5146,22 @@ const BATCHES = [
         "gravity": 2.0,
         "ph": 3.92,
         "actions": null
+      },
+      {
+        "date": "2026-07-20",
+        "tank": "BH58",
+        "temp": 33.0,
+        "gravity": 1.9,
+        "ph": 3.98,
+        "actions": null
+      },
+      {
+        "date": "2026-07-27",
+        "tank": "BH58",
+        "temp": 35.0,
+        "gravity": 1.9,
+        "ph": 4.08,
+        "actions": null
       }
     ],
     "yeastPitches": [
@@ -4496,7 +5291,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": "2026-07-30",
     "lastSource": "BBT",
-    "numReadings": 20,
+    "numReadings": 22,
     "readings": [
       {
         "date": "2026-07-30",
@@ -4710,6 +5505,22 @@ const BATCHES = [
         "temp": 34.0,
         "gravity": 2.2,
         "ph": 4.2,
+        "actions": null
+      },
+      {
+        "date": "2026-07-19",
+        "tank": "BH41",
+        "temp": 33.0,
+        "gravity": 2.2,
+        "ph": 3.82,
+        "actions": null
+      },
+      {
+        "date": "2026-07-27",
+        "tank": "BH41",
+        "temp": 41.0,
+        "gravity": 2.1,
+        "ph": 4.15,
         "actions": null
       }
     ],
@@ -4935,172 +5746,6 @@ const BATCHES = [
             "sample": "AMB 039 BH41"
           }
         ]
-      }
-    ]
-  },
-  {
-    "id": "ALG 005",
-    "product": "ALG",
-    "section": "brite",
-    "brewNums": [
-      5
-    ],
-    "brewDate": "2026-07-16",
-    "age": 18,
-    "stage": "Brite",
-    "tank": "BT25",
-    "labTank": "BT25",
-    "tankSource": "lab",
-    "lastReading": "2026-07-31",
-    "lastSource": "BBT",
-    "numReadings": 8,
-    "readings": [
-      {
-        "date": "2026-07-31",
-        "sample": "ALG 005 BT25",
-        "stage": "BBT",
-        "tank": "BT25",
-        "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
-        "sourceSheet": "ALPHA",
-        "SRM": 6.370558375634518,
-        "IBU": 20.25,
-        "pH": 4.45,
-        "DO": 56.0,
-        "CO2 Vols": 2.64,
-        "Calories": 262.66,
-        "ADF": 84.24,
-        "RDF": 70.4,
-        "FG": 3.05,
-        "RE": 6.16,
-        "HAZE": 3999.7142486572266,
-        "SG": 1.01191,
-        "ABV": 9.07,
-        "OG": 19.35
-      },
-      {
-        "date": "2026-07-21",
-        "sample": "ALG 005 BH9",
-        "stage": "FERM",
-        "tank": "BH9",
-        "sourceFile": "bh samples 2026.xlsx",
-        "sourceSheet": "Abita Brews",
-        "ABV": 8.9,
-        "Turbidity": 4845.34538269043,
-        "FG": 3.17
-      },
-      {
-        "date": "2026-07-16",
-        "sample": "ALG 005 BH9",
-        "stage": "WORT",
-        "tank": "BH9",
-        "sourceFile": "wort abita samples 2026.xlsx",
-        "sourceSheet": "Alpha",
-        "Wort pH": 5.29,
-        "SRM": 7.068527918781727,
-        "IBU (W)": 12.55,
-        "Calories": 287.87,
-        "ADF": -1.14,
-        "RDF": -1.02,
-        "OG": 18.89,
-        "FG": 19.1,
-        "RE": 19.06,
-        "SG": 1.07891,
-        "ABV": -0.13
-      }
-    ],
-    "fermLog": [
-      {
-        "date": "2026-07-15",
-        "tank": "BH9",
-        "temp": 71.0,
-        "gravity": 15.1,
-        "ph": 4.17,
-        "actions": null
-      }
-    ],
-    "yeastPitches": [
-      {
-        "date": "2026-07-14",
-        "tank": "BH9",
-        "cellCount": 1504211998.45,
-        "viability": 0.73,
-        "pitchRate": 120.69,
-        "yeastGen": "K-13",
-        "yeastSource": "BH42",
-        "yeastBrewNum": "GLD 52-53",
-        "countType": "Yeast"
-      },
-      {
-        "date": "2026-07-14",
-        "tank": "BH9",
-        "cellCount": 63036939.35,
-        "viability": 0.69,
-        "pitchRate": null,
-        "yeastGen": "K-13",
-        "yeastSource": "BH42",
-        "yeastBrewNum": "GLD 52-53",
-        "countType": "FV"
-      },
-      {
-        "date": "2026-07-15",
-        "tank": "BH9",
-        "cellCount": 125811879.78333335,
-        "viability": 0.7717,
-        "pitchRate": null,
-        "yeastGen": null,
-        "yeastSource": null,
-        "yeastBrewNum": "1 DAY",
-        "countType": "12hr"
-      },
-      {
-        "date": "2026-07-15",
-        "tank": "BH9",
-        "cellCount": 216363814.33333334,
-        "viability": null,
-        "pitchRate": null,
-        "yeastGen": null,
-        "yeastSource": null,
-        "yeastBrewNum": null,
-        "countType": "24hr"
-      }
-    ],
-    "transferLog": [
-      {
-        "date": "2026-07-31",
-        "action": "PACKAGE",
-        "from": "BT25",
-        "to": "",
-        "volume": null,
-        "detail": "1109 CASES",
-        "project": "packaging",
-        "completed": false
-      },
-      {
-        "date": "2026-07-31",
-        "action": "CENT",
-        "from": "BH9",
-        "to": "BT25",
-        "volume": 68.0,
-        "detail": null,
-        "project": "cellar",
-        "completed": true
-      }
-    ],
-    "basecampAlerts": [
-      {
-        "metric": "FG",
-        "value": 3.05,
-        "low": 3.8,
-        "high": 4.2,
-        "date": "2026-07-31",
-        "stage": "BBT",
-        "sample": "ALG 005 BT25",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10156573050",
-        "acknowledged": true,
-        "ackBy": "Keeyan Majdi",
-        "ackAt": "2026-08-02T14:52",
-        "ackNote": "<p dir=\"auto\">spec is incorrect, recipe needs reformulation to hit label claim abv. new FG spec to follow.</p>",
-        "also": []
       }
     ]
   },
@@ -6341,7 +6986,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": "2026-08-01",
     "lastSource": "FIN",
-    "numReadings": 38,
+    "numReadings": 43,
     "readings": [
       {
         "date": "2026-08-01",
@@ -6468,15 +7113,6 @@ const BATCHES = [
         "HAZE": 4754.405960083008,
         "SG": 1.0692,
         "ABV": -0.04
-      },
-      {
-        "date": "2026-05-17",
-        "sample": "STG 9 BH25",
-        "stage": "FERM",
-        "tank": "BH25",
-        "sourceFile": "cellar records 2026.xlsx",
-        "sourceSheet": "SGT",
-        "Ferm_Temp": 56.0
       },
       {
         "date": "2026-05-13",
@@ -6621,14 +7257,6 @@ const BATCHES = [
         "actions": null
       },
       {
-        "date": "2026-05-15",
-        "tank": "BH25",
-        "temp": 57.0,
-        "gravity": 13.0,
-        "ph": 4.31,
-        "actions": null
-      },
-      {
         "date": "2026-05-17",
         "tank": "BH22",
         "temp": 37.0,
@@ -6698,6 +7326,62 @@ const BATCHES = [
         "temp": 56.0,
         "gravity": 14.6,
         "ph": 4.47,
+        "actions": null
+      },
+      {
+        "date": "2026-07-17",
+        "tank": "BH25",
+        "temp": 56.0,
+        "gravity": 9.4,
+        "ph": 4.16,
+        "actions": null
+      },
+      {
+        "date": "2026-07-17",
+        "tank": "BH22",
+        "temp": 35.0,
+        "gravity": 2.1,
+        "ph": 4.44,
+        "actions": null
+      },
+      {
+        "date": "2026-07-18",
+        "tank": "BH25",
+        "temp": 56.0,
+        "gravity": 5.7,
+        "ph": null,
+        "actions": null
+      },
+      {
+        "date": "2026-07-19",
+        "tank": "BH25",
+        "temp": 56.0,
+        "gravity": 4.3,
+        "ph": 3.7,
+        "actions": null
+      },
+      {
+        "date": "2026-07-20",
+        "tank": "BH25",
+        "temp": 56.0,
+        "gravity": 3.4,
+        "ph": 4.08,
+        "actions": "SHUT-IN/ DROPPED NEXT DAY"
+      },
+      {
+        "date": "2026-07-24",
+        "tank": "BH25",
+        "temp": 35.0,
+        "gravity": 2.8,
+        "ph": 4.1,
+        "actions": null
+      },
+      {
+        "date": "2026-07-24",
+        "tank": "BH22",
+        "temp": 35.0,
+        "gravity": 2.2,
+        "ph": 4.46,
         "actions": null
       }
     ],
@@ -6970,7 +7654,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": "2026-08-01",
     "lastSource": "FIN",
-    "numReadings": 39,
+    "numReadings": 40,
     "readings": [
       {
         "date": "2026-08-01",
@@ -7401,22 +8085,6 @@ const BATCHES = [
         "actions": null
       },
       {
-        "date": "2026-06-27",
-        "tank": "BH55",
-        "temp": 53.0,
-        "gravity": 16.7,
-        "ph": 4.31,
-        "actions": null
-      },
-      {
-        "date": "2026-06-28",
-        "tank": "BH55",
-        "temp": 56.0,
-        "gravity": 12.6,
-        "ph": 4.48,
-        "actions": null
-      },
-      {
         "date": "2026-06-28",
         "tank": "BH55",
         "temp": 56.0,
@@ -7441,11 +8109,11 @@ const BATCHES = [
         "actions": null
       },
       {
-        "date": "2026-07-01",
+        "date": "2026-07-03",
         "tank": "BH55",
         "temp": 56.0,
-        "gravity": 7.6,
-        "ph": 4.44,
+        "gravity": 5.9,
+        "ph": 4.46,
         "actions": null
       },
       {
@@ -7486,6 +8154,30 @@ const BATCHES = [
         "temp": 37.0,
         "gravity": 3.8,
         "ph": 4.57,
+        "actions": null
+      },
+      {
+        "date": "2026-07-17",
+        "tank": "BH55",
+        "temp": 33.0,
+        "gravity": 3.5,
+        "ph": 4.65,
+        "actions": null
+      },
+      {
+        "date": "2026-07-22",
+        "tank": "BH55",
+        "temp": 33.0,
+        "gravity": 3.5,
+        "ph": 4.23,
+        "actions": null
+      },
+      {
+        "date": "2026-07-28",
+        "tank": "BH55",
+        "temp": 36.0,
+        "gravity": 3.8,
+        "ph": 4.7,
         "actions": null
       }
     ],
@@ -7907,7 +8599,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-03",
-  "lastSync": "Aug 3, 2026 \u00b7 8:07 AM"
+  "lastSync": "Aug 3, 2026 \u00b7 12:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
