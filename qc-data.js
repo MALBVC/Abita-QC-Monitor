@@ -1115,7 +1115,7 @@ const BATCHES = [
         "completed": true
       },
       {
-        "date": "2026-07-31",
+        "date": "2026-08-03",
         "action": "CENT",
         "from": "BH8",
         "to": "BT29",
@@ -1135,10 +1135,10 @@ const BATCHES = [
         "stage": "WORT",
         "sample": "JOC 009 BH8",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10101092828",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Keeyan Majdi",
+        "ackAt": "2026-08-02T15:04",
+        "ackNote": "<p dir=\"auto\">Acid additions in progress in BH recipes. All worts targeting pH 5.1</p>",
         "also": []
       }
     ]
@@ -1607,10 +1607,10 @@ const BATCHES = [
         "stage": "WORT",
         "sample": "BEC 003 BH16",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10105823473",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Keeyan Majdi",
+        "ackAt": "2026-08-02T15:04",
+        "ackNote": "<p dir=\"auto\">Acid additions in progress in BH recipes. All worts targeting pH 5.1</p>",
         "also": []
       }
     ]
@@ -1717,10 +1717,10 @@ const BATCHES = [
         "stage": "WORT",
         "sample": "TBD 005 BH18",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10156871029",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Keeyan Majdi",
+        "ackAt": "2026-08-02T15:05",
+        "ackNote": "<p dir=\"auto\">Acid additions in progress in BH recipes. All worts targeting pH 5.1</p>",
         "also": []
       },
       {
@@ -2126,10 +2126,10 @@ const BATCHES = [
         "stage": "WORT",
         "sample": "AND 040 BH32",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10089538487",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Keeyan Majdi",
+        "ackAt": "2026-08-02T14:59",
+        "ackNote": "<p dir=\"auto\">OG in range, this should not have been flagged</p>",
         "also": []
       }
     ]
@@ -2373,10 +2373,10 @@ const BATCHES = [
         "stage": "WORT",
         "sample": "AMB 44 BH33",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10138411909",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Keeyan Majdi",
+        "ackAt": "2026-08-02T15:04",
+        "ackNote": "<p dir=\"auto\">Acid additions in progress in BH recipes. All worts targeting pH 5.1</p>",
         "also": [
           {
             "value": 5.14,
@@ -2572,10 +2572,10 @@ const BATCHES = [
         "stage": "WORT",
         "sample": "AND 041 BH34",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10089538470",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Keeyan Majdi",
+        "ackAt": "2026-08-02T15:01",
+        "ackNote": "<p dir=\"auto\">Acid additions in progress in BH recipes. All worts targeting pH 5.1</p>",
         "also": []
       }
     ]
@@ -3456,10 +3456,10 @@ const BATCHES = [
         "stage": "WORT",
         "sample": "AMB 041 BH44",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10077785136",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Keeyan Majdi",
+        "ackAt": "2026-08-02T14:53",
+        "ackNote": "<p dir=\"auto\">spec is incorrect, needs to changed to 5.0-5.2 for all brands</p>",
         "also": [
           {
             "value": 5.25,
@@ -3846,10 +3846,10 @@ const BATCHES = [
         "stage": "WORT",
         "sample": "AMB 047 BH48",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10153430190",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Keeyan Majdi",
+        "ackAt": "2026-07-31T14:58",
+        "ackNote": "<p dir=\"auto\">spec should be changed to 5.0-5.2</p>",
         "also": [
           {
             "value": 5.09,
@@ -3868,10 +3868,10 @@ const BATCHES = [
         "stage": "WORT",
         "sample": "AMB 045 BH48",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10149017636",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Keeyan Majdi",
+        "ackAt": "2026-08-02T15:05",
+        "ackNote": "<p dir=\"auto\">Acid additions in progress in BH recipes. All worts targeting pH 5.1</p>",
         "also": [
           {
             "value": 5.05,
@@ -4149,10 +4149,10 @@ const BATCHES = [
         "stage": "WORT",
         "sample": "AND 035 BH54",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10060603405",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Keeyan Majdi",
+        "ackAt": "2026-08-02T15:03",
+        "ackNote": "<p dir=\"auto\">Acid additions in progress in BH recipes. All worts targeting pH 5.1</p>",
         "also": [
           {
             "value": 5.27,
@@ -4183,10 +4183,10 @@ const BATCHES = [
         "stage": "WORT",
         "sample": "AND 035 BH54",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10060603388",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Keeyan Majdi",
+        "ackAt": "2026-08-02T15:00",
+        "ackNote": "<p dir=\"auto\">WW? Another malt adjustment required? -KM</p><p dir=\"auto\">7/10 brews Friday came in 0.2-0.3\u00b0P higher than KO gravity measured by brewers</p><p dir=\"auto\">OG's from BH and from QC are not matching up.</p><ul dir=\"auto\">\n<li value=\"1\">7/10 26039, 40,41,42<ul>\n<li value=\"1\">BH: 18, 18.2, 18.1, 18.1</li>\n<li value=\"2\">QA: 18.25, 18.31, 18.28, 18.32</li>\n</ul>\n</li>\n<li value=\"2\">Find out when brewers are pulling KO sample. If at start of KO, we may be seeing evaporation effect during time wort sits in WHP</li>\n</ul>",
         "also": [
           {
             "value": 17.6,
@@ -4867,10 +4867,10 @@ const BATCHES = [
         "stage": "BBT",
         "sample": "AMB 39-40 BT23",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10149017656",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Keeyan Majdi",
+        "ackAt": "2026-07-31T15:02",
+        "ackNote": "<p dir=\"auto\">spec should be changed to 1.5-2.5</p>",
         "also": [
           {
             "value": 2.01,
@@ -5096,10 +5096,10 @@ const BATCHES = [
         "stage": "BBT",
         "sample": "ALG 005 BT25",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10156573050",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Keeyan Majdi",
+        "ackAt": "2026-08-02T14:52",
+        "ackNote": "<p dir=\"auto\">spec is incorrect, recipe needs reformulation to hit label claim abv. new FG spec to follow.</p>",
         "also": []
       }
     ]
@@ -5349,10 +5349,10 @@ const BATCHES = [
         "stage": "BBT",
         "sample": "TBD 004 BT25",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10069426275",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Keeyan Majdi",
+        "ackAt": "2026-08-02T15:06",
+        "ackNote": "<p dir=\"auto\">abv still within ttb allowance</p>",
         "also": [
           {
             "value": 2.56,
@@ -5890,10 +5890,10 @@ const BATCHES = [
         "stage": "FIN",
         "sample": "AND 29 TK BT28",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10091789361",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Keeyan Majdi",
+        "ackAt": "2026-08-02T15:06",
+        "ackNote": "<p dir=\"auto\">abv within ttb allowance</p>",
         "also": [
           {
             "value": 3.95,
@@ -6852,10 +6852,10 @@ const BATCHES = [
         "stage": "FIN",
         "sample": "STG 009/012 TK27",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10146838903",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Keeyan Majdi",
+        "ackAt": "2026-08-02T14:10",
+        "ackNote": "<p dir=\"auto\">spec should be changed to 2.3-3.3</p>",
         "also": [
           {
             "value": 2.9,
@@ -7877,10 +7877,10 @@ const BATCHES = [
         "stage": "WORT",
         "sample": "AND 034 BH55",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10041731062",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Keeyan Majdi",
+        "ackAt": "2026-08-02T15:02",
+        "ackNote": "<p dir=\"auto\">Acid additions in progress in BH recipes. All worts targeting pH 5.1</p>",
         "also": [
           {
             "value": 5.26,
@@ -7907,7 +7907,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-03",
-  "lastSync": "Aug 3, 2026 \u00b7 4:02 AM"
+  "lastSync": "Aug 3, 2026 \u00b7 8:07 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
