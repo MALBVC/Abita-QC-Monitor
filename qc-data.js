@@ -1242,7 +1242,7 @@ const BATCHES = [
         "volume": 40.0,
         "detail": null,
         "project": "cellar",
-        "completed": false
+        "completed": true
       }
     ],
     "basecampAlerts": []
@@ -4959,7 +4959,7 @@ const BATCHES = [
         "volume": 40.0,
         "detail": null,
         "project": "cellar",
-        "completed": false
+        "completed": true
       }
     ],
     "basecampAlerts": [
@@ -5676,10 +5676,10 @@ const BATCHES = [
         "stage": "BBT",
         "sample": "AMB 39-40 BT31",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10161817399",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-08-04T12:59",
+        "ackNote": "<p dir=\"auto\">ABV came in a little low, but in Spec. Will monitor next round of Amber before making a change</p>",
         "also": [
           {
             "value": 2.03,
@@ -7941,7 +7941,7 @@ const BATCHES = [
         "volume": null,
         "detail": "700 CASES",
         "project": "packaging",
-        "completed": false
+        "completed": true
       }
     ],
     "basecampAlerts": [
@@ -7954,10 +7954,10 @@ const BATCHES = [
         "stage": "FIN",
         "sample": "JOC 009 TK29",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10162320408",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-08-04T12:56",
+        "ackNote": "<p dir=\"auto\">ABV came in spec, so we will taste and monitor other factors</p>",
         "also": [
           {
             "value": 2.85,
@@ -8957,7 +8957,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-04",
-  "lastSync": "Aug 4, 2026 \u00b7 4:06 AM"
+  "lastSync": "Aug 4, 2026 \u00b7 8:06 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
