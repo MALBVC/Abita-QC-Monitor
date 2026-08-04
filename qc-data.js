@@ -1925,7 +1925,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": null,
+        "yeastBrewNum": "3 days",
         "countType": "FV"
       },
       {
@@ -1973,6 +1973,40 @@ const BATCHES = [
         "also": []
       }
     ]
+  },
+  {
+    "id": "STG 013",
+    "product": "STG",
+    "section": "brewhouse",
+    "brewNums": [
+      13
+    ],
+    "brewDate": null,
+    "age": null,
+    "stage": "Fermenting",
+    "tank": "BH25",
+    "labTank": "BH25",
+    "tankSource": "lab",
+    "lastReading": null,
+    "lastSource": null,
+    "numReadings": 1,
+    "readings": [],
+    "fermLog": [],
+    "yeastPitches": [
+      {
+        "date": "2026-08-04",
+        "tank": "BH25",
+        "cellCount": 3290000000.0,
+        "viability": 0.91,
+        "pitchRate": 83.87,
+        "yeastGen": "L-5",
+        "yeastSource": "BH33",
+        "yeastBrewNum": "AMB44-45",
+        "countType": "yeast"
+      }
+    ],
+    "transferLog": [],
+    "basecampAlerts": []
   },
   {
     "id": "GLD 047",
@@ -2135,10 +2169,32 @@ const BATCHES = [
     "tank": "BH31",
     "labTank": "BH31",
     "tankSource": "lab",
-    "lastReading": "2026-08-03",
+    "lastReading": "2026-08-04",
     "lastSource": "GC",
-    "numReadings": 10,
+    "numReadings": 12,
     "readings": [
+      {
+        "date": "2026-08-04",
+        "sample": "GLD 59,60 BH31",
+        "stage": "GC",
+        "tank": "BH31",
+        "sourceFile": "gc 2026.xlsx",
+        "sourceSheet": "AUG",
+        "Diacetyl": 0.0,
+        "Pentanedione": 0.0,
+        "Total VDK": 0.0
+      },
+      {
+        "date": "2026-08-04",
+        "sample": "GLD 59-60 BH31",
+        "stage": "FERM",
+        "tank": "BH31",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 4.23,
+        "Turbidity": 543.410632610321,
+        "FG": 1.74
+      },
       {
         "date": "2026-08-03",
         "sample": "GLD 59,60 BH31",
@@ -2248,7 +2304,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": null,
+        "yeastBrewNum": "3 days",
         "countType": "FV"
       },
       {
@@ -3328,7 +3384,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": null,
+        "yeastBrewNum": "8days",
         "countType": "FV"
       },
       {
@@ -4322,7 +4378,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": null,
+        "yeastBrewNum": "8 days",
         "countType": "FV"
       },
       {
@@ -8957,7 +9013,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-04",
-  "lastSync": "Aug 4, 2026 \u00b7 12:06 PM"
+  "lastSync": "Aug 4, 2026 \u00b7 4:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
