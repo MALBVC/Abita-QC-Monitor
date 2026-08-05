@@ -5839,10 +5839,10 @@ const BATCHES = [
         "stage": "BBT",
         "sample": "AMB 39-40 BT25",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10091789296",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-08-05T13:18",
+        "ackNote": "<p dir=\"auto\">Low Haze is good. We are monitoring the inconsistency with haze level, looking at fv residence, time from chill to processing, and the centrifuge/filter operation to understand the inconsistency</p>",
         "also": [
           {
             "value": 12.56486901640892,
@@ -9132,7 +9132,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-05",
-  "lastSync": "Aug 5, 2026 \u00b7 8:06 AM"
+  "lastSync": "Aug 5, 2026 \u00b7 12:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
