@@ -1981,16 +1981,37 @@ const BATCHES = [
     "brewNums": [
       13
     ],
-    "brewDate": null,
-    "age": null,
-    "stage": "Fermenting",
+    "brewDate": "2026-08-05",
+    "age": 0,
+    "stage": "Wort",
     "tank": "BH25",
     "labTank": "BH25",
     "tankSource": "lab",
-    "lastReading": null,
-    "lastSource": null,
-    "numReadings": 2,
-    "readings": [],
+    "lastReading": "2026-08-05",
+    "lastSource": "WORT",
+    "numReadings": 4,
+    "readings": [
+      {
+        "date": "2026-08-05",
+        "sample": "SGT 013 BH25",
+        "stage": "WORT",
+        "tank": "BH25",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "SG",
+        "Wort pH": 5.33,
+        "SRM": 7.119289340101524,
+        "IBU (W)": 23.599999999999998,
+        "Calories": 253.63,
+        "ADF": 0.18,
+        "RDF": 0.15,
+        "OG": 16.82,
+        "FG": 16.79,
+        "RE": 16.8,
+        "HAZE": 2225.9119834899902,
+        "SG": 1.0688,
+        "ABV": 0.02
+      }
+    ],
     "fermLog": [],
     "yeastPitches": [
       {
@@ -2014,6 +2035,17 @@ const BATCHES = [
         "yeastSource": null,
         "yeastBrewNum": null,
         "countType": "FV"
+      },
+      {
+        "date": "2026-08-05",
+        "tank": "BH25",
+        "cellCount": 86197254.0,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "24hr"
       }
     ],
     "transferLog": [],
@@ -9132,7 +9164,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-05",
-  "lastSync": "Aug 5, 2026 \u00b7 4:06 PM"
+  "lastSync": "Aug 5, 2026 \u00b7 8:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
