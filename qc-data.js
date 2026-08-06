@@ -5352,6 +5352,16 @@ const BATCHES = [
       },
       {
         "date": "2026-08-04",
+        "action": "PACKAGE",
+        "from": "BT23",
+        "to": "",
+        "volume": null,
+        "detail": "675 CASES",
+        "project": "packaging",
+        "completed": false
+      },
+      {
+        "date": "2026-08-04",
         "action": "FILTER",
         "from": "BH11",
         "to": "BT23",
@@ -8203,7 +8213,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-06",
-  "lastSync": "Aug 6, 2026 \u00b7 8:06 AM"
+  "lastSync": "Aug 6, 2026 \u00b7 12:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
