@@ -5103,14 +5103,34 @@ const BATCHES = [
     ],
     "brewDate": "2026-06-12",
     "age": 55,
-    "stage": "Brite",
+    "stage": "Packaged",
     "tank": "BT23",
     "labTank": "BT23",
     "tankSource": "lab",
-    "lastReading": "2026-08-04",
-    "lastSource": "BBT",
-    "numReadings": 17,
+    "lastReading": "2026-08-06",
+    "lastSource": "FIN",
+    "numReadings": 18,
     "readings": [
+      {
+        "date": "2026-08-06",
+        "sample": "TBD 4 TK BT23",
+        "stage": "FIN",
+        "tank": "BT23",
+        "sourceFile": "finished abita beer 2026.xlsx",
+        "sourceSheet": "TD",
+        "pH": 4.56,
+        "DO": 39.0,
+        "CO2 Vols": 2.67,
+        "Calories": 178.75,
+        "ADF": 80.83,
+        "RDF": 66.91,
+        "OG": 13.48,
+        "FG": 2.58,
+        "RE": 4.68,
+        "HAZE": 531.1080708503723,
+        "SG": 1.01008,
+        "ABV": 5.85
+      },
       {
         "date": "2026-08-04",
         "sample": "TBD 4 BT23",
@@ -5374,33 +5394,47 @@ const BATCHES = [
     "basecampAlerts": [
       {
         "metric": "FG",
-        "value": 2.64,
+        "value": 2.58,
         "low": 2.8,
         "high": 3.2,
-        "date": "2026-08-04",
-        "stage": "BBT",
-        "sample": "TBD 4 BT23",
+        "date": "2026-08-06",
+        "stage": "FIN",
+        "sample": "TBD 4 TK BT23",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10167640699",
         "acknowledged": false,
         "ackBy": null,
         "ackAt": null,
         "ackNote": null,
-        "also": []
+        "also": [
+          {
+            "value": 2.64,
+            "date": "2026-08-04",
+            "stage": "BBT",
+            "sample": "TBD 4 BT23"
+          }
+        ]
       },
       {
         "metric": "ABV",
-        "value": 5.87,
+        "value": 5.85,
         "low": 5.2,
         "high": 5.8,
-        "date": "2026-08-04",
-        "stage": "BBT",
-        "sample": "TBD 4 BT23",
+        "date": "2026-08-06",
+        "stage": "FIN",
+        "sample": "TBD 4 TK BT23",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10167640686",
         "acknowledged": false,
         "ackBy": null,
         "ackAt": null,
         "ackNote": null,
-        "also": []
+        "also": [
+          {
+            "value": 5.87,
+            "date": "2026-08-04",
+            "stage": "BBT",
+            "sample": "TBD 4 BT23"
+          }
+        ]
       },
       {
         "metric": "FG",
@@ -8213,7 +8247,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-06",
-  "lastSync": "Aug 6, 2026 \u00b7 4:06 PM"
+  "lastSync": "Aug 6, 2026 \u00b7 8:05 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
