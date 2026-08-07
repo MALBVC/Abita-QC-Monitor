@@ -2009,10 +2009,10 @@ const BATCHES = [
         "stage": "WORT",
         "sample": "TBD 005 BH18",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10156871017",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-08-07T16:10",
+        "ackNote": "<p dir=\"auto\">Will monitor abv and make grain adjustments to avoid sugar requirement</p>",
         "also": []
       }
     ]
@@ -2416,10 +2416,10 @@ const BATCHES = [
         "stage": "GC",
         "sample": "GLD 59,60 BH31",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10162634001",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-08-07T16:00",
+        "ackNote": "<p dir=\"auto\">Let's remove VDK from this analysis. Beer is not crashed until VDK passes, sometimes it takes 1 or 2 days of checks to get a passing level.</p>",
         "also": [
           {
             "value": 0.0812,
@@ -2850,10 +2850,10 @@ const BATCHES = [
         "stage": "GC",
         "sample": "AMB 43,44 BH33",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10137916531",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-08-07T16:02",
+        "ackNote": "<p dir=\"auto\">Let's remove VDK from this analysis. Beer is not crashed until VDK passes, sometimes it takes 1 or 2 days of checks to get a passing level.</p>",
         "also": [
           {
             "value": 0.1183,
@@ -3108,10 +3108,10 @@ const BATCHES = [
         "stage": "WORT",
         "sample": "AND 042 BH34",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10089538457",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-08-07T16:10",
+        "ackNote": "<p dir=\"auto\">Operator wort analysis in BH was 18.1\u00b0P. Will monitor for abv in brite and adjust as needed.</p>",
         "also": []
       },
       {
@@ -4026,10 +4026,10 @@ const BATCHES = [
         "stage": "GC",
         "sample": "AMB 41,42 BH44",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10137916490",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-08-07T15:59",
+        "ackNote": "<p dir=\"auto\">Let's remove VDK from this analysis. Beer is not crashed until VDK passes, sometimes it takes 1 or 2 days of checks to get a passing level.</p>",
         "also": [
           {
             "value": 0.2635,
@@ -4746,10 +4746,10 @@ const BATCHES = [
         "stage": "GC",
         "sample": "AND 35,36,37,38 BH54",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10137916473",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-08-07T15:59",
+        "ackNote": "<p dir=\"auto\">Let's remove VDK from this analysis. Beer is not crashed until VDK passes, sometimes it takes 1 or 2 days of checks to get a passing level.</p>",
         "also": [
           {
             "value": 0.1355,
@@ -5936,10 +5936,10 @@ const BATCHES = [
         "stage": "BBT",
         "sample": "AMB 39-40 BT25",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10167640671",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-08-07T16:14",
+        "ackNote": "<p dir=\"auto\">Alcohol still in spec at 4.45%. Let's adjust the tolerance of FG to plus/minus 0.4\u00b0P</p>",
         "also": [
           {
             "value": 2.03,
@@ -6050,10 +6050,10 @@ const BATCHES = [
         "stage": "BBT",
         "sample": "AMB 39-40 UV37",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10091789320",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-08-07T15:58",
+        "ackNote": "<p dir=\"auto\">We've discovered some inconsistincies with boil times, and also potentially with extract addition. We'll hold on any hopping changes until we get the operations (and the resulting IBUs) more consistent. They are quite variable in Amber right now. Will also look to start tracking total boil time.</p>",
         "also": [
           {
             "value": 16.75,
@@ -6096,10 +6096,10 @@ const BATCHES = [
         "stage": "BBT",
         "sample": "AMB 39-40 BT23",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10149017689",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-08-07T16:06",
+        "ackNote": "<p dir=\"auto\">Appears to be isolated to one batch, all other batches recently have been in spec. Will continue to monitor.</p>",
         "also": [
           {
             "value": 12.32233502538071,
@@ -6391,10 +6391,10 @@ const BATCHES = [
         "stage": "FIN",
         "sample": "ALG 005 TK25",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10161817381",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-08-07T16:13",
+        "ackNote": "<p dir=\"auto\">Alcohol still in spec at 9.07%. Let's adjust the tolerance of FG to plus/minus 0.4\u00b0P</p>",
         "also": []
       },
       {
@@ -7038,10 +7038,10 @@ const BATCHES = [
         "stage": "BBT",
         "sample": "SGT 9/12 BT30",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10146838913",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-08-07T16:03",
+        "ackNote": "<p dir=\"auto\">We are seeing IBUs increase from wort values after strawberry juice, puree, and natural flavor addition. QA is going to verify BBT samples are centrifuged before IBU analysis. If the readings are accurate, IBU specs will be clarified and adjusted as needed.</p>",
         "also": [
           {
             "value": 31.45,
@@ -7072,10 +7072,10 @@ const BATCHES = [
         "stage": "GC",
         "sample": "SGT 12 BH25",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10137916509",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-08-07T16:00",
+        "ackNote": "<p dir=\"auto\">Let's remove VDK from this analysis. Beer is not crashed until VDK passes, sometimes it takes 1 or 2 days of checks to get a passing level.</p>",
         "also": []
       }
     ]
@@ -8082,10 +8082,10 @@ const BATCHES = [
         "stage": "BBT",
         "sample": "AND 31-34 BT28",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10091789366",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-08-07T16:01",
+        "ackNote": "<p dir=\"auto\">We made on IBU adjustment on 7/10/26 brewing. When those beers get processed to brite, we will evaluate and adjust again as needed.</p>",
         "also": [
           {
             "value": 20.549999999999997,
@@ -8290,7 +8290,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-07",
-  "lastSync": "Aug 7, 2026 \u00b7 8:06 AM"
+  "lastSync": "Aug 7, 2026 \u00b7 12:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
