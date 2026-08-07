@@ -5444,10 +5444,10 @@ const BATCHES = [
         "stage": "FIN",
         "sample": "TBD 4 TK BT23",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10167640699",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-08-07T13:01",
+        "ackNote": "<p dir=\"auto\">This beer went to 3 bbts over 1.5 months. The first two fills were higher in TG, but still low. Another batch brewed this week, will monitor abv and TG on the most recent one and make mashing changes as needed</p>",
         "also": [
           {
             "value": 2.64,
@@ -5466,10 +5466,10 @@ const BATCHES = [
         "stage": "FIN",
         "sample": "TBD 4 TK BT23",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10167640686",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-08-07T13:01",
+        "ackNote": "<p dir=\"auto\">This beer went to 3 bbts over 1.5 months. The first two fills were lower in abv and still in tolerance. Another batch brewed this week, will monitor abv and TG on the most recent one and make mashing changes as needed</p>",
         "also": [
           {
             "value": 5.87,
@@ -8290,7 +8290,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-07",
-  "lastSync": "Aug 7, 2026 \u00b7 4:06 AM"
+  "lastSync": "Aug 7, 2026 \u00b7 8:06 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
