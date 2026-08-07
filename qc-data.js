@@ -1248,6 +1248,49 @@ const BATCHES = [
     "basecampAlerts": []
   },
   {
+    "id": "JOC 010",
+    "product": "JOC",
+    "section": "brewhouse",
+    "brewNums": [
+      10
+    ],
+    "brewDate": "2026-08-06",
+    "age": 1,
+    "stage": "Wort",
+    "tank": "BH10",
+    "labTank": "BH10",
+    "tankSource": "lab",
+    "lastReading": "2026-08-06",
+    "lastSource": "WORT",
+    "numReadings": 1,
+    "readings": [
+      {
+        "date": "2026-08-06",
+        "sample": "JOC 010 BH10",
+        "stage": "WORT",
+        "tank": "BH10",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "JJ",
+        "Wort pH": 5.3,
+        "SRM": 5.114213197969543,
+        "IBU (W)": 20.65,
+        "Calories": 210.4,
+        "ADF": -1.51,
+        "RDF": -1.31,
+        "OG": 14.1,
+        "FG": 14.31,
+        "RE": 14.27,
+        "HAZE": 6078.403472900391,
+        "SG": 1.0581,
+        "ABV": -0.12
+      }
+    ],
+    "fermLog": [],
+    "yeastPitches": [],
+    "transferLog": [],
+    "basecampAlerts": []
+  },
+  {
     "id": "AND 030",
     "product": "AND",
     "section": "brewhouse",
@@ -8247,7 +8290,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-07",
-  "lastSync": "Aug 7, 2026 \u00b7 12:07 AM"
+  "lastSync": "Aug 7, 2026 \u00b7 4:06 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
