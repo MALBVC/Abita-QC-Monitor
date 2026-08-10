@@ -57,7 +57,7 @@ const STAGE_COLORS = {
   Wort: '#5b7ab5', Fermenting: '#6b9b5a', Brite: '#d4861a', Packaged: '#7a8a6a',
 };
 const STAGE_ORDER = ['Wort','Fermenting','Brite','Packaged'];
-const ALL_METRICS  = ['OG','Wort pH','IBU (W)','ABV','FG','IBU','CO2','pH','Total VDK','HAZE','SRM','DO'];
+const ALL_METRICS  = ['OG','Wort pH','IBU (W)','ABV','AE','IBU','CO2','pH','HAZE','SRM','DO'];
 
 // Readings History column sets — split by stage so wort-only and
 // finished-only columns don't show as blank '—' cells in the other group.
@@ -66,12 +66,11 @@ const WORT_FERM_GC_COLS = [
   { label:'WpH',    key:'Wort pH',   specKey:'Wort pH' },
   { label:'IBU(W)', key:'IBU (W)',   specKey:'IBU (W)' },
   { label:'ABV',    key:'ABV',       specKey:'ABV' },
-  { label:'FG',     key:'FG',        specKey:'FG' },
-  { label:'VDK',    key:'Total VDK', specKey:'Total VDK', decimals:3 },
+  { label:'AE',     key:'AE',        specKey:'AE' },
 ];
 const BBT_FIN_COLS = [
   { label:'ABV',  key:'ABV',  specKey:'ABV' },
-  { label:'FG',   key:'FG',   specKey:'FG' },
+  { label:'AE',   key:'AE',   specKey:'AE' },
   { label:'pH',   key:'pH',   specKey:'pH' },
   { label:'IBU',  key:'IBU',  specKey:'IBU' },
   { label:'Haze', key:'HAZE', specKey:'HAZE' },
@@ -191,7 +190,7 @@ function BatchRow({ batch, selected, onClick, compact, detailOpen }) {
   // Build quick metric snippets from the most recent relevant reading
   const chips = useMemo(() => {
     const out = [];
-    const mShow = ['OG','Wort pH','IBU (W)','ABV','FG','IBU','Total VDK'];
+    const mShow = ['OG','Wort pH','IBU (W)','ABV','AE','IBU'];
     if (!latest) return out;
     for (const m of mShow) {
       const v = latest[m];

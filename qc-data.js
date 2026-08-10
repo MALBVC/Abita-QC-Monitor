@@ -3,27 +3,6 @@
 
 const SPECS = {
   "AMB": {
-    "CO2 Vols": {
-      "stages": [
-        "FIN"
-      ],
-      "target": 2.67,
-      "low": 2.6,
-      "high": 2.74,
-      "unit": "",
-      "maxOnly": false
-    },
-    "Turbidity": {
-      "stages": [
-        "BBT",
-        "FIN"
-      ],
-      "target": null,
-      "low": null,
-      "high": null,
-      "unit": "",
-      "maxOnly": false
-    },
     "OG": {
       "stages": [
         "WORT"
@@ -44,16 +23,6 @@ const SPECS = {
       "unit": "",
       "maxOnly": false
     },
-    "Total VDK": {
-      "stages": [
-        "GC"
-      ],
-      "target": null,
-      "low": null,
-      "high": 0.075,
-      "unit": "mg/L",
-      "maxOnly": true
-    },
     "ABV": {
       "stages": [
         "BBT",
@@ -65,7 +34,7 @@ const SPECS = {
       "unit": "%",
       "maxOnly": false
     },
-    "FG": {
+    "AE": {
       "stages": [
         "BBT",
         "FIN"
@@ -120,6 +89,16 @@ const SPECS = {
       "unit": "",
       "maxOnly": false
     },
+    "CO2 Vols": {
+      "stages": [
+        "FIN"
+      ],
+      "target": 2.67,
+      "low": 2.6,
+      "high": 2.74,
+      "unit": "",
+      "maxOnly": false
+    },
     "DO": {
       "stages": [
         "FIN"
@@ -132,17 +111,6 @@ const SPECS = {
     }
   },
   "ALG": {
-    "Turbidity": {
-      "stages": [
-        "BBT",
-        "FIN"
-      ],
-      "target": null,
-      "low": null,
-      "high": null,
-      "unit": "",
-      "maxOnly": false
-    },
     "OG": {
       "stages": [
         "WORT"
@@ -151,72 +119,6 @@ const SPECS = {
       "low": 18.7,
       "high": 19.3,
       "unit": "\u00b0P",
-      "maxOnly": false
-    },
-    "FG": {
-      "stages": [
-        "BBT",
-        "FIN"
-      ],
-      "target": 4.0,
-      "low": 3.8,
-      "high": 4.2,
-      "unit": "\u00b0P",
-      "maxOnly": false
-    },
-    "ABV": {
-      "stages": [
-        "BBT",
-        "FIN"
-      ],
-      "target": 9.0,
-      "low": 8.6,
-      "high": 9.4,
-      "unit": "%",
-      "maxOnly": false
-    },
-    "IBU": {
-      "stages": [
-        "BBT",
-        "FIN"
-      ],
-      "target": 20.0,
-      "low": 17.0,
-      "high": 23.0,
-      "unit": "IBU",
-      "maxOnly": false
-    },
-    "CO2 Vols": {
-      "stages": [
-        "BBT",
-        "FIN"
-      ],
-      "target": null,
-      "low": null,
-      "high": null,
-      "unit": "",
-      "maxOnly": false
-    },
-    "HAZE": {
-      "stages": [
-        "BBT",
-        "FIN"
-      ],
-      "target": null,
-      "low": null,
-      "high": null,
-      "unit": "",
-      "maxOnly": false
-    },
-    "SRM": {
-      "stages": [
-        "BBT",
-        "FIN"
-      ],
-      "target": null,
-      "low": null,
-      "high": null,
-      "unit": "",
       "maxOnly": false
     },
     "Wort pH": {
@@ -229,29 +131,94 @@ const SPECS = {
       "unit": "",
       "maxOnly": false
     },
-    "Total VDK": {
-      "stages": [
-        "GC"
-      ],
-      "target": null,
-      "low": null,
-      "high": 0.075,
-      "unit": "mg/L",
-      "maxOnly": true
-    }
-  },
-  "AND": {
-    "Turbidity": {
+    "ABV": {
       "stages": [
         "BBT",
         "FIN"
       ],
-      "target": null,
-      "low": null,
-      "high": null,
+      "target": 9.0,
+      "low": 8.7,
+      "high": 9.3,
+      "unit": "%",
+      "maxOnly": false
+    },
+    "AE": {
+      "stages": [
+        "BBT",
+        "FIN"
+      ],
+      "target": 3.2,
+      "low": 3.0,
+      "high": 3.4,
+      "unit": "\u00b0P",
+      "maxOnly": false
+    },
+    "pH": {
+      "stages": [
+        "BBT",
+        "FIN"
+      ],
+      "target": 4.5,
+      "low": 4.3,
+      "high": 4.7,
       "unit": "",
       "maxOnly": false
     },
+    "IBU": {
+      "stages": [
+        "BBT",
+        "FIN"
+      ],
+      "target": 25.0,
+      "low": 21.25,
+      "high": 28.75,
+      "unit": "IBU",
+      "maxOnly": false
+    },
+    "HAZE": {
+      "stages": [
+        "BBT",
+        "FIN"
+      ],
+      "target": 2800.0,
+      "low": 2380.0,
+      "high": 3220.0,
+      "unit": "",
+      "maxOnly": false
+    },
+    "SRM": {
+      "stages": [
+        "BBT",
+        "FIN"
+      ],
+      "target": 7.0,
+      "low": 6.3,
+      "high": 7.7,
+      "unit": "",
+      "maxOnly": false
+    },
+    "CO2 Vols": {
+      "stages": [
+        "FIN"
+      ],
+      "target": 2.67,
+      "low": 2.6,
+      "high": 2.74,
+      "unit": "",
+      "maxOnly": false
+    },
+    "DO": {
+      "stages": [
+        "FIN"
+      ],
+      "target": null,
+      "low": null,
+      "high": 80.0,
+      "unit": "",
+      "maxOnly": true
+    }
+  },
+  "AND": {
     "OG": {
       "stages": [
         "WORT"
@@ -262,15 +229,14 @@ const SPECS = {
       "unit": "\u00b0P",
       "maxOnly": false
     },
-    "FG": {
+    "Wort pH": {
       "stages": [
-        "BBT",
-        "FIN"
+        "WORT"
       ],
-      "target": 3.5,
-      "low": 3.3,
-      "high": 3.7,
-      "unit": "\u00b0P",
+      "target": 5.4,
+      "low": 5.29,
+      "high": 5.51,
+      "unit": "",
       "maxOnly": false
     },
     "ABV": {
@@ -284,26 +250,37 @@ const SPECS = {
       "unit": "%",
       "maxOnly": false
     },
+    "AE": {
+      "stages": [
+        "BBT",
+        "FIN"
+      ],
+      "target": 3.5,
+      "low": 3.3,
+      "high": 3.7,
+      "unit": "\u00b0P",
+      "maxOnly": false
+    },
+    "pH": {
+      "stages": [
+        "BBT",
+        "FIN"
+      ],
+      "target": 4.5,
+      "low": 4.3,
+      "high": 4.7,
+      "unit": "",
+      "maxOnly": false
+    },
     "IBU": {
       "stages": [
         "BBT",
         "FIN"
       ],
       "target": 25.0,
-      "low": 23.0,
-      "high": 27.0,
+      "low": 21.25,
+      "high": 28.75,
       "unit": "IBU",
-      "maxOnly": false
-    },
-    "CO2 Vols": {
-      "stages": [
-        "BBT",
-        "FIN"
-      ],
-      "target": null,
-      "low": null,
-      "high": null,
-      "unit": "",
       "maxOnly": false
     },
     "HAZE": {
@@ -311,9 +288,9 @@ const SPECS = {
         "BBT",
         "FIN"
       ],
-      "target": null,
-      "low": null,
-      "high": null,
+      "target": 30.0,
+      "low": 25.5,
+      "high": 34.5,
       "unit": "",
       "maxOnly": false
     },
@@ -322,45 +299,34 @@ const SPECS = {
         "BBT",
         "FIN"
       ],
-      "target": null,
-      "low": null,
-      "high": null,
+      "target": 8.0,
+      "low": 7.2,
+      "high": 8.8,
       "unit": "",
       "maxOnly": false
     },
-    "Wort pH": {
+    "CO2 Vols": {
       "stages": [
-        "WORT"
+        "FIN"
       ],
-      "target": 5.4,
-      "low": 5.29,
-      "high": 5.51,
+      "target": 2.67,
+      "low": 2.6,
+      "high": 2.74,
       "unit": "",
       "maxOnly": false
     },
-    "Total VDK": {
+    "DO": {
       "stages": [
-        "GC"
-      ],
-      "target": null,
-      "low": null,
-      "high": 0.075,
-      "unit": "mg/L",
-      "maxOnly": true
-    }
-  },
-  "BEC": {
-    "Turbidity": {
-      "stages": [
-        "BBT",
         "FIN"
       ],
       "target": null,
       "low": null,
-      "high": null,
+      "high": 80.0,
       "unit": "",
-      "maxOnly": false
-    },
+      "maxOnly": true
+    }
+  },
+  "BEC": {
     "OG": {
       "stages": [
         "WORT"
@@ -371,15 +337,14 @@ const SPECS = {
       "unit": "\u00b0P",
       "maxOnly": false
     },
-    "FG": {
+    "Wort pH": {
       "stages": [
-        "BBT",
-        "FIN"
+        "WORT"
       ],
-      "target": 2.2,
-      "low": 2.0,
-      "high": 2.4,
-      "unit": "\u00b0P",
+      "target": 5.4,
+      "low": 5.29,
+      "high": 5.51,
+      "unit": "",
       "maxOnly": false
     },
     "ABV": {
@@ -393,26 +358,37 @@ const SPECS = {
       "unit": "%",
       "maxOnly": false
     },
+    "AE": {
+      "stages": [
+        "BBT",
+        "FIN"
+      ],
+      "target": 2.2,
+      "low": 2.0,
+      "high": 2.4,
+      "unit": "\u00b0P",
+      "maxOnly": false
+    },
+    "pH": {
+      "stages": [
+        "BBT",
+        "FIN"
+      ],
+      "target": 4.4,
+      "low": 4.2,
+      "high": 4.6,
+      "unit": "",
+      "maxOnly": false
+    },
     "IBU": {
       "stages": [
         "BBT",
         "FIN"
       ],
       "target": 15.0,
-      "low": 13.0,
-      "high": 17.0,
+      "low": 12.75,
+      "high": 17.25,
       "unit": "IBU",
-      "maxOnly": false
-    },
-    "CO2 Vols": {
-      "stages": [
-        "BBT",
-        "FIN"
-      ],
-      "target": null,
-      "low": null,
-      "high": null,
-      "unit": "",
       "maxOnly": false
     },
     "HAZE": {
@@ -420,13 +396,67 @@ const SPECS = {
         "BBT",
         "FIN"
       ],
-      "target": null,
-      "low": null,
-      "high": null,
+      "target": 30.0,
+      "low": 25.5,
+      "high": 34.5,
       "unit": "",
       "maxOnly": false
     },
     "SRM": {
+      "stages": [
+        "BBT",
+        "FIN"
+      ],
+      "target": 4.0,
+      "low": 3.6,
+      "high": 4.4,
+      "unit": "",
+      "maxOnly": false
+    },
+    "CO2 Vols": {
+      "stages": [
+        "FIN"
+      ],
+      "target": 2.67,
+      "low": 2.6,
+      "high": 2.74,
+      "unit": "",
+      "maxOnly": false
+    },
+    "DO": {
+      "stages": [
+        "FIN"
+      ],
+      "target": null,
+      "low": null,
+      "high": 80.0,
+      "unit": "",
+      "maxOnly": true
+    }
+  },
+  "BBW": {
+    "OG": {
+      "stages": [
+        "WORT"
+      ],
+      "target": 10.5,
+      "low": 10.2,
+      "high": 10.8,
+      "unit": "\u00b0P",
+      "maxOnly": false
+    },
+    "AE": {
+      "stages": [
+        "BBT",
+        "FIN"
+      ],
+      "target": 2.2,
+      "low": 2.0,
+      "high": 2.4,
+      "unit": "\u00b0P",
+      "maxOnly": false
+    },
+    "CO2 Vols": {
       "stages": [
         "BBT",
         "FIN"
@@ -445,50 +475,6 @@ const SPECS = {
       "low": 5.29,
       "high": 5.51,
       "unit": "",
-      "maxOnly": false
-    },
-    "Total VDK": {
-      "stages": [
-        "GC"
-      ],
-      "target": null,
-      "low": null,
-      "high": 0.075,
-      "unit": "mg/L",
-      "maxOnly": true
-    }
-  },
-  "BBW": {
-    "Turbidity": {
-      "stages": [
-        "BBT",
-        "FIN"
-      ],
-      "target": null,
-      "low": null,
-      "high": null,
-      "unit": "",
-      "maxOnly": false
-    },
-    "OG": {
-      "stages": [
-        "WORT"
-      ],
-      "target": 10.5,
-      "low": 10.2,
-      "high": 10.8,
-      "unit": "\u00b0P",
-      "maxOnly": false
-    },
-    "FG": {
-      "stages": [
-        "BBT",
-        "FIN"
-      ],
-      "target": 2.2,
-      "low": 2.0,
-      "high": 2.4,
-      "unit": "\u00b0P",
       "maxOnly": false
     },
     "ABV": {
@@ -502,26 +488,26 @@ const SPECS = {
       "unit": "%",
       "maxOnly": false
     },
+    "pH": {
+      "stages": [
+        "BBT",
+        "FIN"
+      ],
+      "target": 4.1,
+      "low": 3.9,
+      "high": 4.3,
+      "unit": "",
+      "maxOnly": false
+    },
     "IBU": {
       "stages": [
         "BBT",
         "FIN"
       ],
       "target": 16.0,
-      "low": 14.0,
-      "high": 18.0,
+      "low": 13.6,
+      "high": 18.4,
       "unit": "IBU",
-      "maxOnly": false
-    },
-    "CO2 Vols": {
-      "stages": [
-        "BBT",
-        "FIN"
-      ],
-      "target": null,
-      "low": null,
-      "high": null,
-      "unit": "",
       "maxOnly": false
     },
     "HAZE": {
@@ -529,9 +515,9 @@ const SPECS = {
         "BBT",
         "FIN"
       ],
-      "target": null,
-      "low": null,
-      "high": null,
+      "target": 4500.0,
+      "low": 3825.0,
+      "high": 5175.0,
       "unit": "",
       "maxOnly": false
     },
@@ -540,45 +526,14 @@ const SPECS = {
         "BBT",
         "FIN"
       ],
-      "target": null,
-      "low": null,
-      "high": null,
+      "target": 7.0,
+      "low": 6.3,
+      "high": 7.7,
       "unit": "",
       "maxOnly": false
-    },
-    "Wort pH": {
-      "stages": [
-        "WORT"
-      ],
-      "target": 5.4,
-      "low": 5.29,
-      "high": 5.51,
-      "unit": "",
-      "maxOnly": false
-    },
-    "Total VDK": {
-      "stages": [
-        "GC"
-      ],
-      "target": null,
-      "low": null,
-      "high": 0.075,
-      "unit": "mg/L",
-      "maxOnly": true
     }
   },
   "GLD": {
-    "Turbidity": {
-      "stages": [
-        "BBT",
-        "FIN"
-      ],
-      "target": null,
-      "low": null,
-      "high": null,
-      "unit": "",
-      "maxOnly": false
-    },
     "OG": {
       "stages": [
         "WORT"
@@ -589,15 +544,14 @@ const SPECS = {
       "unit": "\u00b0P",
       "maxOnly": false
     },
-    "FG": {
+    "Wort pH": {
       "stages": [
-        "BBT",
-        "FIN"
+        "WORT"
       ],
-      "target": 2.0,
-      "low": 1.8,
-      "high": 2.2,
-      "unit": "\u00b0P",
+      "target": 5.4,
+      "low": 5.29,
+      "high": 5.51,
+      "unit": "",
       "maxOnly": false
     },
     "ABV": {
@@ -611,26 +565,37 @@ const SPECS = {
       "unit": "%",
       "maxOnly": false
     },
+    "AE": {
+      "stages": [
+        "BBT",
+        "FIN"
+      ],
+      "target": 1.6,
+      "low": 1.4,
+      "high": 1.8,
+      "unit": "\u00b0P",
+      "maxOnly": false
+    },
+    "pH": {
+      "stages": [
+        "BBT",
+        "FIN"
+      ],
+      "target": 4.3,
+      "low": 4.1,
+      "high": 4.5,
+      "unit": "",
+      "maxOnly": false
+    },
     "IBU": {
       "stages": [
         "BBT",
         "FIN"
       ],
-      "target": 17.0,
-      "low": 15.0,
-      "high": 19.0,
+      "target": 13.0,
+      "low": 11.05,
+      "high": 14.95,
       "unit": "IBU",
-      "maxOnly": false
-    },
-    "CO2 Vols": {
-      "stages": [
-        "BBT",
-        "FIN"
-      ],
-      "target": null,
-      "low": null,
-      "high": null,
-      "unit": "",
       "maxOnly": false
     },
     "HAZE": {
@@ -638,9 +603,9 @@ const SPECS = {
         "BBT",
         "FIN"
       ],
-      "target": null,
-      "low": null,
-      "high": null,
+      "target": 30.0,
+      "low": 25.5,
+      "high": 34.5,
       "unit": "",
       "maxOnly": false
     },
@@ -649,45 +614,34 @@ const SPECS = {
         "BBT",
         "FIN"
       ],
-      "target": null,
-      "low": null,
-      "high": null,
+      "target": 4.0,
+      "low": 3.6,
+      "high": 4.4,
       "unit": "",
       "maxOnly": false
     },
-    "Wort pH": {
+    "CO2 Vols": {
       "stages": [
-        "WORT"
+        "FIN"
       ],
-      "target": 5.4,
-      "low": 5.29,
-      "high": 5.51,
+      "target": 2.67,
+      "low": 2.6,
+      "high": 2.74,
       "unit": "",
       "maxOnly": false
     },
-    "Total VDK": {
+    "DO": {
       "stages": [
-        "GC"
-      ],
-      "target": null,
-      "low": null,
-      "high": 0.075,
-      "unit": "mg/L",
-      "maxOnly": true
-    }
-  },
-  "JOC": {
-    "Turbidity": {
-      "stages": [
-        "BBT",
         "FIN"
       ],
       "target": null,
       "low": null,
-      "high": null,
+      "high": 80.0,
       "unit": "",
-      "maxOnly": false
-    },
+      "maxOnly": true
+    }
+  },
+  "JOC": {
     "OG": {
       "stages": [
         "WORT"
@@ -698,15 +652,14 @@ const SPECS = {
       "unit": "\u00b0P",
       "maxOnly": false
     },
-    "FG": {
+    "Wort pH": {
       "stages": [
-        "BBT",
-        "FIN"
+        "WORT"
       ],
-      "target": 3.2,
-      "low": 3.0,
-      "high": 3.4,
-      "unit": "\u00b0P",
+      "target": 5.4,
+      "low": 5.29,
+      "high": 5.51,
+      "unit": "",
       "maxOnly": false
     },
     "ABV": {
@@ -720,26 +673,37 @@ const SPECS = {
       "unit": "%",
       "maxOnly": false
     },
+    "AE": {
+      "stages": [
+        "BBT",
+        "FIN"
+      ],
+      "target": 2.8,
+      "low": 2.6,
+      "high": 3.0,
+      "unit": "\u00b0P",
+      "maxOnly": false
+    },
+    "pH": {
+      "stages": [
+        "BBT",
+        "FIN"
+      ],
+      "target": 4.4,
+      "low": 4.2,
+      "high": 4.6,
+      "unit": "",
+      "maxOnly": false
+    },
     "IBU": {
       "stages": [
         "BBT",
         "FIN"
       ],
       "target": 30.0,
-      "low": 28.0,
-      "high": 32.0,
+      "low": 25.5,
+      "high": 34.5,
       "unit": "IBU",
-      "maxOnly": false
-    },
-    "CO2 Vols": {
-      "stages": [
-        "BBT",
-        "FIN"
-      ],
-      "target": null,
-      "low": null,
-      "high": null,
-      "unit": "",
       "maxOnly": false
     },
     "HAZE": {
@@ -747,9 +711,9 @@ const SPECS = {
         "BBT",
         "FIN"
       ],
-      "target": null,
-      "low": null,
-      "high": null,
+      "target": 6000.0,
+      "low": 5100.0,
+      "high": 6900.0,
       "unit": "",
       "maxOnly": false
     },
@@ -758,45 +722,34 @@ const SPECS = {
         "BBT",
         "FIN"
       ],
-      "target": null,
-      "low": null,
-      "high": null,
+      "target": 7.0,
+      "low": 6.3,
+      "high": 7.7,
       "unit": "",
       "maxOnly": false
     },
-    "Wort pH": {
+    "CO2 Vols": {
       "stages": [
-        "WORT"
+        "FIN"
       ],
-      "target": 5.4,
-      "low": 5.29,
-      "high": 5.51,
+      "target": 2.67,
+      "low": 2.6,
+      "high": 2.74,
       "unit": "",
       "maxOnly": false
     },
-    "Total VDK": {
+    "DO": {
       "stages": [
-        "GC"
-      ],
-      "target": null,
-      "low": null,
-      "high": 0.075,
-      "unit": "mg/L",
-      "maxOnly": true
-    }
-  },
-  "STG": {
-    "Turbidity": {
-      "stages": [
-        "BBT",
         "FIN"
       ],
       "target": null,
       "low": null,
-      "high": null,
+      "high": 80.0,
       "unit": "",
-      "maxOnly": false
-    },
+      "maxOnly": true
+    }
+  },
+  "STG": {
     "OG": {
       "stages": [
         "WORT"
@@ -807,15 +760,14 @@ const SPECS = {
       "unit": "\u00b0P",
       "maxOnly": false
     },
-    "FG": {
+    "Wort pH": {
       "stages": [
-        "BBT",
-        "FIN"
+        "WORT"
       ],
-      "target": 3.5,
-      "low": 3.3,
-      "high": 3.7,
-      "unit": "\u00b0P",
+      "target": 5.4,
+      "low": 5.29,
+      "high": 5.51,
+      "unit": "",
       "maxOnly": false
     },
     "ABV": {
@@ -829,26 +781,37 @@ const SPECS = {
       "unit": "%",
       "maxOnly": false
     },
+    "AE": {
+      "stages": [
+        "BBT",
+        "FIN"
+      ],
+      "target": 2.9,
+      "low": 2.7,
+      "high": 3.1,
+      "unit": "\u00b0P",
+      "maxOnly": false
+    },
+    "pH": {
+      "stages": [
+        "BBT",
+        "FIN"
+      ],
+      "target": 4.2,
+      "low": 4.0,
+      "high": 4.4,
+      "unit": "",
+      "maxOnly": false
+    },
     "IBU": {
       "stages": [
         "BBT",
         "FIN"
       ],
       "target": 20.0,
-      "low": 18.0,
-      "high": 22.0,
+      "low": 17.0,
+      "high": 23.0,
       "unit": "IBU",
-      "maxOnly": false
-    },
-    "CO2 Vols": {
-      "stages": [
-        "BBT",
-        "FIN"
-      ],
-      "target": null,
-      "low": null,
-      "high": null,
-      "unit": "",
       "maxOnly": false
     },
     "HAZE": {
@@ -856,9 +819,9 @@ const SPECS = {
         "BBT",
         "FIN"
       ],
-      "target": null,
-      "low": null,
-      "high": null,
+      "target": 630.0,
+      "low": 535.5,
+      "high": 724.5,
       "unit": "",
       "maxOnly": false
     },
@@ -867,45 +830,34 @@ const SPECS = {
         "BBT",
         "FIN"
       ],
-      "target": null,
-      "low": null,
-      "high": null,
+      "target": 8.0,
+      "low": 7.2,
+      "high": 8.8,
       "unit": "",
       "maxOnly": false
     },
-    "Wort pH": {
+    "CO2 Vols": {
       "stages": [
-        "WORT"
+        "FIN"
       ],
-      "target": 5.4,
-      "low": 5.29,
-      "high": 5.51,
+      "target": 2.67,
+      "low": 2.6,
+      "high": 2.74,
       "unit": "",
       "maxOnly": false
     },
-    "Total VDK": {
+    "DO": {
       "stages": [
-        "GC"
-      ],
-      "target": null,
-      "low": null,
-      "high": 0.075,
-      "unit": "mg/L",
-      "maxOnly": true
-    }
-  },
-  "TBD": {
-    "Turbidity": {
-      "stages": [
-        "BBT",
         "FIN"
       ],
       "target": null,
       "low": null,
-      "high": null,
+      "high": 100.0,
       "unit": "",
-      "maxOnly": false
-    },
+      "maxOnly": true
+    }
+  },
+  "TBD": {
     "OG": {
       "stages": [
         "WORT"
@@ -916,72 +868,6 @@ const SPECS = {
       "unit": "\u00b0P",
       "maxOnly": false
     },
-    "FG": {
-      "stages": [
-        "BBT",
-        "FIN"
-      ],
-      "target": 3.0,
-      "low": 2.8,
-      "high": 3.2,
-      "unit": "\u00b0P",
-      "maxOnly": false
-    },
-    "ABV": {
-      "stages": [
-        "BBT",
-        "FIN"
-      ],
-      "target": 5.5,
-      "low": 5.2,
-      "high": 5.8,
-      "unit": "%",
-      "maxOnly": false
-    },
-    "IBU": {
-      "stages": [
-        "BBT",
-        "FIN"
-      ],
-      "target": 20.0,
-      "low": 18.0,
-      "high": 22.0,
-      "unit": "IBU",
-      "maxOnly": false
-    },
-    "CO2 Vols": {
-      "stages": [
-        "BBT",
-        "FIN"
-      ],
-      "target": null,
-      "low": null,
-      "high": null,
-      "unit": "",
-      "maxOnly": false
-    },
-    "HAZE": {
-      "stages": [
-        "BBT",
-        "FIN"
-      ],
-      "target": null,
-      "low": null,
-      "high": null,
-      "unit": "",
-      "maxOnly": false
-    },
-    "SRM": {
-      "stages": [
-        "BBT",
-        "FIN"
-      ],
-      "target": null,
-      "low": null,
-      "high": null,
-      "unit": "",
-      "maxOnly": false
-    },
     "Wort pH": {
       "stages": [
         "WORT"
@@ -992,14 +878,90 @@ const SPECS = {
       "unit": "",
       "maxOnly": false
     },
-    "Total VDK": {
+    "ABV": {
       "stages": [
-        "GC"
+        "BBT",
+        "FIN"
+      ],
+      "target": 5.6,
+      "low": 5.3,
+      "high": 5.9,
+      "unit": "%",
+      "maxOnly": false
+    },
+    "AE": {
+      "stages": [
+        "BBT",
+        "FIN"
+      ],
+      "target": 2.2,
+      "low": 2.0,
+      "high": 2.4,
+      "unit": "\u00b0P",
+      "maxOnly": false
+    },
+    "pH": {
+      "stages": [
+        "BBT",
+        "FIN"
+      ],
+      "target": 4.4,
+      "low": 4.2,
+      "high": 4.6,
+      "unit": "",
+      "maxOnly": false
+    },
+    "IBU": {
+      "stages": [
+        "BBT",
+        "FIN"
+      ],
+      "target": 21.0,
+      "low": 17.85,
+      "high": 24.15,
+      "unit": "IBU",
+      "maxOnly": false
+    },
+    "HAZE": {
+      "stages": [
+        "BBT",
+        "FIN"
+      ],
+      "target": 220.0,
+      "low": 187.0,
+      "high": 253.0,
+      "unit": "",
+      "maxOnly": false
+    },
+    "SRM": {
+      "stages": [
+        "BBT",
+        "FIN"
+      ],
+      "target": 55.0,
+      "low": 49.5,
+      "high": 60.5,
+      "unit": "",
+      "maxOnly": false
+    },
+    "CO2 Vols": {
+      "stages": [
+        "FIN"
+      ],
+      "target": 2.67,
+      "low": 2.6,
+      "high": 2.74,
+      "unit": "",
+      "maxOnly": false
+    },
+    "DO": {
+      "stages": [
+        "FIN"
       ],
       "target": null,
       "low": null,
-      "high": 0.075,
-      "unit": "mg/L",
+      "high": 80.0,
+      "unit": "",
       "maxOnly": true
     }
   }
@@ -1019,7 +981,7 @@ function checkSpec(metric, value, stage, product) {
 
 function computeOOS(readings, product) {
   const flags = [];
-  const metrics = ['OG','Wort pH','IBU (W)','ABV','FG','IBU','Total VDK'];
+  const metrics = ['OG','Wort pH','IBU (W)','ABV','AE','IBU'];
   const pspecs = SPECS[product] || {};
   for (const r of readings) {
     for (const m of metrics) {
@@ -1062,7 +1024,7 @@ const BATCHES = [
         "sourceSheet": "Abita Brews",
         "ABV": 4.17,
         "Turbidity": 188.10686945915222,
-        "FG": 2.1
+        "AE": 2.1
       },
       {
         "date": "2026-04-17",
@@ -1089,11 +1051,11 @@ const BATCHES = [
         "ADF": -2.69,
         "RDF": -2.29,
         "OG": 10.03,
-        "FG": 10.3,
         "RE": 10.24,
         "HAZE": 5309.922500610352,
         "SG": 1.04122,
-        "ABV": -0.15
+        "ABV": -0.15,
+        "AE": 10.3
       }
     ],
     "fermLog": [
@@ -1278,11 +1240,11 @@ const BATCHES = [
         "ADF": -1.51,
         "RDF": -1.31,
         "OG": 14.1,
-        "FG": 14.31,
         "RE": 14.27,
         "HAZE": 6078.403472900391,
         "SG": 1.0581,
-        "ABV": -0.12
+        "ABV": -0.12,
+        "AE": 14.31
       }
     ],
     "fermLog": [],
@@ -1316,7 +1278,7 @@ const BATCHES = [
         "sourceSheet": "Abita Brews",
         "ABV": 4.37,
         "Turbidity": 264.8754529953003,
-        "FG": 1.91
+        "AE": 1.91
       },
       {
         "date": "2026-06-22",
@@ -1332,11 +1294,11 @@ const BATCHES = [
         "ADF": -0.18,
         "RDF": -0.16,
         "OG": 10.25,
-        "FG": 10.27,
         "RE": 10.27,
         "HAZE": 155.74198007583618,
         "SG": 1.04111,
-        "ABV": -0.01
+        "ABV": -0.01,
+        "AE": 10.27
       }
     ],
     "fermLog": [
@@ -1520,11 +1482,11 @@ const BATCHES = [
         "ADF": 1.25,
         "RDF": 1.05,
         "OG": 10.23,
-        "FG": 10.1,
         "RE": 10.13,
         "HAZE": 1893.2417221069336,
         "SG": 1.04041,
-        "ABV": 0.07
+        "ABV": 0.07,
+        "AE": 10.1
       },
       {
         "date": "2026-07-20",
@@ -1546,7 +1508,7 @@ const BATCHES = [
         "sourceSheet": "Abita Brews",
         "ABV": 4.37,
         "Turbidity": 448.0465478897095,
-        "FG": 1.74
+        "AE": 1.74
       }
     ],
     "fermLog": [
@@ -1685,7 +1647,7 @@ const BATCHES = [
         "sourceSheet": "Abita Brews",
         "ABV": 4.81,
         "Turbidity": 308.44206047058105,
-        "FG": 2.43
+        "AE": 2.43
       },
       {
         "date": "2026-07-16",
@@ -1701,11 +1663,11 @@ const BATCHES = [
         "ADF": -0.34,
         "RDF": -0.3,
         "OG": 11.53,
-        "FG": 11.56,
         "RE": 11.56,
         "HAZE": 3135.935817718506,
         "SG": 1.0465,
-        "ABV": -0.02
+        "ABV": -0.02,
+        "AE": 11.56
       },
       {
         "date": "2026-06-13",
@@ -1716,7 +1678,7 @@ const BATCHES = [
         "sourceSheet": "Abita Brews",
         "ABV": 4.72,
         "Turbidity": 621.0680408477783,
-        "FG": 2.42
+        "AE": 2.42
       }
     ],
     "fermLog": [
@@ -1879,7 +1841,7 @@ const BATCHES = [
         "sourceSheet": "Abita Brews",
         "ABV": 5.78,
         "Turbidity": 1014.2168769836426,
-        "FG": 2.66
+        "AE": 2.66
       },
       {
         "date": "2026-08-01",
@@ -1895,10 +1857,10 @@ const BATCHES = [
         "ADF": 0.17,
         "RDF": 0.14,
         "OG": 13.62,
-        "FG": 13.6,
         "RE": 13.6,
         "SG": 1.05507,
-        "ABV": 0.01
+        "ABV": 0.01,
+        "AE": 13.6
       },
       {
         "date": "2026-07-31",
@@ -2048,11 +2010,11 @@ const BATCHES = [
         "ADF": 0.18,
         "RDF": 0.15,
         "OG": 16.82,
-        "FG": 16.79,
         "RE": 16.8,
         "HAZE": 2225.9119834899902,
         "SG": 1.0688,
-        "ABV": 0.02
+        "ABV": 0.02,
+        "AE": 16.79
       }
     ],
     "fermLog": [],
@@ -2120,7 +2082,7 @@ const BATCHES = [
         "sourceSheet": "Abita Brews",
         "ABV": 3.92,
         "Turbidity": 853.5674343109131,
-        "FG": 2.43
+        "AE": 2.43
       },
       {
         "date": "2026-06-19",
@@ -2136,11 +2098,11 @@ const BATCHES = [
         "ADF": -0.68,
         "RDF": -0.58,
         "OG": 9.99,
-        "FG": 10.06,
         "RE": 10.05,
         "HAZE": 1407.592077255249,
         "SG": 1.04024,
-        "ABV": -0.04
+        "ABV": -0.04,
+        "AE": 10.06
       }
     ],
     "fermLog": [
@@ -2279,7 +2241,7 @@ const BATCHES = [
         "sourceSheet": "Abita Brews",
         "ABV": 4.23,
         "Turbidity": 543.410632610321,
-        "FG": 1.74
+        "AE": 1.74
       },
       {
         "date": "2026-08-03",
@@ -2301,7 +2263,7 @@ const BATCHES = [
         "sourceSheet": "Abita Brews",
         "ABV": 4.24,
         "Turbidity": 390.7796459197998,
-        "FG": 1.76
+        "AE": 1.76
       },
       {
         "date": "2026-07-31",
@@ -2317,11 +2279,11 @@ const BATCHES = [
         "ADF": 0.07,
         "RDF": 0.05,
         "OG": 10.17,
-        "FG": 10.17,
         "RE": 10.17,
         "HAZE": 3944.1618576049805,
         "SG": 1.04067,
-        "ABV": 0.0
+        "ABV": 0.0,
+        "AE": 10.17
       },
       {
         "date": "2026-07-31",
@@ -2337,11 +2299,11 @@ const BATCHES = [
         "ADF": -0.31,
         "RDF": -0.27,
         "OG": 9.78,
-        "FG": 9.81,
         "RE": 9.81,
         "HAZE": 3237.5512046813965,
         "SG": 1.03921,
-        "ABV": -0.02
+        "ABV": -0.02,
+        "AE": 9.81
       }
     ],
     "fermLog": [
@@ -2469,7 +2431,7 @@ const BATCHES = [
         "sourceSheet": "Abita Brews",
         "ABV": 8.18,
         "Turbidity": 720.834282875061,
-        "FG": 3.67
+        "AE": 3.67
       },
       {
         "date": "2026-07-11",
@@ -2485,11 +2447,11 @@ const BATCHES = [
         "ADF": 0.05,
         "RDF": 0.04,
         "OG": 18.32,
-        "FG": 18.31,
         "RE": 18.31,
         "HAZE": 3895.677291870117,
         "SG": 1.07542,
-        "ABV": 0.0
+        "ABV": 0.0,
+        "AE": 18.31
       },
       {
         "date": "2026-07-11",
@@ -2505,10 +2467,10 @@ const BATCHES = [
         "ADF": -0.09,
         "RDF": -0.09,
         "OG": 18.23,
-        "FG": 18.25,
         "RE": 18.25,
         "SG": 1.07517,
-        "ABV": -0.01
+        "ABV": -0.01,
+        "AE": 18.25
       }
     ],
     "fermLog": [
@@ -2631,7 +2593,7 @@ const BATCHES = [
         "sourceSheet": "Abita Brews",
         "ABV": 4.43,
         "Turbidity": 412.9364833831787,
-        "FG": 2.24
+        "AE": 2.24
       },
       {
         "date": "2026-07-29",
@@ -2653,7 +2615,7 @@ const BATCHES = [
         "sourceSheet": "Abita Brews",
         "ABV": 4.4,
         "Turbidity": 484.945086479187,
-        "FG": 2.27
+        "AE": 2.27
       },
       {
         "date": "2026-07-28",
@@ -2680,11 +2642,11 @@ const BATCHES = [
         "ADF": -0.69,
         "RDF": -0.59,
         "OG": 10.53,
-        "FG": 10.6,
         "RE": 10.59,
         "HAZE": 659.6907634735107,
         "SG": 1.04248,
-        "ABV": -0.04
+        "ABV": -0.04,
+        "AE": 10.6
       },
       {
         "date": "2026-07-27",
@@ -2700,11 +2662,11 @@ const BATCHES = [
         "ADF": -0.69,
         "RDF": -0.59,
         "OG": 10.43,
-        "FG": 10.5,
         "RE": 10.49,
         "HAZE": 921.510892868042,
         "SG": 1.04206,
-        "ABV": -0.04
+        "ABV": -0.04,
+        "AE": 10.5
       },
       {
         "date": "2026-07-27",
@@ -2715,7 +2677,7 @@ const BATCHES = [
         "sourceSheet": "Abita Brews",
         "ABV": 4.35,
         "Turbidity": 395.44639921188354,
-        "FG": 2.32
+        "AE": 2.32
       },
       {
         "date": "2026-07-27",
@@ -2926,7 +2888,7 @@ const BATCHES = [
         "sourceSheet": "Abita Brews",
         "ABV": 8.17,
         "Turbidity": 550.5423860549927,
-        "FG": 3.71
+        "AE": 3.71
       },
       {
         "date": "2026-07-17",
@@ -2953,11 +2915,11 @@ const BATCHES = [
         "ADF": 0.28,
         "RDF": 0.24,
         "OG": 18.36,
-        "FG": 18.31,
         "RE": 18.32,
         "HAZE": 2168.8912525177,
         "SG": 1.07541,
-        "ABV": 0.03
+        "ABV": 0.03,
+        "AE": 18.31
       },
       {
         "date": "2026-07-11",
@@ -2973,11 +2935,11 @@ const BATCHES = [
         "ADF": 0.02,
         "RDF": 0.02,
         "OG": 18.29,
-        "FG": 18.28,
         "RE": 18.28,
         "HAZE": 4425.004554748535,
         "SG": 1.07529,
-        "ABV": 0.0
+        "ABV": 0.0,
+        "AE": 18.28
       }
     ],
     "fermLog": [
@@ -3169,7 +3131,7 @@ const BATCHES = [
         "sourceSheet": "Abita Brews",
         "ABV": 4.48,
         "Turbidity": 384.79047203063965,
-        "FG": 1.62
+        "AE": 1.62
       },
       {
         "date": "2026-05-21",
@@ -3185,11 +3147,11 @@ const BATCHES = [
         "ADF": -0.59,
         "RDF": -0.51,
         "OG": 10.23,
-        "FG": 10.29,
         "RE": 10.28,
         "HAZE": 1506.3644886016846,
         "SG": 1.04118,
-        "ABV": -0.03
+        "ABV": -0.03,
+        "AE": 10.29
       },
       {
         "date": "2026-05-21",
@@ -3205,11 +3167,11 @@ const BATCHES = [
         "ADF": -1.0,
         "RDF": -0.85,
         "OG": 10.16,
-        "FG": 10.26,
         "RE": 10.24,
         "HAZE": 2164.442144393921,
         "SG": 1.04105,
-        "ABV": -0.06
+        "ABV": -0.06,
+        "AE": 10.26
       }
     ],
     "fermLog": [
@@ -3351,7 +3313,7 @@ const BATCHES = [
         "sourceSheet": "Abita Brews",
         "ABV": 4.47,
         "Turbidity": 556.0386915206909,
-        "FG": 1.76
+        "AE": 1.76
       },
       {
         "date": "2026-07-31",
@@ -3367,11 +3329,11 @@ const BATCHES = [
         "ADF": -0.57,
         "RDF": -0.49,
         "OG": 10.14,
-        "FG": 10.2,
         "RE": 10.19,
         "HAZE": 1594.8831310272217,
         "SG": 1.04082,
-        "ABV": -0.03
+        "ABV": -0.03,
+        "AE": 10.2
       },
       {
         "date": "2026-07-31",
@@ -3387,11 +3349,11 @@ const BATCHES = [
         "ADF": -0.47,
         "RDF": -0.4,
         "OG": 10.24,
-        "FG": 10.29,
         "RE": 10.28,
         "HAZE": 1546.953815460205,
         "SG": 1.04117,
-        "ABV": -0.03
+        "ABV": -0.03,
+        "AE": 10.29
       },
       {
         "date": "2026-07-31",
@@ -3515,7 +3477,7 @@ const BATCHES = [
         "sourceSheet": "Abita Brews",
         "ABV": 4.46,
         "Turbidity": 232.79977011680603,
-        "FG": 1.51
+        "AE": 1.51
       },
       {
         "date": "2026-07-13",
@@ -3542,11 +3504,11 @@ const BATCHES = [
         "ADF": -0.91,
         "RDF": -0.78,
         "OG": 10.14,
-        "FG": 10.24,
         "RE": 10.22,
         "HAZE": 3220.368061065674,
         "SG": 1.04097,
-        "ABV": -0.05
+        "ABV": -0.05,
+        "AE": 10.24
       },
       {
         "date": "2026-07-11",
@@ -3562,11 +3524,11 @@ const BATCHES = [
         "ADF": -1.3,
         "RDF": -1.11,
         "OG": 10.01,
-        "FG": 10.14,
         "RE": 10.12,
         "HAZE": 2000.189037322998,
         "SG": 1.04057,
-        "ABV": -0.07
+        "ABV": -0.07,
+        "AE": 10.14
       }
     ],
     "fermLog": [
@@ -3698,7 +3660,7 @@ const BATCHES = [
         "sourceSheet": "Abita Brews",
         "ABV": 4.47,
         "Turbidity": 508.7774133682251,
-        "FG": 1.48
+        "AE": 1.48
       },
       {
         "date": "2026-07-27",
@@ -3725,11 +3687,11 @@ const BATCHES = [
         "ADF": -1.76,
         "RDF": -1.5,
         "OG": 9.88,
-        "FG": 10.06,
         "RE": 10.02,
         "HAZE": 2100.364906311035,
         "SG": 1.04022,
-        "ABV": -0.09
+        "ABV": -0.09,
+        "AE": 10.06
       },
       {
         "date": "2026-07-24",
@@ -3745,11 +3707,11 @@ const BATCHES = [
         "ADF": -1.72,
         "RDF": -1.47,
         "OG": 9.82,
-        "FG": 9.99,
         "RE": 9.96,
         "HAZE": 1776.413480758667,
         "SG": 1.03994,
-        "ABV": -0.09
+        "ABV": -0.09,
+        "AE": 9.99
       }
     ],
     "fermLog": [
@@ -3840,7 +3802,7 @@ const BATCHES = [
         "sourceSheet": "Abita Brews",
         "ABV": 4.3,
         "Turbidity": 140.52678966522217,
-        "FG": 2.13
+        "AE": 2.13
       },
       {
         "date": "2026-07-09",
@@ -3867,11 +3829,11 @@ const BATCHES = [
         "ADF": 0.06,
         "RDF": 0.04,
         "OG": 10.42,
-        "FG": 10.41,
         "RE": 10.41,
         "HAZE": 1787.5458583831787,
         "SG": 1.0417,
-        "ABV": 0.0
+        "ABV": 0.0,
+        "AE": 10.41
       },
       {
         "date": "2026-07-08",
@@ -3887,11 +3849,11 @@ const BATCHES = [
         "ADF": -0.16,
         "RDF": -0.15,
         "OG": 10.54,
-        "FG": 10.56,
         "RE": 10.55,
         "HAZE": 1552.617919921875,
         "SG": 1.0423,
-        "ABV": -0.01
+        "ABV": -0.01,
+        "AE": 10.56
       }
     ],
     "fermLog": [
@@ -4101,7 +4063,7 @@ const BATCHES = [
         "sourceSheet": "Abita Brews",
         "ABV": 4.29,
         "Turbidity": 382.567102432251,
-        "FG": 1.81
+        "AE": 1.81
       },
       {
         "date": "2026-06-03",
@@ -4117,11 +4079,11 @@ const BATCHES = [
         "ADF": -1.15,
         "RDF": -0.99,
         "OG": 10.06,
-        "FG": 10.17,
         "RE": 10.15,
         "HAZE": 2183.019006729126,
         "SG": 1.0407,
-        "ABV": -0.06
+        "ABV": -0.06,
+        "AE": 10.17
       },
       {
         "date": "2026-06-03",
@@ -4137,11 +4099,11 @@ const BATCHES = [
         "ADF": -0.76,
         "RDF": -0.66,
         "OG": 10.07,
-        "FG": 10.15,
         "RE": 10.14,
         "HAZE": 288.5243196487427,
         "SG": 1.04061,
-        "ABV": -0.04
+        "ABV": -0.04,
+        "AE": 10.15
       }
     ],
     "fermLog": [
@@ -4319,7 +4281,7 @@ const BATCHES = [
         "sourceSheet": "Abita Brews",
         "ABV": 4.31,
         "Turbidity": 838.3895874023438,
-        "FG": 2.38
+        "AE": 2.38
       },
       {
         "date": "2026-07-31",
@@ -4335,11 +4297,11 @@ const BATCHES = [
         "ADF": -0.6,
         "RDF": -0.52,
         "OG": 10.49,
-        "FG": 10.55,
         "RE": 10.54,
         "HAZE": 1822.5708389282227,
         "SG": 1.04227,
-        "ABV": -0.03
+        "ABV": -0.03,
+        "AE": 10.55
       },
       {
         "date": "2026-07-31",
@@ -4355,11 +4317,11 @@ const BATCHES = [
         "ADF": -0.44,
         "RDF": -0.38,
         "OG": 10.34,
-        "FG": 10.39,
         "RE": 10.38,
         "HAZE": 1449.982578277588,
         "SG": 1.0416,
-        "ABV": -0.03
+        "ABV": -0.03,
+        "AE": 10.39
       },
       {
         "date": "2026-07-29",
@@ -4375,11 +4337,11 @@ const BATCHES = [
         "ADF": -0.95,
         "RDF": -0.82,
         "OG": 10.5,
-        "FG": 10.6,
         "RE": 10.58,
         "HAZE": 1101.7949237823486,
         "SG": 1.04247,
-        "ABV": -0.05
+        "ABV": -0.05,
+        "AE": 10.6
       },
       {
         "date": "2026-07-29",
@@ -4395,11 +4357,11 @@ const BATCHES = [
         "ADF": -1.17,
         "RDF": -1.0,
         "OG": 10.35,
-        "FG": 10.47,
         "RE": 10.45,
         "HAZE": 1044.3578538894653,
         "SG": 1.04194,
-        "ABV": -0.07
+        "ABV": -0.07,
+        "AE": 10.47
       }
     ],
     "fermLog": [
@@ -4567,7 +4529,7 @@ const BATCHES = [
         "sourceSheet": "Abita Brews",
         "ABV": 7.97,
         "Turbidity": 1131.7673778533936,
-        "FG": 3.48
+        "AE": 3.48
       },
       {
         "date": "2026-07-06",
@@ -4594,10 +4556,10 @@ const BATCHES = [
         "ADF": 0.39,
         "RDF": 0.34,
         "OG": 18.39,
-        "FG": 18.31,
         "RE": 18.33,
         "SG": 1.07543,
-        "ABV": 0.04
+        "ABV": 0.04,
+        "AE": 18.31
       },
       {
         "date": "2026-07-02",
@@ -4613,11 +4575,11 @@ const BATCHES = [
         "ADF": 0.0,
         "RDF": 0.0,
         "OG": 17.6,
-        "FG": 17.6,
         "RE": 17.6,
         "HAZE": 5151.648170471191,
         "SG": 1.07231,
-        "ABV": 0.0
+        "ABV": 0.0,
+        "AE": 17.6
       },
       {
         "date": "2026-07-02",
@@ -4633,10 +4595,10 @@ const BATCHES = [
         "ADF": -0.1,
         "RDF": -0.1,
         "OG": 18.23,
-        "FG": 18.25,
         "RE": 18.25,
         "SG": 1.07516,
-        "ABV": -0.01
+        "ABV": -0.01,
+        "AE": 18.25
       },
       {
         "date": "2026-07-02",
@@ -4652,10 +4614,10 @@ const BATCHES = [
         "ADF": 0.08,
         "RDF": 0.06,
         "OG": 18.39,
-        "FG": 18.38,
         "RE": 18.38,
         "SG": 1.07571,
-        "ABV": 0.01
+        "ABV": 0.01,
+        "AE": 18.38
       }
     ],
     "fermLog": [
@@ -4875,7 +4837,7 @@ const BATCHES = [
         "sourceSheet": "Abita Brews",
         "ABV": 4.39,
         "Turbidity": 378.52242279052734,
-        "FG": 1.67
+        "AE": 1.67
       },
       {
         "date": "2026-06-24",
@@ -4891,11 +4853,11 @@ const BATCHES = [
         "ADF": -0.68,
         "RDF": -0.59,
         "OG": 10.19,
-        "FG": 10.26,
         "RE": 10.25,
         "HAZE": 804.3538312911987,
         "SG": 1.04107,
-        "ABV": -0.04
+        "ABV": -0.04,
+        "AE": 10.26
       },
       {
         "date": "2026-06-24",
@@ -4911,11 +4873,11 @@ const BATCHES = [
         "ADF": -0.66,
         "RDF": -0.56,
         "OG": 10.12,
-        "FG": 10.18,
         "RE": 10.17,
         "HAZE": 620.3333444595337,
         "SG": 1.04075,
-        "ABV": -0.04
+        "ABV": -0.04,
+        "AE": 10.18
       },
       {
         "date": "2026-06-24",
@@ -4931,11 +4893,11 @@ const BATCHES = [
         "ADF": -0.57,
         "RDF": -0.49,
         "OG": 10.34,
-        "FG": 10.4,
         "RE": 10.39,
         "HAZE": 553.4527444839478,
         "SG": 1.04164,
-        "ABV": -0.03
+        "ABV": -0.03,
+        "AE": 10.4
       },
       {
         "date": "2026-06-24",
@@ -4951,11 +4913,11 @@ const BATCHES = [
         "ADF": -0.94,
         "RDF": -0.8,
         "OG": 10.0,
-        "FG": 10.1,
         "RE": 10.08,
         "HAZE": 1755.3213443756104,
         "SG": 1.0404,
-        "ABV": -0.05
+        "ABV": -0.05,
+        "AE": 10.1
       }
     ],
     "fermLog": [
@@ -5168,11 +5130,11 @@ const BATCHES = [
         "ADF": 80.83,
         "RDF": 66.91,
         "OG": 13.48,
-        "FG": 2.58,
         "RE": 4.68,
         "HAZE": 531.1080708503723,
         "SG": 1.01008,
-        "ABV": 5.85
+        "ABV": 5.85,
+        "AE": 2.58
       },
       {
         "date": "2026-08-04",
@@ -5189,12 +5151,12 @@ const BATCHES = [
         "Calories": 180.08,
         "ADF": 80.52,
         "RDF": 66.67,
-        "FG": 2.64,
         "RE": 4.74,
         "HAZE": 460.8429322242737,
         "SG": 1.01031,
         "ABV": 5.87,
-        "OG": 13.57
+        "OG": 13.57,
+        "AE": 2.64
       },
       {
         "date": "2026-07-07",
@@ -5211,12 +5173,12 @@ const BATCHES = [
         "Calories": 177.47,
         "ADF": 80.2,
         "RDF": 66.4,
-        "FG": 2.65,
         "RE": 4.71,
         "HAZE": 535.501015663147,
         "SG": 1.01033,
         "ABV": 5.76,
-        "OG": 13.38
+        "OG": 13.38,
+        "AE": 2.65
       },
       {
         "date": "2026-07-07",
@@ -5232,11 +5194,11 @@ const BATCHES = [
         "ADF": 80.72,
         "RDF": 66.8,
         "OG": 13.27,
-        "FG": 2.56,
         "RE": 4.62,
         "HAZE": 484.27546977996826,
         "SG": 1.00998,
-        "ABV": 5.74
+        "ABV": 5.74,
+        "AE": 2.56
       },
       {
         "date": "2026-06-15",
@@ -5258,7 +5220,7 @@ const BATCHES = [
         "sourceSheet": "Abita Brews",
         "ABV": 5.62,
         "Turbidity": 1360.08837890625,
-        "FG": 2.76
+        "AE": 2.76
       },
       {
         "date": "2026-06-14",
@@ -5283,11 +5245,11 @@ const BATCHES = [
         "ADF": -0.49,
         "RDF": -0.43,
         "OG": 13.36,
-        "FG": 13.43,
         "RE": 13.42,
         "HAZE": 2501.4100341796875,
         "SG": 1.05435,
-        "ABV": -0.04
+        "ABV": -0.04,
+        "AE": 13.43
       },
       {
         "date": "2026-06-12",
@@ -5436,7 +5398,7 @@ const BATCHES = [
     ],
     "basecampAlerts": [
       {
-        "metric": "FG",
+        "metric": "AE",
         "value": 2.58,
         "low": 2.8,
         "high": 3.2,
@@ -5480,7 +5442,7 @@ const BATCHES = [
         ]
       },
       {
-        "metric": "FG",
+        "metric": "AE",
         "value": 2.65,
         "low": 2.8,
         "high": 3.2,
@@ -5536,12 +5498,12 @@ const BATCHES = [
         "Calories": 136.48,
         "ADF": 80.58,
         "RDF": 66.29,
-        "FG": 2.03,
         "RE": 3.65,
         "HAZE": 12.56486901640892,
         "SG": 1.0079,
         "ABV": 4.43,
-        "OG": 10.45
+        "OG": 10.45,
+        "AE": 2.03
       },
       {
         "date": "2026-08-03",
@@ -5558,12 +5520,12 @@ const BATCHES = [
         "Calories": 137.04,
         "ADF": 80.68,
         "RDF": 66.38,
-        "FG": 2.03,
         "RE": 3.66,
         "HAZE": 30.35873106122017,
         "SG": 1.00789,
         "ABV": 4.45,
-        "OG": 10.49
+        "OG": 10.49,
+        "AE": 2.03
       },
       {
         "date": "2026-08-03",
@@ -5580,12 +5542,12 @@ const BATCHES = [
         "Calories": 137.09,
         "ADF": 80.62,
         "RDF": 66.33,
-        "FG": 2.03,
         "RE": 3.66,
         "HAZE": 99.42331516742706,
         "SG": 1.00792,
         "ABV": 4.45,
-        "OG": 10.49
+        "OG": 10.49,
+        "AE": 2.03
       },
       {
         "date": "2026-07-30",
@@ -5602,12 +5564,12 @@ const BATCHES = [
         "Calories": 138.51,
         "ADF": 81.0,
         "RDF": 66.65,
-        "FG": 2.01,
         "RE": 3.67,
         "HAZE": 33.32491144537926,
         "SG": 1.00784,
         "ABV": 4.52,
-        "OG": 10.6
+        "OG": 10.6,
+        "AE": 2.01
       },
       {
         "date": "2026-07-23",
@@ -5623,11 +5585,11 @@ const BATCHES = [
         "ADF": 82.07,
         "RDF": 67.52,
         "OG": 10.72,
-        "FG": 1.92,
         "RE": 3.62,
         "HAZE": 36.70587819814682,
         "SG": 1.00748,
-        "ABV": 4.64
+        "ABV": 4.64,
+        "AE": 1.92
       },
       {
         "date": "2026-07-22",
@@ -5644,12 +5606,12 @@ const BATCHES = [
         "Calories": 141.16,
         "ADF": 81.93,
         "RDF": 67.42,
-        "FG": 1.95,
         "RE": 3.66,
         "HAZE": 44.7980917096138,
         "SG": 1.0076,
         "ABV": 4.67,
-        "OG": 10.8
+        "OG": 10.8,
+        "AE": 1.95
       },
       {
         "date": "2026-07-22",
@@ -5666,12 +5628,12 @@ const BATCHES = [
         "Calories": 139.91,
         "ADF": 81.91,
         "RDF": 67.39,
-        "FG": 1.94,
         "RE": 3.63,
         "HAZE": 34.95707952976227,
         "SG": 1.00755,
         "ABV": 4.62,
-        "OG": 10.71
+        "OG": 10.71,
+        "AE": 1.94
       },
       {
         "date": "2026-07-01",
@@ -5693,7 +5655,7 @@ const BATCHES = [
         "sourceSheet": "Abita Brews",
         "ABV": 4.39,
         "Turbidity": 262.6596837043762,
-        "FG": 2.08
+        "AE": 2.08
       },
       {
         "date": "2026-06-29",
@@ -5709,11 +5671,11 @@ const BATCHES = [
         "ADF": -1.2,
         "RDF": -1.02,
         "OG": 10.23,
-        "FG": 10.36,
         "RE": 10.33,
         "HAZE": 2221.377857208252,
         "SG": 1.04147,
-        "ABV": -0.07
+        "ABV": -0.07,
+        "AE": 10.36
       },
       {
         "date": "2026-06-29",
@@ -5729,11 +5691,11 @@ const BATCHES = [
         "ADF": -0.89,
         "RDF": -0.77,
         "OG": 10.54,
-        "FG": 10.63,
         "RE": 10.62,
         "HAZE": 1105.427541732788,
         "SG": 1.04262,
-        "ABV": -0.05
+        "ABV": -0.05,
+        "AE": 10.63
       }
     ],
     "fermLog": [
@@ -5928,7 +5890,7 @@ const BATCHES = [
     ],
     "basecampAlerts": [
       {
-        "metric": "FG",
+        "metric": "AE",
         "value": 2.03,
         "low": 1.6,
         "high": 2.0,
@@ -6008,7 +5970,7 @@ const BATCHES = [
         ]
       },
       {
-        "metric": "FG",
+        "metric": "AE",
         "value": 2.03,
         "low": 1.6,
         "high": 2.0,
@@ -6110,7 +6072,7 @@ const BATCHES = [
         ]
       },
       {
-        "metric": "FG",
+        "metric": "AE",
         "value": 2.01,
         "low": 1.6,
         "high": 2.0,
@@ -6186,11 +6148,11 @@ const BATCHES = [
         "ADF": 84.42,
         "RDF": 70.52,
         "OG": 19.14,
-        "FG": 2.98,
         "RE": 6.07,
         "HAZE": 3920.307025909424,
         "SG": 1.01165,
-        "ABV": 8.98
+        "ABV": 8.98,
+        "AE": 2.98
       },
       {
         "date": "2026-07-31",
@@ -6207,12 +6169,12 @@ const BATCHES = [
         "Calories": 262.66,
         "ADF": 84.24,
         "RDF": 70.4,
-        "FG": 3.05,
         "RE": 6.16,
         "HAZE": 3999.7142486572266,
         "SG": 1.01191,
         "ABV": 9.07,
-        "OG": 19.35
+        "OG": 19.35,
+        "AE": 3.05
       },
       {
         "date": "2026-07-21",
@@ -6223,7 +6185,7 @@ const BATCHES = [
         "sourceSheet": "Abita Brews",
         "ABV": 8.9,
         "Turbidity": 4845.34538269043,
-        "FG": 3.17
+        "AE": 3.17
       },
       {
         "date": "2026-07-20",
@@ -6257,10 +6219,10 @@ const BATCHES = [
         "ADF": -1.14,
         "RDF": -1.02,
         "OG": 18.89,
-        "FG": 19.1,
         "RE": 19.06,
         "SG": 1.07891,
-        "ABV": -0.13
+        "ABV": -0.13,
+        "AE": 19.1
       }
     ],
     "fermLog": [
@@ -6383,7 +6345,7 @@ const BATCHES = [
     ],
     "basecampAlerts": [
       {
-        "metric": "FG",
+        "metric": "AE",
         "value": 2.98,
         "low": 3.8,
         "high": 4.2,
@@ -6398,7 +6360,7 @@ const BATCHES = [
         "also": []
       },
       {
-        "metric": "FG",
+        "metric": "AE",
         "value": 3.05,
         "low": 3.8,
         "high": 4.2,
@@ -6446,11 +6408,11 @@ const BATCHES = [
         "ADF": 83.66,
         "RDF": 69.73,
         "OG": 17.72,
-        "FG": 2.9,
         "RE": 5.73,
         "HAZE": 2464.306583404541,
         "SG": 1.0113,
-        "ABV": 8.17
+        "ABV": 8.17,
+        "AE": 2.9
       },
       {
         "date": "2026-07-30",
@@ -6466,11 +6428,11 @@ const BATCHES = [
         "ADF": 83.6,
         "RDF": 69.68,
         "OG": 17.69,
-        "FG": 2.9,
         "RE": 5.73,
         "HAZE": 2429.8239555358887,
         "SG": 1.01133,
-        "ABV": 8.15
+        "ABV": 8.15,
+        "AE": 2.9
       },
       {
         "date": "2026-07-29",
@@ -6487,12 +6449,12 @@ const BATCHES = [
         "Calories": 239.44,
         "ADF": 83.35,
         "RDF": 69.49,
-        "FG": 2.95,
         "RE": 5.78,
         "HAZE": 2350.4180488586426,
         "SG": 1.01154,
         "ABV": 8.16,
-        "OG": 17.75
+        "OG": 17.75,
+        "AE": 2.95
       },
       {
         "date": "2026-07-29",
@@ -6509,12 +6471,12 @@ const BATCHES = [
         "Calories": 239.29,
         "ADF": 83.33,
         "RDF": 69.47,
-        "FG": 2.96,
         "RE": 5.78,
         "HAZE": 2296.0777587890625,
         "SG": 1.01155,
         "ABV": 8.15,
-        "OG": 17.74
+        "OG": 17.74,
+        "AE": 2.96
       },
       {
         "date": "2026-07-20",
@@ -6536,7 +6498,7 @@ const BATCHES = [
         "sourceSheet": "Abita Brews",
         "ABV": 7.8,
         "Turbidity": 302.2388606071472,
-        "FG": 2.52
+        "AE": 2.52
       },
       {
         "date": "2026-07-16",
@@ -6552,11 +6514,11 @@ const BATCHES = [
         "ADF": -0.37,
         "RDF": -0.33,
         "OG": 16.82,
-        "FG": 16.89,
         "RE": 16.88,
         "HAZE": 4754.405960083008,
         "SG": 1.0692,
-        "ABV": -0.04
+        "ABV": -0.04,
+        "AE": 16.89
       },
       {
         "date": "2026-05-13",
@@ -6567,7 +6529,7 @@ const BATCHES = [
         "sourceSheet": "Abita Brews",
         "ABV": 7.89,
         "Turbidity": 280.57574701309204,
-        "FG": 2.3
+        "AE": 2.3
       },
       {
         "date": "2026-05-13",
@@ -6589,7 +6551,7 @@ const BATCHES = [
         "sourceSheet": "Abita Brews",
         "ABV": 7.66,
         "Turbidity": 157.87480401992798,
-        "FG": 2.72
+        "AE": 2.72
       },
       {
         "date": "2026-05-12",
@@ -6616,11 +6578,11 @@ const BATCHES = [
         "ADF": -0.38,
         "RDF": -0.34,
         "OG": 16.79,
-        "FG": 16.86,
         "RE": 16.85,
         "HAZE": 2284.386577606201,
         "SG": 1.06908,
-        "ABV": -0.04
+        "ABV": -0.04,
+        "AE": 16.86
       },
       {
         "date": "2026-04-24",
@@ -6636,11 +6598,11 @@ const BATCHES = [
         "ADF": 84.03,
         "RDF": 70.03,
         "OG": 17.74,
-        "FG": 2.83,
         "RE": 5.68,
         "HAZE": 919.314305305481,
         "SG": 1.01106,
-        "ABV": 8.22
+        "ABV": 8.22,
+        "AE": 2.83
       }
     ],
     "fermLog": [
@@ -6972,7 +6934,7 @@ const BATCHES = [
     ],
     "basecampAlerts": [
       {
-        "metric": "FG",
+        "metric": "AE",
         "value": 2.9,
         "low": 3.3,
         "high": 3.7,
@@ -7111,10 +7073,10 @@ const BATCHES = [
         "ADF": 80.25,
         "RDF": 66.56,
         "OG": 14.23,
-        "FG": 2.81,
         "RE": 5.0,
         "SG": 1.01097,
-        "ABV": 6.16
+        "ABV": 6.16,
+        "AE": 2.81
       },
       {
         "date": "2026-08-03",
@@ -7131,11 +7093,11 @@ const BATCHES = [
         "Calories": 190.2,
         "ADF": 80.04,
         "RDF": 66.39,
-        "FG": 2.85,
         "RE": 5.04,
         "SG": 1.01111,
         "ABV": 6.16,
-        "OG": 14.27
+        "OG": 14.27,
+        "AE": 2.85
       },
       {
         "date": "2026-07-21",
@@ -7145,7 +7107,7 @@ const BATCHES = [
         "sourceFile": "bh samples 2026.xlsx",
         "sourceSheet": "JJ",
         "ABV": 6.08,
-        "FG": 3.03
+        "AE": 3.03
       },
       {
         "date": "2026-07-21",
@@ -7155,7 +7117,7 @@ const BATCHES = [
         "sourceFile": "bh samples 2026.xlsx",
         "sourceSheet": "Abita Brews",
         "ABV": 6.08,
-        "FG": 3.03
+        "AE": 3.03
       },
       {
         "date": "2026-07-20",
@@ -7180,10 +7142,10 @@ const BATCHES = [
         "ADF": -0.56,
         "RDF": -0.49,
         "OG": 14.1,
-        "FG": 14.18,
         "RE": 14.17,
         "SG": 1.05756,
-        "ABV": -0.04
+        "ABV": -0.04,
+        "AE": 14.18
       }
     ],
     "fermLog": [
@@ -7279,7 +7241,7 @@ const BATCHES = [
     ],
     "basecampAlerts": [
       {
-        "metric": "FG",
+        "metric": "AE",
         "value": 2.81,
         "low": 3.0,
         "high": 3.4,
@@ -7351,11 +7313,11 @@ const BATCHES = [
         "ADF": 81.32,
         "RDF": 67.97,
         "OG": 18.34,
-        "FG": 3.43,
         "RE": 6.28,
         "HAZE": 55.39231163263321,
         "SG": 1.0134,
-        "ABV": 8.26
+        "ABV": 8.26,
+        "AE": 3.43
       },
       {
         "date": "2026-07-29",
@@ -7371,11 +7333,11 @@ const BATCHES = [
         "ADF": 81.13,
         "RDF": 67.82,
         "OG": 18.34,
-        "FG": 3.46,
         "RE": 6.31,
         "HAZE": 45.70006889104843,
         "SG": 1.01353,
-        "ABV": 8.24
+        "ABV": 8.24,
+        "AE": 3.46
       },
       {
         "date": "2026-07-29",
@@ -7392,12 +7354,12 @@ const BATCHES = [
         "Calories": 249.65,
         "ADF": 81.11,
         "RDF": 67.81,
-        "FG": 3.47,
         "RE": 6.33,
         "HAZE": 46.20411157608032,
         "SG": 1.01359,
         "ABV": 8.27,
-        "OG": 18.39
+        "OG": 18.39,
+        "AE": 3.47
       },
       {
         "date": "2026-07-29",
@@ -7413,11 +7375,11 @@ const BATCHES = [
         "ADF": 81.06,
         "RDF": 67.75,
         "OG": 18.29,
-        "FG": 3.46,
         "RE": 6.3,
         "HAZE": 54.87584441900253,
         "SG": 1.01354,
-        "ABV": 8.21
+        "ABV": 8.21,
+        "AE": 3.46
       },
       {
         "date": "2026-07-28",
@@ -7434,12 +7396,12 @@ const BATCHES = [
         "Calories": 249.82,
         "ADF": 80.94,
         "RDF": 67.68,
-        "FG": 3.51,
         "RE": 6.36,
         "HAZE": 54.55713737010956,
         "SG": 1.01372,
         "ABV": 8.26,
-        "OG": 18.4
+        "OG": 18.4,
+        "AE": 3.51
       },
       {
         "date": "2026-07-28",
@@ -7455,11 +7417,11 @@ const BATCHES = [
         "ADF": 81.14,
         "RDF": 67.8,
         "OG": 18.17,
-        "FG": 3.43,
         "RE": 6.25,
         "HAZE": 57.34145325422287,
         "SG": 1.0134,
-        "ABV": 8.16
+        "ABV": 8.16,
+        "AE": 3.43
       },
       {
         "date": "2026-07-27",
@@ -7476,12 +7438,12 @@ const BATCHES = [
         "Calories": 248.92,
         "ADF": 80.98,
         "RDF": 67.7,
-        "FG": 3.49,
         "RE": 6.33,
         "HAZE": 50.09564173221588,
         "SG": 1.01365,
         "ABV": 8.23,
-        "OG": 18.34
+        "OG": 18.34,
+        "AE": 3.49
       },
       {
         "date": "2026-07-24",
@@ -7498,12 +7460,12 @@ const BATCHES = [
         "Calories": 248.48,
         "ADF": 80.84,
         "RDF": 67.58,
-        "FG": 3.51,
         "RE": 6.34,
         "HAZE": 42.77412325143814,
         "SG": 1.01372,
         "ABV": 8.2,
-        "OG": 18.31
+        "OG": 18.31,
+        "AE": 3.51
       },
       {
         "date": "2026-07-24",
@@ -7520,12 +7482,12 @@ const BATCHES = [
         "Calories": 248.0,
         "ADF": 80.82,
         "RDF": 67.57,
-        "FG": 3.5,
         "RE": 6.33,
         "HAZE": 40.62440425157547,
         "SG": 1.01371,
         "ABV": 8.18,
-        "OG": 18.27
+        "OG": 18.27,
+        "AE": 3.5
       },
       {
         "date": "2026-07-23",
@@ -7541,11 +7503,11 @@ const BATCHES = [
         "ADF": 80.97,
         "RDF": 67.57,
         "OG": 17.5,
-        "FG": 3.33,
         "RE": 6.04,
         "HAZE": 45.54915672540665,
         "SG": 1.01302,
-        "ABV": 7.81
+        "ABV": 7.81,
+        "AE": 3.33
       },
       {
         "date": "2026-07-23",
@@ -7561,11 +7523,11 @@ const BATCHES = [
         "ADF": 80.85,
         "RDF": 67.58,
         "OG": 18.24,
-        "FG": 3.49,
         "RE": 6.31,
         "HAZE": 56.69902986288071,
         "SG": 1.01365,
-        "ABV": 8.17
+        "ABV": 8.17,
+        "AE": 3.49
       },
       {
         "date": "2026-07-23",
@@ -7581,11 +7543,11 @@ const BATCHES = [
         "ADF": 80.83,
         "RDF": 67.54,
         "OG": 18.05,
-        "FG": 3.46,
         "RE": 6.25,
         "HAZE": 57.14276361465454,
         "SG": 1.01353,
-        "ABV": 8.07
+        "ABV": 8.07,
+        "AE": 3.46
       },
       {
         "date": "2026-07-22",
@@ -7602,12 +7564,12 @@ const BATCHES = [
         "Calories": 247.03,
         "ADF": 80.6,
         "RDF": 67.38,
-        "FG": 3.53,
         "RE": 6.34,
         "HAZE": 63.51831114292145,
         "SG": 1.01381,
         "ABV": 8.12,
-        "OG": 18.2
+        "OG": 18.2,
+        "AE": 3.53
       },
       {
         "date": "2026-07-22",
@@ -7624,12 +7586,12 @@ const BATCHES = [
         "Calories": 248.74,
         "ADF": 80.59,
         "RDF": 67.39,
-        "FG": 3.56,
         "RE": 6.38,
         "HAZE": 88.0636932849884,
         "SG": 1.0139,
         "ABV": 8.18,
-        "OG": 18.32
+        "OG": 18.32,
+        "AE": 3.56
       },
       {
         "date": "2026-07-22",
@@ -7646,12 +7608,12 @@ const BATCHES = [
         "Calories": 248.4,
         "ADF": 80.75,
         "RDF": 67.51,
-        "FG": 3.52,
         "RE": 6.35,
         "HAZE": 44.658078253269196,
         "SG": 1.01378,
         "ABV": 8.19,
-        "OG": 18.3
+        "OG": 18.3,
+        "AE": 3.52
       },
       {
         "date": "2026-07-06",
@@ -7662,7 +7624,7 @@ const BATCHES = [
         "sourceSheet": "Abita Brews",
         "ABV": 8.02,
         "Turbidity": 661.5255632400513,
-        "FG": 3.73
+        "AE": 3.73
       },
       {
         "date": "2026-07-06",
@@ -7689,11 +7651,11 @@ const BATCHES = [
         "ADF": 0.22,
         "RDF": 0.19,
         "OG": 18.01,
-        "FG": 17.97,
         "RE": 17.98,
         "HAZE": 750.7648859024048,
         "SG": 1.07393,
-        "ABV": 0.02
+        "ABV": 0.02,
+        "AE": 17.97
       },
       {
         "date": "2026-06-27",
@@ -7709,11 +7671,11 @@ const BATCHES = [
         "ADF": 0.56,
         "RDF": 0.49,
         "OG": 18.12,
-        "FG": 18.02,
         "RE": 18.04,
         "HAZE": 1464.3389339447021,
         "SG": 1.07413,
-        "ABV": 0.06
+        "ABV": 0.06,
+        "AE": 18.02
       },
       {
         "date": "2026-06-26",
@@ -7729,11 +7691,11 @@ const BATCHES = [
         "ADF": 0.18,
         "RDF": 0.15,
         "OG": 18.02,
-        "FG": 17.99,
         "RE": 18.0,
         "HAZE": 986.5148420333862,
         "SG": 1.07401,
-        "ABV": 0.02
+        "ABV": 0.02,
+        "AE": 17.99
       },
       {
         "date": "2026-06-26",
@@ -7749,11 +7711,11 @@ const BATCHES = [
         "ADF": -0.13,
         "RDF": -0.12,
         "OG": 18.0,
-        "FG": 18.02,
         "RE": 18.02,
         "HAZE": 1725.9987659454346,
         "SG": 1.07415,
-        "ABV": -0.01
+        "ABV": -0.01,
+        "AE": 18.02
       }
     ],
     "fermLog": [
@@ -8290,7 +8252,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-10",
-  "lastSync": "Aug 10, 2026 \u00b7 9:18 AM"
+  "lastSync": "Aug 10, 2026 \u00b7 11:08 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
