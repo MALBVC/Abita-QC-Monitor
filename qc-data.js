@@ -6616,7 +6616,30 @@ const BATCHES = [
         "completed": true
       }
     ],
-    "basecampAlerts": []
+    "basecampAlerts": [
+      {
+        "metric": "IBU",
+        "value": 6.65,
+        "low": 8.5,
+        "high": 11.5,
+        "date": "2026-07-14",
+        "stage": "BBT",
+        "sample": "LHT 3 BT25",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10187945867",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
+        "also": [
+          {
+            "value": 6.0,
+            "date": "2026-06-02",
+            "stage": "BBT",
+            "sample": "LHT 003 BT25"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "ALG 005",
@@ -7131,7 +7154,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-10",
-  "lastSync": "Aug 10, 2026 \u00b7 12:08 PM"
+  "lastSync": "Aug 10, 2026 \u00b7 12:58 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
