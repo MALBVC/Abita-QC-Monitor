@@ -141,7 +141,13 @@ function SpecBar({ metric, value, stage, product }) {
 // treated as already acknowledged — the warning triangle should only appear
 // when a Basecamp-tracked OOS event is still genuinely open.
 function hasUnacknowledgedOOS(oos, basecampAlerts) {
-  const ackMap = new Map((basecampAlerts || []).map(a => [`${a.metric}|${a.date}|${a.value}`, a.acknowledged]));
+  // 'also' entries (repeat readings merged into the same to-do — see
+  // basecamp_notify.py's duplicate dedup) share the parent alert's
+  // acknowledged state, since they're the same Basecamp item.
+  const ackMap = new Map((basecampAlerts || []).flatMap(a => [
+    [`${a.metric}|${a.date}|${a.value}`, a.acknowledged],
+    ...(a.also || []).map(x => [`${a.metric}|${x.date}|${x.value}`, a.acknowledged]),
+  ]));
   return oos.some(f => ackMap.get(`${f.metric}|${f.date}|${f.value}`) === false);
 }
 
@@ -398,8 +404,16 @@ function DetailPanel({ batch, onClose }) {
   const basecampAlerts = batch.basecampAlerts || [];
   // Best-effort match: computeOOS() flags have no event id to link against
   // basecampAlerts directly, so approximate identity via metric+date+value.
+  // Must include each alert's 'also' entries too (repeat readings merged
+  // into the same to-do as a comment, not their own to-do — see
+  // basecamp_notify.py's duplicate dedup) — otherwise every reading past
+  // the first in a consolidated to-do falls through to Pre-Basecamp forever
+  // even though it's fully tracked.
   const basecampKeys = useMemo(() =>
-    new Set(basecampAlerts.map(a => `${a.metric}|${a.date}|${a.value}`)), [basecampAlerts]);
+    new Set(basecampAlerts.flatMap(a => [
+      `${a.metric}|${a.date}|${a.value}`,
+      ...(a.also || []).map(x => `${a.metric}|${x.date}|${x.value}`),
+    ])), [basecampAlerts]);
   const untrackedFlags = useMemo(() =>
     oos.filter(f => !basecampKeys.has(`${f.metric}|${f.date}|${f.value}`)), [oos, basecampKeys]);
 
