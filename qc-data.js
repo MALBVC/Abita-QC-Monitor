@@ -5855,10 +5855,10 @@ const BATCHES = [
         "stage": "BBT",
         "sample": "LHT 3 BT25",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10187945867",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-08-13T14:16",
+        "ackNote": "<p dir=\"auto\">Hopping adjustment/ IBU increase made with batch 004. Will monitor and make further adjustments as needed</p>",
         "also": [
           {
             "value": 6.0,
@@ -6255,10 +6255,74 @@ const BATCHES = [
     "tank": "BT28",
     "labTank": "BT28",
     "tankSource": "lab",
-    "lastReading": "2026-08-12",
+    "lastReading": "2026-08-13",
     "lastSource": "BBT",
-    "numReadings": 16,
+    "numReadings": 19,
     "readings": [
+      {
+        "date": "2026-08-13",
+        "sample": "AND 35-38 BT28",
+        "stage": "BBT",
+        "tank": "BT28",
+        "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
+        "sourceSheet": "AG",
+        "SRM": 0.0,
+        "IBU": 16.6,
+        "pH": 4.52,
+        "DO": 0.0,
+        "CO2 Vols": 0.0,
+        "Calories": 0.0,
+        "ADF": 0.0,
+        "RDF": 0.0,
+        "AE": 0.0,
+        "RE": 0.0,
+        "HAZE": 0.0,
+        "SG": 0.0,
+        "ABV": 0.0
+      },
+      {
+        "date": "2026-08-13",
+        "sample": "AND 35-38 BT28",
+        "stage": "BBT",
+        "tank": "BT28",
+        "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
+        "sourceSheet": "AG",
+        "SRM": 0.0,
+        "IBU": 15.25,
+        "pH": 0.0,
+        "DO": 0.0,
+        "CO2 Vols": 0.0,
+        "Calories": 0.0,
+        "ADF": 0.0,
+        "RDF": 0.0,
+        "AE": 0.0,
+        "RE": 0.0,
+        "HAZE": 0.0,
+        "SG": 0.0,
+        "ABV": 0.0
+      },
+      {
+        "date": "2026-08-13",
+        "sample": "AND 35-38 BT21",
+        "stage": "BBT",
+        "tank": "BT21",
+        "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
+        "sourceSheet": "AG",
+        "SRM": 7.233502538071066,
+        "IBU": 17.2,
+        "pH": 4.54,
+        "DO": 0.0,
+        "CO2 Vols": 0.0,
+        "Calories": 243.88,
+        "ADF": 81.88,
+        "RDF": 68.37,
+        "AE": 3.26,
+        "RE": 6.09,
+        "HAZE": 146.11497330665588,
+        "SG": 1.01275,
+        "ABV": 8.15,
+        "OG": 18.02
+      },
       {
         "date": "2026-08-12",
         "sample": "AND 35-38 BT28",
@@ -6526,10 +6590,10 @@ const BATCHES = [
     "basecampAlerts": [
       {
         "metric": "IBU",
-        "value": 16.55,
+        "value": 16.6,
         "low": 21.25,
         "high": 28.75,
-        "date": "2026-08-12",
+        "date": "2026-08-13",
         "stage": "BBT",
         "sample": "AND 35-38 BT28",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10196986716",
@@ -6538,6 +6602,78 @@ const BATCHES = [
         "ackAt": null,
         "ackNote": null,
         "also": [
+          {
+            "value": 15.25,
+            "date": "2026-08-13",
+            "stage": "BBT",
+            "sample": "AND 35-38 BT28"
+          },
+          {
+            "value": 17.2,
+            "date": "2026-08-13",
+            "stage": "BBT",
+            "sample": "AND 35-38 BT21"
+          },
+          {
+            "value": 16.6,
+            "date": "2026-08-13",
+            "stage": "BBT",
+            "sample": "AND 35-38 BT28"
+          },
+          {
+            "value": 15.25,
+            "date": "2026-08-13",
+            "stage": "BBT",
+            "sample": "AND 35-38 BT28"
+          },
+          {
+            "value": 17.2,
+            "date": "2026-08-13",
+            "stage": "BBT",
+            "sample": "AND 35-38 BT21"
+          },
+          {
+            "value": 16.6,
+            "date": "2026-08-13",
+            "stage": "BBT",
+            "sample": "AND 35-38 BT28"
+          },
+          {
+            "value": 15.25,
+            "date": "2026-08-13",
+            "stage": "BBT",
+            "sample": "AND 35-38 BT28"
+          },
+          {
+            "value": 17.2,
+            "date": "2026-08-13",
+            "stage": "BBT",
+            "sample": "AND 35-38 BT21"
+          },
+          {
+            "value": 16.6,
+            "date": "2026-08-13",
+            "stage": "BBT",
+            "sample": "AND 35-38 BT28"
+          },
+          {
+            "value": 15.25,
+            "date": "2026-08-13",
+            "stage": "BBT",
+            "sample": "AND 35-38 BT28"
+          },
+          {
+            "value": 17.2,
+            "date": "2026-08-13",
+            "stage": "BBT",
+            "sample": "AND 35-38 BT21"
+          },
+          {
+            "value": 16.55,
+            "date": "2026-08-12",
+            "stage": "BBT",
+            "sample": "AND 35-38 BT28"
+          },
           {
             "value": 16.55,
             "date": "2026-08-12",
@@ -6584,10 +6720,10 @@ const BATCHES = [
       },
       {
         "metric": "AE",
-        "value": 3.27,
+        "value": 0.0,
         "low": 3.3,
         "high": 3.7,
-        "date": "2026-08-12",
+        "date": "2026-08-13",
         "stage": "BBT",
         "sample": "AND 35-38 BT28",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10196986693",
@@ -6597,6 +6733,72 @@ const BATCHES = [
         "ackNote": null,
         "also": [
           {
+            "value": 0.0,
+            "date": "2026-08-13",
+            "stage": "BBT",
+            "sample": "AND 35-38 BT28"
+          },
+          {
+            "value": 3.26,
+            "date": "2026-08-13",
+            "stage": "BBT",
+            "sample": "AND 35-38 BT21"
+          },
+          {
+            "value": 0.0,
+            "date": "2026-08-13",
+            "stage": "BBT",
+            "sample": "AND 35-38 BT28"
+          },
+          {
+            "value": 0.0,
+            "date": "2026-08-13",
+            "stage": "BBT",
+            "sample": "AND 35-38 BT28"
+          },
+          {
+            "value": 3.26,
+            "date": "2026-08-13",
+            "stage": "BBT",
+            "sample": "AND 35-38 BT21"
+          },
+          {
+            "value": 0.0,
+            "date": "2026-08-13",
+            "stage": "BBT",
+            "sample": "AND 35-38 BT28"
+          },
+          {
+            "value": 0.0,
+            "date": "2026-08-13",
+            "stage": "BBT",
+            "sample": "AND 35-38 BT28"
+          },
+          {
+            "value": 3.26,
+            "date": "2026-08-13",
+            "stage": "BBT",
+            "sample": "AND 35-38 BT21"
+          },
+          {
+            "value": 0.0,
+            "date": "2026-08-13",
+            "stage": "BBT",
+            "sample": "AND 35-38 BT28"
+          },
+          {
+            "value": 0.0,
+            "date": "2026-08-13",
+            "stage": "BBT",
+            "sample": "AND 35-38 BT28"
+          },
+          {
+            "value": 3.26,
+            "date": "2026-08-13",
+            "stage": "BBT",
+            "sample": "AND 35-38 BT21"
+          },
+          {
             "value": 3.27,
             "date": "2026-08-12",
             "stage": "BBT",
@@ -6615,10 +6817,10 @@ const BATCHES = [
             "sample": "AND 35-38 BT28"
           },
           {
-            "value": 3.28,
-            "date": "2026-08-11",
+            "value": 3.27,
+            "date": "2026-08-12",
             "stage": "BBT",
-            "sample": "AND 35-38 UV37"
+            "sample": "AND 35-38 BT28"
           },
           {
             "value": 3.28,
@@ -6637,6 +6839,70 @@ const BATCHES = [
             "date": "2026-08-11",
             "stage": "BBT",
             "sample": "AND 35-38 UV37"
+          },
+          {
+            "value": 3.28,
+            "date": "2026-08-11",
+            "stage": "BBT",
+            "sample": "AND 35-38 UV37"
+          }
+        ]
+      },
+      {
+        "metric": "ABV",
+        "value": 0.0,
+        "low": 7.7,
+        "high": 8.3,
+        "date": "2026-08-13",
+        "stage": "BBT",
+        "sample": "AND 35-38 BT28",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10200720826",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
+        "also": [
+          {
+            "value": 0.0,
+            "date": "2026-08-13",
+            "stage": "BBT",
+            "sample": "AND 35-38 BT28"
+          },
+          {
+            "value": 0.0,
+            "date": "2026-08-13",
+            "stage": "BBT",
+            "sample": "AND 35-38 BT28"
+          },
+          {
+            "value": 0.0,
+            "date": "2026-08-13",
+            "stage": "BBT",
+            "sample": "AND 35-38 BT28"
+          },
+          {
+            "value": 0.0,
+            "date": "2026-08-13",
+            "stage": "BBT",
+            "sample": "AND 35-38 BT28"
+          },
+          {
+            "value": 0.0,
+            "date": "2026-08-13",
+            "stage": "BBT",
+            "sample": "AND 35-38 BT28"
+          },
+          {
+            "value": 0.0,
+            "date": "2026-08-13",
+            "stage": "BBT",
+            "sample": "AND 35-38 BT28"
+          },
+          {
+            "value": 0.0,
+            "date": "2026-08-13",
+            "stage": "BBT",
+            "sample": "AND 35-38 BT28"
           }
         ]
       },
@@ -7294,10 +7560,10 @@ const BATCHES = [
         "stage": "BBT",
         "sample": "AMB 39-40 BT29",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10190924964",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-08-13T14:19",
+        "ackNote": "<p dir=\"auto\">All IBUs from this batch in BBT came in over target: 14.85-16.75. Not sure where this value came from. </p>",
         "also": [
           {
             "value": 11.65,
@@ -8674,7 +8940,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-13",
-  "lastSync": "Aug 13, 2026 \u00b7 8:06 AM"
+  "lastSync": "Aug 13, 2026 \u00b7 12:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
