@@ -6262,6 +6262,16 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "completed": true
+      },
+      {
+        "date": "2026-08-12",
+        "action": "PACKAGE",
+        "from": "BT30,BT28",
+        "to": "",
+        "volume": null,
+        "detail": "3038 CASES",
+        "project": "packaging",
+        "completed": false
       }
     ],
     "basecampAlerts": [
@@ -6691,14 +6701,34 @@ const BATCHES = [
     ],
     "brewDate": "2026-06-29",
     "age": 45,
-    "stage": "Brite",
-    "tank": "BT29",
-    "labTank": "BT29",
+    "stage": "Packaged",
+    "tank": "BT31",
+    "labTank": "BT31",
     "tankSource": "lab",
-    "lastReading": "2026-08-11",
-    "lastSource": "BBT",
-    "numReadings": 29,
+    "lastReading": "2026-08-13",
+    "lastSource": "FIN",
+    "numReadings": 30,
     "readings": [
+      {
+        "date": "2026-08-13",
+        "sample": "AMB 39-40 TK BT31",
+        "stage": "FIN",
+        "tank": "BT31",
+        "sourceFile": "finished abita beer 2026.xlsx",
+        "sourceSheet": "A",
+        "pH": 4.26,
+        "DO": 46.0,
+        "CO2 Vols": 2.6,
+        "Calories": 134.78,
+        "ADF": 80.96,
+        "RDF": 66.58,
+        "OG": 10.33,
+        "AE": 1.97,
+        "RE": 3.58,
+        "HAZE": 19.141283869743347,
+        "SG": 1.00766,
+        "ABV": 4.4
+      },
       {
         "date": "2026-08-11",
         "sample": "AMB 39-40 BT29",
@@ -7204,7 +7234,7 @@ const BATCHES = [
         "volume": null,
         "detail": "1030 CASES",
         "project": "packaging",
-        "completed": false
+        "completed": true
       },
       {
         "date": "2026-08-11",
@@ -7214,12 +7244,12 @@ const BATCHES = [
         "volume": null,
         "detail": "1400 CASES",
         "project": "packaging",
-        "completed": false
+        "completed": true
       },
       {
         "date": "2026-08-11",
         "action": "PACKAGE",
-        "from": "BT27",
+        "from": "BT31",
         "to": "",
         "volume": null,
         "detail": "1240 CASES",
@@ -7866,16 +7896,6 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "completed": true
-      },
-      {
-        "date": "2026-08-11",
-        "action": "PACKAGE",
-        "from": "BT27",
-        "to": "",
-        "volume": null,
-        "detail": "1240 CASES",
-        "project": "packaging",
-        "completed": false
       }
     ],
     "basecampAlerts": [
@@ -9006,7 +9026,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-13",
-  "lastSync": "Aug 13, 2026 \u00b7 4:07 PM"
+  "lastSync": "Aug 13, 2026 \u00b7 8:05 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
