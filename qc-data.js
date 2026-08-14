@@ -5061,7 +5061,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": null,
     "lastSource": null,
-    "numReadings": 1,
+    "numReadings": 2,
     "readings": [],
     "fermLog": [],
     "yeastPitches": [
@@ -5075,6 +5075,17 @@ const BATCHES = [
         "yeastSource": "BH35",
         "yeastBrewNum": "BGLL02-03",
         "countType": "Yeast manual and cellometer"
+      },
+      {
+        "date": "2026-08-13",
+        "tank": "BH58",
+        "cellCount": 62588449.0,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "FV"
       }
     ],
     "transferLog": [],
@@ -8753,7 +8764,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-14",
-  "lastSync": "Aug 14, 2026 \u00b7 12:05 AM"
+  "lastSync": "Aug 14, 2026 \u00b7 4:05 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
