@@ -40,8 +40,8 @@ const SPECS = {
         "FIN"
       ],
       "target": 1.8,
-      "low": 1.6,
-      "high": 2.0,
+      "low": 1.4,
+      "high": 2.2,
       "unit": "\u00b0P",
       "maxOnly": false
     },
@@ -148,8 +148,8 @@ const SPECS = {
         "FIN"
       ],
       "target": 3.2,
-      "low": 3.0,
-      "high": 3.4,
+      "low": 2.8,
+      "high": 3.6,
       "unit": "\u00b0P",
       "maxOnly": false
     },
@@ -256,8 +256,8 @@ const SPECS = {
         "FIN"
       ],
       "target": 3.5,
-      "low": 3.3,
-      "high": 3.7,
+      "low": 3.1,
+      "high": 3.9,
       "unit": "\u00b0P",
       "maxOnly": false
     },
@@ -364,8 +364,8 @@ const SPECS = {
         "FIN"
       ],
       "target": 2.2,
-      "low": 2.0,
-      "high": 2.4,
+      "low": 1.8,
+      "high": 2.6,
       "unit": "\u00b0P",
       "maxOnly": false
     },
@@ -472,8 +472,8 @@ const SPECS = {
         "FIN"
       ],
       "target": 2.3,
-      "low": 2.1,
-      "high": 2.5,
+      "low": 1.9,
+      "high": 2.7,
       "unit": "\u00b0P",
       "maxOnly": false
     },
@@ -580,8 +580,8 @@ const SPECS = {
         "FIN"
       ],
       "target": 1.6,
-      "low": 1.4,
-      "high": 1.8,
+      "low": 1.2,
+      "high": 2.0,
       "unit": "\u00b0P",
       "maxOnly": false
     },
@@ -688,8 +688,8 @@ const SPECS = {
         "FIN"
       ],
       "target": 2.8,
-      "low": 2.6,
-      "high": 3.0,
+      "low": 2.4,
+      "high": 3.2,
       "unit": "\u00b0P",
       "maxOnly": false
     },
@@ -796,8 +796,8 @@ const SPECS = {
         "FIN"
       ],
       "target": 2.9,
-      "low": 2.7,
-      "high": 3.1,
+      "low": 2.5,
+      "high": 3.3,
       "unit": "\u00b0P",
       "maxOnly": false
     },
@@ -904,8 +904,8 @@ const SPECS = {
         "FIN"
       ],
       "target": 2.2,
-      "low": 2.0,
-      "high": 2.4,
+      "low": 1.8,
+      "high": 2.6,
       "unit": "\u00b0P",
       "maxOnly": false
     },
@@ -1012,8 +1012,8 @@ const SPECS = {
         "FIN"
       ],
       "target": 3.1,
-      "low": 2.9,
-      "high": 3.3,
+      "low": 2.7,
+      "high": 3.5,
       "unit": "\u00b0P",
       "maxOnly": false
     },
@@ -1120,8 +1120,8 @@ const SPECS = {
         "FIN"
       ],
       "target": -0.3,
-      "low": -0.5,
-      "high": -0.1,
+      "low": -0.7,
+      "high": 0.1,
       "unit": "\u00b0P",
       "maxOnly": false
     },
@@ -6151,52 +6151,6 @@ const BATCHES = [
         ]
       },
       {
-        "metric": "AE",
-        "value": 2.01,
-        "low": 1.6,
-        "high": 2.0,
-        "date": "2026-08-11",
-        "stage": "BBT",
-        "sample": "AMB 39-40 BT29",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10190924755",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
-        "also": [
-          {
-            "value": 2.05,
-            "date": "2026-08-11",
-            "stage": "BBT",
-            "sample": "AMB 39-40 BT31"
-          },
-          {
-            "value": 2.01,
-            "date": "2026-08-11",
-            "stage": "BBT",
-            "sample": "AMB 39-42 BT27"
-          },
-          {
-            "value": 2.01,
-            "date": "2026-08-11",
-            "stage": "BBT",
-            "sample": "AMB 39-40 BT29"
-          },
-          {
-            "value": 2.05,
-            "date": "2026-08-11",
-            "stage": "BBT",
-            "sample": "AMB 39-40 BT31"
-          },
-          {
-            "value": 2.01,
-            "date": "2026-08-11",
-            "stage": "BBT",
-            "sample": "AMB 39-42 BT27"
-          }
-        ]
-      },
-      {
         "metric": "HAZE",
         "value": 18.835172027349472,
         "low": 25.5,
@@ -6769,40 +6723,6 @@ const BATCHES = [
       }
     ],
     "basecampAlerts": [
-      {
-        "metric": "AE",
-        "value": 2.01,
-        "low": 1.6,
-        "high": 2.0,
-        "date": "2026-08-11",
-        "stage": "BBT",
-        "sample": "AMB 39-42 BT27",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10190924755",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
-        "also": [
-          {
-            "value": 2.02,
-            "date": "2026-08-11",
-            "stage": "BBT",
-            "sample": "AMB 41-42 BT29"
-          },
-          {
-            "value": 2.01,
-            "date": "2026-08-11",
-            "stage": "BBT",
-            "sample": "AMB 39-42 BT27"
-          },
-          {
-            "value": 2.02,
-            "date": "2026-08-11",
-            "stage": "BBT",
-            "sample": "AMB 41-42 BT29"
-          }
-        ]
-      },
       {
         "metric": "HAZE",
         "value": 20.417253345251083,
@@ -8184,10 +8104,10 @@ const BATCHES = [
         "stage": "BBT",
         "sample": "AND 35-38 BT28",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10196986693",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Donna Anderson",
+        "ackAt": "2026-08-13T13:27",
+        "ackNote": "<p dir=\"auto\">Retesting today</p>",
         "also": [
           {
             "value": 0.0,
@@ -8196,12 +8116,6 @@ const BATCHES = [
             "sample": "AND 35-38 BT28"
           },
           {
-            "value": 3.26,
-            "date": "2026-08-13",
-            "stage": "BBT",
-            "sample": "AND 35-38 BT21"
-          },
-          {
             "value": 0.0,
             "date": "2026-08-13",
             "stage": "BBT",
@@ -8218,12 +8132,6 @@ const BATCHES = [
             "date": "2026-08-13",
             "stage": "BBT",
             "sample": "AND 35-38 BT28"
-          },
-          {
-            "value": 3.26,
-            "date": "2026-08-13",
-            "stage": "BBT",
-            "sample": "AND 35-38 BT21"
           },
           {
             "value": 0.0,
@@ -8244,12 +8152,6 @@ const BATCHES = [
             "sample": "AND 35-38 BT28"
           },
           {
-            "value": 3.26,
-            "date": "2026-08-13",
-            "stage": "BBT",
-            "sample": "AND 35-38 BT21"
-          },
-          {
             "value": 0.0,
             "date": "2026-08-13",
             "stage": "BBT",
@@ -8268,64 +8170,10 @@ const BATCHES = [
             "sample": "AND 35-38 BT28"
           },
           {
-            "value": 3.26,
-            "date": "2026-08-13",
-            "stage": "BBT",
-            "sample": "AND 35-38 BT21"
-          },
-          {
             "value": 0.0,
             "date": "2026-08-13",
             "stage": "BBT",
             "sample": "AND 35-38 BT21"
-          },
-          {
-            "value": 3.27,
-            "date": "2026-08-12",
-            "stage": "BBT",
-            "sample": "AND 35-38 BT28"
-          },
-          {
-            "value": 3.27,
-            "date": "2026-08-12",
-            "stage": "BBT",
-            "sample": "AND 35-38 BT28"
-          },
-          {
-            "value": 3.27,
-            "date": "2026-08-12",
-            "stage": "BBT",
-            "sample": "AND 35-38 BT28"
-          },
-          {
-            "value": 3.27,
-            "date": "2026-08-12",
-            "stage": "BBT",
-            "sample": "AND 35-38 BT28"
-          },
-          {
-            "value": 3.28,
-            "date": "2026-08-11",
-            "stage": "BBT",
-            "sample": "AND 35-38 UV37"
-          },
-          {
-            "value": 3.28,
-            "date": "2026-08-11",
-            "stage": "BBT",
-            "sample": "AND 35-38 UV37"
-          },
-          {
-            "value": 3.28,
-            "date": "2026-08-11",
-            "stage": "BBT",
-            "sample": "AND 35-38 UV37"
-          },
-          {
-            "value": 3.28,
-            "date": "2026-08-11",
-            "stage": "BBT",
-            "sample": "AND 35-38 UV37"
           }
         ]
       },
@@ -8726,7 +8574,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-14",
-  "lastSync": "Aug 14, 2026 \u00b7 12:05 PM"
+  "lastSync": "Aug 14, 2026 \u00b7 4:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
