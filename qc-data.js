@@ -7917,7 +7917,7 @@ const BATCHES = [
         "volume": null,
         "detail": "1250 CASES",
         "project": "packaging",
-        "completed": false
+        "completed": true
       },
       {
         "date": "2026-08-12",
@@ -8574,7 +8574,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-14",
-  "lastSync": "Aug 14, 2026 \u00b7 4:06 PM"
+  "lastSync": "Aug 14, 2026 \u00b7 8:05 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
