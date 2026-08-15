@@ -5046,23 +5046,106 @@ const BATCHES = [
     ]
   },
   {
-    "id": "AMB 049, 052",
+    "id": "AMB 049, 050, 051, 052",
     "product": "AMB",
     "section": "brewhouse",
     "brewNums": [
       49,
+      50,
+      51,
       52
     ],
-    "brewDate": null,
-    "age": null,
-    "stage": "Fermenting",
+    "brewDate": "2026-08-14",
+    "age": 1,
+    "stage": "Wort",
     "tank": "BH58",
     "labTank": "BH58",
     "tankSource": "lab",
-    "lastReading": null,
-    "lastSource": null,
-    "numReadings": 3,
-    "readings": [],
+    "lastReading": "2026-08-14",
+    "lastSource": "WORT",
+    "numReadings": 7,
+    "readings": [
+      {
+        "date": "2026-08-14",
+        "sample": "AMB 049 BH58",
+        "stage": "WORT",
+        "tank": "BH58",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "A",
+        "Wort pH": 5.14,
+        "SRM": 13.946700507614212,
+        "IBU (W)": 19.05,
+        "Calories": 151.89,
+        "ADF": -0.81,
+        "RDF": -0.69,
+        "OG": 10.37,
+        "AE": 10.45,
+        "RE": 10.44,
+        "HAZE": 1505.569845199585,
+        "SG": 1.04186,
+        "ABV": -0.05
+      },
+      {
+        "date": "2026-08-14",
+        "sample": "AMB 050 BH58",
+        "stage": "WORT",
+        "tank": "BH58",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "A",
+        "Wort pH": 5.16,
+        "SRM": 13.13451776649746,
+        "IBU (W)": 18.6,
+        "Calories": 152.17,
+        "ADF": -0.78,
+        "RDF": -0.67,
+        "OG": 10.39,
+        "AE": 10.47,
+        "RE": 10.45,
+        "HAZE": 976.3574094772339,
+        "SG": 1.04193,
+        "ABV": -0.04
+      },
+      {
+        "date": "2026-08-14",
+        "sample": "AMB 051 BH58",
+        "stage": "WORT",
+        "tank": "BH58",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "A",
+        "Wort pH": 5.12,
+        "SRM": 13.565989847715736,
+        "IBU (W)": 19.5,
+        "Calories": 151.24,
+        "ADF": -0.96,
+        "RDF": -0.82,
+        "OG": 10.32,
+        "AE": 10.42,
+        "RE": 10.4,
+        "HAZE": 1540.3587226867676,
+        "SG": 1.04174,
+        "ABV": -0.05
+      },
+      {
+        "date": "2026-08-14",
+        "sample": "AMB 052 BH58",
+        "stage": "WORT",
+        "tank": "BH58",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "A",
+        "Wort pH": 5.16,
+        "SRM": 13.959390862944165,
+        "IBU (W)": 18.55,
+        "Calories": 153.24,
+        "ADF": -0.74,
+        "RDF": -0.64,
+        "OG": 10.46,
+        "AE": 10.53,
+        "RE": 10.52,
+        "HAZE": 1025.410451889038,
+        "SG": 1.04221,
+        "ABV": -0.04
+      }
+    ],
     "fermLog": [],
     "yeastPitches": [
       {
@@ -7958,7 +8041,7 @@ const BATCHES = [
         "volume": null,
         "detail": "3038 CASES",
         "project": "packaging",
-        "completed": false
+        "completed": true
       },
       {
         "date": "2026-08-12",
@@ -8605,7 +8688,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-15",
-  "lastSync": "Aug 15, 2026 \u00b7 12:06 AM"
+  "lastSync": "Aug 15, 2026 \u00b7 4:05 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
