@@ -2889,7 +2889,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": null,
     "lastSource": null,
-    "numReadings": 1,
+    "numReadings": 2,
     "readings": [],
     "fermLog": [],
     "yeastPitches": [
@@ -2903,6 +2903,17 @@ const BATCHES = [
         "yeastSource": "BH51",
         "yeastBrewNum": "BGLL07",
         "countType": "Yeast"
+      },
+      {
+        "date": "2026-08-17",
+        "tank": "BH26",
+        "cellCount": 99056518.0,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "check at first KO"
       }
     ],
     "transferLog": [],
@@ -6418,10 +6429,10 @@ const BATCHES = [
         "stage": "BBT",
         "sample": "AMB 39-40 BT29",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10190924871",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-08-17T21:22",
+        "ackNote": "<p dir=\"auto\">Clear beer is a good thing!</p>",
         "also": [
           {
             "value": 19.04413729906082,
@@ -6464,10 +6475,10 @@ const BATCHES = [
         "stage": "BBT",
         "sample": "AMB 39-40 BT31",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10190924982",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-08-17T21:24",
+        "ackNote": "<p dir=\"auto\">This batch had a lower color than most-usually color for Amber is in the high thirteens. Not sure if we shorted amber malt, or had lower WHP residence time or shorter boil.</p>",
         "also": [
           {
             "value": 12.51269035532995,
@@ -6991,10 +7002,10 @@ const BATCHES = [
         "stage": "BBT",
         "sample": "AMB 39-42 BT27",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10190924871",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-08-17T21:22",
+        "ackNote": "<p dir=\"auto\">Clear beer is a good thing!</p>",
         "also": [
           {
             "value": 20.417253345251083,
@@ -8221,10 +8232,10 @@ const BATCHES = [
         "stage": "BBT",
         "sample": "AND 35-38 BT28",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10196986716",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-08-17T21:27",
+        "ackNote": "<p dir=\"auto\">2 hopping increases have been made since this batch. We should be at target when they come through. If not we will adjust again.</p>",
         "also": [
           {
             "value": 15.25,
@@ -8845,7 +8856,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-17",
-  "lastSync": "Aug 17, 2026 \u00b7 4:06 PM"
+  "lastSync": "Aug 17, 2026 \u00b7 8:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
