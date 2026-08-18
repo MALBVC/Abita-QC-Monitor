@@ -5141,6 +5141,41 @@ const BATCHES = [
     ]
   },
   {
+    "id": "GLD 061, 064",
+    "product": "GLD",
+    "section": "brewhouse",
+    "brewNums": [
+      61,
+      64
+    ],
+    "brewDate": null,
+    "age": null,
+    "stage": "Fermenting",
+    "tank": "BH56",
+    "labTank": "BH56",
+    "tankSource": "lab",
+    "lastReading": null,
+    "lastSource": null,
+    "numReadings": 1,
+    "readings": [],
+    "fermLog": [],
+    "yeastPitches": [
+      {
+        "date": "2026-08-18",
+        "tank": "BH56",
+        "cellCount": 1950000000.0,
+        "viability": 0.86,
+        "pitchRate": 221.83,
+        "yeastGen": "L-6",
+        "yeastSource": "Prop1",
+        "yeastBrewNum": "BGLL07 BH51",
+        "countType": "yeast"
+      }
+    ],
+    "transferLog": [],
+    "basecampAlerts": []
+  },
+  {
     "id": "AMB 047, 049, 050, 051, 052",
     "product": "AMB",
     "section": "brewhouse",
@@ -5157,10 +5192,32 @@ const BATCHES = [
     "tank": "BH58",
     "labTank": "BH58",
     "tankSource": "lab",
-    "lastReading": "2026-08-17",
+    "lastReading": "2026-08-18",
     "lastSource": "GC",
-    "numReadings": 14,
+    "numReadings": 16,
     "readings": [
+      {
+        "date": "2026-08-18",
+        "sample": "AMB 49,50,51,52 BH58",
+        "stage": "GC",
+        "tank": "BH58",
+        "sourceFile": "gc 2026.xlsx",
+        "sourceSheet": "AUG",
+        "Diacetyl": 0.0,
+        "Pentanedione": 0.0477,
+        "Total VDK": 0.0477
+      },
+      {
+        "date": "2026-08-18",
+        "sample": "AMB 49-52 BH58",
+        "stage": "FERM",
+        "tank": "BH58",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 4.18,
+        "Turbidity": 757.5592975616455,
+        "AE": 2.3
+      },
       {
         "date": "2026-08-17",
         "sample": "AMB 49,50,51,52 BH58",
@@ -8867,7 +8924,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-18",
-  "lastSync": "Aug 18, 2026 \u00b7 8:06 AM"
+  "lastSync": "Aug 18, 2026 \u00b7 12:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
