@@ -1233,11 +1233,14 @@ const BATCHES = [
     "brewDate": "2026-04-15",
     "brewDateSource": "basecamp",
     "brewer": "TJ Boyle",
+    "brewVolumeBbl": 404.5,
+    "vicinityStage": "Ops-Closed",
     "age": 127,
     "stage": "Fermenting",
     "tank": "BT24",
     "labTank": "BH3",
     "tankSource": "basecamp",
+    "tankRemainingBbl": null,
     "lastReading": "2026-04-17",
     "lastSource": "FERM",
     "numReadings": 16,
@@ -1401,7 +1404,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-06-03",
@@ -1411,7 +1415,8 @@ const BATCHES = [
         "volume": 57.0,
         "detail": null,
         "project": "cellar",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-07-15",
@@ -1421,7 +1426,8 @@ const BATCHES = [
         "volume": 40.0,
         "detail": null,
         "project": "cellar",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-08-03",
@@ -1431,10 +1437,12 @@ const BATCHES = [
         "volume": 40.0,
         "detail": null,
         "project": "cellar",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       }
     ],
-    "basecampAlerts": []
+    "basecampAlerts": [],
+    "vicinityPackaging": []
   },
   {
     "id": "JOC 010, 013",
@@ -1447,11 +1455,14 @@ const BATCHES = [
     "brewDate": "2026-08-05",
     "brewDateSource": "basecamp",
     "brewer": "Jamie Killian",
+    "brewVolumeBbl": 304.0,
+    "vicinityStage": "Ops-Closed",
     "age": 15,
     "stage": "Fermenting",
     "tank": "BH7",
     "labTank": "BH7",
     "tankSource": "lab",
+    "tankRemainingBbl": null,
     "lastReading": "2026-08-12",
     "lastSource": "FERM",
     "numReadings": 10,
@@ -1569,10 +1580,12 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       }
     ],
-    "basecampAlerts": []
+    "basecampAlerts": [],
+    "vicinityPackaging": []
   },
   {
     "id": "ALG 005",
@@ -1581,14 +1594,17 @@ const BATCHES = [
     "brewNums": [
       5
     ],
-    "brewDate": "2026-07-16",
-    "brewDateSource": "lab",
+    "brewDate": "2026-07-14",
+    "brewDateSource": "vicinity",
     "brewer": null,
-    "age": 35,
+    "brewVolumeBbl": 153.5,
+    "vicinityStage": "Ops-Closed",
+    "age": 37,
     "stage": "Fermenting",
     "tank": "BT25",
     "labTank": "BH9",
     "tankSource": "basecamp",
+    "tankRemainingBbl": null,
     "lastReading": "2026-08-03",
     "lastSource": "FIN",
     "numReadings": 17,
@@ -1797,7 +1813,8 @@ const BATCHES = [
         "volume": 68.0,
         "detail": null,
         "project": "cellar",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-08-03",
@@ -1807,7 +1824,8 @@ const BATCHES = [
         "volume": null,
         "detail": "1109 CASES",
         "project": "packaging",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-08-20",
@@ -1817,7 +1835,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "cellar",
-        "completed": false
+        "completed": false,
+        "tankVolume": null
       }
     ],
     "basecampAlerts": [
@@ -1851,7 +1870,8 @@ const BATCHES = [
         "ackNote": "<p dir=\"auto\">spec is incorrect, recipe needs reformulation to hit label claim abv. new FG spec to follow.</p>",
         "also": []
       }
-    ]
+    ],
+    "vicinityPackaging": []
   },
   {
     "id": "DGT 008",
@@ -1863,11 +1883,14 @@ const BATCHES = [
     "brewDate": "2026-08-05",
     "brewDateSource": "basecamp",
     "brewer": "Jamie Killian",
+    "brewVolumeBbl": 152.5,
+    "vicinityStage": "Ops-Closed",
     "age": 15,
     "stage": "Fermenting",
     "tank": "BH10",
     "labTank": "BH10",
     "tankSource": "lab",
+    "tankRemainingBbl": null,
     "lastReading": "2026-08-10",
     "lastSource": "GC",
     "numReadings": 2,
@@ -1915,10 +1938,12 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       }
     ],
-    "basecampAlerts": []
+    "basecampAlerts": [],
+    "vicinityPackaging": []
   },
   {
     "id": "AND 030",
@@ -1930,11 +1955,14 @@ const BATCHES = [
     "brewDate": "2026-06-20",
     "brewDateSource": "basecamp",
     "brewer": "Jamie Killian",
+    "brewVolumeBbl": 208.0,
+    "vicinityStage": "Ops-Closed",
     "age": 61,
     "stage": "Fermenting",
     "tank": "BH46",
     "labTank": "BH13",
     "tankSource": "basecamp",
+    "tankRemainingBbl": null,
     "lastReading": "2026-06-23",
     "lastSource": "FERM",
     "numReadings": 17,
@@ -2116,7 +2144,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-08-20",
@@ -2126,7 +2155,8 @@ const BATCHES = [
         "volume": 100.0,
         "detail": null,
         "project": "cellar",
-        "completed": false
+        "completed": false,
+        "tankVolume": null
       }
     ],
     "basecampAlerts": [
@@ -2145,7 +2175,8 @@ const BATCHES = [
         "ackNote": "<p dir=\"auto\">Brew overboiled onto roof, significant wort loss, was subsequently diluted with liquor to hit minimum KF volume  and is being downgraded to Abita Golden</p>",
         "also": []
       }
-    ]
+    ],
+    "vicinityPackaging": []
   },
   {
     "id": "GLD 054",
@@ -2157,11 +2188,14 @@ const BATCHES = [
     "brewDate": "2026-07-17",
     "brewDateSource": "basecamp",
     "brewer": "Chris Fernandez",
+    "brewVolumeBbl": 218.0,
+    "vicinityStage": "Ops-Closed",
     "age": 34,
     "stage": "Fermenting",
     "tank": "BT32",
     "labTank": "BH14",
     "tankSource": "basecamp",
+    "tankRemainingBbl": null,
     "lastReading": "2026-07-20",
     "lastSource": "WORT",
     "numReadings": 12,
@@ -2309,7 +2343,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-07-29",
@@ -2319,10 +2354,12 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "cellar",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       }
     ],
-    "basecampAlerts": []
+    "basecampAlerts": [],
+    "vicinityPackaging": []
   },
   {
     "id": "BEC 003",
@@ -2334,11 +2371,14 @@ const BATCHES = [
     "brewDate": "2026-07-15",
     "brewDateSource": "basecamp",
     "brewer": "Chris Fernandez",
+    "brewVolumeBbl": 158.0,
+    "vicinityStage": "Ops-Closed",
     "age": 36,
     "stage": "Fermenting",
     "tank": "BH16",
     "labTank": "BH16",
     "tankSource": "basecamp",
+    "tankRemainingBbl": null,
     "lastReading": "2026-07-20",
     "lastSource": "GC",
     "numReadings": 15,
@@ -2507,7 +2547,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       }
     ],
     "basecampAlerts": [
@@ -2526,7 +2567,8 @@ const BATCHES = [
         "ackNote": "<p dir=\"auto\">Acid additions in progress in BH recipes. All worts targeting pH 5.1</p>",
         "also": []
       }
-    ]
+    ],
+    "vicinityPackaging": []
   },
   {
     "id": "TBD 005",
@@ -2538,11 +2580,14 @@ const BATCHES = [
     "brewDate": "2026-07-31",
     "brewDateSource": "basecamp",
     "brewer": "Laren Ball",
+    "brewVolumeBbl": 156.5,
+    "vicinityStage": "Ops-Closed",
     "age": 20,
     "stage": "Fermenting",
     "tank": "BH18",
     "labTank": "BH18",
     "tankSource": "basecamp",
+    "tankRemainingBbl": null,
     "lastReading": "2026-08-03",
     "lastSource": "GC",
     "numReadings": 14,
@@ -2704,7 +2749,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       }
     ],
     "basecampAlerts": [
@@ -2738,7 +2784,8 @@ const BATCHES = [
         "ackNote": "<p dir=\"auto\">Will monitor abv and make grain adjustments to avoid sugar requirement</p>",
         "also": []
       }
-    ]
+    ],
+    "vicinityPackaging": []
   },
   {
     "id": "STG 013",
@@ -2750,11 +2797,14 @@ const BATCHES = [
     "brewDate": "2026-08-04",
     "brewDateSource": "basecamp",
     "brewer": "Keeyan Majdi",
+    "brewVolumeBbl": 165.0,
+    "vicinityStage": "Ops-Closed",
     "age": 16,
     "stage": "Fermenting",
     "tank": "BH25",
     "labTank": "BH25",
     "tankSource": "basecamp",
+    "tankRemainingBbl": null,
     "lastReading": "2026-08-17",
     "lastSource": "FERM",
     "numReadings": 18,
@@ -2950,10 +3000,12 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       }
     ],
-    "basecampAlerts": []
+    "basecampAlerts": [],
+    "vicinityPackaging": []
   },
   {
     "id": "AND 043, 044",
@@ -2966,11 +3018,14 @@ const BATCHES = [
     "brewDate": "2026-08-17",
     "brewDateSource": "basecamp",
     "brewer": "TJ Boyle",
+    "brewVolumeBbl": 300.5,
+    "vicinityStage": "Ops-Closed",
     "age": 3,
     "stage": "Wort",
     "tank": "BH26",
     "labTank": "BH26",
     "tankSource": "basecamp",
+    "tankRemainingBbl": null,
     "lastReading": "2026-08-18",
     "lastSource": "WORT",
     "numReadings": 5,
@@ -3061,7 +3116,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       }
     ],
     "basecampAlerts": [
@@ -3080,7 +3136,8 @@ const BATCHES = [
         "ackNote": null,
         "also": []
       }
-    ]
+    ],
+    "vicinityPackaging": []
   },
   {
     "id": "LHT 004",
@@ -3089,14 +3146,17 @@ const BATCHES = [
     "brewNums": [
       4
     ],
-    "brewDate": "2026-07-27",
-    "brewDateSource": "lab",
+    "brewDate": "2026-07-24",
+    "brewDateSource": "vicinity",
     "brewer": null,
-    "age": 24,
+    "brewVolumeBbl": 154.5,
+    "vicinityStage": "Ops-Closed",
+    "age": 27,
     "stage": "Fermenting",
     "tank": "BH57",
     "labTank": "BH27",
     "tankSource": "basecamp",
+    "tankRemainingBbl": null,
     "lastReading": "2026-08-18",
     "lastSource": "FERM",
     "numReadings": 9,
@@ -3221,10 +3281,12 @@ const BATCHES = [
         "volume": 48.0,
         "detail": null,
         "project": "cellar",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       }
     ],
-    "basecampAlerts": []
+    "basecampAlerts": [],
+    "vicinityPackaging": []
   },
   {
     "id": "GLD 047",
@@ -3236,11 +3298,14 @@ const BATCHES = [
     "brewDate": "2026-06-18",
     "brewDateSource": "basecamp",
     "brewer": "Jamie Killian",
+    "brewVolumeBbl": 222.0,
+    "vicinityStage": "Ops-Closed",
     "age": 63,
     "stage": "Fermenting",
     "tank": "BH14",
     "labTank": "BH30",
     "tankSource": "basecamp",
+    "tankRemainingBbl": null,
     "lastReading": "2026-06-22",
     "lastSource": "FERM",
     "numReadings": 10,
@@ -3360,7 +3425,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-07-11",
@@ -3370,10 +3436,12 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "cellar",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       }
     ],
-    "basecampAlerts": []
+    "basecampAlerts": [],
+    "vicinityPackaging": []
   },
   {
     "id": "GLD 059, 060",
@@ -3386,11 +3454,14 @@ const BATCHES = [
     "brewDate": "2026-07-30",
     "brewDateSource": "basecamp",
     "brewer": "Laren Ball",
+    "brewVolumeBbl": 413.5,
+    "vicinityStage": "Ops-Closed",
     "age": 21,
     "stage": "Fermenting",
     "tank": "BH31",
     "labTank": "BH31",
     "tankSource": "basecamp",
+    "tankRemainingBbl": null,
     "lastReading": "2026-08-04",
     "lastSource": "GC",
     "numReadings": 16,
@@ -3582,7 +3653,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       }
     ],
     "basecampAlerts": [
@@ -3608,7 +3680,8 @@ const BATCHES = [
           }
         ]
       }
-    ]
+    ],
+    "vicinityPackaging": []
   },
   {
     "id": "AND 039, 040",
@@ -3621,11 +3694,14 @@ const BATCHES = [
     "brewDate": "2026-07-10",
     "brewDateSource": "basecamp",
     "brewer": "Laren Ball",
+    "brewVolumeBbl": 301.0,
+    "vicinityStage": "Ops-Closed",
     "age": 41,
     "stage": "Fermenting",
     "tank": "BH32",
     "labTank": "BH32",
     "tankSource": "basecamp",
+    "tankRemainingBbl": null,
     "lastReading": "2026-07-20",
     "lastSource": "GC",
     "numReadings": 16,
@@ -3807,7 +3883,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       }
     ],
     "basecampAlerts": [
@@ -3826,7 +3903,8 @@ const BATCHES = [
         "ackNote": "<p dir=\"auto\">OG in range, this should not have been flagged</p>",
         "also": []
       }
-    ]
+    ],
+    "vicinityPackaging": []
   },
   {
     "id": "AMB 043, 044",
@@ -3839,11 +3917,14 @@ const BATCHES = [
     "brewDate": "2026-07-26",
     "brewDateSource": "basecamp",
     "brewer": "Keeyan Majdi",
+    "brewVolumeBbl": 402.0,
+    "vicinityStage": "Ops-Closed",
     "age": 25,
     "stage": "Fermenting",
     "tank": "BH33",
     "labTank": "BH33",
     "tankSource": "basecamp",
+    "tankRemainingBbl": null,
     "lastReading": "2026-07-29",
     "lastSource": "FERM",
     "numReadings": 20,
@@ -4082,7 +4163,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       }
     ],
     "basecampAlerts": [
@@ -4142,7 +4224,8 @@ const BATCHES = [
           }
         ]
       }
-    ]
+    ],
+    "vicinityPackaging": []
   },
   {
     "id": "AND 041, 042",
@@ -4155,11 +4238,14 @@ const BATCHES = [
     "brewDate": "2026-07-10",
     "brewDateSource": "basecamp",
     "brewer": "Laren Ball",
+    "brewVolumeBbl": 304.0,
+    "vicinityStage": "Ops-Closed",
     "age": 41,
     "stage": "Fermenting",
     "tank": "BH34",
     "labTank": "BH34",
     "tankSource": "basecamp",
+    "tankRemainingBbl": null,
     "lastReading": "2026-07-17",
     "lastSource": "FERM",
     "numReadings": 18,
@@ -4358,7 +4444,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       }
     ],
     "basecampAlerts": [
@@ -4392,7 +4479,8 @@ const BATCHES = [
         "ackNote": "<p dir=\"auto\">Acid additions in progress in BH recipes. All worts targeting pH 5.1</p>",
         "also": []
       }
-    ]
+    ],
+    "vicinityPackaging": []
   },
   {
     "id": "GLD 057, 058",
@@ -4405,11 +4493,14 @@ const BATCHES = [
     "brewDate": "2026-07-29",
     "brewDateSource": "basecamp",
     "brewer": "Laren Ball",
+    "brewVolumeBbl": 402.5,
+    "vicinityStage": "Ops-Closed",
     "age": 22,
     "stage": "Fermenting",
     "tank": "BH40",
     "labTank": "BH40",
     "tankSource": "basecamp",
+    "tankRemainingBbl": null,
     "lastReading": "2026-07-31",
     "lastSource": "FERM",
     "numReadings": 13,
@@ -4574,10 +4665,12 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       }
     ],
-    "basecampAlerts": []
+    "basecampAlerts": [],
+    "vicinityPackaging": []
   },
   {
     "id": "GLD 052, 053",
@@ -4590,11 +4683,14 @@ const BATCHES = [
     "brewDate": "2026-07-09",
     "brewDateSource": "basecamp",
     "brewer": "Laren Ball",
+    "brewVolumeBbl": 402.0,
+    "vicinityStage": "Ops-Closed",
     "age": 42,
     "stage": "Fermenting",
     "tank": "BH46",
     "labTank": "BH42",
     "tankSource": "basecamp",
+    "tankRemainingBbl": null,
     "lastReading": "2026-07-13",
     "lastSource": "FERM",
     "numReadings": 12,
@@ -4751,7 +4847,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-08-20",
@@ -4761,10 +4858,12 @@ const BATCHES = [
         "volume": 320.0,
         "detail": null,
         "project": "cellar",
-        "completed": false
+        "completed": false,
+        "tankVolume": null
       }
     ],
-    "basecampAlerts": []
+    "basecampAlerts": [],
+    "vicinityPackaging": []
   },
   {
     "id": "GLD 055, 056",
@@ -4777,11 +4876,14 @@ const BATCHES = [
     "brewDate": "2026-07-23",
     "brewDateSource": "basecamp",
     "brewer": "Chris Fernandez",
+    "brewVolumeBbl": 413.0,
+    "vicinityStage": "Ops-Closed",
     "age": 28,
     "stage": "Fermenting",
     "tank": "BH19",
     "labTank": "BH43",
     "tankSource": "basecamp",
+    "tankRemainingBbl": null,
     "lastReading": "2026-07-27",
     "lastSource": "FERM",
     "numReadings": 12,
@@ -4932,20 +5034,23 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-08-20",
         "action": "XFER",
-        "from": "BH43",
+        "from": "BH40",
         "to": "BH19",
         "volume": 200.0,
         "detail": null,
         "project": "cellar",
-        "completed": false
+        "completed": false,
+        "tankVolume": null
       }
     ],
-    "basecampAlerts": []
+    "basecampAlerts": [],
+    "vicinityPackaging": []
   },
   {
     "id": "GLD 043, 046",
@@ -4958,11 +5063,14 @@ const BATCHES = [
     "brewDate": "2026-06-03",
     "brewDateSource": "basecamp",
     "brewer": "Laren Ball",
+    "brewVolumeBbl": 403.5,
+    "vicinityStage": "Ops-Closed",
     "age": 78,
     "stage": "Fermenting",
     "tank": "UV30",
     "labTank": "BH47",
     "tankSource": "basecamp",
+    "tankRemainingBbl": null,
     "lastReading": "2026-06-05",
     "lastSource": "GC",
     "numReadings": 15,
@@ -5140,7 +5248,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-07-06",
@@ -5150,7 +5259,8 @@ const BATCHES = [
         "volume": 200.0,
         "detail": null,
         "project": "cellar",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-07-07",
@@ -5160,10 +5270,12 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "cellar",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       }
     ],
-    "basecampAlerts": []
+    "basecampAlerts": [],
+    "vicinityPackaging": []
   },
   {
     "id": "AMB 045, 046, 048",
@@ -5177,11 +5289,14 @@ const BATCHES = [
     "brewDate": "2026-07-28",
     "brewDateSource": "basecamp",
     "brewer": "Laren Ball",
+    "brewVolumeBbl": 605.0,
+    "vicinityStage": "Ops-Closed",
     "age": 23,
     "stage": "Fermenting",
     "tank": "BH48",
     "labTank": "BH48",
     "tankSource": "basecamp",
+    "tankRemainingBbl": null,
     "lastReading": "2026-08-03",
     "lastSource": "GC",
     "numReadings": 17,
@@ -5390,7 +5505,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-07-29",
@@ -5400,7 +5516,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       }
     ],
     "basecampAlerts": [
@@ -5441,7 +5558,8 @@ const BATCHES = [
           }
         ]
       }
-    ]
+    ],
+    "vicinityPackaging": []
   },
   {
     "id": "GLD 061, 062, 063, 064",
@@ -5456,11 +5574,14 @@ const BATCHES = [
     "brewDate": "2026-08-18",
     "brewDateSource": "basecamp",
     "brewer": "TJ Boyle",
+    "brewVolumeBbl": 799.5,
+    "vicinityStage": "Ops-Closed",
     "age": 2,
     "stage": "Wort",
     "tank": "BH56",
     "labTank": "BH56",
     "tankSource": "basecamp",
+    "tankRemainingBbl": null,
     "lastReading": "2026-08-19",
     "lastSource": "WORT",
     "numReadings": 7,
@@ -5591,7 +5712,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       }
     ],
     "basecampAlerts": [
@@ -5663,7 +5785,8 @@ const BATCHES = [
           }
         ]
       }
-    ]
+    ],
+    "vicinityPackaging": []
   },
   {
     "id": "AMB 047, 049, 050, 051, 052",
@@ -5679,11 +5802,14 @@ const BATCHES = [
     "brewDate": "2026-07-29",
     "brewDateSource": "basecamp",
     "brewer": "Laren Ball",
+    "brewVolumeBbl": 997.0,
+    "vicinityStage": "Ops-Closed",
     "age": 22,
     "stage": "Fermenting",
     "tank": "BH58",
     "labTank": "BH58",
     "tankSource": "lab",
+    "tankRemainingBbl": null,
     "lastReading": "2026-08-20",
     "lastSource": "FERM",
     "numReadings": 18,
@@ -5933,7 +6059,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-08-13",
@@ -5943,7 +6070,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       }
     ],
     "basecampAlerts": [
@@ -5962,7 +6090,8 @@ const BATCHES = [
         "ackNote": "<p dir=\"auto\">spec should be changed to 5.0-5.2</p>",
         "also": []
       }
-    ]
+    ],
+    "vicinityPackaging": []
   },
   {
     "id": "GLD 048, 051",
@@ -5975,11 +6104,14 @@ const BATCHES = [
     "brewDate": "2026-06-24",
     "brewDateSource": "basecamp",
     "brewer": "Laren Ball",
+    "brewVolumeBbl": 403.5,
+    "vicinityStage": "Ops-Closed",
     "age": 57,
     "stage": "Fermenting",
     "tank": "BH13",
     "labTank": "BH58",
     "tankSource": "basecamp",
+    "tankRemainingBbl": null,
     "lastReading": "2026-06-27",
     "lastSource": "FERM",
     "numReadings": 16,
@@ -6168,7 +6300,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-07-15",
@@ -6178,7 +6311,8 @@ const BATCHES = [
         "volume": 40.0,
         "detail": null,
         "project": "cellar",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-07-28",
@@ -6188,7 +6322,8 @@ const BATCHES = [
         "volume": 390.0,
         "detail": null,
         "project": "cellar",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-08-03",
@@ -6198,7 +6333,8 @@ const BATCHES = [
         "volume": 40.0,
         "detail": null,
         "project": "cellar",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-08-10",
@@ -6208,7 +6344,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "cellar",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       }
     ],
     "basecampAlerts": [
@@ -6227,7 +6364,8 @@ const BATCHES = [
         "ackNote": "<p dir=\"auto\">pH adjustments to lower wort pH's in progress. Have not brewed Golden yet.</p>",
         "also": []
       }
-    ]
+    ],
+    "vicinityPackaging": []
   },
   {
     "id": "LHT 003",
@@ -6239,11 +6377,14 @@ const BATCHES = [
     "brewDate": "2026-05-14",
     "brewDateSource": "basecamp",
     "brewer": "TJ Boyle",
+    "brewVolumeBbl": 163.5,
+    "vicinityStage": "Ops-Closed",
     "age": 98,
     "stage": "Brite",
     "tank": "BT25",
     "labTank": "BT25",
     "tankSource": "basecamp",
+    "tankRemainingBbl": null,
     "lastReading": "2026-07-14",
     "lastSource": "BBT",
     "numReadings": 9,
@@ -6390,7 +6531,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-06-02",
@@ -6400,7 +6542,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "cellar",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-07-14",
@@ -6410,7 +6553,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "cellar",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       }
     ],
     "basecampAlerts": [
@@ -6436,7 +6580,8 @@ const BATCHES = [
           }
         ]
       }
-    ]
+    ],
+    "vicinityPackaging": []
   },
   {
     "id": "AMB 039, 040",
@@ -6449,11 +6594,14 @@ const BATCHES = [
     "brewDate": "2026-06-27",
     "brewDateSource": "basecamp",
     "brewer": "Chris Fernandez",
+    "brewVolumeBbl": 422.0,
+    "vicinityStage": "Ops-Closed",
     "age": 54,
     "stage": "Packaged",
     "tank": "BT31",
     "labTank": "BT31",
     "tankSource": "basecamp",
+    "tankRemainingBbl": null,
     "lastReading": "2026-08-13",
     "lastSource": "FIN",
     "numReadings": 30,
@@ -6903,7 +7051,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-07-29",
@@ -6913,7 +7062,8 @@ const BATCHES = [
         "volume": 56.0,
         "detail": null,
         "project": "cellar",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-07-29",
@@ -6923,7 +7073,8 @@ const BATCHES = [
         "volume": 52.0,
         "detail": null,
         "project": "cellar",
-        "completed": false
+        "completed": false,
+        "tankVolume": null
       },
       {
         "date": "2026-07-29",
@@ -6933,7 +7084,8 @@ const BATCHES = [
         "volume": 126.0,
         "detail": null,
         "project": "cellar",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-08-03",
@@ -6943,7 +7095,8 @@ const BATCHES = [
         "volume": 112.0,
         "detail": null,
         "project": "cellar",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-08-04",
@@ -6953,7 +7106,8 @@ const BATCHES = [
         "volume": 95.0,
         "detail": null,
         "project": "cellar",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-08-10",
@@ -6963,7 +7117,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "cellar",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-08-10",
@@ -6973,7 +7128,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "cellar",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-08-11",
@@ -6983,7 +7139,8 @@ const BATCHES = [
         "volume": null,
         "detail": "1030 CASES",
         "project": "packaging",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-08-11",
@@ -6993,7 +7150,8 @@ const BATCHES = [
         "volume": null,
         "detail": "1400 CASES",
         "project": "packaging",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-08-11",
@@ -7003,7 +7161,8 @@ const BATCHES = [
         "volume": null,
         "detail": "1240 CASES",
         "project": "packaging",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       }
     ],
     "basecampAlerts": [
@@ -7323,7 +7482,8 @@ const BATCHES = [
           }
         ]
       }
-    ]
+    ],
+    "vicinityPackaging": []
   },
   {
     "id": "AMB 041, 042",
@@ -7336,11 +7496,14 @@ const BATCHES = [
     "brewDate": "2026-07-06",
     "brewDateSource": "basecamp",
     "brewer": "Laren Ball",
+    "brewVolumeBbl": 399.0,
+    "vicinityStage": "Ops-Closed",
     "age": 45,
     "stage": "Packaged",
     "tank": "TK29",
     "labTank": "TK29",
     "tankSource": "lab",
+    "tankRemainingBbl": null,
     "lastReading": "2026-08-13",
     "lastSource": "FIN",
     "numReadings": 18,
@@ -7590,7 +7753,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-08-10",
@@ -7600,7 +7764,8 @@ const BATCHES = [
         "volume": 180.0,
         "detail": null,
         "project": "cellar",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       }
     ],
     "basecampAlerts": [
@@ -7670,7 +7835,8 @@ const BATCHES = [
           }
         ]
       }
-    ]
+    ],
+    "vicinityPackaging": []
   },
   {
     "id": "AND 031, 032, 033, 034, 035, 036, 037, 038",
@@ -7689,11 +7855,14 @@ const BATCHES = [
     "brewDate": "2026-06-26",
     "brewDateSource": "basecamp",
     "brewer": "Laren Ball",
+    "brewVolumeBbl": 1239.0,
+    "vicinityStage": "Ops-Closed",
     "age": 55,
     "stage": "Packaged",
     "tank": "UV30",
     "labTank": "UV30",
     "tankSource": "lab",
+    "tankRemainingBbl": null,
     "lastReading": "2026-08-14",
     "lastSource": "FIN",
     "numReadings": 62,
@@ -8652,7 +8821,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-07-02",
@@ -8662,7 +8832,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "brewhouse",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-07-21",
@@ -8672,7 +8843,8 @@ const BATCHES = [
         "volume": 56.0,
         "detail": null,
         "project": "cellar",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-07-21",
@@ -8682,7 +8854,8 @@ const BATCHES = [
         "volume": 145.0,
         "detail": null,
         "project": "cellar",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-07-22",
@@ -8692,7 +8865,8 @@ const BATCHES = [
         "volume": null,
         "detail": "not carbed) (3254 CASES",
         "project": "packaging",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-07-24",
@@ -8702,7 +8876,8 @@ const BATCHES = [
         "volume": 56.0,
         "detail": null,
         "project": "cellar",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-07-24",
@@ -8712,7 +8887,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "cellar",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-07-27",
@@ -8722,7 +8898,8 @@ const BATCHES = [
         "volume": 97.0,
         "detail": null,
         "project": "cellar",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-07-27",
@@ -8732,7 +8909,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "cellar",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-07-27",
@@ -8742,7 +8920,8 @@ const BATCHES = [
         "volume": null,
         "detail": "1609 CASES",
         "project": "packaging",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-07-28",
@@ -8752,7 +8931,8 @@ const BATCHES = [
         "volume": null,
         "detail": "1270 CASES",
         "project": "packaging",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-07-28",
@@ -8762,7 +8942,8 @@ const BATCHES = [
         "volume": 100.0,
         "detail": null,
         "project": "cellar",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-07-29",
@@ -8772,7 +8953,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "cellar",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-07-31",
@@ -8782,7 +8964,8 @@ const BATCHES = [
         "volume": null,
         "detail": "1180 CASES",
         "project": "packaging",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-08-04",
@@ -8792,7 +8975,8 @@ const BATCHES = [
         "volume": 93.0,
         "detail": null,
         "project": "cellar",
-        "completed": false
+        "completed": false,
+        "tankVolume": null
       },
       {
         "date": "2026-08-10",
@@ -8802,7 +8986,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "cellar",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-08-11",
@@ -8812,7 +8997,8 @@ const BATCHES = [
         "volume": null,
         "detail": "1250 CASES",
         "project": "packaging",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-08-12",
@@ -8822,7 +9008,8 @@ const BATCHES = [
         "volume": null,
         "detail": "3038 CASES",
         "project": "packaging",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       },
       {
         "date": "2026-08-12",
@@ -8832,7 +9019,8 @@ const BATCHES = [
         "volume": null,
         "detail": null,
         "project": "cellar",
-        "completed": true
+        "completed": true,
+        "tankVolume": null
       }
     ],
     "basecampAlerts": [
@@ -9450,7 +9638,8 @@ const BATCHES = [
           }
         ]
       }
-    ]
+    ],
+    "vicinityPackaging": []
   }
 ];
 
@@ -9469,7 +9658,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-20",
-  "lastSync": "Aug 20, 2026 \u00b7 12:56 PM"
+  "lastSync": "Aug 20, 2026 \u00b7 4:08 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
