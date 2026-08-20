@@ -492,7 +492,18 @@ function DetailPanel({ batch, onClose }) {
                 </span>
               )}
               <span style={{ fontSize:12, color:'var(--muted)' }}>Age: <strong style={{color:'var(--text)'}}>{batch.age}d</strong></span>
-              <span style={{ fontSize:12, color:'var(--muted)' }}>Brewed {fmtDate(batch.brewDate)}</span>
+              <span style={{ fontSize:12, color:'var(--muted)' }}>
+                Brewed {fmtDate(batch.brewDate)}
+                {batch.brewDateSource === 'lab' && (
+                  <span title="No Basecamp (or Vicinity) brew record found — falling back to the first lab sample date, which can differ from the actual brew day"
+                        style={{ color:'var(--amber)' }}> *</span>
+                )}
+              </span>
+              {batch.brewer && (
+                <span style={{ fontSize:12, color:'var(--muted)' }} title="Brewer — from Basecamp Brew House Schedule completion">
+                  Brewer: <strong style={{color:'var(--text)'}}>{batch.brewer}</strong>
+                </span>
+              )}
             </div>
           </div>
           <button onClick={onClose} style={{

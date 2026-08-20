@@ -1230,8 +1230,10 @@ const BATCHES = [
       5,
       6
     ],
-    "brewDate": "2026-04-16",
-    "age": 126,
+    "brewDate": "2026-04-15",
+    "brewDateSource": "basecamp",
+    "brewer": "TJ Boyle",
+    "age": 127,
     "stage": "Fermenting",
     "tank": "BT24",
     "labTank": "BH3",
@@ -1442,8 +1444,10 @@ const BATCHES = [
       10,
       13
     ],
-    "brewDate": "2026-08-06",
-    "age": 14,
+    "brewDate": "2026-08-05",
+    "brewDateSource": "basecamp",
+    "brewer": "Jamie Killian",
+    "age": 15,
     "stage": "Fermenting",
     "tank": "BH7",
     "labTank": "BH7",
@@ -1556,7 +1560,18 @@ const BATCHES = [
       }
     ],
     "yeastPitches": [],
-    "transferLog": [],
+    "transferLog": [
+      {
+        "date": "2026-08-05",
+        "action": "BREW",
+        "from": "",
+        "to": "BH10",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "completed": true
+      }
+    ],
     "basecampAlerts": []
   },
   {
@@ -1567,6 +1582,8 @@ const BATCHES = [
       5
     ],
     "brewDate": "2026-07-16",
+    "brewDateSource": "lab",
+    "brewer": null,
     "age": 35,
     "stage": "Fermenting",
     "tank": "BT25",
@@ -1843,8 +1860,10 @@ const BATCHES = [
     "brewNums": [
       8
     ],
-    "brewDate": "2026-08-06",
-    "age": 14,
+    "brewDate": "2026-08-05",
+    "brewDateSource": "basecamp",
+    "brewer": "Jamie Killian",
+    "age": 15,
     "stage": "Fermenting",
     "tank": "BH10",
     "labTank": "BH10",
@@ -1887,7 +1906,18 @@ const BATCHES = [
     ],
     "fermLog": [],
     "yeastPitches": [],
-    "transferLog": [],
+    "transferLog": [
+      {
+        "date": "2026-08-05",
+        "action": "BREW",
+        "from": "",
+        "to": "BH07",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "completed": true
+      }
+    ],
     "basecampAlerts": []
   },
   {
@@ -1897,8 +1927,10 @@ const BATCHES = [
     "brewNums": [
       30
     ],
-    "brewDate": "2026-06-22",
-    "age": 59,
+    "brewDate": "2026-06-20",
+    "brewDateSource": "basecamp",
+    "brewer": "Jamie Killian",
+    "age": 61,
     "stage": "Fermenting",
     "tank": "BH46",
     "labTank": "BH13",
@@ -2122,8 +2154,10 @@ const BATCHES = [
     "brewNums": [
       54
     ],
-    "brewDate": "2026-07-20",
-    "age": 31,
+    "brewDate": "2026-07-17",
+    "brewDateSource": "basecamp",
+    "brewer": "Chris Fernandez",
+    "age": 34,
     "stage": "Fermenting",
     "tank": "BH14",
     "labTank": "BH14",
@@ -2297,8 +2331,10 @@ const BATCHES = [
     "brewNums": [
       3
     ],
-    "brewDate": "2026-07-16",
-    "age": 35,
+    "brewDate": "2026-07-15",
+    "brewDateSource": "basecamp",
+    "brewer": "Chris Fernandez",
+    "age": 36,
     "stage": "Fermenting",
     "tank": "BH16",
     "labTank": "BH16",
@@ -2500,6 +2536,8 @@ const BATCHES = [
       5
     ],
     "brewDate": "2026-07-31",
+    "brewDateSource": "basecamp",
+    "brewer": "Laren Ball",
     "age": 20,
     "stage": "Fermenting",
     "tank": "BH18",
@@ -2657,7 +2695,18 @@ const BATCHES = [
         "countType": "FV"
       }
     ],
-    "transferLog": [],
+    "transferLog": [
+      {
+        "date": "2026-07-31",
+        "action": "BREW",
+        "from": "",
+        "to": "BH18",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "completed": true
+      }
+    ],
     "basecampAlerts": [
       {
         "metric": "Wort pH",
@@ -2698,8 +2747,10 @@ const BATCHES = [
     "brewNums": [
       13
     ],
-    "brewDate": "2026-08-05",
-    "age": 15,
+    "brewDate": "2026-08-04",
+    "brewDateSource": "basecamp",
+    "brewer": "Keeyan Majdi",
+    "age": 16,
     "stage": "Fermenting",
     "tank": "BH25",
     "labTank": "BH25",
@@ -2890,7 +2941,18 @@ const BATCHES = [
         "countType": "24hr"
       }
     ],
-    "transferLog": [],
+    "transferLog": [
+      {
+        "date": "2026-08-04",
+        "action": "BREW",
+        "from": "",
+        "to": "BH25",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "completed": true
+      }
+    ],
     "basecampAlerts": []
   },
   {
@@ -2901,8 +2963,10 @@ const BATCHES = [
       43,
       44
     ],
-    "brewDate": "2026-08-18",
-    "age": 2,
+    "brewDate": "2026-08-17",
+    "brewDateSource": "basecamp",
+    "brewer": "TJ Boyle",
+    "age": 3,
     "stage": "Wort",
     "tank": "BH26",
     "labTank": "BH26",
@@ -2988,7 +3052,18 @@ const BATCHES = [
         "countType": "FV"
       }
     ],
-    "transferLog": [],
+    "transferLog": [
+      {
+        "date": "2026-08-17",
+        "action": "BREW",
+        "from": "",
+        "to": "BH26",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "completed": true
+      }
+    ],
     "basecampAlerts": [
       {
         "metric": "Wort pH",
@@ -3015,6 +3090,8 @@ const BATCHES = [
       4
     ],
     "brewDate": "2026-07-27",
+    "brewDateSource": "lab",
+    "brewer": null,
     "age": 24,
     "stage": "Fermenting",
     "tank": "BH27",
@@ -3156,8 +3233,10 @@ const BATCHES = [
     "brewNums": [
       47
     ],
-    "brewDate": "2026-06-19",
-    "age": 62,
+    "brewDate": "2026-06-18",
+    "brewDateSource": "basecamp",
+    "brewer": "Jamie Killian",
+    "age": 63,
     "stage": "Fermenting",
     "tank": "BH14",
     "labTank": "BH30",
@@ -3304,8 +3383,10 @@ const BATCHES = [
       59,
       60
     ],
-    "brewDate": "2026-07-31",
-    "age": 20,
+    "brewDate": "2026-07-30",
+    "brewDateSource": "basecamp",
+    "brewer": "Laren Ball",
+    "age": 21,
     "stage": "Fermenting",
     "tank": "BH31",
     "labTank": "BH31",
@@ -3492,7 +3573,18 @@ const BATCHES = [
         "countType": "FV 24hr"
       }
     ],
-    "transferLog": [],
+    "transferLog": [
+      {
+        "date": "2026-07-30",
+        "action": "BREW",
+        "from": "",
+        "to": "BH31",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "completed": true
+      }
+    ],
     "basecampAlerts": [
       {
         "metric": "Total VDK",
@@ -3526,8 +3618,10 @@ const BATCHES = [
       39,
       40
     ],
-    "brewDate": "2026-07-11",
-    "age": 40,
+    "brewDate": "2026-07-10",
+    "brewDateSource": "basecamp",
+    "brewer": "Laren Ball",
+    "age": 41,
     "stage": "Fermenting",
     "tank": "BH32",
     "labTank": "BH32",
@@ -3704,7 +3798,18 @@ const BATCHES = [
         "countType": "12hr ferm check"
       }
     ],
-    "transferLog": [],
+    "transferLog": [
+      {
+        "date": "2026-07-10",
+        "action": "BREW",
+        "from": "",
+        "to": "BH32",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "completed": true
+      }
+    ],
     "basecampAlerts": [
       {
         "metric": "OG",
@@ -3731,8 +3836,10 @@ const BATCHES = [
       43,
       44
     ],
-    "brewDate": "2026-07-27",
-    "age": 24,
+    "brewDate": "2026-07-26",
+    "brewDateSource": "basecamp",
+    "brewer": "Keeyan Majdi",
+    "age": 25,
     "stage": "Fermenting",
     "tank": "BH33",
     "labTank": "BH33",
@@ -3966,7 +4073,18 @@ const BATCHES = [
         "countType": "FV"
       }
     ],
-    "transferLog": [],
+    "transferLog": [
+      {
+        "date": "2026-07-24",
+        "action": "BREW",
+        "from": "",
+        "to": "BH33",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "completed": true
+      }
+    ],
     "basecampAlerts": [
       {
         "metric": "Total VDK",
@@ -4034,8 +4152,10 @@ const BATCHES = [
       41,
       42
     ],
-    "brewDate": "2026-07-11",
-    "age": 40,
+    "brewDate": "2026-07-10",
+    "brewDateSource": "basecamp",
+    "brewer": "Laren Ball",
+    "age": 41,
     "stage": "Fermenting",
     "tank": "BH34",
     "labTank": "BH34",
@@ -4229,7 +4349,18 @@ const BATCHES = [
         "countType": "12hr ferm check"
       }
     ],
-    "transferLog": [],
+    "transferLog": [
+      {
+        "date": "2026-07-10",
+        "action": "BREW",
+        "from": "",
+        "to": "BH34",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "completed": true
+      }
+    ],
     "basecampAlerts": [
       {
         "metric": "OG",
@@ -4271,8 +4402,10 @@ const BATCHES = [
       57,
       58
     ],
-    "brewDate": "2026-07-31",
-    "age": 20,
+    "brewDate": "2026-07-29",
+    "brewDateSource": "basecamp",
+    "brewer": "Laren Ball",
+    "age": 22,
     "stage": "Fermenting",
     "tank": "BH40",
     "labTank": "BH40",
@@ -4432,7 +4565,18 @@ const BATCHES = [
         "countType": "24hr"
       }
     ],
-    "transferLog": [],
+    "transferLog": [
+      {
+        "date": "2026-07-29",
+        "action": "BREW",
+        "from": "",
+        "to": "BH40",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "completed": true
+      }
+    ],
     "basecampAlerts": []
   },
   {
@@ -4443,8 +4587,10 @@ const BATCHES = [
       52,
       53
     ],
-    "brewDate": "2026-07-11",
-    "age": 40,
+    "brewDate": "2026-07-09",
+    "brewDateSource": "basecamp",
+    "brewer": "Laren Ball",
+    "age": 42,
     "stage": "Fermenting",
     "tank": "BH46",
     "labTank": "BH42",
@@ -4628,8 +4774,10 @@ const BATCHES = [
       55,
       56
     ],
-    "brewDate": "2026-07-24",
-    "age": 27,
+    "brewDate": "2026-07-23",
+    "brewDateSource": "basecamp",
+    "brewer": "Chris Fernandez",
+    "age": 28,
     "stage": "Fermenting",
     "tank": "BH19",
     "labTank": "BH43",
@@ -4777,6 +4925,16 @@ const BATCHES = [
     ],
     "transferLog": [
       {
+        "date": "2026-07-23",
+        "action": "BREW",
+        "from": "",
+        "to": "BH43",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "completed": true
+      },
+      {
         "date": "2026-08-20",
         "action": "XFER",
         "from": "BH43",
@@ -4798,6 +4956,8 @@ const BATCHES = [
       46
     ],
     "brewDate": "2026-06-03",
+    "brewDateSource": "basecamp",
+    "brewer": "Laren Ball",
     "age": 78,
     "stage": "Fermenting",
     "tank": "UV30",
@@ -5014,8 +5174,10 @@ const BATCHES = [
       46,
       48
     ],
-    "brewDate": "2026-07-29",
-    "age": 22,
+    "brewDate": "2026-07-28",
+    "brewDateSource": "basecamp",
+    "brewer": "Laren Ball",
+    "age": 23,
     "stage": "Fermenting",
     "tank": "BH48",
     "labTank": "BH48",
@@ -5219,7 +5381,28 @@ const BATCHES = [
         "countType": "24hr"
       }
     ],
-    "transferLog": [],
+    "transferLog": [
+      {
+        "date": "2026-07-28",
+        "action": "BREW",
+        "from": "",
+        "to": "BH48",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "completed": true
+      },
+      {
+        "date": "2026-07-29",
+        "action": "BREW",
+        "from": "",
+        "to": "BH48",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "completed": true
+      }
+    ],
     "basecampAlerts": [
       {
         "metric": "Wort pH",
@@ -5270,8 +5453,10 @@ const BATCHES = [
       63,
       64
     ],
-    "brewDate": "2026-08-19",
-    "age": 1,
+    "brewDate": "2026-08-18",
+    "brewDateSource": "basecamp",
+    "brewer": "TJ Boyle",
+    "age": 2,
     "stage": "Wort",
     "tank": "BH56",
     "labTank": "BH56",
@@ -5397,7 +5582,18 @@ const BATCHES = [
         "countType": "24hr"
       }
     ],
-    "transferLog": [],
+    "transferLog": [
+      {
+        "date": "2026-08-18",
+        "action": "BREW",
+        "from": "",
+        "to": "BH56",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "completed": true
+      }
+    ],
     "basecampAlerts": [
       {
         "metric": "Wort pH",
@@ -5480,16 +5676,29 @@ const BATCHES = [
       51,
       52
     ],
-    "brewDate": "2026-07-31",
-    "age": 20,
+    "brewDate": "2026-07-29",
+    "brewDateSource": "basecamp",
+    "brewer": "Laren Ball",
+    "age": 22,
     "stage": "Fermenting",
     "tank": "BH58",
     "labTank": "BH58",
     "tankSource": "lab",
-    "lastReading": "2026-08-19",
+    "lastReading": "2026-08-20",
     "lastSource": "FERM",
-    "numReadings": 17,
+    "numReadings": 18,
     "readings": [
+      {
+        "date": "2026-08-20",
+        "sample": "AMB 49-52 BH58",
+        "stage": "FERM",
+        "tank": "BH58",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 4.23,
+        "Turbidity": 780.7609634399414,
+        "AE": 2.27
+      },
       {
         "date": "2026-08-19",
         "sample": "AMB 49-52 BH58",
@@ -5715,7 +5924,28 @@ const BATCHES = [
         "countType": "24hr"
       }
     ],
-    "transferLog": [],
+    "transferLog": [
+      {
+        "date": "2026-07-29",
+        "action": "BREW",
+        "from": "",
+        "to": "BH48",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "completed": true
+      },
+      {
+        "date": "2026-08-13",
+        "action": "BREW",
+        "from": "",
+        "to": "BH58",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "completed": true
+      }
+    ],
     "basecampAlerts": [
       {
         "metric": "Wort pH",
@@ -5743,6 +5973,8 @@ const BATCHES = [
       51
     ],
     "brewDate": "2026-06-24",
+    "brewDateSource": "basecamp",
+    "brewer": "Laren Ball",
     "age": 57,
     "stage": "Fermenting",
     "tank": "BH13",
@@ -6004,8 +6236,10 @@ const BATCHES = [
     "brewNums": [
       3
     ],
-    "brewDate": "2026-05-15",
-    "age": 97,
+    "brewDate": "2026-05-14",
+    "brewDateSource": "basecamp",
+    "brewer": "TJ Boyle",
+    "age": 98,
     "stage": "Brite",
     "tank": "BT25",
     "labTank": "BT25",
@@ -6212,8 +6446,10 @@ const BATCHES = [
       39,
       40
     ],
-    "brewDate": "2026-06-29",
-    "age": 52,
+    "brewDate": "2026-06-27",
+    "brewDateSource": "basecamp",
+    "brewer": "Chris Fernandez",
+    "age": 54,
     "stage": "Packaged",
     "tank": "BT31",
     "labTank": "BT31",
@@ -7097,8 +7333,10 @@ const BATCHES = [
       41,
       42
     ],
-    "brewDate": "2026-07-08",
-    "age": 43,
+    "brewDate": "2026-07-06",
+    "brewDateSource": "basecamp",
+    "brewer": "Laren Ball",
+    "age": 45,
     "stage": "Packaged",
     "tank": "TK29",
     "labTank": "TK29",
@@ -7449,6 +7687,8 @@ const BATCHES = [
       38
     ],
     "brewDate": "2026-06-26",
+    "brewDateSource": "basecamp",
+    "brewer": "Laren Ball",
     "age": 55,
     "stage": "Packaged",
     "tank": "UV30",
@@ -9229,7 +9469,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-20",
-  "lastSync": "Aug 20, 2026 \u00b7 8:03 AM"
+  "lastSync": "Aug 20, 2026 \u00b7 12:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
