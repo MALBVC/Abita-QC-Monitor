@@ -1791,6 +1791,16 @@ const BATCHES = [
         "detail": "1109 CASES",
         "project": "packaging",
         "completed": true
+      },
+      {
+        "date": "2026-08-20",
+        "action": "CENT",
+        "from": "BH9",
+        "to": "BT25",
+        "volume": null,
+        "detail": null,
+        "project": "cellar",
+        "completed": false
       }
     ],
     "basecampAlerts": [
@@ -2075,6 +2085,16 @@ const BATCHES = [
         "detail": null,
         "project": "brewhouse",
         "completed": true
+      },
+      {
+        "date": "2026-08-20",
+        "action": "CENT",
+        "from": "BH13",
+        "to": "BH46",
+        "volume": 100.0,
+        "detail": null,
+        "project": "cellar",
+        "completed": false
       }
     ],
     "basecampAlerts": [
@@ -4586,6 +4606,16 @@ const BATCHES = [
         "detail": null,
         "project": "brewhouse",
         "completed": true
+      },
+      {
+        "date": "2026-08-20",
+        "action": "CENT",
+        "from": "BH42",
+        "to": "BH46",
+        "volume": 320.0,
+        "detail": null,
+        "project": "cellar",
+        "completed": false
       }
     ],
     "basecampAlerts": []
@@ -4745,7 +4775,18 @@ const BATCHES = [
         "countType": "FV"
       }
     ],
-    "transferLog": [],
+    "transferLog": [
+      {
+        "date": "2026-08-20",
+        "action": "XFER",
+        "from": "BH43",
+        "to": "BH19",
+        "volume": 200.0,
+        "detail": null,
+        "project": "cellar",
+        "completed": false
+      }
+    ],
     "basecampAlerts": []
   },
   {
@@ -5235,7 +5276,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": null,
     "lastSource": null,
-    "numReadings": 2,
+    "numReadings": 3,
     "readings": [],
     "fermLog": [],
     "yeastPitches": [
@@ -5260,6 +5301,17 @@ const BATCHES = [
         "yeastSource": null,
         "yeastBrewNum": null,
         "countType": "FV"
+      },
+      {
+        "date": "2026-08-19",
+        "tank": "BH56",
+        "cellCount": 80303424.66666667,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "24hr"
       }
     ],
     "transferLog": [],
@@ -9025,7 +9077,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-19",
-  "lastSync": "Aug 19, 2026 \u00b7 4:06 PM"
+  "lastSync": "Aug 19, 2026 \u00b7 8:06 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
