@@ -5261,23 +5261,106 @@ const BATCHES = [
     ]
   },
   {
-    "id": "GLD 061, 064",
+    "id": "GLD 061, 062, 063, 064",
     "product": "GLD",
     "section": "brewhouse",
     "brewNums": [
       61,
+      62,
+      63,
       64
     ],
-    "brewDate": null,
-    "age": null,
-    "stage": "Fermenting",
+    "brewDate": "2026-08-19",
+    "age": 1,
+    "stage": "Wort",
     "tank": "BH56",
     "labTank": "BH56",
     "tankSource": "lab",
-    "lastReading": null,
-    "lastSource": null,
-    "numReadings": 3,
-    "readings": [],
+    "lastReading": "2026-08-19",
+    "lastSource": "WORT",
+    "numReadings": 7,
+    "readings": [
+      {
+        "date": "2026-08-19",
+        "sample": "GLD 061 BH56",
+        "stage": "WORT",
+        "tank": "BH56",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "G",
+        "Wort pH": 5.41,
+        "SRM": 4.479695431472081,
+        "IBU (W)": 15.5,
+        "Calories": 147.99,
+        "ADF": -0.8,
+        "RDF": -0.68,
+        "OG": 10.12,
+        "AE": 10.2,
+        "RE": 10.18,
+        "HAZE": 2888.030502319336,
+        "SG": 1.0408,
+        "ABV": -0.04
+      },
+      {
+        "date": "2026-08-19",
+        "sample": "GLD 062 BH56",
+        "stage": "WORT",
+        "tank": "BH56",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "G",
+        "Wort pH": 5.45,
+        "SRM": 4.467005076142131,
+        "IBU (W)": 13.900000000000002,
+        "Calories": 147.17,
+        "ADF": -0.84,
+        "RDF": -0.72,
+        "OG": 10.06,
+        "AE": 10.15,
+        "RE": 10.13,
+        "HAZE": 2387.203010559082,
+        "SG": 1.04059,
+        "ABV": -0.05
+      },
+      {
+        "date": "2026-08-19",
+        "sample": "GLD 063 BH56",
+        "stage": "WORT",
+        "tank": "BH56",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "G",
+        "Wort pH": 5.46,
+        "SRM": 3.9213197969543145,
+        "IBU (W)": 14.099999999999998,
+        "Calories": 149.18,
+        "ADF": -0.89,
+        "RDF": -0.76,
+        "OG": 10.19,
+        "AE": 10.28,
+        "RE": 10.27,
+        "HAZE": 2648.4706535339355,
+        "SG": 1.04116,
+        "ABV": -0.05
+      },
+      {
+        "date": "2026-08-19",
+        "sample": "GLD 064 BH56",
+        "stage": "WORT",
+        "tank": "BH56",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "G",
+        "Wort pH": 5.46,
+        "SRM": 3.9593908629441623,
+        "IBU (W)": 13.950000000000001,
+        "Calories": 149.75,
+        "ADF": -0.84,
+        "RDF": -0.72,
+        "OG": 10.23,
+        "AE": 10.32,
+        "RE": 10.3,
+        "HAZE": 3009.1942749023438,
+        "SG": 1.0413,
+        "ABV": -0.05
+      }
+    ],
     "fermLog": [],
     "yeastPitches": [
       {
@@ -5315,7 +5398,76 @@ const BATCHES = [
       }
     ],
     "transferLog": [],
-    "basecampAlerts": []
+    "basecampAlerts": [
+      {
+        "metric": "Wort pH",
+        "value": 5.41,
+        "low": 4.9,
+        "high": 5.3,
+        "date": "2026-08-19",
+        "stage": "WORT",
+        "sample": "GLD 061 BH56",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10221782912",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
+        "also": [
+          {
+            "value": 5.45,
+            "date": "2026-08-19",
+            "stage": "WORT",
+            "sample": "GLD 062 BH56"
+          },
+          {
+            "value": 5.46,
+            "date": "2026-08-19",
+            "stage": "WORT",
+            "sample": "GLD 063 BH56"
+          },
+          {
+            "value": 5.46,
+            "date": "2026-08-19",
+            "stage": "WORT",
+            "sample": "GLD 064 BH56"
+          }
+        ]
+      },
+      {
+        "metric": "OG",
+        "value": 10.12,
+        "low": 9.6,
+        "high": 10.0,
+        "date": "2026-08-19",
+        "stage": "WORT",
+        "sample": "GLD 061 BH56",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10221782860",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
+        "also": [
+          {
+            "value": 10.06,
+            "date": "2026-08-19",
+            "stage": "WORT",
+            "sample": "GLD 062 BH56"
+          },
+          {
+            "value": 10.19,
+            "date": "2026-08-19",
+            "stage": "WORT",
+            "sample": "GLD 063 BH56"
+          },
+          {
+            "value": 10.23,
+            "date": "2026-08-19",
+            "stage": "WORT",
+            "sample": "GLD 064 BH56"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "AMB 047, 049, 050, 051, 052",
@@ -9077,7 +9229,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-20",
-  "lastSync": "Aug 20, 2026 \u00b7 12:06 AM"
+  "lastSync": "Aug 20, 2026 \u00b7 4:06 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
