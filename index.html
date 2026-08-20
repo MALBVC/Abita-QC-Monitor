@@ -228,7 +228,7 @@ function BatchRow({ batch, selected, onClick, compact, detailOpen }) {
       </span>
       <StagePill stage={batch.stage}/>
       <span style={{ color:'var(--muted)', fontSize:12, fontFamily:'IBM Plex Mono' }}>
-        {batch.tank}{batch.tankSource === 'basecamp' && <span title="via Basecamp transfer log" style={{ color:'var(--amber)' }}> *</span>}
+        {batch.tank}{batch.tankSource === 'lab' && batch.tank && <span title="Lab-sourced tank — either no Basecamp/Vicinity transfer log data for this batch, or a newer lab reading disagrees with it" style={{ color:'var(--amber)' }}> *</span>}
       </span>
       <span style={{ color:'var(--muted)', fontSize:12 }}>{batch.age}d</span>
       {!detailOpen && (
@@ -482,13 +482,13 @@ function DetailPanel({ batch, onClose }) {
             <div style={{ display:'flex', alignItems:'center', gap:10, marginTop:4 }}>
               <StagePill stage={batch.stage}/>
               <span style={{ fontSize:12, color:'var(--muted)', fontFamily:'IBM Plex Mono' }}>{batch.tank}</span>
-              {batch.tankSource === 'basecamp' && (
-                <span title={`Lab reading last showed ${batch.labTank || '—'}; Basecamp transfer log is more recent`}
+              {batch.tankSource === 'lab' && (
+                <span title="Lab-sourced tank — either no Basecamp/Vicinity transfer log data exists for this batch, or a newer lab reading disagrees with the transfer log's last-known tank"
                       style={{ padding:'1px 6px', borderRadius:3, fontSize:9, fontWeight:700,
                                 letterSpacing:'0.05em', textTransform:'uppercase',
                                 background:'rgba(122,109,88,0.12)', border:'1px solid var(--border2)',
                                 color:'var(--muted)', cursor:'help' }}>
-                  via Basecamp
+                  via Lab
                 </span>
               )}
               <span style={{ fontSize:12, color:'var(--muted)' }}>Age: <strong style={{color:'var(--text)'}}>{batch.age}d</strong></span>
