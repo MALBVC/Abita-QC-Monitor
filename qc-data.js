@@ -1388,6 +1388,44 @@ const BATCHES = [
     "basecampAlerts": []
   },
   {
+    "id": "ALG 006",
+    "product": "ALG",
+    "section": "brewhouse",
+    "brewNums": [
+      6
+    ],
+    "brewDate": null,
+    "brewDateSource": null,
+    "brewer": null,
+    "brewVolumeBbl": null,
+    "vicinityStage": null,
+    "age": null,
+    "stage": "Fermenting",
+    "tank": "BH8",
+    "labTank": "BH8",
+    "tankSource": "lab",
+    "lastReading": null,
+    "lastSource": null,
+    "numReadings": 1,
+    "readings": [],
+    "fermLog": [],
+    "yeastPitches": [
+      {
+        "date": "2026-08-21",
+        "tank": "BH8",
+        "cellCount": 1570000000.0,
+        "viability": 0.9,
+        "pitchRate": 93.79,
+        "yeastGen": "K-4",
+        "yeastSource": "Prop 1",
+        "yeastBrewNum": "TBOL66 BH28",
+        "countType": "Yeast"
+      }
+    ],
+    "transferLog": [],
+    "basecampAlerts": []
+  },
+  {
     "id": "DGT 008",
     "product": "DGT",
     "section": "brewhouse",
@@ -1749,7 +1787,7 @@ const BATCHES = [
     "vicinityStage": "Ops-Closed",
     "age": 21,
     "stage": "Aging",
-    "tank": "BH18",
+    "tank": "BT28",
     "labTank": "BH18",
     "tankSource": "basecamp",
     "lastReading": "2026-08-03",
@@ -1936,6 +1974,18 @@ const BATCHES = [
         "detail": "TBD 005",
         "project": "vicinity",
         "completed": true,
+        "runningBalanceBbl": 156.5
+      },
+      {
+        "date": "2026-08-21",
+        "action": "CENT",
+        "from": "BH18",
+        "to": "BT28",
+        "volume": 80.0,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10227338559",
+        "completed": false,
         "runningBalanceBbl": 156.5
       }
     ],
@@ -3744,7 +3794,7 @@ const BATCHES = [
     "vicinityStage": "Ops-Closed",
     "age": 23,
     "stage": "Aging",
-    "tank": "BH40",
+    "tank": "UV30",
     "labTank": "BH40",
     "tankSource": "basecamp",
     "lastReading": "2026-07-31",
@@ -3944,6 +3994,18 @@ const BATCHES = [
         "volume": 201.0,
         "detail": "GLD 058",
         "project": "vicinity",
+        "completed": true,
+        "runningBalanceBbl": 402.5
+      },
+      {
+        "date": "2026-08-21",
+        "action": "CENT",
+        "from": "BH19",
+        "to": "UV30",
+        "volume": null,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10226436738",
         "completed": true,
         "runningBalanceBbl": 402.5
       }
@@ -4974,10 +5036,21 @@ const BATCHES = [
     "tank": "BH58",
     "labTank": "BH58",
     "tankSource": "lab",
-    "lastReading": "2026-08-20",
+    "lastReading": "2026-08-21",
     "lastSource": "FERM",
-    "numReadings": 18,
+    "numReadings": 19,
     "readings": [
+      {
+        "date": "2026-08-21",
+        "sample": "AMB 49-52 BH58",
+        "stage": "FERM",
+        "tank": "BH58",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 4.25,
+        "Turbidity": 670.8486070632935,
+        "AE": 2.26
+      },
       {
         "date": "2026-08-20",
         "sample": "AMB 49-52 BH58",
@@ -6239,12 +6312,11 @@ const BATCHES = [
     ]
   },
   {
-    "id": "BBW 005, 006",
+    "id": "BBW 005",
     "product": "BBW",
     "section": "brite",
     "brewNums": [
-      5,
-      6
+      5
     ],
     "brewDate": "2026-04-15",
     "brewDateSource": "basecamp",
@@ -10392,7 +10464,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-21",
-  "lastSync": "Aug 21, 2026 \u00b7 8:09 AM"
+  "lastSync": "Aug 21, 2026 \u00b7 12:10 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
