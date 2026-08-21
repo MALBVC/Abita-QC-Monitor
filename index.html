@@ -54,9 +54,9 @@ const { useState, useEffect, useRef, useCallback, useMemo } = React;
 
 // ─── Constants ───────────────────────────────────────────────────────────────
 const STAGE_COLORS = {
-  Wort: '#5b7ab5', Fermenting: '#6b9b5a', Brite: '#d4861a', Packaged: '#7a8a6a',
+  Wort: '#5b7ab5', Fermenting: '#6b9b5a', Aging: '#c9a227', Brite: '#d4861a', Packaged: '#7a8a6a',
 };
-const STAGE_ORDER = ['Wort','Fermenting','Brite','Packaged'];
+const STAGE_ORDER = ['Wort','Fermenting','Aging','Brite','Packaged'];
 const ALL_METRICS  = ['OG','Wort pH','IBU (W)','ABV','AE','IBU','CO2','pH','HAZE','SRM','DO'];
 
 // Readings History column sets — split by stage so wort-only and
@@ -479,7 +479,7 @@ function DetailPanel({ batch, onClose }) {
             <div style={{ fontFamily:'IBM Plex Mono', fontSize:18, fontWeight:600, color:'var(--text)' }}>
               {batch.id}
             </div>
-            <div style={{ display:'flex', alignItems:'center', gap:10, marginTop:4 }}>
+            <div style={{ display:'flex', flexWrap:'wrap', alignItems:'center', gap:10, marginTop:4 }}>
               <StagePill stage={batch.stage}/>
               <span style={{ fontSize:12, color:'var(--muted)', fontFamily:'IBM Plex Mono' }}>{batch.tank}</span>
               {batch.tankSource === 'lab' && (
@@ -516,11 +516,6 @@ function DetailPanel({ batch, onClose }) {
                                 background:'rgba(122,109,88,0.12)', border:'1px solid var(--border2)',
                                 color:'var(--muted)', cursor:'help' }}>
                   Vicinity: {batch.vicinityStage}
-                </span>
-              )}
-              {batch.tankRemainingBbl != null && (
-                <span style={{ fontSize:12, color:'var(--muted)' }} title="Volume of this tank's most recent fill, per Vicinity — not yet netted against packaging draws (see Transfer Log)">
-                  ~{batch.tankRemainingBbl} BBL in tank
                 </span>
               )}
             </div>
@@ -813,7 +808,7 @@ function DetailPanel({ batch, onClose }) {
               <table style={{ width:'100%', borderCollapse:'collapse', fontSize:11 }}>
                 <thead>
                   <tr style={{ borderBottom:'1px solid var(--border2)' }}>
-                    {['Date','Action','From','To','Qty','Tank Volume','Source'].map(h => (
+                    {['Date','Action','From','To','Qty','Remaining','Detail','Source'].map(h => (
                       <th key={h} style={{ padding:'4px 6px', textAlign:'left', color:'var(--muted)',
                                             fontWeight:600, letterSpacing:'0.05em', whiteSpace:'nowrap',
                                             fontSize:10, textTransform:'uppercase' }}>{h}</th>
@@ -828,53 +823,22 @@ function DetailPanel({ batch, onClose }) {
                                     fontSize:11, whiteSpace:'nowrap' }}>{fmtDate(r.date)}</td>
                       <td style={{ padding:'4px 6px', fontFamily:'IBM Plex Mono', fontSize:11 }}>{r.action}</td>
                       <td style={{ padding:'4px 6px', fontFamily:'IBM Plex Mono', fontSize:11 }}>{r.from || '—'}</td>
-                      <td style={{ padding:'4px 6px', fontFamily:'IBM Plex Mono', fontSize:11, color:'var(--amber)', fontWeight:600 }}>{r.to || '—'}</td>
+                      <td style={{ padding:'4px 6px', fontFamily:'IBM Plex Mono', fontSize:11, color:'var(--amber)', fontWeight:600 }}>
+                        {r.to || (r.action === 'PACKAGE' ? 'Packaging' : '—')}
+                      </td>
                       <td style={{ padding:'4px 6px', fontFamily:'IBM Plex Mono', fontSize:11 }}>
-                        {r.volume != null ? fmt(r.volume,0) + ' BBL' : (r.detail || '—')}
+                        {r.volume != null ? fmt(r.volume,0) + ' BBL' : '—'}
                       </td>
                       <td style={{ padding:'4px 6px', fontFamily:'IBM Plex Mono', fontSize:11, color:'var(--muted)' }}
-                          title="Estimated volume of that tank's most recent fill at report time, per Vicinity — not a historical point-in-time value">
-                        {r.tankVolume != null ? fmt(r.tankVolume,0) + ' BBL' : '—'}
+                          title="Running whole-batch balance: total Brewed minus total Packaged so far, as of this row. Only Vicinity BREW/PACKAGE rows move it — transfers and Basecamp schedule entries carry it forward unchanged.">
+                        {r.runningBalanceBbl != null ? fmt(r.runningBalanceBbl,0) + ' BBL' : '—'}
+                      </td>
+                      <td style={{ padding:'4px 6px', fontSize:11, color:'var(--muted)', maxWidth:260 }}>
+                        {r.detail || '—'}
                       </td>
                       <td style={{ padding:'4px 6px', color:'var(--muted)', fontSize:11 }}>
-                        {({brewhouse:'Brew House', cellar:'Cellar', packaging:'Packaging', kegging:'Kegging', vicinity:'Vicinity'})[r.project] || r.project}
+                        {r.project === 'vicinity' ? 'Vicinity' : 'Basecamp'}
                       </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        )}
-
-        {/* Packaging (Vicinity) */}
-        {batch.vicinityPackaging && batch.vicinityPackaging.length > 0 && (
-          <div style={{ padding:'0 18px 20px' }}>
-            <div style={{ fontSize:10, fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase',
-                          color:'var(--muted)', marginBottom:8 }}>
-              Packaging ({batch.vicinityPackaging.length}) <span style={{ fontWeight:400, textTransform:'none', letterSpacing:0 }}>· via Vicinity</span>
-            </div>
-            <div style={{ overflowX:'auto' }}>
-              <table style={{ width:'100%', borderCollapse:'collapse', fontSize:11 }}>
-                <thead>
-                  <tr style={{ borderBottom:'1px solid var(--border2)' }}>
-                    {['Date','Package','Ordered','Completed','Remaining'].map(h => (
-                      <th key={h} style={{ padding:'4px 6px', textAlign:'left', color:'var(--muted)',
-                                            fontWeight:600, letterSpacing:'0.05em', whiteSpace:'nowrap',
-                                            fontSize:10, textTransform:'uppercase' }}>{h}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {batch.vicinityPackaging.map((r, i) => (
-                    <tr key={i} style={{ borderBottom:'1px solid var(--border)',
-                                          background: i%2===0 ? 'transparent' : 'rgba(255,255,255,0.01)' }}>
-                      <td style={{ padding:'4px 6px', color:'var(--muted)', fontFamily:'IBM Plex Mono',
-                                    fontSize:11, whiteSpace:'nowrap' }}>{fmtDate(r.date)}</td>
-                      <td style={{ padding:'4px 6px', fontFamily:'IBM Plex Mono', fontSize:11 }}>{r.component}</td>
-                      <td style={{ padding:'4px 6px', fontFamily:'IBM Plex Mono', fontSize:11 }}>{r.ordered != null ? `${fmt(r.ordered,1)} ${r.uom||''}` : '—'}</td>
-                      <td style={{ padding:'4px 6px', fontFamily:'IBM Plex Mono', fontSize:11 }}>{r.completed != null ? fmt(r.completed,1) : '—'}</td>
-                      <td style={{ padding:'4px 6px', fontFamily:'IBM Plex Mono', fontSize:11, color:'var(--amber)', fontWeight:600 }}>{r.remaining != null ? fmt(r.remaining,1) : '—'}</td>
                     </tr>
                   ))}
                 </tbody>
