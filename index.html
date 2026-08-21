@@ -769,8 +769,9 @@ function DetailPanel({ batch, onClose }) {
                     </thead>
                     <tbody>
                       {batch.fermLog.map((r, i) => (
-                        <tr key={i} style={{ borderBottom:'1px solid var(--border)',
-                                              background: i%2===0 ? 'transparent' : 'rgba(255,255,255,0.01)' }}>
+                        <tr key={i} onClick={e => handleSourceClick(e, r)}
+                          style={{ borderBottom:'1px solid var(--border)', cursor:'pointer',
+                                    background: i%2===0 ? 'transparent' : 'rgba(255,255,255,0.01)' }}>
                           <td style={{ padding:'4px 6px', color:'var(--muted)', fontFamily:'IBM Plex Mono',
                                         fontSize:11, whiteSpace:'nowrap' }}>{fmtDate(r.date)}</td>
                           <td style={{ padding:'4px 6px', color:'var(--muted)', fontFamily:'IBM Plex Mono', fontSize:11 }}>{r.tank}</td>
@@ -837,7 +838,12 @@ function DetailPanel({ batch, onClose }) {
                         {r.detail || '—'}
                       </td>
                       <td style={{ padding:'4px 6px', color:'var(--muted)', fontSize:11 }}>
-                        {r.project === 'vicinity' ? 'Vicinity' : 'Basecamp'}
+                        {r.project === 'vicinity' ? 'Vicinity' : (
+                          r.basecampUrl
+                            ? <a href={r.basecampUrl} target="_blank" rel="noreferrer"
+                                 style={{ color:'var(--amber)' }}>Basecamp →</a>
+                            : 'Basecamp'
+                        )}
                       </td>
                     </tr>
                   ))}
