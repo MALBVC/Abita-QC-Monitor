@@ -1394,20 +1394,40 @@ const BATCHES = [
     "brewNums": [
       6
     ],
-    "brewDate": null,
-    "brewDateSource": null,
+    "brewDate": "2026-08-22",
+    "brewDateSource": "lab",
     "brewer": null,
     "brewVolumeBbl": null,
     "vicinityStage": null,
-    "age": null,
-    "stage": "Fermenting",
+    "age": 0,
+    "stage": "Wort",
     "tank": "BH8",
     "labTank": "BH8",
     "tankSource": "lab",
-    "lastReading": null,
-    "lastSource": null,
-    "numReadings": 2,
-    "readings": [],
+    "lastReading": "2026-08-22",
+    "lastSource": "WORT",
+    "numReadings": 3,
+    "readings": [
+      {
+        "date": "2026-08-22",
+        "sample": "ALG 006 BH8",
+        "stage": "WORT",
+        "tank": "BH8",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "Alpha",
+        "Wort pH": 5.27,
+        "SRM": 7.626903553299492,
+        "IBU (W)": 15.65,
+        "Calories": 293.55,
+        "ADF": -1.14,
+        "RDF": -1.01,
+        "OG": 19.23,
+        "AE": 19.45,
+        "RE": 19.41,
+        "SG": 1.08044,
+        "ABV": -0.13
+      }
+    ],
     "fermLog": [],
     "yeastPitches": [
       {
@@ -10475,7 +10495,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-22",
-  "lastSync": "Aug 22, 2026 \u00b7 4:09 PM"
+  "lastSync": "Aug 22, 2026 \u00b7 8:08 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
