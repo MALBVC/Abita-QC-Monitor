@@ -2199,7 +2199,7 @@ const BATCHES = [
     "vicinityStage": "Ops-Closed",
     "age": 31,
     "stage": "Fermenting",
-    "tank": "BH57",
+    "tank": "BT23",
     "labTank": "BH27",
     "tankSource": "basecamp",
     "lastReading": "2026-08-18",
@@ -2363,6 +2363,30 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10216085035",
         "completed": true,
+        "runningBalanceBbl": 152.5
+      },
+      {
+        "date": "2026-08-24",
+        "action": "FILTER",
+        "from": "BH27",
+        "to": "BT23",
+        "volume": 58.0,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10232134228",
+        "completed": false,
+        "runningBalanceBbl": 152.5
+      },
+      {
+        "date": "2026-08-24",
+        "action": "FILTER",
+        "from": "BH27",
+        "to": "UV13",
+        "volume": null,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10232136441",
+        "completed": false,
         "runningBalanceBbl": 152.5
       }
     ],
@@ -10495,7 +10519,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-24",
-  "lastSync": "Aug 24, 2026 \u00b7 8:09 AM"
+  "lastSync": "Aug 24, 2026 \u00b7 12:09 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
