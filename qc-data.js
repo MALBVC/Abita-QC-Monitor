@@ -1237,9 +1237,9 @@ const BATCHES = [
     "vicinityStage": "Ops-Closed",
     "age": 20,
     "stage": "Aging",
-    "tank": "BH7",
+    "tank": "BT26",
     "labTank": "BH7",
-    "tankSource": "lab",
+    "tankSource": "basecamp",
     "lastReading": "2026-08-12",
     "lastSource": "FERM",
     "numReadings": 10,
@@ -10830,7 +10830,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-25",
-  "lastSync": "Aug 25, 2026 \u00b7 4:10 PM"
+  "lastSync": "Aug 25, 2026 \u00b7 8:09 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
