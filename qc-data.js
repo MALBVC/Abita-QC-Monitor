@@ -2292,10 +2292,10 @@ const BATCHES = [
         "stage": "WORT",
         "sample": "AND 043 BH26",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10220376825",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Keeyan Majdi",
+        "ackAt": "2026-08-26T14:54",
+        "ackNote": "<p dir=\"auto\">Spec should be pH 5.2-5.5 for all brands</p>",
         "also": []
       },
       {
@@ -2314,6 +2314,58 @@ const BATCHES = [
         "also": []
       }
     ]
+  },
+  {
+    "id": "AND 045, 046",
+    "product": "AND",
+    "section": "brewhouse",
+    "brewNums": [
+      45,
+      46
+    ],
+    "brewDate": "2026-08-26",
+    "brewDateSource": "basecamp",
+    "brewer": null,
+    "brewVolumeBbl": null,
+    "vicinityStage": null,
+    "age": 0,
+    "stage": "Fermenting",
+    "tank": "BH27",
+    "labTank": "BH27",
+    "tankSource": "basecamp",
+    "lastReading": null,
+    "lastSource": null,
+    "numReadings": 1,
+    "readings": [],
+    "fermLog": [],
+    "yeastPitches": [
+      {
+        "date": "2026-08-26",
+        "tank": "BH27",
+        "cellCount": 2770000000.0,
+        "viability": 0.863,
+        "pitchRate": 210.08,
+        "yeastGen": "L-5",
+        "yeastSource": "BH58",
+        "yeastBrewNum": "AMB52",
+        "countType": "Yeast"
+      }
+    ],
+    "transferLog": [
+      {
+        "date": "2026-08-26",
+        "action": "BREW",
+        "from": "",
+        "to": "BH27",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10234403896",
+        "completed": false,
+        "runningBalanceBbl": null
+      }
+    ],
+    "basecampAlerts": []
   },
   {
     "id": "GLD 059, 060",
@@ -4669,10 +4721,10 @@ const BATCHES = [
         "stage": "WORT",
         "sample": "GLD 061 BH56",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10221782912",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-08-26T13:20",
+        "ackNote": "<p dir=\"auto\">Noted, Acid addition adjustments still in progress, adjustments will be made prior to next brews</p>",
         "also": [
           {
             "value": 5.45,
@@ -4703,10 +4755,10 @@ const BATCHES = [
         "stage": "WORT",
         "sample": "GLD 061 BH56",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10221782860",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-08-26T13:19",
+        "ackNote": "<p dir=\"auto\">Brew sheet targets 10 OG, not 9.8. Brew sheet will be adjusted prior to next brews. </p>",
         "also": [
           {
             "value": 10.06,
@@ -10680,10 +10732,10 @@ const BATCHES = [
         "stage": "BBT",
         "sample": "AND 35-38 BT28",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10200720826",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-08-26T13:17",
+        "ackNote": "<p dir=\"auto\">data error. abvs ranged from 8.15-8.3, all in spec</p>",
         "also": [
           {
             "value": 0.0,
@@ -10868,7 +10920,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-26",
-  "lastSync": "Aug 26, 2026 \u00b7 8:10 AM"
+  "lastSync": "Aug 26, 2026 \u00b7 12:10 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
