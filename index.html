@@ -809,7 +809,7 @@ function DetailPanel({ batch, onClose }) {
               <table style={{ width:'100%', borderCollapse:'collapse', fontSize:11 }}>
                 <thead>
                   <tr style={{ borderBottom:'1px solid var(--border2)' }}>
-                    {['Date','Action','From','To','Qty','Remaining','Detail','Source'].map(h => (
+                    {['Date','Action','From','To','Qty','On Hand','Detail','Source'].map(h => (
                       <th key={h} style={{ padding:'4px 6px', textAlign:'left', color:'var(--muted)',
                                             fontWeight:600, letterSpacing:'0.05em', whiteSpace:'nowrap',
                                             fontSize:10, textTransform:'uppercase' }}>{h}</th>
@@ -831,8 +831,8 @@ function DetailPanel({ batch, onClose }) {
                         {r.volume != null ? fmt(r.volume,0) + ' BBL' : '—'}
                       </td>
                       <td style={{ padding:'4px 6px', fontFamily:'IBM Plex Mono', fontSize:11, color:'var(--muted)' }}
-                          title="Running whole-batch balance: total Brewed minus total Packaged so far, as of this row. Only Vicinity BREW/PACKAGE rows move it — transfers and Basecamp schedule entries carry it forward unchanged.">
-                        {r.runningBalanceBbl != null ? fmt(r.runningBalanceBbl,0) + ' BBL' : '—'}
+                          title="Live on-hand in this row's tank right now, straight from Vicinity's own OnHand Inventory view (same screen the brew team reads) — not a value as of this row's date. Blank where Vicinity tracks no on-hand figure for that bin/lot.">
+                        {r.onHandBbl != null ? fmt(r.onHandBbl,0) + ' BBL' : '—'}
                       </td>
                       <td style={{ padding:'4px 6px', fontSize:11, color:'var(--muted)', maxWidth:260 }}>
                         {r.detail || '—'}
@@ -852,6 +852,95 @@ function DetailPanel({ batch, onClose }) {
             </div>
           </div>
         )}
+      </div>
+    </div>
+  );
+}
+
+// ─── Fermenter Cellar (tank-centric view) ─────────────────────────────────────
+function FermenterTile({ f, batchById, selectedId, onSelect }) {
+  // Usually one occupant, but a tank can genuinely hold two overlapping
+  // batches at once (e.g. one packaging out as the next brews in) — see
+  // reports.py's _build_section() comment on why batches are keyed by
+  // (product, tank), not tank alone. Render every occupant, not just the
+  // first, so that case doesn't silently disappear from the cellar view.
+  const occupants = (f.occupantIds || []).map(id => batchById.get(id)).filter(Boolean);
+  const isInactive = f.status === 'inactive';
+  const isMulti = occupants.length > 1;
+
+  return (
+    <div
+      style={{
+        border: `1px solid ${occupants.some(o => o.id === selectedId) ? 'var(--amber)' : 'var(--border)'}`,
+        borderRadius:8, padding:'10px 12px', minHeight:96,
+        background: isInactive ? 'var(--card2)' : 'var(--card)',
+        opacity: isInactive && occupants.length === 0 ? 0.6 : 1,
+        display:'flex', flexDirection:'column', gap:4,
+        transition:'border-color 0.12s',
+      }}>
+      <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center' }}>
+        <span style={{ fontFamily:'IBM Plex Mono', fontWeight:700, fontSize:13, color:'var(--text)' }}>
+          {f.tank}
+        </span>
+        {isInactive && (
+          <span style={{ fontSize:9, fontWeight:700, textTransform:'uppercase', letterSpacing:'0.05em',
+                          color:'var(--muted2)', border:'1px solid var(--border2)', borderRadius:3,
+                          padding:'1px 5px', whiteSpace:'nowrap' }}>
+            Inactive
+          </span>
+        )}
+      </div>
+      {occupants.length > 0 ? occupants.map((occupant, i) => {
+        const oos     = computeOOS(occupant.readings, occupant.product);
+        const unacked = hasUnacknowledgedOOS(oos, occupant.basecampAlerts);
+        return (
+          <div key={occupant.id}
+            onClick={() => onSelect(occupant)}
+            style={{
+              display:'flex', flexDirection:'column', gap:4, cursor:'pointer',
+              paddingTop: i > 0 ? 6 : 0, borderTop: i > 0 ? '1px solid var(--border)' : 'none',
+            }}>
+            <StagePill stage={occupant.stage} small/>
+            <span style={{ fontFamily:'IBM Plex Mono', fontSize:11, color:'var(--muted)',
+                            whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>
+              {occupant.id}
+            </span>
+            <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center' }}>
+              <span style={{ fontSize:10, color:'var(--muted2)' }}>{occupant.age}d</span>
+              <OOSBadge count={oos.length} unacknowledged={unacked}/>
+            </div>
+          </div>
+        );
+      }) : (
+        <span style={{ fontSize:11, color:'var(--muted2)', marginTop:'auto' }}>— empty —</span>
+      )}
+    </div>
+  );
+}
+
+function FermenterCellar({ fermenters, batchById, selectedId, onSelect }) {
+  const occupiedCount = fermenters.filter(f => f.occupantIds && f.occupantIds.length > 0).length;
+
+  if (fermenters.length === 0) {
+    return (
+      <div style={{ display:'flex', alignItems:'center', justifyContent:'center',
+                    height:200, color:'var(--muted)', fontSize:13 }}>
+        No fermenter roster configured (config/fermenters.yaml).
+      </div>
+    );
+  }
+
+  return (
+    <div style={{ padding:'16px 20px 24px' }}>
+      <div style={{ fontSize:10, fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase',
+                    color:'var(--muted)', marginBottom:12 }}>
+        Fermenter Cellar · {occupiedCount} of {fermenters.length} occupied
+      </div>
+      <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(120px,1fr))', gap:10 }}>
+        {fermenters.map(f => (
+          <FermenterTile key={f.tank} f={f} batchById={batchById}
+            selectedId={selectedId} onSelect={onSelect}/>
+        ))}
       </div>
     </div>
   );
@@ -1005,6 +1094,7 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
 
 function App() {
   const [selected,  setSelected]  = useState(null);
+  const [view, setView] = useState('batches'); // 'batches' | 'cellar'
   const [tweaksOpen, setTweaksOpen] = useState(false);
   const [config, setConfig]       = useState(TWEAK_DEFAULTS);
   const [acknowledged, setAcked]  = useState(() => {
@@ -1037,6 +1127,8 @@ function App() {
   // Enrich batches with live-computed OOS counts
   const enrichedBatches = useMemo(() =>
     BATCHES.map(b => ({ ...b, oosCount: computeOOS(b.readings, b.product).length })), []);
+  const batchById = useMemo(() => new Map(enrichedBatches.map(b => [b.id, b])), [enrichedBatches]);
+  const fermenters = typeof FERMENTERS !== 'undefined' ? FERMENTERS : [];
 
   // Deep-link from Basecamp: ?product=TBD&brew=3 auto-opens that batch's detail panel
   useEffect(() => {
@@ -1105,6 +1197,20 @@ function App() {
           <span style={{ color:'var(--border2)', fontSize:14 }}>|</span>
           <span style={{ fontFamily:'Barlow Condensed', fontWeight:600, fontSize:15,
                           letterSpacing:'0.06em', color:'var(--text)' }}>QC Monitor</span>
+          <div style={{ display:'flex', gap:4, marginLeft:14 }}>
+            {[['batches','Batches'],['cellar','Cellar']].map(([v,label]) => (
+              <button key={v} onClick={() => setView(v)}
+                style={{
+                  padding:'4px 13px', borderRadius:5, border:'1px solid var(--border2)',
+                  background: view===v ? 'var(--amber)' : 'var(--card)',
+                  color: view===v ? '#fff' : 'var(--muted)',
+                  fontFamily:'Barlow Condensed', fontWeight:600, fontSize:12,
+                  letterSpacing:'0.05em', textTransform:'uppercase',
+                }}>
+                {label}
+              </button>
+            ))}
+          </div>
         </div>
         <div style={{ display:'flex', alignItems:'center', gap:16 }}>
           <div style={{ display:'flex', alignItems:'center', gap:6, fontSize:11, color:'var(--muted)' }}>
@@ -1135,24 +1241,32 @@ function App() {
       <div style={{ flex:1, display:'flex', overflow:'hidden' }}>
         {/* Main table area */}
         <div style={{ flex:1, overflowY:'auto', overflowX:'hidden' }}>
-          {brewhouse.length > 0 && (
-            <BatchSection title="Brewhouse" batches={brewhouse}
-              selectedId={selected} onSelect={b => setSelected(b.id === selected ? null : b.id)}
-              compact={compact} detailOpen={!!selected}/>
+          {view === 'cellar' ? (
+            <FermenterCellar fermenters={fermenters} batchById={batchById}
+              selectedId={selected}
+              onSelect={b => setSelected(b.id === selected ? null : b.id)}/>
+          ) : (
+            <>
+              {brewhouse.length > 0 && (
+                <BatchSection title="Brewhouse" batches={brewhouse}
+                  selectedId={selected} onSelect={b => setSelected(b.id === selected ? null : b.id)}
+                  compact={compact} detailOpen={!!selected}/>
+              )}
+              {brite.length > 0 && (
+                <BatchSection title="Brite / Packaging" batches={brite}
+                  selectedId={selected} onSelect={b => setSelected(b.id === selected ? null : b.id)}
+                  compact={compact} detailOpen={!!selected}/>
+              )}
+              {filtered.length === 0 && (
+                <div style={{ display:'flex', alignItems:'center', justifyContent:'center',
+                              height:200, color:'var(--muted)', fontSize:13 }}>
+                  No batches match the current filter.
+                </div>
+              )}
+              {/* Stage Summary — fills remaining space */}
+              <StageSummary batches={enrichedBatches} acknowledged={acknowledged}/>
+            </>
           )}
-          {brite.length > 0 && (
-            <BatchSection title="Brite / Packaging" batches={brite}
-              selectedId={selected} onSelect={b => setSelected(b.id === selected ? null : b.id)}
-              compact={compact} detailOpen={!!selected}/>
-          )}
-          {filtered.length === 0 && (
-            <div style={{ display:'flex', alignItems:'center', justifyContent:'center',
-                          height:200, color:'var(--muted)', fontSize:13 }}>
-              No batches match the current filter.
-            </div>
-          )}
-          {/* Stage Summary — fills remaining space */}
-          <StageSummary batches={enrichedBatches} acknowledged={acknowledged}/>
         </div>
 
         {/* Detail panel */}
