@@ -6750,6 +6750,18 @@ const BATCHES = [
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10237547362",
         "completed": true,
         "runningBalanceBbl": 154.0
+      },
+      {
+        "date": "2026-08-26",
+        "action": "PACKAGE",
+        "from": "BT26,BT28",
+        "to": "",
+        "volume": null,
+        "detail": "1040 CASES",
+        "project": "packaging",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10228169257",
+        "completed": false,
+        "runningBalanceBbl": 154.0
       }
     ],
     "basecampAlerts": []
@@ -10856,7 +10868,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-26",
-  "lastSync": "Aug 26, 2026 \u00b7 4:09 AM"
+  "lastSync": "Aug 26, 2026 \u00b7 8:10 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, PIPELINE_META, checkSpec, computeOOS });
