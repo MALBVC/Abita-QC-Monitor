@@ -3462,15 +3462,15 @@ const BATCHES = [
         "remainingBbl": 201.0
       },
       {
-        "date": "2026-08-26",
-        "action": "FILTER",
+        "date": "2026-08-27",
+        "action": "CENT",
         "from": "BH33",
-        "to": "BT31",
-        "volume": null,
+        "to": "UV33",
+        "volume": 115.0,
         "detail": null,
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10243473140",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -10766,7 +10766,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-27",
-  "lastSync": "Aug 27, 2026 \u00b7 8:08 AM"
+  "lastSync": "Aug 27, 2026 \u00b7 12:10 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
