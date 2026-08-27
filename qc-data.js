@@ -1258,6 +1258,7 @@ const BATCHES = [
     "fermLog": [],
     "yeastPitches": [],
     "transferLog": [],
+    "packagingLog": [],
     "basecampAlerts": []
   },
   {
@@ -1338,6 +1339,7 @@ const BATCHES = [
       }
     ],
     "transferLog": [],
+    "packagingLog": [],
     "basecampAlerts": []
   },
   {
@@ -1406,7 +1408,7 @@ const BATCHES = [
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10161845419",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-08-05",
@@ -1417,9 +1419,10 @@ const BATCHES = [
         "detail": "DGT 008",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": 152.5
+        "remainingBbl": 152.5
       }
     ],
+    "packagingLog": [],
     "basecampAlerts": []
   },
   {
@@ -1644,7 +1647,7 @@ const BATCHES = [
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/9999283796",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-06-19",
@@ -1655,7 +1658,7 @@ const BATCHES = [
         "detail": "AND 030",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": 208.0
+        "remainingBbl": 208.0
       },
       {
         "date": "2026-08-20",
@@ -1667,9 +1670,10 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10220616948",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       }
     ],
+    "packagingLog": [],
     "basecampAlerts": [
       {
         "metric": "OG",
@@ -1922,7 +1926,7 @@ const BATCHES = [
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10161821063",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-08-04",
@@ -1933,9 +1937,10 @@ const BATCHES = [
         "detail": "STG 013",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": 165.0
+        "remainingBbl": 165.0
       }
     ],
+    "packagingLog": [],
     "basecampAlerts": []
   },
   {
@@ -2256,7 +2261,7 @@ const BATCHES = [
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10083380850",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-07-10",
@@ -2267,7 +2272,7 @@ const BATCHES = [
         "detail": "AND 042",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 152.0
       },
       {
         "date": "2026-08-17",
@@ -2279,9 +2284,10 @@ const BATCHES = [
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10207518011",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       }
     ],
+    "packagingLog": [],
     "basecampAlerts": [
       {
         "metric": "Wort pH",
@@ -2335,7 +2341,7 @@ const BATCHES = [
     "tankSource": "basecamp",
     "lastReading": null,
     "lastSource": null,
-    "numReadings": 3,
+    "numReadings": 5,
     "readings": [],
     "fermLog": [],
     "yeastPitches": [
@@ -2371,6 +2377,28 @@ const BATCHES = [
         "yeastSource": null,
         "yeastBrewNum": null,
         "countType": "Yeast (cellometer)"
+      },
+      {
+        "date": "2026-08-26",
+        "tank": "BH27",
+        "cellCount": 63000000.0,
+        "viability": 0.889,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "after 1st KO (manual)"
+      },
+      {
+        "date": "2026-08-26",
+        "tank": "BH27",
+        "cellCount": 67024086.50000001,
+        "viability": 0.8243,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "after 1st KO (cellometer)"
       }
     ],
     "transferLog": [
@@ -2384,9 +2412,10 @@ const BATCHES = [
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10234403896",
         "completed": false,
-        "onHandBbl": null
+        "remainingBbl": null
       }
     ],
+    "packagingLog": [],
     "basecampAlerts": []
   },
   {
@@ -2614,7 +2643,7 @@ const BATCHES = [
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10138436469",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-07-30",
@@ -2625,7 +2654,7 @@ const BATCHES = [
         "detail": "GLD 059",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 203.0
       },
       {
         "date": "2026-07-30",
@@ -2636,9 +2665,10 @@ const BATCHES = [
         "detail": "GLD 060",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 210.5
       }
     ],
+    "packagingLog": [],
     "basecampAlerts": [
       {
         "metric": "Total VDK",
@@ -2885,7 +2915,7 @@ const BATCHES = [
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10083377814",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-07-10",
@@ -2896,7 +2926,7 @@ const BATCHES = [
         "detail": "AND 039",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 150.5
       },
       {
         "date": "2026-07-10",
@@ -2907,9 +2937,10 @@ const BATCHES = [
         "detail": "AND 040",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 150.5
       }
     ],
+    "packagingLog": [],
     "basecampAlerts": [
       {
         "metric": "OG",
@@ -2943,7 +2974,7 @@ const BATCHES = [
     "vicinityStage": "Ops-Closed",
     "age": 31,
     "stage": "Aging",
-    "tank": "BH33",
+    "tank": "BT31",
     "labTank": "BH33",
     "tankSource": "basecamp",
     "lastReading": "2026-07-29",
@@ -3198,7 +3229,7 @@ const BATCHES = [
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10129579486",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-07-24",
@@ -3209,7 +3240,7 @@ const BATCHES = [
         "detail": "AMB 043",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 201.0
       },
       {
         "date": "2026-07-24",
@@ -3220,9 +3251,22 @@ const BATCHES = [
         "detail": "AMB 044",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 201.0
+      },
+      {
+        "date": "2026-08-26",
+        "action": "FILTER",
+        "from": "BH33",
+        "to": "BT31",
+        "volume": null,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10243473140",
+        "completed": false,
+        "remainingBbl": null
       }
     ],
+    "packagingLog": [],
     "basecampAlerts": [
       {
         "metric": "Total VDK",
@@ -3503,7 +3547,7 @@ const BATCHES = [
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10083380850",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-07-10",
@@ -3514,9 +3558,10 @@ const BATCHES = [
         "detail": "AND 041",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 152.0
       }
     ],
+    "packagingLog": [],
     "basecampAlerts": [
       {
         "metric": "Wort pH",
@@ -3729,7 +3774,7 @@ const BATCHES = [
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10138433689",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-07-29",
@@ -3740,7 +3785,7 @@ const BATCHES = [
         "detail": "GLD 057",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 201.5
       },
       {
         "date": "2026-07-29",
@@ -3751,7 +3796,7 @@ const BATCHES = [
         "detail": "GLD 058",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 201.0
       },
       {
         "date": "2026-08-21",
@@ -3763,9 +3808,10 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10226436738",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       }
     ],
+    "packagingLog": [],
     "basecampAlerts": []
   },
   {
@@ -3952,7 +3998,7 @@ const BATCHES = [
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10073305445",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-07-09",
@@ -3963,7 +4009,7 @@ const BATCHES = [
         "detail": "GLD 052",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 201.0
       },
       {
         "date": "2026-07-09",
@@ -3974,7 +4020,7 @@ const BATCHES = [
         "detail": "GLD 053",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 201.0
       },
       {
         "date": "2026-08-20",
@@ -3986,9 +4032,10 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10220619482",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       }
     ],
+    "packagingLog": [],
     "basecampAlerts": []
   },
   {
@@ -4173,7 +4220,7 @@ const BATCHES = [
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10122555367",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-07-23",
@@ -4184,7 +4231,7 @@ const BATCHES = [
         "detail": "GLD 055",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 209.0
       },
       {
         "date": "2026-07-23",
@@ -4195,7 +4242,7 @@ const BATCHES = [
         "detail": "GLD 056",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 204.0
       },
       {
         "date": "2026-08-20",
@@ -4207,9 +4254,10 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10220613091",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       }
     ],
+    "packagingLog": [],
     "basecampAlerts": []
   },
   {
@@ -4457,7 +4505,7 @@ const BATCHES = [
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10138427237",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-07-28",
@@ -4468,7 +4516,7 @@ const BATCHES = [
         "detail": "AMB 045",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 201.0
       },
       {
         "date": "2026-07-28",
@@ -4479,7 +4527,7 @@ const BATCHES = [
         "detail": "AMB 046",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 201.5
       },
       {
         "date": "2026-07-29",
@@ -4491,7 +4539,7 @@ const BATCHES = [
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10138430300",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-07-29",
@@ -4502,9 +4550,10 @@ const BATCHES = [
         "detail": "AMB 048",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 202.5
       }
     ],
+    "packagingLog": [],
     "basecampAlerts": [
       {
         "metric": "Wort pH",
@@ -4730,9 +4779,10 @@ const BATCHES = [
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10211807579",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       }
     ],
+    "packagingLog": [],
     "basecampAlerts": [
       {
         "metric": "Wort pH",
@@ -5095,7 +5145,7 @@ const BATCHES = [
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10138430300",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-07-29",
@@ -5106,7 +5156,7 @@ const BATCHES = [
         "detail": "AMB 047",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 204.5
       },
       {
         "date": "2026-08-13",
@@ -5118,7 +5168,7 @@ const BATCHES = [
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10193516008",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-08-13",
@@ -5129,7 +5179,7 @@ const BATCHES = [
         "detail": "AMB 049",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 206.0
       },
       {
         "date": "2026-08-13",
@@ -5140,7 +5190,7 @@ const BATCHES = [
         "detail": "AMB 050",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 200.5
       },
       {
         "date": "2026-08-13",
@@ -5151,7 +5201,7 @@ const BATCHES = [
         "detail": "AMB 051",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 202.5
       },
       {
         "date": "2026-08-13",
@@ -5162,9 +5212,10 @@ const BATCHES = [
         "detail": "AMB 052",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 199.0
       }
     ],
+    "packagingLog": [],
     "basecampAlerts": [
       {
         "metric": "Wort pH",
@@ -5449,7 +5500,7 @@ const BATCHES = [
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10022719915",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-06-23",
@@ -5460,7 +5511,7 @@ const BATCHES = [
         "detail": "GLD 048",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 202.0
       },
       {
         "date": "2026-06-23",
@@ -5471,7 +5522,7 @@ const BATCHES = [
         "detail": "GLD 049",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 201.5
       },
       {
         "date": "2026-06-23",
@@ -5482,7 +5533,7 @@ const BATCHES = [
         "detail": "GLD 050",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 205.0
       },
       {
         "date": "2026-06-23",
@@ -5493,7 +5544,7 @@ const BATCHES = [
         "detail": "GLD 051",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 201.5
       },
       {
         "date": "2026-07-11",
@@ -5505,7 +5556,7 @@ const BATCHES = [
         "detail": null,
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": -196.5
       },
       {
         "date": "2026-07-11",
@@ -5517,7 +5568,7 @@ const BATCHES = [
         "detail": null,
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": -37.5
       },
       {
         "date": "2026-07-13",
@@ -5529,7 +5580,7 @@ const BATCHES = [
         "detail": "30.5 BBL loss in transfer",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 0.0
       },
       {
         "date": "2026-07-15",
@@ -5541,7 +5592,7 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10097275677",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-07-15",
@@ -5553,79 +5604,7 @@ const BATCHES = [
         "detail": "2 BBL loss in transfer",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": 3.0
-      },
-      {
-        "date": "2026-07-16",
-        "action": "PACKAGE",
-        "from": "BT32",
-        "to": "",
-        "volume": 121.0,
-        "lossBbl": null,
-        "detail": "Purple Haze - 1/4 Keg: 204/204 1/4BBL; Purple Haze - 1/2 Keg: 128/128 1/2BBL",
-        "project": "vicinity",
-        "completed": true,
-        "onHandBbl": null
-      },
-      {
-        "date": "2026-07-16",
-        "action": "PACKAGE",
-        "from": "BT32",
-        "to": "",
-        "volume": 90.5,
-        "lossBbl": null,
-        "detail": "Purple Haze - 4/6/12 Bottles: 1215/1215 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "onHandBbl": null
-      },
-      {
-        "date": "2026-07-16",
-        "action": "PACKAGE",
-        "from": "BT27",
-        "to": "",
-        "volume": 34.0,
-        "lossBbl": null,
-        "detail": "Peach Lager - Loose Pack Can Case: 335/500 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "onHandBbl": 3.0
-      },
-      {
-        "date": "2026-07-16",
-        "action": "PACKAGE",
-        "from": "BT32",
-        "to": "",
-        "volume": 37.8,
-        "lossBbl": null,
-        "detail": "Purple Haze -Can Loose Pack (Case): 500/500 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "onHandBbl": null
-      },
-      {
-        "date": "2026-07-16",
-        "action": "PACKAGE",
-        "from": "BT32",
-        "to": "",
-        "volume": 133.4,
-        "lossBbl": null,
-        "detail": "Purple Haze - 4/6/12 Cans: 1763/1782 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "onHandBbl": null
-      },
-      {
-        "date": "2026-07-16",
-        "action": "PACKAGE",
-        "from": "BT32",
-        "to": "",
-        "volume": 18.8,
-        "lossBbl": null,
-        "detail": "Purple Haze - 2/12/12 Cans: 248/270 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "onHandBbl": null
+        "remainingBbl": -79.5
       },
       {
         "date": "2026-07-28",
@@ -5637,7 +5616,7 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10141933772",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-07-29",
@@ -5649,7 +5628,7 @@ const BATCHES = [
         "detail": null,
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": -492.5
       },
       {
         "date": "2026-07-30",
@@ -5661,7 +5640,7 @@ const BATCHES = [
         "detail": null,
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": 27.0
+        "remainingBbl": 0.0
       },
       {
         "date": "2026-07-31",
@@ -5673,7 +5652,7 @@ const BATCHES = [
         "detail": null,
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 361.0
       },
       {
         "date": "2026-07-31",
@@ -5685,55 +5664,7 @@ const BATCHES = [
         "detail": null,
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
-      },
-      {
-        "date": "2026-07-31",
-        "action": "PACKAGE",
-        "from": "BT26",
-        "to": "",
-        "volume": 52.0,
-        "lossBbl": null,
-        "detail": "Purple Haze - 1/4 Keg: 0/180 1/4BBL; Purple Haze - 1/2 Keg: 146/144 1/2BBL",
-        "project": "vicinity",
-        "completed": true,
-        "onHandBbl": null
-      },
-      {
-        "date": "2026-07-31",
-        "action": "PACKAGE",
-        "from": "BT33",
-        "to": "",
-        "volume": 26.0,
-        "lossBbl": null,
-        "detail": "Purple Haze - 1/4 Keg: 0/180 1/4BBL; Purple Haze - 1/2 Keg: 146/144 1/2BBL",
-        "project": "vicinity",
-        "completed": true,
-        "onHandBbl": 27.0
-      },
-      {
-        "date": "2026-07-31",
-        "action": "PACKAGE",
-        "from": "BT33",
-        "to": "",
-        "volume": 126.5,
-        "lossBbl": null,
-        "detail": "Purple Haze - 4/6/12 Bottles: 1685/1530 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "onHandBbl": 27.0
-      },
-      {
-        "date": "2026-07-31",
-        "action": "PACKAGE",
-        "from": "BT33",
-        "to": "",
-        "volume": 125.5,
-        "lossBbl": null,
-        "detail": "Purple Haze - 4/6/12 Cans: 1626/1823 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "onHandBbl": 27.0
+        "remainingBbl": 305.0
       },
       {
         "date": "2026-08-03",
@@ -5745,19 +5676,7 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10161794546",
         "completed": true,
-        "onHandBbl": null
-      },
-      {
-        "date": "2026-08-03",
-        "action": "PACKAGE",
-        "from": "BT24",
-        "to": "",
-        "volume": 56.0,
-        "lossBbl": null,
-        "detail": "Purple Haze - 1/4 Keg: 180/180 1/4BBL; Purple Haze - 1/2 Keg: 16/144 1/2BBL",
-        "project": "vicinity",
-        "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-08-03",
@@ -5769,19 +5688,7 @@ const BATCHES = [
         "detail": "2 BBL loss in transfer",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": 3.0
-      },
-      {
-        "date": "2026-08-04",
-        "action": "PACKAGE",
-        "from": "BT27",
-        "to": "",
-        "volume": 39.0,
-        "lossBbl": null,
-        "detail": "Peach Lager - Loose Pack Can Case: 498/500 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "onHandBbl": 3.0
+        "remainingBbl": -536.5
       },
       {
         "date": "2026-08-10",
@@ -5793,7 +5700,153 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10188245199",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
+      }
+    ],
+    "packagingLog": [
+      {
+        "date": "2026-07-16",
+        "action": "PACKAGE",
+        "from": "BT32",
+        "to": "",
+        "volume": 121.0,
+        "lossBbl": null,
+        "detail": "Purple Haze - 1/4 Keg: 204/204 1/4BBL; Purple Haze - 1/2 Keg: 128/128 1/2BBL",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 284.0
+      },
+      {
+        "date": "2026-07-16",
+        "action": "PACKAGE",
+        "from": "BT32",
+        "to": "",
+        "volume": 90.5,
+        "lossBbl": null,
+        "detail": "Purple Haze - 4/6/12 Bottles: 1215/1215 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 193.5
+      },
+      {
+        "date": "2026-07-16",
+        "action": "PACKAGE",
+        "from": "BT27",
+        "to": "",
+        "volume": 34.0,
+        "lossBbl": null,
+        "detail": "Peach Lager - Loose Pack Can Case: 335/500 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 6.0
+      },
+      {
+        "date": "2026-07-16",
+        "action": "PACKAGE",
+        "from": "BT32",
+        "to": "",
+        "volume": 37.8,
+        "lossBbl": null,
+        "detail": "Purple Haze -Can Loose Pack (Case): 500/500 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 155.7
+      },
+      {
+        "date": "2026-07-16",
+        "action": "PACKAGE",
+        "from": "BT32",
+        "to": "",
+        "volume": 133.4,
+        "lossBbl": null,
+        "detail": "Purple Haze - 4/6/12 Cans: 1763/1782 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 22.3
+      },
+      {
+        "date": "2026-07-16",
+        "action": "PACKAGE",
+        "from": "BT32",
+        "to": "",
+        "volume": 18.8,
+        "lossBbl": null,
+        "detail": "Purple Haze - 2/12/12 Cans: 248/270 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 3.5
+      },
+      {
+        "date": "2026-07-31",
+        "action": "PACKAGE",
+        "from": "BT26",
+        "to": "",
+        "volume": 52.0,
+        "lossBbl": null,
+        "detail": "Purple Haze - 1/4 Keg: 0/180 1/4BBL; Purple Haze - 1/2 Keg: 146/144 1/2BBL",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 0.0
+      },
+      {
+        "date": "2026-07-31",
+        "action": "PACKAGE",
+        "from": "BT33",
+        "to": "",
+        "volume": 26.0,
+        "lossBbl": null,
+        "detail": "Purple Haze - 1/4 Keg: 0/180 1/4BBL; Purple Haze - 1/2 Keg: 146/144 1/2BBL",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 279.0
+      },
+      {
+        "date": "2026-07-31",
+        "action": "PACKAGE",
+        "from": "BT33",
+        "to": "",
+        "volume": 126.5,
+        "lossBbl": null,
+        "detail": "Purple Haze - 4/6/12 Bottles: 1685/1530 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 152.5
+      },
+      {
+        "date": "2026-07-31",
+        "action": "PACKAGE",
+        "from": "BT33",
+        "to": "",
+        "volume": 125.5,
+        "lossBbl": null,
+        "detail": "Purple Haze - 4/6/12 Cans: 1626/1823 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 27.0
+      },
+      {
+        "date": "2026-08-03",
+        "action": "PACKAGE",
+        "from": "BT24",
+        "to": "",
+        "volume": 56.0,
+        "lossBbl": null,
+        "detail": "Purple Haze - 1/4 Keg: 180/180 1/4BBL; Purple Haze - 1/2 Keg: 16/144 1/2BBL",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 0.0
+      },
+      {
+        "date": "2026-08-04",
+        "action": "PACKAGE",
+        "from": "BT27",
+        "to": "",
+        "volume": 39.0,
+        "lossBbl": null,
+        "detail": "Peach Lager - Loose Pack Can Case: 498/500 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 9.0
       }
     ],
     "basecampAlerts": [
@@ -6023,30 +6076,6 @@ const BATCHES = [
     ],
     "transferLog": [
       {
-        "date": "2026-06-04",
-        "action": "PACKAGE",
-        "from": "BT23",
-        "to": "",
-        "volume": 8.0,
-        "lossBbl": null,
-        "detail": "Beeracuda 1/4 Keg: 24/24 1/4BBL",
-        "project": "vicinity",
-        "completed": true,
-        "onHandBbl": null
-      },
-      {
-        "date": "2026-06-05",
-        "action": "PACKAGE",
-        "from": "BT23",
-        "to": "",
-        "volume": 27.0,
-        "lossBbl": null,
-        "detail": "Beeracuda - 4/6/12 Bottles: 339/392 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "onHandBbl": null
-      },
-      {
         "date": "2026-07-15",
         "action": "BREW",
         "from": "",
@@ -6056,7 +6085,7 @@ const BATCHES = [
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10095275443",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-07-15",
@@ -6067,7 +6096,7 @@ const BATCHES = [
         "detail": "BEC 003",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": 138.0
+        "remainingBbl": 158.0
       },
       {
         "date": "2026-07-30",
@@ -6079,7 +6108,33 @@ const BATCHES = [
         "detail": "1 BBL loss in transfer",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 153.0
+      }
+    ],
+    "packagingLog": [
+      {
+        "date": "2026-06-04",
+        "action": "PACKAGE",
+        "from": "BT23",
+        "to": "",
+        "volume": 8.0,
+        "lossBbl": null,
+        "detail": "Beeracuda 1/4 Keg: 24/24 1/4BBL",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": -8.0
+      },
+      {
+        "date": "2026-06-05",
+        "action": "PACKAGE",
+        "from": "BT23",
+        "to": "",
+        "volume": 27.0,
+        "lossBbl": null,
+        "detail": "Beeracuda - 4/6/12 Bottles: 339/392 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": -35.0
       }
     ],
     "basecampAlerts": [
@@ -6242,7 +6297,7 @@ const BATCHES = [
         "detail": "LHT 004",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": 119.5
+        "remainingBbl": 154.5
       },
       {
         "date": "2026-07-30",
@@ -6254,7 +6309,7 @@ const BATCHES = [
         "detail": "2 BBL loss in transfer",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 104.5
       },
       {
         "date": "2026-08-05",
@@ -6266,7 +6321,7 @@ const BATCHES = [
         "detail": null,
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": 119.5
+        "remainingBbl": -15.0
       },
       {
         "date": "2026-08-18",
@@ -6278,7 +6333,7 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10216085035",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-08-24",
@@ -6290,7 +6345,7 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10232134228",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-08-24",
@@ -6302,9 +6357,10 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10232136441",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       }
     ],
+    "packagingLog": [],
     "basecampAlerts": []
   },
   {
@@ -6515,7 +6571,7 @@ const BATCHES = [
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/9779384820",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-04-15",
@@ -6526,7 +6582,7 @@ const BATCHES = [
         "detail": "BBW 005",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": 60.0
+        "remainingBbl": 204.0
       },
       {
         "date": "2026-06-03",
@@ -6538,7 +6594,7 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/9958490366",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-06-03",
@@ -6550,31 +6606,7 @@ const BATCHES = [
         "detail": "1 BBL loss in transfer",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
-      },
-      {
-        "date": "2026-06-04",
-        "action": "PACKAGE",
-        "from": "BT28",
-        "to": "",
-        "volume": 47.0,
-        "lossBbl": null,
-        "detail": "Mango Wheat - Loose Pack Can Case: 587/600 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "onHandBbl": null
-      },
-      {
-        "date": "2026-06-04",
-        "action": "PACKAGE",
-        "from": "BT28",
-        "to": "",
-        "volume": 4.0,
-        "lossBbl": null,
-        "detail": "Mango Wheat 1/4BBL Keg: 12/12 1/4BBL",
-        "project": "vicinity",
-        "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 146.0
       },
       {
         "date": "2026-07-15",
@@ -6586,7 +6618,7 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10097279997",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-07-15",
@@ -6598,19 +6630,7 @@ const BATCHES = [
         "detail": "2 BBL loss in transfer",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
-      },
-      {
-        "date": "2026-07-16",
-        "action": "PACKAGE",
-        "from": "BT28",
-        "to": "",
-        "volume": 34.0,
-        "lossBbl": null,
-        "detail": "Mango Wheat - Loose Pack Can Case: 443/500 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 104.0
       },
       {
         "date": "2026-08-03",
@@ -6622,7 +6642,7 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10161797856",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-08-03",
@@ -6634,7 +6654,45 @@ const BATCHES = [
         "detail": "2 BBL loss in transfer",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": 6.0
+        "remainingBbl": 60.0
+      }
+    ],
+    "packagingLog": [
+      {
+        "date": "2026-06-04",
+        "action": "PACKAGE",
+        "from": "BT28",
+        "to": "",
+        "volume": 47.0,
+        "lossBbl": null,
+        "detail": "Mango Wheat - Loose Pack Can Case: 587/600 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 10.0
+      },
+      {
+        "date": "2026-06-04",
+        "action": "PACKAGE",
+        "from": "BT28",
+        "to": "",
+        "volume": 4.0,
+        "lossBbl": null,
+        "detail": "Mango Wheat 1/4BBL Keg: 12/12 1/4BBL",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 6.0
+      },
+      {
+        "date": "2026-07-16",
+        "action": "PACKAGE",
+        "from": "BT28",
+        "to": "",
+        "volume": 34.0,
+        "lossBbl": null,
+        "detail": "Mango Wheat - Loose Pack Can Case: 443/500 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 12.0
       },
       {
         "date": "2026-08-04",
@@ -6646,7 +6704,7 @@ const BATCHES = [
         "detail": "Mango Wheat - Loose Pack Can Case: 462/500 CASE",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": 6.0
+        "remainingBbl": 6.0
       }
     ],
     "basecampAlerts": []
@@ -6788,7 +6846,7 @@ const BATCHES = [
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10161859982",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-08-05",
@@ -6799,7 +6857,7 @@ const BATCHES = [
         "detail": "JOC 010",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": 154.0
+        "remainingBbl": 154.0
       },
       {
         "date": "2026-08-25",
@@ -6811,7 +6869,7 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10237545874",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-08-25",
@@ -6823,8 +6881,10 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10237547362",
         "completed": true,
-        "onHandBbl": null
-      },
+        "remainingBbl": null
+      }
+    ],
+    "packagingLog": [
       {
         "date": "2026-08-26",
         "action": "PACKAGE",
@@ -6835,7 +6895,7 @@ const BATCHES = [
         "project": "packaging",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10228169257",
         "completed": false,
-        "onHandBbl": null
+        "remainingBbl": null
       }
     ],
     "basecampAlerts": []
@@ -7080,7 +7140,7 @@ const BATCHES = [
         "detail": "ALG 005",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 153.5
       },
       {
         "date": "2026-07-16",
@@ -7092,7 +7152,7 @@ const BATCHES = [
         "detail": null,
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 0.0
       },
       {
         "date": "2026-07-31",
@@ -7104,7 +7164,7 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10155900314",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-07-31",
@@ -7116,31 +7176,7 @@ const BATCHES = [
         "detail": "5 BBL loss in transfer",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": 70.0
-      },
-      {
-        "date": "2026-08-03",
-        "action": "PACKAGE",
-        "from": "BT25",
-        "to": "",
-        "volume": null,
-        "detail": "1109 CASES",
-        "project": "packaging",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10138265656",
-        "completed": true,
-        "onHandBbl": null
-      },
-      {
-        "date": "2026-08-03",
-        "action": "PACKAGE",
-        "from": "BT25",
-        "to": "",
-        "volume": 68.0,
-        "lossBbl": null,
-        "detail": "Alphagator 12/19.2: 1116/1109 12/19.2",
-        "project": "vicinity",
-        "completed": true,
-        "onHandBbl": 70.0
+        "remainingBbl": 80.5
       },
       {
         "date": "2026-08-20",
@@ -7152,7 +7188,7 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10220677790",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-08-20",
@@ -7164,7 +7200,33 @@ const BATCHES = [
         "detail": "10.5 BBL loss in transfer",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": 70.0
+        "remainingBbl": 0.0
+      }
+    ],
+    "packagingLog": [
+      {
+        "date": "2026-08-03",
+        "action": "PACKAGE",
+        "from": "BT25",
+        "to": "",
+        "volume": null,
+        "detail": "1109 CASES",
+        "project": "packaging",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10138265656",
+        "completed": true,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-08-03",
+        "action": "PACKAGE",
+        "from": "BT25",
+        "to": "",
+        "volume": 68.0,
+        "lossBbl": null,
+        "detail": "Alphagator 12/19.2: 1116/1109 12/19.2",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 0.0
       },
       {
         "date": "2026-08-26",
@@ -7176,7 +7238,7 @@ const BATCHES = [
         "project": "packaging",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10209772655",
         "completed": false,
-        "onHandBbl": null
+        "remainingBbl": null
       }
     ],
     "basecampAlerts": [
@@ -7654,7 +7716,7 @@ const BATCHES = [
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/9660098016",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-03-11",
@@ -7665,7 +7727,7 @@ const BATCHES = [
         "detail": "BEC 001",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 156.0
       },
       {
         "date": "2026-04-13",
@@ -7677,7 +7739,7 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/9779356637",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-04-13",
@@ -7689,7 +7751,7 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/9779358208",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-04-13",
@@ -7701,7 +7763,7 @@ const BATCHES = [
         "detail": "3 BBL loss in transfer",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 54.0
       },
       {
         "date": "2026-04-13",
@@ -7713,7 +7775,7 @@ const BATCHES = [
         "detail": null,
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 49.0
       },
       {
         "date": "2026-04-13",
@@ -7725,55 +7787,7 @@ const BATCHES = [
         "detail": null,
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
-      },
-      {
-        "date": "2026-04-14",
-        "action": "PACKAGE",
-        "from": "BT24",
-        "to": "",
-        "volume": null,
-        "detail": "446 CASES",
-        "project": "packaging",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/9770398721",
-        "completed": true,
-        "onHandBbl": null
-      },
-      {
-        "date": "2026-04-14",
-        "action": "PACKAGE",
-        "from": "BT23",
-        "to": "",
-        "volume": 7.0,
-        "lossBbl": null,
-        "detail": "Beeracuda 1/4 Keg: 24/24 1/4BBL",
-        "project": "vicinity",
-        "completed": true,
-        "onHandBbl": null
-      },
-      {
-        "date": "2026-04-15",
-        "action": "PACKAGE",
-        "from": "BT24",
-        "to": "",
-        "volume": 49.0,
-        "lossBbl": null,
-        "detail": "Beeracuda - 4/6/12 Bottles: 632/446 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "onHandBbl": null
-      },
-      {
-        "date": "2026-04-16",
-        "action": "PACKAGE",
-        "from": "BT23",
-        "to": "",
-        "volume": 39.0,
-        "lossBbl": null,
-        "detail": "Beeracuda 4/6/12 Cans: 481/500 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 0.0
       },
       {
         "date": "2026-04-21",
@@ -7785,19 +7799,7 @@ const BATCHES = [
         "detail": null,
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
-      },
-      {
-        "date": "2026-04-21",
-        "action": "PACKAGE",
-        "from": "BH05",
-        "to": "",
-        "volume": 4.0,
-        "lossBbl": null,
-        "detail": "VC Pilot - Luke's Light Side Lager 1/4bbl: 15/15 1/4BBL",
-        "project": "vicinity",
-        "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 0.0
       },
       {
         "date": "2026-06-02",
@@ -7809,7 +7811,7 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/9953616095",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-06-02",
@@ -7821,7 +7823,69 @@ const BATCHES = [
         "detail": "4 BBL loss in transfer",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 15.0
+      }
+    ],
+    "packagingLog": [
+      {
+        "date": "2026-04-14",
+        "action": "PACKAGE",
+        "from": "BT24",
+        "to": "",
+        "volume": null,
+        "detail": "446 CASES",
+        "project": "packaging",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/9770398721",
+        "completed": true,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-04-14",
+        "action": "PACKAGE",
+        "from": "BT23",
+        "to": "",
+        "volume": 7.0,
+        "lossBbl": null,
+        "detail": "Beeracuda 1/4 Keg: 24/24 1/4BBL",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 43.0
+      },
+      {
+        "date": "2026-04-15",
+        "action": "PACKAGE",
+        "from": "BT24",
+        "to": "",
+        "volume": 49.0,
+        "lossBbl": null,
+        "detail": "Beeracuda - 4/6/12 Bottles: 632/446 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 0.0
+      },
+      {
+        "date": "2026-04-16",
+        "action": "PACKAGE",
+        "from": "BT23",
+        "to": "",
+        "volume": 39.0,
+        "lossBbl": null,
+        "detail": "Beeracuda 4/6/12 Cans: 481/500 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 4.0
+      },
+      {
+        "date": "2026-04-21",
+        "action": "PACKAGE",
+        "from": "BH05",
+        "to": "",
+        "volume": 4.0,
+        "lossBbl": null,
+        "detail": "VC Pilot - Luke's Light Side Lager 1/4bbl: 15/15 1/4BBL",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 0.0
       },
       {
         "date": "2026-06-04",
@@ -7833,7 +7897,7 @@ const BATCHES = [
         "project": "packaging",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/9948970087",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       }
     ],
     "basecampAlerts": []
@@ -8175,7 +8239,7 @@ const BATCHES = [
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/9975650214",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-06-09",
@@ -8186,7 +8250,7 @@ const BATCHES = [
         "detail": "BEC 002",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 154.0
       },
       {
         "date": "2026-07-06",
@@ -8198,7 +8262,7 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10064970200",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-07-06",
@@ -8210,67 +8274,7 @@ const BATCHES = [
         "detail": "2 BBL loss in transfer",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
-      },
-      {
-        "date": "2026-07-07",
-        "action": "PACKAGE",
-        "from": "BT23",
-        "to": "",
-        "volume": null,
-        "detail": "311 CASES",
-        "project": "packaging",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10042079517",
-        "completed": true,
-        "onHandBbl": null
-      },
-      {
-        "date": "2026-07-07",
-        "action": "PACKAGE",
-        "from": "BT23",
-        "to": "",
-        "volume": null,
-        "detail": "270 CASES",
-        "project": "packaging",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10042217937",
-        "completed": true,
-        "onHandBbl": null
-      },
-      {
-        "date": "2026-07-07",
-        "action": "PACKAGE",
-        "from": "BT23",
-        "to": "",
-        "volume": 25.0,
-        "lossBbl": null,
-        "detail": "Beeracuda - 4/6/12 Bottles: 298/270 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "onHandBbl": null
-      },
-      {
-        "date": "2026-07-07",
-        "action": "PACKAGE",
-        "from": "BT23",
-        "to": "",
-        "volume": 26.0,
-        "lossBbl": null,
-        "detail": "Beeracuda 4/6/12 Cans: 266/311 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "onHandBbl": null
-      },
-      {
-        "date": "2026-07-09",
-        "action": "PACKAGE",
-        "from": "BT23",
-        "to": "",
-        "volume": 4.0,
-        "lossBbl": null,
-        "detail": "Beeracuda 1/4 Keg: 14/48 1/4BBL",
-        "project": "vicinity",
-        "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 97.0
       },
       {
         "date": "2026-07-27",
@@ -8282,7 +8286,7 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10137789115",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-07-27",
@@ -8294,43 +8298,7 @@ const BATCHES = [
         "detail": "4 BBL loss in transfer",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
-      },
-      {
-        "date": "2026-07-28",
-        "action": "PACKAGE",
-        "from": "BT26",
-        "to": "",
-        "volume": null,
-        "detail": "270 CASES",
-        "project": "packaging",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10138073800",
-        "completed": true,
-        "onHandBbl": null
-      },
-      {
-        "date": "2026-07-29",
-        "action": "PACKAGE",
-        "from": "BT26",
-        "to": "",
-        "volume": 13.0,
-        "lossBbl": null,
-        "detail": "Beeracuda 1/4 Keg: 48/48 1/4BBL",
-        "project": "vicinity",
-        "completed": true,
-        "onHandBbl": null
-      },
-      {
-        "date": "2026-07-29",
-        "action": "PACKAGE",
-        "from": "BT26",
-        "to": "",
-        "volume": 23.0,
-        "lossBbl": null,
-        "detail": "Beeracuda - 4/6/12 Bottles: 255/270 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 42.0
       },
       {
         "date": "2026-07-30",
@@ -8342,7 +8310,105 @@ const BATCHES = [
         "detail": "9 BBL loss in transfer",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 15.0
+      }
+    ],
+    "packagingLog": [
+      {
+        "date": "2026-07-07",
+        "action": "PACKAGE",
+        "from": "BT23",
+        "to": "",
+        "volume": null,
+        "detail": "311 CASES",
+        "project": "packaging",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10042079517",
+        "completed": true,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-07-07",
+        "action": "PACKAGE",
+        "from": "BT23",
+        "to": "",
+        "volume": null,
+        "detail": "270 CASES",
+        "project": "packaging",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10042217937",
+        "completed": true,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-07-07",
+        "action": "PACKAGE",
+        "from": "BT23",
+        "to": "",
+        "volume": 25.0,
+        "lossBbl": null,
+        "detail": "Beeracuda - 4/6/12 Bottles: 298/270 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 30.0
+      },
+      {
+        "date": "2026-07-07",
+        "action": "PACKAGE",
+        "from": "BT23",
+        "to": "",
+        "volume": 26.0,
+        "lossBbl": null,
+        "detail": "Beeracuda 4/6/12 Cans: 266/311 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 4.0
+      },
+      {
+        "date": "2026-07-09",
+        "action": "PACKAGE",
+        "from": "BT23",
+        "to": "",
+        "volume": 4.0,
+        "lossBbl": null,
+        "detail": "Beeracuda 1/4 Keg: 14/48 1/4BBL",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 0.0
+      },
+      {
+        "date": "2026-07-28",
+        "action": "PACKAGE",
+        "from": "BT26",
+        "to": "",
+        "volume": null,
+        "detail": "270 CASES",
+        "project": "packaging",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10138073800",
+        "completed": true,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-07-29",
+        "action": "PACKAGE",
+        "from": "BT26",
+        "to": "",
+        "volume": 13.0,
+        "lossBbl": null,
+        "detail": "Beeracuda 1/4 Keg: 48/48 1/4BBL",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 38.0
+      },
+      {
+        "date": "2026-07-29",
+        "action": "PACKAGE",
+        "from": "BT26",
+        "to": "",
+        "volume": 23.0,
+        "lossBbl": null,
+        "detail": "Beeracuda - 4/6/12 Bottles: 255/270 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 15.0
       }
     ],
     "basecampAlerts": [
@@ -8580,7 +8646,7 @@ const BATCHES = [
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10138438318",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-07-31",
@@ -8591,7 +8657,7 @@ const BATCHES = [
         "detail": "TBD 005",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": 73.5
+        "remainingBbl": 156.5
       },
       {
         "date": "2026-08-21",
@@ -8603,7 +8669,7 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10227338559",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-08-21",
@@ -8615,8 +8681,10 @@ const BATCHES = [
         "detail": "2 BBL loss in transfer",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": 81.0
-      },
+        "remainingBbl": 73.5
+      }
+    ],
+    "packagingLog": [
       {
         "date": "2026-08-25",
         "action": "PACKAGE",
@@ -8627,7 +8695,7 @@ const BATCHES = [
         "project": "packaging",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10228126694",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       }
     ],
     "basecampAlerts": [
@@ -8942,7 +9010,7 @@ const BATCHES = [
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10066534333",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-07-06",
@@ -8953,7 +9021,7 @@ const BATCHES = [
         "detail": "AMB 041",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 199.0
       },
       {
         "date": "2026-07-06",
@@ -8964,7 +9032,7 @@ const BATCHES = [
         "detail": "AMB 042",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 200.0
       },
       {
         "date": "2026-08-10",
@@ -8976,7 +9044,7 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10188085314",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-08-10",
@@ -8988,7 +9056,7 @@ const BATCHES = [
         "detail": "11 BBL loss in transfer",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": -95.0
       },
       {
         "date": "2026-08-10",
@@ -9000,7 +9068,7 @@ const BATCHES = [
         "detail": null,
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": -7.0
       },
       {
         "date": "2026-08-10",
@@ -9012,7 +9080,7 @@ const BATCHES = [
         "detail": null,
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 177.0
       },
       {
         "date": "2026-08-10",
@@ -9024,8 +9092,10 @@ const BATCHES = [
         "detail": null,
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
-      },
+        "remainingBbl": 0.0
+      }
+    ],
+    "packagingLog": [
       {
         "date": "2026-08-13",
         "action": "PACKAGE",
@@ -9036,7 +9106,7 @@ const BATCHES = [
         "detail": "Amber - 4/6/12 Bottles: 1400/1400 CASE",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 77.7
       },
       {
         "date": "2026-08-13",
@@ -9048,7 +9118,7 @@ const BATCHES = [
         "detail": "Amber - 4/6/12 Bottles: 1030/1030 CASE",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 0.0
       },
       {
         "date": "2026-08-13",
@@ -9060,7 +9130,7 @@ const BATCHES = [
         "detail": "Amber - 1/2 Keg: 284/72 1/2BBL; Amber - 1/4 Keg: 221/168 1/4BBL",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 0.0
       }
     ],
     "basecampAlerts": [
@@ -9660,7 +9730,7 @@ const BATCHES = [
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/9684681999",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-03-18",
@@ -9671,7 +9741,7 @@ const BATCHES = [
         "detail": "AMB 015",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 200.5
       },
       {
         "date": "2026-03-18",
@@ -9682,7 +9752,7 @@ const BATCHES = [
         "detail": "AMB 016",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 201.0
       },
       {
         "date": "2026-03-18",
@@ -9693,7 +9763,7 @@ const BATCHES = [
         "detail": "AMB 017",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 201.5
       },
       {
         "date": "2026-03-18",
@@ -9704,7 +9774,7 @@ const BATCHES = [
         "detail": "AMB 018",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 201.0
       },
       {
         "date": "2026-04-01",
@@ -9716,7 +9786,7 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/9743072502",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-04-01",
@@ -9728,19 +9798,7 @@ const BATCHES = [
         "detail": "9 BBL loss in transfer",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
-      },
-      {
-        "date": "2026-04-07",
-        "action": "PACKAGE",
-        "from": "BT22,BT29,BT30",
-        "to": "",
-        "volume": null,
-        "detail": "5293 CASES",
-        "project": "packaging",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/9747838525",
-        "completed": true,
-        "onHandBbl": null
+        "remainingBbl": -36.0
       },
       {
         "date": "2026-04-07",
@@ -9752,7 +9810,7 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/9761768598",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-04-07",
@@ -9764,7 +9822,7 @@ const BATCHES = [
         "detail": null,
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 40.0
       },
       {
         "date": "2026-04-07",
@@ -9776,7 +9834,7 @@ const BATCHES = [
         "detail": null,
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": -146.0
       },
       {
         "date": "2026-04-07",
@@ -9788,7 +9846,7 @@ const BATCHES = [
         "detail": null,
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 1.0
       },
       {
         "date": "2026-04-07",
@@ -9800,19 +9858,7 @@ const BATCHES = [
         "detail": null,
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
-      },
-      {
-        "date": "2026-04-08",
-        "action": "PACKAGE",
-        "from": "BT29",
-        "to": "",
-        "volume": 186.0,
-        "lossBbl": null,
-        "detail": "Amber - 4/6/12 Bottles: 3260/3260 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 0.0
       },
       {
         "date": "2026-04-13",
@@ -9824,7 +9870,7 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/9779350284",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-04-13",
@@ -9836,7 +9882,7 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/9779351911",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-04-13",
@@ -9848,7 +9894,7 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/9779944051",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-04-13",
@@ -9860,7 +9906,7 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/9779952027",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-04-13",
@@ -9872,43 +9918,7 @@ const BATCHES = [
         "detail": "37 BBL loss in transfer",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
-      },
-      {
-        "date": "2026-04-15",
-        "action": "PACKAGE",
-        "from": "BT32,BT27,BT22",
-        "to": "",
-        "volume": null,
-        "detail": "3000 CASES",
-        "project": "packaging",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/9770177214",
-        "completed": true,
-        "onHandBbl": null
-      },
-      {
-        "date": "2026-04-15",
-        "action": "PACKAGE",
-        "from": "BT32",
-        "to": "",
-        "volume": null,
-        "detail": "2500 CASES",
-        "project": "packaging",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/9770250338",
-        "completed": true,
-        "onHandBbl": null
-      },
-      {
-        "date": "2026-04-17",
-        "action": "PACKAGE",
-        "from": "BT30",
-        "to": "",
-        "volume": null,
-        "detail": "2030 CASES",
-        "project": "packaging",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/9770402699",
-        "completed": true,
-        "onHandBbl": null
+        "remainingBbl": -603.0
       },
       {
         "date": "2026-04-17",
@@ -9920,7 +9930,69 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/9797170167",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
+      }
+    ],
+    "packagingLog": [
+      {
+        "date": "2026-04-07",
+        "action": "PACKAGE",
+        "from": "BT22,BT29,BT30",
+        "to": "",
+        "volume": null,
+        "detail": "5293 CASES",
+        "project": "packaging",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/9747838525",
+        "completed": true,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-04-08",
+        "action": "PACKAGE",
+        "from": "BT29",
+        "to": "",
+        "volume": 186.0,
+        "lossBbl": null,
+        "detail": "Amber - 4/6/12 Bottles: 3260/3260 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 0.0
+      },
+      {
+        "date": "2026-04-15",
+        "action": "PACKAGE",
+        "from": "BT32,BT27,BT22",
+        "to": "",
+        "volume": null,
+        "detail": "3000 CASES",
+        "project": "packaging",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/9770177214",
+        "completed": true,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-04-15",
+        "action": "PACKAGE",
+        "from": "BT32",
+        "to": "",
+        "volume": null,
+        "detail": "2500 CASES",
+        "project": "packaging",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/9770250338",
+        "completed": true,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-04-17",
+        "action": "PACKAGE",
+        "from": "BT30",
+        "to": "",
+        "volume": null,
+        "detail": "2030 CASES",
+        "project": "packaging",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/9770402699",
+        "completed": true,
+        "remainingBbl": null
       },
       {
         "date": "2026-04-21",
@@ -9932,7 +10004,7 @@ const BATCHES = [
         "detail": "Amber - 1/4 Keg: 420/420 1/4BBL; Amber - 1/2 Keg: 208/208 1/2BBL",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 0.0
       },
       {
         "date": "2026-05-19",
@@ -9944,7 +10016,7 @@ const BATCHES = [
         "project": "packaging",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/9894056452",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       }
     ],
     "basecampAlerts": []
@@ -10340,7 +10412,7 @@ const BATCHES = [
         "detail": "AND 035",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 150.5
       },
       {
         "date": "2026-07-01",
@@ -10351,7 +10423,7 @@ const BATCHES = [
         "detail": "AND 036",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 150.5
       },
       {
         "date": "2026-07-01",
@@ -10362,7 +10434,7 @@ const BATCHES = [
         "detail": "AND 037",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 151.0
       },
       {
         "date": "2026-07-02",
@@ -10374,7 +10446,7 @@ const BATCHES = [
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10046143843",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
       },
       {
         "date": "2026-07-02",
@@ -10385,19 +10457,7 @@ const BATCHES = [
         "detail": "AND 038",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
-      },
-      {
-        "date": "2026-08-11",
-        "action": "PACKAGE",
-        "from": "UV30",
-        "to": "",
-        "volume": null,
-        "detail": "1250 CASES",
-        "project": "packaging",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10183061065",
-        "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 152.5
       },
       {
         "date": "2026-08-11",
@@ -10409,7 +10469,7 @@ const BATCHES = [
         "detail": "11 BBL loss in transfer",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": -72.5
       },
       {
         "date": "2026-08-11",
@@ -10421,7 +10481,7 @@ const BATCHES = [
         "detail": null,
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": -131.0
       },
       {
         "date": "2026-08-11",
@@ -10433,7 +10493,7 @@ const BATCHES = [
         "detail": null,
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 142.0
       },
       {
         "date": "2026-08-11",
@@ -10445,7 +10505,7 @@ const BATCHES = [
         "detail": null,
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 28.0
       },
       {
         "date": "2026-08-11",
@@ -10457,19 +10517,7 @@ const BATCHES = [
         "detail": null,
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
-      },
-      {
-        "date": "2026-08-12",
-        "action": "PACKAGE",
-        "from": "UV30,BT28",
-        "to": "",
-        "volume": null,
-        "detail": "3038 CASES",
-        "project": "packaging",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10183064569",
-        "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 0.0
       },
       {
         "date": "2026-08-12",
@@ -10481,7 +10529,33 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10197141368",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": null
+      }
+    ],
+    "packagingLog": [
+      {
+        "date": "2026-08-11",
+        "action": "PACKAGE",
+        "from": "UV30",
+        "to": "",
+        "volume": null,
+        "detail": "1250 CASES",
+        "project": "packaging",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10183061065",
+        "completed": true,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-08-12",
+        "action": "PACKAGE",
+        "from": "UV30,BT28",
+        "to": "",
+        "volume": null,
+        "detail": "3038 CASES",
+        "project": "packaging",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10183064569",
+        "completed": true,
+        "remainingBbl": null
       },
       {
         "date": "2026-08-14",
@@ -10493,7 +10567,7 @@ const BATCHES = [
         "detail": "Andygator - 4/6/12 Bottles: 3006/3038 CASE",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 92.7
       },
       {
         "date": "2026-08-14",
@@ -10505,7 +10579,7 @@ const BATCHES = [
         "detail": "Andygator - 4/6/12 Bottles: 3006/3038 CASE",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 0.0
       },
       {
         "date": "2026-08-14",
@@ -10517,7 +10591,7 @@ const BATCHES = [
         "detail": "Andygator 2/12/12 Bottles: 1242/1250 CASE",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 0.0
       },
       {
         "date": "2026-08-14",
@@ -10529,7 +10603,7 @@ const BATCHES = [
         "detail": "Andygator - 1/4 Keg: 88/96 1/4BBL",
         "project": "vicinity",
         "completed": true,
-        "onHandBbl": null
+        "remainingBbl": 0.0
       }
     ],
     "basecampAlerts": [
@@ -11121,9 +11195,7 @@ const FERMENTERS = [
   {
     "tank": "BH33",
     "status": "active",
-    "occupantIds": [
-      "AMB 043, 044"
-    ]
+    "occupantIds": []
   },
   {
     "tank": "BH34",
@@ -11278,7 +11350,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-26",
-  "lastSync": "Aug 26, 2026 \u00b7 4:10 PM"
+  "lastSync": "Aug 26, 2026 \u00b7 8:10 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });

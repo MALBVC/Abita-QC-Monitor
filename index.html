@@ -809,7 +809,7 @@ function DetailPanel({ batch, onClose }) {
               <table style={{ width:'100%', borderCollapse:'collapse', fontSize:11 }}>
                 <thead>
                   <tr style={{ borderBottom:'1px solid var(--border2)' }}>
-                    {['Date','Action','From','To','Qty','On Hand','Detail','Source'].map(h => (
+                    {['Date','Action','From','To','Qty','Remaining','Detail','Source'].map(h => (
                       <th key={h} style={{ padding:'4px 6px', textAlign:'left', color:'var(--muted)',
                                             fontWeight:600, letterSpacing:'0.05em', whiteSpace:'nowrap',
                                             fontSize:10, textTransform:'uppercase' }}>{h}</th>
@@ -825,14 +825,65 @@ function DetailPanel({ batch, onClose }) {
                       <td style={{ padding:'4px 6px', fontFamily:'IBM Plex Mono', fontSize:11 }}>{r.action}</td>
                       <td style={{ padding:'4px 6px', fontFamily:'IBM Plex Mono', fontSize:11 }}>{r.from || '—'}</td>
                       <td style={{ padding:'4px 6px', fontFamily:'IBM Plex Mono', fontSize:11, color:'var(--amber)', fontWeight:600 }}>
-                        {r.to || (r.action === 'PACKAGE' ? 'Packaging' : '—')}
+                        {r.to || '—'}
                       </td>
                       <td style={{ padding:'4px 6px', fontFamily:'IBM Plex Mono', fontSize:11 }}>
                         {r.volume != null ? fmt(r.volume,0) + ' BBL' : '—'}
                       </td>
                       <td style={{ padding:'4px 6px', fontFamily:'IBM Plex Mono', fontSize:11, color:'var(--muted)' }}
-                          title="Live on-hand in this row's tank right now, straight from Vicinity's own OnHand Inventory view (same screen the brew team reads) — not a value as of this row's date. Blank where Vicinity tracks no on-hand figure for that bin/lot.">
-                        {r.onHandBbl != null ? fmt(r.onHandBbl,0) + ' BBL' : '—'}
+                          title="Running balance in this row's tank (the source tank for a TRANSFER — what's left there after this draw) right after this event, derived from this brew's own recorded history — not a live snapshot.">
+                        {r.remainingBbl != null ? fmt(r.remainingBbl,0) + ' BBL' : '—'}
+                      </td>
+                      <td style={{ padding:'4px 6px', fontSize:11, color:'var(--muted)', maxWidth:260 }}>
+                        {r.detail || '—'}
+                      </td>
+                      <td style={{ padding:'4px 6px', color:'var(--muted)', fontSize:11 }}>
+                        {r.project === 'vicinity' ? 'Vicinity' : (
+                          r.basecampUrl
+                            ? <a href={r.basecampUrl} target="_blank" rel="noreferrer"
+                                 style={{ color:'var(--amber)' }}>Basecamp →</a>
+                            : 'Basecamp'
+                        )}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        )}
+
+        {/* Packaging Log (Vicinity) — split out from Transfer Log 2026-08-26 per Levi */}
+        {batch.packagingLog && batch.packagingLog.length > 0 && (
+          <div style={{ padding:'0 18px 20px' }}>
+            <div style={{ fontSize:10, fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase',
+                          color:'var(--muted)', marginBottom:8 }}>
+              Packaging Log ({batch.packagingLog.length}) <span style={{ fontWeight:400, textTransform:'none', letterSpacing:0 }}>· via Vicinity</span>
+            </div>
+            <div style={{ overflowX:'auto' }}>
+              <table style={{ width:'100%', borderCollapse:'collapse', fontSize:11 }}>
+                <thead>
+                  <tr style={{ borderBottom:'1px solid var(--border2)' }}>
+                    {['Date','Tank','Qty','Remaining','Detail','Source'].map(h => (
+                      <th key={h} style={{ padding:'4px 6px', textAlign:'left', color:'var(--muted)',
+                                            fontWeight:600, letterSpacing:'0.05em', whiteSpace:'nowrap',
+                                            fontSize:10, textTransform:'uppercase' }}>{h}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {batch.packagingLog.map((r, i) => (
+                    <tr key={i} style={{ borderBottom:'1px solid var(--border)',
+                                          background: i%2===0 ? 'transparent' : 'rgba(255,255,255,0.01)' }}>
+                      <td style={{ padding:'4px 6px', color:'var(--muted)', fontFamily:'IBM Plex Mono',
+                                    fontSize:11, whiteSpace:'nowrap' }}>{fmtDate(r.date)}</td>
+                      <td style={{ padding:'4px 6px', fontFamily:'IBM Plex Mono', fontSize:11 }}>{r.from || '—'}</td>
+                      <td style={{ padding:'4px 6px', fontFamily:'IBM Plex Mono', fontSize:11 }}>
+                        {r.volume != null ? fmt(r.volume,0) + ' BBL' : '—'}
+                      </td>
+                      <td style={{ padding:'4px 6px', fontFamily:'IBM Plex Mono', fontSize:11, color:'var(--muted)' }}
+                          title="Running balance left in this tank right after this packaging draw, derived from this brew's own recorded history — not a live snapshot.">
+                        {r.remainingBbl != null ? fmt(r.remainingBbl,0) + ' BBL' : '—'}
                       </td>
                       <td style={{ padding:'4px 6px', fontSize:11, color:'var(--muted)', maxWidth:260 }}>
                         {r.detail || '—'}
@@ -866,7 +917,6 @@ function FermenterTile({ f, batchById, selectedId, onSelect }) {
   // first, so that case doesn't silently disappear from the cellar view.
   const occupants = (f.occupantIds || []).map(id => batchById.get(id)).filter(Boolean);
   const isInactive = f.status === 'inactive';
-  const isMulti = occupants.length > 1;
 
   return (
     <div
