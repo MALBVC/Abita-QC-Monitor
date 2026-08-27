@@ -7636,7 +7636,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": "2026-08-27",
     "lastSource": "FIN",
-    "numReadings": 10,
+    "numReadings": 11,
     "readings": [
       {
         "date": "2026-08-27",
@@ -7657,6 +7657,26 @@ const BATCHES = [
         "HAZE": 5274.0090408325195,
         "SG": 1.01052,
         "ABV": 6.27
+      },
+      {
+        "date": "2026-08-27",
+        "sample": "JOC 010 TK28",
+        "stage": "FIN",
+        "tank": "TK28",
+        "sourceFile": "finished abita beer 2026.xlsx",
+        "sourceSheet": "JJ",
+        "pH": 4.43,
+        "DO": 54.0,
+        "CO2 Vols": 2.75,
+        "Calories": 191.41,
+        "ADF": 81.14,
+        "RDF": 67.28,
+        "OG": 14.38,
+        "AE": 2.71,
+        "RE": 4.95,
+        "HAZE": 5898.098121643066,
+        "SG": 1.01058,
+        "ABV": 6.3
       },
       {
         "date": "2026-08-12",
@@ -10746,7 +10766,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-27",
-  "lastSync": "Aug 27, 2026 \u00b7 4:10 AM"
+  "lastSync": "Aug 27, 2026 \u00b7 8:08 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
