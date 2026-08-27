@@ -986,7 +986,8 @@ function FermenterCellar({ fermenters, batchById, selectedId, onSelect }) {
                     color:'var(--muted)', marginBottom:12 }}>
         Fermenter Cellar · {occupiedCount} of {fermenters.length} occupied
       </div>
-      <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(120px,1fr))', gap:10 }}>
+      <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(120px,1fr))',
+                    gap:10, alignItems:'start' }}>
         {fermenters.map(f => (
           <FermenterTile key={f.tank} f={f} batchById={batchById}
             selectedId={selectedId} onSelect={onSelect}/>

@@ -2331,7 +2331,7 @@ const BATCHES = [
     ],
     "brewDate": "2026-08-26",
     "brewDateSource": "basecamp",
-    "brewer": null,
+    "brewer": "Jamie Killian",
     "brewVolumeBbl": null,
     "vicinityStage": null,
     "age": 0,
@@ -2411,7 +2411,7 @@ const BATCHES = [
         "detail": null,
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10234403896",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -11350,7 +11350,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-26",
-  "lastSync": "Aug 26, 2026 \u00b7 8:10 PM"
+  "lastSync": "Aug 26, 2026 \u00b7 9:28 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
