@@ -228,7 +228,7 @@ function BatchRow({ batch, selected, onClick, compact, detailOpen }) {
       </span>
       <StagePill stage={batch.stage}/>
       <span style={{ color:'var(--muted)', fontSize:12, fontFamily:'IBM Plex Mono' }}>
-        {batch.tank}{batch.tankSource === 'lab' && batch.tank && <span title="Lab-sourced tank — either no Basecamp/Vicinity transfer log data for this batch, or a newer lab reading disagrees with it" style={{ color:'var(--amber)' }}> *</span>}
+        {batch.tank}{batch.tankSource === 'lab' && batch.tank && <span title="Lab-sourced tank — either no real Vicinity transfer/production record for this batch yet, or a newer lab reading disagrees with it" style={{ color:'var(--amber)' }}> *</span>}
       </span>
       <span style={{ color:'var(--muted)', fontSize:12 }}>{batch.age}d</span>
       {!detailOpen && (
@@ -483,7 +483,7 @@ function DetailPanel({ batch, onClose }) {
               <StagePill stage={batch.stage}/>
               <span style={{ fontSize:12, color:'var(--muted)', fontFamily:'IBM Plex Mono' }}>{batch.tank}</span>
               {batch.tankSource === 'lab' && (
-                <span title="Lab-sourced tank — either no Basecamp/Vicinity transfer log data exists for this batch, or a newer lab reading disagrees with the transfer log's last-known tank"
+                <span title="Lab-sourced tank — either no real Vicinity transfer/production record exists for this batch yet, or a newer lab reading disagrees with Vicinity's last-known tank"
                       style={{ padding:'1px 6px', borderRadius:3, fontSize:9, fontWeight:700,
                                 letterSpacing:'0.05em', textTransform:'uppercase',
                                 background:'rgba(122,109,88,0.12)', border:'1px solid var(--border2)',
