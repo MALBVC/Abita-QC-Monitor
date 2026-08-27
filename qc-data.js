@@ -1278,10 +1278,19 @@ const BATCHES = [
     "tank": "BH8",
     "labTank": "BH8",
     "tankSource": "lab",
-    "lastReading": "2026-08-25",
-    "lastSource": "GC",
-    "numReadings": 4,
+    "lastReading": "2026-08-26",
+    "lastSource": "FERM",
+    "numReadings": 9,
     "readings": [
+      {
+        "date": "2026-08-26",
+        "sample": "ALG 6 BH8",
+        "stage": "FERM",
+        "tank": "BH8",
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "ALG",
+        "Ferm_Temp": 70.0
+      },
       {
         "date": "2026-08-25",
         "sample": "ALG 6 BH8",
@@ -1313,7 +1322,48 @@ const BATCHES = [
         "ABV": -0.13
       }
     ],
-    "fermLog": [],
+    "fermLog": [
+      {
+        "date": "2026-08-22",
+        "tank": "BH8",
+        "temp": 70.0,
+        "gravity": 9.3,
+        "ph": 4.13,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "ALG"
+      },
+      {
+        "date": "2026-08-23",
+        "tank": "BH8",
+        "temp": 70.0,
+        "gravity": 9.3,
+        "ph": null,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "ALG"
+      },
+      {
+        "date": "2026-08-24",
+        "tank": "BH8",
+        "temp": 70.0,
+        "gravity": 4.2,
+        "ph": 4.08,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "ALG"
+      },
+      {
+        "date": "2026-08-25",
+        "tank": "BH8",
+        "temp": 70.0,
+        "gravity": 4.2,
+        "ph": null,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "ALG"
+      }
+    ],
     "yeastPitches": [
       {
         "date": "2026-08-21",
@@ -1334,7 +1384,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": "5 DAYS",
+        "yeastBrewNum": null,
         "countType": "FV"
       }
     ],
@@ -1444,7 +1494,7 @@ const BATCHES = [
     "tankSource": "vicinity",
     "lastReading": "2026-06-23",
     "lastSource": "FERM",
-    "numReadings": 17,
+    "numReadings": 18,
     "readings": [
       {
         "date": "2026-06-23",
@@ -1588,6 +1638,16 @@ const BATCHES = [
         "actions": null,
         "sourceFile": "cellar records 2026.xlsx",
         "sourceSheet": "AND"
+      },
+      {
+        "date": "2026-08-21",
+        "tank": "BH13",
+        "temp": 37.0,
+        "gravity": 2.0,
+        "ph": 4.29,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "AND"
       }
     ],
     "yeastPitches": [
@@ -1610,7 +1670,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": "4 DAYS",
+        "yeastBrewNum": null,
         "countType": "FV"
       },
       {
@@ -1632,7 +1692,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": "5 DAYS",
+        "yeastBrewNum": null,
         "countType": "FV"
       }
     ],
@@ -1964,7 +2024,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": "2026-08-24",
     "lastSource": "FERM",
-    "numReadings": 24,
+    "numReadings": 33,
     "readings": [
       {
         "date": "2026-08-24",
@@ -2191,6 +2251,96 @@ const BATCHES = [
         "actions": null,
         "sourceFile": "cellar records 2026.xlsx",
         "sourceSheet": "AND"
+      },
+      {
+        "date": "2026-08-18",
+        "tank": "BH26",
+        "temp": 58.0,
+        "gravity": 16.1,
+        "ph": 4.54,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "AND"
+      },
+      {
+        "date": "2026-08-19",
+        "tank": "BH26",
+        "temp": 58.0,
+        "gravity": 11.4,
+        "ph": 4.32,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "AND"
+      },
+      {
+        "date": "2026-08-20",
+        "tank": "BH26",
+        "temp": 56.0,
+        "gravity": 7.6,
+        "ph": 4.13,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "AND"
+      },
+      {
+        "date": "2026-08-21",
+        "tank": "BH26",
+        "temp": 55.0,
+        "gravity": 5.3,
+        "ph": 4.25,
+        "actions": "SHUT-IN",
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "AND"
+      },
+      {
+        "date": "2026-08-22",
+        "tank": "BH26",
+        "temp": 54.0,
+        "gravity": 4.8,
+        "ph": 4.46,
+        "actions": "DROPPED",
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "AND"
+      },
+      {
+        "date": "2026-08-23",
+        "tank": "BH26",
+        "temp": 48.0,
+        "gravity": 4.5,
+        "ph": 4.31,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "AND"
+      },
+      {
+        "date": "2026-08-24",
+        "tank": "BH26",
+        "temp": 45.0,
+        "gravity": 4.2,
+        "ph": 4.37,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "AND"
+      },
+      {
+        "date": "2026-08-25",
+        "tank": "BH26",
+        "temp": 43.0,
+        "gravity": 4.2,
+        "ph": 4.38,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "AND"
+      },
+      {
+        "date": "2026-08-26",
+        "tank": "BH26",
+        "temp": 41.0,
+        "gravity": 4.1,
+        "ph": 4.39,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "AND"
       }
     ],
     "yeastPitches": [
@@ -2213,7 +2363,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": "3 DAYS",
+        "yeastBrewNum": null,
         "countType": "12hr ferm check"
       },
       {
@@ -2235,7 +2385,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": "6 DAYS",
+        "yeastBrewNum": null,
         "countType": "check at first KO"
       },
       {
@@ -2646,7 +2796,7 @@ const BATCHES = [
     "tankSource": "vicinity",
     "lastReading": "2026-08-04",
     "lastSource": "GC",
-    "numReadings": 16,
+    "numReadings": 17,
     "readings": [
       {
         "date": "2026-08-04",
@@ -2803,6 +2953,16 @@ const BATCHES = [
         "actions": null,
         "sourceFile": "cellar records 2026.xlsx",
         "sourceSheet": "GLD"
+      },
+      {
+        "date": "2026-08-22",
+        "tank": "BH31",
+        "temp": 34.0,
+        "gravity": 2.6,
+        "ph": 4.1,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "GLD"
       }
     ],
     "yeastPitches": [
@@ -2825,7 +2985,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": "3 days",
+        "yeastBrewNum": null,
         "countType": "FV"
       },
       {
@@ -2922,7 +3082,7 @@ const BATCHES = [
     "tankSource": "vicinity",
     "lastReading": "2026-07-20",
     "lastSource": "GC",
-    "numReadings": 16,
+    "numReadings": 18,
     "readings": [
       {
         "date": "2026-07-20",
@@ -2987,6 +3147,16 @@ const BATCHES = [
       }
     ],
     "fermLog": [
+      {
+        "date": "2026-07-13",
+        "tank": "BH32",
+        "temp": 56.0,
+        "gravity": 10.8,
+        "ph": 4.29,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "AND"
+      },
       {
         "date": "2026-07-14",
         "tank": "BH32",
@@ -3083,6 +3253,16 @@ const BATCHES = [
         "temp": 33.0,
         "gravity": 3.9,
         "ph": 4.46,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "AND"
+      },
+      {
+        "date": "2026-08-22",
+        "tank": "BH32",
+        "temp": 33.0,
+        "gravity": 3.6,
+        "ph": 4.43,
         "actions": null,
         "sourceFile": "cellar records 2026.xlsx",
         "sourceSheet": "AND"
@@ -3187,7 +3367,7 @@ const BATCHES = [
     "tankSource": "vicinity",
     "lastReading": "2026-07-29",
     "lastSource": "FERM",
-    "numReadings": 20,
+    "numReadings": 21,
     "readings": [
       {
         "date": "2026-07-29",
@@ -3356,6 +3536,16 @@ const BATCHES = [
         "actions": null,
         "sourceFile": "cellar records 2026.xlsx",
         "sourceSheet": "AMB"
+      },
+      {
+        "date": "2026-08-22",
+        "tank": "BH33",
+        "temp": 36.0,
+        "gravity": 2.1,
+        "ph": 4.28,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "AMB"
       }
     ],
     "yeastPitches": [
@@ -3422,7 +3612,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": "3 days",
+        "yeastBrewNum": null,
         "countType": "FV"
       }
     ],
@@ -3740,7 +3930,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": "3 DAYS",
+        "yeastBrewNum": null,
         "countType": "12hr ferm check"
       }
     ],
@@ -3808,7 +3998,7 @@ const BATCHES = [
     "tankSource": "vicinity",
     "lastReading": "2026-07-31",
     "lastSource": "FERM",
-    "numReadings": 13,
+    "numReadings": 15,
     "readings": [
       {
         "date": "2026-07-31",
@@ -3923,6 +4113,26 @@ const BATCHES = [
         "actions": null,
         "sourceFile": "cellar records 2026.xlsx",
         "sourceSheet": "GLD"
+      },
+      {
+        "date": "2026-08-22",
+        "tank": "BH40",
+        "temp": 34.0,
+        "gravity": 1.8,
+        "ph": 3.89,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "GLD"
+      },
+      {
+        "date": "2026-08-25",
+        "tank": "BH40",
+        "temp": 40.0,
+        "gravity": 1.8,
+        "ph": 4.0,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "GLD"
       }
     ],
     "yeastPitches": [
@@ -3956,7 +4166,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": "8days",
+        "yeastBrewNum": null,
         "countType": "FV"
       },
       {
@@ -4489,7 +4699,7 @@ const BATCHES = [
     "tankSource": "vicinity",
     "lastReading": "2026-08-03",
     "lastSource": "GC",
-    "numReadings": 17,
+    "numReadings": 18,
     "readings": [
       {
         "date": "2026-08-03",
@@ -4654,6 +4864,16 @@ const BATCHES = [
         "actions": null,
         "sourceFile": "cellar records 2026.xlsx",
         "sourceSheet": "AMB"
+      },
+      {
+        "date": "2026-08-22",
+        "tank": "BH48",
+        "temp": 36.0,
+        "gravity": 2.5,
+        "ph": 4.05,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "AMB"
       }
     ],
     "yeastPitches": [
@@ -4676,7 +4896,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": "8 days",
+        "yeastBrewNum": null,
         "countType": "FV"
       },
       {
@@ -4824,7 +5044,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": "2026-08-25",
     "lastSource": "FERM",
-    "numReadings": 10,
+    "numReadings": 18,
     "readings": [
       {
         "date": "2026-08-25",
@@ -4940,7 +5160,78 @@ const BATCHES = [
         "ABV": -0.05
       }
     ],
-    "fermLog": [],
+    "fermLog": [
+      {
+        "date": "2026-08-19",
+        "tank": "BH56",
+        "temp": 57.0,
+        "gravity": 9.0,
+        "ph": 4.56,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "GLD"
+      },
+      {
+        "date": "2026-08-20",
+        "tank": "BH56",
+        "temp": 57.0,
+        "gravity": 5.7,
+        "ph": 4.13,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "GLD"
+      },
+      {
+        "date": "2026-08-21",
+        "tank": "BH56",
+        "temp": 56.0,
+        "gravity": 2.4,
+        "ph": 3.94,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "GLD"
+      },
+      {
+        "date": "2026-08-22",
+        "tank": "BH56",
+        "temp": 56.0,
+        "gravity": 2.2,
+        "ph": 4.14,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "GLD"
+      },
+      {
+        "date": "2026-08-23",
+        "tank": "BH56",
+        "temp": 57.0,
+        "gravity": 2.0,
+        "ph": null,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "GLD"
+      },
+      {
+        "date": "2026-08-24",
+        "tank": "BH56",
+        "temp": 57.0,
+        "gravity": 2.0,
+        "ph": 4.04,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "GLD"
+      },
+      {
+        "date": "2026-08-25",
+        "tank": "BH56",
+        "temp": 56.0,
+        "gravity": 2.0,
+        "ph": 4.01,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "GLD"
+      }
+    ],
     "yeastPitches": [
       {
         "date": "2026-08-18",
@@ -4961,8 +5252,19 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": "7 DAYS",
+        "yeastBrewNum": null,
         "countType": "FV"
+      },
+      {
+        "date": "2026-08-19",
+        "tank": "BH56",
+        "cellCount": 80303424.66666667,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "24hr"
       },
       {
         "date": "2026-08-19",
@@ -5079,13 +5381,13 @@ const BATCHES = [
     "brewVolumeBbl": 1012.5,
     "vicinityStage": "Ops-Closed",
     "age": 29,
-    "stage": "Fermenting",
+    "stage": "Aging",
     "tank": "BH58",
     "labTank": "BH58",
     "tankSource": "lab",
     "lastReading": "2026-08-21",
     "lastSource": "FERM",
-    "numReadings": 19,
+    "numReadings": 25,
     "readings": [
       {
         "date": "2026-08-21",
@@ -5305,6 +5607,66 @@ const BATCHES = [
         "actions": "shut-in",
         "sourceFile": "cellar records 2026.xlsx",
         "sourceSheet": "AMB"
+      },
+      {
+        "date": "2026-08-18",
+        "tank": "BH58",
+        "temp": 56.0,
+        "gravity": 2.8,
+        "ph": 3.9,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "AMB"
+      },
+      {
+        "date": "2026-08-19",
+        "tank": "BH58",
+        "temp": 57.0,
+        "gravity": 2.7,
+        "ph": 4.04,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "AMB"
+      },
+      {
+        "date": "2026-08-21",
+        "tank": "BH58",
+        "temp": 57.0,
+        "gravity": 2.6,
+        "ph": 3.93,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "AMB"
+      },
+      {
+        "date": "2026-08-22",
+        "tank": "BH58",
+        "temp": 56.0,
+        "gravity": 2.6,
+        "ph": 4.09,
+        "actions": "dropped",
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "AMB"
+      },
+      {
+        "date": "2026-08-23",
+        "tank": "BH58",
+        "temp": 50.0,
+        "gravity": 2.6,
+        "ph": null,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "AMB"
+      },
+      {
+        "date": "2026-08-24",
+        "tank": "BH58",
+        "temp": 50.0,
+        "gravity": 2.5,
+        "ph": 4.0,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "AMB"
       }
     ],
     "yeastPitches": [
@@ -5327,7 +5689,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": "9 days",
+        "yeastBrewNum": null,
         "countType": "FV"
       },
       {
@@ -5461,7 +5823,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": "2026-07-20",
     "lastSource": "GC",
-    "numReadings": 15,
+    "numReadings": 16,
     "readings": [
       {
         "date": "2026-07-20",
@@ -5597,6 +5959,16 @@ const BATCHES = [
         "actions": null,
         "sourceFile": "cellar records 2026.xlsx",
         "sourceSheet": "BEC"
+      },
+      {
+        "date": "2026-08-22",
+        "tank": "BH16",
+        "temp": 35.0,
+        "gravity": 2.3,
+        "ph": 4.05,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "BEC"
       }
     ],
     "yeastPitches": [
@@ -5630,7 +6002,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": "5 DAYS",
+        "yeastBrewNum": null,
         "countType": "24hr"
       }
     ],
@@ -6433,7 +6805,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": "BH32",
-        "yeastBrewNum": "6 DAYS",
+        "yeastBrewNum": null,
         "countType": "FV"
       },
       {
@@ -6924,7 +7296,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": "1 DAY",
+        "yeastBrewNum": null,
         "countType": "12hr"
       },
       {
@@ -7394,7 +7766,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": "5 days",
+        "yeastBrewNum": null,
         "countType": "FV"
       },
       {
@@ -9455,7 +9827,7 @@ const BATCHES = [
     "tankSource": "lab",
     "lastReading": "2026-08-14",
     "lastSource": "FIN",
-    "numReadings": 21,
+    "numReadings": 20,
     "readings": [
       {
         "date": "2026-08-14",
@@ -9750,12 +10122,12 @@ const BATCHES = [
     ],
     "fermLog": [
       {
-        "date": "2026-07-02",
+        "date": "2026-07-07",
         "tank": "BH54",
         "temp": 56.0,
-        "gravity": 15.1,
-        "ph": 4.53,
-        "actions": null,
+        "gravity": 4.3,
+        "ph": 4.4,
+        "actions": "DROPPED",
         "sourceFile": "cellar records 2026.xlsx",
         "sourceSheet": "AND"
       },
@@ -9775,16 +10147,6 @@ const BATCHES = [
         "temp": 33.0,
         "gravity": 3.7,
         "ph": 4.54,
-        "actions": null,
-        "sourceFile": "cellar records 2026.xlsx",
-        "sourceSheet": "AND"
-      },
-      {
-        "date": "2026-07-22",
-        "tank": "BH54",
-        "temp": 33.0,
-        "gravity": 3.6,
-        "ph": 4.47,
         "actions": null,
         "sourceFile": "cellar records 2026.xlsx",
         "sourceSheet": "AND"
@@ -9810,7 +10172,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": "2 days",
+        "yeastBrewNum": null,
         "countType": "FV"
       }
     ],
@@ -10969,7 +11331,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-27",
-  "lastSync": "Aug 27, 2026 \u00b7 3:12 PM"
+  "lastSync": "Aug 27, 2026 \u00b7 4:10 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
