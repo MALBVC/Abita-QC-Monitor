@@ -916,7 +916,13 @@ function FermenterTile({ f, batchById, selectedId, onSelect }) {
   // (product, tank), not tank alone. Render every occupant, not just the
   // first, so that case doesn't silently disappear from the cellar view.
   const occupants = (f.occupantIds || []).map(id => batchById.get(id)).filter(Boolean);
+  // Untracked-brand occupants (see reports.py's _fetch_vicinity_only_occupants) —
+  // a real Vicinity on-hand record with no BATCHES entry behind it, since QC
+  // Monitor doesn't ingest lab readings for these brands. No stage/OOS to show,
+  // just what Vicinity itself says is physically in the tank right now.
+  const vicinityOnly = f.vicinityOccupants || [];
   const isInactive = f.status === 'inactive';
+  const isEmpty = occupants.length === 0 && vicinityOnly.length === 0;
 
   return (
     <div
@@ -924,7 +930,7 @@ function FermenterTile({ f, batchById, selectedId, onSelect }) {
         border: `1px solid ${occupants.some(o => o.id === selectedId) ? 'var(--amber)' : 'var(--border)'}`,
         borderRadius:8, padding:'10px 12px', minHeight:96,
         background: isInactive ? 'var(--card2)' : 'var(--card)',
-        opacity: isInactive && occupants.length === 0 ? 0.6 : 1,
+        opacity: isInactive && isEmpty ? 0.6 : 1,
         display:'flex', flexDirection:'column', gap:4,
         transition:'border-color 0.12s',
       }}>
@@ -940,7 +946,7 @@ function FermenterTile({ f, batchById, selectedId, onSelect }) {
           </span>
         )}
       </div>
-      {occupants.length > 0 ? occupants.map((occupant, i) => {
+      {occupants.map((occupant, i) => {
         const oos     = computeOOS(occupant.readings, occupant.product);
         const unacked = hasUnacknowledgedOOS(oos, occupant.basecampAlerts);
         return (
@@ -961,7 +967,29 @@ function FermenterTile({ f, batchById, selectedId, onSelect }) {
             </div>
           </div>
         );
-      }) : (
+      })}
+      {vicinityOnly.map((v, i) => (
+        <div key={v.lot || v.label + i}
+          style={{
+            display:'flex', flexDirection:'column', gap:2,
+            paddingTop: (occupants.length > 0 || i > 0) ? 6 : 0,
+            borderTop: (occupants.length > 0 || i > 0) ? '1px solid var(--border)' : 'none',
+          }}>
+          <span style={{ fontSize:9, fontWeight:700, textTransform:'uppercase', letterSpacing:'0.05em',
+                          color:'var(--muted2)' }}>
+            Vicinity only
+          </span>
+          <span title={v.label} style={{ fontFamily:'IBM Plex Mono', fontSize:11, color:'var(--muted)',
+                          whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>
+            {v.label}
+          </span>
+          <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center' }}>
+            <span style={{ fontSize:10, color:'var(--muted2)' }}>{v.lot}</span>
+            {v.qtyBbl != null && <span style={{ fontSize:10, color:'var(--muted2)' }}>{v.qtyBbl} BBL</span>}
+          </div>
+        </div>
+      ))}
+      {isEmpty && (
         <span style={{ fontSize:11, color:'var(--muted2)', marginTop:'auto' }}>— empty —</span>
       )}
     </div>
@@ -969,7 +997,9 @@ function FermenterTile({ f, batchById, selectedId, onSelect }) {
 }
 
 function FermenterCellar({ fermenters, batchById, selectedId, onSelect }) {
-  const occupiedCount = fermenters.filter(f => f.occupantIds && f.occupantIds.length > 0).length;
+  const occupiedCount = fermenters.filter(f =>
+    (f.occupantIds && f.occupantIds.length > 0) || (f.vicinityOccupants && f.vicinityOccupants.length > 0)
+  ).length;
 
   if (fermenters.length === 0) {
     return (

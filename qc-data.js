@@ -10441,130 +10441,195 @@ const FERMENTERS = [
   {
     "tank": "BH01",
     "status": "active",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": [
+      {
+        "product": "MGB",
+        "lot": "MGB25007",
+        "label": "Mardi Gras Bock",
+        "qtyBbl": 53.5
+      },
+      {
+        "product": "PLT",
+        "lot": "PLT26022",
+        "label": "Low Life Lager",
+        "qtyBbl": 2.5
+      }
+    ]
   },
   {
     "tank": "BH03",
     "status": "active",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH04",
     "status": "active",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": [
+      {
+        "product": "PLT",
+        "lot": "PLT26023",
+        "label": "Uncle Dunkel",
+        "qtyBbl": 2.3
+      }
+    ]
   },
   {
     "tank": "BH05",
     "status": "inactive",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH07",
     "status": "active",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH08",
     "status": "active",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH09",
     "status": "active",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH10",
     "status": "active",
     "occupantIds": [
       "DGT 008"
-    ]
+    ],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH11",
     "status": "active",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH12",
     "status": "inactive",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH13",
     "status": "active",
     "occupantIds": [
       "AND 030"
-    ]
+    ],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH14",
     "status": "active",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH15",
     "status": "inactive",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH16",
     "status": "active",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH17",
     "status": "active",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": [
+      {
+        "product": "MGCH",
+        "lot": "MGCH26002",
+        "label": "Mash Gang: Chug",
+        "qtyBbl": 159.0
+      }
+    ]
   },
   {
     "tank": "BH18",
     "status": "active",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH19",
     "status": "active",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH20",
     "status": "inactive",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH21",
     "status": "active",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH22",
     "status": "active",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH23",
     "status": "active",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": [
+      {
+        "product": "FTG",
+        "lot": "FTG26002",
+        "label": "40 Gator",
+        "qtyBbl": 43.5
+      }
+    ]
   },
   {
     "tank": "BH24",
     "status": "inactive",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": [
+      {
+        "product": "SUG",
+        "lot": "SUG26001",
+        "label": "Sugar Base",
+        "qtyBbl": 196.0
+      }
+    ]
   },
   {
     "tank": "BH25",
     "status": "active",
     "occupantIds": [
       "STG 013"
-    ]
+    ],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH26",
     "status": "active",
     "occupantIds": [
       "AND 042, 043, 044"
-    ]
+    ],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH27",
@@ -10572,182 +10637,320 @@ const FERMENTERS = [
     "occupantIds": [
       "AND 045, 046",
       "LHT 004"
-    ]
+    ],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH28",
     "status": "active",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": [
+      {
+        "product": "TBOL",
+        "lot": "TBOL26065-66",
+        "label": "Tivoli: Outlaw",
+        "qtyBbl": 397.5
+      }
+    ]
   },
   {
     "tank": "BH29",
     "status": "active",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH30",
     "status": "active",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH31",
     "status": "active",
     "occupantIds": [
       "GLD 059, 060"
-    ]
+    ],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH32",
     "status": "active",
     "occupantIds": [
       "AND 039, 040"
-    ]
+    ],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH33",
     "status": "active",
     "occupantIds": [
       "AMB 043, 044"
-    ]
+    ],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH34",
     "status": "active",
     "occupantIds": [
       "AND 041"
-    ]
+    ],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH35",
     "status": "active",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": [
+      {
+        "product": "BGLL",
+        "lot": "BGLL26002-3",
+        "label": "Beer Girl: Lighter Lager",
+        "qtyBbl": 415.5
+      }
+    ]
   },
   {
     "tank": "BH36",
     "status": "inactive",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH37",
     "status": "inactive",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH38",
     "status": "active",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH39",
     "status": "active",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": [
+      {
+        "product": "GRBB",
+        "lot": "GRBB26027-28",
+        "label": "Grayton:  Beach Blonde",
+        "qtyBbl": 405.0
+      }
+    ]
   },
   {
     "tank": "BH40",
     "status": "active",
     "occupantIds": [
       "GLD 057, 058"
-    ]
+    ],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH41",
     "status": "active",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH42",
     "status": "active",
     "occupantIds": [
       "GLD 052, 053"
-    ]
+    ],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH43",
     "status": "active",
     "occupantIds": [
       "GLD 055, 056"
-    ]
+    ],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH44",
     "status": "active",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH45",
     "status": "active",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": [
+      {
+        "product": "GRBB",
+        "lot": "GRBB26029-30",
+        "label": "Grayton:  Beach Blonde",
+        "qtyBbl": 407.0
+      }
+    ]
   },
   {
     "tank": "BH46",
     "status": "active",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH47",
     "status": "active",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": [
+      {
+        "product": "BGAL",
+        "lot": "BGAL26002-5",
+        "label": "Beer Girl: Amber Lager",
+        "qtyBbl": 819.0
+      }
+    ]
   },
   {
     "tank": "BH48",
     "status": "active",
     "occupantIds": [
       "AMB 045, 046, 048"
-    ]
+    ],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH49",
     "status": "active",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": [
+      {
+        "product": "4",
+        "lot": "464453",
+        "label": "Neutral Malt Base",
+        "qtyBbl": 180.0
+      },
+      {
+        "product": null,
+        "lot": "459334.JUN12",
+        "label": "Neutral Malt Base",
+        "qtyBbl": 20.0
+      }
+    ]
   },
   {
     "tank": "BH50",
     "status": "active",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": [
+      {
+        "product": null,
+        "lot": "7/23/26 - 463085",
+        "label": "Neutral Malt Base",
+        "qtyBbl": 180.0
+      },
+      {
+        "product": "4",
+        "lot": "456128",
+        "label": "Neutral Malt Base",
+        "qtyBbl": 26.2
+      },
+      {
+        "product": "4",
+        "lot": "460154",
+        "label": "Neutral Malt Base",
+        "qtyBbl": 108.0
+      },
+      {
+        "product": null,
+        "lot": "459334.JUN12",
+        "label": "Neutral Malt Base",
+        "qtyBbl": 3.5
+      }
+    ]
   },
   {
     "tank": "BH51",
     "status": "active",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": [
+      {
+        "product": "4",
+        "lot": "456128",
+        "label": "Neutral Malt Base",
+        "qtyBbl": 29.7
+      },
+      {
+        "product": null,
+        "lot": "458744.JUN6",
+        "label": "Neutral Malt Base",
+        "qtyBbl": 162.6
+      },
+      {
+        "product": "BGLL",
+        "lot": "BGLL26004-7",
+        "label": "Beer Girl: Lighter Lager",
+        "qtyBbl": 833.0
+      }
+    ]
   },
   {
     "tank": "BH52",
     "status": "inactive",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH53",
     "status": "inactive",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH54",
     "status": "active",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH55",
     "status": "active",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": [
+      {
+        "product": "TBOL",
+        "lot": "TBOL26067-70",
+        "label": "Tivoli: Outlaw",
+        "qtyBbl": 801.0
+      }
+    ]
   },
   {
     "tank": "BH56",
     "status": "active",
     "occupantIds": [
       "GLD 061, 062, 063, 064"
-    ]
+    ],
+    "vicinityOccupants": []
   },
   {
     "tank": "BH57",
     "status": "active",
-    "occupantIds": []
+    "occupantIds": [],
+    "vicinityOccupants": [
+      {
+        "product": "TBOL",
+        "lot": "TBOL26061-64",
+        "label": "Tivoli: Outlaw",
+        "qtyBbl": 416.0
+      }
+    ]
   },
   {
     "tank": "BH58",
     "status": "active",
     "occupantIds": [
       "AMB 047, 049, 050, 051, 052"
-    ]
+    ],
+    "vicinityOccupants": []
   }
 ];
 
@@ -10766,7 +10969,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-27",
-  "lastSync": "Aug 27, 2026 \u00b7 12:10 PM"
+  "lastSync": "Aug 27, 2026 \u00b7 3:12 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
