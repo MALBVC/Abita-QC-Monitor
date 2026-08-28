@@ -1960,7 +1960,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": "6 days",
+        "yeastBrewNum": null,
         "countType": "FV"
       },
       {
@@ -8404,7 +8404,7 @@ const BATCHES = [
         "pitchRate": null,
         "yeastGen": null,
         "yeastSource": null,
-        "yeastBrewNum": "3 days",
+        "yeastBrewNum": null,
         "countType": "FV"
       },
       {
@@ -11331,7 +11331,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-27",
-  "lastSync": "Aug 27, 2026 \u00b7 4:10 PM"
+  "lastSync": "Aug 27, 2026 \u00b7 8:10 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
