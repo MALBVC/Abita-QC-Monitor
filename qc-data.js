@@ -4304,230 +4304,6 @@ const BATCHES = [
     "basecampAlerts": []
   },
   {
-    "id": "GLD 052, 053",
-    "product": "GLD",
-    "section": "brewhouse",
-    "brewNums": [
-      52,
-      53
-    ],
-    "brewDate": "2026-07-09",
-    "brewDateSource": "basecamp",
-    "brewer": "Laren Ball",
-    "brewVolumeBbl": 402.0,
-    "vicinityStage": "Ops-Closed",
-    "age": 53,
-    "stage": "Fermenting",
-    "tank": "BH42",
-    "labTank": "BH42",
-    "tankSource": "vicinity",
-    "lastReading": "2026-07-13",
-    "lastSource": "FERM",
-    "numReadings": 12,
-    "readings": [
-      {
-        "date": "2026-07-13",
-        "sample": "GLD 52-53 BH42",
-        "stage": "FERM",
-        "tank": "BH42",
-        "sourceFile": "bh samples 2026.xlsx",
-        "sourceSheet": "Abita Brews",
-        "ABV": 4.46,
-        "Turbidity": 232.79977011680603,
-        "AE": 1.51
-      },
-      {
-        "date": "2026-07-13",
-        "sample": "GLD 52,53 BH42",
-        "stage": "GC",
-        "tank": "BH42",
-        "sourceFile": "gc 2026.xlsx",
-        "sourceSheet": "JUL",
-        "Diacetyl": 0.0,
-        "Pentanedione": 0.0,
-        "Total VDK": 0.0
-      },
-      {
-        "date": "2026-07-11",
-        "sample": "GLD 052 BH42",
-        "stage": "WORT",
-        "tank": "BH42",
-        "sourceFile": "wort abita samples 2026.xlsx",
-        "sourceSheet": "G",
-        "Wort pH": 5.46,
-        "SRM": 4.555837563451776,
-        "IBU (W)": 15.9,
-        "Calories": 148.45,
-        "ADF": -0.91,
-        "RDF": -0.78,
-        "OG": 10.14,
-        "AE": 10.24,
-        "RE": 10.22,
-        "HAZE": 3220.368061065674,
-        "SG": 1.04097,
-        "ABV": -0.05
-      },
-      {
-        "date": "2026-07-11",
-        "sample": "GLD 053 BH42",
-        "stage": "WORT",
-        "tank": "BH42",
-        "sourceFile": "wort abita samples 2026.xlsx",
-        "sourceSheet": "G",
-        "Wort pH": 5.47,
-        "SRM": 4.162436548223351,
-        "IBU (W)": 13.750000000000002,
-        "Calories": 146.5,
-        "ADF": -1.3,
-        "RDF": -1.11,
-        "OG": 10.01,
-        "AE": 10.14,
-        "RE": 10.12,
-        "HAZE": 2000.189037322998,
-        "SG": 1.04057,
-        "ABV": -0.07
-      }
-    ],
-    "fermLog": [
-      {
-        "date": "2026-07-10",
-        "tank": "BH42",
-        "temp": 60.0,
-        "gravity": 9.1,
-        "ph": 4.53,
-        "actions": null,
-        "sourceFile": "cellar records 2026.xlsx",
-        "sourceSheet": "GLD"
-      },
-      {
-        "date": "2026-07-11",
-        "tank": "BH42",
-        "temp": 60.0,
-        "gravity": 4.0,
-        "ph": 3.84,
-        "actions": null,
-        "sourceFile": "cellar records 2026.xlsx",
-        "sourceSheet": "GLD"
-      },
-      {
-        "date": "2026-07-12",
-        "tank": "BH42",
-        "temp": 60.0,
-        "gravity": 1.9,
-        "ph": null,
-        "actions": "SHUT-IN",
-        "sourceFile": "cellar records 2026.xlsx",
-        "sourceSheet": "GLD"
-      },
-      {
-        "date": "2026-07-16",
-        "tank": "BH42",
-        "temp": 36.0,
-        "gravity": 2.1,
-        "ph": 4.06,
-        "actions": null,
-        "sourceFile": "cellar records 2026.xlsx",
-        "sourceSheet": "GLD"
-      }
-    ],
-    "yeastPitches": [
-      {
-        "date": "2026-07-09",
-        "tank": "BH42",
-        "cellCount": 1614322997.7,
-        "viability": 0.7552,
-        "pitchRate": 101.71,
-        "yeastGen": "K-12",
-        "yeastSource": "BH46",
-        "yeastBrewNum": "GRBB25-26",
-        "countType": "Yeast"
-      },
-      {
-        "date": "2026-07-09",
-        "tank": "BH42",
-        "cellCount": 26622695.0,
-        "viability": null,
-        "pitchRate": null,
-        "yeastGen": "K-12",
-        "yeastSource": "BH46",
-        "yeastBrewNum": "GRBB25-26",
-        "countType": "FV"
-      },
-      {
-        "date": "2026-07-10",
-        "tank": "BH42",
-        "cellCount": 48417399.80000001,
-        "viability": 0.7493,
-        "pitchRate": null,
-        "yeastGen": null,
-        "yeastSource": null,
-        "yeastBrewNum": null,
-        "countType": "12hr"
-      },
-      {
-        "date": "2026-07-10",
-        "tank": "BH42",
-        "cellCount": 79333271.96666667,
-        "viability": 0.77,
-        "pitchRate": null,
-        "yeastGen": null,
-        "yeastSource": null,
-        "yeastBrewNum": null,
-        "countType": "24Hr"
-      }
-    ],
-    "transferLog": [
-      {
-        "date": "2026-07-09",
-        "action": "BREW",
-        "from": "",
-        "to": "BH42",
-        "volume": null,
-        "detail": null,
-        "project": "brewhouse",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10073305445",
-        "completed": true,
-        "remainingBbl": null
-      },
-      {
-        "date": "2026-07-09",
-        "action": "BREW",
-        "from": "",
-        "to": "BH42",
-        "volume": 201.0,
-        "detail": "GLD 052",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 201.0
-      },
-      {
-        "date": "2026-07-09",
-        "action": "BREW",
-        "from": "",
-        "to": "BH42",
-        "volume": 201.0,
-        "detail": "GLD 053",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 201.0
-      },
-      {
-        "date": "2026-08-20",
-        "action": "CENT",
-        "from": "BH42",
-        "to": "BH46",
-        "volume": 320.0,
-        "detail": null,
-        "project": "cellar",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10220619482",
-        "completed": true,
-        "remainingBbl": null
-      }
-    ],
-    "packagingLog": [],
-    "basecampAlerts": []
-  },
-  {
     "id": "GLD 055, 056",
     "product": "GLD",
     "section": "brewhouse",
@@ -10870,7 +10646,520 @@ const BATCHES = [
   }
 ];
 
-const FERMENTERS = [];
+const FERMENTERS = [
+  {
+    "tank": "BH01",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": [
+      {
+        "product": "MGB",
+        "lot": "MGB25007",
+        "label": "Mardi Gras Bock",
+        "qtyBbl": 53.5
+      },
+      {
+        "product": "PLT",
+        "lot": "PLT26022",
+        "label": "Low Life Lager",
+        "qtyBbl": 2.5
+      }
+    ]
+  },
+  {
+    "tank": "BH03",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH04",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": [
+      {
+        "product": "PLT",
+        "lot": "PLT26023",
+        "label": "Uncle Dunkel",
+        "qtyBbl": 2.3
+      }
+    ]
+  },
+  {
+    "tank": "BH05",
+    "status": "inactive",
+    "occupantIds": [],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH07",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH08",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH09",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH10",
+    "status": "active",
+    "occupantIds": [
+      "DGT 008"
+    ],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH11",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH12",
+    "status": "inactive",
+    "occupantIds": [],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH13",
+    "status": "active",
+    "occupantIds": [
+      "AND 030"
+    ],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH14",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH15",
+    "status": "inactive",
+    "occupantIds": [],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH16",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH17",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": [
+      {
+        "product": "MGCH",
+        "lot": "MGCH26002",
+        "label": "Mash Gang: Chug",
+        "qtyBbl": 159.0
+      }
+    ]
+  },
+  {
+    "tank": "BH18",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH19",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH20",
+    "status": "inactive",
+    "occupantIds": [],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH21",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH22",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH23",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": [
+      {
+        "product": "FTG",
+        "lot": "FTG26002",
+        "label": "40 Gator",
+        "qtyBbl": 43.5
+      }
+    ]
+  },
+  {
+    "tank": "BH24",
+    "status": "inactive",
+    "occupantIds": [],
+    "vicinityOccupants": [
+      {
+        "product": "SUG",
+        "lot": "SUG26001",
+        "label": "Sugar Base",
+        "qtyBbl": 196.0
+      }
+    ]
+  },
+  {
+    "tank": "BH25",
+    "status": "active",
+    "occupantIds": [
+      "STG 013"
+    ],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH26",
+    "status": "active",
+    "occupantIds": [
+      "AND 042, 043, 044"
+    ],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH27",
+    "status": "active",
+    "occupantIds": [
+      "AND 045, 046",
+      "LHT 004"
+    ],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH28",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": [
+      {
+        "product": "TBOL",
+        "lot": "TBOL26065-66",
+        "label": "Tivoli: Outlaw",
+        "qtyBbl": 397.5
+      }
+    ]
+  },
+  {
+    "tank": "BH29",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH30",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH31",
+    "status": "active",
+    "occupantIds": [
+      "GLD 059, 060"
+    ],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH32",
+    "status": "active",
+    "occupantIds": [
+      "AND 039, 040"
+    ],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH33",
+    "status": "active",
+    "occupantIds": [
+      "AMB 043, 044"
+    ],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH34",
+    "status": "active",
+    "occupantIds": [
+      "AND 041"
+    ],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH35",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": [
+      {
+        "product": "BGLL",
+        "lot": "BGLL26002-3",
+        "label": "Beer Girl: Lighter Lager",
+        "qtyBbl": 415.5
+      }
+    ]
+  },
+  {
+    "tank": "BH36",
+    "status": "inactive",
+    "occupantIds": [],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH37",
+    "status": "inactive",
+    "occupantIds": [],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH38",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH39",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": [
+      {
+        "product": "GRBB",
+        "lot": "GRBB26027-28",
+        "label": "Grayton:  Beach Blonde",
+        "qtyBbl": 405.0
+      }
+    ]
+  },
+  {
+    "tank": "BH40",
+    "status": "active",
+    "occupantIds": [
+      "GLD 057, 058"
+    ],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH41",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH42",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH43",
+    "status": "active",
+    "occupantIds": [
+      "GLD 055, 056"
+    ],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH44",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH45",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": [
+      {
+        "product": "GRBB",
+        "lot": "GRBB26029-30",
+        "label": "Grayton:  Beach Blonde",
+        "qtyBbl": 407.0
+      }
+    ]
+  },
+  {
+    "tank": "BH46",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH47",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": [
+      {
+        "product": "BGAL",
+        "lot": "BGAL26002-5",
+        "label": "Beer Girl: Amber Lager",
+        "qtyBbl": 819.0
+      }
+    ]
+  },
+  {
+    "tank": "BH48",
+    "status": "active",
+    "occupantIds": [
+      "AMB 045, 046, 048"
+    ],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH49",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": [
+      {
+        "product": "4",
+        "lot": "464453",
+        "label": "Neutral Malt Base",
+        "qtyBbl": 180.0
+      },
+      {
+        "product": null,
+        "lot": "459334.JUN12",
+        "label": "Neutral Malt Base",
+        "qtyBbl": 20.0
+      }
+    ]
+  },
+  {
+    "tank": "BH50",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": [
+      {
+        "product": null,
+        "lot": "7/23/26 - 463085",
+        "label": "Neutral Malt Base",
+        "qtyBbl": 180.0
+      },
+      {
+        "product": "4",
+        "lot": "456128",
+        "label": "Neutral Malt Base",
+        "qtyBbl": 26.2
+      },
+      {
+        "product": "4",
+        "lot": "460154",
+        "label": "Neutral Malt Base",
+        "qtyBbl": 108.0
+      },
+      {
+        "product": null,
+        "lot": "459334.JUN12",
+        "label": "Neutral Malt Base",
+        "qtyBbl": 3.5
+      }
+    ]
+  },
+  {
+    "tank": "BH51",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": [
+      {
+        "product": "4",
+        "lot": "456128",
+        "label": "Neutral Malt Base",
+        "qtyBbl": 29.7
+      },
+      {
+        "product": null,
+        "lot": "458744.JUN6",
+        "label": "Neutral Malt Base",
+        "qtyBbl": 162.6
+      },
+      {
+        "product": "BGLL",
+        "lot": "BGLL26004-7",
+        "label": "Beer Girl: Lighter Lager",
+        "qtyBbl": 833.0
+      }
+    ]
+  },
+  {
+    "tank": "BH52",
+    "status": "inactive",
+    "occupantIds": [],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH53",
+    "status": "inactive",
+    "occupantIds": [],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH54",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH55",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": [
+      {
+        "product": "TBOL",
+        "lot": "TBOL26067-70",
+        "label": "Tivoli: Outlaw",
+        "qtyBbl": 801.0
+      }
+    ]
+  },
+  {
+    "tank": "BH56",
+    "status": "active",
+    "occupantIds": [
+      "GLD 061, 062, 063, 064"
+    ],
+    "vicinityOccupants": []
+  },
+  {
+    "tank": "BH57",
+    "status": "active",
+    "occupantIds": [],
+    "vicinityOccupants": [
+      {
+        "product": "TBOL",
+        "lot": "TBOL26061-64",
+        "label": "Tivoli: Outlaw",
+        "qtyBbl": 416.0
+      }
+    ]
+  },
+  {
+    "tank": "BH58",
+    "status": "active",
+    "occupantIds": [
+      "AMB 047, 049, 050, 051, 052"
+    ],
+    "vicinityOccupants": []
+  }
+];
 
 const PIPELINE_META = {
   "products": [
@@ -10887,7 +11176,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-31",
-  "lastSync": "Aug 31, 2026 \u00b7 4:02 AM"
+  "lastSync": "Aug 31, 2026 \u00b7 8:10 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
