@@ -946,6 +946,43 @@ function FermenterTile({ f, batchById, selectedId, onSelect }) {
           </span>
         )}
       </div>
+      {f.resolvedOccupancy && f.resolvedOccupancy.length > 0 && (() => {
+        const c = f.resolvedOccupancy[0];
+        const v = c.cellarLastReadingValues || {};
+        const hasReading = v.temp != null || v.gravity != null || v.ph != null;
+        return (
+          <div
+            title={`Vicinity resident as of: ${c.vicinityResidentAsOf || '—'}\nVicinity departed: ${c.vicinityDepartedAt || '—'}`}
+            style={{
+              display:'flex', flexDirection:'column', gap:2,
+              paddingBottom:6, marginBottom:2, borderBottom:'1px dashed var(--border2)',
+            }}>
+            <div style={{ display:'flex', justifyContent:'space-between', alignItems:'baseline', gap:6 }}>
+              <span style={{ fontFamily:'IBM Plex Mono', fontWeight:700, fontSize:12, color:'var(--text)',
+                              whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>
+                {c.product} {c.brewNums.join(',')}
+              </span>
+              {c.brewDate && (
+                <span style={{ fontSize:9, color:'var(--muted2)', whiteSpace:'nowrap' }}>
+                  brewed {c.brewDate}
+                </span>
+              )}
+            </div>
+            {hasReading && (
+              <div style={{ display:'flex', gap:8, fontSize:10, color:'var(--muted)' }}>
+                {v.temp != null    && <span>{v.temp}°F</span>}
+                {v.gravity != null && <span>{v.gravity}°P</span>}
+                {v.ph != null       && <span>pH {v.ph}</span>}
+              </div>
+            )}
+            <span style={{ fontSize:9, color:'var(--muted2)' }}>
+              {c.readingAgeDays != null
+                ? `${c.readingAgeDays}d ago (${c.cellarLastReading})`
+                : 'no fermentation reading'}
+            </span>
+          </div>
+        );
+      })()}
       {occupants.map((occupant, i) => {
         const oos     = computeOOS(occupant.readings, occupant.product);
         const unacked = hasUnacknowledgedOOS(oos, occupant.basecampAlerts);
