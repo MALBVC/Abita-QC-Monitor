@@ -24,13 +24,13 @@
       --muted2:  #7a6d58;
       --amber:   #b86e0a;
       --amber2:  #9a5c06;
-      --red:     #b83030;
-      --red-bg:  rgba(184,48,48,0.07);
-      --red-br:  rgba(184,48,48,0.25);
+      --red:     #e8342a;
+      --red-bg:  rgba(232,52,42,0.07);
+      --red-br:  rgba(232,52,42,0.25);
       --green:   #2e7d4f;
       --green-bg:rgba(46,125,79,0.08);
       --green-br:rgba(46,125,79,0.25);
-      --yellow:  #a07820;
+      --yellow:  #f0b400;
       --panel-w: 1000px;
     }
     html, body, #root { height: 100%; }
@@ -909,123 +909,130 @@ function DetailPanel({ batch, onClose }) {
 }
 
 // ─── Fermenter Cellar (tank-centric view) ─────────────────────────────────────
+// Single source of truth for a tank's filter/border category, shared by the
+// tile (border color) and the Cellar page's filter buttons (so they can
+// never disagree about which bucket a tank falls into). 'inactive' (the
+// fermenters.yaml config status) takes precedence over reading freshness —
+// an inactive tank is its own bucket regardless of how old/fresh its last
+// reading is. A tank with no resolved occupant/reading at all falls into no
+// button (still visible under ALL) since it isn't green/yellow/red/inactive.
+function tankStatus(f) {
+  if (f.status === 'inactive') return 'inactive';
+  const age = f.resolvedOccupancy && f.resolvedOccupancy[0] ? f.resolvedOccupancy[0].readingAgeDays : null;
+  if (age == null) return null;
+  if (age === 0) return 'green';
+  if (age <= 7) return 'yellow';
+  return 'red';
+}
+
 function FermenterTile({ f, batchById, selectedId, onSelect }) {
-  // Usually one occupant, but a tank can genuinely hold two overlapping
-  // batches at once (e.g. one packaging out as the next brews in) — see
-  // reports.py's _build_section() comment on why batches are keyed by
-  // (product, tank), not tank alone. Render every occupant, not just the
-  // first, so that case doesn't silently disappear from the cellar view.
-  const occupants = (f.occupantIds || []).map(id => batchById.get(id)).filter(Boolean);
-  // Untracked-brand occupants (see reports.py's _fetch_vicinity_only_occupants) —
-  // a real Vicinity on-hand record with no BATCHES entry behind it, since QC
-  // Monitor doesn't ingest lab readings for these brands. No stage/OOS to show,
-  // just what Vicinity itself says is physically in the tank right now.
-  const vicinityOnly = f.vicinityOccupants || [];
   const isInactive = f.status === 'inactive';
-  const isEmpty = occupants.length === 0 && vicinityOnly.length === 0;
+  const top = f.resolvedOccupancy && f.resolvedOccupancy[0] ? f.resolvedOccupancy[0] : null;
+  const isEmpty = !top;
+
+  // Link the resolved product straight to its full batch panel when it's
+  // one of the 11 tracked SKUs (matched by product + an overlapping brew
+  // number against occupantIds' batch records) — untracked/contract brands
+  // have no batch record to link to, so they render as plain text instead.
+  const matchedBatch = top
+    ? (f.occupantIds || []).map(id => batchById.get(id)).find(o =>
+        o && o.product === top.product && top.brewNums.some(n => o.brewNums.includes(n)))
+    : null;
+  const isSelected = matchedBatch && matchedBatch.id === selectedId;
+
+  // Border color always matches this tank's tankStatus() bucket — the same
+  // one the Cellar page's filter buttons use — so a tile's color and which
+  // filter selects it can never disagree. Selection is layered on top as a
+  // box-shadow ring rather than overriding this color, so both signals
+  // stay visible at once.
+  const readingAge = top ? top.readingAgeDays : null;
+  const status = tankStatus(f);
+  const freshnessColor =
+    status === 'green'    ? 'var(--green)' :
+    status === 'yellow'   ? 'var(--yellow)' :
+    status === 'red'      ? 'var(--red)' :
+    status === 'inactive' ? 'var(--border2)' : 'var(--border)';
+
+  // Standard MM/DD - Temp - Gravity - pH row layout, shared by the most
+  // recent and second most recent reading — a single grid (not two
+  // separate flex rows) so CSS grid auto-sizes each column to its widest
+  // value across BOTH rows, keeping temp/gravity/pH aligned vertically
+  // even when e.g. row 2's gravity is a longer number than row 1's.
+  const readingRows = top
+    ? [
+        { date: top.cellarLastReading, values: top.cellarLastReadingValues, isToday: readingAge === 0 },
+        { date: top.cellarPrevReading, values: top.cellarPrevReadingValues, isToday: false },
+      ].filter(r => r.date)
+    : [];
 
   return (
     <div
       style={{
-        border: `1px solid ${occupants.some(o => o.id === selectedId) ? 'var(--amber)' : 'var(--border)'}`,
+        border: `4px solid ${freshnessColor}`,
+        boxShadow: isSelected ? '0 0 0 3px var(--amber)' : 'none',
         borderRadius:8, padding:'10px 12px', minHeight:96,
         background: isInactive ? 'var(--card2)' : 'var(--card)',
         opacity: isInactive && isEmpty ? 0.6 : 1,
         display:'flex', flexDirection:'column', gap:4,
         transition:'border-color 0.12s',
       }}>
-      <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center' }}>
-        <span style={{ fontFamily:'IBM Plex Mono', fontWeight:700, fontSize:13, color:'var(--text)' }}>
+      <div style={{ display:'grid', gridTemplateColumns:'1fr auto 1fr', alignItems:'center' }}>
+        <span/>
+        <span style={{ fontFamily:'Barlow Condensed', fontWeight:600, fontSize:15,
+                        letterSpacing:'0.06em', color:'var(--text)', textAlign:'center' }}>
           {f.tank}
         </span>
-        {isInactive && (
-          <span style={{ fontSize:9, fontWeight:700, textTransform:'uppercase', letterSpacing:'0.05em',
-                          color:'var(--muted2)', border:'1px solid var(--border2)', borderRadius:3,
-                          padding:'1px 5px', whiteSpace:'nowrap' }}>
-            Inactive
-          </span>
-        )}
-      </div>
-      {f.resolvedOccupancy && f.resolvedOccupancy.length > 0 && (() => {
-        const c = f.resolvedOccupancy[0];
-        const v = c.cellarLastReadingValues || {};
-        const hasReading = v.temp != null || v.gravity != null || v.ph != null;
-        return (
-          <div
-            title={`Vicinity resident as of: ${c.vicinityResidentAsOf || '—'}\nVicinity departed: ${c.vicinityDepartedAt || '—'}`}
-            style={{
-              display:'flex', flexDirection:'column', gap:2,
-              paddingBottom:6, marginBottom:2, borderBottom:'1px dashed var(--border2)',
-            }}>
-            <div style={{ display:'flex', justifyContent:'space-between', alignItems:'baseline', gap:6 }}>
-              <span style={{ fontFamily:'IBM Plex Mono', fontWeight:700, fontSize:12, color:'var(--text)',
-                              whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>
-                {c.product} {c.brewNums.join(',')}
-              </span>
-              {c.brewDate && (
-                <span style={{ fontSize:9, color:'var(--muted2)', whiteSpace:'nowrap' }}>
-                  brewed {c.brewDate}
-                </span>
-              )}
-            </div>
-            {hasReading && (
-              <div style={{ display:'flex', gap:8, fontSize:10, color:'var(--muted)' }}>
-                {v.temp != null    && <span>{v.temp}°F</span>}
-                {v.gravity != null && <span>{v.gravity}°P</span>}
-                {v.ph != null       && <span>pH {v.ph}</span>}
-              </div>
-            )}
-            <span style={{ fontSize:9, color:'var(--muted2)' }}>
-              {c.readingAgeDays != null
-                ? `${c.readingAgeDays}d ago (${c.cellarLastReading})`
-                : 'no fermentation reading'}
+        <div style={{ display:'flex', justifyContent:'flex-end' }}>
+          {isInactive && (
+            <span style={{ fontSize:9, fontWeight:700, textTransform:'uppercase', letterSpacing:'0.05em',
+                            color:'var(--muted2)', border:'1px solid var(--border2)', borderRadius:3,
+                            padding:'1px 5px', whiteSpace:'nowrap' }}>
+              Inactive
             </span>
-          </div>
-        );
-      })()}
-      {occupants.map((occupant, i) => {
-        const oos     = computeOOS(occupant.readings, occupant.product);
-        const unacked = hasUnacknowledgedOOS(oos, occupant.basecampAlerts);
-        return (
-          <div key={occupant.id}
-            onClick={() => onSelect(occupant)}
-            style={{
-              display:'flex', flexDirection:'column', gap:4, cursor:'pointer',
-              paddingTop: i > 0 ? 6 : 0, borderTop: i > 0 ? '1px solid var(--border)' : 'none',
-            }}>
-            <StagePill stage={occupant.stage} small/>
-            <span style={{ fontFamily:'IBM Plex Mono', fontSize:11, color:'var(--muted)',
-                            whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>
-              {occupant.id}
-            </span>
-            <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center' }}>
-              <span style={{ fontSize:10, color:'var(--muted2)' }}>{occupant.age}d</span>
-              <OOSBadge count={oos.length} unacknowledged={unacked}/>
-            </div>
-          </div>
-        );
-      })}
-      {vicinityOnly.map((v, i) => (
-        <div key={v.lot || v.label + i}
-          style={{
-            display:'flex', flexDirection:'column', gap:2,
-            paddingTop: (occupants.length > 0 || i > 0) ? 6 : 0,
-            borderTop: (occupants.length > 0 || i > 0) ? '1px solid var(--border)' : 'none',
-          }}>
-          <span style={{ fontSize:9, fontWeight:700, textTransform:'uppercase', letterSpacing:'0.05em',
-                          color:'var(--muted2)' }}>
-            Vicinity only
-          </span>
-          <span title={v.label} style={{ fontFamily:'IBM Plex Mono', fontSize:11, color:'var(--muted)',
-                          whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>
-            {v.label}
-          </span>
-          <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center' }}>
-            <span style={{ fontSize:10, color:'var(--muted2)' }}>{v.lot}</span>
-            {v.qtyBbl != null && <span style={{ fontSize:10, color:'var(--muted2)' }}>{v.qtyBbl} BBL</span>}
-          </div>
+          )}
         </div>
-      ))}
+      </div>
+      {top && (
+        <div
+          title={`Vicinity resident as of: ${top.vicinityResidentAsOf || '—'}\nVicinity departed: ${top.vicinityDepartedAt || '—'}`}
+          style={{ display:'flex', flexDirection:'column', gap:2 }}>
+          <div style={{ display:'flex', justifyContent:'space-between', alignItems:'baseline', gap:6 }}>
+            <span
+              onClick={matchedBatch ? () => onSelect(matchedBatch) : undefined}
+              style={{
+                fontFamily:'IBM Plex Mono', fontWeight:700, fontSize:13,
+                color: matchedBatch ? 'var(--amber)' : 'var(--text)',
+                cursor: matchedBatch ? 'pointer' : 'default',
+                textDecoration: matchedBatch ? 'underline' : 'none',
+                wordBreak:'break-word',
+              }}>
+              {top.product} {top.brewNums.join(',')}
+            </span>
+            <span style={{ fontSize:13, color:'var(--muted2)', whiteSpace:'nowrap' }}>
+              {top.batchAgeDays == null ? '' : `${top.batchAgeDays}d`}
+            </span>
+          </div>
+          {readingRows.length > 0 ? (
+            <div style={{
+              display:'grid', gridTemplateColumns:'repeat(4, max-content)',
+              columnGap:11, rowGap:2, fontSize:13, color:'var(--muted)',
+            }}>
+              {readingRows.map(r => (
+                <React.Fragment key={r.date}>
+                  <span style={{ color:'var(--muted2)' }}>
+                    {r.isToday ? 'Today' : r.date.slice(5).replace('-', '/')}
+                  </span>
+                  <span>{r.values && r.values.temp    != null ? `${r.values.temp}°F`    : '—'}</span>
+                  <span>{r.values && r.values.gravity != null ? `${r.values.gravity}°P` : '—'}</span>
+                  <span>{r.values && r.values.ph      != null ? `pH ${r.values.ph}`     : '—'}</span>
+                </React.Fragment>
+              ))}
+            </div>
+          ) : (
+            <span style={{ fontSize:9, color:'var(--muted2)' }}>no fermentation reading</span>
+          )}
+        </div>
+      )}
       {isEmpty && (
         <span style={{ fontSize:11, color:'var(--muted2)', marginTop:'auto' }}>— empty —</span>
       )}
@@ -1033,10 +1040,30 @@ function FermenterTile({ f, batchById, selectedId, onSelect }) {
   );
 }
 
+// [key, label, color, selectedTextColor] — selectedTextColor is chosen per
+// button for contrast against its own (sometimes bright) background rather
+// than one fixed color for all five.
+const CELLAR_FILTERS = [
+  ['all',      'All',      'var(--amber)',   '#fff'],
+  ['green',    'Green',    'var(--green)',   '#fff'],
+  ['yellow',   'Yellow',   'var(--yellow)',  'var(--text)'],
+  ['red',      'Red',      'var(--red)',     '#fff'],
+  ['inactive', 'Inactive', 'var(--border2)', 'var(--text)'],
+];
+
 function FermenterCellar({ fermenters, batchById, selectedId, onSelect }) {
-  const occupiedCount = fermenters.filter(f =>
-    (f.occupantIds && f.occupantIds.length > 0) || (f.vicinityOccupants && f.vicinityOccupants.length > 0)
-  ).length;
+  const [filter, setFilter] = useState('all');
+
+  const counts = useMemo(() => {
+    const c = { all: fermenters.length, green: 0, yellow: 0, red: 0, inactive: 0 };
+    fermenters.forEach(f => {
+      const s = tankStatus(f);
+      if (s) c[s] += 1;
+    });
+    return c;
+  }, [fermenters]);
+
+  const filtered = filter === 'all' ? fermenters : fermenters.filter(f => tankStatus(f) === filter);
 
   if (fermenters.length === 0) {
     return (
@@ -1049,13 +1076,29 @@ function FermenterCellar({ fermenters, batchById, selectedId, onSelect }) {
 
   return (
     <div style={{ padding:'16px 20px 24px' }}>
-      <div style={{ fontSize:10, fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase',
-                    color:'var(--muted)', marginBottom:12 }}>
-        Fermenter Cellar · {occupiedCount} of {fermenters.length} occupied
+      <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:12 }}>
+        <span style={{ fontSize:10, fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase',
+                      color:'var(--muted)' }}>
+          Fermenter Cellar
+        </span>
+        <div style={{ display:'flex', gap:4 }}>
+          {CELLAR_FILTERS.map(([key, label, color, selText]) => (
+            <button key={key} onClick={() => setFilter(key)}
+              style={{
+                padding:'4px 12px', borderRadius:5, border:`1px solid ${color}`,
+                background: filter===key ? color : 'var(--card)',
+                color: filter===key ? selText : 'var(--muted)',
+                fontFamily:'Barlow Condensed', fontWeight:600, fontSize:11,
+                letterSpacing:'0.05em', textTransform:'uppercase',
+              }}>
+              {label} ({counts[key]})
+            </button>
+          ))}
+        </div>
       </div>
-      <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(120px,1fr))',
+      <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(180px,1fr))',
                     gap:10, alignItems:'start' }}>
-        {fermenters.map(f => (
+        {filtered.map(f => (
           <FermenterTile key={f.tank} f={f} batchById={batchById}
             selectedId={selectedId} onSelect={onSelect}/>
         ))}
@@ -1212,7 +1255,12 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
 
 function App() {
   const [selected,  setSelected]  = useState(null);
-  const [view, setView] = useState('batches'); // 'batches' | 'cellar'
+  // Reads ?view= on initial load so a refresh (or a shared link) lands back
+  // on the page the user was on, not always 'batches' — see the combined
+  // URL-sync effect below, which also writes it back on every change.
+  const [view, setView] = useState(() =>
+    new URLSearchParams(window.location.search).get('view') === 'cellar' ? 'cellar' : 'batches'
+  ); // 'batches' | 'cellar'
   const [tweaksOpen, setTweaksOpen] = useState(false);
   const [config, setConfig]       = useState(TWEAK_DEFAULTS);
   const [acknowledged, setAcked]  = useState(() => {
@@ -1258,19 +1306,23 @@ function App() {
     if (match) setSelected(match.id);
   }, [enrichedBatches]);
 
-  // Keep the URL in sync with the open detail panel — selecting a batch
-  // updates it to that batch's deep link, closing resets to the bare URL.
+  // Keep the URL in sync with both the active page (view) and the open
+  // detail panel (selected) — a refresh, or a shared link, lands back on
+  // the same page with the same panel open, instead of always resetting to
+  // Batches with nothing selected.
   useEffect(() => {
+    const params = new URLSearchParams();
+    if (view === 'cellar') params.set('view', 'cellar');
     if (selected) {
       const sb = enrichedBatches.find(b => b.id === selected);
       if (sb) {
-        const url = `${window.location.pathname}?product=${encodeURIComponent(sb.product)}&brew=${sb.brewNums[0]}`;
-        window.history.replaceState(null, '', url);
+        params.set('product', sb.product);
+        params.set('brew', sb.brewNums[0]);
       }
-    } else {
-      window.history.replaceState(null, '', window.location.pathname);
     }
-  }, [selected, enrichedBatches]);
+    const qs = params.toString();
+    window.history.replaceState(null, '', window.location.pathname + (qs ? `?${qs}` : ''));
+  }, [view, selected, enrichedBatches]);
 
   const filtered = useMemo(() => {
     if (config.stageFilter === 'All') return enrichedBatches;
