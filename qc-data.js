@@ -6335,7 +6335,7 @@ const BATCHES = [
     "brewVolumeBbl": 156.5,
     "vicinityStage": "Ops-Closed",
     "age": 31,
-    "stage": "Brite",
+    "stage": "Packaged",
     "tank": "BH18",
     "labTank": "BH18",
     "tankSource": "lab",
@@ -6592,6 +6592,30 @@ const BATCHES = [
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10228126694",
         "completed": true,
         "remainingBbl": null
+      },
+      {
+        "date": "2026-08-31",
+        "action": "PACKAGE",
+        "from": "BT28",
+        "to": "",
+        "volume": 25.0,
+        "lossBbl": null,
+        "detail": "Turbodog - 1/4 Keg: 21/36 1/4BBL; Turbodog - 1/2 Keg: 32/32 1/2BBL",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 56.0
+      },
+      {
+        "date": "2026-08-31",
+        "action": "PACKAGE",
+        "from": "BT28",
+        "to": "",
+        "volume": 56.0,
+        "lossBbl": null,
+        "detail": "Turbodog - 4/6/12 Bottles: 733/729 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 0.0
       }
     ],
     "basecampAlerts": [
@@ -7458,7 +7482,7 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10257334169",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -11340,6 +11364,18 @@ const BATCHES = [
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10197141368",
         "completed": true,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-08-31",
+        "action": "FILTER",
+        "from": "BH54",
+        "to": "BT33",
+        "volume": 180.0,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10257771468",
+        "completed": false,
         "remainingBbl": null
       }
     ],
@@ -15577,15 +15613,15 @@ const FERMENTERS = [
       },
       {
         "product": "4",
-        "lot": "456128",
+        "lot": "460154",
         "label": "Neutral Malt Base",
-        "qtyBbl": 26.2
+        "qtyBbl": 180.0
       },
       {
         "product": "4",
-        "lot": "460154",
+        "lot": "456128",
         "label": "Neutral Malt Base",
-        "qtyBbl": 108.0
+        "qtyBbl": 26.2
       },
       {
         "product": null,
@@ -16279,7 +16315,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-31",
-  "lastSync": "Aug 31, 2026 \u00b7 6:30 PM"
+  "lastSync": "Aug 31, 2026 \u00b7 8:09 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
