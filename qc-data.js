@@ -11517,7 +11517,7 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10257771468",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -15779,15 +15779,15 @@ const FERMENTERS = [
       },
       {
         "product": "4",
-        "lot": "460154",
-        "label": "Neutral Malt Base",
-        "qtyBbl": 180.0
-      },
-      {
-        "product": "4",
         "lot": "456128",
         "label": "Neutral Malt Base",
         "qtyBbl": 26.2
+      },
+      {
+        "product": "4",
+        "lot": "460154",
+        "label": "Neutral Malt Base",
+        "qtyBbl": 108.0
       },
       {
         "product": null,
@@ -16483,7 +16483,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-09-01",
-  "lastSync": "Sep 1, 2026 \u00b7 8:08 AM"
+  "lastSync": "Sep 1, 2026 \u00b7 12:10 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
