@@ -440,11 +440,22 @@ function DetailPanel({ batch, onClose }) {
   const bbtFinReadings = useMemo(() =>
     batch.readings.filter(r => r.stage === 'BBT' || r.stage === 'FIN'), [batch]);
 
-  // Latest value per metric
+  // Latest value per metric. AE and ABV are special-cased to
+  // batch.aeLatest/batch.abvLatest (server-computed, reports.py) instead
+  // of the generic newest-reading-with-this-key scan below — both keys
+  // also appear in WORT-stage readings (pre-fermentation placeholders, a
+  // different measurement/scale, never comparable to the finished-beer
+  // spec — caught live 2026-08-31: DGT 008 showed AE "18.93" and ALG 006
+  // showed ABV "-0.13%", both from WORT samples, while real post-drop data
+  // sat unused). Both are null (not just missing) until a real BBT/FIN
+  // reading or real post-drop data exists — never fall back to WORT.
   const latestVals = useMemo(() => {
     const vals = {};
+    if (batch.aeLatest) vals['AE'] = batch.aeLatest;
+    if (batch.abvLatest) vals['ABV'] = batch.abvLatest;
     for (const r of batch.readings) {
       for (const m of ALL_METRICS) {
+        if (m === 'AE' || m === 'ABV') continue;
         if (r[m] != null && vals[m] == null) vals[m] = { v: r[m], stage: r.stage, date: r.date };
       }
     }
