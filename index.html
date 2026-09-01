@@ -909,16 +909,30 @@ function DetailPanel({ batch, onClose }) {
 }
 
 // ─── Fermenter Cellar (tank-centric view) ─────────────────────────────────────
+// The first non-vacated candidate is the current resident — NOT just
+// resolvedOccupancy[0]. A candidate can be the most recent evidence a tank
+// has and still be marked `vacated` (see tank_occupancy.py, 2026-08-31):
+// a real Vicinity departure with no Cellar Records reading after it means
+// nobody's tracking that batch in that tank anymore, even if nothing newer
+// has moved in yet. Caught live on BH07: JOC 010's entire volume
+// transferred out 8/25, but its last Cellar Records reading (8/12, before
+// the transfer) was still winning purely on being the most recent thing on
+// file. Shared by the tile and tankStatus() so they can't disagree.
+function topOccupant(f) {
+  return (f.resolvedOccupancy || []).find(c => !c.vacated) || null;
+}
+
 // Single source of truth for a tank's filter/border category, shared by the
 // tile (border color) and the Cellar page's filter buttons (so they can
 // never disagree about which bucket a tank falls into). 'inactive' (the
 // fermenters.yaml config status) takes precedence over reading freshness —
 // an inactive tank is its own bucket regardless of how old/fresh its last
-// reading is. A tank with no resolved occupant/reading at all falls into no
+// reading is. A tank with no current (non-vacated) occupant falls into no
 // button (still visible under ALL) since it isn't green/yellow/red/inactive.
 function tankStatus(f) {
   if (f.status === 'inactive') return 'inactive';
-  const age = f.resolvedOccupancy && f.resolvedOccupancy[0] ? f.resolvedOccupancy[0].readingAgeDays : null;
+  const top = topOccupant(f);
+  const age = top ? top.readingAgeDays : null;
   if (age == null) return null;
   if (age === 0) return 'green';
   if (age <= 7) return 'yellow';
@@ -927,16 +941,25 @@ function tankStatus(f) {
 
 function FermenterTile({ f, batchById, selectedId, onSelect }) {
   const isInactive = f.status === 'inactive';
-  const top = f.resolvedOccupancy && f.resolvedOccupancy[0] ? f.resolvedOccupancy[0] : null;
+  const top = topOccupant(f);
   const isEmpty = !top;
+  // When the tank reads empty because its most recent candidate was
+  // vacated (not just because there's no data at all), surface who left
+  // and when — more useful than a bare "— empty —".
+  const vacatedTop = (!top && f.resolvedOccupancy && f.resolvedOccupancy[0] && f.resolvedOccupancy[0].vacated)
+    ? f.resolvedOccupancy[0] : null;
 
   // Link the resolved product straight to its full batch panel when it's
-  // one of the 11 tracked SKUs (matched by product + an overlapping brew
-  // number against occupantIds' batch records) — untracked/contract brands
-  // have no batch record to link to, so they render as plain text instead.
+  // one of the 11 tracked SKUs — matched by product + an overlapping brew
+  // number against EVERY tracked batch, not just this tile's own
+  // occupantIds (fixed 2026-08-31: a batch that's since moved tanks, like
+  // JOC 010 above, drops out of its old tank's occupantIds entirely, which
+  // silently broke the link even while this tile still showed it as the
+  // last-known resident). Untracked/contract brands still have no batch
+  // record to link to, so they render as plain text.
   const matchedBatch = top
-    ? (f.occupantIds || []).map(id => batchById.get(id)).find(o =>
-        o && o.product === top.product && top.brewNums.some(n => o.brewNums.includes(n)))
+    ? Array.from(batchById.values()).find(o =>
+        o.product === top.product && top.brewNums.some(n => o.brewNums.includes(n)))
     : null;
   const isSelected = matchedBatch && matchedBatch.id === selectedId;
 
@@ -1034,7 +1057,15 @@ function FermenterTile({ f, batchById, selectedId, onSelect }) {
         </div>
       )}
       {isEmpty && (
-        <span style={{ fontSize:11, color:'var(--muted2)', marginTop:'auto' }}>— empty —</span>
+        <div style={{ display:'flex', flexDirection:'column', gap:2, marginTop:'auto' }}>
+          <span style={{ fontSize:11, color:'var(--muted2)' }}>— empty —</span>
+          {vacatedTop && (
+            <span style={{ fontSize:9, color:'var(--muted2)' }}>
+              {vacatedTop.product} {vacatedTop.brewNums.join(',')} left{' '}
+              {vacatedTop.vicinityDepartedAt.slice(5).replace('-', '/')}
+            </span>
+          )}
+        </div>
       )}
     </div>
   );

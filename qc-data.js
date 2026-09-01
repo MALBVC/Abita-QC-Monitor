@@ -11873,6 +11873,7 @@ const FERMENTERS = [
           "ph": 3.88
         },
         "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": 5,
         "batchAgeDays": 11
       },
@@ -11899,6 +11900,7 @@ const FERMENTERS = [
           "ph": 4.17
         },
         "vicinityDepartedAt": "2026-07-31",
+        "vacated": false,
         "readingAgeDays": 30,
         "batchAgeDays": 47
       },
@@ -11925,6 +11927,7 @@ const FERMENTERS = [
           "ph": 3.78
         },
         "vicinityDepartedAt": "2026-07-08",
+        "vacated": true,
         "readingAgeDays": 67,
         "batchAgeDays": 81
       }
@@ -11959,6 +11962,7 @@ const FERMENTERS = [
           "ph": 4.07
         },
         "vicinityDepartedAt": "2026-08-03",
+        "vacated": false,
         "readingAgeDays": 0,
         "batchAgeDays": 138
       },
@@ -11985,6 +11989,7 @@ const FERMENTERS = [
           "ph": 3.82
         },
         "vicinityDepartedAt": "2026-04-09",
+        "vacated": true,
         "readingAgeDays": 150,
         "batchAgeDays": 165
       },
@@ -12011,6 +12016,7 @@ const FERMENTERS = [
           "ph": 4.18
         },
         "vicinityDepartedAt": "2026-03-17",
+        "vacated": true,
         "readingAgeDays": 185,
         "batchAgeDays": 213
       }
@@ -12038,6 +12044,7 @@ const FERMENTERS = [
         "cellarPrevReading": null,
         "cellarPrevReadingValues": null,
         "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": null,
         "batchAgeDays": 189
       },
@@ -12056,6 +12063,7 @@ const FERMENTERS = [
         "cellarPrevReading": null,
         "cellarPrevReadingValues": null,
         "vicinityDepartedAt": "2026-02-20",
+        "vacated": true,
         "readingAgeDays": null,
         "batchAgeDays": 192
       }
@@ -12082,6 +12090,7 @@ const FERMENTERS = [
         "cellarPrevReading": null,
         "cellarPrevReadingValues": null,
         "vicinityDepartedAt": "2026-04-21",
+        "vacated": true,
         "readingAgeDays": null,
         "batchAgeDays": 132
       }
@@ -12116,6 +12125,7 @@ const FERMENTERS = [
           "ph": 4.16
         },
         "vicinityDepartedAt": "2026-08-25",
+        "vacated": true,
         "readingAgeDays": 19,
         "batchAgeDays": 26
       },
@@ -12142,6 +12152,7 @@ const FERMENTERS = [
           "ph": null
         },
         "vicinityDepartedAt": "2026-07-28",
+        "vacated": true,
         "readingAgeDays": 35,
         "batchAgeDays": 53
       },
@@ -12168,6 +12179,7 @@ const FERMENTERS = [
           "ph": 4.39
         },
         "vicinityDepartedAt": "2026-07-10",
+        "vacated": true,
         "readingAgeDays": 65,
         "batchAgeDays": 76
       }
@@ -12204,6 +12216,7 @@ const FERMENTERS = [
           "ph": 4.39
         },
         "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": 0,
         "batchAgeDays": 9
       },
@@ -12230,6 +12243,7 @@ const FERMENTERS = [
           "ph": 4.46
         },
         "vicinityDepartedAt": "2026-08-03",
+        "vacated": true,
         "readingAgeDays": 30,
         "batchAgeDays": 48
       },
@@ -12248,6 +12262,7 @@ const FERMENTERS = [
         "cellarPrevReading": null,
         "cellarPrevReadingValues": null,
         "vicinityDepartedAt": "2026-07-16",
+        "vacated": true,
         "readingAgeDays": null,
         "batchAgeDays": 48
       }
@@ -12282,6 +12297,7 @@ const FERMENTERS = [
           "ph": 4.39
         },
         "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": 0,
         "batchAgeDays": 3
       },
@@ -12308,6 +12324,7 @@ const FERMENTERS = [
           "ph": 4.47
         },
         "vicinityDepartedAt": "2026-08-20",
+        "vacated": true,
         "readingAgeDays": 23,
         "batchAgeDays": 47
       },
@@ -12326,6 +12343,7 @@ const FERMENTERS = [
         "cellarPrevReading": null,
         "cellarPrevReadingValues": null,
         "vicinityDepartedAt": "2026-07-02",
+        "vacated": true,
         "readingAgeDays": null,
         "batchAgeDays": 90
       }
@@ -12362,6 +12380,7 @@ const FERMENTERS = [
           "ph": 4.42
         },
         "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": 0,
         "batchAgeDays": 26
       },
@@ -12388,6 +12407,7 @@ const FERMENTERS = [
           "ph": 4.27
         },
         "vicinityDepartedAt": "2026-07-29",
+        "vacated": true,
         "readingAgeDays": 35,
         "batchAgeDays": 45
       },
@@ -12406,6 +12426,7 @@ const FERMENTERS = [
         "cellarPrevReading": null,
         "cellarPrevReadingValues": null,
         "vicinityDepartedAt": "2026-07-11",
+        "vacated": true,
         "readingAgeDays": null,
         "batchAgeDays": 54
       }
@@ -12440,6 +12461,7 @@ const FERMENTERS = [
           "ph": 4.31
         },
         "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": 0,
         "batchAgeDays": 10
       },
@@ -12466,6 +12488,7 @@ const FERMENTERS = [
           "ph": 4.14
         },
         "vicinityDepartedAt": "2026-08-04",
+        "vacated": true,
         "readingAgeDays": 60,
         "batchAgeDays": 80
       },
@@ -12492,6 +12515,7 @@ const FERMENTERS = [
           "ph": 4.41
         },
         "vicinityDepartedAt": "2026-06-04",
+        "vacated": true,
         "readingAgeDays": 91,
         "batchAgeDays": 131
       }
@@ -12535,6 +12559,7 @@ const FERMENTERS = [
           "ph": 4.29
         },
         "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": 10,
         "batchAgeDays": 73
       },
@@ -12553,6 +12578,7 @@ const FERMENTERS = [
         "cellarPrevReading": null,
         "cellarPrevReadingValues": null,
         "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": null,
         "batchAgeDays": 87
       },
@@ -12579,6 +12605,7 @@ const FERMENTERS = [
           "ph": 4.42
         },
         "vicinityDepartedAt": "2026-06-16",
+        "vacated": true,
         "readingAgeDays": 91,
         "batchAgeDays": 123
       }
@@ -12613,6 +12640,7 @@ const FERMENTERS = [
           "ph": 4.13
         },
         "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": 0,
         "batchAgeDays": 4
       },
@@ -12639,6 +12667,7 @@ const FERMENTERS = [
           "ph": 3.94
         },
         "vicinityDepartedAt": "2026-07-29",
+        "vacated": true,
         "readingAgeDays": 33,
         "batchAgeDays": 45
       },
@@ -12657,6 +12686,7 @@ const FERMENTERS = [
         "cellarPrevReading": null,
         "cellarPrevReadingValues": null,
         "vicinityDepartedAt": "2026-07-13",
+        "vacated": true,
         "readingAgeDays": null,
         "batchAgeDays": 51
       }
@@ -12698,6 +12728,7 @@ const FERMENTERS = [
           "ph": 4.05
         },
         "vicinityDepartedAt": "2026-07-30",
+        "vacated": false,
         "readingAgeDays": 1,
         "batchAgeDays": 47
       },
@@ -12724,6 +12755,7 @@ const FERMENTERS = [
           "ph": 4.13
         },
         "vicinityDepartedAt": "2026-07-07",
+        "vacated": true,
         "readingAgeDays": 59,
         "batchAgeDays": 74
       },
@@ -12751,6 +12783,7 @@ const FERMENTERS = [
           "ph": 4.07
         },
         "vicinityDepartedAt": "2026-06-16",
+        "vacated": true,
         "readingAgeDays": 81,
         "batchAgeDays": 101
       }
@@ -12777,6 +12810,7 @@ const FERMENTERS = [
         "cellarPrevReading": null,
         "cellarPrevReadingValues": null,
         "vicinityDepartedAt": "2026-08-28",
+        "vacated": true,
         "readingAgeDays": null,
         "batchAgeDays": 40
       },
@@ -12803,6 +12837,7 @@ const FERMENTERS = [
           "ph": 4.03
         },
         "vicinityDepartedAt": "2026-07-14",
+        "vacated": true,
         "readingAgeDays": 54,
         "batchAgeDays": 83
       },
@@ -12830,6 +12865,7 @@ const FERMENTERS = [
           "ph": 4.42
         },
         "vicinityDepartedAt": "2026-06-02",
+        "vacated": true,
         "readingAgeDays": 101,
         "batchAgeDays": 173
       }
@@ -12864,6 +12900,7 @@ const FERMENTERS = [
           "ph": 4.08
         },
         "vicinityDepartedAt": "2026-08-21",
+        "vacated": false,
         "readingAgeDays": 3,
         "batchAgeDays": 31
       },
@@ -12882,6 +12919,7 @@ const FERMENTERS = [
         "cellarPrevReading": null,
         "cellarPrevReadingValues": null,
         "vicinityDepartedAt": "2026-07-27",
+        "vacated": true,
         "readingAgeDays": null,
         "batchAgeDays": 41
       },
@@ -12908,6 +12946,7 @@ const FERMENTERS = [
           "ph": 4.21
         },
         "vicinityDepartedAt": "2026-07-14",
+        "vacated": true,
         "readingAgeDays": 54,
         "batchAgeDays": 83
       }
@@ -12938,6 +12977,7 @@ const FERMENTERS = [
         "cellarPrevReading": null,
         "cellarPrevReadingValues": null,
         "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": 5,
         "batchAgeDays": 5
       },
@@ -12964,6 +13004,7 @@ const FERMENTERS = [
           "ph": 4.24
         },
         "vicinityDepartedAt": "2026-07-30",
+        "vacated": true,
         "readingAgeDays": 38,
         "batchAgeDays": 83
       },
@@ -12990,6 +13031,7 @@ const FERMENTERS = [
           "ph": 4.21
         },
         "vicinityDepartedAt": "2026-05-04",
+        "vacated": true,
         "readingAgeDays": 126,
         "batchAgeDays": 192
       }
@@ -13024,6 +13066,7 @@ const FERMENTERS = [
           "ph": 4.4
         },
         "vicinityDepartedAt": "2026-03-10",
+        "vacated": true,
         "readingAgeDays": 178,
         "batchAgeDays": 194
       }
@@ -13058,6 +13101,7 @@ const FERMENTERS = [
           "ph": 4.01
         },
         "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": 0,
         "batchAgeDays": 26
       },
@@ -13084,6 +13128,7 @@ const FERMENTERS = [
           "ph": 4.31
         },
         "vicinityDepartedAt": "2026-06-26",
+        "vacated": false,
         "readingAgeDays": 60,
         "batchAgeDays": 68
       },
@@ -13111,6 +13156,7 @@ const FERMENTERS = [
           "ph": 4.52
         },
         "vicinityDepartedAt": "2026-06-22",
+        "vacated": true,
         "readingAgeDays": 85,
         "batchAgeDays": 96
       }
@@ -13145,6 +13191,7 @@ const FERMENTERS = [
           "ph": 4.13
         },
         "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": 3,
         "batchAgeDays": 10
       },
@@ -13171,6 +13218,7 @@ const FERMENTERS = [
           "ph": 4.44
         },
         "vicinityDepartedAt": "2026-06-05",
+        "vacated": false,
         "readingAgeDays": 38,
         "batchAgeDays": 116
       },
@@ -13197,6 +13245,7 @@ const FERMENTERS = [
           "ph": 4.0
         },
         "vicinityDepartedAt": "2026-04-22",
+        "vacated": true,
         "readingAgeDays": 137,
         "batchAgeDays": 151
       }
@@ -13238,6 +13287,7 @@ const FERMENTERS = [
           "ph": 3.74
         },
         "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": 0,
         "batchAgeDays": 4
       },
@@ -13264,6 +13314,7 @@ const FERMENTERS = [
           "ph": 4.33
         },
         "vicinityDepartedAt": "2026-07-29",
+        "vacated": true,
         "readingAgeDays": 52,
         "batchAgeDays": 83
       },
@@ -13290,6 +13341,7 @@ const FERMENTERS = [
           "ph": null
         },
         "vicinityDepartedAt": "2026-07-14",
+        "vacated": true,
         "readingAgeDays": 95,
         "batchAgeDays": 109
       }
@@ -13331,6 +13383,7 @@ const FERMENTERS = [
           "ph": 4.22
         },
         "vicinityDepartedAt": "2026-03-17",
+        "vacated": false,
         "readingAgeDays": 111,
         "batchAgeDays": 193
       }
@@ -13367,6 +13420,7 @@ const FERMENTERS = [
           "ph": 4.34
         },
         "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": 1,
         "batchAgeDays": 27
       },
@@ -13394,6 +13448,7 @@ const FERMENTERS = [
           "ph": 4.08
         },
         "vicinityDepartedAt": "2026-07-28",
+        "vacated": true,
         "readingAgeDays": 38,
         "batchAgeDays": 47
       },
@@ -13415,6 +13470,7 @@ const FERMENTERS = [
         "cellarPrevReading": null,
         "cellarPrevReadingValues": null,
         "vicinityDepartedAt": "2026-07-07",
+        "vacated": true,
         "readingAgeDays": null,
         "batchAgeDays": 56
       }
@@ -13452,6 +13508,7 @@ const FERMENTERS = [
           "ph": 4.39
         },
         "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": 3,
         "batchAgeDays": 13
       },
@@ -13478,6 +13535,7 @@ const FERMENTERS = [
           "ph": 4.09
         },
         "vicinityDepartedAt": "2026-08-10",
+        "vacated": true,
         "readingAgeDays": 31,
         "batchAgeDays": 81
       },
@@ -13498,6 +13556,7 @@ const FERMENTERS = [
         "cellarPrevReading": null,
         "cellarPrevReadingValues": null,
         "vicinityDepartedAt": "2026-06-09",
+        "vacated": true,
         "readingAgeDays": null,
         "batchAgeDays": 91
       }
@@ -13535,6 +13594,7 @@ const FERMENTERS = [
           "ph": 4.4
         },
         "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": 0,
         "batchAgeDays": 4
       },
@@ -13561,6 +13621,7 @@ const FERMENTERS = [
           "ph": 4.14
         },
         "vicinityDepartedAt": "2026-08-24",
+        "vacated": true,
         "readingAgeDays": 7,
         "batchAgeDays": 38
       },
@@ -13587,6 +13648,7 @@ const FERMENTERS = [
           "ph": 4.03
         },
         "vicinityDepartedAt": "2026-07-16",
+        "vacated": true,
         "readingAgeDays": 48,
         "batchAgeDays": 68
       }
@@ -13629,6 +13691,7 @@ const FERMENTERS = [
           "ph": 3.84
         },
         "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": 6,
         "batchAgeDays": 21
       },
@@ -13650,6 +13713,7 @@ const FERMENTERS = [
         "cellarPrevReading": null,
         "cellarPrevReadingValues": null,
         "vicinityDepartedAt": "2026-07-30",
+        "vacated": true,
         "readingAgeDays": null,
         "batchAgeDays": 33
       },
@@ -13676,6 +13740,7 @@ const FERMENTERS = [
           "ph": 4.42
         },
         "vicinityDepartedAt": "2026-07-15",
+        "vacated": true,
         "readingAgeDays": 49,
         "batchAgeDays": 69
       }
@@ -13703,6 +13768,7 @@ const FERMENTERS = [
         "cellarPrevReading": null,
         "cellarPrevReadingValues": null,
         "vicinityDepartedAt": "2026-04-23",
+        "vacated": true,
         "readingAgeDays": null,
         "batchAgeDays": 131
       },
@@ -13730,6 +13796,7 @@ const FERMENTERS = [
           "ph": 4.43
         },
         "vicinityDepartedAt": "2026-04-10",
+        "vacated": true,
         "readingAgeDays": 147,
         "batchAgeDays": 172
       },
@@ -13751,6 +13818,7 @@ const FERMENTERS = [
         "cellarPrevReading": null,
         "cellarPrevReadingValues": null,
         "vicinityDepartedAt": "2026-02-18",
+        "vacated": true,
         "readingAgeDays": null,
         "batchAgeDays": 196
       }
@@ -13785,6 +13853,7 @@ const FERMENTERS = [
           "ph": 4.11
         },
         "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": 0,
         "batchAgeDays": 9
       },
@@ -13811,6 +13880,7 @@ const FERMENTERS = [
           "ph": 4.08
         },
         "vicinityDepartedAt": "2026-07-11",
+        "vacated": true,
         "readingAgeDays": 53,
         "batchAgeDays": 74
       },
@@ -13838,6 +13908,7 @@ const FERMENTERS = [
           "ph": 3.86
         },
         "vicinityDepartedAt": "2026-06-10",
+        "vacated": true,
         "readingAgeDays": 85,
         "batchAgeDays": 117
       }
@@ -13875,6 +13946,7 @@ const FERMENTERS = [
           "ph": 4.1
         },
         "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": 1,
         "batchAgeDays": 32
       },
@@ -13902,6 +13974,7 @@ const FERMENTERS = [
           "ph": 4.39
         },
         "vicinityDepartedAt": "2026-07-17",
+        "vacated": true,
         "readingAgeDays": 45,
         "batchAgeDays": 108
       },
@@ -13929,6 +14002,7 @@ const FERMENTERS = [
           "ph": 4.69
         },
         "vicinityDepartedAt": "2026-05-04",
+        "vacated": true,
         "readingAgeDays": 123,
         "batchAgeDays": 165
       }
@@ -13966,6 +14040,7 @@ const FERMENTERS = [
           "ph": 4.43
         },
         "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": 1,
         "batchAgeDays": 52
       },
@@ -13993,6 +14068,7 @@ const FERMENTERS = [
           "ph": 4.46
         },
         "vicinityDepartedAt": "2026-06-22",
+        "vacated": true,
         "readingAgeDays": 74,
         "batchAgeDays": 103
       },
@@ -14024,6 +14100,7 @@ const FERMENTERS = [
           "ph": 3.98
         },
         "vicinityDepartedAt": "2026-04-29",
+        "vacated": false,
         "readingAgeDays": 123,
         "batchAgeDays": 138
       }
@@ -14059,6 +14136,7 @@ const FERMENTERS = [
           "ph": 4.24
         },
         "vicinityDepartedAt": "2026-08-27",
+        "vacated": true,
         "readingAgeDays": 9,
         "batchAgeDays": 38
       },
@@ -14086,6 +14164,7 @@ const FERMENTERS = [
           "ph": 4.52
         },
         "vicinityDepartedAt": "2026-07-10",
+        "vacated": true,
         "readingAgeDays": 56,
         "batchAgeDays": 82
       },
@@ -14113,6 +14192,7 @@ const FERMENTERS = [
           "ph": 4.47
         },
         "vicinityDepartedAt": "2026-06-04",
+        "vacated": true,
         "readingAgeDays": 90,
         "batchAgeDays": 137
       }
@@ -14150,6 +14230,7 @@ const FERMENTERS = [
           "ph": 4.45
         },
         "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": 20,
         "batchAgeDays": 52
       },
@@ -14177,6 +14258,7 @@ const FERMENTERS = [
           "ph": 4.05
         },
         "vicinityDepartedAt": "2026-06-25",
+        "vacated": true,
         "readingAgeDays": 67,
         "batchAgeDays": 89
       },
@@ -14204,6 +14286,7 @@ const FERMENTERS = [
           "ph": 4.25
         },
         "vicinityDepartedAt": "2026-06-01",
+        "vacated": true,
         "readingAgeDays": 97,
         "batchAgeDays": 125
       }
@@ -14239,6 +14322,7 @@ const FERMENTERS = [
           "ph": 3.98
         },
         "vicinityDepartedAt": "2026-08-24",
+        "vacated": true,
         "readingAgeDays": 9,
         "batchAgeDays": 34
       },
@@ -14265,6 +14349,7 @@ const FERMENTERS = [
           "ph": 4.65
         },
         "vicinityDepartedAt": "2026-07-21",
+        "vacated": true,
         "readingAgeDays": 52,
         "batchAgeDays": 73
       },
@@ -14292,6 +14377,7 @@ const FERMENTERS = [
           "ph": 4.49
         },
         "vicinityDepartedAt": "2026-06-15",
+        "vacated": true,
         "readingAgeDays": 83,
         "batchAgeDays": 129
       }
@@ -14334,6 +14420,7 @@ const FERMENTERS = [
           "ph": 4.07
         },
         "vicinityDepartedAt": "2026-02-17",
+        "vacated": true,
         "readingAgeDays": 200,
         "batchAgeDays": 215
       }
@@ -14369,6 +14456,7 @@ const FERMENTERS = [
           "ph": 4.13
         },
         "vicinityDepartedAt": "2026-06-08",
+        "vacated": true,
         "readingAgeDays": 84,
         "batchAgeDays": 127
       },
@@ -14396,6 +14484,7 @@ const FERMENTERS = [
           "ph": 3.91
         },
         "vicinityDepartedAt": "2026-04-13",
+        "vacated": false,
         "readingAgeDays": 137,
         "batchAgeDays": 159
       },
@@ -14423,6 +14512,7 @@ const FERMENTERS = [
           "ph": 4.17
         },
         "vicinityDepartedAt": "2026-03-11",
+        "vacated": true,
         "readingAgeDays": 173,
         "batchAgeDays": 209
       }
@@ -14465,6 +14555,7 @@ const FERMENTERS = [
           "ph": 3.93
         },
         "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": 9,
         "batchAgeDays": 46
       },
@@ -14492,6 +14583,7 @@ const FERMENTERS = [
           "ph": 4.02
         },
         "vicinityDepartedAt": "2026-07-02",
+        "vacated": true,
         "readingAgeDays": 66,
         "batchAgeDays": 103
       },
@@ -14519,6 +14611,7 @@ const FERMENTERS = [
           "ph": 4.04
         },
         "vicinityDepartedAt": "2026-05-12",
+        "vacated": true,
         "readingAgeDays": 116,
         "batchAgeDays": 123
       }
@@ -14556,6 +14649,7 @@ const FERMENTERS = [
           "ph": 3.89
         },
         "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": 6,
         "batchAgeDays": 33
       },
@@ -14583,6 +14677,7 @@ const FERMENTERS = [
           "ph": 4.2
         },
         "vicinityDepartedAt": "2026-07-21",
+        "vacated": true,
         "readingAgeDays": 48,
         "batchAgeDays": 68
       },
@@ -14610,6 +14705,7 @@ const FERMENTERS = [
           "ph": 3.99
         },
         "vicinityDepartedAt": "2026-05-06",
+        "vacated": false,
         "readingAgeDays": 116,
         "batchAgeDays": 152
       }
@@ -14645,6 +14741,7 @@ const FERMENTERS = [
           "ph": 4.09
         },
         "vicinityDepartedAt": "2026-08-10",
+        "vacated": true,
         "readingAgeDays": 21,
         "batchAgeDays": 65
       },
@@ -14672,6 +14769,7 @@ const FERMENTERS = [
           "ph": 4.32
         },
         "vicinityDepartedAt": "2026-06-17",
+        "vacated": true,
         "readingAgeDays": 78,
         "batchAgeDays": 96
       },
@@ -14699,6 +14797,7 @@ const FERMENTERS = [
           "ph": 4.11
         },
         "vicinityDepartedAt": "2026-05-20",
+        "vacated": true,
         "readingAgeDays": 104,
         "batchAgeDays": 143
       }
@@ -14736,6 +14835,7 @@ const FERMENTERS = [
           "ph": 3.95
         },
         "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": 0,
         "batchAgeDays": 5
       },
@@ -14763,6 +14863,7 @@ const FERMENTERS = [
           "ph": 4.01
         },
         "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": 18,
         "batchAgeDays": 53
       },
@@ -14790,6 +14891,7 @@ const FERMENTERS = [
           "ph": 3.9
         },
         "vicinityDepartedAt": "2026-06-10",
+        "vacated": true,
         "readingAgeDays": 86,
         "batchAgeDays": 101
       }
@@ -14827,6 +14929,7 @@ const FERMENTERS = [
           "ph": 4.02
         },
         "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": 25,
         "batchAgeDays": 39
       },
@@ -14854,6 +14957,7 @@ const FERMENTERS = [
           "ph": 4.11
         },
         "vicinityDepartedAt": "2026-07-11",
+        "vacated": true,
         "readingAgeDays": 52,
         "batchAgeDays": 82
       },
@@ -14881,6 +14985,7 @@ const FERMENTERS = [
           "ph": 3.96
         },
         "vicinityDepartedAt": "2026-06-03",
+        "vacated": true,
         "readingAgeDays": 89,
         "batchAgeDays": 118
       }
@@ -14916,6 +15021,7 @@ const FERMENTERS = [
           "ph": 4.04
         },
         "vicinityDepartedAt": "2026-08-19",
+        "vacated": true,
         "readingAgeDays": 21,
         "batchAgeDays": 56
       },
@@ -14943,6 +15049,7 @@ const FERMENTERS = [
           "ph": 4.12
         },
         "vicinityDepartedAt": "2026-06-15",
+        "vacated": true,
         "readingAgeDays": 80,
         "batchAgeDays": 109
       },
@@ -14970,6 +15077,7 @@ const FERMENTERS = [
           "ph": null
         },
         "vicinityDepartedAt": "2026-04-30",
+        "vacated": true,
         "readingAgeDays": 129,
         "batchAgeDays": 152
       }
@@ -15012,6 +15120,7 @@ const FERMENTERS = [
           "ph": 4.05
         },
         "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": 9,
         "batchAgeDays": 32
       },
@@ -15039,6 +15148,7 @@ const FERMENTERS = [
           "ph": 3.96
         },
         "vicinityDepartedAt": "2026-07-17",
+        "vacated": true,
         "readingAgeDays": 46,
         "batchAgeDays": 75
       },
@@ -15066,6 +15176,7 @@ const FERMENTERS = [
           "ph": 3.7
         },
         "vicinityDepartedAt": "2026-06-08",
+        "vacated": true,
         "readingAgeDays": 86,
         "batchAgeDays": 102
       }
@@ -15101,6 +15212,7 @@ const FERMENTERS = [
           "ph": 4.01
         },
         "vicinityDepartedAt": "2026-08-13",
+        "vacated": true,
         "readingAgeDays": 24,
         "batchAgeDays": 62
       },
@@ -15128,6 +15240,7 @@ const FERMENTERS = [
           "ph": 3.61
         },
         "vicinityDepartedAt": "2026-06-08",
+        "vacated": true,
         "readingAgeDays": 87,
         "batchAgeDays": 102
       },
@@ -15155,6 +15268,7 @@ const FERMENTERS = [
           "ph": 4.08
         },
         "vicinityDepartedAt": "2026-05-08",
+        "vacated": true,
         "readingAgeDays": 115,
         "batchAgeDays": 130
       }
@@ -15192,6 +15306,7 @@ const FERMENTERS = [
           "ph": 4.17
         },
         "vicinityDepartedAt": "2026-08-28",
+        "vacated": true,
         "readingAgeDays": 7,
         "batchAgeDays": 25
       },
@@ -15221,6 +15336,7 @@ const FERMENTERS = [
           "ph": 4.06
         },
         "vicinityDepartedAt": "2026-07-11",
+        "vacated": true,
         "readingAgeDays": 56,
         "batchAgeDays": 90
       },
@@ -15250,6 +15366,7 @@ const FERMENTERS = [
           "ph": 4.09
         },
         "vicinityDepartedAt": "2026-06-01",
+        "vacated": true,
         "readingAgeDays": 106,
         "batchAgeDays": 116
       }
@@ -15289,6 +15406,7 @@ const FERMENTERS = [
           "ph": 4.18
         },
         "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": 9,
         "batchAgeDays": 34
       },
@@ -15309,6 +15427,7 @@ const FERMENTERS = [
         "cellarPrevReading": null,
         "cellarPrevReadingValues": null,
         "vicinityDepartedAt": "2026-07-27",
+        "vacated": true,
         "readingAgeDays": null,
         "batchAgeDays": 41
       },
@@ -15336,6 +15455,7 @@ const FERMENTERS = [
         "cellarPrevReading": null,
         "cellarPrevReadingValues": null,
         "vicinityDepartedAt": "2026-07-13",
+        "vacated": true,
         "readingAgeDays": null,
         "batchAgeDays": 60
       }
@@ -15378,6 +15498,7 @@ const FERMENTERS = [
         "cellarPrevReading": null,
         "cellarPrevReadingValues": null,
         "vicinityDepartedAt": "2026-06-02",
+        "vacated": true,
         "readingAgeDays": null,
         "batchAgeDays": 91
       },
@@ -15407,6 +15528,7 @@ const FERMENTERS = [
           "ph": 4.59
         },
         "vicinityDepartedAt": "2026-05-21",
+        "vacated": true,
         "readingAgeDays": 102,
         "batchAgeDays": 153
       },
@@ -15436,6 +15558,7 @@ const FERMENTERS = [
           "ph": 3.92
         },
         "vicinityDepartedAt": "2026-01-28",
+        "vacated": false,
         "readingAgeDays": 214,
         "batchAgeDays": 229
       }
@@ -15492,6 +15615,7 @@ const FERMENTERS = [
         "cellarPrevReading": null,
         "cellarPrevReadingValues": null,
         "vicinityDepartedAt": "2026-04-07",
+        "vacated": true,
         "readingAgeDays": null,
         "batchAgeDays": 152
       },
@@ -15512,6 +15636,7 @@ const FERMENTERS = [
         "cellarPrevReading": null,
         "cellarPrevReadingValues": null,
         "vicinityDepartedAt": "2026-03-16",
+        "vacated": true,
         "readingAgeDays": null,
         "batchAgeDays": 168
       },
@@ -15541,6 +15666,7 @@ const FERMENTERS = [
           "ph": 4.07
         },
         "vicinityDepartedAt": "2026-01-15",
+        "vacated": true,
         "readingAgeDays": 230,
         "batchAgeDays": 237
       }
@@ -15589,6 +15715,7 @@ const FERMENTERS = [
           "ph": 4.06
         },
         "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": 0,
         "batchAgeDays": 1
       },
@@ -15618,6 +15745,7 @@ const FERMENTERS = [
           "ph": 3.98
         },
         "vicinityDepartedAt": "2026-08-24",
+        "vacated": true,
         "readingAgeDays": 20,
         "batchAgeDays": 27
       },
@@ -15641,6 +15769,7 @@ const FERMENTERS = [
         "cellarPrevReading": null,
         "cellarPrevReadingValues": null,
         "vicinityDepartedAt": "2026-02-27",
+        "vacated": true,
         "readingAgeDays": null,
         "batchAgeDays": 187
       }
@@ -15692,6 +15821,7 @@ const FERMENTERS = [
           "ph": 4.66
         },
         "vicinityDepartedAt": "2026-08-11",
+        "vacated": true,
         "readingAgeDays": 20,
         "batchAgeDays": 61
       },
@@ -15721,6 +15851,7 @@ const FERMENTERS = [
           "ph": 3.88
         },
         "vicinityDepartedAt": "2026-06-26",
+        "vacated": true,
         "readingAgeDays": 70,
         "batchAgeDays": 95
       },
@@ -15750,6 +15881,7 @@ const FERMENTERS = [
           "ph": 4.05
         },
         "vicinityDepartedAt": "2026-05-16",
+        "vacated": true,
         "readingAgeDays": 109,
         "batchAgeDays": 144
       }
@@ -15794,6 +15926,7 @@ const FERMENTERS = [
           "ph": 3.82
         },
         "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": 4,
         "batchAgeDays": 19
       },
@@ -15823,6 +15956,7 @@ const FERMENTERS = [
           "ph": 4.7
         },
         "vicinityDepartedAt": "2026-08-11",
+        "vacated": true,
         "readingAgeDays": 27,
         "batchAgeDays": 67
       },
@@ -15852,6 +15986,7 @@ const FERMENTERS = [
           "ph": 3.88
         },
         "vicinityDepartedAt": "2026-06-17",
+        "vacated": true,
         "readingAgeDays": 87,
         "batchAgeDays": 110
       }
@@ -15889,6 +16024,7 @@ const FERMENTERS = [
           "ph": 4.01
         },
         "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": 1,
         "batchAgeDays": 12
       },
@@ -15918,6 +16054,7 @@ const FERMENTERS = [
           "ph": 3.97
         },
         "vicinityDepartedAt": "2026-07-15",
+        "vacated": true,
         "readingAgeDays": 60,
         "batchAgeDays": 89
       },
@@ -15943,6 +16080,7 @@ const FERMENTERS = [
         "cellarPrevReading": null,
         "cellarPrevReadingValues": null,
         "vicinityDepartedAt": "2026-05-19",
+        "vacated": true,
         "readingAgeDays": null,
         "batchAgeDays": 107
       }
@@ -15987,6 +16125,7 @@ const FERMENTERS = [
           "ph": 3.79
         },
         "vicinityDepartedAt": "2026-08-14",
+        "vacated": false,
         "readingAgeDays": 3,
         "batchAgeDays": 76
       },
@@ -16016,6 +16155,7 @@ const FERMENTERS = [
           "ph": 3.75
         },
         "vicinityDepartedAt": "2026-06-01",
+        "vacated": true,
         "readingAgeDays": 105,
         "batchAgeDays": 118
       }
@@ -16056,6 +16196,7 @@ const FERMENTERS = [
           "ph": 4.0
         },
         "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": 3,
         "batchAgeDays": 18
       },
@@ -16085,6 +16226,7 @@ const FERMENTERS = [
           "ph": 4.08
         },
         "vicinityDepartedAt": "2026-08-03",
+        "vacated": true,
         "readingAgeDays": 28,
         "batchAgeDays": 69
       },
@@ -16114,6 +16256,7 @@ const FERMENTERS = [
           "ph": 4.01
         },
         "vicinityDepartedAt": "2026-06-15",
+        "vacated": true,
         "readingAgeDays": 86,
         "batchAgeDays": 137
       }
@@ -16136,7 +16279,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-08-31",
-  "lastSync": "Aug 31, 2026 \u00b7 5:55 PM"
+  "lastSync": "Aug 31, 2026 \u00b7 6:30 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
