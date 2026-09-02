@@ -31,6 +31,15 @@
       --green-bg:rgba(46,125,79,0.08);
       --green-br:rgba(46,125,79,0.25);
       --yellow:  #f0b400;
+      --blue:    #1f7fe0;
+      --blue-bg: rgba(31,127,224,0.09);
+      --blue-br: rgba(31,127,224,0.3);
+      /* Brighter, more saturated tints for the Cellar tile fermentation-stage
+         background (distinct from --green-bg/--blue-bg above, which stay
+         subtle for badges elsewhere) — Keeyan needs these to read as an
+         obvious color at a glance across a full wall of tiles. */
+      --ferm-active-bg:  rgba(46,201,101,0.28);
+      --ferm-crashed-bg: rgba(31,127,224,0.24);
       --panel-w: 1000px;
     }
     html, body, #root { height: 100%; }
@@ -53,10 +62,26 @@
 const { useState, useEffect, useRef, useCallback, useMemo } = React;
 
 // ─── Constants ───────────────────────────────────────────────────────────────
+// Four stages, per Levi (2026-09-02): the dashboard collapses WORT/FERM
+// into "Fermenting" and AGING/BRITE/PKG into "Aging" server-side (see
+// reports.py's _DISPLAY_STAGE) — a partial real packaging draw no longer
+// promotes a batch's displayed stage past "Aging" on its own, since most of
+// it can still be sitting in its fermenter (real case: TBD 005). "Brite" is
+// a separate, narrower override applied after that collapse: once the
+// fermenter's own real tracked volume (reports.py's _fetch_transfers() ->
+// bhRemainingBbl) audits down to ~0 — a stopgap Levi asked for, more
+// trustworthy than chasing the beer through downstream tanks. "ERR" is a
+// further override on top of that: a real tank conflict (see
+// reports.py's _bh_tank_conflicts()) means a different real brew has since
+// landed in a tank this lot's own ledger still claims to occupy — proof
+// the ledger is wrong, so its Aging/Brite guess is replaced with ERR
+// rather than shown as if it were still trustworthy.
+// Colors: Fermenting/Aging match the Cellar page's green/blue tile tint;
+// Brite reuses the tone that used to mean Aging pre-collapse; ERR is red.
 const STAGE_COLORS = {
-  Wort: '#5b7ab5', Fermenting: '#6b9b5a', Aging: '#c9a227', Brite: '#d4861a', Packaged: '#7a8a6a',
+  Fermenting: '#2ec965', Aging: '#1f7fe0', Brite: '#c9a227', ERR: '#e8342a',
 };
-const STAGE_ORDER = ['Wort','Fermenting','Aging','Brite','Packaged'];
+const STAGE_ORDER = ['Fermenting','Aging','Brite','ERR'];
 const ALL_METRICS  = ['OG','Wort pH','IBU (W)','ABV','AE','IBU','CO2','pH','HAZE','SRM','DO'];
 
 // Readings History column sets — split by stage so wort-only and
@@ -212,7 +237,7 @@ function BatchRow({ batch, selected, onClick, compact, detailOpen }) {
     <div onClick={() => onClick(batch)}
       style={{
         display:'grid',
-        gridTemplateColumns: detailOpen ? '190px 110px 64px 44px 72px 1fr' : '190px 110px 64px 44px 48px minmax(240px,460px) 72px 1fr',
+        gridTemplateColumns: detailOpen ? '190px 110px 64px 90px 44px 72px 1fr' : '190px 110px 64px 90px 44px 48px minmax(240px,460px) 72px 1fr',
         alignItems:'center', gap:10, padding:`0 18px`, height:h,
         cursor:'pointer', borderBottom:'1px solid var(--border)',
         background: selected ? 'rgba(212,134,26,0.07)' : 'transparent',
@@ -229,6 +254,20 @@ function BatchRow({ batch, selected, onClick, compact, detailOpen }) {
       <StagePill stage={batch.stage}/>
       <span style={{ color:'var(--muted)', fontSize:12, fontFamily:'IBM Plex Mono' }}>
         {batch.tank}{batch.tankSource === 'lab' && batch.tank && <span title="Lab-sourced tank — either no real Vicinity transfer/production record for this batch yet, or a newer lab reading disagrees with it" style={{ color:'var(--amber)' }}> *</span>}
+      </span>
+      <span style={{ color:'var(--muted)', fontSize:12, fontFamily:'IBM Plex Mono', whiteSpace:'nowrap' }}
+            title={batch.tankRemainingBbl != null && batch.tankBrewedBbl != null ? 'Real Vicinity volume remaining in this tank, out of what was brewed' : ''}>
+        {batch.tankRemainingBbl != null && batch.tankBrewedBbl != null
+          ? `${Math.round(batch.tankRemainingBbl)} / ${Math.round(batch.tankBrewedBbl)}`
+          : '—'}
+        {batch.tankConflicts && batch.tankConflicts.length > 0 && (
+          <span style={{ color:'var(--red)', marginLeft:3, cursor:'help' }}
+                title={batch.tankConflicts.map(c =>
+                  `${c.tank}: ${c.oursBbl} BBL still tracked here, but ${c.conflictProduct} ${c.conflictBrewNums} really brewed into ${c.tank} on ${c.conflictDate} (${c.conflictVolumeBbl} BBL) — a fermenter can't hold two batches, so this lot's own Vicinity/Basecamp transfer record out of ${c.tank} looks incomplete.`
+                ).join('\n')}>
+            ⚠
+          </span>
+        )}
       </span>
       <span style={{ color:'var(--muted)', fontSize:12 }}>{batch.age}d</span>
       {!detailOpen && (
@@ -277,6 +316,7 @@ function BatchSection({ title, batches, selectedId, onSelect, compact, detailOpe
     if      (sort.key === 'age')    cmp = (a.age ?? -1) - (b.age ?? -1);
     else if (sort.key === 'stage')  cmp = STAGE_ORDER.indexOf(a.stage) - STAGE_ORDER.indexOf(b.stage);
     else if (sort.key === 'tank')   cmp = (a.tank||'').localeCompare(b.tank||'', undefined, {numeric:true});
+    else if (sort.key === 'remaining') cmp = (a.tankRemainingBbl ?? -1) - (b.tankRemainingBbl ?? -1);
     else if (sort.key === 'rdgs')   cmp = (a.numReadings ?? 0) - (b.numReadings ?? 0);
     else if (sort.key === 'latest') cmp = (a.lastReading||'').localeCompare(b.lastReading||'');
     else                            cmp = a.id.localeCompare(b.id);
@@ -287,6 +327,7 @@ function BatchSection({ title, batches, selectedId, onSelect, compact, detailOpe
     { label:'Brew / Batch',    key:'id',     sortable:true  },
     { label:'Stage',           key:'stage',  sortable:true  },
     { label:'Tank',            key:'tank',   sortable:true  },
+    { label:'Remaining',       key:'remaining', sortable:true  },
     { label:'Age',             key:'age',    sortable:true  },
     ...(detailOpen ? [] : [
       { label:'Rdgs',            key:'rdgs',   sortable:true  },
@@ -319,7 +360,7 @@ function BatchSection({ title, batches, selectedId, onSelect, compact, detailOpe
       </div>
       {/* Column headers */}
       <div style={{ display:'grid',
-                    gridTemplateColumns: detailOpen ? '190px 110px 64px 44px 72px 1fr' : '190px 110px 64px 44px 48px minmax(240px,460px) 72px 1fr',
+                    gridTemplateColumns: detailOpen ? '190px 110px 64px 90px 44px 72px 1fr' : '190px 110px 64px 90px 44px 48px minmax(240px,460px) 72px 1fr',
                     gap:10, padding:'0 18px', height:30, alignItems:'center',
                     background:'var(--surface)', borderBottom:'1px solid var(--border)',
                     position:'sticky', top:31, zIndex:4 }}>
@@ -950,6 +991,35 @@ function tankStatus(f) {
   return 'red';
 }
 
+// Single source of truth for linking a tile's top occupant to its full
+// batch record (matched by product + an overlapping brew number against
+// EVERY tracked batch, not just this tile's own occupantIds — see the
+// FermenterTile comment above this was lifted from) — shared by the tile
+// itself and the Cellar page's Active/Crashed filter so they can't disagree
+// about which batch a tank resolves to.
+function matchedBatchFor(f, batchById) {
+  const top = topOccupant(f);
+  if (!top) return null;
+  return Array.from(batchById.values()).find(o =>
+    o.product === top.product && top.brewNums.some(n => o.brewNums.includes(n))) || null;
+}
+
+// 'active' = still in active fermentation, 'crashed' = dropped and aging
+// (Keeyan's terms) — a direct read of batch.stage. 'Brite' counts as
+// crashed here too: on the Cellar page (BH tanks only), a tile showing
+// Brite is still physically sitting dropped in that fermenter, just with
+// its own tracked volume audited to ~0 — Keeyan's distinction is about the
+// tank's physical state, not the finer stage label. A tank with no matched
+// batch (untracked/contract brand, or empty) falls into neither bucket,
+// same 'no button' treatment as tankStatus()'s null case.
+function fermentStage(f, batchById) {
+  const mb = matchedBatchFor(f, batchById);
+  if (!mb) return null;
+  if (mb.stage === 'Aging' || mb.stage === 'Brite') return 'crashed';
+  if (mb.stage === 'Fermenting') return 'active';
+  return null;
+}
+
 function FermenterTile({ f, batchById, selectedId, onSelect }) {
   const isInactive = f.status === 'inactive';
   const top = topOccupant(f);
@@ -968,11 +1038,18 @@ function FermenterTile({ f, batchById, selectedId, onSelect }) {
   // silently broke the link even while this tile still showed it as the
   // last-known resident). Untracked/contract brands still have no batch
   // record to link to, so they render as plain text.
-  const matchedBatch = top
-    ? Array.from(batchById.values()).find(o =>
-        o.product === top.product && top.brewNums.some(n => o.brewNums.includes(n)))
-    : null;
+  const matchedBatch = matchedBatchFor(f, batchById);
   const isSelected = matchedBatch && matchedBatch.id === selectedId;
+
+  // Background tint per Keeyan's request (2026-09-02): green while a tank
+  // is in active fermentation, blue once it's dropped and aging — visually
+  // distinct from the border, which stays a pure reading-freshness signal
+  // (tankStatus()) and is left alone here so the two signals stay
+  // independently readable. 'Brite' counts as the blue/crashed bucket too
+  // here — see fermentStage()'s comment, same reasoning.
+  const stageBg =
+    matchedBatch && matchedBatch.stage === 'Fermenting' ? 'var(--ferm-active-bg)' :
+    matchedBatch && (matchedBatch.stage === 'Aging' || matchedBatch.stage === 'Brite') ? 'var(--ferm-crashed-bg)' : null;
 
   // Border color always matches this tank's tankStatus() bucket — the same
   // one the Cellar page's filter buttons use — so a tile's color and which
@@ -1005,7 +1082,7 @@ function FermenterTile({ f, batchById, selectedId, onSelect }) {
         border: `4px solid ${freshnessColor}`,
         boxShadow: isSelected ? '0 0 0 3px var(--amber)' : 'none',
         borderRadius:8, padding:'10px 12px', minHeight:96,
-        background: isInactive ? 'var(--card2)' : 'var(--card)',
+        background: isInactive ? 'var(--card2)' : (stageBg || 'var(--card)'),
         opacity: isInactive && isEmpty ? 0.6 : 1,
         display:'flex', flexDirection:'column', gap:4,
         transition:'border-color 0.12s',
@@ -1093,8 +1170,20 @@ const CELLAR_FILTERS = [
   ['inactive', 'Inactive', 'var(--border2)', 'var(--text)'],
 ];
 
+// Second filter row, per Keeyan's request (2026-09-02): Active (still in
+// active fermentation) vs Crashed (dropped and aging) — independent of the
+// freshness row above, so both filters apply together (AND, not a tab
+// switch) the same way they'd read together on a tile: border = freshness,
+// background = fermentation stage.
+const FERMENT_FILTERS = [
+  ['all',     'All',     'var(--amber)', '#fff'],
+  ['active',  'Active',  'var(--green)', '#fff'],
+  ['crashed', 'Crashed', 'var(--blue)',  '#fff'],
+];
+
 function FermenterCellar({ fermenters, batchById, selectedId, onSelect }) {
   const [filter, setFilter] = useState('all');
+  const [fermentFilter, setFermentFilter] = useState('all');
 
   const counts = useMemo(() => {
     const c = { all: fermenters.length, green: 0, yellow: 0, red: 0, inactive: 0 };
@@ -1105,7 +1194,18 @@ function FermenterCellar({ fermenters, batchById, selectedId, onSelect }) {
     return c;
   }, [fermenters]);
 
-  const filtered = filter === 'all' ? fermenters : fermenters.filter(f => tankStatus(f) === filter);
+  const fermentCounts = useMemo(() => {
+    const c = { all: fermenters.length, active: 0, crashed: 0 };
+    fermenters.forEach(f => {
+      const s = fermentStage(f, batchById);
+      if (s) c[s] += 1;
+    });
+    return c;
+  }, [fermenters, batchById]);
+
+  const filtered = fermenters
+    .filter(f => filter === 'all' || tankStatus(f) === filter)
+    .filter(f => fermentFilter === 'all' || fermentStage(f, batchById) === fermentFilter);
 
   if (fermenters.length === 0) {
     return (
@@ -1118,7 +1218,7 @@ function FermenterCellar({ fermenters, batchById, selectedId, onSelect }) {
 
   return (
     <div style={{ padding:'16px 20px 24px' }}>
-      <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:12 }}>
+      <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:8 }}>
         <span style={{ fontSize:10, fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase',
                       color:'var(--muted)' }}>
           Fermenter Cellar
@@ -1134,6 +1234,26 @@ function FermenterCellar({ fermenters, batchById, selectedId, onSelect }) {
                 letterSpacing:'0.05em', textTransform:'uppercase',
               }}>
               {label} ({counts[key]})
+            </button>
+          ))}
+        </div>
+      </div>
+      <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:12 }}>
+        <span style={{ fontSize:10, fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase',
+                      color:'var(--muted)', visibility:'hidden' }}>
+          Fermenter Cellar
+        </span>
+        <div style={{ display:'flex', gap:4 }}>
+          {FERMENT_FILTERS.map(([key, label, color, selText]) => (
+            <button key={key} onClick={() => setFermentFilter(key)}
+              style={{
+                padding:'4px 12px', borderRadius:5, border:`1px solid ${color}`,
+                background: fermentFilter===key ? color : 'var(--card)',
+                color: fermentFilter===key ? selText : 'var(--muted)',
+                fontFamily:'Barlow Condensed', fontWeight:600, fontSize:11,
+                letterSpacing:'0.05em', textTransform:'uppercase',
+              }}>
+              {label} ({fermentCounts[key]})
             </button>
           ))}
         </div>
