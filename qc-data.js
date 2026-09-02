@@ -8155,7 +8155,7 @@ const BATCHES = [
     "brewVolumeBbl": 154.5,
     "vicinityStage": "Ops-Closed",
     "age": 40,
-    "stage": "Aging",
+    "stage": "ERR",
     "tank": "BT23",
     "labTank": "BH27",
     "tankSource": "vicinity",
@@ -8653,7 +8653,7 @@ const BATCHES = [
     "brewVolumeBbl": 156.0,
     "vicinityStage": "Ops-Closed",
     "age": 175,
-    "stage": "Aging",
+    "stage": "ERR",
     "tank": "TK23",
     "labTank": "TK23",
     "tankSource": "lab",
@@ -9722,7 +9722,7 @@ const BATCHES = [
     "brewVolumeBbl": 154.0,
     "vicinityStage": "Ops-Closed",
     "age": 85,
-    "stage": "Aging",
+    "stage": "ERR",
     "tank": "BT28",
     "labTank": "TK26",
     "tankSource": "vicinity",
@@ -16465,7 +16465,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-09-02",
-  "lastSync": "Sep 2, 2026 \u00b7 4:10 PM"
+  "lastSync": "Sep 2, 2026 \u00b7 4:23 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
