@@ -4903,20 +4903,7 @@ const BATCHES = [
     ],
     "packagingLog": [
       {
-        "date": "2026-09-02",
-        "action": "PACKAGE",
-        "from": "UV30",
-        "to": "",
-        "volume": 35.0,
-        "lossBbl": null,
-        "sameLot": true,
-        "detail": "Strawberry - 1/4 Keg: 132/108 1/4BBL",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 160.0
-      },
-      {
-        "date": "2026-09-02",
+        "date": "2026-08-25",
         "action": "PACKAGE",
         "from": "UV30",
         "to": "",
@@ -4926,10 +4913,23 @@ const BATCHES = [
         "detail": "Strawberry - 4/6/12 Bottles: 894/900 CASE",
         "project": "vicinity",
         "completed": true,
+        "remainingBbl": 128.5
+      },
+      {
+        "date": "2026-08-26",
+        "action": "PACKAGE",
+        "from": "UV30",
+        "to": "",
+        "volume": 35.0,
+        "lossBbl": null,
+        "sameLot": true,
+        "detail": "Strawberry - 1/4 Keg: 108/108 1/4BBL",
+        "project": "vicinity",
+        "completed": true,
         "remainingBbl": 93.5
       },
       {
-        "date": "2026-09-02",
+        "date": "2026-08-26",
         "action": "PACKAGE",
         "from": "UV30",
         "to": "",
@@ -6722,7 +6722,7 @@ const BATCHES = [
         "remainingBbl": null
       },
       {
-        "date": "2026-09-02",
+        "date": "2026-08-31",
         "action": "PACKAGE",
         "from": "BT31",
         "to": "",
@@ -6735,7 +6735,7 @@ const BATCHES = [
         "remainingBbl": -80.0
       },
       {
-        "date": "2026-09-02",
+        "date": "2026-08-31",
         "action": "PACKAGE",
         "from": "BT25",
         "to": "",
@@ -6745,7 +6745,7 @@ const BATCHES = [
         "detail": "Amber - 1/4 Keg: 385/403 1/4BBL; Amber - 1/2 Keg: 216/216 1/2BBL",
         "project": "vicinity",
         "completed": true,
-        "remainingBbl": 86.0
+        "remainingBbl": 0.0
       }
     ],
     "basecampAlerts": [
@@ -15301,7 +15301,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-09-03",
-  "lastSync": "Sep 3, 2026 \u00b7 12:10 PM"
+  "lastSync": "Sep 3, 2026 \u00b7 4:07 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
