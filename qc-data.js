@@ -2658,6 +2658,63 @@ const BATCHES = [
     }
   },
   {
+    "id": "STG 014",
+    "product": "STG",
+    "section": "brewhouse",
+    "brewNums": [
+      14
+    ],
+    "brewDate": "2026-09-03",
+    "brewDateSource": "basecamp",
+    "brewer": null,
+    "brewVolumeBbl": null,
+    "vicinityStage": null,
+    "age": 0,
+    "stage": "Fermenting",
+    "tank": "BH17",
+    "labTank": "BH17",
+    "tankSource": "lab",
+    "tankRemainingBbl": null,
+    "tankBrewedBbl": null,
+    "tankConflicts": [],
+    "lastReading": null,
+    "lastSource": null,
+    "numReadings": 1,
+    "readings": [],
+    "fermLog": [],
+    "yeastPitches": [
+      {
+        "date": "2026-09-03",
+        "tank": "BH17",
+        "cellCount": 3160000000.0,
+        "viability": 0.88,
+        "pitchRate": 42.64,
+        "yeastGen": "L-7",
+        "yeastSource": "BH56",
+        "yeastBrewNum": "GLD61-64",
+        "countType": "Yeast"
+      }
+    ],
+    "transferLog": [
+      {
+        "date": "2026-09-03",
+        "action": "BREW",
+        "from": "",
+        "to": "BH17",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10265253895",
+        "completed": false,
+        "remainingBbl": null
+      }
+    ],
+    "packagingLog": [],
+    "basecampAlerts": [],
+    "aeLatest": null,
+    "abvLatest": null
+  },
+  {
     "id": "TBD 005",
     "product": "TBD",
     "section": "brewhouse",
@@ -3528,10 +3585,10 @@ const BATCHES = [
         "stage": "WORT",
         "sample": "AND 046 BH27",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10248649035",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-09-03T14:16",
+        "ackNote": "<p dir=\"auto\">Finished beer in BBT came in at 18.05\u00b0P and 8.21% abv. In Spec but a bit high. Will continue to monitor</p>",
         "also": []
       }
     ],
@@ -4142,7 +4199,7 @@ const BATCHES = [
         "remainingBbl": 301.0
       },
       {
-        "date": "2026-09-02",
+        "date": "2026-09-03",
         "action": "FILTER",
         "from": "BH32",
         "to": "BT26",
@@ -4154,7 +4211,7 @@ const BATCHES = [
         "remainingBbl": null
       },
       {
-        "date": "2026-09-02",
+        "date": "2026-09-03",
         "action": "FILTER",
         "from": "BH32",
         "to": "BT31",
@@ -4170,7 +4227,7 @@ const BATCHES = [
       {
         "date": "2026-09-03",
         "action": "PACKAGE",
-        "from": "BT21,BT25,BT27,BT31",
+        "from": "BT21,BT27,BT26,BT31",
         "to": "",
         "volume": null,
         "detail": "4051 CASES",
@@ -4894,6 +4951,64 @@ const BATCHES = [
     "abvLatest": null
   },
   {
+    "id": "AMB 053, 054",
+    "product": "AMB",
+    "section": "brewhouse",
+    "brewNums": [
+      53,
+      54
+    ],
+    "brewDate": "2026-09-03",
+    "brewDateSource": "basecamp",
+    "brewer": null,
+    "brewVolumeBbl": null,
+    "vicinityStage": null,
+    "age": 0,
+    "stage": "Fermenting",
+    "tank": "BH46",
+    "labTank": "BH46",
+    "tankSource": "lab",
+    "tankRemainingBbl": null,
+    "tankBrewedBbl": null,
+    "tankConflicts": [],
+    "lastReading": null,
+    "lastSource": null,
+    "numReadings": 1,
+    "readings": [],
+    "fermLog": [],
+    "yeastPitches": [
+      {
+        "date": "2026-09-03",
+        "tank": "BH46",
+        "cellCount": 3160000000.0,
+        "viability": 0.88,
+        "pitchRate": 70.23,
+        "yeastGen": "L-7",
+        "yeastSource": "BH56",
+        "yeastBrewNum": "GLD61-64",
+        "countType": "Yeast"
+      }
+    ],
+    "transferLog": [
+      {
+        "date": "2026-09-03",
+        "action": "BREW",
+        "from": "",
+        "to": "BH46",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10265234348",
+        "completed": false,
+        "remainingBbl": null
+      }
+    ],
+    "packagingLog": [],
+    "basecampAlerts": [],
+    "aeLatest": null,
+    "abvLatest": null
+  },
+  {
     "id": "AMB 045, 046, 048",
     "product": "AMB",
     "section": "brewhouse",
@@ -5223,7 +5338,20 @@ const BATCHES = [
         "remainingBbl": null
       }
     ],
-    "packagingLog": [],
+    "packagingLog": [
+      {
+        "date": "2026-09-02",
+        "action": "PACKAGE",
+        "from": "BT30",
+        "to": "",
+        "volume": null,
+        "detail": "400 CASES",
+        "project": "packaging",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10245971200",
+        "completed": false,
+        "remainingBbl": null
+      }
+    ],
     "basecampAlerts": [
       {
         "metric": "Wort pH",
@@ -6566,6 +6694,18 @@ const BATCHES = [
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10262570432",
         "completed": true,
         "remainingBbl": null
+      },
+      {
+        "date": "2026-09-03",
+        "action": "XFER",
+        "from": "UV35",
+        "to": "BT29",
+        "volume": null,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10269618157",
+        "completed": false,
+        "remainingBbl": null
       }
     ],
     "packagingLog": [
@@ -6700,10 +6840,30 @@ const BATCHES = [
     "tankRemainingBbl": 195.5,
     "tankBrewedBbl": 604.5,
     "tankConflicts": [],
-    "lastReading": "2026-09-02",
+    "lastReading": "2026-09-03",
     "lastSource": "FIN",
-    "numReadings": 30,
+    "numReadings": 31,
     "readings": [
+      {
+        "date": "2026-09-03",
+        "sample": "AND 35-38 TK33",
+        "stage": "FIN",
+        "tank": "TK33",
+        "sourceFile": "finished abita beer 2026.xlsx",
+        "sourceSheet": "AG",
+        "pH": 4.62,
+        "DO": 47.0,
+        "CO2 Vols": 2.65,
+        "Calories": 240.73,
+        "ADF": 83.19,
+        "RDF": 69.37,
+        "OG": 17.83,
+        "AE": 3.0,
+        "RE": 5.83,
+        "HAZE": 250.62087893486023,
+        "SG": 1.01171,
+        "ABV": 8.18
+      },
       {
         "date": "2026-09-02",
         "sample": "AND 35-38 TK33",
@@ -7436,7 +7596,7 @@ const BATCHES = [
       {
         "date": "2026-09-03",
         "action": "PACKAGE",
-        "from": "BT21,BT25,BT27,BT31",
+        "from": "BT21,BT27,BT26,BT31",
         "to": "",
         "volume": null,
         "detail": "4051 CASES",
@@ -7449,18 +7609,42 @@ const BATCHES = [
     "basecampAlerts": [
       {
         "metric": "AE",
-        "value": 3.08,
+        "value": 3.0,
         "low": 3.1,
         "high": 3.9,
-        "date": "2026-09-02",
+        "date": "2026-09-03",
         "stage": "FIN",
         "sample": "AND 35-38 TK33",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10266881787",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-09-03T13:22",
+        "ackNote": "<p dir=\"auto\">Going through recipe adjustments and will adjust AE target when complete</p>",
         "also": [
+          {
+            "value": 3.0,
+            "date": "2026-09-03",
+            "stage": "FIN",
+            "sample": "AND 35-38 TK33"
+          },
+          {
+            "value": 3.0,
+            "date": "2026-09-03",
+            "stage": "FIN",
+            "sample": "AND 35-38 TK33"
+          },
+          {
+            "value": 3.0,
+            "date": "2026-09-03",
+            "stage": "FIN",
+            "sample": "AND 35-38 TK33"
+          },
+          {
+            "value": 3.08,
+            "date": "2026-09-02",
+            "stage": "FIN",
+            "sample": "AND 35-38 TK33"
+          },
           {
             "value": 3.08,
             "date": "2026-09-02",
@@ -7897,14 +8081,14 @@ const BATCHES = [
       }
     ],
     "aeLatest": {
-      "v": 3.08,
+      "v": 3.0,
       "stage": "FIN",
-      "date": "2026-09-02"
+      "date": "2026-09-03"
     },
     "abvLatest": {
-      "v": 8.22,
+      "v": 8.18,
       "stage": "FIN",
-      "date": "2026-09-02"
+      "date": "2026-09-03"
     }
   },
   {
@@ -11603,7 +11787,9 @@ const FERMENTERS = [
   {
     "tank": "BH17",
     "status": "active",
-    "occupantIds": [],
+    "occupantIds": [
+      "STG 014"
+    ],
     "vicinityOccupants": [],
     "resolvedOccupancy": [
       {
@@ -14010,7 +14196,9 @@ const FERMENTERS = [
   {
     "tank": "BH46",
     "status": "active",
-    "occupantIds": [],
+    "occupantIds": [
+      "AMB 053, 054"
+    ],
     "vicinityOccupants": [],
     "resolvedOccupancy": [
       {
@@ -14503,6 +14691,30 @@ const FERMENTERS = [
         "lot": "458744.JUN6",
         "label": "Neutral Malt Base",
         "qtyBbl": 162.6
+      },
+      {
+        "product": "XMS",
+        "lot": "XMS26001",
+        "label": "Christmas Ale",
+        "qtyBbl": 197.0
+      },
+      {
+        "product": "XMS",
+        "lot": "XMS26004",
+        "label": "Christmas Ale",
+        "qtyBbl": 198.5
+      },
+      {
+        "product": "XMS",
+        "lot": "XMS26002",
+        "label": "Christmas Ale",
+        "qtyBbl": 204.0
+      },
+      {
+        "product": "XMS",
+        "lot": "XMS26003",
+        "label": "Christmas Ale",
+        "qtyBbl": 203.5
       }
     ],
     "resolvedOccupancy": [
@@ -14536,6 +14748,28 @@ const FERMENTERS = [
       },
       {
         "tank": "BH51",
+        "product": "XMS",
+        "brewNums": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "firstEvidence": "2026-08-28",
+        "lastEvidence": "2026-08-28",
+        "brewDate": "2026-08-28",
+        "vicinityResidentAsOf": "2026-08-28",
+        "cellarLastReading": null,
+        "cellarLastReadingValues": null,
+        "cellarPrevReading": null,
+        "cellarPrevReadingValues": null,
+        "vicinityDepartedAt": null,
+        "vacated": false,
+        "readingAgeDays": null,
+        "batchAgeDays": 6
+      },
+      {
+        "tank": "BH51",
         "product": "BGLL",
         "brewNums": [
           4,
@@ -14563,30 +14797,6 @@ const FERMENTERS = [
         "vacated": true,
         "readingAgeDays": 23,
         "batchAgeDays": 30
-      },
-      {
-        "tank": "BH51",
-        "product": "GLD",
-        "brewNums": [
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "firstEvidence": "2026-02-25",
-        "lastEvidence": "2026-02-27",
-        "brewDate": null,
-        "vicinityResidentAsOf": null,
-        "cellarLastReading": null,
-        "cellarLastReadingValues": null,
-        "cellarPrevReading": null,
-        "cellarPrevReadingValues": null,
-        "vicinityDepartedAt": "2026-02-27",
-        "vacated": true,
-        "readingAgeDays": null,
-        "batchAgeDays": 190
       }
     ]
   },
@@ -15091,7 +15301,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-09-03",
-  "lastSync": "Sep 3, 2026 \u00b7 8:10 AM"
+  "lastSync": "Sep 3, 2026 \u00b7 12:10 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
