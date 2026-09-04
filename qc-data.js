@@ -2308,6 +2308,18 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 172.5
+      },
+      {
+        "date": "2026-09-03",
+        "action": "CENT",
+        "from": "BH13",
+        "to": "BH47",
+        "volume": 100.0,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10271229208",
+        "completed": true,
+        "remainingBbl": null
       }
     ],
     "packagingLog": [],
@@ -2666,7 +2678,7 @@ const BATCHES = [
     ],
     "brewDate": "2026-09-03",
     "brewDateSource": "basecamp",
-    "brewer": null,
+    "brewer": "Chris Fernandez",
     "brewVolumeBbl": null,
     "vicinityStage": null,
     "age": 0,
@@ -2679,7 +2691,7 @@ const BATCHES = [
     "tankConflicts": [],
     "lastReading": null,
     "lastSource": null,
-    "numReadings": 1,
+    "numReadings": 2,
     "readings": [],
     "fermLog": [],
     "yeastPitches": [
@@ -2693,6 +2705,17 @@ const BATCHES = [
         "yeastSource": "BH56",
         "yeastBrewNum": "GLD61-64",
         "countType": "Yeast"
+      },
+      {
+        "date": "2026-09-03",
+        "tank": "BH17",
+        "cellCount": 33722080.333333336,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "FV"
       }
     ],
     "transferLog": [
@@ -2705,7 +2728,7 @@ const BATCHES = [
         "detail": null,
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10265253895",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -4207,7 +4230,7 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10265318853",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       },
       {
@@ -4960,7 +4983,7 @@ const BATCHES = [
     ],
     "brewDate": "2026-09-03",
     "brewDateSource": "basecamp",
-    "brewer": null,
+    "brewer": "Chris Fernandez",
     "brewVolumeBbl": null,
     "vicinityStage": null,
     "age": 0,
@@ -4973,7 +4996,7 @@ const BATCHES = [
     "tankConflicts": [],
     "lastReading": null,
     "lastSource": null,
-    "numReadings": 1,
+    "numReadings": 2,
     "readings": [],
     "fermLog": [],
     "yeastPitches": [
@@ -4987,6 +5010,17 @@ const BATCHES = [
         "yeastSource": "BH56",
         "yeastBrewNum": "GLD61-64",
         "countType": "Yeast"
+      },
+      {
+        "date": "2026-09-03",
+        "tank": "BH46",
+        "cellCount": 31846771.0,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "FV"
       }
     ],
     "transferLog": [
@@ -4999,7 +5033,7 @@ const BATCHES = [
         "detail": null,
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10265234348",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -7590,7 +7624,7 @@ const BATCHES = [
         "detail": "1432 CASES",
         "project": "packaging",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10228174002",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       },
       {
@@ -15301,7 +15335,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-09-03",
-  "lastSync": "Sep 3, 2026 \u00b7 4:07 PM"
+  "lastSync": "Sep 3, 2026 \u00b7 8:10 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
