@@ -2317,10 +2317,31 @@ const BATCHES = [
     "tankRemainingBbl": null,
     "tankBrewedBbl": null,
     "tankConflicts": [],
-    "lastReading": null,
-    "lastSource": null,
-    "numReadings": 2,
-    "readings": [],
+    "lastReading": "2026-09-04",
+    "lastSource": "WORT",
+    "numReadings": 3,
+    "readings": [
+      {
+        "date": "2026-09-04",
+        "sample": "STG 014 BH17",
+        "stage": "WORT",
+        "tank": "BH17",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "SG",
+        "Wort pH": 5.41,
+        "SRM": 8.071065989847716,
+        "IBU (W)": 16.3,
+        "Calories": 252.14,
+        "ADF": -0.45,
+        "RDF": -0.4,
+        "OG": 16.72,
+        "AE": 16.79,
+        "RE": 16.78,
+        "HAZE": 5094.5854568481445,
+        "SG": 1.0688,
+        "ABV": -0.04
+      }
+    ],
     "fermLog": [],
     "yeastPitches": [
       {
@@ -2361,7 +2382,38 @@ const BATCHES = [
       }
     ],
     "packagingLog": [],
-    "basecampAlerts": [],
+    "basecampAlerts": [
+      {
+        "metric": "Wort pH",
+        "value": 5.41,
+        "low": 4.9,
+        "high": 5.3,
+        "date": "2026-09-04",
+        "stage": "WORT",
+        "sample": "STG 014 BH17",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10276056085",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
+        "also": []
+      },
+      {
+        "metric": "OG",
+        "value": 16.72,
+        "low": 16.8,
+        "high": 17.2,
+        "date": "2026-09-04",
+        "stage": "WORT",
+        "sample": "STG 014 BH17",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10276056081",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
+        "also": []
+      }
+    ],
     "aeLatest": null,
     "abvLatest": null
   },
@@ -4269,10 +4321,51 @@ const BATCHES = [
     "tankRemainingBbl": null,
     "tankBrewedBbl": null,
     "tankConflicts": [],
-    "lastReading": null,
-    "lastSource": null,
-    "numReadings": 2,
-    "readings": [],
+    "lastReading": "2026-09-04",
+    "lastSource": "WORT",
+    "numReadings": 4,
+    "readings": [
+      {
+        "date": "2026-09-04",
+        "sample": "AMB 053 BH46",
+        "stage": "WORT",
+        "tank": "BH46",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "A",
+        "Wort pH": 5.09,
+        "SRM": 14.733502538071066,
+        "IBU (W)": 16.75,
+        "Calories": 152.92,
+        "ADF": -0.27,
+        "RDF": -0.24,
+        "OG": 10.44,
+        "AE": 10.47,
+        "RE": 10.47,
+        "HAZE": 3893.5299911499023,
+        "SG": 1.04194,
+        "ABV": -0.02
+      },
+      {
+        "date": "2026-09-04",
+        "sample": "AMB 054 BH46",
+        "stage": "WORT",
+        "tank": "BH46",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "A",
+        "Wort pH": 5.04,
+        "SRM": 15.926395939086293,
+        "IBU (W)": 16.75,
+        "Calories": 152.2,
+        "ADF": -0.58,
+        "RDF": -0.5,
+        "OG": 10.39,
+        "AE": 10.45,
+        "RE": 10.44,
+        "HAZE": 2732.835250854492,
+        "SG": 1.04186,
+        "ABV": -0.03
+      }
+    ],
     "fermLog": [],
     "yeastPitches": [
       {
@@ -4768,7 +4861,7 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10273676261",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -8686,7 +8779,7 @@ const BATCHES = [
         "detail": "2890 CASES",
         "project": "packaging",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10246032151",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       },
       {
@@ -15533,7 +15626,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-09-05",
-  "lastSync": "Sep 5, 2026 \u00b7 12:11 AM"
+  "lastSync": "Sep 5, 2026 \u00b7 4:11 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
