@@ -1223,6 +1223,103 @@ function computeOOS(readings, product) {
 
 const BATCHES = [
   {
+    "id": "DGT 009",
+    "product": "DGT",
+    "section": "brewhouse",
+    "brewNums": [
+      9
+    ],
+    "brewDate": "2026-09-04",
+    "brewDateSource": "basecamp",
+    "brewer": "Chris Fernandez",
+    "brewVolumeBbl": null,
+    "vicinityStage": null,
+    "age": 5,
+    "stage": "Fermenting",
+    "tank": "BH7",
+    "labTank": "BH7",
+    "tankSource": "lab",
+    "tankRemainingBbl": null,
+    "tankBrewedBbl": null,
+    "tankConflicts": [],
+    "lastReading": "2026-09-08",
+    "lastSource": "WORT",
+    "numReadings": 1,
+    "readings": [
+      {
+        "date": "2026-09-08",
+        "sample": "DTG 009 BH7",
+        "stage": "WORT",
+        "tank": "BH7",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "DELTA",
+        "Wort pH": 5.32,
+        "SRM": 7.538071065989848,
+        "IBU (W)": 15.7,
+        "Calories": 294.42,
+        "ADF": -0.38,
+        "RDF": -0.34,
+        "OG": 19.3,
+        "AE": 19.38,
+        "RE": 19.36,
+        "HAZE": 860.0700731277466,
+        "SG": 1.08012,
+        "ABV": -0.04
+      }
+    ],
+    "fermLog": [],
+    "yeastPitches": [],
+    "transferLog": [
+      {
+        "date": "2026-09-04",
+        "action": "BREW",
+        "from": "",
+        "to": "BH07",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10265256912",
+        "completed": true,
+        "remainingBbl": null
+      }
+    ],
+    "packagingLog": [],
+    "basecampAlerts": [
+      {
+        "metric": "Wort pH",
+        "value": 5.32,
+        "low": 4.9,
+        "high": 5.3,
+        "date": "2026-09-08",
+        "stage": "WORT",
+        "sample": "DTG 009 BH7",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10285577415",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
+        "also": []
+      },
+      {
+        "metric": "OG",
+        "value": 19.3,
+        "low": 18.8,
+        "high": 19.2,
+        "date": "2026-09-08",
+        "stage": "WORT",
+        "sample": "DTG 009 BH7",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10285577399",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
+        "also": []
+      }
+    ],
+    "aeLatest": null,
+    "abvLatest": null
+  },
+  {
     "id": "ALG 006",
     "product": "ALG",
     "section": "brewhouse",
@@ -14859,7 +14956,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-09-09",
-  "lastSync": "Sep 9, 2026 \u00b7 12:10 AM"
+  "lastSync": "Sep 9, 2026 \u00b7 4:10 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
