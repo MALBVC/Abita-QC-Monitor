@@ -2377,10 +2377,32 @@ const BATCHES = [
     "tankRemainingBbl": null,
     "tankBrewedBbl": null,
     "tankConflicts": [],
-    "lastReading": "2026-09-04",
-    "lastSource": "WORT",
-    "numReadings": 3,
+    "lastReading": "2026-09-08",
+    "lastSource": "FERM",
+    "numReadings": 5,
     "readings": [
+      {
+        "date": "2026-09-08",
+        "sample": "SGT 014 BH17",
+        "stage": "FERM",
+        "tank": "BH17",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 7.51,
+        "Turbidity": 460.683358669281,
+        "AE": 2.78
+      },
+      {
+        "date": "2026-09-08",
+        "sample": "SGT 14 BH17",
+        "stage": "GC",
+        "tank": "BH17",
+        "sourceFile": "gc 2026.xlsx",
+        "sourceSheet": "SEPT",
+        "Diacetyl": 0.0,
+        "Pentanedione": 0.0122,
+        "Total VDK": 0.0122
+      },
       {
         "date": "2026-09-04",
         "sample": "STG 014 BH17",
@@ -3143,10 +3165,32 @@ const BATCHES = [
     "tankRemainingBbl": 302.5,
     "tankBrewedBbl": 302.5,
     "tankConflicts": [],
-    "lastReading": "2026-08-27",
-    "lastSource": "WORT",
-    "numReadings": 11,
+    "lastReading": "2026-09-08",
+    "lastSource": "FERM",
+    "numReadings": 13,
     "readings": [
+      {
+        "date": "2026-09-08",
+        "sample": "AND 45-46 BH27",
+        "stage": "FERM",
+        "tank": "BH27",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 8.16,
+        "Turbidity": 559.0968446731567,
+        "AE": 3.32
+      },
+      {
+        "date": "2026-09-08",
+        "sample": "AND 45,46 BH27",
+        "stage": "GC",
+        "tank": "BH27",
+        "sourceFile": "gc 2026.xlsx",
+        "sourceSheet": "SEPT",
+        "Diacetyl": 0.1552,
+        "Pentanedione": 0.064,
+        "Total VDK": 0.2192
+      },
       {
         "date": "2026-08-27",
         "sample": "AND 045 BH27",
@@ -4381,10 +4425,32 @@ const BATCHES = [
     "tankRemainingBbl": null,
     "tankBrewedBbl": null,
     "tankConflicts": [],
-    "lastReading": "2026-09-04",
-    "lastSource": "WORT",
-    "numReadings": 4,
+    "lastReading": "2026-09-08",
+    "lastSource": "FERM",
+    "numReadings": 6,
     "readings": [
+      {
+        "date": "2026-09-08",
+        "sample": "AMB 53-54 BH46",
+        "stage": "FERM",
+        "tank": "BH46",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 4.31,
+        "Turbidity": 552.0625791549683,
+        "AE": 2.15
+      },
+      {
+        "date": "2026-09-08",
+        "sample": "AMB 53,54 BH46",
+        "stage": "GC",
+        "tank": "BH46",
+        "sourceFile": "gc 2026.xlsx",
+        "sourceSheet": "SEPT",
+        "Diacetyl": 0.0166,
+        "Pentanedione": 0.0,
+        "Total VDK": 0.0166
+      },
       {
         "date": "2026-09-04",
         "sample": "AMB 053 BH46",
@@ -14793,7 +14859,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-09-08",
-  "lastSync": "Sep 8, 2026 \u00b7 4:10 PM"
+  "lastSync": "Sep 8, 2026 \u00b7 8:08 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
