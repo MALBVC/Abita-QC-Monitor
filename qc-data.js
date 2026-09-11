@@ -2663,10 +2663,10 @@ const BATCHES = [
         "stage": "FERM",
         "sample": "AND 43,44 BH26",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10288639749",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-09-11T17:19",
+        "ackNote": "<p dir=\"auto\">Read 3.37 (8/24/26). This flagged number was not the final value in the fv.</p>",
         "also": [
           {
             "value": 4.1,
@@ -5154,13 +5154,33 @@ const BATCHES = [
     "tank": "BH16",
     "labTank": "TK21",
     "tankSource": "vicinity",
-    "tankRemainingBbl": 138.0,
+    "tankRemainingBbl": 75.5,
     "tankBrewedBbl": 158.0,
     "tankConflicts": [],
     "lastReading": "2026-09-11",
     "lastSource": "FIN",
-    "numReadings": 19,
+    "numReadings": 20,
     "readings": [
+      {
+        "date": "2026-09-11",
+        "sample": "BEC 003 TK21",
+        "stage": "FIN",
+        "tank": "TK21",
+        "sourceFile": "finished abita beer 2026.xlsx",
+        "sourceSheet": "BC",
+        "pH": 4.14,
+        "DO": 51.0,
+        "CO2 Vols": 2.64,
+        "Calories": 149.98,
+        "ADF": 80.28,
+        "RDF": 66.19,
+        "OG": 11.42,
+        "AE": 2.25,
+        "RE": 4.02,
+        "HAZE": 15.091014012694359,
+        "SG": 1.00877,
+        "ABV": 4.85
+      },
       {
         "date": "2026-09-11",
         "sample": "BEC 003 TK21",
@@ -5457,6 +5477,19 @@ const BATCHES = [
         "remainingBbl": null
       },
       {
+        "date": "2026-09-09",
+        "action": "TRANSFER",
+        "from": "BH16",
+        "to": "BT21",
+        "volume": 62.5,
+        "lossBbl": 3.0,
+        "sameLot": true,
+        "detail": "3 BBL loss in transfer",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 75.5
+      },
+      {
         "date": "2026-09-10",
         "action": "XFER",
         "from": "UV18",
@@ -5517,8 +5550,34 @@ const BATCHES = [
         "detail": "300 CASES",
         "project": "packaging",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10274844944",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
+      },
+      {
+        "date": "2026-09-11",
+        "action": "PACKAGE",
+        "from": "BT21",
+        "to": "",
+        "volume": 11.0,
+        "lossBbl": null,
+        "sameLot": true,
+        "detail": "Beeracuda 1/4 Keg: 36/36 1/4BBL",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 48.5
+      },
+      {
+        "date": "2026-09-11",
+        "action": "PACKAGE",
+        "from": "BT21",
+        "to": "",
+        "volume": 28.0,
+        "lossBbl": null,
+        "sameLot": true,
+        "detail": "Beeracuda 4/6/12 Cans: 336/378 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 20.5
       }
     ],
     "basecampAlerts": [
@@ -5539,12 +5598,12 @@ const BATCHES = [
       }
     ],
     "aeLatest": {
-      "v": 2.26,
+      "v": 2.25,
       "stage": "FIN",
       "date": "2026-09-11"
     },
     "abvLatest": {
-      "v": 4.87,
+      "v": 4.85,
       "stage": "FIN",
       "date": "2026-09-11"
     }
@@ -7137,6 +7196,19 @@ const BATCHES = [
         "remainingBbl": 0.0
       },
       {
+        "date": "2026-09-01",
+        "action": "PACKAGE",
+        "from": "BT25",
+        "to": "",
+        "volume": 86.0,
+        "lossBbl": null,
+        "sameLot": true,
+        "detail": "Amber - 2/12/12 Cans: 1111/1100 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 0.0
+      },
+      {
         "date": "2026-09-02",
         "action": "PACKAGE",
         "from": "BT30",
@@ -7163,12 +7235,64 @@ const BATCHES = [
       {
         "date": "2026-09-04",
         "action": "PACKAGE",
-        "from": "BT25",
+        "from": "BT30",
         "to": "",
-        "volume": 86.0,
+        "volume": 29.5,
         "lossBbl": null,
         "sameLot": true,
-        "detail": "Amber - 2/12/12 Cans: 1111/1100 CASE",
+        "detail": "Amber - 1/24/12 Cans: 378/400 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 161.5
+      },
+      {
+        "date": "2026-09-04",
+        "action": "PACKAGE",
+        "from": "BT29",
+        "to": "",
+        "volume": 48.5,
+        "lossBbl": null,
+        "sameLot": true,
+        "detail": "Amber - 4/6/12 Bottles: 1048/1445 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 134.5
+      },
+      {
+        "date": "2026-09-04",
+        "action": "PACKAGE",
+        "from": "BT30",
+        "to": "",
+        "volume": 25.349999999999994,
+        "lossBbl": null,
+        "sameLot": true,
+        "detail": "Amber - 4/6/12 Bottles: 1048/1445 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 136.2
+      },
+      {
+        "date": "2026-09-04",
+        "action": "PACKAGE",
+        "from": "BT29",
+        "to": "",
+        "volume": 4.0,
+        "lossBbl": null,
+        "sameLot": true,
+        "detail": "Amber - 4/6/12 Bottles: 1048/1445 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 130.5
+      },
+      {
+        "date": "2026-09-04",
+        "action": "PACKAGE",
+        "from": "BT30",
+        "to": "",
+        "volume": 136.15,
+        "lossBbl": null,
+        "sameLot": true,
+        "detail": "Amber - 4/6/12 Bottles: 1833/1445 CASE",
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 0.0
@@ -7186,72 +7310,7 @@ const BATCHES = [
         "remainingBbl": null
       },
       {
-        "date": "2026-09-11",
-        "action": "PACKAGE",
-        "from": "BT30",
-        "to": "",
-        "volume": 29.5,
-        "lossBbl": null,
-        "sameLot": true,
-        "detail": "Amber - 1/24/12 Cans: 378/400 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 161.5
-      },
-      {
-        "date": "2026-09-11",
-        "action": "PACKAGE",
-        "from": "BT30",
-        "to": "",
-        "volume": 136.15,
-        "lossBbl": null,
-        "sameLot": true,
-        "detail": "Amber - 4/6/12 Bottles: 1833/1445 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 25.3
-      },
-      {
-        "date": "2026-09-11",
-        "action": "PACKAGE",
-        "from": "BT29",
-        "to": "",
-        "volume": 48.5,
-        "lossBbl": null,
-        "sameLot": true,
-        "detail": "Amber - 4/6/12 Bottles: 1048/1445 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 134.5
-      },
-      {
-        "date": "2026-09-11",
-        "action": "PACKAGE",
-        "from": "BT30",
-        "to": "",
-        "volume": 25.349999999999994,
-        "lossBbl": null,
-        "sameLot": true,
-        "detail": "Amber - 4/6/12 Bottles: 1048/1445 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 0.0
-      },
-      {
-        "date": "2026-09-11",
-        "action": "PACKAGE",
-        "from": "BT29",
-        "to": "",
-        "volume": 4.0,
-        "lossBbl": null,
-        "sameLot": true,
-        "detail": "Amber - 4/6/12 Bottles: 1048/1445 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 130.5
-      },
-      {
-        "date": "2026-09-11",
+        "date": "2026-09-08",
         "action": "PACKAGE",
         "from": "BT29",
         "to": "",
@@ -12368,7 +12427,7 @@ const BATCHES = [
         "detail": "792 12 PACKS",
         "project": "packaging",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10274792154",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -14194,8 +14253,8 @@ const FERMENTERS = [
           "gravity": 2.4,
           "ph": 4.08
         },
-        "vicinityDepartedAt": "2026-07-30",
-        "vacated": false,
+        "vicinityDepartedAt": "2026-09-09",
+        "vacated": true,
         "readingAgeDays": 5,
         "batchAgeDays": 58
       },
@@ -17704,7 +17763,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-09-11",
-  "lastSync": "Sep 11, 2026 \u00b7 12:10 PM"
+  "lastSync": "Sep 11, 2026 \u00b7 4:10 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
