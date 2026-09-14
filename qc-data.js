@@ -1540,7 +1540,7 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10300610330",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -5228,7 +5228,7 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10300547042",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       },
       {
@@ -5240,7 +5240,7 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10300560316",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -17871,7 +17871,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-09-14",
-  "lastSync": "Sep 14, 2026 \u00b7 12:12 PM"
+  "lastSync": "Sep 14, 2026 \u00b7 4:10 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
