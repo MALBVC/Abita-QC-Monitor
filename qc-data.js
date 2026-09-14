@@ -4779,6 +4779,30 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 400.0
+      },
+      {
+        "date": "2026-09-14",
+        "action": "FILTER",
+        "from": "BH56",
+        "to": "BT22",
+        "volume": 28.0,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10300547042",
+        "completed": false,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-09-14",
+        "action": "CENT",
+        "from": "BH56",
+        "to": "BT27",
+        "volume": 40.0,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10300560316",
+        "completed": false,
+        "remainingBbl": null
       }
     ],
     "packagingLog": [],
@@ -5541,6 +5565,19 @@ const BATCHES = [
         "remainingBbl": -35.0
       },
       {
+        "date": "2026-09-09",
+        "action": "PACKAGE",
+        "from": "BT21",
+        "to": "",
+        "volume": 28.0,
+        "lossBbl": null,
+        "sameLot": true,
+        "detail": "Beeracuda 4/6/12 Cans: 336/378 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 31.5
+      },
+      {
         "date": "2026-09-10",
         "action": "PACKAGE",
         "from": "BT21",
@@ -5573,19 +5610,6 @@ const BATCHES = [
         "lossBbl": null,
         "sameLot": true,
         "detail": "Beeracuda 1/4 Keg: 36/36 1/4BBL",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 48.5
-      },
-      {
-        "date": "2026-09-11",
-        "action": "PACKAGE",
-        "from": "BT21",
-        "to": "",
-        "volume": 28.0,
-        "lossBbl": null,
-        "sameLot": true,
-        "detail": "Beeracuda 4/6/12 Cans: 336/378 CASE",
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 20.5
@@ -10558,6 +10582,19 @@ const BATCHES = [
       {
         "date": "2026-09-02",
         "action": "TRANSFER",
+        "from": "BH23",
+        "to": "UV33",
+        "volume": 43.5,
+        "lossBbl": 0.0,
+        "sameLot": false,
+        "detail": null,
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 43.5
+      },
+      {
+        "date": "2026-09-02",
+        "action": "TRANSFER",
         "from": "BH54",
         "to": "UV33",
         "volume": 195.5,
@@ -10567,19 +10604,6 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 0.0
-      },
-      {
-        "date": "2026-09-02",
-        "action": "TRANSFER",
-        "from": "BH23",
-        "to": "UV33",
-        "volume": 43.5,
-        "lossBbl": 0.0,
-        "sameLot": false,
-        "detail": null,
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 239.0
       }
     ],
     "packagingLog": [
@@ -17774,7 +17798,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-09-14",
-  "lastSync": "Sep 14, 2026 \u00b7 4:02 AM"
+  "lastSync": "Sep 14, 2026 \u00b7 8:11 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
