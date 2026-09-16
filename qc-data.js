@@ -2859,8 +2859,8 @@ const BATCHES = [
         "date": "2026-09-15",
         "action": "CENT",
         "from": "BH18",
-        "to": "BT23",
-        "volume": 25.0,
+        "to": "BT28",
+        "volume": null,
         "detail": null,
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10303422167",
@@ -2906,6 +2906,18 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 0.0
+      },
+      {
+        "date": "2026-09-16",
+        "action": "PACKAGE",
+        "from": "BT28",
+        "to": "",
+        "volume": null,
+        "detail": "670 CASES",
+        "project": "packaging",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10307898783",
+        "completed": false,
+        "remainingBbl": null
       }
     ],
     "basecampAlerts": [
@@ -6947,7 +6959,7 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10303403358",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -18340,7 +18352,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-09-15",
-  "lastSync": "Sep 15, 2026 \u00b7 4:07 PM"
+  "lastSync": "Sep 15, 2026 \u00b7 8:09 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
