@@ -2586,6 +2586,64 @@ const BATCHES = [
     "abvLatest": null
   },
   {
+    "id": "AND 047, 048",
+    "product": "AND",
+    "section": "brewhouse",
+    "brewNums": [
+      47,
+      48
+    ],
+    "brewDate": "2026-09-17",
+    "brewDateSource": "basecamp",
+    "brewer": null,
+    "brewVolumeBbl": null,
+    "vicinityStage": null,
+    "age": 0,
+    "stage": "Fermenting",
+    "tank": "BH19",
+    "labTank": "BH19",
+    "tankSource": "lab",
+    "tankRemainingBbl": null,
+    "tankBrewedBbl": null,
+    "tankConflicts": [],
+    "lastReading": null,
+    "lastSource": null,
+    "numReadings": 1,
+    "readings": [],
+    "fermLog": [],
+    "yeastPitches": [
+      {
+        "date": "2026-09-17",
+        "tank": "BH19",
+        "cellCount": 3540000000.0,
+        "viability": 0.76,
+        "pitchRate": 93.33,
+        "yeastGen": "L-8",
+        "yeastSource": "BH48",
+        "yeastBrewNum": "AMB53",
+        "countType": "Yeast"
+      }
+    ],
+    "transferLog": [
+      {
+        "date": "2026-09-17",
+        "action": "BREW",
+        "from": "",
+        "to": "BH19",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10312051620",
+        "completed": false,
+        "remainingBbl": null
+      }
+    ],
+    "packagingLog": [],
+    "basecampAlerts": [],
+    "aeLatest": null,
+    "abvLatest": null
+  },
+  {
     "id": "AND 043, 044",
     "product": "AND",
     "section": "brewhouse",
@@ -15401,7 +15459,9 @@ const FERMENTERS = [
   {
     "tank": "BH19",
     "status": "active",
-    "occupantIds": [],
+    "occupantIds": [
+      "AND 047, 048"
+    ],
     "vicinityOccupants": [],
     "resolvedOccupancy": [
       {
@@ -18682,7 +18742,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-09-17",
-  "lastSync": "Sep 17, 2026 \u00b7 8:10 AM"
+  "lastSync": "Sep 17, 2026 \u00b7 12:12 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
