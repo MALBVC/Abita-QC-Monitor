@@ -6176,7 +6176,7 @@ const BATCHES = [
     "tankConflicts": [],
     "lastReading": "2026-09-16",
     "lastSource": "FIN",
-    "numReadings": 22,
+    "numReadings": 23,
     "readings": [
       {
         "date": "2026-09-16",
@@ -6197,6 +6197,26 @@ const BATCHES = [
         "HAZE": 51.95162612199783,
         "SG": 1.00867,
         "ABV": 4.39
+      },
+      {
+        "date": "2026-09-16",
+        "sample": "AMB 45-48 TK26",
+        "stage": "FIN",
+        "tank": "TK26",
+        "sourceFile": "finished abita beer 2026.xlsx",
+        "sourceSheet": "A",
+        "pH": 4.29,
+        "DO": 61.0,
+        "CO2 Vols": 2.75,
+        "Calories": 139.35,
+        "ADF": 79.02,
+        "RDF": 65.07,
+        "OG": 10.63,
+        "AE": 2.23,
+        "RE": 3.85,
+        "HAZE": 64.31146162748337,
+        "SG": 1.00869,
+        "ABV": 4.43
       },
       {
         "date": "2026-09-08",
@@ -6737,7 +6757,7 @@ const BATCHES = [
         "detail": "959 CASES",
         "project": "packaging",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10292554495",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -6760,13 +6780,59 @@ const BATCHES = [
             "value": 2.23,
             "date": "2026-09-16",
             "stage": "FIN",
-            "sample": "AMB 45-48 TK23"
+            "sample": "AMB 45-48 TK26"
           },
           {
             "value": 2.23,
             "date": "2026-09-16",
             "stage": "FIN",
             "sample": "AMB 45-48 TK23"
+          },
+          {
+            "value": 2.23,
+            "date": "2026-09-16",
+            "stage": "FIN",
+            "sample": "AMB 45-48 TK26"
+          },
+          {
+            "value": 2.23,
+            "date": "2026-09-16",
+            "stage": "FIN",
+            "sample": "AMB 45-48 TK23"
+          },
+          {
+            "value": 2.23,
+            "date": "2026-09-16",
+            "stage": "FIN",
+            "sample": "AMB 45-48 TK26"
+          }
+        ]
+      },
+      {
+        "metric": "CO2 Vols",
+        "value": 2.75,
+        "low": 2.6,
+        "high": 2.74,
+        "date": "2026-09-16",
+        "stage": "FIN",
+        "sample": "AMB 45-48 TK26",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10313175939",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
+        "also": [
+          {
+            "value": 2.75,
+            "date": "2026-09-16",
+            "stage": "FIN",
+            "sample": "AMB 45-48 TK26"
+          },
+          {
+            "value": 2.75,
+            "date": "2026-09-16",
+            "stage": "FIN",
+            "sample": "AMB 45-48 TK26"
           }
         ]
       },
@@ -11388,6 +11454,19 @@ const BATCHES = [
       {
         "date": "2026-09-02",
         "action": "TRANSFER",
+        "from": "BH23",
+        "to": "UV33",
+        "volume": 43.5,
+        "lossBbl": 0.0,
+        "sameLot": false,
+        "detail": null,
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 43.5
+      },
+      {
+        "date": "2026-09-02",
+        "action": "TRANSFER",
         "from": "BH54",
         "to": "UV33",
         "volume": 195.5,
@@ -11397,19 +11476,6 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 0.0
-      },
-      {
-        "date": "2026-09-02",
-        "action": "TRANSFER",
-        "from": "BH23",
-        "to": "UV33",
-        "volume": 43.5,
-        "lossBbl": 0.0,
-        "sameLot": false,
-        "detail": null,
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 239.0
       }
     ],
     "packagingLog": [
@@ -18616,7 +18682,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-09-17",
-  "lastSync": "Sep 17, 2026 \u00b7 12:13 AM"
+  "lastSync": "Sep 17, 2026 \u00b7 4:11 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
