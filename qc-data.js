@@ -12790,7 +12790,7 @@ const FERMENTERS = [
         "vdkLastReading": null,
         "vdkLastValue": null,
         "vicinityDepartedAt": null,
-        "vacated": false,
+        "vacated": true,
         "readingAgeDays": null,
         "batchAgeDays": 190
       },
@@ -13046,9 +13046,9 @@ const FERMENTERS = [
     "occupantIds": [],
     "vicinityOccupants": [
       {
-        "product": "TTIPA",
-        "lot": "TTIPA26001",
-        "label": "Trim Tab: IPA",
+        "product": "TTIP",
+        "lot": "TTIP26001",
+        "label": "Trim Tab IPA",
         "qtyBbl": 150.5
       }
     ],
@@ -13062,7 +13062,7 @@ const FERMENTERS = [
         "firstEvidence": "2026-08-27",
         "lastEvidence": "2026-09-16",
         "brewDate": "2026-08-27",
-        "vicinityResidentAsOf": null,
+        "vicinityResidentAsOf": "2026-08-27",
         "cellarLastReading": "2026-09-16",
         "cellarLastReadingValues": {
           "temp": 33.0,
@@ -13079,10 +13079,33 @@ const FERMENTERS = [
         "abvLastValue": null,
         "vdkLastReading": null,
         "vdkLastValue": null,
-        "vicinityDepartedAt": "2026-09-04",
-        "vacated": true,
+        "vicinityDepartedAt": null,
+        "vacated": false,
         "readingAgeDays": 2,
         "batchAgeDays": 22
+      },
+      {
+        "tank": "BH09",
+        "product": "TTIP",
+        "brewNums": [
+          1
+        ],
+        "firstEvidence": "2026-09-03",
+        "lastEvidence": "2026-09-03",
+        "brewDate": null,
+        "vicinityResidentAsOf": "2026-09-03",
+        "cellarLastReading": null,
+        "cellarLastReadingValues": null,
+        "cellarPrevReading": null,
+        "cellarPrevReadingValues": null,
+        "abvLastReading": null,
+        "abvLastValue": null,
+        "vdkLastReading": null,
+        "vdkLastValue": null,
+        "vicinityDepartedAt": null,
+        "vacated": false,
+        "readingAgeDays": null,
+        "batchAgeDays": 15
       },
       {
         "tank": "BH09",
@@ -13111,32 +13134,9 @@ const FERMENTERS = [
         "vdkLastReading": null,
         "vdkLastValue": null,
         "vicinityDepartedAt": null,
-        "vacated": false,
+        "vacated": true,
         "readingAgeDays": 17,
         "batchAgeDays": 21
-      },
-      {
-        "tank": "BH09",
-        "product": "TIPA",
-        "brewNums": [
-          1
-        ],
-        "firstEvidence": "2026-08-31",
-        "lastEvidence": "2026-08-31",
-        "brewDate": null,
-        "vicinityResidentAsOf": null,
-        "cellarLastReading": null,
-        "cellarLastReadingValues": null,
-        "cellarPrevReading": null,
-        "cellarPrevReadingValues": null,
-        "abvLastReading": null,
-        "abvLastValue": null,
-        "vdkLastReading": "2026-08-31",
-        "vdkLastValue": 0.0,
-        "vicinityDepartedAt": null,
-        "vacated": false,
-        "readingAgeDays": null,
-        "batchAgeDays": 18
       }
     ]
   },
@@ -13528,7 +13528,7 @@ const FERMENTERS = [
         "vdkLastReading": null,
         "vdkLastValue": null,
         "vicinityDepartedAt": null,
-        "vacated": false,
+        "vacated": true,
         "readingAgeDays": null,
         "batchAgeDays": 63
       }
@@ -13920,7 +13920,7 @@ const FERMENTERS = [
         "vdkLastReading": "2026-06-12",
         "vdkLastValue": 0.0,
         "vicinityDepartedAt": "2026-07-30",
-        "vacated": false,
+        "vacated": true,
         "readingAgeDays": 56,
         "batchAgeDays": 101
       }
@@ -14056,7 +14056,7 @@ const FERMENTERS = [
         "vdkLastReading": "2026-07-02",
         "vdkLastValue": 0.0,
         "vicinityDepartedAt": "2026-06-26",
-        "vacated": false,
+        "vacated": true,
         "readingAgeDays": 78,
         "batchAgeDays": 86
       }
@@ -14227,7 +14227,7 @@ const FERMENTERS = [
         "vdkLastReading": null,
         "vdkLastValue": null,
         "vicinityDepartedAt": null,
-        "vacated": true,
+        "vacated": false,
         "readingAgeDays": 19,
         "batchAgeDays": 22
       },
@@ -14526,7 +14526,7 @@ const FERMENTERS = [
         "vdkLastReading": "2026-08-24",
         "vdkLastValue": 0.0285,
         "vicinityDepartedAt": null,
-        "vacated": false,
+        "vacated": true,
         "readingAgeDays": 5,
         "batchAgeDays": 32
       },
@@ -14630,7 +14630,7 @@ const FERMENTERS = [
         "vdkLastReading": "2026-07-29",
         "vdkLastValue": 0.0,
         "vicinityDepartedAt": "2026-08-25",
-        "vacated": false,
+        "vacated": true,
         "readingAgeDays": 25,
         "batchAgeDays": 56
       },
@@ -16019,7 +16019,7 @@ const FERMENTERS = [
         "vdkLastReading": "2026-07-13",
         "vdkLastValue": 0.0,
         "vicinityDepartedAt": "2026-08-20",
-        "vacated": false,
+        "vacated": true,
         "readingAgeDays": 36,
         "batchAgeDays": 71
       },
@@ -16436,7 +16436,7 @@ const FERMENTERS = [
         "vdkLastReading": null,
         "vdkLastValue": null,
         "vicinityDepartedAt": "2026-08-21",
-        "vacated": false,
+        "vacated": true,
         "readingAgeDays": null,
         "batchAgeDays": 29
       },
@@ -16459,7 +16459,7 @@ const FERMENTERS = [
         "vdkLastReading": null,
         "vdkLastValue": null,
         "vicinityDepartedAt": null,
-        "vacated": false,
+        "vacated": true,
         "readingAgeDays": null,
         "batchAgeDays": 29
       }
@@ -17587,7 +17587,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-09-18",
-  "lastSync": "Sep 18, 2026 \u00b7 4:42 PM"
+  "lastSync": "Sep 18, 2026 \u00b7 5:09 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
