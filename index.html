@@ -1164,15 +1164,32 @@ function FermenterTile({ f, batchById, selectedId, onSelect }) {
           ) : (
             <span style={{ fontSize:9, color:'var(--muted2)' }}>no fermentation reading</span>
           )}
-          {top.abvLastValue != null && (
-            <div style={{ display:'flex', gap:6, fontSize:13, color:'var(--muted)' }}>
-              <span style={{ color:'var(--muted2)' }}>ABV</span>
-              <span>{top.abvLastValue}%</span>
-              <span style={{ color:'var(--muted2)' }}>
-                ({top.abvLastReading.slice(5).replace('-', '/')})
-              </span>
-            </div>
-          )}
+          {top.abvLastValue != null && (() => {
+            // checkSpec() won't flag this — ABV's spec stages are BBT/FIN
+            // only, and this reading is FERM-stage (BH SAMPLES), so it never
+            // matches checkSpec's own stage gate (same reason DetailPanel's
+            // latestVals never falls back to a WORT-stage ABV/AE reading —
+            // see that comment above). Checked directly against the
+            // product's ABV low/high bounds instead, ignoring stage, since
+            // Levi wants this flagged as soon as it's outside spec, ferm or
+            // not.
+            const abvSpec = (SPECS[top.product] || {})['ABV'];
+            const abvOOS = abvSpec && (
+              (abvSpec.low  != null && top.abvLastValue < abvSpec.low) ||
+              (abvSpec.high != null && top.abvLastValue > abvSpec.high)
+            );
+            return (
+              <div style={{ display:'flex', gap:6, fontSize:13,
+                            color: abvOOS ? 'var(--red)' : 'var(--muted)',
+                            fontWeight: abvOOS ? 700 : 400 }}>
+                <span style={{ color: abvOOS ? 'var(--red)' : 'var(--muted2)' }}>ABV</span>
+                <span>{top.abvLastValue}%</span>
+                <span style={{ color: abvOOS ? 'var(--red)' : 'var(--muted2)' }}>
+                  ({top.abvLastReading.slice(5).replace('-', '/')})
+                </span>
+              </div>
+            );
+          })()}
           {top.vdkLastValue != null && (() => {
             const isHighVdk = top.vdkLastValue >= 0.06;
             return (
