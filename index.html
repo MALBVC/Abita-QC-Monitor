@@ -1142,6 +1142,15 @@ function FermenterTile({ f, batchById, selectedId, onSelect }) {
           ) : (
             <span style={{ fontSize:9, color:'var(--muted2)' }}>no fermentation reading</span>
           )}
+          {top.abvLastValue != null && (
+            <div style={{ display:'flex', gap:6, fontSize:13, color:'var(--muted)' }}>
+              <span style={{ color:'var(--muted2)' }}>ABV</span>
+              <span>{top.abvLastValue}%</span>
+              <span style={{ color:'var(--muted2)' }}>
+                ({top.abvLastReading.slice(5).replace('-', '/')})
+              </span>
+            </div>
+          )}
         </div>
       )}
       {isEmpty && (
