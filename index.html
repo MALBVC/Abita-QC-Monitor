@@ -417,6 +417,28 @@ function ReadingsTable({ rows, product, metricCols, onSourceClick }) {
               </td>
               <td style={{ padding:'5px 6px', color:'var(--muted)', fontFamily:'IBM Plex Mono', fontSize:11 }}>{r.tank}</td>
               {metricCols.map(({key, specKey, decimals}, ci) => {
+                // Total VDK (GC) has no column of its own — it renders
+                // merged across OG+WpH, spaced halfway between them, per
+                // Levi's 2026-09-18 request (Total VDK was dropped from
+                // QC Monitor entirely 2026-08-10 per Mitch's request; this
+                // brings the value back on-screen only, no OOS/Basecamp
+                // wiring). WpH's own cell is skipped via colSpan so the
+                // column count stays correct.
+                if (r.stage === 'GC' && key === 'Wort pH') return null;
+                if (r.stage === 'GC' && key === 'OG') {
+                  const vdk = r['Total VDK'];
+                  const isHighVdk = vdk != null && vdk >= 0.06;
+                  return (
+                    <td key={ci} colSpan={2}
+                        style={{ padding:'5px 6px', fontFamily:'IBM Plex Mono', fontSize:11,
+                                 textAlign:'center',
+                                 color: isHighVdk ? 'var(--red)' : vdk != null ? 'var(--text)' : 'var(--muted2)',
+                                 fontWeight: isHighVdk ? 700 : 400,
+                                 borderRadius:3, whiteSpace:'nowrap' }}>
+                      {vdk != null ? fmt(vdk, 3) : '—'}
+                    </td>
+                  );
+                }
                 const val = r[key];
                 const status = specKey ? checkSpec(specKey, val, r.stage, product) : null;
                 const isOOS  = status && status !== 'OK';
@@ -1151,6 +1173,20 @@ function FermenterTile({ f, batchById, selectedId, onSelect }) {
               </span>
             </div>
           )}
+          {top.vdkLastValue != null && (() => {
+            const isHighVdk = top.vdkLastValue >= 0.06;
+            return (
+              <div style={{ display:'flex', gap:6, fontSize:13,
+                            color: isHighVdk ? 'var(--red)' : 'var(--muted)',
+                            fontWeight: isHighVdk ? 700 : 400 }}>
+                <span style={{ color: isHighVdk ? 'var(--red)' : 'var(--muted2)' }}>VDK</span>
+                <span>{fmt(top.vdkLastValue, 3)}</span>
+                <span style={{ color: isHighVdk ? 'var(--red)' : 'var(--muted2)' }}>
+                  ({top.vdkLastReading.slice(5).replace('-', '/')})
+                </span>
+              </div>
+            );
+          })()}
         </div>
       )}
       {isEmpty && (
