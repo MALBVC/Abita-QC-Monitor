@@ -1653,9 +1653,20 @@ const BATCHES = [
     "tankBrewedBbl": 175.5,
     "tankConflicts": [],
     "lastReading": "2026-09-16",
-    "lastSource": "GC",
-    "numReadings": 14,
+    "lastSource": "FERM",
+    "numReadings": 17,
     "readings": [
+      {
+        "date": "2026-09-16",
+        "sample": "DGT 009 BH7",
+        "stage": "FERM",
+        "tank": "BH7",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Delta",
+        "ABV": 8.68,
+        "Turbidity": 4401.119453430176,
+        "AE": 3.08
+      },
       {
         "date": "2026-09-16",
         "sample": "DGT 9 BH7",
@@ -1669,6 +1680,17 @@ const BATCHES = [
       },
       {
         "date": "2026-09-14",
+        "sample": "DGT 009 BH7",
+        "stage": "FERM",
+        "tank": "BH7",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Delta",
+        "ABV": 8.67,
+        "Turbidity": 742.7806148529053,
+        "AE": 3.1
+      },
+      {
+        "date": "2026-09-14",
         "sample": "DGT 9 BH7",
         "stage": "GC",
         "tank": "BH7",
@@ -1677,6 +1699,17 @@ const BATCHES = [
         "Diacetyl": 0.088,
         "Pentanedione": 0.0,
         "Total VDK": 0.088
+      },
+      {
+        "date": "2026-09-11",
+        "sample": "DTG 09 BH7",
+        "stage": "FERM",
+        "tank": "BH7",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Delta",
+        "ABV": 8.49,
+        "Turbidity": 1020.0801687240601,
+        "AE": 3.26
       },
       {
         "date": "2026-09-08",
@@ -11761,7 +11794,7 @@ const BATCHES = [
     "tankConflicts": [],
     "lastReading": "2026-09-11",
     "lastSource": "FIN",
-    "numReadings": 19,
+    "numReadings": 24,
     "readings": [
       {
         "date": "2026-09-11",
@@ -11802,6 +11835,61 @@ const BATCHES = [
         "HAZE": 3672.0458450317383,
         "SG": 1.01251,
         "ABV": 8.85
+      },
+      {
+        "date": "2026-08-17",
+        "sample": "DTG 008 BH10",
+        "stage": "FERM",
+        "tank": "BH10",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Delta",
+        "ABV": 8.77,
+        "Turbidity": 4223.114067077637,
+        "AE": 3.31
+      },
+      {
+        "date": "2026-08-14",
+        "sample": "DTG 8 BH10",
+        "stage": "FERM",
+        "tank": "BH10",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Delta",
+        "ABV": 8.62,
+        "Turbidity": 4263.997272491455,
+        "AE": 3.42
+      },
+      {
+        "date": "2026-08-13",
+        "sample": "DTG 008 BH10",
+        "stage": "FERM",
+        "tank": "BH10",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Delta",
+        "ABV": 8.62,
+        "Turbidity": 4488.253326416016,
+        "AE": 3.51
+      },
+      {
+        "date": "2026-08-12",
+        "sample": "DTG 008 BH10",
+        "stage": "FERM",
+        "tank": "BH10",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Delta",
+        "ABV": 8.43,
+        "Turbidity": 4863.256576538086,
+        "AE": 3.69
+      },
+      {
+        "date": "2026-08-10",
+        "sample": "DGT 008 BH10",
+        "stage": "FERM",
+        "tank": "BH10",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Delta",
+        "ABV": 8.19,
+        "Turbidity": 5355.095306396484,
+        "AE": 4.16
       },
       {
         "date": "2026-08-10",
@@ -17725,7 +17813,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-09-18",
-  "lastSync": "Sep 18, 2026 \u00b7 8:10 AM"
+  "lastSync": "Sep 18, 2026 \u00b7 9:28 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
