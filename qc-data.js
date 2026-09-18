@@ -1611,7 +1611,7 @@ const BATCHES = [
         "remainingBbl": 6.0
       },
       {
-        "date": "2026-09-17",
+        "date": "2026-09-15",
         "action": "PACKAGE",
         "from": "BT21",
         "to": "",
@@ -1652,10 +1652,21 @@ const BATCHES = [
     "tankRemainingBbl": 175.5,
     "tankBrewedBbl": 175.5,
     "tankConflicts": [],
-    "lastReading": "2026-09-16",
+    "lastReading": "2026-09-18",
     "lastSource": "FERM",
-    "numReadings": 17,
+    "numReadings": 18,
     "readings": [
+      {
+        "date": "2026-09-18",
+        "sample": "DGT 009 BH7",
+        "stage": "FERM",
+        "tank": "BH7",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Delta",
+        "ABV": 8.69,
+        "Turbidity": 5016.760414123535,
+        "AE": 3.08
+      },
       {
         "date": "2026-09-16",
         "sample": "DGT 009 BH7",
@@ -1907,6 +1918,63 @@ const BATCHES = [
     "abvLatest": null
   },
   {
+    "id": "ALG 007",
+    "product": "ALG",
+    "section": "brewhouse",
+    "brewNums": [
+      7
+    ],
+    "brewDate": "2026-09-18",
+    "brewDateSource": "basecamp",
+    "brewer": null,
+    "brewVolumeBbl": null,
+    "vicinityStage": null,
+    "age": 0,
+    "stage": "Fermenting",
+    "tank": "BH10",
+    "labTank": "BH10",
+    "tankSource": "lab",
+    "tankRemainingBbl": null,
+    "tankBrewedBbl": null,
+    "tankConflicts": [],
+    "lastReading": null,
+    "lastSource": null,
+    "numReadings": 1,
+    "readings": [],
+    "fermLog": [],
+    "yeastPitches": [
+      {
+        "date": "2026-09-18",
+        "tank": "BH10",
+        "cellCount": 2140000000.0,
+        "viability": 0.903,
+        "pitchRate": 68.81,
+        "yeastGen": "K-4",
+        "yeastSource": "BH42",
+        "yeastBrewNum": "GRBB 32",
+        "countType": "Yeast"
+      }
+    ],
+    "transferLog": [
+      {
+        "date": "2026-09-18",
+        "action": "BREW",
+        "from": "",
+        "to": "BH10",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10319887107",
+        "completed": false,
+        "remainingBbl": null
+      }
+    ],
+    "packagingLog": [],
+    "basecampAlerts": [],
+    "aeLatest": null,
+    "abvLatest": null
+  },
+  {
     "id": "JOC 011",
     "product": "JOC",
     "section": "brewhouse",
@@ -1926,10 +1994,31 @@ const BATCHES = [
     "tankRemainingBbl": 153.0,
     "tankBrewedBbl": 153.0,
     "tankConflicts": [],
-    "lastReading": "2026-09-14",
+    "lastReading": "2026-09-18",
     "lastSource": "FERM",
-    "numReadings": 9,
+    "numReadings": 11,
     "readings": [
+      {
+        "date": "2026-09-18",
+        "sample": "JOC 011 BH11",
+        "stage": "FERM",
+        "tank": "BH11",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "JJ",
+        "ABV": 6.22,
+        "AE": 3.24
+      },
+      {
+        "date": "2026-09-18",
+        "sample": "JOC 11 BH11",
+        "stage": "GC",
+        "tank": "BH11",
+        "sourceFile": "gc 2026.xlsx",
+        "sourceSheet": "SEPT",
+        "Diacetyl": 0.0,
+        "Pentanedione": 0.0,
+        "Total VDK": 0.0
+      },
       {
         "date": "2026-09-14",
         "sample": "JOC 011 BH11",
@@ -5822,6 +5911,71 @@ const BATCHES = [
     ],
     "packagingLog": [
       {
+        "date": "2026-09-10",
+        "action": "PACKAGE",
+        "from": "BT33",
+        "to": "",
+        "volume": 189.0,
+        "lossBbl": null,
+        "sameLot": true,
+        "detail": "Strawberry - 4/6/12 Bottles: 2478/2498 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 211.0
+      },
+      {
+        "date": "2026-09-10",
+        "action": "PACKAGE",
+        "from": "BT33",
+        "to": "",
+        "volume": 37.80000000000001,
+        "lossBbl": null,
+        "sameLot": true,
+        "detail": "Strawberry - Can Loose Pack (Case): 500/500 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 173.2
+      },
+      {
+        "date": "2026-09-10",
+        "action": "PACKAGE",
+        "from": "BT33",
+        "to": "",
+        "volume": 116.2,
+        "lossBbl": null,
+        "sameLot": true,
+        "detail": "Strawberry - 4/6/12 Cans: 1537/1553 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 57.0
+      },
+      {
+        "date": "2026-09-11",
+        "action": "PACKAGE",
+        "from": "BT33",
+        "to": "",
+        "volume": 57.0,
+        "lossBbl": null,
+        "sameLot": true,
+        "detail": "Strawberry - 1/2 Keg: 48/48 1/2BBL; Strawberry - 1/4 Keg: 104/144 1/4BBL",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": -0.0
+      },
+      {
+        "date": "2026-09-14",
+        "action": "PACKAGE",
+        "from": "BT22",
+        "to": "",
+        "volume": 8.0,
+        "lossBbl": null,
+        "sameLot": true,
+        "detail": "Golden Lager 1/2 BBL Kegs: 12/12 1/2BBL",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": -8.0
+      },
+      {
         "date": "2026-09-15",
         "action": "PACKAGE",
         "from": "BT22",
@@ -5834,7 +5988,7 @@ const BATCHES = [
         "remainingBbl": null
       },
       {
-        "date": "2026-09-17",
+        "date": "2026-09-15",
         "action": "PACKAGE",
         "from": "BT27",
         "to": "",
@@ -5847,72 +6001,7 @@ const BATCHES = [
         "remainingBbl": 3.0
       },
       {
-        "date": "2026-09-18",
-        "action": "PACKAGE",
-        "from": "BT33",
-        "to": "",
-        "volume": 57.0,
-        "lossBbl": null,
-        "sameLot": true,
-        "detail": "Strawberry - 1/2 Keg: 48/48 1/2BBL; Strawberry - 1/4 Keg: 104/144 1/4BBL",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 343.0
-      },
-      {
-        "date": "2026-09-18",
-        "action": "PACKAGE",
-        "from": "BT33",
-        "to": "",
-        "volume": 189.0,
-        "lossBbl": null,
-        "sameLot": true,
-        "detail": "Strawberry - 4/6/12 Bottles: 2478/2498 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 154.0
-      },
-      {
-        "date": "2026-09-18",
-        "action": "PACKAGE",
-        "from": "BT33",
-        "to": "",
-        "volume": 116.2,
-        "lossBbl": null,
-        "sameLot": true,
-        "detail": "Strawberry - 4/6/12 Cans: 1537/1553 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 37.8
-      },
-      {
-        "date": "2026-09-18",
-        "action": "PACKAGE",
-        "from": "BT33",
-        "to": "",
-        "volume": 37.80000000000001,
-        "lossBbl": null,
-        "sameLot": true,
-        "detail": "Strawberry - Can Loose Pack (Case): 500/500 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": -0.0
-      },
-      {
-        "date": "2026-09-18",
-        "action": "PACKAGE",
-        "from": "BT22",
-        "to": "",
-        "volume": 8.0,
-        "lossBbl": null,
-        "sameLot": true,
-        "detail": "Golden Lager 1/2 BBL Kegs: 12/12 1/2BBL",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 20.0
-      },
-      {
-        "date": "2026-09-18",
+        "date": "2026-09-15",
         "action": "PACKAGE",
         "from": "BT22",
         "to": "",
@@ -7008,23 +7097,23 @@ const BATCHES = [
         "action": "PACKAGE",
         "from": "BT21",
         "to": "",
-        "volume": 11.0,
-        "lossBbl": null,
-        "sameLot": true,
-        "detail": "Beeracuda 1/4 Keg: 36/36 1/4BBL",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 20.5
-      },
-      {
-        "date": "2026-09-17",
-        "action": "PACKAGE",
-        "from": "BT21",
-        "to": "",
         "volume": 20.5,
         "lossBbl": null,
         "sameLot": true,
         "detail": "Beeracuda - 4/6/12 Bottles: 243/338 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 11.0
+      },
+      {
+        "date": "2026-09-11",
+        "action": "PACKAGE",
+        "from": "BT21",
+        "to": "",
+        "volume": 11.0,
+        "lossBbl": null,
+        "sameLot": true,
+        "detail": "Beeracuda 1/4 Keg: 36/36 1/4BBL",
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 0.0
@@ -7363,6 +7452,71 @@ const BATCHES = [
     ],
     "packagingLog": [
       {
+        "date": "2026-09-10",
+        "action": "PACKAGE",
+        "from": "BT33",
+        "to": "",
+        "volume": 189.0,
+        "lossBbl": null,
+        "sameLot": true,
+        "detail": "Strawberry - 4/6/12 Bottles: 2478/2498 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 211.0
+      },
+      {
+        "date": "2026-09-10",
+        "action": "PACKAGE",
+        "from": "BT33",
+        "to": "",
+        "volume": 37.80000000000001,
+        "lossBbl": null,
+        "sameLot": true,
+        "detail": "Strawberry - Can Loose Pack (Case): 500/500 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 173.2
+      },
+      {
+        "date": "2026-09-10",
+        "action": "PACKAGE",
+        "from": "BT33",
+        "to": "",
+        "volume": 116.2,
+        "lossBbl": null,
+        "sameLot": true,
+        "detail": "Strawberry - 4/6/12 Cans: 1537/1553 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 57.0
+      },
+      {
+        "date": "2026-09-11",
+        "action": "PACKAGE",
+        "from": "BT33",
+        "to": "",
+        "volume": 57.0,
+        "lossBbl": null,
+        "sameLot": true,
+        "detail": "Strawberry - 1/2 Keg: 48/48 1/2BBL; Strawberry - 1/4 Keg: 104/144 1/4BBL",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": -0.0
+      },
+      {
+        "date": "2026-09-14",
+        "action": "PACKAGE",
+        "from": "BT22",
+        "to": "",
+        "volume": 8.0,
+        "lossBbl": null,
+        "sameLot": true,
+        "detail": "Golden Lager 1/2 BBL Kegs: 12/12 1/2BBL",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": -8.0
+      },
+      {
         "date": "2026-09-15",
         "action": "PACKAGE",
         "from": "BT22",
@@ -7375,7 +7529,7 @@ const BATCHES = [
         "remainingBbl": null
       },
       {
-        "date": "2026-09-17",
+        "date": "2026-09-15",
         "action": "PACKAGE",
         "from": "BT27",
         "to": "",
@@ -7388,72 +7542,7 @@ const BATCHES = [
         "remainingBbl": 3.0
       },
       {
-        "date": "2026-09-18",
-        "action": "PACKAGE",
-        "from": "BT33",
-        "to": "",
-        "volume": 57.0,
-        "lossBbl": null,
-        "sameLot": true,
-        "detail": "Strawberry - 1/2 Keg: 48/48 1/2BBL; Strawberry - 1/4 Keg: 104/144 1/4BBL",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 343.0
-      },
-      {
-        "date": "2026-09-18",
-        "action": "PACKAGE",
-        "from": "BT33",
-        "to": "",
-        "volume": 189.0,
-        "lossBbl": null,
-        "sameLot": true,
-        "detail": "Strawberry - 4/6/12 Bottles: 2478/2498 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 154.0
-      },
-      {
-        "date": "2026-09-18",
-        "action": "PACKAGE",
-        "from": "BT33",
-        "to": "",
-        "volume": 116.2,
-        "lossBbl": null,
-        "sameLot": true,
-        "detail": "Strawberry - 4/6/12 Cans: 1537/1553 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 37.8
-      },
-      {
-        "date": "2026-09-18",
-        "action": "PACKAGE",
-        "from": "BT33",
-        "to": "",
-        "volume": 37.80000000000001,
-        "lossBbl": null,
-        "sameLot": true,
-        "detail": "Strawberry - Can Loose Pack (Case): 500/500 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": -0.0
-      },
-      {
-        "date": "2026-09-18",
-        "action": "PACKAGE",
-        "from": "BT22",
-        "to": "",
-        "volume": 8.0,
-        "lossBbl": null,
-        "sameLot": true,
-        "detail": "Golden Lager 1/2 BBL Kegs: 12/12 1/2BBL",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 20.0
-      },
-      {
-        "date": "2026-09-18",
+        "date": "2026-09-15",
         "action": "PACKAGE",
         "from": "BT22",
         "to": "",
@@ -9828,19 +9917,6 @@ const BATCHES = [
       {
         "date": "2026-09-02",
         "action": "TRANSFER",
-        "from": "BH23",
-        "to": "UV33",
-        "volume": 43.5,
-        "lossBbl": 0.0,
-        "sameLot": false,
-        "detail": null,
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 43.5
-      },
-      {
-        "date": "2026-09-02",
-        "action": "TRANSFER",
         "from": "BH54",
         "to": "UV33",
         "volume": 195.5,
@@ -9850,6 +9926,19 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 0.0
+      },
+      {
+        "date": "2026-09-02",
+        "action": "TRANSFER",
+        "from": "BH23",
+        "to": "UV33",
+        "volume": 43.5,
+        "lossBbl": 0.0,
+        "sameLot": false,
+        "detail": null,
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 239.0
       }
     ],
     "packagingLog": [
@@ -11514,20 +11603,20 @@ const BATCHES = [
     ],
     "packagingLog": [
       {
-        "date": "2026-09-18",
+        "date": "2026-09-10",
         "action": "PACKAGE",
-        "from": "BT26",
+        "from": "BT31",
         "to": "",
-        "volume": 35.0,
+        "volume": 71.55,
         "lossBbl": null,
         "sameLot": true,
-        "detail": "Deltagator 12/19.2: 526/554 12/19.2",
+        "detail": "Deltagator 4/6/12 Cans: 934/891 CASE",
         "project": "vicinity",
         "completed": true,
-        "remainingBbl": 0.0
+        "remainingBbl": 38.5
       },
       {
-        "date": "2026-09-18",
+        "date": "2026-09-10",
         "action": "PACKAGE",
         "from": "BT31",
         "to": "",
@@ -11537,17 +11626,17 @@ const BATCHES = [
         "detail": "Deltagator - Can Loose Pack (Case): 502/500 CASE",
         "project": "vicinity",
         "completed": true,
-        "remainingBbl": 71.5
+        "remainingBbl": 0.0
       },
       {
-        "date": "2026-09-18",
+        "date": "2026-09-11",
         "action": "PACKAGE",
-        "from": "BT31",
+        "from": "BT26",
         "to": "",
-        "volume": 71.55,
+        "volume": 35.0,
         "lossBbl": null,
         "sameLot": true,
-        "detail": "Deltagator 4/6/12 Cans: 934/891 CASE",
+        "detail": "Deltagator 12/19.2: 526/554 12/19.2",
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 0.0
@@ -12792,8 +12881,8 @@ const FERMENTERS = [
           "gravity": 3.0,
           "ph": 3.29
         },
-        "abvLastReading": "2026-09-16",
-        "abvLastValue": 8.68,
+        "abvLastReading": "2026-09-18",
+        "abvLastValue": 8.69,
         "vdkLastReading": "2026-09-16",
         "vdkLastValue": 0.0374,
         "vicinityDepartedAt": null,
@@ -13054,7 +13143,9 @@ const FERMENTERS = [
   {
     "tank": "BH10",
     "status": "active",
-    "occupantIds": [],
+    "occupantIds": [
+      "ALG 007"
+    ],
     "vicinityOccupants": [],
     "resolvedOccupancy": [
       {
@@ -13175,10 +13266,10 @@ const FERMENTERS = [
           "gravity": 3.5,
           "ph": 3.95
         },
-        "abvLastReading": "2026-09-14",
-        "abvLastValue": 5.97,
-        "vdkLastReading": "2026-09-14",
-        "vdkLastValue": 0.073,
+        "abvLastReading": "2026-09-18",
+        "abvLastValue": 6.22,
+        "vdkLastReading": "2026-09-18",
+        "vdkLastValue": 0.0,
         "vicinityDepartedAt": null,
         "vacated": false,
         "readingAgeDays": 1,
@@ -14076,14 +14167,7 @@ const FERMENTERS = [
     "tank": "BH23",
     "status": "active",
     "occupantIds": [],
-    "vicinityOccupants": [
-      {
-        "product": "TTPN",
-        "lot": "TTPN26001",
-        "label": "Trim Tab Paradise Now",
-        "qtyBbl": 142.5
-      }
-    ],
+    "vicinityOccupants": [],
     "resolvedOccupancy": [
       {
         "tank": "BH23",
@@ -14094,7 +14178,7 @@ const FERMENTERS = [
         "firstEvidence": "2026-08-26",
         "lastEvidence": "2026-09-11",
         "brewDate": null,
-        "vicinityResidentAsOf": "2026-08-26",
+        "vicinityResidentAsOf": null,
         "cellarLastReading": "2026-09-11",
         "cellarLastReadingValues": {
           "temp": 35.0,
@@ -14111,8 +14195,8 @@ const FERMENTERS = [
         "abvLastValue": null,
         "vdkLastReading": "2026-08-31",
         "vdkLastValue": 0.0,
-        "vicinityDepartedAt": null,
-        "vacated": false,
+        "vicinityDepartedAt": "2026-09-16",
+        "vacated": true,
         "readingAgeDays": 7,
         "batchAgeDays": 23
       },
@@ -14392,6 +14476,29 @@ const FERMENTERS = [
     "resolvedOccupancy": [
       {
         "tank": "BH26",
+        "product": "TTPN",
+        "brewNums": [
+          1
+        ],
+        "firstEvidence": "2026-09-16",
+        "lastEvidence": "2026-09-16",
+        "brewDate": null,
+        "vicinityResidentAsOf": "2026-09-16",
+        "cellarLastReading": null,
+        "cellarLastReadingValues": null,
+        "cellarPrevReading": null,
+        "cellarPrevReadingValues": null,
+        "abvLastReading": null,
+        "abvLastValue": null,
+        "vdkLastReading": null,
+        "vdkLastValue": null,
+        "vicinityDepartedAt": null,
+        "vacated": false,
+        "readingAgeDays": null,
+        "batchAgeDays": 2
+      },
+      {
+        "tank": "BH26",
         "product": "AND",
         "brewNums": [
           42,
@@ -14452,29 +14559,6 @@ const FERMENTERS = [
         "vicinityDepartedAt": "2026-08-10",
         "vacated": true,
         "readingAgeDays": 49,
-        "batchAgeDays": 99
-      },
-      {
-        "tank": "BH26",
-        "product": "BEC",
-        "brewNums": [
-          2
-        ],
-        "firstEvidence": "2026-06-11",
-        "lastEvidence": "2026-06-11",
-        "brewDate": null,
-        "vicinityResidentAsOf": "2026-06-11",
-        "cellarLastReading": null,
-        "cellarLastReadingValues": null,
-        "cellarPrevReading": null,
-        "cellarPrevReadingValues": null,
-        "abvLastReading": null,
-        "abvLastValue": null,
-        "vdkLastReading": null,
-        "vdkLastValue": null,
-        "vicinityDepartedAt": null,
-        "vacated": false,
-        "readingAgeDays": null,
         "batchAgeDays": 99
       }
     ]
@@ -17503,7 +17587,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-09-18",
-  "lastSync": "Sep 18, 2026 \u00b7 12:11 PM"
+  "lastSync": "Sep 18, 2026 \u00b7 4:13 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
