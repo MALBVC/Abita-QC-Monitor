@@ -1609,6 +1609,19 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 6.0
+      },
+      {
+        "date": "2026-09-17",
+        "action": "PACKAGE",
+        "from": "BT21",
+        "to": "",
+        "volume": 31.0,
+        "lossBbl": null,
+        "sameLot": true,
+        "detail": "Mango Wheat - Loose Pack Can Case: 361/500 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 3.0
       }
     ],
     "basecampAlerts": [],
@@ -5947,6 +5960,19 @@ const BATCHES = [
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10292480251",
         "completed": true,
         "remainingBbl": null
+      },
+      {
+        "date": "2026-09-17",
+        "action": "PACKAGE",
+        "from": "BT27",
+        "to": "",
+        "volume": 39.0,
+        "lossBbl": null,
+        "sameLot": true,
+        "detail": "Peach Lager - Loose Pack Can Case: 468/500 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 3.0
       }
     ],
     "basecampAlerts": [
@@ -7137,6 +7163,19 @@ const BATCHES = [
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10292480251",
         "completed": true,
         "remainingBbl": null
+      },
+      {
+        "date": "2026-09-17",
+        "action": "PACKAGE",
+        "from": "BT27",
+        "to": "",
+        "volume": 39.0,
+        "lossBbl": null,
+        "sameLot": true,
+        "detail": "Peach Lager - Loose Pack Can Case: 468/500 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 3.0
       }
     ],
     "basecampAlerts": [
@@ -12175,19 +12214,6 @@ const BATCHES = [
       {
         "date": "2026-09-02",
         "action": "TRANSFER",
-        "from": "BH23",
-        "to": "UV33",
-        "volume": 43.5,
-        "lossBbl": 0.0,
-        "sameLot": false,
-        "detail": null,
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 43.5
-      },
-      {
-        "date": "2026-09-02",
-        "action": "TRANSFER",
         "from": "BH54",
         "to": "UV33",
         "volume": 195.5,
@@ -12197,6 +12223,19 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 0.0
+      },
+      {
+        "date": "2026-09-02",
+        "action": "TRANSFER",
+        "from": "BH23",
+        "to": "UV33",
+        "volume": 43.5,
+        "lossBbl": 0.0,
+        "sameLot": false,
+        "detail": null,
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 239.0
       }
     ],
     "packagingLog": [
@@ -19401,7 +19440,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-09-17",
-  "lastSync": "Sep 17, 2026 \u00b7 4:10 PM"
+  "lastSync": "Sep 17, 2026 \u00b7 8:10 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
