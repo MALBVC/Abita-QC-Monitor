@@ -1211,8 +1211,16 @@ function FermenterTile({ f, batchById, selectedId, onSelect }) {
           <span style={{ fontSize:11, color:'var(--muted2)' }}>— empty —</span>
           {vacatedTop && (
             <span style={{ fontSize:9, color:'var(--muted2)' }}>
-              {vacatedTop.product} {vacatedTop.brewNums.join(',')} left{' '}
-              {vacatedTop.vicinityDepartedAt.slice(5).replace('-', '/')}
+              {vacatedTop.product} {vacatedTop.brewNums.join(',')}{' '}
+              {vacatedTop.vicinityDepartedAt
+                // A candidate can now be vacated with no recorded departure
+                // from THIS tank at all — its real Vicinity volume is fully
+                // packaged/lost elsewhere (see the volume-remaining check in
+                // tank_occupancy.py, added 2026-09-18) — so this can't
+                // always say "left <date>" the way it could when vacated
+                // meant only "a real from_bin departure happened here."
+                ? `left ${vacatedTop.vicinityDepartedAt.slice(5).replace('-', '/')}`
+                : `fully packaged (as of ${vacatedTop.lastEvidence.slice(5).replace('-', '/')})`}
             </span>
           )}
         </div>
