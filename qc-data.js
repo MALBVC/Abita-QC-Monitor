@@ -1965,7 +1965,7 @@ const BATCHES = [
         "detail": null,
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10319887107",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -12576,7 +12576,7 @@ const FERMENTERS = [
         "vdkLastReading": "2026-08-24",
         "vdkLastValue": 0.0,
         "vicinityDepartedAt": "2026-08-26",
-        "vacated": false,
+        "vacated": true,
         "readingAgeDays": 23,
         "batchAgeDays": 30
       },
@@ -12845,7 +12845,7 @@ const FERMENTERS = [
         "vdkLastReading": null,
         "vdkLastValue": null,
         "vicinityDepartedAt": "2026-04-21",
-        "vacated": false,
+        "vacated": true,
         "readingAgeDays": null,
         "batchAgeDays": 150
       }
@@ -12909,7 +12909,7 @@ const FERMENTERS = [
         "vdkLastReading": null,
         "vdkLastValue": null,
         "vicinityDepartedAt": null,
-        "vacated": false,
+        "vacated": true,
         "readingAgeDays": null,
         "batchAgeDays": 14
       },
@@ -13374,7 +13374,7 @@ const FERMENTERS = [
         "vdkLastReading": null,
         "vdkLastValue": null,
         "vicinityDepartedAt": "2026-09-03",
-        "vacated": false,
+        "vacated": true,
         "readingAgeDays": 28,
         "batchAgeDays": 91
       },
@@ -14189,7 +14189,7 @@ const FERMENTERS = [
         "vdkLastReading": "2026-08-31",
         "vdkLastValue": 0.0,
         "vicinityDepartedAt": "2026-09-16",
-        "vacated": false,
+        "vacated": true,
         "readingAgeDays": 7,
         "batchAgeDays": 23
       },
@@ -14220,7 +14220,7 @@ const FERMENTERS = [
         "vdkLastReading": null,
         "vdkLastValue": null,
         "vicinityDepartedAt": null,
-        "vacated": false,
+        "vacated": true,
         "readingAgeDays": 19,
         "batchAgeDays": 22
       },
@@ -15227,7 +15227,7 @@ const FERMENTERS = [
         "vdkLastReading": "2026-09-08",
         "vdkLastValue": 0.046,
         "vicinityDepartedAt": null,
-        "vacated": false,
+        "vacated": true,
         "readingAgeDays": null,
         "batchAgeDays": 10
       },
@@ -15758,7 +15758,7 @@ const FERMENTERS = [
         "vdkLastReading": "2026-07-31",
         "vdkLastValue": 0.0663,
         "vicinityDepartedAt": "2026-09-04",
-        "vacated": false,
+        "vacated": true,
         "readingAgeDays": 17,
         "batchAgeDays": 51
       },
@@ -16486,7 +16486,7 @@ const FERMENTERS = [
         "vdkLastReading": null,
         "vdkLastValue": null,
         "vicinityDepartedAt": null,
-        "vacated": false,
+        "vacated": true,
         "readingAgeDays": null,
         "batchAgeDays": 15
       },
@@ -16938,7 +16938,7 @@ const FERMENTERS = [
         "vdkLastReading": null,
         "vdkLastValue": null,
         "vicinityDepartedAt": null,
-        "vacated": false,
+        "vacated": true,
         "readingAgeDays": 14,
         "batchAgeDays": 19
       },
@@ -16964,7 +16964,7 @@ const FERMENTERS = [
         "vdkLastReading": "2026-09-01",
         "vdkLastValue": 0.0278,
         "vicinityDepartedAt": null,
-        "vacated": false,
+        "vacated": true,
         "readingAgeDays": null,
         "batchAgeDays": 21
       },
@@ -17580,7 +17580,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-09-18",
-  "lastSync": "Sep 18, 2026 \u00b7 8:12 PM"
+  "lastSync": "Sep 18, 2026 \u00b7 9:40 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
