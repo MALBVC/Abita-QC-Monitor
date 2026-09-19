@@ -1251,9 +1251,20 @@ const FERMENT_FILTERS = [
   ['crashed', 'Crashed', 'var(--blue)',  '#fff'],
 ];
 
+// Temporary (added 2026-09-19 per Levi): tanks taken offline for the
+// ongoing wastewater discharge hold — not a real freshness/stage signal,
+// just a visibility toggle so the Cellar view can be decluttered of tanks
+// nobody's actively monitoring right now. Remove this constant and its
+// toggle once the hold is over.
+const WWHOLD_TANKS = new Set(['BH04', 'BH05', 'BH15', 'BH20', 'BH36', 'BH37', 'BH38', 'BH52']);
+
 function FermenterCellar({ fermenters, batchById, selectedId, onSelect }) {
   const [filter, setFilter] = useState('all');
   const [fermentFilter, setFermentFilter] = useState('all');
+  const [hideWwhold, setHideWwhold] = useState(true);
+
+  const wwholdCount = useMemo(() =>
+    fermenters.filter(f => WWHOLD_TANKS.has(f.tank)).length, [fermenters]);
 
   const counts = useMemo(() => {
     const c = { all: fermenters.length, green: 0, yellow: 0, red: 0, inactive: 0 };
@@ -1275,7 +1286,8 @@ function FermenterCellar({ fermenters, batchById, selectedId, onSelect }) {
 
   const filtered = fermenters
     .filter(f => filter === 'all' || tankStatus(f) === filter)
-    .filter(f => fermentFilter === 'all' || fermentStage(f, batchById) === fermentFilter);
+    .filter(f => fermentFilter === 'all' || fermentStage(f, batchById) === fermentFilter)
+    .filter(f => !hideWwhold || !WWHOLD_TANKS.has(f.tank));
 
   if (fermenters.length === 0) {
     return (
@@ -1326,6 +1338,20 @@ function FermenterCellar({ fermenters, batchById, selectedId, onSelect }) {
               {label} ({fermentCounts[key]})
             </button>
           ))}
+          {wwholdCount > 0 && (
+            <button onClick={() => setHideWwhold(h => !h)}
+              title="Tanks held offline for the wastewater discharge issue"
+              style={{
+                marginLeft:10, padding:'4px 12px', borderRadius:5,
+                border:'1px solid var(--muted2)',
+                background: hideWwhold ? 'var(--muted2)' : 'var(--card)',
+                color: hideWwhold ? 'var(--bg)' : 'var(--muted)',
+                fontFamily:'Barlow Condensed', fontWeight:600, fontSize:11,
+                letterSpacing:'0.05em', textTransform:'uppercase',
+              }}>
+              {hideWwhold ? 'Show' : 'Hide'} WWHOLD ({wwholdCount})
+            </button>
+          )}
         </div>
       </div>
       <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(180px,1fr))',
