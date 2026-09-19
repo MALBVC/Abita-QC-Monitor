@@ -13044,14 +13044,7 @@ const FERMENTERS = [
     "tank": "BH09",
     "status": "active",
     "occupantIds": [],
-    "vicinityOccupants": [
-      {
-        "product": "TTIP",
-        "lot": "TTIP26001",
-        "label": "Trim Tab IPA",
-        "qtyBbl": 150.5
-      }
-    ],
+    "vicinityOccupants": [],
     "resolvedOccupancy": [
       {
         "tank": "BH09",
@@ -13091,9 +13084,9 @@ const FERMENTERS = [
           1
         ],
         "firstEvidence": "2026-09-03",
-        "lastEvidence": "2026-09-03",
+        "lastEvidence": "2026-09-16",
         "brewDate": null,
-        "vicinityResidentAsOf": "2026-09-03",
+        "vicinityResidentAsOf": null,
         "cellarLastReading": null,
         "cellarLastReadingValues": null,
         "cellarPrevReading": null,
@@ -13102,8 +13095,8 @@ const FERMENTERS = [
         "abvLastValue": null,
         "vdkLastReading": null,
         "vdkLastValue": null,
-        "vicinityDepartedAt": null,
-        "vacated": false,
+        "vicinityDepartedAt": "2026-09-16",
+        "vacated": true,
         "readingAgeDays": null,
         "batchAgeDays": 15
       },
@@ -17587,7 +17580,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-09-18",
-  "lastSync": "Sep 18, 2026 \u00b7 5:09 PM"
+  "lastSync": "Sep 18, 2026 \u00b7 8:12 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
