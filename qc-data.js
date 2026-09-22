@@ -1989,7 +1989,7 @@ const BATCHES = [
         "cellCount": 2140000000.0,
         "viability": 0.903,
         "pitchRate": 68.81,
-        "yeastGen": "K-4",
+        "yeastGen": "K-5",
         "yeastSource": "BH42",
         "yeastBrewNum": "GRBB 32",
         "countType": "Yeast"
@@ -4699,7 +4699,7 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10328806576",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -9742,6 +9742,18 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 0.0
+      },
+      {
+        "date": "2026-09-22",
+        "action": "FILTER",
+        "from": "BH58",
+        "to": "BT28",
+        "volume": 100.0,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10330348905",
+        "completed": false,
+        "remainingBbl": null
       }
     ],
     "packagingLog": [
@@ -17994,7 +18006,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-09-22",
-  "lastSync": "Sep 22, 2026 \u00b7 12:12 PM"
+  "lastSync": "Sep 22, 2026 \u00b7 4:09 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
