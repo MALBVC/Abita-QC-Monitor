@@ -4689,6 +4689,18 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 58.5
+      },
+      {
+        "date": "2026-09-22",
+        "action": "XFER",
+        "from": "UV13",
+        "to": "BT22",
+        "volume": null,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10328806576",
+        "completed": false,
+        "remainingBbl": null
       }
     ],
     "packagingLog": [
@@ -7671,7 +7683,7 @@ const BATCHES = [
     "tank": "BH32, BH34",
     "labTank": "TK33",
     "tankSource": "vicinity",
-    "tankRemainingBbl": 373.0,
+    "tankRemainingBbl": 55.0,
     "tankBrewedBbl": 605.0,
     "tankConflicts": [],
     "lastReading": "2026-09-22",
@@ -8404,6 +8416,62 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 69.0
+      },
+      {
+        "date": "2026-09-18",
+        "action": "TRANSFER",
+        "from": "BH32",
+        "to": "UV33",
+        "volume": 65.0,
+        "lossBbl": 6.0,
+        "sameLot": true,
+        "destComponentPrefix": "BBT",
+        "detail": "6 BBL loss in transfer",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 4.0
+      },
+      {
+        "date": "2026-09-18",
+        "action": "TRANSFER",
+        "from": "BH34",
+        "to": "UV34",
+        "volume": 253.0,
+        "lossBbl": 9.0,
+        "sameLot": true,
+        "destComponentPrefix": "BBT",
+        "detail": "9 BBL loss in transfer",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 51.0
+      },
+      {
+        "date": "2026-09-18",
+        "action": "TRANSFER",
+        "from": "UV33",
+        "to": "BT33",
+        "volume": 59.0,
+        "lossBbl": 0.0,
+        "sameLot": true,
+        "destComponentPrefix": "BBT",
+        "detail": null,
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 0.0
+      },
+      {
+        "date": "2026-09-18",
+        "action": "TRANSFER",
+        "from": "UV34",
+        "to": "BT33",
+        "volume": 244.0,
+        "lossBbl": 0.0,
+        "sameLot": true,
+        "destComponentPrefix": "BBT",
+        "detail": null,
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 195.0
       }
     ],
     "packagingLog": [
@@ -8593,10 +8661,10 @@ const BATCHES = [
     "vicinityStage": "Ops-Closed",
     "age": 56,
     "stage": "Aging",
-    "tank": "BH48, BH58",
+    "tank": "BH58",
     "labTank": "UV30",
     "tankSource": "vicinity",
-    "tankRemainingBbl": 1238.0,
+    "tankRemainingBbl": 751.0,
     "tankBrewedBbl": 1617.5,
     "tankConflicts": [],
     "lastReading": "2026-09-21",
@@ -9604,6 +9672,76 @@ const BATCHES = [
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10315405219",
         "completed": true,
         "remainingBbl": null
+      },
+      {
+        "date": "2026-09-17",
+        "action": "TRANSFER",
+        "from": "BH48",
+        "to": "UV33",
+        "volume": 430.0,
+        "lossBbl": 19.0,
+        "sameLot": true,
+        "destComponentPrefix": "BBT",
+        "detail": "19 BBL loss in transfer",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 0.0
+      },
+      {
+        "date": "2026-09-18",
+        "action": "TRANSFER",
+        "from": "BH58",
+        "to": "UV34",
+        "volume": 57.0,
+        "lossBbl": 2.0,
+        "sameLot": true,
+        "destComponentPrefix": "BBT",
+        "detail": "2 BBL loss in transfer",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 751.0
+      },
+      {
+        "date": "2026-09-18",
+        "action": "TRANSFER",
+        "from": "UV33",
+        "to": "BT32",
+        "volume": 290.0,
+        "lossBbl": 0.0,
+        "sameLot": true,
+        "destComponentPrefix": "BBT",
+        "detail": null,
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 121.0
+      },
+      {
+        "date": "2026-09-18",
+        "action": "TRANSFER",
+        "from": "UV33",
+        "to": "UV30",
+        "volume": 121.0,
+        "lossBbl": 0.0,
+        "sameLot": true,
+        "destComponentPrefix": "BBT",
+        "detail": null,
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 0.0
+      },
+      {
+        "date": "2026-09-18",
+        "action": "TRANSFER",
+        "from": "UV34",
+        "to": "UV30",
+        "volume": 55.0,
+        "lossBbl": 0.0,
+        "sameLot": true,
+        "destComponentPrefix": "BBT",
+        "detail": null,
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 0.0
       }
     ],
     "packagingLog": [
@@ -12367,7 +12505,7 @@ const BATCHES = [
         "detail": "4024 CASES",
         "project": "packaging",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10310926773",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -15410,7 +15548,7 @@ const FERMENTERS = [
         "abvLastValue": 8.18,
         "vdkLastReading": "2026-07-20",
         "vdkLastValue": 0.0,
-        "vicinityDepartedAt": "2026-09-15",
+        "vicinityDepartedAt": "2026-09-18",
         "vacated": false,
         "readingAgeDays": 6,
         "batchAgeDays": 74
@@ -15601,7 +15739,7 @@ const FERMENTERS = [
         "firstEvidence": "2026-07-10",
         "lastEvidence": "2026-09-16",
         "brewDate": "2026-07-10",
-        "vicinityResidentAsOf": "2026-07-10",
+        "vicinityResidentAsOf": null,
         "cellarLastReading": "2026-09-16",
         "cellarLastReadingValues": {
           "temp": 35.0,
@@ -15618,7 +15756,7 @@ const FERMENTERS = [
         "abvLastValue": 8.17,
         "vdkLastReading": "2026-07-17",
         "vdkLastValue": 0.0251,
-        "vicinityDepartedAt": null,
+        "vicinityDepartedAt": "2026-09-18",
         "vacated": false,
         "readingAgeDays": 6,
         "batchAgeDays": 74
@@ -16925,7 +17063,7 @@ const FERMENTERS = [
         "abvLastValue": 4.31,
         "vdkLastReading": "2026-08-03",
         "vdkLastValue": 0.0289,
-        "vicinityDepartedAt": "2026-09-15",
+        "vicinityDepartedAt": "2026-09-17",
         "vacated": false,
         "readingAgeDays": 16,
         "batchAgeDays": 56
@@ -17730,7 +17868,9 @@ const FERMENTERS = [
   {
     "tank": "BH58",
     "status": "active",
-    "occupantIds": [],
+    "occupantIds": [
+      "AMB 045, 046, 047, 048, 049, 050, 051, 052"
+    ],
     "vicinityOccupants": [],
     "resolvedOccupancy": [
       {
@@ -17745,7 +17885,7 @@ const FERMENTERS = [
         "firstEvidence": "2026-08-13",
         "lastEvidence": "2026-09-11",
         "brewDate": "2026-08-13",
-        "vicinityResidentAsOf": "2026-08-13",
+        "vicinityResidentAsOf": null,
         "cellarLastReading": "2026-09-11",
         "cellarLastReadingValues": {
           "temp": 34.0,
@@ -17762,7 +17902,7 @@ const FERMENTERS = [
         "abvLastValue": 4.25,
         "vdkLastReading": "2026-08-18",
         "vdkLastValue": 0.0477,
-        "vicinityDepartedAt": null,
+        "vicinityDepartedAt": "2026-09-18",
         "vacated": false,
         "readingAgeDays": 11,
         "batchAgeDays": 40
@@ -17854,7 +17994,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-09-22",
-  "lastSync": "Sep 22, 2026 \u00b7 8:10 AM"
+  "lastSync": "Sep 22, 2026 \u00b7 12:12 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
