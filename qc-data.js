@@ -8625,8 +8625,28 @@ const BATCHES = [
     "tankConflicts": [],
     "lastReading": "2026-09-21",
     "lastSource": "FIN",
-    "numReadings": 51,
+    "numReadings": 52,
     "readings": [
+      {
+        "date": "2026-09-21",
+        "sample": "AMB 45-48/49-52 TK UV30 Restart",
+        "stage": "FIN",
+        "tank": "UV30",
+        "sourceFile": "finished abita beer 2026.xlsx",
+        "sourceSheet": "A",
+        "pH": 4.17,
+        "DO": 38.0,
+        "CO2 Vols": 2.7,
+        "Calories": 138.52,
+        "ADF": 78.9,
+        "RDF": 64.97,
+        "OG": 10.57,
+        "AE": 2.23,
+        "RE": 3.84,
+        "HAZE": 56.10156673192978,
+        "SG": 1.00868,
+        "ABV": 4.4
+      },
       {
         "date": "2026-09-21",
         "sample": "AMB 45-48/49-52 TK UV30",
@@ -9761,18 +9781,66 @@ const BATCHES = [
     "basecampAlerts": [
       {
         "metric": "AE",
-        "value": 2.22,
+        "value": 2.23,
         "low": 1.4,
         "high": 2.2,
         "date": "2026-09-21",
         "stage": "FIN",
-        "sample": "AMB 45-48/49-52 TK UV30",
+        "sample": "AMB 45-48/49-52 TK UV30 Restart",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10307628673",
         "acknowledged": false,
         "ackBy": null,
         "ackAt": null,
         "ackNote": null,
         "also": [
+          {
+            "value": 2.23,
+            "date": "2026-09-21",
+            "stage": "FIN",
+            "sample": "AMB 45-48/49-52 TK UV30 Restart"
+          },
+          {
+            "value": 2.23,
+            "date": "2026-09-21",
+            "stage": "FIN",
+            "sample": "AMB 45-48/49-52 TK UV30 Restart"
+          },
+          {
+            "value": 2.23,
+            "date": "2026-09-21",
+            "stage": "FIN",
+            "sample": "AMB 45-48/49-52 TK UV30 Restart"
+          },
+          {
+            "value": 2.23,
+            "date": "2026-09-21",
+            "stage": "FIN",
+            "sample": "AMB 45-48/49-52 TK UV30 Restart"
+          },
+          {
+            "value": 2.23,
+            "date": "2026-09-21",
+            "stage": "FIN",
+            "sample": "AMB 45-48/49-52 TK UV30 Restart"
+          },
+          {
+            "value": 2.23,
+            "date": "2026-09-21",
+            "stage": "FIN",
+            "sample": "AMB 45-48/49-52 TK UV30 Restart"
+          },
+          {
+            "value": 2.23,
+            "date": "2026-09-21",
+            "stage": "FIN",
+            "sample": "AMB 45-48/49-52 TK UV30 Restart"
+          },
+          {
+            "value": 2.22,
+            "date": "2026-09-21",
+            "stage": "FIN",
+            "sample": "AMB 45-48/49-52 TK UV30"
+          },
           {
             "value": 2.22,
             "date": "2026-09-21",
@@ -10215,7 +10283,7 @@ const BATCHES = [
       }
     ],
     "aeLatest": {
-      "v": 2.22,
+      "v": 2.23,
       "stage": "FIN",
       "date": "2026-09-21"
     },
@@ -12159,20 +12227,6 @@ const BATCHES = [
       {
         "date": "2026-09-02",
         "action": "TRANSFER",
-        "from": "BH23",
-        "to": "UV33",
-        "volume": 43.5,
-        "lossBbl": 0.0,
-        "sameLot": false,
-        "destComponentPrefix": "BBT",
-        "detail": null,
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 43.5
-      },
-      {
-        "date": "2026-09-02",
-        "action": "TRANSFER",
         "from": "BH54",
         "to": "UV33",
         "volume": 195.5,
@@ -12183,6 +12237,20 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 0.0
+      },
+      {
+        "date": "2026-09-02",
+        "action": "TRANSFER",
+        "from": "BH23",
+        "to": "UV33",
+        "volume": 43.5,
+        "lossBbl": 0.0,
+        "sameLot": false,
+        "destComponentPrefix": "BBT",
+        "detail": null,
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 239.0
       }
     ],
     "packagingLog": [
@@ -17814,7 +17882,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-09-21",
-  "lastSync": "Sep 21, 2026 \u00b7 4:08 PM"
+  "lastSync": "Sep 21, 2026 \u00b7 8:07 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
