@@ -1899,6 +1899,30 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 175.5
+      },
+      {
+        "date": "2026-09-24",
+        "action": "CENT",
+        "from": "BH7",
+        "to": "BT31",
+        "volume": 112.0,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10334993217",
+        "completed": false,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-09-24",
+        "action": "CENT",
+        "from": "BH7",
+        "to": "BT23",
+        "volume": null,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10334994292",
+        "completed": false,
+        "remainingBbl": null
       }
     ],
     "packagingLog": [],
@@ -2910,6 +2934,100 @@ const BATCHES = [
       "stage": "FERM",
       "date": "2026-07-29"
     },
+    "abvLatest": null
+  },
+  {
+    "id": "LHT 005",
+    "product": "LHT",
+    "section": "brewhouse",
+    "brewNums": [
+      5
+    ],
+    "brewDate": "2025-10-02",
+    "brewDateSource": "basecamp",
+    "brewer": "Preston Francis",
+    "brewVolumeBbl": null,
+    "vicinityStage": null,
+    "age": 356,
+    "stage": "Fermenting",
+    "tank": "BH14",
+    "labTank": "BH14",
+    "tankSource": "lab",
+    "tankRemainingBbl": null,
+    "tankBrewedBbl": null,
+    "tankConflicts": [],
+    "lastReading": "2026-09-23",
+    "lastSource": "WORT",
+    "numReadings": 1,
+    "readings": [
+      {
+        "date": "2026-09-23",
+        "sample": "LHT 005 BH14",
+        "stage": "WORT",
+        "tank": "BH14",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "L",
+        "Wort pH": 5.56,
+        "SRM": 2.2715736040609134,
+        "IBU (W)": 8.4,
+        "Calories": 107.71,
+        "ADF": -0.77,
+        "RDF": -0.66,
+        "OG": 7.47,
+        "AE": 7.53,
+        "RE": 7.52,
+        "HAZE": 2667.148063659668,
+        "SG": 1.02984,
+        "ABV": -0.03
+      }
+    ],
+    "fermLog": [],
+    "yeastPitches": [],
+    "transferLog": [
+      {
+        "date": "2025-10-02",
+        "action": "BREW",
+        "from": "",
+        "to": "BH3",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/9116394688",
+        "completed": true,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-09-22",
+        "action": "BREW",
+        "from": "",
+        "to": "BH14",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10326232949",
+        "completed": true,
+        "remainingBbl": null
+      }
+    ],
+    "packagingLog": [],
+    "basecampAlerts": [
+      {
+        "metric": "Wort pH",
+        "value": 5.56,
+        "low": 4.9,
+        "high": 5.3,
+        "date": "2026-09-23",
+        "stage": "WORT",
+        "sample": "LHT 005 BH14",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10335355024",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
+        "also": []
+      }
+    ],
+    "aeLatest": null,
     "abvLatest": null
   },
   {
@@ -12365,20 +12483,6 @@ const BATCHES = [
       {
         "date": "2026-09-02",
         "action": "TRANSFER",
-        "from": "BH23",
-        "to": "UV33",
-        "volume": 43.5,
-        "lossBbl": 0.0,
-        "sameLot": false,
-        "destComponentPrefix": "BBT",
-        "detail": null,
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 43.5
-      },
-      {
-        "date": "2026-09-02",
-        "action": "TRANSFER",
         "from": "BH54",
         "to": "UV33",
         "volume": 195.5,
@@ -12389,6 +12493,20 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 0.0
+      },
+      {
+        "date": "2026-09-02",
+        "action": "TRANSFER",
+        "from": "BH23",
+        "to": "UV33",
+        "volume": 43.5,
+        "lossBbl": 0.0,
+        "sameLot": false,
+        "destComponentPrefix": "BBT",
+        "detail": null,
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 239.0
       }
     ],
     "packagingLog": [
@@ -13935,7 +14053,8 @@ const FERMENTERS = [
     "tank": "BH14",
     "status": "active",
     "occupantIds": [
-      "GLD 054"
+      "GLD 054",
+      "LHT 005"
     ],
     "vicinityOccupants": [],
     "resolvedOccupancy": [
@@ -18038,7 +18157,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-09-23",
-  "lastSync": "Sep 23, 2026 \u00b7 4:08 PM"
+  "lastSync": "Sep 23, 2026 \u00b7 8:09 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
