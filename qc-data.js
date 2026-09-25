@@ -2341,6 +2341,30 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 153.0
+      },
+      {
+        "date": "2026-09-25",
+        "action": "CENT",
+        "from": "BH11",
+        "to": "BT27",
+        "volume": 98.0,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10339499150",
+        "completed": false,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-09-25",
+        "action": "CENT",
+        "from": "BH11",
+        "to": "BT26",
+        "volume": null,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10339499845",
+        "completed": false,
+        "remainingBbl": null
       }
     ],
     "packagingLog": [],
@@ -2706,6 +2730,18 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 65.5
+      },
+      {
+        "date": "2026-09-24",
+        "action": "CENT",
+        "from": "BH13",
+        "to": "BH32",
+        "volume": null,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10339347202",
+        "completed": false,
+        "remainingBbl": null
       }
     ],
     "packagingLog": [],
@@ -3076,6 +3112,18 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 151.5
+      },
+      {
+        "date": "2026-09-25",
+        "action": "CENT",
+        "from": "BH17",
+        "to": "BT30",
+        "volume": null,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10339501479",
+        "completed": false,
+        "remainingBbl": null
       }
     ],
     "packagingLog": [],
@@ -4887,7 +4935,7 @@ const BATCHES = [
     "tankConflicts": [],
     "lastReading": null,
     "lastSource": null,
-    "numReadings": 1,
+    "numReadings": 2,
     "readings": [],
     "fermLog": [],
     "yeastPitches": [
@@ -4901,6 +4949,17 @@ const BATCHES = [
         "yeastSource": "BH39",
         "yeastBrewNum": "AMB56",
         "countType": "Yeast"
+      },
+      {
+        "date": "2026-09-24",
+        "tank": "BH28",
+        "cellCount": 33085814.666666668,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "FV"
       }
     ],
     "transferLog": [],
@@ -17262,7 +17321,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-09-24",
-  "lastSync": "Sep 24, 2026 \u00b7 4:09 PM"
+  "lastSync": "Sep 24, 2026 \u00b7 8:09 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
