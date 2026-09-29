@@ -5808,6 +5808,18 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 0.0
+      },
+      {
+        "date": "2026-09-30",
+        "action": "PACKAGE",
+        "from": "UV30",
+        "to": "",
+        "volume": null,
+        "detail": "1200 CASES",
+        "project": "packaging",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10338742853",
+        "completed": false,
+        "remainingBbl": null
       }
     ],
     "basecampAlerts": [
@@ -7603,7 +7615,7 @@ const BATCHES = [
       {
         "date": "2026-09-29",
         "action": "PACKAGE",
-        "from": "BT26,BT27",
+        "from": "BT26",
         "to": "",
         "volume": null,
         "detail": "540 CASES",
@@ -10984,6 +10996,18 @@ const BATCHES = [
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10310960194",
         "completed": true,
         "remainingBbl": null
+      },
+      {
+        "date": "2026-09-30",
+        "action": "PACKAGE",
+        "from": "BT21,BT22",
+        "to": "",
+        "volume": null,
+        "detail": "1774 - 12 PACKS",
+        "project": "packaging",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10337956482",
+        "completed": false,
+        "remainingBbl": null
       }
     ],
     "basecampAlerts": [
@@ -13023,6 +13047,37 @@ const FERMENTERS = [
     "resolvedOccupancy": [
       {
         "tank": "BH22",
+        "product": "BTT",
+        "brewNums": [
+          5
+        ],
+        "firstEvidence": "2026-08-20",
+        "lastEvidence": "2026-09-25",
+        "brewDate": "2026-08-20",
+        "vicinityResidentAsOf": "2026-09-25",
+        "cellarLastReading": "2026-08-28",
+        "cellarLastReadingValues": {
+          "temp": 60.0,
+          "gravity": 2.3,
+          "ph": 4.13
+        },
+        "cellarPrevReading": "2026-08-27",
+        "cellarPrevReadingValues": {
+          "temp": 61.0,
+          "gravity": 2.3,
+          "ph": 4.13
+        },
+        "abvLastReading": "2026-08-24",
+        "abvLastValue": 4.79,
+        "vdkLastReading": "2026-08-24",
+        "vdkLastValue": 0.0475,
+        "vicinityDepartedAt": "2026-09-04",
+        "vacated": false,
+        "readingAgeDays": 31,
+        "batchAgeDays": 39
+      },
+      {
+        "tank": "BH22",
         "product": "GLD",
         "brewNums": [
           65
@@ -13048,40 +13103,9 @@ const FERMENTERS = [
         "vdkLastReading": "2026-09-21",
         "vdkLastValue": 0.0,
         "vicinityDepartedAt": null,
-        "vacated": false,
+        "vacated": true,
         "readingAgeDays": 7,
         "batchAgeDays": 10
-      },
-      {
-        "tank": "BH22",
-        "product": "BTT",
-        "brewNums": [
-          5
-        ],
-        "firstEvidence": "2026-08-20",
-        "lastEvidence": "2026-08-28",
-        "brewDate": "2026-08-20",
-        "vicinityResidentAsOf": null,
-        "cellarLastReading": "2026-08-28",
-        "cellarLastReadingValues": {
-          "temp": 60.0,
-          "gravity": 2.3,
-          "ph": 4.13
-        },
-        "cellarPrevReading": "2026-08-27",
-        "cellarPrevReadingValues": {
-          "temp": 61.0,
-          "gravity": 2.3,
-          "ph": 4.13
-        },
-        "abvLastReading": "2026-08-24",
-        "abvLastValue": 4.79,
-        "vdkLastReading": "2026-08-24",
-        "vdkLastValue": 0.0475,
-        "vicinityDepartedAt": "2026-09-04",
-        "vacated": true,
-        "readingAgeDays": 31,
-        "batchAgeDays": 39
       },
       {
         "tank": "BH22",
@@ -15720,16 +15744,16 @@ const FERMENTERS = [
         "qtyBbl": 26.2
       },
       {
-        "product": null,
-        "lot": "459334.JUN12",
-        "label": "Neutral Malt Base",
-        "qtyBbl": 3.5
-      },
-      {
         "product": "4",
         "lot": "460154",
         "label": "Neutral Malt Base",
         "qtyBbl": 180.0
+      },
+      {
+        "product": null,
+        "lot": "459334.JUN12",
+        "label": "Neutral Malt Base",
+        "qtyBbl": 3.5
       }
     ],
     "resolvedOccupancy": [
@@ -16454,7 +16478,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-09-28",
-  "lastSync": "Sep 28, 2026 \u00b7 4:09 PM"
+  "lastSync": "Sep 28, 2026 \u00b7 8:08 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
