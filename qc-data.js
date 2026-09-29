@@ -1661,10 +1661,21 @@ const BATCHES = [
     "tankRemainingBbl": null,
     "tankBrewedBbl": null,
     "tankConflicts": [],
-    "lastReading": "2026-09-28",
+    "lastReading": "2026-09-29",
     "lastSource": "GC",
-    "numReadings": 9,
+    "numReadings": 10,
     "readings": [
+      {
+        "date": "2026-09-29",
+        "sample": "ALG 7 BH10",
+        "stage": "GC",
+        "tank": "BH10",
+        "sourceFile": "gc 2026.xlsx",
+        "sourceSheet": "SEPT",
+        "Diacetyl": 0.1399,
+        "Pentanedione": 0.0,
+        "Total VDK": 0.1399
+      },
       {
         "date": "2026-09-28",
         "sample": "ALG 7 BH10",
@@ -2161,10 +2172,21 @@ const BATCHES = [
     "tankRemainingBbl": 163.0,
     "tankBrewedBbl": 163.0,
     "tankConflicts": [],
-    "lastReading": "2026-09-28",
-    "lastSource": "GC",
-    "numReadings": 4,
+    "lastReading": "2026-09-29",
+    "lastSource": "FERM",
+    "numReadings": 5,
     "readings": [
+      {
+        "date": "2026-09-29",
+        "sample": "LHT 005 BH14",
+        "stage": "FERM",
+        "tank": "BH14",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 3.61,
+        "Turbidity": 223.16605138778687,
+        "AE": 0.54
+      },
       {
         "date": "2026-09-28",
         "sample": "LHT 5 BH14",
@@ -10818,20 +10840,6 @@ const BATCHES = [
       {
         "date": "2026-09-02",
         "action": "TRANSFER",
-        "from": "BH23",
-        "to": "UV33",
-        "volume": 43.5,
-        "lossBbl": 0.0,
-        "sameLot": false,
-        "destComponentPrefix": "BBT",
-        "detail": null,
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 43.5
-      },
-      {
-        "date": "2026-09-02",
-        "action": "TRANSFER",
         "from": "BH54",
         "to": "UV33",
         "volume": 195.5,
@@ -10842,6 +10850,20 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 0.0
+      },
+      {
+        "date": "2026-09-02",
+        "action": "TRANSFER",
+        "from": "BH23",
+        "to": "UV33",
+        "volume": 43.5,
+        "lossBbl": 0.0,
+        "sameLot": false,
+        "destComponentPrefix": "BBT",
+        "detail": null,
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 239.0
       }
     ],
     "packagingLog": [
@@ -12125,8 +12147,8 @@ const FERMENTERS = [
         },
         "abvLastReading": null,
         "abvLastValue": null,
-        "vdkLastReading": "2026-09-28",
-        "vdkLastValue": 0.1025,
+        "vdkLastReading": "2026-09-29",
+        "vdkLastValue": 0.1399,
         "vicinityDepartedAt": null,
         "vacated": false,
         "readingAgeDays": 6,
@@ -12417,8 +12439,8 @@ const FERMENTERS = [
         },
         "cellarPrevReading": null,
         "cellarPrevReadingValues": null,
-        "abvLastReading": "2026-09-28",
-        "abvLastValue": 3.6,
+        "abvLastReading": "2026-09-29",
+        "abvLastValue": 3.61,
         "vdkLastReading": "2026-09-28",
         "vdkLastValue": 0.0202,
         "vicinityDepartedAt": null,
@@ -16478,7 +16500,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-09-29",
-  "lastSync": "Sep 29, 2026 \u00b7 8:10 AM"
+  "lastSync": "Sep 29, 2026 \u00b7 12:09 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
