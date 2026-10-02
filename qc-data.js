@@ -3528,15 +3528,15 @@ const BATCHES = [
     "brewDate": "2026-09-27",
     "brewDateSource": "basecamp",
     "brewer": "Keeyan Majdi",
-    "brewVolumeBbl": null,
-    "vicinityStage": null,
+    "brewVolumeBbl": 419.5,
+    "vicinityStage": "Ops-Closed",
     "age": 4,
     "stage": "Aging",
     "tank": "BH44",
     "labTank": "BH44",
-    "tankSource": "lab",
-    "tankRemainingBbl": null,
-    "tankBrewedBbl": null,
+    "tankSource": "vicinity",
+    "tankRemainingBbl": 419.5,
+    "tankBrewedBbl": 419.5,
     "tankConflicts": [],
     "lastReading": "2026-09-28",
     "lastSource": "WORT",
@@ -3663,6 +3663,28 @@ const BATCHES = [
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10339503617",
         "completed": true,
         "remainingBbl": null
+      },
+      {
+        "date": "2026-09-25",
+        "action": "BREW",
+        "from": "",
+        "to": "BH44",
+        "volume": 201.5,
+        "detail": "GLD 066",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 201.5
+      },
+      {
+        "date": "2026-09-25",
+        "action": "BREW",
+        "from": "",
+        "to": "BH44",
+        "volume": 218.0,
+        "detail": "GLD 067",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 419.5
       }
     ],
     "packagingLog": [],
@@ -9596,7 +9618,7 @@ const BATCHES = [
         "detail": null,
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10358686022",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -9981,7 +10003,7 @@ const BATCHES = [
         "detail": "428 - 12 PACKS",
         "project": "packaging",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10337949237",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -14420,10 +14442,10 @@ const FERMENTERS = [
           66,
           67
         ],
-        "firstEvidence": "2026-09-27",
+        "firstEvidence": "2026-09-25",
         "lastEvidence": "2026-09-28",
-        "brewDate": null,
-        "vicinityResidentAsOf": null,
+        "brewDate": "2026-09-25",
+        "vicinityResidentAsOf": "2026-09-25",
         "cellarLastReading": "2026-09-28",
         "cellarLastReadingValues": {
           "temp": 68.0,
@@ -14443,7 +14465,7 @@ const FERMENTERS = [
         "vicinityDepartedAt": null,
         "vacated": false,
         "readingAgeDays": 3,
-        "batchAgeDays": 4
+        "batchAgeDays": 6
       },
       {
         "tank": "BH44",
@@ -15792,7 +15814,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-10-01",
-  "lastSync": "Oct 1, 2026 \u00b7 4:08 PM"
+  "lastSync": "Oct 1, 2026 \u00b7 8:08 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
