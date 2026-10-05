@@ -6572,6 +6572,30 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 0.0
+      },
+      {
+        "date": "2026-10-06",
+        "action": "PACKAGE",
+        "from": "BT31",
+        "to": "",
+        "volume": null,
+        "detail": "351 CASES",
+        "project": "packaging",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10363257187",
+        "completed": false,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-10-06",
+        "action": "PACKAGE",
+        "from": "BT31",
+        "to": "",
+        "volume": null,
+        "detail": "270 CASES",
+        "project": "packaging",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10363270442",
+        "completed": false,
+        "remainingBbl": null
       }
     ],
     "basecampAlerts": [
@@ -7254,12 +7278,36 @@ const BATCHES = [
       {
         "date": "2026-10-05",
         "action": "PACKAGE",
+        "from": "BT25,BT27",
+        "to": "",
+        "volume": null,
+        "detail": "2377 CASES",
+        "project": "packaging",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10363598770",
+        "completed": false,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-10-05",
+        "action": "PACKAGE",
         "from": "UV30",
         "to": "",
         "volume": null,
         "detail": "1200 CASES",
         "project": "packaging",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10338742853",
+        "completed": false,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-10-05",
+        "action": "PACKAGE",
+        "from": "BT25",
+        "to": "",
+        "volume": null,
+        "detail": "350 CASES",
+        "project": "packaging",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10363246955",
         "completed": false,
         "remainingBbl": null
       }
@@ -14503,7 +14551,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-10-05",
-  "lastSync": "Oct 5, 2026 \u00b7 8:58 AM"
+  "lastSync": "Oct 5, 2026 \u00b7 12:09 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
