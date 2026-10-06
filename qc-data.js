@@ -2493,10 +2493,31 @@ const BATCHES = [
     "tankRemainingBbl": null,
     "tankBrewedBbl": null,
     "tankConflicts": [],
-    "lastReading": null,
-    "lastSource": null,
-    "numReadings": 2,
-    "readings": [],
+    "lastReading": "2026-10-05",
+    "lastSource": "WORT",
+    "numReadings": 4,
+    "readings": [
+      {
+        "date": "2026-10-05",
+        "sample": "TBD 006 BH17",
+        "stage": "WORT",
+        "tank": "BH17",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "TD",
+        "Wort pH": 5.04,
+        "SRM": 53.934010152284266,
+        "IBU (W)": 27.650000000000002,
+        "Calories": 199.16,
+        "ADF": 0.08,
+        "RDF": 0.06,
+        "OG": 13.41,
+        "AE": 13.4,
+        "RE": 13.41,
+        "HAZE": 1360.2769718170166,
+        "SG": 1.05425,
+        "ABV": 0.01
+      }
+    ],
     "fermLog": [],
     "yeastPitches": [
       {
@@ -2520,6 +2541,17 @@ const BATCHES = [
         "yeastSource": "Prop4",
         "yeastBrewNum": "wyeast2565",
         "countType": "yeast (recount)"
+      },
+      {
+        "date": "2026-10-05",
+        "tank": "BH17",
+        "cellCount": 25115750.0,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "FV"
       }
     ],
     "transferLog": [
@@ -2537,7 +2569,23 @@ const BATCHES = [
       }
     ],
     "packagingLog": [],
-    "basecampAlerts": [],
+    "basecampAlerts": [
+      {
+        "metric": "OG",
+        "value": 13.41,
+        "low": 12.9,
+        "high": 13.3,
+        "date": "2026-10-05",
+        "stage": "WORT",
+        "sample": "TBD 006 BH17",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10374554209",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
+        "also": []
+      }
+    ],
     "aeLatest": null,
     "abvLatest": null
   },
@@ -6627,6 +6675,369 @@ const BATCHES = [
     }
   },
   {
+    "id": "ALG 006",
+    "product": "ALG",
+    "section": "brewhouse",
+    "brewNums": [
+      6
+    ],
+    "brewDate": "2026-08-21",
+    "brewDateSource": "vicinity",
+    "brewer": null,
+    "brewVolumeBbl": 156.0,
+    "vicinityStage": "Ops-Closed",
+    "age": 45,
+    "stage": "Aging",
+    "tank": "BH10",
+    "labTank": "TK29",
+    "tankSource": "vicinity",
+    "tankRemainingBbl": 157.5,
+    "tankBrewedBbl": 313.5,
+    "tankConflicts": [],
+    "lastReading": "2026-09-11",
+    "lastSource": "FIN",
+    "numReadings": 15,
+    "readings": [
+      {
+        "date": "2026-09-11",
+        "sample": "ALG 06 TK29",
+        "stage": "FIN",
+        "tank": "TK29",
+        "sourceFile": "finished abita beer 2026.xlsx",
+        "sourceSheet": "ALPHA",
+        "pH": 4.52,
+        "CO2 Vols": 2.74,
+        "Calories": 253.6,
+        "ADF": 86.19,
+        "RDF": 71.86,
+        "OG": 18.78,
+        "AE": 2.59,
+        "RE": 5.68,
+        "HAZE": 5708.719779968262,
+        "SG": 1.01012,
+        "ABV": 8.97
+      },
+      {
+        "date": "2026-09-10",
+        "sample": "ALG 006 TK29",
+        "stage": "FIN",
+        "tank": "TK29",
+        "sourceFile": "finished abita beer 2026.xlsx",
+        "sourceSheet": "ALPHA",
+        "pH": 4.45,
+        "DO": 25.0,
+        "CO2 Vols": 2.68,
+        "Calories": 252.62,
+        "ADF": 86.22,
+        "RDF": 71.87,
+        "OG": 18.72,
+        "AE": 2.58,
+        "RE": 5.66,
+        "HAZE": 5357.876426696777,
+        "SG": 1.01006,
+        "ABV": 8.98
+      },
+      {
+        "date": "2026-08-25",
+        "sample": "ALG 6 BH8",
+        "stage": "GC",
+        "tank": "BH8",
+        "sourceFile": "gc 2026.xlsx",
+        "sourceSheet": "AUG",
+        "Diacetyl": 0.0,
+        "Pentanedione": 0.0,
+        "Total VDK": 0.0
+      },
+      {
+        "date": "2026-08-22",
+        "sample": "ALG 006 BH8",
+        "stage": "WORT",
+        "tank": "BH8",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "Alpha",
+        "Wort pH": 5.27,
+        "SRM": 7.626903553299492,
+        "IBU (W)": 15.65,
+        "Calories": 293.55,
+        "ADF": -1.14,
+        "RDF": -1.01,
+        "OG": 19.23,
+        "AE": 19.45,
+        "RE": 19.41,
+        "SG": 1.08044,
+        "ABV": -0.13
+      }
+    ],
+    "fermLog": [
+      {
+        "date": "2026-08-22",
+        "tank": "BH08",
+        "temp": 70.0,
+        "gravity": 9.3,
+        "ph": 4.13,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "ALG"
+      },
+      {
+        "date": "2026-08-23",
+        "tank": "BH08",
+        "temp": 70.0,
+        "gravity": 9.3,
+        "ph": null,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "ALG"
+      },
+      {
+        "date": "2026-08-24",
+        "tank": "BH08",
+        "temp": 70.0,
+        "gravity": 4.2,
+        "ph": 4.08,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "ALG"
+      },
+      {
+        "date": "2026-08-25",
+        "tank": "BH08",
+        "temp": 70.0,
+        "gravity": 4.2,
+        "ph": 4.43,
+        "actions": "pH- lab",
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "ALG"
+      },
+      {
+        "date": "2026-08-26",
+        "tank": "BH08",
+        "temp": 70.0,
+        "gravity": null,
+        "ph": null,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "ALG"
+      },
+      {
+        "date": "2026-08-27",
+        "tank": "BH08",
+        "temp": 70.0,
+        "gravity": null,
+        "ph": 4.43,
+        "actions": "lab",
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "ALG"
+      },
+      {
+        "date": "2026-08-28",
+        "tank": "BH08",
+        "temp": 71.0,
+        "gravity": 3.07,
+        "ph": null,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "ALG"
+      },
+      {
+        "date": "2026-08-30",
+        "tank": "BH08",
+        "temp": 70.0,
+        "gravity": 3.4,
+        "ph": 4.39,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "ALG"
+      },
+      {
+        "date": "2026-08-31",
+        "tank": "BH08",
+        "temp": 70.0,
+        "gravity": 2.9,
+        "ph": 4.49,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "ALG"
+      }
+    ],
+    "yeastPitches": [
+      {
+        "date": "2026-08-21",
+        "tank": "BH8",
+        "cellCount": 1570000000.0,
+        "viability": 0.9,
+        "pitchRate": 93.79,
+        "yeastGen": "K-4",
+        "yeastSource": "Prop 1",
+        "yeastBrewNum": "TBOL66 BH28",
+        "countType": "Yeast"
+      },
+      {
+        "date": "2026-08-21",
+        "tank": "BH8",
+        "cellCount": 54932585.6666667,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "FV"
+      }
+    ],
+    "transferLog": [
+      {
+        "date": "2026-08-21",
+        "action": "BREW",
+        "from": "",
+        "to": "BH08",
+        "volume": 156.0,
+        "detail": "ALG 006",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 156.0
+      },
+      {
+        "date": "2026-09-08",
+        "action": "CENT",
+        "from": "BH8",
+        "to": "BT29",
+        "volume": null,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10282620920",
+        "completed": true,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-09-09",
+        "action": "TRANSFER",
+        "from": "BH08",
+        "to": "BT29",
+        "volume": 156.0,
+        "lossBbl": 9.0,
+        "sameLot": true,
+        "destComponentPrefix": "PFB",
+        "detail": "9 BBL loss in transfer",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 0.0
+      },
+      {
+        "date": "2026-09-18",
+        "action": "BREW",
+        "from": "",
+        "to": "BH10",
+        "volume": 157.5,
+        "detail": "ALG 006",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 157.5
+      }
+    ],
+    "packagingLog": [
+      {
+        "date": "2026-09-10",
+        "action": "PACKAGE",
+        "from": "BT29",
+        "to": "",
+        "volume": null,
+        "detail": "1375 TOTAL CASES",
+        "project": "packaging",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10274775561",
+        "completed": true,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-09-10",
+        "action": "PACKAGE",
+        "from": "BT29",
+        "to": "",
+        "volume": null,
+        "detail": "792 12 PACKS",
+        "project": "packaging",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10274792154",
+        "completed": true,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-09-10",
+        "action": "PACKAGE",
+        "from": "BT29",
+        "to": "",
+        "volume": 44.57,
+        "lossBbl": null,
+        "sameLot": true,
+        "destComponentPrefix": null,
+        "detail": "Alphagator - Can Loose Pack (Case): 579/500 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 102.4
+      },
+      {
+        "date": "2026-09-10",
+        "action": "PACKAGE",
+        "from": "BT29",
+        "to": "",
+        "volume": 61.43,
+        "lossBbl": null,
+        "sameLot": true,
+        "destComponentPrefix": null,
+        "detail": "Alphagator - 4/6/12 Cans: 798/875 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 41.0
+      },
+      {
+        "date": "2026-09-11",
+        "action": "PACKAGE",
+        "from": "BT29",
+        "to": "",
+        "volume": 48.0,
+        "lossBbl": null,
+        "sameLot": true,
+        "destComponentPrefix": null,
+        "detail": "Alphagator 12/19.2: 652/792 12/19.2",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": -7.0
+      }
+    ],
+    "basecampAlerts": [
+      {
+        "metric": "AE",
+        "value": 2.59,
+        "low": 2.8,
+        "high": 3.6,
+        "date": "2026-09-11",
+        "stage": "FIN",
+        "sample": "ALG 06 TK29",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10293724755",
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-09-11T15:38",
+        "ackNote": "<p dir=\"auto\">Actually finished at 2.77, then added water to bring abv into spec. This was a lctose reduction test, if we continue test will make adjustments to compensate</p>",
+        "also": [
+          {
+            "value": 2.58,
+            "date": "2026-09-10",
+            "stage": "FIN",
+            "sample": "ALG 006 TK29"
+          }
+        ]
+      }
+    ],
+    "aeLatest": {
+      "v": 2.59,
+      "stage": "FIN",
+      "date": "2026-09-11"
+    },
+    "abvLatest": {
+      "v": 8.97,
+      "stage": "FIN",
+      "date": "2026-09-11"
+    }
+  },
+  {
     "id": "AMB 049, 050, 051, 052",
     "product": "AMB",
     "section": "brewhouse",
@@ -6644,15 +7055,35 @@ const BATCHES = [
     "age": 53,
     "stage": "Aging",
     "tank": "BH58",
-    "labTank": "TK28",
+    "labTank": "UV30",
     "tankSource": "vicinity",
     "tankRemainingBbl": 642.0,
     "tankBrewedBbl": 808.0,
     "tankConflicts": [],
-    "lastReading": "2026-09-25",
+    "lastReading": "2026-10-05",
     "lastSource": "FIN",
-    "numReadings": 31,
+    "numReadings": 32,
     "readings": [
+      {
+        "date": "2026-10-05",
+        "sample": "AMB 49-52 TK UV30",
+        "stage": "FIN",
+        "tank": "UV30",
+        "sourceFile": "finished abita beer 2026.xlsx",
+        "sourceSheet": "A",
+        "pH": 4.13,
+        "DO": 32.0,
+        "CO2 Vols": 2.65,
+        "Calories": 135.56,
+        "ADF": 79.03,
+        "RDF": 65.05,
+        "OG": 10.36,
+        "AE": 2.17,
+        "RE": 3.75,
+        "HAZE": 33.42364552617073,
+        "SG": 1.00846,
+        "ABV": 4.31
+      },
       {
         "date": "2026-09-25",
         "sample": "AMB 49-52 TK28",
@@ -7548,377 +7979,14 @@ const BATCHES = [
       }
     ],
     "aeLatest": {
-      "v": 2.18,
+      "v": 2.17,
       "stage": "FIN",
-      "date": "2026-09-25"
+      "date": "2026-10-05"
     },
     "abvLatest": {
-      "v": 4.33,
+      "v": 4.31,
       "stage": "FIN",
-      "date": "2026-09-25"
-    }
-  },
-  {
-    "id": "ALG 006",
-    "product": "ALG",
-    "section": "brewhouse",
-    "brewNums": [
-      6
-    ],
-    "brewDate": "2026-08-21",
-    "brewDateSource": "vicinity",
-    "brewer": null,
-    "brewVolumeBbl": 156.0,
-    "vicinityStage": "Ops-Closed",
-    "age": 45,
-    "stage": "Aging",
-    "tank": "BH10",
-    "labTank": "TK29",
-    "tankSource": "vicinity",
-    "tankRemainingBbl": 157.5,
-    "tankBrewedBbl": 313.5,
-    "tankConflicts": [],
-    "lastReading": "2026-09-11",
-    "lastSource": "FIN",
-    "numReadings": 15,
-    "readings": [
-      {
-        "date": "2026-09-11",
-        "sample": "ALG 06 TK29",
-        "stage": "FIN",
-        "tank": "TK29",
-        "sourceFile": "finished abita beer 2026.xlsx",
-        "sourceSheet": "ALPHA",
-        "pH": 4.52,
-        "CO2 Vols": 2.74,
-        "Calories": 253.6,
-        "ADF": 86.19,
-        "RDF": 71.86,
-        "OG": 18.78,
-        "AE": 2.59,
-        "RE": 5.68,
-        "HAZE": 5708.719779968262,
-        "SG": 1.01012,
-        "ABV": 8.97
-      },
-      {
-        "date": "2026-09-10",
-        "sample": "ALG 006 TK29",
-        "stage": "FIN",
-        "tank": "TK29",
-        "sourceFile": "finished abita beer 2026.xlsx",
-        "sourceSheet": "ALPHA",
-        "pH": 4.45,
-        "DO": 25.0,
-        "CO2 Vols": 2.68,
-        "Calories": 252.62,
-        "ADF": 86.22,
-        "RDF": 71.87,
-        "OG": 18.72,
-        "AE": 2.58,
-        "RE": 5.66,
-        "HAZE": 5357.876426696777,
-        "SG": 1.01006,
-        "ABV": 8.98
-      },
-      {
-        "date": "2026-08-25",
-        "sample": "ALG 6 BH8",
-        "stage": "GC",
-        "tank": "BH8",
-        "sourceFile": "gc 2026.xlsx",
-        "sourceSheet": "AUG",
-        "Diacetyl": 0.0,
-        "Pentanedione": 0.0,
-        "Total VDK": 0.0
-      },
-      {
-        "date": "2026-08-22",
-        "sample": "ALG 006 BH8",
-        "stage": "WORT",
-        "tank": "BH8",
-        "sourceFile": "wort abita samples 2026.xlsx",
-        "sourceSheet": "Alpha",
-        "Wort pH": 5.27,
-        "SRM": 7.626903553299492,
-        "IBU (W)": 15.65,
-        "Calories": 293.55,
-        "ADF": -1.14,
-        "RDF": -1.01,
-        "OG": 19.23,
-        "AE": 19.45,
-        "RE": 19.41,
-        "SG": 1.08044,
-        "ABV": -0.13
-      }
-    ],
-    "fermLog": [
-      {
-        "date": "2026-08-22",
-        "tank": "BH08",
-        "temp": 70.0,
-        "gravity": 9.3,
-        "ph": 4.13,
-        "actions": null,
-        "sourceFile": "cellar records 2026.xlsx",
-        "sourceSheet": "ALG"
-      },
-      {
-        "date": "2026-08-23",
-        "tank": "BH08",
-        "temp": 70.0,
-        "gravity": 9.3,
-        "ph": null,
-        "actions": null,
-        "sourceFile": "cellar records 2026.xlsx",
-        "sourceSheet": "ALG"
-      },
-      {
-        "date": "2026-08-24",
-        "tank": "BH08",
-        "temp": 70.0,
-        "gravity": 4.2,
-        "ph": 4.08,
-        "actions": null,
-        "sourceFile": "cellar records 2026.xlsx",
-        "sourceSheet": "ALG"
-      },
-      {
-        "date": "2026-08-25",
-        "tank": "BH08",
-        "temp": 70.0,
-        "gravity": 4.2,
-        "ph": 4.43,
-        "actions": "pH- lab",
-        "sourceFile": "cellar records 2026.xlsx",
-        "sourceSheet": "ALG"
-      },
-      {
-        "date": "2026-08-26",
-        "tank": "BH08",
-        "temp": 70.0,
-        "gravity": null,
-        "ph": null,
-        "actions": null,
-        "sourceFile": "cellar records 2026.xlsx",
-        "sourceSheet": "ALG"
-      },
-      {
-        "date": "2026-08-27",
-        "tank": "BH08",
-        "temp": 70.0,
-        "gravity": null,
-        "ph": 4.43,
-        "actions": "lab",
-        "sourceFile": "cellar records 2026.xlsx",
-        "sourceSheet": "ALG"
-      },
-      {
-        "date": "2026-08-28",
-        "tank": "BH08",
-        "temp": 71.0,
-        "gravity": 3.07,
-        "ph": null,
-        "actions": null,
-        "sourceFile": "cellar records 2026.xlsx",
-        "sourceSheet": "ALG"
-      },
-      {
-        "date": "2026-08-30",
-        "tank": "BH08",
-        "temp": 70.0,
-        "gravity": 3.4,
-        "ph": 4.39,
-        "actions": null,
-        "sourceFile": "cellar records 2026.xlsx",
-        "sourceSheet": "ALG"
-      },
-      {
-        "date": "2026-08-31",
-        "tank": "BH08",
-        "temp": 70.0,
-        "gravity": 2.9,
-        "ph": 4.49,
-        "actions": null,
-        "sourceFile": "cellar records 2026.xlsx",
-        "sourceSheet": "ALG"
-      }
-    ],
-    "yeastPitches": [
-      {
-        "date": "2026-08-21",
-        "tank": "BH8",
-        "cellCount": 1570000000.0,
-        "viability": 0.9,
-        "pitchRate": 93.79,
-        "yeastGen": "K-4",
-        "yeastSource": "Prop 1",
-        "yeastBrewNum": "TBOL66 BH28",
-        "countType": "Yeast"
-      },
-      {
-        "date": "2026-08-21",
-        "tank": "BH8",
-        "cellCount": 54932585.6666667,
-        "viability": null,
-        "pitchRate": null,
-        "yeastGen": null,
-        "yeastSource": null,
-        "yeastBrewNum": null,
-        "countType": "FV"
-      }
-    ],
-    "transferLog": [
-      {
-        "date": "2026-08-21",
-        "action": "BREW",
-        "from": "",
-        "to": "BH08",
-        "volume": 156.0,
-        "detail": "ALG 006",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 156.0
-      },
-      {
-        "date": "2026-09-08",
-        "action": "CENT",
-        "from": "BH8",
-        "to": "BT29",
-        "volume": null,
-        "detail": null,
-        "project": "cellar",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10282620920",
-        "completed": true,
-        "remainingBbl": null
-      },
-      {
-        "date": "2026-09-09",
-        "action": "TRANSFER",
-        "from": "BH08",
-        "to": "BT29",
-        "volume": 156.0,
-        "lossBbl": 9.0,
-        "sameLot": true,
-        "destComponentPrefix": "PFB",
-        "detail": "9 BBL loss in transfer",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 0.0
-      },
-      {
-        "date": "2026-09-18",
-        "action": "BREW",
-        "from": "",
-        "to": "BH10",
-        "volume": 157.5,
-        "detail": "ALG 006",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 157.5
-      }
-    ],
-    "packagingLog": [
-      {
-        "date": "2026-09-10",
-        "action": "PACKAGE",
-        "from": "BT29",
-        "to": "",
-        "volume": null,
-        "detail": "1375 TOTAL CASES",
-        "project": "packaging",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10274775561",
-        "completed": true,
-        "remainingBbl": null
-      },
-      {
-        "date": "2026-09-10",
-        "action": "PACKAGE",
-        "from": "BT29",
-        "to": "",
-        "volume": null,
-        "detail": "792 12 PACKS",
-        "project": "packaging",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10274792154",
-        "completed": true,
-        "remainingBbl": null
-      },
-      {
-        "date": "2026-09-10",
-        "action": "PACKAGE",
-        "from": "BT29",
-        "to": "",
-        "volume": 44.57,
-        "lossBbl": null,
-        "sameLot": true,
-        "destComponentPrefix": null,
-        "detail": "Alphagator - Can Loose Pack (Case): 579/500 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 102.4
-      },
-      {
-        "date": "2026-09-10",
-        "action": "PACKAGE",
-        "from": "BT29",
-        "to": "",
-        "volume": 61.43,
-        "lossBbl": null,
-        "sameLot": true,
-        "destComponentPrefix": null,
-        "detail": "Alphagator - 4/6/12 Cans: 798/875 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 41.0
-      },
-      {
-        "date": "2026-09-11",
-        "action": "PACKAGE",
-        "from": "BT29",
-        "to": "",
-        "volume": 48.0,
-        "lossBbl": null,
-        "sameLot": true,
-        "destComponentPrefix": null,
-        "detail": "Alphagator 12/19.2: 652/792 12/19.2",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": -7.0
-      }
-    ],
-    "basecampAlerts": [
-      {
-        "metric": "AE",
-        "value": 2.59,
-        "low": 2.8,
-        "high": 3.6,
-        "date": "2026-09-11",
-        "stage": "FIN",
-        "sample": "ALG 06 TK29",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10293724755",
-        "acknowledged": true,
-        "ackBy": "Mitch Steele",
-        "ackAt": "2026-09-11T15:38",
-        "ackNote": "<p dir=\"auto\">Actually finished at 2.77, then added water to bring abv into spec. This was a lctose reduction test, if we continue test will make adjustments to compensate</p>",
-        "also": [
-          {
-            "value": 2.58,
-            "date": "2026-09-10",
-            "stage": "FIN",
-            "sample": "ALG 006 TK29"
-          }
-        ]
-      }
-    ],
-    "aeLatest": {
-      "v": 2.59,
-      "stage": "FIN",
-      "date": "2026-09-11"
-    },
-    "abvLatest": {
-      "v": 8.97,
-      "stage": "FIN",
-      "date": "2026-09-11"
+      "date": "2026-10-05"
     }
   },
   {
@@ -14551,7 +14619,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-10-05",
-  "lastSync": "Oct 5, 2026 \u00b7 4:08 PM"
+  "lastSync": "Oct 5, 2026 \u00b7 8:09 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
