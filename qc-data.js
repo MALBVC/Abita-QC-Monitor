@@ -4493,7 +4493,7 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10380773769",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       },
       {
@@ -4505,7 +4505,7 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10380779226",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -5447,6 +5447,20 @@ const BATCHES = [
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10363246955",
         "completed": true,
         "remainingBbl": null
+      },
+      {
+        "date": "2026-10-07",
+        "action": "PACKAGE",
+        "from": "UV30",
+        "to": "",
+        "volume": 108.5,
+        "lossBbl": null,
+        "sameLot": true,
+        "destComponentPrefix": null,
+        "detail": "Amber - 2/12/12 Bottles: 896/1200 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": -26.5
       }
     ],
     "basecampAlerts": [
@@ -14016,7 +14030,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-10-07",
-  "lastSync": "Oct 7, 2026 \u00b7 12:08 PM"
+  "lastSync": "Oct 7, 2026 \u00b7 4:08 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
