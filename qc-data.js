@@ -7183,10 +7183,30 @@ const BATCHES = [
     "tankRemainingBbl": 371.5,
     "tankBrewedBbl": 607.0,
     "tankConflicts": [],
-    "lastReading": "2026-10-06",
+    "lastReading": "2026-10-07",
     "lastSource": "FIN",
-    "numReadings": 50,
+    "numReadings": 51,
     "readings": [
+      {
+        "date": "2026-10-07",
+        "sample": "AND 43-44/45-46 TK32",
+        "stage": "FIN",
+        "tank": "TK32",
+        "sourceFile": "finished abita beer 2026.xlsx",
+        "sourceSheet": "AG",
+        "pH": 4.61,
+        "DO": 42.0,
+        "CO2 Vols": 2.66,
+        "Calories": 245.95,
+        "ADF": 82.62,
+        "RDF": 68.97,
+        "OG": 18.18,
+        "AE": 3.16,
+        "RE": 6.03,
+        "HAZE": 45.57802391052246,
+        "SG": 1.01235,
+        "ABV": 8.3
+      },
       {
         "date": "2026-10-06",
         "sample": "AND 43-44/45-46 TK32",
@@ -8171,14 +8191,14 @@ const BATCHES = [
       }
     ],
     "aeLatest": {
-      "v": 3.13,
+      "v": 3.16,
       "stage": "FIN",
-      "date": "2026-10-06"
+      "date": "2026-10-07"
     },
     "abvLatest": {
-      "v": 8.19,
+      "v": 8.3,
       "stage": "FIN",
-      "date": "2026-10-06"
+      "date": "2026-10-07"
     }
   },
   {
@@ -14834,7 +14854,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-10-07",
-  "lastSync": "Oct 7, 2026 \u00b7 12:09 AM"
+  "lastSync": "Oct 7, 2026 \u00b7 4:08 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
