@@ -2261,10 +2261,21 @@ const BATCHES = [
     "tankRemainingBbl": 163.0,
     "tankBrewedBbl": 163.0,
     "tankConflicts": [],
-    "lastReading": "2026-10-07",
-    "lastSource": "GC",
-    "numReadings": 17,
+    "lastReading": "2026-10-08",
+    "lastSource": "FERM",
+    "numReadings": 18,
     "readings": [
+      {
+        "date": "2026-10-08",
+        "sample": "LHT 005 BH14",
+        "stage": "FERM",
+        "tank": "BH14",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 4.06,
+        "Turbidity": 458.245041847229,
+        "AE": -0.28
+      },
       {
         "date": "2026-10-07",
         "sample": "LHT 5 BH14",
@@ -2527,15 +2538,15 @@ const BATCHES = [
     "brewDate": "2026-10-02",
     "brewDateSource": "basecamp",
     "brewer": "Laren Ball",
-    "brewVolumeBbl": null,
-    "vicinityStage": null,
+    "brewVolumeBbl": 166.0,
+    "vicinityStage": "Ops-Closed",
     "age": 6,
     "stage": "Fermenting",
     "tank": "BH17",
     "labTank": "BH17",
-    "tankSource": "lab",
-    "tankRemainingBbl": null,
-    "tankBrewedBbl": null,
+    "tankSource": "vicinity",
+    "tankRemainingBbl": 166.0,
+    "tankBrewedBbl": 166.0,
     "tankConflicts": [],
     "lastReading": "2026-10-07",
     "lastSource": "GC",
@@ -2654,6 +2665,17 @@ const BATCHES = [
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10363428415",
         "completed": true,
         "remainingBbl": null
+      },
+      {
+        "date": "2026-10-02",
+        "action": "BREW",
+        "from": "",
+        "to": "BH17",
+        "volume": 166.0,
+        "detail": "TBD 006",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 166.0
       }
     ],
     "packagingLog": [],
@@ -3857,7 +3879,7 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10380812773",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       },
       {
@@ -3869,7 +3891,7 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10381344287",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -3926,6 +3948,535 @@ const BATCHES = [
       "date": "2026-09-16"
     },
     "abvLatest": null
+  },
+  {
+    "id": "GLD 055, 056, 068, 069",
+    "product": "GLD",
+    "section": "brewhouse",
+    "brewNums": [
+      55,
+      56,
+      68,
+      69
+    ],
+    "brewDate": "2026-07-23",
+    "brewDateSource": "basecamp",
+    "brewer": "Chris Fernandez",
+    "brewVolumeBbl": 842.5,
+    "vicinityStage": "Ops-Closed",
+    "age": 77,
+    "stage": "Aging",
+    "tank": "BH43",
+    "labTank": "BH43",
+    "tankSource": "vicinity",
+    "tankRemainingBbl": 429.5,
+    "tankBrewedBbl": 842.5,
+    "tankConflicts": [],
+    "lastReading": "2026-10-06",
+    "lastSource": "GC",
+    "numReadings": 19,
+    "readings": [
+      {
+        "date": "2026-10-06",
+        "sample": "GLD 68,69 BH43",
+        "stage": "GC",
+        "tank": "BH43",
+        "sourceFile": "gc 2026.xlsx",
+        "sourceSheet": "OCT",
+        "Diacetyl": 0.0798,
+        "Pentanedione": 0.0,
+        "Total VDK": 0.0798
+      },
+      {
+        "date": "2026-10-06",
+        "sample": "GLD 68-69 BH43",
+        "stage": "FERM",
+        "tank": "BH43",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 4.3,
+        "Turbidity": 365.0237832069397,
+        "AE": 1.6
+      },
+      {
+        "date": "2026-10-06",
+        "sample": "GLD 68,69 BH43",
+        "stage": "GC",
+        "tank": "BH43",
+        "sourceFile": "gc 2026.xlsx",
+        "sourceSheet": "OCT",
+        "Diacetyl": 0.0,
+        "Pentanedione": 0.0,
+        "Total VDK": 0.0
+      },
+      {
+        "date": "2026-10-02",
+        "sample": "GLD 068 BH43",
+        "stage": "WORT",
+        "tank": "BH43",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "G",
+        "Wort pH": 5.5,
+        "SRM": 3.794416243654822,
+        "IBU (W)": 16.0,
+        "Calories": 143.52,
+        "ADF": -1.29,
+        "RDF": -1.1,
+        "OG": 9.82,
+        "AE": 9.94,
+        "RE": 9.92,
+        "HAZE": 3410.9898262023926,
+        "SG": 1.03976,
+        "ABV": -0.07
+      },
+      {
+        "date": "2026-10-02",
+        "sample": "GLD 069 BH43",
+        "stage": "WORT",
+        "tank": "BH43",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "G",
+        "Wort pH": 5.53,
+        "SRM": 3.299492385786802,
+        "IBU (W)": 13.750000000000002,
+        "Calories": 142.61,
+        "ADF": -1.13,
+        "RDF": -0.96,
+        "OG": 9.76,
+        "AE": 9.87,
+        "RE": 9.85,
+        "HAZE": 3323.699077606201,
+        "SG": 1.03945,
+        "ABV": -0.06
+      },
+      {
+        "date": "2026-07-27",
+        "sample": "GLD 55-56 BH43",
+        "stage": "FERM",
+        "tank": "BH43",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 4.47,
+        "Turbidity": 508.7774133682251,
+        "AE": 1.48
+      },
+      {
+        "date": "2026-07-27",
+        "sample": "GLD 55,56 BH43",
+        "stage": "GC",
+        "tank": "BH43",
+        "sourceFile": "gc 2026.xlsx",
+        "sourceSheet": "JUL",
+        "Diacetyl": 0.0264,
+        "Pentanedione": 0.0,
+        "Total VDK": 0.0264
+      },
+      {
+        "date": "2026-07-24",
+        "sample": "GLD 056 BH43",
+        "stage": "WORT",
+        "tank": "BH43",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "G",
+        "Wort pH": 5.46,
+        "SRM": 4.111675126903553,
+        "IBU (W)": 15.25,
+        "Calories": 144.58,
+        "ADF": -1.76,
+        "RDF": -1.5,
+        "OG": 9.88,
+        "AE": 10.06,
+        "RE": 10.02,
+        "HAZE": 2100.364906311035,
+        "SG": 1.04022,
+        "ABV": -0.09
+      },
+      {
+        "date": "2026-07-24",
+        "sample": "GLD 055 BH43",
+        "stage": "WORT",
+        "tank": "BH43",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "G",
+        "Wort pH": 5.45,
+        "SRM": 4.2639593908629445,
+        "IBU (W)": 14.149999999999999,
+        "Calories": 143.62,
+        "ADF": -1.72,
+        "RDF": -1.47,
+        "OG": 9.82,
+        "AE": 9.99,
+        "RE": 9.96,
+        "HAZE": 1776.413480758667,
+        "SG": 1.03994,
+        "ABV": -0.09
+      }
+    ],
+    "fermLog": [
+      {
+        "date": "2026-07-24",
+        "tank": "BH43",
+        "temp": 59.0,
+        "gravity": 9.1,
+        "ph": 4.49,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "GLD"
+      },
+      {
+        "date": "2026-07-26",
+        "tank": "BH43",
+        "temp": 61.0,
+        "gravity": 2.0,
+        "ph": 3.98,
+        "actions": "SHUT-IN",
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "GLD"
+      },
+      {
+        "date": "2026-07-27",
+        "tank": "BH43",
+        "temp": 60.0,
+        "gravity": 1.6,
+        "ph": 3.96,
+        "actions": "DROPPED",
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "GLD"
+      },
+      {
+        "date": "2026-07-31",
+        "tank": "BH43",
+        "temp": 35.0,
+        "gravity": 1.9,
+        "ph": 4.02,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "GLD"
+      },
+      {
+        "date": "2026-08-06",
+        "tank": "BH43",
+        "temp": 33.0,
+        "gravity": 1.7,
+        "ph": 3.98,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "GLD"
+      },
+      {
+        "date": "2026-08-14",
+        "tank": "BH43",
+        "temp": 36.0,
+        "gravity": 1.5,
+        "ph": 4.05,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "GLD"
+      },
+      {
+        "date": "2026-09-02",
+        "tank": "BH43",
+        "temp": 41.0,
+        "gravity": 1.9,
+        "ph": 4.02,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "GLD"
+      }
+    ],
+    "yeastPitches": [
+      {
+        "date": "2026-07-23",
+        "tank": "BH43",
+        "cellCount": 858865794.15,
+        "viability": 0.7379,
+        "pitchRate": 195.63,
+        "yeastGen": "K-1",
+        "yeastSource": "BH14",
+        "yeastBrewNum": "GLD54",
+        "countType": "Yeast"
+      },
+      {
+        "date": "2026-07-23",
+        "tank": "BH43",
+        "cellCount": 19221920.666666668,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": "2 days",
+        "countType": "FV"
+      },
+      {
+        "date": "2026-10-01",
+        "tank": "BH43",
+        "cellCount": 4009000000.0,
+        "viability": 0.98,
+        "pitchRate": 47.34,
+        "yeastGen": "L-2",
+        "yeastSource": "BH44",
+        "yeastBrewNum": "GLD067",
+        "countType": "Yeast"
+      }
+    ],
+    "transferLog": [
+      {
+        "date": "2026-07-23",
+        "action": "BREW",
+        "from": "",
+        "to": "BH43",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10122555367",
+        "completed": true,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-07-23",
+        "action": "BREW",
+        "from": "",
+        "to": "BH43",
+        "volume": 209.0,
+        "detail": "GLD 055",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 209.0
+      },
+      {
+        "date": "2026-07-23",
+        "action": "BREW",
+        "from": "",
+        "to": "BH43",
+        "volume": 204.0,
+        "detail": "GLD 056",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 413.0
+      },
+      {
+        "date": "2026-08-20",
+        "action": "XFER",
+        "from": "BH40",
+        "to": "BH19",
+        "volume": 200.0,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10220613091",
+        "completed": true,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-08-20",
+        "action": "TRANSFER",
+        "from": "BH43",
+        "to": "BH46",
+        "volume": 103.0,
+        "lossBbl": 0.0,
+        "sameLot": false,
+        "destComponentPrefix": "FRT",
+        "detail": null,
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 310.0
+      },
+      {
+        "date": "2026-08-21",
+        "action": "TRANSFER",
+        "from": "BH46",
+        "to": "BT32",
+        "volume": 611.0,
+        "lossBbl": 11.0,
+        "sameLot": false,
+        "destComponentPrefix": "BBT",
+        "detail": "11 BBL loss in transfer",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 600.0
+      },
+      {
+        "date": "2026-09-03",
+        "action": "TRANSFER",
+        "from": "BH43",
+        "to": "BH47",
+        "volume": 310.0,
+        "lossBbl": 0.0,
+        "sameLot": false,
+        "destComponentPrefix": "FRT",
+        "detail": null,
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 0.0
+      },
+      {
+        "date": "2026-10-01",
+        "action": "BREW",
+        "from": "",
+        "to": "BH43",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10358686022",
+        "completed": true,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-10-01",
+        "action": "BREW",
+        "from": "",
+        "to": "BH43",
+        "volume": 213.0,
+        "detail": "GLD 068",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 213.0
+      },
+      {
+        "date": "2026-10-01",
+        "action": "BREW",
+        "from": "",
+        "to": "BH43",
+        "volume": 216.5,
+        "detail": "GLD 069",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 429.5
+      }
+    ],
+    "packagingLog": [
+      {
+        "date": "2026-08-25",
+        "action": "PACKAGE",
+        "from": "BT32",
+        "to": "",
+        "volume": 160.5,
+        "lossBbl": null,
+        "sameLot": true,
+        "destComponentPrefix": null,
+        "detail": "Purple Haze - 4/6/12 Bottles: 2108/2110 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 439.5
+      },
+      {
+        "date": "2026-08-26",
+        "action": "PACKAGE",
+        "from": "BT32",
+        "to": "",
+        "volume": 181.44,
+        "lossBbl": null,
+        "sameLot": true,
+        "destComponentPrefix": null,
+        "detail": "Purple Haze - 4/6/12 Cans: 2299/2322 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 258.1
+      },
+      {
+        "date": "2026-08-26",
+        "action": "PACKAGE",
+        "from": "BT32",
+        "to": "",
+        "volume": 37.56,
+        "lossBbl": null,
+        "sameLot": true,
+        "destComponentPrefix": null,
+        "detail": "Purple Haze - 2/12/12 Cans: 480/480 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 220.5
+      },
+      {
+        "date": "2026-08-27",
+        "action": "PACKAGE",
+        "from": "BT32",
+        "to": "",
+        "volume": 161.5,
+        "lossBbl": null,
+        "sameLot": true,
+        "destComponentPrefix": null,
+        "detail": "Purple Haze - 1/2 Keg: 155/155 1/2BBL; Purple Haze - 1/4 Keg: 288/288 1/4BBL",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 59.0
+      },
+      {
+        "date": "2026-09-18",
+        "action": "PACKAGE",
+        "from": "BT32",
+        "to": "",
+        "volume": 24.0,
+        "lossBbl": null,
+        "sameLot": true,
+        "destComponentPrefix": null,
+        "detail": "Purple Haze - 1/2 Keg: 192/294 1/2BBL; Purple Haze - 1/4 Keg: 264/443 1/4BBL",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 35.0
+      },
+      {
+        "date": "2026-09-29",
+        "action": "PACKAGE",
+        "from": "BT32",
+        "to": "",
+        "volume": 11.4,
+        "lossBbl": null,
+        "sameLot": true,
+        "destComponentPrefix": null,
+        "detail": "Purple Haze - 4/6/12 Cans: 1002/1053 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 23.6
+      },
+      {
+        "date": "2026-09-29",
+        "action": "PACKAGE",
+        "from": "BT32",
+        "to": "",
+        "volume": 46.6,
+        "lossBbl": null,
+        "sameLot": true,
+        "destComponentPrefix": null,
+        "detail": "Purple Haze - 2/12/12 Cans: 600/594 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": -23.0
+      }
+    ],
+    "basecampAlerts": [
+      {
+        "metric": "Wort pH",
+        "value": 5.5,
+        "low": 4.9,
+        "high": 5.3,
+        "date": "2026-10-02",
+        "stage": "WORT",
+        "sample": "GLD 068 BH43",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10366651641",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
+        "also": [
+          {
+            "value": 5.53,
+            "date": "2026-10-02",
+            "stage": "WORT",
+            "sample": "GLD 069 BH43"
+          }
+        ]
+      }
+    ],
+    "aeLatest": {
+      "v": 1.9,
+      "stage": "FERM",
+      "date": "2026-09-02"
+    },
+    "abvLatest": {
+      "v": 4.3,
+      "stage": "FERM",
+      "date": "2026-10-06"
+    }
   },
   {
     "id": "GLD 066, 067",
@@ -4144,7 +4695,7 @@ const BATCHES = [
     "tank": "BH45",
     "labTank": "BH45",
     "tankSource": "vicinity",
-    "tankRemainingBbl": 394.5,
+    "tankRemainingBbl": 379.5,
     "tankBrewedBbl": 394.5,
     "tankConflicts": [],
     "lastReading": "2026-10-07",
@@ -4261,6 +4812,20 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 394.5
+      },
+      {
+        "date": "2026-10-02",
+        "action": "TRANSFER",
+        "from": "BH45",
+        "to": "BH17",
+        "volume": 15.0,
+        "lossBbl": 0.0,
+        "sameLot": false,
+        "destComponentPrefix": "WRT",
+        "detail": null,
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 379.5
       }
     ],
     "packagingLog": [],
@@ -7532,513 +8097,6 @@ const BATCHES = [
     "abvLatest": null
   },
   {
-    "id": "GLD 055, 056, 068, 069",
-    "product": "GLD",
-    "section": "brite",
-    "brewNums": [
-      55,
-      56,
-      68,
-      69
-    ],
-    "brewDate": "2026-07-23",
-    "brewDateSource": "basecamp",
-    "brewer": "Chris Fernandez",
-    "brewVolumeBbl": 413.0,
-    "vicinityStage": "Ops-Closed",
-    "age": 77,
-    "stage": "Brite",
-    "tank": "BH47",
-    "labTank": "BH43",
-    "tankSource": "vicinity",
-    "tankRemainingBbl": 0.0,
-    "tankBrewedBbl": 413.0,
-    "tankConflicts": [],
-    "lastReading": "2026-10-06",
-    "lastSource": "GC",
-    "numReadings": 19,
-    "readings": [
-      {
-        "date": "2026-10-06",
-        "sample": "GLD 68,69 BH43",
-        "stage": "GC",
-        "tank": "BH43",
-        "sourceFile": "gc 2026.xlsx",
-        "sourceSheet": "OCT",
-        "Diacetyl": 0.0798,
-        "Pentanedione": 0.0,
-        "Total VDK": 0.0798
-      },
-      {
-        "date": "2026-10-06",
-        "sample": "GLD 68-69 BH43",
-        "stage": "FERM",
-        "tank": "BH43",
-        "sourceFile": "bh samples 2026.xlsx",
-        "sourceSheet": "Abita Brews",
-        "ABV": 4.3,
-        "Turbidity": 365.0237832069397,
-        "AE": 1.6
-      },
-      {
-        "date": "2026-10-06",
-        "sample": "GLD 68,69 BH43",
-        "stage": "GC",
-        "tank": "BH43",
-        "sourceFile": "gc 2026.xlsx",
-        "sourceSheet": "OCT",
-        "Diacetyl": 0.0,
-        "Pentanedione": 0.0,
-        "Total VDK": 0.0
-      },
-      {
-        "date": "2026-10-02",
-        "sample": "GLD 068 BH43",
-        "stage": "WORT",
-        "tank": "BH43",
-        "sourceFile": "wort abita samples 2026.xlsx",
-        "sourceSheet": "G",
-        "Wort pH": 5.5,
-        "SRM": 3.794416243654822,
-        "IBU (W)": 16.0,
-        "Calories": 143.52,
-        "ADF": -1.29,
-        "RDF": -1.1,
-        "OG": 9.82,
-        "AE": 9.94,
-        "RE": 9.92,
-        "HAZE": 3410.9898262023926,
-        "SG": 1.03976,
-        "ABV": -0.07
-      },
-      {
-        "date": "2026-10-02",
-        "sample": "GLD 069 BH43",
-        "stage": "WORT",
-        "tank": "BH43",
-        "sourceFile": "wort abita samples 2026.xlsx",
-        "sourceSheet": "G",
-        "Wort pH": 5.53,
-        "SRM": 3.299492385786802,
-        "IBU (W)": 13.750000000000002,
-        "Calories": 142.61,
-        "ADF": -1.13,
-        "RDF": -0.96,
-        "OG": 9.76,
-        "AE": 9.87,
-        "RE": 9.85,
-        "HAZE": 3323.699077606201,
-        "SG": 1.03945,
-        "ABV": -0.06
-      },
-      {
-        "date": "2026-07-27",
-        "sample": "GLD 55-56 BH43",
-        "stage": "FERM",
-        "tank": "BH43",
-        "sourceFile": "bh samples 2026.xlsx",
-        "sourceSheet": "Abita Brews",
-        "ABV": 4.47,
-        "Turbidity": 508.7774133682251,
-        "AE": 1.48
-      },
-      {
-        "date": "2026-07-27",
-        "sample": "GLD 55,56 BH43",
-        "stage": "GC",
-        "tank": "BH43",
-        "sourceFile": "gc 2026.xlsx",
-        "sourceSheet": "JUL",
-        "Diacetyl": 0.0264,
-        "Pentanedione": 0.0,
-        "Total VDK": 0.0264
-      },
-      {
-        "date": "2026-07-24",
-        "sample": "GLD 056 BH43",
-        "stage": "WORT",
-        "tank": "BH43",
-        "sourceFile": "wort abita samples 2026.xlsx",
-        "sourceSheet": "G",
-        "Wort pH": 5.46,
-        "SRM": 4.111675126903553,
-        "IBU (W)": 15.25,
-        "Calories": 144.58,
-        "ADF": -1.76,
-        "RDF": -1.5,
-        "OG": 9.88,
-        "AE": 10.06,
-        "RE": 10.02,
-        "HAZE": 2100.364906311035,
-        "SG": 1.04022,
-        "ABV": -0.09
-      },
-      {
-        "date": "2026-07-24",
-        "sample": "GLD 055 BH43",
-        "stage": "WORT",
-        "tank": "BH43",
-        "sourceFile": "wort abita samples 2026.xlsx",
-        "sourceSheet": "G",
-        "Wort pH": 5.45,
-        "SRM": 4.2639593908629445,
-        "IBU (W)": 14.149999999999999,
-        "Calories": 143.62,
-        "ADF": -1.72,
-        "RDF": -1.47,
-        "OG": 9.82,
-        "AE": 9.99,
-        "RE": 9.96,
-        "HAZE": 1776.413480758667,
-        "SG": 1.03994,
-        "ABV": -0.09
-      }
-    ],
-    "fermLog": [
-      {
-        "date": "2026-07-24",
-        "tank": "BH43",
-        "temp": 59.0,
-        "gravity": 9.1,
-        "ph": 4.49,
-        "actions": null,
-        "sourceFile": "cellar records 2026.xlsx",
-        "sourceSheet": "GLD"
-      },
-      {
-        "date": "2026-07-26",
-        "tank": "BH43",
-        "temp": 61.0,
-        "gravity": 2.0,
-        "ph": 3.98,
-        "actions": "SHUT-IN",
-        "sourceFile": "cellar records 2026.xlsx",
-        "sourceSheet": "GLD"
-      },
-      {
-        "date": "2026-07-27",
-        "tank": "BH43",
-        "temp": 60.0,
-        "gravity": 1.6,
-        "ph": 3.96,
-        "actions": "DROPPED",
-        "sourceFile": "cellar records 2026.xlsx",
-        "sourceSheet": "GLD"
-      },
-      {
-        "date": "2026-07-31",
-        "tank": "BH43",
-        "temp": 35.0,
-        "gravity": 1.9,
-        "ph": 4.02,
-        "actions": null,
-        "sourceFile": "cellar records 2026.xlsx",
-        "sourceSheet": "GLD"
-      },
-      {
-        "date": "2026-08-06",
-        "tank": "BH43",
-        "temp": 33.0,
-        "gravity": 1.7,
-        "ph": 3.98,
-        "actions": null,
-        "sourceFile": "cellar records 2026.xlsx",
-        "sourceSheet": "GLD"
-      },
-      {
-        "date": "2026-08-14",
-        "tank": "BH43",
-        "temp": 36.0,
-        "gravity": 1.5,
-        "ph": 4.05,
-        "actions": null,
-        "sourceFile": "cellar records 2026.xlsx",
-        "sourceSheet": "GLD"
-      },
-      {
-        "date": "2026-09-02",
-        "tank": "BH43",
-        "temp": 41.0,
-        "gravity": 1.9,
-        "ph": 4.02,
-        "actions": null,
-        "sourceFile": "cellar records 2026.xlsx",
-        "sourceSheet": "GLD"
-      }
-    ],
-    "yeastPitches": [
-      {
-        "date": "2026-07-23",
-        "tank": "BH43",
-        "cellCount": 858865794.15,
-        "viability": 0.7379,
-        "pitchRate": 195.63,
-        "yeastGen": "K-1",
-        "yeastSource": "BH14",
-        "yeastBrewNum": "GLD54",
-        "countType": "Yeast"
-      },
-      {
-        "date": "2026-07-23",
-        "tank": "BH43",
-        "cellCount": 19221920.666666668,
-        "viability": null,
-        "pitchRate": null,
-        "yeastGen": null,
-        "yeastSource": null,
-        "yeastBrewNum": "2 days",
-        "countType": "FV"
-      },
-      {
-        "date": "2026-10-01",
-        "tank": "BH43",
-        "cellCount": 4009000000.0,
-        "viability": 0.98,
-        "pitchRate": 47.34,
-        "yeastGen": "L-2",
-        "yeastSource": "BH44",
-        "yeastBrewNum": "GLD067",
-        "countType": "Yeast"
-      }
-    ],
-    "transferLog": [
-      {
-        "date": "2026-07-23",
-        "action": "BREW",
-        "from": "",
-        "to": "BH43",
-        "volume": null,
-        "detail": null,
-        "project": "brewhouse",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10122555367",
-        "completed": true,
-        "remainingBbl": null
-      },
-      {
-        "date": "2026-07-23",
-        "action": "BREW",
-        "from": "",
-        "to": "BH43",
-        "volume": 209.0,
-        "detail": "GLD 055",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 209.0
-      },
-      {
-        "date": "2026-07-23",
-        "action": "BREW",
-        "from": "",
-        "to": "BH43",
-        "volume": 204.0,
-        "detail": "GLD 056",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 413.0
-      },
-      {
-        "date": "2026-08-20",
-        "action": "XFER",
-        "from": "BH40",
-        "to": "BH19",
-        "volume": 200.0,
-        "detail": null,
-        "project": "cellar",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10220613091",
-        "completed": true,
-        "remainingBbl": null
-      },
-      {
-        "date": "2026-08-20",
-        "action": "TRANSFER",
-        "from": "BH43",
-        "to": "BH46",
-        "volume": 103.0,
-        "lossBbl": 0.0,
-        "sameLot": false,
-        "destComponentPrefix": "FRT",
-        "detail": null,
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 310.0
-      },
-      {
-        "date": "2026-08-21",
-        "action": "TRANSFER",
-        "from": "BH46",
-        "to": "BT32",
-        "volume": 611.0,
-        "lossBbl": 11.0,
-        "sameLot": false,
-        "destComponentPrefix": "BBT",
-        "detail": "11 BBL loss in transfer",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 600.0
-      },
-      {
-        "date": "2026-09-03",
-        "action": "TRANSFER",
-        "from": "BH43",
-        "to": "BH47",
-        "volume": 310.0,
-        "lossBbl": 0.0,
-        "sameLot": false,
-        "destComponentPrefix": "FRT",
-        "detail": null,
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 0.0
-      },
-      {
-        "date": "2026-10-01",
-        "action": "BREW",
-        "from": "",
-        "to": "BH43",
-        "volume": null,
-        "detail": null,
-        "project": "brewhouse",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10358686022",
-        "completed": true,
-        "remainingBbl": null
-      }
-    ],
-    "packagingLog": [
-      {
-        "date": "2026-08-25",
-        "action": "PACKAGE",
-        "from": "BT32",
-        "to": "",
-        "volume": 160.5,
-        "lossBbl": null,
-        "sameLot": true,
-        "destComponentPrefix": null,
-        "detail": "Purple Haze - 4/6/12 Bottles: 2108/2110 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 439.5
-      },
-      {
-        "date": "2026-08-26",
-        "action": "PACKAGE",
-        "from": "BT32",
-        "to": "",
-        "volume": 181.44,
-        "lossBbl": null,
-        "sameLot": true,
-        "destComponentPrefix": null,
-        "detail": "Purple Haze - 4/6/12 Cans: 2299/2322 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 258.1
-      },
-      {
-        "date": "2026-08-26",
-        "action": "PACKAGE",
-        "from": "BT32",
-        "to": "",
-        "volume": 37.56,
-        "lossBbl": null,
-        "sameLot": true,
-        "destComponentPrefix": null,
-        "detail": "Purple Haze - 2/12/12 Cans: 480/480 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 220.5
-      },
-      {
-        "date": "2026-08-27",
-        "action": "PACKAGE",
-        "from": "BT32",
-        "to": "",
-        "volume": 161.5,
-        "lossBbl": null,
-        "sameLot": true,
-        "destComponentPrefix": null,
-        "detail": "Purple Haze - 1/2 Keg: 155/155 1/2BBL; Purple Haze - 1/4 Keg: 288/288 1/4BBL",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 59.0
-      },
-      {
-        "date": "2026-09-18",
-        "action": "PACKAGE",
-        "from": "BT32",
-        "to": "",
-        "volume": 24.0,
-        "lossBbl": null,
-        "sameLot": true,
-        "destComponentPrefix": null,
-        "detail": "Purple Haze - 1/2 Keg: 192/294 1/2BBL; Purple Haze - 1/4 Keg: 264/443 1/4BBL",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 35.0
-      },
-      {
-        "date": "2026-09-29",
-        "action": "PACKAGE",
-        "from": "BT32",
-        "to": "",
-        "volume": 11.4,
-        "lossBbl": null,
-        "sameLot": true,
-        "destComponentPrefix": null,
-        "detail": "Purple Haze - 4/6/12 Cans: 1002/1053 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 23.6
-      },
-      {
-        "date": "2026-09-29",
-        "action": "PACKAGE",
-        "from": "BT32",
-        "to": "",
-        "volume": 46.6,
-        "lossBbl": null,
-        "sameLot": true,
-        "destComponentPrefix": null,
-        "detail": "Purple Haze - 2/12/12 Cans: 600/594 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": -23.0
-      }
-    ],
-    "basecampAlerts": [
-      {
-        "metric": "Wort pH",
-        "value": 5.5,
-        "low": 4.9,
-        "high": 5.3,
-        "date": "2026-10-02",
-        "stage": "WORT",
-        "sample": "GLD 068 BH43",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10366651641",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
-        "also": [
-          {
-            "value": 5.53,
-            "date": "2026-10-02",
-            "stage": "WORT",
-            "sample": "GLD 069 BH43"
-          }
-        ]
-      }
-    ],
-    "aeLatest": {
-      "v": 1.9,
-      "stage": "FERM",
-      "date": "2026-09-02"
-    },
-    "abvLatest": {
-      "v": 4.3,
-      "stage": "FERM",
-      "date": "2026-10-06"
-    }
-  },
-  {
     "id": "AND 043, 044, 045, 046",
     "product": "AND",
     "section": "brite",
@@ -10045,8 +10103,8 @@ const FERMENTERS = [
           "gravity": 0.55,
           "ph": 4.07
         },
-        "abvLastReading": "2026-10-07",
-        "abvLastValue": 3.82,
+        "abvLastReading": "2026-10-08",
+        "abvLastValue": 4.06,
         "vdkLastReading": "2026-10-07",
         "vdkLastValue": 0.0,
         "vicinityDepartedAt": null,
@@ -10241,10 +10299,10 @@ const FERMENTERS = [
         "brewNums": [
           6
         ],
-        "firstEvidence": "2026-10-06",
-        "lastEvidence": "2026-10-07",
-        "brewDate": null,
-        "vicinityResidentAsOf": null,
+        "firstEvidence": "2026-10-02",
+        "lastEvidence": "2026-10-02",
+        "brewDate": "2026-10-02",
+        "vicinityResidentAsOf": "2026-10-02",
         "cellarLastReading": null,
         "cellarLastReadingValues": null,
         "cellarPrevReading": null,
@@ -10256,7 +10314,7 @@ const FERMENTERS = [
         "vicinityDepartedAt": null,
         "vacated": false,
         "readingAgeDays": null,
-        "batchAgeDays": 2
+        "batchAgeDays": 6
       },
       {
         "tank": "BH17",
@@ -12619,7 +12677,9 @@ const FERMENTERS = [
   {
     "tank": "BH43",
     "status": "active",
-    "occupantIds": [],
+    "occupantIds": [
+      "GLD 055, 056, 068, 069"
+    ],
     "vicinityOccupants": [],
     "resolvedOccupancy": [
       {
@@ -12629,10 +12689,10 @@ const FERMENTERS = [
           68,
           69
         ],
-        "firstEvidence": "2026-10-06",
-        "lastEvidence": "2026-10-06",
-        "brewDate": null,
-        "vicinityResidentAsOf": null,
+        "firstEvidence": "2026-10-01",
+        "lastEvidence": "2026-10-01",
+        "brewDate": "2026-10-01",
+        "vicinityResidentAsOf": "2026-10-01",
         "cellarLastReading": null,
         "cellarLastReadingValues": null,
         "cellarPrevReading": null,
@@ -12644,7 +12704,7 @@ const FERMENTERS = [
         "vicinityDepartedAt": null,
         "vacated": false,
         "readingAgeDays": null,
-        "batchAgeDays": 2
+        "batchAgeDays": 7
       },
       {
         "tank": "BH43",
@@ -12834,9 +12894,9 @@ const FERMENTERS = [
           58
         ],
         "firstEvidence": "2026-09-30",
-        "lastEvidence": "2026-09-30",
+        "lastEvidence": "2026-10-07",
         "brewDate": "2026-09-30",
-        "vicinityResidentAsOf": "2026-09-30",
+        "vicinityResidentAsOf": null,
         "cellarLastReading": null,
         "cellarLastReadingValues": null,
         "cellarPrevReading": null,
@@ -12845,7 +12905,7 @@ const FERMENTERS = [
         "abvLastValue": 4.48,
         "vdkLastReading": "2026-10-07",
         "vdkLastValue": 0.0,
-        "vicinityDepartedAt": null,
+        "vicinityDepartedAt": "2026-10-02",
         "vacated": false,
         "readingAgeDays": null,
         "batchAgeDays": 8
@@ -14087,7 +14147,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-10-08",
-  "lastSync": "Oct 8, 2026 \u00b7 4:10 AM"
+  "lastSync": "Oct 8, 2026 \u00b7 12:09 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
