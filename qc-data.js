@@ -5731,7 +5731,7 @@ const BATCHES = [
         "from": "BT30",
         "to": "",
         "volume": null,
-        "detail": "744 CASES",
+        "detail": "544 CASES",
         "project": "packaging",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10387279992",
         "completed": false,
@@ -5743,7 +5743,7 @@ const BATCHES = [
         "from": "BT24,BT30",
         "to": "",
         "volume": null,
-        "detail": "2200 CASES",
+        "detail": "1,900 CASES",
         "project": "packaging",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10387587583",
         "completed": false,
@@ -13104,7 +13104,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-10-12",
-  "lastSync": "Oct 12, 2026 \u00b7 4:09 PM"
+  "lastSync": "Oct 12, 2026 \u00b7 8:10 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
