@@ -3481,9 +3481,9 @@ const BATCHES = [
       {
         "date": "2026-10-13",
         "tank": "BH32",
-        "cellCount": null,
-        "viability": null,
-        "pitchRate": null,
+        "cellCount": 2220000000.0,
+        "viability": 0.828,
+        "pitchRate": 136.6,
         "yeastGen": "L-10",
         "yeastSource": "BH45",
         "yeastBrewNum": "AMB58",
@@ -3698,9 +3698,9 @@ const BATCHES = [
       {
         "date": "2026-10-13",
         "tank": "BH40",
-        "cellCount": null,
-        "viability": null,
-        "pitchRate": null,
+        "cellCount": 2220000000.0,
+        "viability": 0.828,
+        "pitchRate": 99.16,
         "yeastGen": "L-10",
         "yeastSource": "BH45",
         "yeastBrewNum": "AMB58",
@@ -5586,7 +5586,7 @@ const BATCHES = [
         "detail": "544 CASES",
         "project": "packaging",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10387279992",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       },
       {
@@ -5598,7 +5598,7 @@ const BATCHES = [
         "detail": "1,900 CASES",
         "project": "packaging",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10387587583",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -13360,7 +13360,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-10-13",
-  "lastSync": "Oct 13, 2026 \u00b7 12:06 PM"
+  "lastSync": "Oct 13, 2026 \u00b7 4:10 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
