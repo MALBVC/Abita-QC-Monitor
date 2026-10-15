@@ -3641,12 +3641,13 @@ const BATCHES = [
     }
   },
   {
-    "id": "AND 051, 052",
+    "id": "AND 051, 052, 053",
     "product": "AND",
     "section": "brewhouse",
     "brewNums": [
       51,
-      52
+      52,
+      53
     ],
     "brewDate": "2026-10-13",
     "brewDateSource": "basecamp",
@@ -3661,10 +3662,49 @@ const BATCHES = [
     "tankRemainingBbl": null,
     "tankBrewedBbl": null,
     "tankConflicts": [],
-    "lastReading": null,
-    "lastSource": null,
-    "numReadings": 2,
-    "readings": [],
+    "lastReading": "2026-10-14",
+    "lastSource": "WORT",
+    "numReadings": 4,
+    "readings": [
+      {
+        "date": "2026-10-14",
+        "sample": "AND 051 Bh32",
+        "stage": "WORT",
+        "tank": "BH32",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "AG",
+        "Wort pH": 5.28,
+        "SRM": 7.119289340101524,
+        "IBU (W)": 28.7,
+        "Calories": 275.13,
+        "ADF": -0.02,
+        "RDF": -0.03,
+        "OG": 18.14,
+        "AE": 18.14,
+        "RE": 18.14,
+        "SG": 1.07468,
+        "ABV": 0.0
+      },
+      {
+        "date": "2026-10-14",
+        "sample": "AND 053 BH32",
+        "stage": "WORT",
+        "tank": "BH32",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "AG",
+        "Wort pH": 5.28,
+        "SRM": 7.0431472081218285,
+        "IBU (W)": 29.95,
+        "Calories": 269.66,
+        "ADF": 0.16,
+        "RDF": 0.14,
+        "OG": 17.81,
+        "AE": 17.78,
+        "RE": 17.79,
+        "SG": 1.07309,
+        "ABV": 0.02
+      }
+    ],
     "fermLog": [],
     "yeastPitches": [
       {
@@ -3939,10 +3979,50 @@ const BATCHES = [
     "tankRemainingBbl": null,
     "tankBrewedBbl": null,
     "tankConflicts": [],
-    "lastReading": null,
-    "lastSource": null,
-    "numReadings": 2,
-    "readings": [],
+    "lastReading": "2026-10-14",
+    "lastSource": "WORT",
+    "numReadings": 4,
+    "readings": [
+      {
+        "date": "2026-10-14",
+        "sample": "GLD 073 BH40",
+        "stage": "WORT",
+        "tank": "BH40",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "G",
+        "Wort pH": 5.3,
+        "SRM": 4.137055837563452,
+        "IBU (W)": 16.0,
+        "Calories": 144.7,
+        "ADF": -1.03,
+        "RDF": -0.88,
+        "OG": 9.9,
+        "AE": 10.0,
+        "RE": 9.98,
+        "HAZE": 2806.103530883789,
+        "SG": 1.03999,
+        "ABV": -0.06
+      },
+      {
+        "date": "2026-10-14",
+        "sample": "GLD 074 BH40",
+        "stage": "WORT",
+        "tank": "BH40",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "G",
+        "Wort pH": 5.28,
+        "SRM": 3.972081218274112,
+        "IBU (W)": 14.000000000000002,
+        "Calories": 143.67,
+        "ADF": -1.23,
+        "RDF": -1.05,
+        "OG": 9.83,
+        "AE": 9.95,
+        "RE": 9.93,
+        "SG": 1.03978,
+        "ABV": -0.07
+      }
+    ],
     "fermLog": [],
     "yeastPitches": [
       {
@@ -11304,7 +11384,7 @@ const FERMENTERS = [
     "tank": "BH32",
     "status": "active",
     "occupantIds": [
-      "AND 051, 052"
+      "AND 051, 052, 053"
     ],
     "vicinityOccupants": [],
     "resolvedOccupancy": [
@@ -13769,7 +13849,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-10-15",
-  "lastSync": "Oct 15, 2026 \u00b7 12:11 AM"
+  "lastSync": "Oct 15, 2026 \u00b7 4:11 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
