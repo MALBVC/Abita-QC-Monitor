@@ -4275,15 +4275,15 @@ const BATCHES = [
     "brewDate": "2026-10-13",
     "brewDateSource": "basecamp",
     "brewer": "Chris Fernandez",
-    "brewVolumeBbl": null,
-    "vicinityStage": null,
+    "brewVolumeBbl": 300.5,
+    "vicinityStage": "Ops-Closed",
     "age": 3,
     "stage": "Fermenting",
     "tank": "BH32",
     "labTank": "BH32",
-    "tankSource": "lab",
-    "tankRemainingBbl": null,
-    "tankBrewedBbl": null,
+    "tankSource": "vicinity",
+    "tankRemainingBbl": 300.5,
+    "tankBrewedBbl": 300.5,
     "tankConflicts": [],
     "lastReading": "2026-10-14",
     "lastSource": "WORT",
@@ -4365,6 +4365,28 @@ const BATCHES = [
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10397654816",
         "completed": true,
         "remainingBbl": null
+      },
+      {
+        "date": "2026-10-13",
+        "action": "BREW",
+        "from": "",
+        "to": "BH32",
+        "volume": 148.5,
+        "detail": "AND 051",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 148.5
+      },
+      {
+        "date": "2026-10-13",
+        "action": "BREW",
+        "from": "",
+        "to": "BH32",
+        "volume": 152.0,
+        "detail": "AND 052",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 300.5
       }
     ],
     "packagingLog": [],
@@ -4592,15 +4614,15 @@ const BATCHES = [
     "brewDate": "2026-10-13",
     "brewDateSource": "basecamp",
     "brewer": "Chris Fernandez",
-    "brewVolumeBbl": null,
-    "vicinityStage": null,
+    "brewVolumeBbl": 418.5,
+    "vicinityStage": "Ops-Closed",
     "age": 3,
     "stage": "Fermenting",
     "tank": "BH40",
     "labTank": "BH40",
-    "tankSource": "lab",
-    "tankRemainingBbl": null,
-    "tankBrewedBbl": null,
+    "tankSource": "vicinity",
+    "tankRemainingBbl": 418.5,
+    "tankBrewedBbl": 418.5,
     "tankConflicts": [],
     "lastReading": "2026-10-16",
     "lastSource": "FERM",
@@ -4727,6 +4749,28 @@ const BATCHES = [
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10397624260",
         "completed": true,
         "remainingBbl": null
+      },
+      {
+        "date": "2026-10-13",
+        "action": "BREW",
+        "from": "",
+        "to": "BH40",
+        "volume": 211.0,
+        "detail": "GLD 073",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 211.0
+      },
+      {
+        "date": "2026-10-13",
+        "action": "BREW",
+        "from": "",
+        "to": "BH40",
+        "volume": 207.5,
+        "detail": "GLD 074",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 418.5
       }
     ],
     "packagingLog": [],
@@ -11556,6 +11600,30 @@ const FERMENTERS = [
         "tank": "BH32",
         "product": "AND",
         "brewNums": [
+          51,
+          52
+        ],
+        "firstEvidence": "2026-10-13",
+        "lastEvidence": "2026-10-13",
+        "brewDate": "2026-10-13",
+        "vicinityResidentAsOf": "2026-10-13",
+        "cellarLastReading": null,
+        "cellarLastReadingValues": null,
+        "cellarPrevReading": null,
+        "cellarPrevReadingValues": null,
+        "abvLastReading": null,
+        "abvLastValue": null,
+        "vdkLastReading": null,
+        "vdkLastValue": null,
+        "vicinityDepartedAt": null,
+        "vacated": false,
+        "readingAgeDays": null,
+        "batchAgeDays": 3
+      },
+      {
+        "tank": "BH32",
+        "product": "AND",
+        "brewNums": [
           39,
           40
         ],
@@ -11615,42 +11683,6 @@ const FERMENTERS = [
         "vacated": true,
         "readingAgeDays": 120,
         "batchAgeDays": 149
-      },
-      {
-        "tank": "BH32",
-        "product": "GLD",
-        "brewNums": [
-          25,
-          26,
-          27,
-          28,
-          29,
-          30
-        ],
-        "firstEvidence": "2026-04-15",
-        "lastEvidence": "2026-04-30",
-        "brewDate": "2026-04-15",
-        "vicinityResidentAsOf": null,
-        "cellarLastReading": "2026-04-30",
-        "cellarLastReadingValues": {
-          "temp": 35.0,
-          "gravity": 2.1,
-          "ph": 3.65
-        },
-        "cellarPrevReading": "2026-04-23",
-        "cellarPrevReadingValues": {
-          "temp": 36.0,
-          "gravity": 3.8,
-          "ph": 3.98
-        },
-        "abvLastReading": "2026-04-20",
-        "abvLastValue": 4.33,
-        "vdkLastReading": "2026-04-20",
-        "vdkLastValue": 0.0,
-        "vicinityDepartedAt": "2026-06-03",
-        "vacated": true,
-        "readingAgeDays": 169,
-        "batchAgeDays": 184
       }
     ]
   },
@@ -11758,8 +11790,38 @@ const FERMENTERS = [
     "tank": "BH34",
     "status": "active",
     "occupantIds": [],
-    "vicinityOccupants": [],
+    "vicinityOccupants": [
+      {
+        "product": "MGB",
+        "lot": "MGB26003",
+        "label": "Mardi Gras Bock",
+        "qtyBbl": 203.5
+      }
+    ],
     "resolvedOccupancy": [
+      {
+        "tank": "BH34",
+        "product": "MGB",
+        "brewNums": [
+          3
+        ],
+        "firstEvidence": "2026-10-14",
+        "lastEvidence": "2026-10-14",
+        "brewDate": "2026-10-14",
+        "vicinityResidentAsOf": "2026-10-14",
+        "cellarLastReading": null,
+        "cellarLastReadingValues": null,
+        "cellarPrevReading": null,
+        "cellarPrevReadingValues": null,
+        "abvLastReading": null,
+        "abvLastValue": null,
+        "vdkLastReading": null,
+        "vdkLastValue": null,
+        "vicinityDepartedAt": null,
+        "vacated": false,
+        "readingAgeDays": null,
+        "batchAgeDays": 2
+      },
       {
         "tank": "BH34",
         "product": "AND",
@@ -11823,38 +11885,6 @@ const FERMENTERS = [
         "vacated": true,
         "readingAgeDays": 113,
         "batchAgeDays": 135
-      },
-      {
-        "tank": "BH34",
-        "product": "STG",
-        "brewNums": [
-          7,
-          8
-        ],
-        "firstEvidence": "2026-04-28",
-        "lastEvidence": "2026-05-26",
-        "brewDate": "2026-04-28",
-        "vicinityResidentAsOf": null,
-        "cellarLastReading": "2026-05-26",
-        "cellarLastReadingValues": {
-          "temp": 33.0,
-          "gravity": 2.2,
-          "ph": 4.27
-        },
-        "cellarPrevReading": "2026-05-19",
-        "cellarPrevReadingValues": {
-          "temp": 34.0,
-          "gravity": 2.3,
-          "ph": 4.25
-        },
-        "abvLastReading": "2026-05-05",
-        "abvLastValue": 8.1,
-        "vdkLastReading": "2026-05-05",
-        "vdkLastValue": 0.069,
-        "vicinityDepartedAt": "2026-06-01",
-        "vacated": true,
-        "readingAgeDays": 143,
-        "batchAgeDays": 171
       }
     ]
   },
@@ -12222,10 +12252,10 @@ const FERMENTERS = [
           73,
           74
         ],
-        "firstEvidence": "2026-10-15",
-        "lastEvidence": "2026-10-16",
-        "brewDate": null,
-        "vicinityResidentAsOf": null,
+        "firstEvidence": "2026-10-13",
+        "lastEvidence": "2026-10-13",
+        "brewDate": "2026-10-13",
+        "vicinityResidentAsOf": "2026-10-13",
         "cellarLastReading": null,
         "cellarLastReadingValues": null,
         "cellarPrevReading": null,
@@ -12237,7 +12267,7 @@ const FERMENTERS = [
         "vicinityDepartedAt": null,
         "vacated": false,
         "readingAgeDays": null,
-        "batchAgeDays": 1
+        "batchAgeDays": 3
       },
       {
         "tank": "BH40",
@@ -12951,8 +12981,51 @@ const FERMENTERS = [
     "tank": "BH47",
     "status": "active",
     "occupantIds": [],
-    "vicinityOccupants": [],
+    "vicinityOccupants": [
+      {
+        "product": "MGB",
+        "lot": "MGB26001",
+        "label": "Mardi Gras Bock",
+        "qtyBbl": 205.5
+      },
+      {
+        "product": "MGB",
+        "lot": "MGB26002",
+        "label": "Mardi Gras Bock",
+        "qtyBbl": 206.0
+      },
+      {
+        "product": "MGB",
+        "lot": "MGB26004",
+        "label": "Mardi Gras Bock",
+        "qtyBbl": 202.0
+      }
+    ],
     "resolvedOccupancy": [
+      {
+        "tank": "BH47",
+        "product": "MGB",
+        "brewNums": [
+          1,
+          2
+        ],
+        "firstEvidence": "2026-10-14",
+        "lastEvidence": "2026-10-14",
+        "brewDate": "2026-10-14",
+        "vicinityResidentAsOf": "2026-10-14",
+        "cellarLastReading": null,
+        "cellarLastReadingValues": null,
+        "cellarPrevReading": null,
+        "cellarPrevReadingValues": null,
+        "abvLastReading": null,
+        "abvLastValue": null,
+        "vdkLastReading": null,
+        "vdkLastValue": null,
+        "vicinityDepartedAt": null,
+        "vacated": false,
+        "readingAgeDays": null,
+        "batchAgeDays": 2
+      },
       {
         "tank": "BH47",
         "product": "BGAL",
@@ -13020,40 +13093,6 @@ const FERMENTERS = [
         "vacated": true,
         "readingAgeDays": 102,
         "batchAgeDays": 136
-      },
-      {
-        "tank": "BH47",
-        "product": "GLD",
-        "brewNums": [
-          33,
-          34,
-          35,
-          36
-        ],
-        "firstEvidence": "2026-05-07",
-        "lastEvidence": "2026-05-17",
-        "brewDate": "2026-05-07",
-        "vicinityResidentAsOf": null,
-        "cellarLastReading": "2026-05-17",
-        "cellarLastReadingValues": {
-          "temp": 38.0,
-          "gravity": 2.0,
-          "ph": 4.06
-        },
-        "cellarPrevReading": "2026-05-13",
-        "cellarPrevReadingValues": {
-          "temp": 60.0,
-          "gravity": 2.1,
-          "ph": 4.09
-        },
-        "abvLastReading": "2026-05-12",
-        "abvLastValue": 4.4,
-        "vdkLastReading": null,
-        "vdkLastValue": null,
-        "vicinityDepartedAt": "2026-06-01",
-        "vacated": true,
-        "readingAgeDays": 152,
-        "batchAgeDays": 162
       }
     ]
   },
@@ -14005,7 +14044,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-10-16",
-  "lastSync": "Oct 16, 2026 \u00b7 12:11 PM"
+  "lastSync": "Oct 16, 2026 \u00b7 4:11 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
