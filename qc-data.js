@@ -2576,7 +2576,7 @@ const BATCHES = [
       },
       {
         "date": "2026-10-19",
-        "action": "FILTER",
+        "action": "CENT",
         "from": "BH17",
         "to": "BT23",
         "volume": 56.0,
@@ -2588,7 +2588,7 @@ const BATCHES = [
       },
       {
         "date": "2026-10-19",
-        "action": "FILTER",
+        "action": "CENT",
         "from": "BH17",
         "to": "BT28",
         "volume": null,
@@ -9212,12 +9212,6 @@ const FERMENTERS = [
         "lot": "MGB25007",
         "label": "Mardi Gras Bock",
         "qtyBbl": 53.5
-      },
-      {
-        "product": "MGGL",
-        "lot": "MGGL26002",
-        "label": "Mash Gang: Glug",
-        "qtyBbl": 176.0
       }
     ],
     "resolvedOccupancy": [
@@ -9228,9 +9222,9 @@ const FERMENTERS = [
           2
         ],
         "firstEvidence": "2026-10-08",
-        "lastEvidence": "2026-10-08",
+        "lastEvidence": "2026-10-12",
         "brewDate": "2026-10-08",
-        "vicinityResidentAsOf": "2026-10-08",
+        "vicinityResidentAsOf": null,
         "cellarLastReading": null,
         "cellarLastReadingValues": null,
         "cellarPrevReading": null,
@@ -9239,8 +9233,8 @@ const FERMENTERS = [
         "abvLastValue": null,
         "vdkLastReading": null,
         "vdkLastValue": null,
-        "vicinityDepartedAt": null,
-        "vacated": false,
+        "vicinityDepartedAt": "2026-10-12",
+        "vacated": true,
         "readingAgeDays": null,
         "batchAgeDays": 11
       },
@@ -9977,9 +9971,9 @@ const FERMENTERS = [
           3
         ],
         "firstEvidence": "2026-10-07",
-        "lastEvidence": "2026-10-07",
+        "lastEvidence": "2026-10-12",
         "brewDate": "2026-10-07",
-        "vicinityResidentAsOf": "2026-10-07",
+        "vicinityResidentAsOf": "2026-10-12",
         "cellarLastReading": null,
         "cellarLastReadingValues": null,
         "cellarPrevReading": null,
@@ -10985,14 +10979,7 @@ const FERMENTERS = [
     "tank": "BH25",
     "status": "active",
     "occupantIds": [],
-    "vicinityOccupants": [
-      {
-        "product": "MGCH",
-        "lot": "MGCH26003-4",
-        "label": "Mash Gang: Chug",
-        "qtyBbl": 293.0
-      }
-    ],
+    "vicinityOccupants": [],
     "resolvedOccupancy": [
       {
         "tank": "BH25",
@@ -11002,9 +10989,9 @@ const FERMENTERS = [
           4
         ],
         "firstEvidence": "2026-10-05",
-        "lastEvidence": "2026-10-06",
+        "lastEvidence": "2026-10-14",
         "brewDate": "2026-10-05",
-        "vicinityResidentAsOf": "2026-10-06",
+        "vicinityResidentAsOf": null,
         "cellarLastReading": null,
         "cellarLastReadingValues": null,
         "cellarPrevReading": null,
@@ -11013,7 +11000,7 @@ const FERMENTERS = [
         "abvLastValue": null,
         "vdkLastReading": null,
         "vdkLastValue": null,
-        "vicinityDepartedAt": null,
+        "vicinityDepartedAt": "2026-10-14",
         "vacated": false,
         "readingAgeDays": null,
         "batchAgeDays": 14
@@ -14111,7 +14098,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-10-19",
-  "lastSync": "Oct 19, 2026 \u00b7 12:10 PM"
+  "lastSync": "Oct 19, 2026 \u00b7 4:10 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
