@@ -2599,7 +2599,20 @@ const BATCHES = [
         "remainingBbl": null
       }
     ],
-    "packagingLog": [],
+    "packagingLog": [
+      {
+        "date": "2026-10-21",
+        "action": "PACKAGE",
+        "from": "BT28",
+        "to": "",
+        "volume": null,
+        "detail": "1593 CASES",
+        "project": "packaging",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10406533195",
+        "completed": false,
+        "remainingBbl": null
+      }
+    ],
     "basecampAlerts": [
       {
         "metric": "AE",
@@ -2890,7 +2903,32 @@ const BATCHES = [
         "remainingBbl": null
       }
     ],
-    "packagingLog": [],
+    "packagingLog": [
+      {
+        "date": "2026-10-20",
+        "action": "PACKAGE",
+        "from": "BT30",
+        "to": "",
+        "volume": null,
+        "detail": "776 - 12 PACKS",
+        "project": "packaging",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10406497598",
+        "completed": false,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-10-20",
+        "action": "PACKAGE",
+        "from": "BT30",
+        "to": "",
+        "volume": null,
+        "detail": "1187 CASES",
+        "project": "packaging",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10406504848",
+        "completed": false,
+        "remainingBbl": null
+      }
+    ],
     "basecampAlerts": [],
     "aeLatest": {
       "v": 3.1,
@@ -3185,7 +3223,20 @@ const BATCHES = [
         "remainingBbl": null
       }
     ],
-    "packagingLog": [],
+    "packagingLog": [
+      {
+        "date": "2026-10-19",
+        "action": "PACKAGE",
+        "from": "BT22",
+        "to": "",
+        "volume": null,
+        "detail": "729 - 12 PACKS",
+        "project": "packaging",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10406495704",
+        "completed": false,
+        "remainingBbl": null
+      }
+    ],
     "basecampAlerts": [
       {
         "metric": "AE",
@@ -6189,6 +6240,30 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": -7.0
+      },
+      {
+        "date": "2026-10-19",
+        "action": "PACKAGE",
+        "from": "BT29",
+        "to": "",
+        "volume": null,
+        "detail": "1188 - 12 PACKS",
+        "project": "packaging",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10406491052",
+        "completed": false,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-10-20",
+        "action": "PACKAGE",
+        "from": "BT29",
+        "to": "",
+        "volume": null,
+        "detail": "851 CASES",
+        "project": "packaging",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10406513619",
+        "completed": false,
+        "remainingBbl": null
       }
     ],
     "basecampAlerts": [
@@ -10729,6 +10804,29 @@ const FERMENTERS = [
     "resolvedOccupancy": [
       {
         "tank": "BH23",
+        "product": "SHL",
+        "brewNums": [
+          1
+        ],
+        "firstEvidence": "2026-10-19",
+        "lastEvidence": "2026-10-19",
+        "brewDate": null,
+        "vicinityResidentAsOf": null,
+        "cellarLastReading": null,
+        "cellarLastReadingValues": null,
+        "cellarPrevReading": null,
+        "cellarPrevReadingValues": null,
+        "abvLastReading": "2026-10-19",
+        "abvLastValue": 4.38,
+        "vdkLastReading": "2026-10-19",
+        "vdkLastValue": 0.0,
+        "vicinityDepartedAt": null,
+        "vacated": false,
+        "readingAgeDays": null,
+        "batchAgeDays": 0
+      },
+      {
+        "tank": "BH23",
         "product": "TTPN",
         "brewNums": [
           1
@@ -10788,37 +10886,6 @@ const FERMENTERS = [
         "vacated": true,
         "readingAgeDays": 50,
         "batchAgeDays": 53
-      },
-      {
-        "tank": "BH23",
-        "product": "FGT",
-        "brewNums": [
-          2
-        ],
-        "firstEvidence": "2026-06-09",
-        "lastEvidence": "2026-07-10",
-        "brewDate": "2026-06-09",
-        "vicinityResidentAsOf": null,
-        "cellarLastReading": "2026-07-10",
-        "cellarLastReadingValues": {
-          "temp": 35.0,
-          "gravity": 2.0,
-          "ph": 4.32
-        },
-        "cellarPrevReading": "2026-07-03",
-        "cellarPrevReadingValues": {
-          "temp": 34.0,
-          "gravity": 2.0,
-          "ph": 4.33
-        },
-        "abvLastReading": "2026-06-23",
-        "abvLastValue": 7.64,
-        "vdkLastReading": "2026-06-15",
-        "vdkLastValue": 0.0626,
-        "vicinityDepartedAt": "2026-07-29",
-        "vacated": true,
-        "readingAgeDays": 101,
-        "batchAgeDays": 132
       }
     ]
   },
@@ -14044,7 +14111,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-10-19",
-  "lastSync": "Oct 19, 2026 \u00b7 8:02 AM"
+  "lastSync": "Oct 19, 2026 \u00b7 12:10 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
