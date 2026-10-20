@@ -2583,7 +2583,7 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10409196424",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       },
       {
@@ -2595,7 +2595,7 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10409200833",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -4313,6 +4313,64 @@ const BATCHES = [
       "stage": "FERM",
       "date": "2026-10-06"
     }
+  },
+  {
+    "id": "AMB 061, 062",
+    "product": "AMB",
+    "section": "brewhouse",
+    "brewNums": [
+      61,
+      62
+    ],
+    "brewDate": "2026-10-20",
+    "brewDateSource": "basecamp",
+    "brewer": null,
+    "brewVolumeBbl": null,
+    "vicinityStage": null,
+    "age": 0,
+    "stage": "Fermenting",
+    "tank": "BH30",
+    "labTank": "BH30",
+    "tankSource": "lab",
+    "tankRemainingBbl": null,
+    "tankBrewedBbl": null,
+    "tankConflicts": [],
+    "lastReading": null,
+    "lastSource": null,
+    "numReadings": 1,
+    "readings": [],
+    "fermLog": [],
+    "yeastPitches": [
+      {
+        "date": "2026-10-20",
+        "tank": "BH30",
+        "cellCount": 2780000000.0,
+        "viability": 0.925,
+        "pitchRate": 75.95,
+        "yeastGen": "L-5",
+        "yeastSource": "BH51",
+        "yeastBrewNum": "GLD 72",
+        "countType": "Yeast"
+      }
+    ],
+    "transferLog": [
+      {
+        "date": "2026-10-20",
+        "action": "BREW",
+        "from": "",
+        "to": "BH30",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10423219120",
+        "completed": false,
+        "remainingBbl": null
+      }
+    ],
+    "packagingLog": [],
+    "basecampAlerts": [],
+    "aeLatest": null,
+    "abvLatest": null
   },
   {
     "id": "AND 051, 052, 053",
@@ -6373,6 +6431,20 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 0.0
+      },
+      {
+        "date": "2026-10-14",
+        "action": "TRANSFER",
+        "from": "BT30",
+        "to": "BT25",
+        "volume": 33.99999999999997,
+        "lossBbl": 0.0,
+        "sameLot": true,
+        "destComponentPrefix": "BBT",
+        "detail": null,
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 155.0
       }
     ],
     "packagingLog": [
@@ -6452,7 +6524,7 @@ const BATCHES = [
         "detail": "Amber - 2/12/12 Cans: 2037/1742 CASE",
         "project": "vicinity",
         "completed": true,
-        "remainingBbl": 159.0
+        "remainingBbl": 125.0
       },
       {
         "date": "2026-10-19",
@@ -6494,7 +6566,7 @@ const BATCHES = [
         "detail": "Amber - 4/6/12 Bottles: 1899/1900 CASE",
         "project": "vicinity",
         "completed": true,
-        "remainingBbl": 34.0
+        "remainingBbl": 0.0
       },
       {
         "date": "2026-10-19",
@@ -7814,9 +7886,9 @@ const BATCHES = [
     "vicinityStage": "Ops-Closed",
     "age": 47,
     "stage": "Brite",
-    "tank": "TK29",
+    "tank": "BT25",
     "labTank": "TK29",
-    "tankSource": "lab",
+    "tankSource": "vicinity",
     "tankRemainingBbl": 0.0,
     "tankBrewedBbl": 400.5,
     "tankConflicts": [],
@@ -8171,6 +8243,20 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 0.0
+      },
+      {
+        "date": "2026-10-14",
+        "action": "TRANSFER",
+        "from": "BT31",
+        "to": "BT25",
+        "volume": 37.0,
+        "lossBbl": 0.0,
+        "sameLot": true,
+        "destComponentPrefix": "BBT",
+        "detail": null,
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 75.0
       }
     ],
     "packagingLog": [
@@ -8214,7 +8300,7 @@ const BATCHES = [
         "detail": "Amber - 1/4 Keg: 396/420 1/4BBL; Amber - 1/2 Keg: 336/336 1/2BBL",
         "project": "vicinity",
         "completed": true,
-        "remainingBbl": 37.0
+        "remainingBbl": 0.0
       },
       {
         "date": "2026-10-19",
@@ -8343,7 +8429,7 @@ const FERMENTERS = [
         "vdkLastReading": null,
         "vdkLastValue": null,
         "vicinityDepartedAt": "2026-10-12",
-        "vacated": true,
+        "vacated": false,
         "readingAgeDays": null,
         "batchAgeDays": 12
       },
@@ -8974,9 +9060,9 @@ const FERMENTERS = [
           12
         ],
         "firstEvidence": "2026-10-12",
-        "lastEvidence": "2026-10-13",
+        "lastEvidence": "2026-10-16",
         "brewDate": "2026-10-12",
-        "vicinityResidentAsOf": "2026-10-12",
+        "vicinityResidentAsOf": "2026-10-16",
         "cellarLastReading": "2026-10-13",
         "cellarLastReadingValues": {
           "temp": 70.0,
@@ -10554,7 +10640,9 @@ const FERMENTERS = [
   {
     "tank": "BH30",
     "status": "active",
-    "occupantIds": [],
+    "occupantIds": [
+      "AMB 061, 062"
+    ],
     "vicinityOccupants": [],
     "resolvedOccupancy": [
       {
@@ -10955,9 +11043,9 @@ const FERMENTERS = [
     "vicinityOccupants": [
       {
         "product": "MGB",
-        "lot": "MGB26003",
+        "lot": "MGB26003/5",
         "label": "Mardi Gras Bock",
-        "qtyBbl": 203.5
+        "qtyBbl": 409.5
       }
     ],
     "resolvedOccupancy": [
@@ -10965,12 +11053,13 @@ const FERMENTERS = [
         "tank": "BH34",
         "product": "MGB",
         "brewNums": [
-          3
+          3,
+          5
         ],
         "firstEvidence": "2026-10-14",
-        "lastEvidence": "2026-10-14",
+        "lastEvidence": "2026-10-15",
         "brewDate": "2026-10-14",
-        "vicinityResidentAsOf": "2026-10-14",
+        "vicinityResidentAsOf": "2026-10-15",
         "cellarLastReading": null,
         "cellarLastReadingValues": null,
         "cellarPrevReading": null,
@@ -12146,21 +12235,9 @@ const FERMENTERS = [
     "vicinityOccupants": [
       {
         "product": "MGB",
-        "lot": "MGB26001",
+        "lot": "MGB26001-2/4",
         "label": "Mardi Gras Bock",
-        "qtyBbl": 205.5
-      },
-      {
-        "product": "MGB",
-        "lot": "MGB26002",
-        "label": "Mardi Gras Bock",
-        "qtyBbl": 206.0
-      },
-      {
-        "product": "MGB",
-        "lot": "MGB26004",
-        "label": "Mardi Gras Bock",
-        "qtyBbl": 202.0
+        "qtyBbl": 613.5
       }
     ],
     "resolvedOccupancy": [
@@ -12169,12 +12246,13 @@ const FERMENTERS = [
         "product": "MGB",
         "brewNums": [
           1,
-          2
+          2,
+          4
         ],
         "firstEvidence": "2026-10-14",
-        "lastEvidence": "2026-10-14",
+        "lastEvidence": "2026-10-15",
         "brewDate": "2026-10-14",
-        "vicinityResidentAsOf": "2026-10-14",
+        "vicinityResidentAsOf": "2026-10-15",
         "cellarLastReading": null,
         "cellarLastReadingValues": null,
         "cellarPrevReading": null,
@@ -13214,7 +13292,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-10-20",
-  "lastSync": "Oct 20, 2026 \u00b7 8:10 AM"
+  "lastSync": "Oct 20, 2026 \u00b7 12:11 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
