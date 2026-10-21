@@ -6490,8 +6490,28 @@ const BATCHES = [
     "tankConflicts": [],
     "lastReading": "2026-10-21",
     "lastSource": "FIN",
-    "numReadings": 17,
+    "numReadings": 18,
     "readings": [
+      {
+        "date": "2026-10-21",
+        "sample": "SGT 015 TK30",
+        "stage": "FIN",
+        "tank": "TK30",
+        "sourceFile": "finished abita beer 2026.xlsx",
+        "sourceSheet": "SG",
+        "pH": 4.1,
+        "DO": 39.0,
+        "CO2 Vols": 2.73,
+        "Calories": 247.15,
+        "ADF": 80.11,
+        "RDF": 66.99,
+        "OG": 18.2,
+        "AE": 3.62,
+        "RE": 6.41,
+        "HAZE": 1513.1887092590332,
+        "SG": 1.01416,
+        "ABV": 8.08
+      },
       {
         "date": "2026-10-21",
         "sample": "STG 015 TK30",
@@ -6750,7 +6770,7 @@ const BATCHES = [
         "detail": "1187 CASES",
         "project": "packaging",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10406504848",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -6762,13 +6782,20 @@ const BATCHES = [
         "high": 3.3,
         "date": "2026-10-21",
         "stage": "FIN",
-        "sample": "STG 015 TK30",
+        "sample": "SGT 015 TK30",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10427332685",
         "acknowledged": false,
         "ackBy": null,
         "ackAt": null,
         "ackNote": null,
-        "also": []
+        "also": [
+          {
+            "value": 3.62,
+            "date": "2026-10-21",
+            "stage": "FIN",
+            "sample": "STG 015 TK30"
+          }
+        ]
       }
     ],
     "aeLatest": {
@@ -6777,7 +6804,7 @@ const BATCHES = [
       "date": "2026-10-21"
     },
     "abvLatest": {
-      "v": 8.12,
+      "v": 8.08,
       "stage": "FIN",
       "date": "2026-10-21"
     }
@@ -14003,7 +14030,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-10-21",
-  "lastSync": "Oct 21, 2026 \u00b7 8:10 AM"
+  "lastSync": "Oct 21, 2026 \u00b7 12:10 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
