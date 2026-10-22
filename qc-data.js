@@ -1640,6 +1640,30 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 153.5
+      },
+      {
+        "date": "2026-10-23",
+        "action": "CENT",
+        "from": "BH11",
+        "to": "BT31",
+        "volume": 100.0,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10429827188",
+        "completed": false,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-10-23",
+        "action": "CENT",
+        "from": "BH11",
+        "to": "BT26",
+        "volume": null,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10429967185",
+        "completed": false,
+        "remainingBbl": null
       }
     ],
     "packagingLog": [],
@@ -2417,6 +2441,42 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 163.0
+      },
+      {
+        "date": "2026-10-22",
+        "action": "FILTER",
+        "from": "BH14",
+        "to": "BT21",
+        "volume": 57.0,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10430000917",
+        "completed": false,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-10-22",
+        "action": "FILTER",
+        "from": "BH14",
+        "to": "BT22",
+        "volume": 57.0,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10430001337",
+        "completed": false,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-10-22",
+        "action": "FILTER",
+        "from": "BH14",
+        "to": "UV20",
+        "volume": null,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10430002719",
+        "completed": false,
+        "remainingBbl": null
       }
     ],
     "packagingLog": [],
@@ -2692,7 +2752,7 @@ const BATCHES = [
       {
         "date": "2026-10-21",
         "action": "PACKAGE",
-        "from": "BT28",
+        "from": "BT28,BT23",
         "to": "",
         "volume": null,
         "detail": "1593 CASES",
@@ -5805,6 +5865,18 @@ const BATCHES = [
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10409178224",
         "completed": true,
         "remainingBbl": null
+      },
+      {
+        "date": "2026-10-21",
+        "action": "XFER",
+        "from": "UV37",
+        "to": "BT30",
+        "volume": null,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10429845348",
+        "completed": false,
+        "remainingBbl": null
       }
     ],
     "packagingLog": [
@@ -5818,6 +5890,18 @@ const BATCHES = [
         "project": "packaging",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10406495704",
         "completed": true,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-10-21",
+        "action": "PACKAGE",
+        "from": "BT30",
+        "to": "",
+        "volume": null,
+        "detail": "1958 CASES",
+        "project": "packaging",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10406539410",
+        "completed": false,
         "remainingBbl": null
       }
     ],
@@ -6511,10 +6595,10 @@ const BATCHES = [
         "stage": "FIN",
         "sample": "AMB 55-56 TK30",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10390958628",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-10-21T21:51",
+        "ackNote": "<p dir=\"auto\">Batch finished at 2.25\u00b0P, but alcohol was in spec at 4.47%. Investigate adjusting AE Target</p>",
         "also": [
           {
             "value": 2.21,
@@ -8692,7 +8776,7 @@ const BATCHES = [
         "detail": "851 CASES",
         "project": "packaging",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10406513619",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -14207,7 +14291,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-10-21",
-  "lastSync": "Oct 21, 2026 \u00b7 4:10 PM"
+  "lastSync": "Oct 21, 2026 \u00b7 8:10 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
