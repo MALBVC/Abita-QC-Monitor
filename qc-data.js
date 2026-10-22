@@ -1223,6 +1223,50 @@ function computeOOS(readings, product) {
 
 const BATCHES = [
   {
+    "id": "ALG 008",
+    "product": "ALG",
+    "section": "brewhouse",
+    "brewNums": [
+      8
+    ],
+    "brewDate": null,
+    "brewDateSource": null,
+    "brewer": null,
+    "brewVolumeBbl": null,
+    "vicinityStage": null,
+    "age": null,
+    "stage": "Fermenting",
+    "tank": "BH7",
+    "labTank": "BH7",
+    "tankSource": "lab",
+    "tankRemainingBbl": null,
+    "tankBrewedBbl": null,
+    "tankConflicts": [],
+    "lastReading": null,
+    "lastSource": null,
+    "numReadings": 1,
+    "readings": [],
+    "fermLog": [],
+    "yeastPitches": [
+      {
+        "date": "2026-10-22",
+        "tank": "BH7",
+        "cellCount": 2520000000.0,
+        "viability": 0.944,
+        "pitchRate": 55.95,
+        "yeastGen": "K-2",
+        "yeastSource": "BH26",
+        "yeastBrewNum": "BBW006",
+        "countType": "Yeast"
+      }
+    ],
+    "transferLog": [],
+    "packagingLog": [],
+    "basecampAlerts": [],
+    "aeLatest": null,
+    "abvLatest": null
+  },
+  {
     "id": "ALG 007",
     "product": "ALG",
     "section": "brewhouse",
@@ -11137,15 +11181,15 @@ const FERMENTERS = [
           1
         ],
         "firstEvidence": "2026-10-19",
-        "lastEvidence": "2026-10-21",
+        "lastEvidence": "2026-10-22",
         "brewDate": null,
         "vicinityResidentAsOf": null,
         "cellarLastReading": null,
         "cellarLastReadingValues": null,
         "cellarPrevReading": null,
         "cellarPrevReadingValues": null,
-        "abvLastReading": "2026-10-21",
-        "abvLastValue": 4.5,
+        "abvLastReading": "2026-10-22",
+        "abvLastValue": 4.52,
         "vdkLastReading": "2026-10-19",
         "vdkLastValue": 0.0,
         "vicinityDepartedAt": null,
@@ -12211,8 +12255,8 @@ const FERMENTERS = [
         },
         "cellarPrevReading": null,
         "cellarPrevReadingValues": null,
-        "abvLastReading": "2026-10-21",
-        "abvLastValue": 6.28,
+        "abvLastReading": "2026-10-22",
+        "abvLastValue": 6.33,
         "vdkLastReading": "2026-10-21",
         "vdkLastValue": 0.0,
         "vicinityDepartedAt": null,
@@ -13413,8 +13457,8 @@ const FERMENTERS = [
         },
         "cellarPrevReading": null,
         "cellarPrevReadingValues": null,
-        "abvLastReading": "2026-10-21",
-        "abvLastValue": 6.36,
+        "abvLastReading": "2026-10-22",
+        "abvLastValue": 6.39,
         "vdkLastReading": "2026-10-21",
         "vdkLastValue": 0.0,
         "vicinityDepartedAt": null,
@@ -14448,7 +14492,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-10-22",
-  "lastSync": "Oct 22, 2026 \u00b7 8:11 AM"
+  "lastSync": "Oct 22, 2026 \u00b7 12:08 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
