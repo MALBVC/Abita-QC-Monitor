@@ -1229,12 +1229,12 @@ const BATCHES = [
     "brewNums": [
       8
     ],
-    "brewDate": null,
-    "brewDateSource": null,
+    "brewDate": "2026-10-22",
+    "brewDateSource": "basecamp",
     "brewer": null,
     "brewVolumeBbl": null,
     "vicinityStage": null,
-    "age": null,
+    "age": 0,
     "stage": "Fermenting",
     "tank": "BH7",
     "labTank": "BH7",
@@ -1260,7 +1260,20 @@ const BATCHES = [
         "countType": "Yeast"
       }
     ],
-    "transferLog": [],
+    "transferLog": [
+      {
+        "date": "2026-10-22",
+        "action": "BREW",
+        "from": "",
+        "to": "BH07",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10433428176",
+        "completed": false,
+        "remainingBbl": null
+      }
+    ],
     "packagingLog": [],
     "basecampAlerts": [],
     "aeLatest": null,
@@ -2495,7 +2508,7 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10430000917",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       },
       {
@@ -2507,7 +2520,7 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10430001337",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       },
       {
@@ -2519,7 +2532,7 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10430002719",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -11172,7 +11185,14 @@ const FERMENTERS = [
     "tank": "BH23",
     "status": "active",
     "occupantIds": [],
-    "vicinityOccupants": [],
+    "vicinityOccupants": [
+      {
+        "product": "SHL",
+        "lot": "SHL26001",
+        "label": "Shotgun House Lager",
+        "qtyBbl": 160.0
+      }
+    ],
     "resolvedOccupancy": [
       {
         "tank": "BH23",
@@ -11180,10 +11200,10 @@ const FERMENTERS = [
         "brewNums": [
           1
         ],
-        "firstEvidence": "2026-10-19",
-        "lastEvidence": "2026-10-22",
-        "brewDate": null,
-        "vicinityResidentAsOf": null,
+        "firstEvidence": "2026-10-16",
+        "lastEvidence": "2026-10-16",
+        "brewDate": "2026-10-16",
+        "vicinityResidentAsOf": "2026-10-16",
         "cellarLastReading": null,
         "cellarLastReadingValues": null,
         "cellarPrevReading": null,
@@ -11195,7 +11215,7 @@ const FERMENTERS = [
         "vicinityDepartedAt": null,
         "vacated": false,
         "readingAgeDays": null,
-        "batchAgeDays": 3
+        "batchAgeDays": 6
       },
       {
         "tank": "BH23",
@@ -14492,7 +14512,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-10-22",
-  "lastSync": "Oct 22, 2026 \u00b7 12:08 PM"
+  "lastSync": "Oct 22, 2026 \u00b7 4:11 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
