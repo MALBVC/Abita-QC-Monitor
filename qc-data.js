@@ -3827,32 +3827,199 @@ const BATCHES = [
     }
   },
   {
-    "id": "AMB 061, 062",
+    "id": "AMB 060, 061, 062",
     "product": "AMB",
     "section": "brewhouse",
     "brewNums": [
+      60,
       61,
       62
     ],
-    "brewDate": "2026-10-20",
+    "brewDate": "2026-10-06",
     "brewDateSource": "basecamp",
-    "brewer": "Chris Fernandez",
-    "brewVolumeBbl": null,
-    "vicinityStage": null,
-    "age": 2,
+    "brewer": "Chris Fernandez, Laren Ball",
+    "brewVolumeBbl": 194.5,
+    "vicinityStage": "Ops-Closed",
+    "age": 16,
     "stage": "Fermenting",
-    "tank": "BH30",
+    "tank": "BH35",
     "labTank": "BH30",
-    "tankSource": "lab",
-    "tankRemainingBbl": null,
-    "tankBrewedBbl": null,
+    "tankSource": "vicinity",
+    "tankRemainingBbl": 194.5,
+    "tankBrewedBbl": 194.5,
     "tankConflicts": [],
-    "lastReading": null,
-    "lastSource": null,
-    "numReadings": 2,
-    "readings": [],
-    "fermLog": [],
+    "lastReading": "2026-10-21",
+    "lastSource": "WORT",
+    "numReadings": 15,
+    "readings": [
+      {
+        "date": "2026-10-21",
+        "sample": "AMB 60 BH30",
+        "stage": "WORT",
+        "tank": "BH30",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "A",
+        "Wort pH": 5.19,
+        "SRM": 17.14467005076142,
+        "IBU (W)": 19.35,
+        "Calories": 152.74,
+        "ADF": -0.75,
+        "RDF": -0.65,
+        "OG": 10.42,
+        "AE": 10.5,
+        "RE": 10.49,
+        "HAZE": 2480.7516746520996,
+        "SG": 1.04207,
+        "ABV": -0.04
+      },
+      {
+        "date": "2026-10-21",
+        "sample": "AMB 61 BH30",
+        "stage": "WORT",
+        "tank": "BH30",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "A",
+        "Wort pH": 5.16,
+        "SRM": 17.88071065989848,
+        "IBU (W)": 18.35,
+        "Calories": 153.47,
+        "ADF": -0.93,
+        "RDF": -0.79,
+        "OG": 10.47,
+        "AE": 10.57,
+        "RE": 10.55,
+        "HAZE": 3624.412250518799,
+        "SG": 1.04234,
+        "ABV": -0.05
+      },
+      {
+        "date": "2026-10-19",
+        "sample": "AMB 59,60 BH35",
+        "stage": "GC",
+        "tank": "BH35",
+        "sourceFile": "gc 2026.xlsx",
+        "sourceSheet": "OCT",
+        "Diacetyl": 0.0,
+        "Pentanedione": 0.0,
+        "Total VDK": 0.0
+      },
+      {
+        "date": "2026-10-19",
+        "sample": "AMB 59-60 BH35",
+        "stage": "FERM",
+        "tank": "BH35",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 4.47,
+        "Turbidity": 412.3542866706848,
+        "AE": 2.39
+      },
+      {
+        "date": "2026-10-07",
+        "sample": "AMB 060 BH35",
+        "stage": "WORT",
+        "tank": "BH35",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "A",
+        "Wort pH": 4.85,
+        "SRM": 17.258883248730964,
+        "IBU (W)": 19.900000000000002,
+        "Calories": 155.91,
+        "ADF": -0.36,
+        "RDF": -0.32,
+        "OG": 10.64,
+        "AE": 10.67,
+        "RE": 10.67,
+        "HAZE": 1113.3284397125244,
+        "SG": 1.04279,
+        "ABV": -0.02
+      }
+    ],
+    "fermLog": [
+      {
+        "date": "2026-10-07",
+        "tank": "BH35",
+        "temp": 57.0,
+        "gravity": 10.0,
+        "ph": 4.49,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "AMB"
+      },
+      {
+        "date": "2026-10-08",
+        "tank": "BH35",
+        "temp": 57.0,
+        "gravity": 7.9,
+        "ph": 4.07,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "AMB"
+      },
+      {
+        "date": "2026-10-09",
+        "tank": "BH35",
+        "temp": 57.0,
+        "gravity": 4.7,
+        "ph": 4.02,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "AMB"
+      },
+      {
+        "date": "2026-10-11",
+        "tank": "BH35",
+        "temp": 56.0,
+        "gravity": 3.7,
+        "ph": 4.11,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "AMB"
+      },
+      {
+        "date": "2026-10-12",
+        "tank": "BH35",
+        "temp": 56.0,
+        "gravity": 2.7,
+        "ph": 4.12,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "AMB"
+      },
+      {
+        "date": "2026-10-13",
+        "tank": "BH35",
+        "temp": 56.0,
+        "gravity": 2.7,
+        "ph": 4.14,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "AMB"
+      }
+    ],
     "yeastPitches": [
+      {
+        "date": "2026-10-06",
+        "tank": "BH35",
+        "cellCount": 895000000.0,
+        "viability": 0.9162,
+        "pitchRate": 238.17149637672728,
+        "yeastGen": null,
+        "yeastSource": "BH28",
+        "yeastBrewNum": "AND49-50",
+        "countType": "Yeast"
+      },
+      {
+        "date": "2026-10-06",
+        "tank": "BH35",
+        "cellCount": 53278877.666666664,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "FV"
+      },
       {
         "date": "2026-10-20",
         "tank": "BH30",
@@ -3878,6 +4045,29 @@ const BATCHES = [
     ],
     "transferLog": [
       {
+        "date": "2026-10-06",
+        "action": "BREW",
+        "from": "",
+        "to": "BH35",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10376069354",
+        "completed": true,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-10-06",
+        "action": "BREW",
+        "from": "",
+        "to": "BH35",
+        "volume": 194.5,
+        "detail": "AMB 060",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 194.5
+      },
+      {
         "date": "2026-10-20",
         "action": "BREW",
         "from": "",
@@ -3891,7 +4081,23 @@ const BATCHES = [
       }
     ],
     "packagingLog": [],
-    "basecampAlerts": [],
+    "basecampAlerts": [
+      {
+        "metric": "Wort pH",
+        "value": 4.85,
+        "low": 4.9,
+        "high": 5.3,
+        "date": "2026-10-07",
+        "stage": "WORT",
+        "sample": "AMB 060 BH35",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10384043499",
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-10-09T15:32",
+        "ackNote": "<p dir=\"auto\">Phosphoric doser malfunction. Acid additions now manual until dosing system repairs are completed</p>",
+        "also": []
+      }
+    ],
     "aeLatest": null,
     "abvLatest": null
   },
@@ -4060,29 +4266,28 @@ const BATCHES = [
     "abvLatest": null
   },
   {
-    "id": "AMB 059, 060",
+    "id": "AMB 059",
     "product": "AMB",
     "section": "brewhouse",
     "brewNums": [
-      59,
-      60
+      59
     ],
     "brewDate": "2026-10-06",
     "brewDateSource": "basecamp",
     "brewer": "Laren Ball",
-    "brewVolumeBbl": 394.5,
+    "brewVolumeBbl": 200.0,
     "vicinityStage": "Ops-Closed",
     "age": 16,
     "stage": "Fermenting",
     "tank": "BH35",
     "labTank": "BH35",
     "tankSource": "vicinity",
-    "tankRemainingBbl": 394.5,
-    "tankBrewedBbl": 394.5,
+    "tankRemainingBbl": 200.0,
+    "tankBrewedBbl": 200.0,
     "tankConflicts": [],
     "lastReading": "2026-10-19",
     "lastSource": "GC",
-    "numReadings": 12,
+    "numReadings": 11,
     "readings": [
       {
         "date": "2026-10-19",
@@ -4125,26 +4330,6 @@ const BATCHES = [
         "HAZE": 1445.415418624878,
         "SG": 1.04218,
         "ABV": -0.04
-      },
-      {
-        "date": "2026-10-07",
-        "sample": "AMB 060 BH35",
-        "stage": "WORT",
-        "tank": "BH35",
-        "sourceFile": "wort abita samples 2026.xlsx",
-        "sourceSheet": "A",
-        "Wort pH": 4.85,
-        "SRM": 17.258883248730964,
-        "IBU (W)": 19.900000000000002,
-        "Calories": 155.91,
-        "ADF": -0.36,
-        "RDF": -0.32,
-        "OG": 10.64,
-        "AE": 10.67,
-        "RE": 10.67,
-        "HAZE": 1113.3284397125244,
-        "SG": 1.04279,
-        "ABV": -0.02
       }
     ],
     "fermLog": [
@@ -4256,37 +4441,10 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 200.0
-      },
-      {
-        "date": "2026-10-06",
-        "action": "BREW",
-        "from": "",
-        "to": "BH35",
-        "volume": 194.5,
-        "detail": "AMB 060",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 394.5
       }
     ],
     "packagingLog": [],
-    "basecampAlerts": [
-      {
-        "metric": "Wort pH",
-        "value": 4.85,
-        "low": 4.9,
-        "high": 5.3,
-        "date": "2026-10-07",
-        "stage": "WORT",
-        "sample": "AMB 060 BH35",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10384043499",
-        "acknowledged": true,
-        "ackBy": "Mitch Steele",
-        "ackAt": "2026-10-09T15:32",
-        "ackNote": "<p dir=\"auto\">Phosphoric doser malfunction. Acid additions now manual until dosing system repairs are completed</p>",
-        "also": []
-      }
-    ],
+    "basecampAlerts": [],
     "aeLatest": null,
     "abvLatest": null
   },
@@ -11622,9 +11780,7 @@ const FERMENTERS = [
   {
     "tank": "BH30",
     "status": "active",
-    "occupantIds": [
-      "AMB 061, 062"
-    ],
+    "occupantIds": [],
     "vicinityOccupants": [],
     "resolvedOccupancy": [
       {
@@ -12134,7 +12290,8 @@ const FERMENTERS = [
     "tank": "BH35",
     "status": "active",
     "occupantIds": [
-      "AMB 059, 060"
+      "AMB 060, 061, 062",
+      "AMB 059"
     ],
     "vicinityOccupants": [],
     "resolvedOccupancy": [
@@ -14291,7 +14448,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-10-22",
-  "lastSync": "Oct 22, 2026 \u00b7 12:10 AM"
+  "lastSync": "Oct 22, 2026 \u00b7 4:11 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
