@@ -1738,7 +1738,7 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10429827188",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       },
       {
@@ -1765,10 +1765,10 @@ const BATCHES = [
         "stage": "WORT",
         "sample": "JOC 012 BH11",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10405294288",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-10-23T15:40",
+        "ackNote": "<p dir=\"auto\">Brewhouse KO pH was 5.04, Switched probe on pH meter in BH</p>",
         "also": []
       },
       {
@@ -1780,10 +1780,10 @@ const BATCHES = [
         "stage": "WORT",
         "sample": "JOC 012 BH11",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10405294261",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-10-23T13:23",
+        "ackNote": "<p dir=\"auto\">OG a little low, abv in spec at just over 6%</p>",
         "also": []
       }
     ],
@@ -2578,10 +2578,10 @@ const BATCHES = [
         "stage": "FERM",
         "sample": "LHT 5 BH14",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10405294202",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-10-23T13:25",
+        "ackNote": "<p dir=\"auto\">Mash profile has been adjusted to lower AE. Amylase was added to fv and abv is in target in BBT</p>",
         "also": []
       },
       {
@@ -3296,10 +3296,10 @@ const BATCHES = [
         "stage": "WORT",
         "sample": "BBW 005 BH26",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10405294240",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-10-23T15:45",
+        "ackNote": "<p dir=\"auto\">Will add acid next brew</p>",
         "also": []
       }
     ],
@@ -3573,10 +3573,10 @@ const BATCHES = [
         "stage": "FERM",
         "sample": "AND 49,50 BH28",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10390958672",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-10-21T21:52",
+        "ackNote": "<p dir=\"auto\">Tank finished at 3.47\u00b0P and 8.13% abv. No action required</p>",
         "also": [
           {
             "value": 4.1,
@@ -5472,10 +5472,10 @@ const BATCHES = [
         "stage": "WORT",
         "sample": "GLD 070 BH51",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10392345272",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-10-23T15:50",
+        "ackNote": "<p dir=\"auto\">BH results were lower. pH probe replaced. Wort gravities were high and required water dilution. Recipe water balance changes will continue to be monitored and adjusted.</p>",
         "also": [
           {
             "value": 5.42,
@@ -5500,10 +5500,10 @@ const BATCHES = [
         "stage": "WORT",
         "sample": "GLD 070 BH51",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10392345267",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-10-23T13:26",
+        "ackNote": "<p dir=\"auto\">In specification, should not have been flagged</p>",
         "also": []
       }
     ],
@@ -5807,10 +5807,10 @@ const BATCHES = [
         "stage": "FIN",
         "sample": "TBD 006 TK28",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10390958745",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-10-23T13:28",
+        "ackNote": "<p dir=\"auto\">ABV was on target. Will adjust after flavor evaluation of recipe change on this brew. </p>",
         "also": [
           {
             "value": 2.75,
@@ -6923,7 +6923,7 @@ const BATCHES = [
         "detail": "1958 CASES",
         "project": "packaging",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10406539410",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -7322,10 +7322,10 @@ const BATCHES = [
         "stage": "FIN",
         "sample": "SGT 015 TK30",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10427332685",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-10-23T13:20",
+        "ackNote": "<p dir=\"auto\">OG came in high as well, though abv was on target. Will review prior to next brew</p>",
         "also": [
           {
             "value": 3.62,
@@ -9130,10 +9130,10 @@ const BATCHES = [
         "stage": "FERM",
         "sample": "ALG 6 BH08",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10426099381",
-        "acknowledged": false,
-        "ackBy": null,
-        "ackAt": null,
-        "ackNote": null,
+        "acknowledged": true,
+        "ackBy": "Mitch Steele",
+        "ackAt": "2026-10-23T13:22",
+        "ackNote": "<p dir=\"auto\">Looks like the AE value was actually an abv. AE in BBT was fine, actually a little low.</p>",
         "also": [
           {
             "value": 4.2,
@@ -14615,7 +14615,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-10-23",
-  "lastSync": "Oct 23, 2026 \u00b7 8:10 AM"
+  "lastSync": "Oct 23, 2026 \u00b7 12:10 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
