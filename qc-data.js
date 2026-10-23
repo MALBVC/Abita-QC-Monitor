@@ -1244,7 +1244,7 @@ const BATCHES = [
     "tankConflicts": [],
     "lastReading": null,
     "lastSource": null,
-    "numReadings": 1,
+    "numReadings": 2,
     "readings": [],
     "fermLog": [],
     "yeastPitches": [
@@ -1258,6 +1258,17 @@ const BATCHES = [
         "yeastSource": "BH26",
         "yeastBrewNum": "BBW006",
         "countType": "Yeast"
+      },
+      {
+        "date": "2026-10-22",
+        "tank": "BH7",
+        "cellCount": 39180570.0,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": "K-2",
+        "yeastSource": "BH26",
+        "yeastBrewNum": "BBW006",
+        "countType": "FV"
       }
     ],
     "transferLog": [
@@ -1270,7 +1281,7 @@ const BATCHES = [
         "detail": null,
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10433428176",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -5715,7 +5726,7 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10429784883",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -14512,7 +14523,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-10-22",
-  "lastSync": "Oct 22, 2026 \u00b7 4:11 PM"
+  "lastSync": "Oct 22, 2026 \u00b7 8:08 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
