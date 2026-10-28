@@ -2456,6 +2456,63 @@ const BATCHES = [
     }
   },
   {
+    "id": "STG 016",
+    "product": "STG",
+    "section": "brewhouse",
+    "brewNums": [
+      16
+    ],
+    "brewDate": "2026-10-28",
+    "brewDateSource": "basecamp",
+    "brewer": null,
+    "brewVolumeBbl": null,
+    "vicinityStage": null,
+    "age": 0,
+    "stage": "Fermenting",
+    "tank": "BH19",
+    "labTank": "BH19",
+    "tankSource": "lab",
+    "tankRemainingBbl": null,
+    "tankBrewedBbl": null,
+    "tankConflicts": [],
+    "lastReading": null,
+    "lastSource": null,
+    "numReadings": 1,
+    "readings": [],
+    "fermLog": [],
+    "yeastPitches": [
+      {
+        "date": "2026-10-28",
+        "tank": "BH19",
+        "cellCount": 2100000000.0,
+        "viability": 0.96,
+        "pitchRate": 58.82,
+        "yeastGen": "L-5",
+        "yeastSource": "BH47",
+        "yeastBrewNum": "MGB004",
+        "countType": "Yeast"
+      }
+    ],
+    "transferLog": [
+      {
+        "date": "2026-10-28",
+        "action": "BREW",
+        "from": "",
+        "to": "BH19",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10448344833",
+        "completed": false,
+        "remainingBbl": null
+      }
+    ],
+    "packagingLog": [],
+    "basecampAlerts": [],
+    "aeLatest": null,
+    "abvLatest": null
+  },
+  {
     "id": "BBW 005, 006",
     "product": "BBW",
     "section": "brewhouse",
@@ -9598,7 +9655,9 @@ const FERMENTERS = [
   {
     "tank": "BH19",
     "status": "active",
-    "occupantIds": [],
+    "occupantIds": [
+      "STG 016"
+    ],
     "vicinityOccupants": [],
     "resolvedOccupancy": [
       {
@@ -9760,8 +9819,8 @@ const FERMENTERS = [
         "cellarLastReadingValues": null,
         "cellarPrevReading": null,
         "cellarPrevReadingValues": null,
-        "abvLastReading": "2026-10-27",
-        "abvLastValue": 4.75,
+        "abvLastReading": "2026-10-28",
+        "abvLastValue": 4.78,
         "vdkLastReading": "2026-10-26",
         "vdkLastValue": 0.0734,
         "vicinityDepartedAt": null,
@@ -10335,15 +10394,15 @@ const FERMENTERS = [
           2
         ],
         "firstEvidence": "2026-10-27",
-        "lastEvidence": "2026-10-27",
+        "lastEvidence": "2026-10-28",
         "brewDate": null,
         "vicinityResidentAsOf": null,
         "cellarLastReading": null,
         "cellarLastReadingValues": null,
         "cellarPrevReading": null,
         "cellarPrevReadingValues": null,
-        "abvLastReading": "2026-10-27",
-        "abvLastValue": 7.84,
+        "abvLastReading": "2026-10-28",
+        "abvLastValue": 7.91,
         "vdkLastReading": "2026-10-27",
         "vdkLastValue": 0.0683,
         "vicinityDepartedAt": null,
@@ -13234,7 +13293,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-10-28",
-  "lastSync": "Oct 28, 2026 \u00b7 12:11 PM"
+  "lastSync": "Oct 28, 2026 \u00b7 4:07 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
