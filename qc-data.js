@@ -7728,6 +7728,20 @@ const BATCHES = [
         "remainingBbl": null
       },
       {
+        "date": "2026-10-23",
+        "action": "PACKAGE",
+        "from": "BT30",
+        "to": "",
+        "volume": 142.0,
+        "lossBbl": null,
+        "sameLot": true,
+        "destComponentPrefix": null,
+        "detail": "Andygator - 4/6/12 Bottles: 1924/1958 CASE",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 0.0
+      },
+      {
         "date": "2026-10-26",
         "action": "PACKAGE",
         "from": "BT22",
@@ -7737,20 +7751,6 @@ const BATCHES = [
         "sameLot": true,
         "destComponentPrefix": null,
         "detail": "Andygator -12/19.2 Cans: 679/679 12/19.2",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 0.0
-      },
-      {
-        "date": "2026-10-26",
-        "action": "PACKAGE",
-        "from": "BT30",
-        "to": "",
-        "volume": 142.0,
-        "lossBbl": null,
-        "sameLot": true,
-        "destComponentPrefix": null,
-        "detail": "Andygator - 4/6/12 Bottles: 1924/1958 CASE",
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 0.0
@@ -13234,7 +13234,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-10-28",
-  "lastSync": "Oct 28, 2026 \u00b7 8:10 AM"
+  "lastSync": "Oct 28, 2026 \u00b7 12:11 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
