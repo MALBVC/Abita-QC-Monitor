@@ -4390,6 +4390,42 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 379.5
+      },
+      {
+        "date": "2026-10-28",
+        "action": "FILTER",
+        "from": "BH45",
+        "to": "BT31",
+        "volume": 112.0,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10449936300",
+        "completed": false,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-10-28",
+        "action": "FILTER",
+        "from": "BH45",
+        "to": "BT23",
+        "volume": 56.0,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10449936658",
+        "completed": false,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-10-28",
+        "action": "FILTER",
+        "from": "BH45",
+        "to": "UV30",
+        "volume": null,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10449937459",
+        "completed": false,
+        "remainingBbl": null
       }
     ],
     "packagingLog": [],
@@ -4421,15 +4457,35 @@ const BATCHES = [
     "age": 48,
     "stage": "Aging",
     "tank": "",
-    "labTank": "TK30",
+    "labTank": "TK25",
     "tankSource": "vicinity",
     "tankRemainingBbl": 197.5,
     "tankBrewedBbl": 395.5,
     "tankConflicts": [],
-    "lastReading": "2026-10-13",
+    "lastReading": "2026-10-27",
     "lastSource": "FIN",
-    "numReadings": 20,
+    "numReadings": 21,
     "readings": [
+      {
+        "date": "2026-10-27",
+        "sample": "AMB 55-56 TK25",
+        "stage": "FIN",
+        "tank": "TK25",
+        "sourceFile": "finished abita beer 2026.xlsx",
+        "sourceSheet": "A",
+        "pH": 4.27,
+        "DO": 57.0,
+        "CO2 Vols": 2.64,
+        "Calories": 135.89,
+        "ADF": 79.8,
+        "RDF": 65.67,
+        "OG": 10.39,
+        "AE": 2.1,
+        "RE": 3.7,
+        "HAZE": 33.91805827617645,
+        "SG": 1.00817,
+        "ABV": 4.36
+      },
       {
         "date": "2026-10-13",
         "sample": "AMB 55-56 TK30",
@@ -5099,14 +5155,14 @@ const BATCHES = [
       }
     ],
     "aeLatest": {
-      "v": 2.21,
+      "v": 2.1,
       "stage": "FIN",
-      "date": "2026-10-13"
+      "date": "2026-10-27"
     },
     "abvLatest": {
-      "v": 4.44,
+      "v": 4.36,
       "stage": "FIN",
-      "date": "2026-10-13"
+      "date": "2026-10-27"
     }
   },
   {
@@ -13178,7 +13234,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-10-27",
-  "lastSync": "Oct 27, 2026 \u00b7 4:13 PM"
+  "lastSync": "Oct 27, 2026 \u00b7 8:10 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
