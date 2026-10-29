@@ -2464,7 +2464,7 @@ const BATCHES = [
     ],
     "brewDate": "2026-10-28",
     "brewDateSource": "basecamp",
-    "brewer": null,
+    "brewer": "Laren Ball",
     "brewVolumeBbl": null,
     "vicinityStage": null,
     "age": 0,
@@ -2503,7 +2503,7 @@ const BATCHES = [
         "detail": null,
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10448344833",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -4457,7 +4457,7 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10449936300",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       },
       {
@@ -4469,7 +4469,7 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10449936658",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       },
       {
@@ -4481,7 +4481,7 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10449937459",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -5105,7 +5105,7 @@ const BATCHES = [
         "remainingBbl": 34.0
       },
       {
-        "date": "2026-10-19",
+        "date": "2026-10-14",
         "action": "PACKAGE",
         "from": "BT27",
         "to": "",
@@ -7773,6 +7773,20 @@ const BATCHES = [
         "remainingBbl": null
       },
       {
+        "date": "2026-10-20",
+        "action": "PACKAGE",
+        "from": "BT22",
+        "to": "",
+        "volume": 46.0,
+        "lossBbl": null,
+        "sameLot": true,
+        "destComponentPrefix": null,
+        "detail": "Andygator -12/19.2 Cans: 679/679 12/19.2",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 0.0
+      },
+      {
         "date": "2026-10-21",
         "action": "PACKAGE",
         "from": "BT30",
@@ -7794,20 +7808,6 @@ const BATCHES = [
         "sameLot": true,
         "destComponentPrefix": null,
         "detail": "Andygator - 4/6/12 Bottles: 1924/1958 CASE",
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 0.0
-      },
-      {
-        "date": "2026-10-26",
-        "action": "PACKAGE",
-        "from": "BT22",
-        "to": "",
-        "volume": 46.0,
-        "lossBbl": null,
-        "sameLot": true,
-        "destComponentPrefix": null,
-        "detail": "Andygator -12/19.2 Cans: 679/679 12/19.2",
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 0.0
@@ -8310,7 +8310,7 @@ const BATCHES = [
         "remainingBbl": -31.0
       },
       {
-        "date": "2026-10-19",
+        "date": "2026-10-14",
         "action": "PACKAGE",
         "from": "BT31",
         "to": "",
@@ -8324,7 +8324,7 @@ const BATCHES = [
         "remainingBbl": 0.0
       },
       {
-        "date": "2026-10-19",
+        "date": "2026-10-14",
         "action": "PACKAGE",
         "from": "BT28",
         "to": "",
@@ -13293,7 +13293,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-10-28",
-  "lastSync": "Oct 28, 2026 \u00b7 4:07 PM"
+  "lastSync": "Oct 28, 2026 \u00b7 8:10 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
