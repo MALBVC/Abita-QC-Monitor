@@ -2456,6 +2456,84 @@ const BATCHES = [
     }
   },
   {
+    "id": "AND 053, 054",
+    "product": "AND",
+    "section": "brewhouse",
+    "brewNums": [
+      53,
+      54
+    ],
+    "brewDate": "2026-10-14",
+    "brewDateSource": "lab",
+    "brewer": null,
+    "brewVolumeBbl": null,
+    "vicinityStage": null,
+    "age": 15,
+    "stage": "Fermenting",
+    "tank": "BH18",
+    "labTank": "BH18",
+    "tankSource": "lab",
+    "tankRemainingBbl": null,
+    "tankBrewedBbl": null,
+    "tankConflicts": [],
+    "lastReading": "2026-10-14",
+    "lastSource": "WORT",
+    "numReadings": 2,
+    "readings": [
+      {
+        "date": "2026-10-14",
+        "sample": "AND 053 BH32",
+        "stage": "WORT",
+        "tank": "BH32",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "AG",
+        "Wort pH": 5.28,
+        "SRM": 7.0431472081218285,
+        "IBU (W)": 29.95,
+        "Calories": 269.66,
+        "ADF": 0.16,
+        "RDF": 0.14,
+        "OG": 17.81,
+        "AE": 17.78,
+        "RE": 17.79,
+        "SG": 1.07309,
+        "ABV": 0.02
+      }
+    ],
+    "fermLog": [],
+    "yeastPitches": [
+      {
+        "date": "2026-10-29",
+        "tank": "BH18",
+        "cellCount": 2450000000.0,
+        "viability": 0.91,
+        "pitchRate": 112.63,
+        "yeastGen": "L-5",
+        "yeastSource": "BH34",
+        "yeastBrewNum": "MGB005",
+        "countType": "Yeast"
+      }
+    ],
+    "transferLog": [
+      {
+        "date": "2026-10-29",
+        "action": "BREW",
+        "from": "",
+        "to": "BH18",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10448353613",
+        "completed": false,
+        "remainingBbl": null
+      }
+    ],
+    "packagingLog": [],
+    "basecampAlerts": [],
+    "aeLatest": null,
+    "abvLatest": null
+  },
+  {
     "id": "STG 016",
     "product": "STG",
     "section": "brewhouse",
@@ -3694,13 +3772,12 @@ const BATCHES = [
     "abvLatest": null
   },
   {
-    "id": "AND 051, 052, 053",
+    "id": "AND 051, 052",
     "product": "AND",
     "section": "brewhouse",
     "brewNums": [
       51,
-      52,
-      53
+      52
     ],
     "brewDate": "2026-10-13",
     "brewDateSource": "basecamp",
@@ -3717,7 +3794,7 @@ const BATCHES = [
     "tankConflicts": [],
     "lastReading": "2026-10-21",
     "lastSource": "FERM",
-    "numReadings": 7,
+    "numReadings": 6,
     "readings": [
       {
         "date": "2026-10-21",
@@ -3759,25 +3836,6 @@ const BATCHES = [
         "RE": 18.14,
         "SG": 1.07468,
         "ABV": 0.0
-      },
-      {
-        "date": "2026-10-14",
-        "sample": "AND 053 BH32",
-        "stage": "WORT",
-        "tank": "BH32",
-        "sourceFile": "wort abita samples 2026.xlsx",
-        "sourceSheet": "AG",
-        "Wort pH": 5.28,
-        "SRM": 7.0431472081218285,
-        "IBU (W)": 29.95,
-        "Calories": 269.66,
-        "ADF": 0.16,
-        "RDF": 0.14,
-        "OG": 17.81,
-        "AE": 17.78,
-        "RE": 17.79,
-        "SG": 1.07309,
-        "ABV": 0.02
       }
     ],
     "fermLog": [
@@ -3850,18 +3908,6 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 300.5
-      },
-      {
-        "date": "2026-10-29",
-        "action": "BREW",
-        "from": "",
-        "to": "BH18",
-        "volume": null,
-        "detail": null,
-        "project": "brewhouse",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10448353613",
-        "completed": false,
-        "remainingBbl": null
       }
     ],
     "packagingLog": [],
@@ -9592,7 +9638,9 @@ const FERMENTERS = [
   {
     "tank": "BH18",
     "status": "active",
-    "occupantIds": [],
+    "occupantIds": [
+      "AND 053, 054"
+    ],
     "vicinityOccupants": [],
     "resolvedOccupancy": [
       {
@@ -10869,7 +10917,7 @@ const FERMENTERS = [
     "tank": "BH32",
     "status": "active",
     "occupantIds": [
-      "AND 051, 052, 053"
+      "AND 051, 052"
     ],
     "vicinityOccupants": [],
     "resolvedOccupancy": [
@@ -13323,7 +13371,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-10-29",
-  "lastSync": "Oct 29, 2026 \u00b7 8:10 AM"
+  "lastSync": "Oct 29, 2026 \u00b7 12:11 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
