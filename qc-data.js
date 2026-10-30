@@ -2564,10 +2564,31 @@ const BATCHES = [
     "tankRemainingBbl": null,
     "tankBrewedBbl": null,
     "tankConflicts": [],
-    "lastReading": null,
-    "lastSource": null,
-    "numReadings": 2,
-    "readings": [],
+    "lastReading": "2026-10-29",
+    "lastSource": "WORT",
+    "numReadings": 3,
+    "readings": [
+      {
+        "date": "2026-10-29",
+        "sample": "STG 016 BH19",
+        "stage": "WORT",
+        "tank": "BH19",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "SG",
+        "Wort pH": 5.15,
+        "SRM": 8.426395939086296,
+        "IBU (W)": 21.2,
+        "Calories": 261.14,
+        "ADF": -0.04,
+        "RDF": -0.04,
+        "OG": 17.28,
+        "AE": 17.29,
+        "RE": 17.29,
+        "HAZE": 5090.72989654541,
+        "SG": 1.07095,
+        "ABV": 0.0
+      }
+    ],
     "fermLog": [],
     "yeastPitches": [
       {
@@ -2608,7 +2629,23 @@ const BATCHES = [
       }
     ],
     "packagingLog": [],
-    "basecampAlerts": [],
+    "basecampAlerts": [
+      {
+        "metric": "OG",
+        "value": 17.28,
+        "low": 16.8,
+        "high": 17.2,
+        "date": "2026-10-29",
+        "stage": "WORT",
+        "sample": "STG 016 BH19",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10459270266",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
+        "also": []
+      }
+    ],
     "aeLatest": null,
     "abvLatest": null
   },
@@ -13389,7 +13426,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-10-30",
-  "lastSync": "Oct 30, 2026 \u00b7 12:11 AM"
+  "lastSync": "Oct 30, 2026 \u00b7 4:10 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
