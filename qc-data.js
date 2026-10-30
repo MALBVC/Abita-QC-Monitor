@@ -2463,12 +2463,12 @@ const BATCHES = [
       53,
       54
     ],
-    "brewDate": "2026-10-14",
-    "brewDateSource": "lab",
-    "brewer": null,
+    "brewDate": "2026-10-29",
+    "brewDateSource": "basecamp",
+    "brewer": "Laren Ball",
     "brewVolumeBbl": null,
     "vicinityStage": null,
-    "age": 15,
+    "age": 0,
     "stage": "Fermenting",
     "tank": "BH18",
     "labTank": "BH18",
@@ -2524,7 +2524,7 @@ const BATCHES = [
         "detail": null,
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10448353613",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -8498,12 +8498,6 @@ const FERMENTERS = [
         "lot": "MGB25007",
         "label": "Mardi Gras Bock",
         "qtyBbl": 53.5
-      },
-      {
-        "product": "MGGL",
-        "lot": "MGGL26002",
-        "label": "Mash Gang: Glug",
-        "qtyBbl": 2.0
       }
     ],
     "resolvedOccupancy": [
@@ -8834,14 +8828,7 @@ const FERMENTERS = [
     "tank": "BH08",
     "status": "active",
     "occupantIds": [],
-    "vicinityOccupants": [
-      {
-        "product": "RADG",
-        "lot": "RADG26003",
-        "label": "Rahr: Dadgum IPA",
-        "qtyBbl": 155.5
-      }
-    ],
+    "vicinityOccupants": [],
     "resolvedOccupancy": [
       {
         "tank": "BH08",
@@ -8852,7 +8839,7 @@ const FERMENTERS = [
         "firstEvidence": "2026-10-07",
         "lastEvidence": "2026-10-20",
         "brewDate": "2026-10-07",
-        "vicinityResidentAsOf": "2026-10-14",
+        "vicinityResidentAsOf": null,
         "cellarLastReading": "2026-10-20",
         "cellarLastReadingValues": {
           "temp": 68.0,
@@ -8869,7 +8856,7 @@ const FERMENTERS = [
         "abvLastValue": null,
         "vdkLastReading": "2026-10-20",
         "vdkLastValue": 0.0,
-        "vicinityDepartedAt": null,
+        "vicinityDepartedAt": "2026-10-26",
         "vacated": false,
         "readingAgeDays": 9,
         "batchAgeDays": 22
@@ -13371,7 +13358,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-10-29",
-  "lastSync": "Oct 29, 2026 \u00b7 4:10 PM"
+  "lastSync": "Oct 29, 2026 \u00b7 8:10 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
