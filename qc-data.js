@@ -2476,10 +2476,50 @@ const BATCHES = [
     "tankRemainingBbl": null,
     "tankBrewedBbl": null,
     "tankConflicts": [],
-    "lastReading": "2026-10-14",
+    "lastReading": "2026-10-30",
     "lastSource": "WORT",
-    "numReadings": 3,
+    "numReadings": 5,
     "readings": [
+      {
+        "date": "2026-10-30",
+        "sample": "AND 053 BH18",
+        "stage": "WORT",
+        "tank": "BH18",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "AG",
+        "Wort pH": 5.11,
+        "SRM": 7.538071065989848,
+        "IBU (W)": 29.2,
+        "Calories": 272.32,
+        "ADF": -0.33,
+        "RDF": -0.3,
+        "OG": 17.96,
+        "AE": 18.02,
+        "RE": 18.01,
+        "HAZE": 1124.9610557556152,
+        "SG": 1.07415,
+        "ABV": -0.04
+      },
+      {
+        "date": "2026-10-30",
+        "sample": "AND 054 BH18",
+        "stage": "WORT",
+        "tank": "BH18",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "AG",
+        "Wort pH": 5.15,
+        "SRM": 7.715736040609137,
+        "IBU (W)": 26.85,
+        "Calories": 274.33,
+        "ADF": -0.25,
+        "RDF": -0.23,
+        "OG": 18.08,
+        "AE": 18.13,
+        "RE": 18.12,
+        "HAZE": 1343.0122318267822,
+        "SG": 1.07463,
+        "ABV": -0.03
+      },
       {
         "date": "2026-10-14",
         "sample": "AND 053 BH32",
@@ -13426,7 +13466,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-10-30",
-  "lastSync": "Oct 30, 2026 \u00b7 4:11 PM"
+  "lastSync": "Oct 30, 2026 \u00b7 8:11 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
