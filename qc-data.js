@@ -2427,7 +2427,7 @@ const BATCHES = [
         "remainingBbl": 35.0
       },
       {
-        "date": "2026-11-02",
+        "date": "2026-10-26",
         "action": "PACKAGE",
         "from": "BT21",
         "to": "",
@@ -2441,7 +2441,7 @@ const BATCHES = [
         "remainingBbl": 0.0
       },
       {
-        "date": "2026-11-02",
+        "date": "2026-10-28",
         "action": "PACKAGE",
         "from": "BT22",
         "to": "",
@@ -10742,7 +10742,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-11-02",
-  "lastSync": "Nov 2, 2026 \u00b7 4:16 PM"
+  "lastSync": "Nov 2, 2026 \u00b7 8:11 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
