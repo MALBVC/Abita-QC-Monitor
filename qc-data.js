@@ -1354,7 +1354,7 @@ const BATCHES = [
     "tankConflicts": [],
     "lastReading": "2026-11-03",
     "lastSource": "FERM",
-    "numReadings": 3,
+    "numReadings": 4,
     "readings": [
       {
         "date": "2026-11-03",
@@ -1365,6 +1365,17 @@ const BATCHES = [
         "sourceSheet": "Abita Brews",
         "ABV": 5.81,
         "AE": 3.53
+      },
+      {
+        "date": "2026-11-03",
+        "sample": "JOC 13 BH9",
+        "stage": "GC",
+        "tank": "BH9",
+        "sourceFile": "gc 2026.xlsx",
+        "sourceSheet": "NOV",
+        "Diacetyl": 0.0,
+        "Pentanedione": 0.0,
+        "Total VDK": 0.0
       },
       {
         "date": "2026-11-02",
@@ -6449,8 +6460,8 @@ const FERMENTERS = [
         "cellarPrevReadingValues": null,
         "abvLastReading": "2026-11-03",
         "abvLastValue": 5.81,
-        "vdkLastReading": null,
-        "vdkLastValue": null,
+        "vdkLastReading": "2026-11-03",
+        "vdkLastValue": 0.0,
         "vicinityDepartedAt": null,
         "vacated": false,
         "readingAgeDays": null,
@@ -7463,7 +7474,7 @@ const FERMENTERS = [
           9
         ],
         "firstEvidence": "2026-11-02",
-        "lastEvidence": "2026-11-02",
+        "lastEvidence": "2026-11-03",
         "brewDate": null,
         "vicinityResidentAsOf": null,
         "cellarLastReading": null,
@@ -7472,8 +7483,8 @@ const FERMENTERS = [
         "cellarPrevReadingValues": null,
         "abvLastReading": null,
         "abvLastValue": null,
-        "vdkLastReading": "2026-11-02",
-        "vdkLastValue": 0.1982,
+        "vdkLastReading": "2026-11-03",
+        "vdkLastValue": 0.0,
         "vicinityDepartedAt": null,
         "vacated": false,
         "readingAgeDays": null,
@@ -7977,8 +7988,8 @@ const FERMENTERS = [
         "cellarPrevReadingValues": null,
         "abvLastReading": "2026-11-03",
         "abvLastValue": 8.12,
-        "vdkLastReading": "2026-11-02",
-        "vdkLastValue": 0.1352,
+        "vdkLastReading": "2026-11-03",
+        "vdkLastValue": 0.0,
         "vicinityDepartedAt": null,
         "vacated": false,
         "readingAgeDays": null,
@@ -8946,7 +8957,7 @@ const FERMENTERS = [
           8
         ],
         "firstEvidence": "2026-11-02",
-        "lastEvidence": "2026-11-02",
+        "lastEvidence": "2026-11-03",
         "brewDate": null,
         "vicinityResidentAsOf": null,
         "cellarLastReading": null,
@@ -8955,8 +8966,8 @@ const FERMENTERS = [
         "cellarPrevReadingValues": null,
         "abvLastReading": null,
         "abvLastValue": null,
-        "vdkLastReading": "2026-11-02",
-        "vdkLastValue": 0.1057,
+        "vdkLastReading": "2026-11-03",
+        "vdkLastValue": 0.0,
         "vicinityDepartedAt": null,
         "vacated": false,
         "readingAgeDays": null,
@@ -9680,7 +9691,7 @@ const FERMENTERS = [
           14
         ],
         "firstEvidence": "2026-11-02",
-        "lastEvidence": "2026-11-02",
+        "lastEvidence": "2026-11-03",
         "brewDate": null,
         "vicinityResidentAsOf": null,
         "cellarLastReading": null,
@@ -9689,8 +9700,8 @@ const FERMENTERS = [
         "cellarPrevReadingValues": null,
         "abvLastReading": null,
         "abvLastValue": null,
-        "vdkLastReading": "2026-11-02",
-        "vdkLastValue": 0.1343,
+        "vdkLastReading": "2026-11-03",
+        "vdkLastValue": 0.0,
         "vicinityDepartedAt": null,
         "vacated": false,
         "readingAgeDays": null,
@@ -10828,7 +10839,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-11-03",
-  "lastSync": "Nov 3, 2026 \u00b7 12:12 PM"
+  "lastSync": "Nov 3, 2026 \u00b7 4:12 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
