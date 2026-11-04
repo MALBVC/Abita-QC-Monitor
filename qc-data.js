@@ -1423,15 +1423,15 @@ const BATCHES = [
     "brewDate": "2026-11-02",
     "brewDateSource": "basecamp",
     "brewer": "Laren Ball",
-    "brewVolumeBbl": null,
-    "vicinityStage": null,
+    "brewVolumeBbl": 152.5,
+    "vicinityStage": "Ops-Closed",
     "age": 2,
     "stage": "Fermenting",
-    "tank": "BH9",
+    "tank": "BH09",
     "labTank": "BH9",
-    "tankSource": "lab",
-    "tankRemainingBbl": null,
-    "tankBrewedBbl": null,
+    "tankSource": "vicinity",
+    "tankRemainingBbl": 152.5,
+    "tankBrewedBbl": 152.5,
     "tankConflicts": [],
     "lastReading": "2026-11-03",
     "lastSource": "FERM",
@@ -1534,6 +1534,17 @@ const BATCHES = [
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10448368479",
         "completed": true,
         "remainingBbl": null
+      },
+      {
+        "date": "2026-10-30",
+        "action": "BREW",
+        "from": "",
+        "to": "BH09",
+        "volume": 152.5,
+        "detail": "JOC 013",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 152.5
       }
     ],
     "packagingLog": [],
@@ -2718,15 +2729,15 @@ const BATCHES = [
     "brewDate": "2026-10-29",
     "brewDateSource": "basecamp",
     "brewer": "Laren Ball",
-    "brewVolumeBbl": null,
-    "vicinityStage": null,
+    "brewVolumeBbl": 306.0,
+    "vicinityStage": "Ops-Closed",
     "age": 6,
     "stage": "Fermenting",
     "tank": "BH18",
     "labTank": "BH18",
-    "tankSource": "lab",
-    "tankRemainingBbl": null,
-    "tankBrewedBbl": null,
+    "tankSource": "vicinity",
+    "tankRemainingBbl": 306.0,
+    "tankBrewedBbl": 306.0,
     "tankConflicts": [],
     "lastReading": "2026-10-30",
     "lastSource": "WORT",
@@ -2860,6 +2871,28 @@ const BATCHES = [
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10448353613",
         "completed": true,
         "remainingBbl": null
+      },
+      {
+        "date": "2026-10-29",
+        "action": "BREW",
+        "from": "",
+        "to": "BH18",
+        "volume": 155.5,
+        "detail": "AND 053",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 155.5
+      },
+      {
+        "date": "2026-10-29",
+        "action": "BREW",
+        "from": "",
+        "to": "BH18",
+        "volume": 150.5,
+        "detail": "AND 054",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 306.0
       }
     ],
     "packagingLog": [],
@@ -2877,15 +2910,15 @@ const BATCHES = [
     "brewDate": "2026-10-28",
     "brewDateSource": "basecamp",
     "brewer": "Laren Ball",
-    "brewVolumeBbl": null,
-    "vicinityStage": null,
+    "brewVolumeBbl": 149.5,
+    "vicinityStage": "Ops-Closed",
     "age": 7,
     "stage": "Fermenting",
     "tank": "BH19",
     "labTank": "BH19",
-    "tankSource": "lab",
-    "tankRemainingBbl": null,
-    "tankBrewedBbl": null,
+    "tankSource": "vicinity",
+    "tankRemainingBbl": 149.5,
+    "tankBrewedBbl": 149.5,
     "tankConflicts": [],
     "lastReading": "2026-10-29",
     "lastSource": "WORT",
@@ -2990,6 +3023,17 @@ const BATCHES = [
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10448344833",
         "completed": true,
         "remainingBbl": null
+      },
+      {
+        "date": "2026-10-28",
+        "action": "BREW",
+        "from": "",
+        "to": "BH19",
+        "volume": 149.5,
+        "detail": "STG 016",
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 149.5
       }
     ],
     "packagingLog": [],
@@ -3894,6 +3938,30 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 307.0
+      },
+      {
+        "date": "2026-11-04",
+        "action": "FILTER",
+        "from": "BH28",
+        "to": "BT25",
+        "volume": 100.0,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10475931455",
+        "completed": false,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-11-04",
+        "action": "FILTER",
+        "from": "BH28",
+        "to": "UV30",
+        "volume": null,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10477158593",
+        "completed": false,
+        "remainingBbl": null
       }
     ],
     "packagingLog": [],
@@ -4737,7 +4805,7 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10473394257",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       },
       {
@@ -4749,11 +4817,11 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10473394771",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       },
       {
-        "date": "2026-11-03",
+        "date": "2026-11-04",
         "action": "FILTER",
         "from": "BH35",
         "to": "BT24",
@@ -4761,11 +4829,11 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10473395437",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       },
       {
-        "date": "2026-11-03",
+        "date": "2026-11-04",
         "action": "FILTER",
         "from": "BH35",
         "to": "BT28",
@@ -4777,7 +4845,7 @@ const BATCHES = [
         "remainingBbl": null
       },
       {
-        "date": "2026-11-03",
+        "date": "2026-11-04",
         "action": "FILTER",
         "from": "BH35",
         "to": "BT26",
@@ -7122,7 +7190,9 @@ const FERMENTERS = [
   {
     "tank": "BH09",
     "status": "active",
-    "occupantIds": [],
+    "occupantIds": [
+      "JOC 013"
+    ],
     "vicinityOccupants": [],
     "resolvedOccupancy": [
       {
@@ -7131,10 +7201,10 @@ const FERMENTERS = [
         "brewNums": [
           13
         ],
-        "firstEvidence": "2026-11-01",
+        "firstEvidence": "2026-10-30",
         "lastEvidence": "2026-11-02",
-        "brewDate": null,
-        "vicinityResidentAsOf": null,
+        "brewDate": "2026-10-30",
+        "vicinityResidentAsOf": "2026-10-30",
         "cellarLastReading": "2026-11-02",
         "cellarLastReadingValues": {
           "temp": 71.0,
@@ -7154,7 +7224,7 @@ const FERMENTERS = [
         "vicinityDepartedAt": null,
         "vacated": false,
         "readingAgeDays": 2,
-        "batchAgeDays": 3
+        "batchAgeDays": 5
       },
       {
         "tank": "BH09",
@@ -7633,7 +7703,14 @@ const FERMENTERS = [
     "tank": "BH16",
     "status": "active",
     "occupantIds": [],
-    "vicinityOccupants": [],
+    "vicinityOccupants": [
+      {
+        "product": "BGAL",
+        "lot": "BGAL26010",
+        "label": "Beer Girl: Amber Lager",
+        "qtyBbl": 210.0
+      }
+    ],
     "resolvedOccupancy": [
       {
         "tank": "BH16",
@@ -7641,10 +7718,10 @@ const FERMENTERS = [
         "brewNums": [
           10
         ],
-        "firstEvidence": "2026-11-01",
+        "firstEvidence": "2026-10-30",
         "lastEvidence": "2026-11-03",
-        "brewDate": null,
-        "vicinityResidentAsOf": null,
+        "brewDate": "2026-10-30",
+        "vicinityResidentAsOf": "2026-10-30",
         "cellarLastReading": "2026-11-03",
         "cellarLastReadingValues": {
           "temp": null,
@@ -7664,7 +7741,7 @@ const FERMENTERS = [
         "vicinityDepartedAt": null,
         "vacated": false,
         "readingAgeDays": 1,
-        "batchAgeDays": 3
+        "batchAgeDays": 5
       },
       {
         "tank": "BH16",
@@ -7734,7 +7811,14 @@ const FERMENTERS = [
     "tank": "BH17",
     "status": "active",
     "occupantIds": [],
-    "vicinityOccupants": [],
+    "vicinityOccupants": [
+      {
+        "product": "FFLV",
+        "lot": "FFLV26004",
+        "label": "5X5:  Los Vaqueros Kolsch",
+        "qtyBbl": 153.5
+      }
+    ],
     "resolvedOccupancy": [
       {
         "tank": "BH17",
@@ -7742,10 +7826,10 @@ const FERMENTERS = [
         "brewNums": [
           4
         ],
-        "firstEvidence": "2026-11-01",
+        "firstEvidence": "2026-10-30",
         "lastEvidence": "2026-11-03",
-        "brewDate": null,
-        "vicinityResidentAsOf": null,
+        "brewDate": "2026-10-30",
+        "vicinityResidentAsOf": "2026-10-30",
         "cellarLastReading": "2026-11-03",
         "cellarLastReadingValues": {
           "temp": null,
@@ -7765,7 +7849,7 @@ const FERMENTERS = [
         "vicinityDepartedAt": null,
         "vacated": false,
         "readingAgeDays": 1,
-        "batchAgeDays": 3
+        "batchAgeDays": 5
       },
       {
         "tank": "BH17",
@@ -7846,10 +7930,10 @@ const FERMENTERS = [
           53,
           54
         ],
-        "firstEvidence": "2026-10-30",
+        "firstEvidence": "2026-10-29",
         "lastEvidence": "2026-11-02",
-        "brewDate": null,
-        "vicinityResidentAsOf": null,
+        "brewDate": "2026-10-29",
+        "vicinityResidentAsOf": "2026-10-29",
         "cellarLastReading": "2026-11-02",
         "cellarLastReadingValues": {
           "temp": 56.0,
@@ -7869,7 +7953,7 @@ const FERMENTERS = [
         "vicinityDepartedAt": null,
         "vacated": false,
         "readingAgeDays": 2,
-        "batchAgeDays": 5
+        "batchAgeDays": 6
       },
       {
         "tank": "BH18",
@@ -7949,10 +8033,10 @@ const FERMENTERS = [
         "brewNums": [
           16
         ],
-        "firstEvidence": "2026-10-29",
+        "firstEvidence": "2026-10-28",
         "lastEvidence": "2026-11-02",
-        "brewDate": null,
-        "vicinityResidentAsOf": null,
+        "brewDate": "2026-10-28",
+        "vicinityResidentAsOf": "2026-10-28",
         "cellarLastReading": "2026-11-02",
         "cellarLastReadingValues": {
           "temp": 56.0,
@@ -7972,7 +8056,7 @@ const FERMENTERS = [
         "vicinityDepartedAt": null,
         "vacated": false,
         "readingAgeDays": 2,
-        "batchAgeDays": 6
+        "batchAgeDays": 7
       },
       {
         "tank": "BH19",
@@ -8182,7 +8266,14 @@ const FERMENTERS = [
     "tank": "BH22",
     "status": "active",
     "occupantIds": [],
-    "vicinityOccupants": [],
+    "vicinityOccupants": [
+      {
+        "product": "BGAL",
+        "lot": "BGAL26009",
+        "label": "Beer Girl: Amber Lager",
+        "qtyBbl": 212.5
+      }
+    ],
     "resolvedOccupancy": [
       {
         "tank": "BH22",
@@ -8190,10 +8281,10 @@ const FERMENTERS = [
         "brewNums": [
           9
         ],
-        "firstEvidence": "2026-11-01",
+        "firstEvidence": "2026-10-29",
         "lastEvidence": "2026-11-03",
-        "brewDate": null,
-        "vicinityResidentAsOf": null,
+        "brewDate": "2026-10-29",
+        "vicinityResidentAsOf": "2026-10-29",
         "cellarLastReading": "2026-11-03",
         "cellarLastReadingValues": {
           "temp": null,
@@ -8213,7 +8304,7 @@ const FERMENTERS = [
         "vicinityDepartedAt": null,
         "vacated": false,
         "readingAgeDays": 1,
-        "batchAgeDays": 3
+        "batchAgeDays": 6
       },
       {
         "tank": "BH22",
@@ -9277,7 +9368,20 @@ const FERMENTERS = [
     "tank": "BH33",
     "status": "active",
     "occupantIds": [],
-    "vicinityOccupants": [],
+    "vicinityOccupants": [
+      {
+        "product": "BGLL",
+        "lot": "BGLL26012",
+        "label": "Beer Girl: Lighter Lager",
+        "qtyBbl": 213.5
+      },
+      {
+        "product": "BGLL",
+        "lot": "BGLL26011",
+        "label": "Beer Girl: Lighter Lager",
+        "qtyBbl": 210.0
+      }
+    ],
     "resolvedOccupancy": [
       {
         "tank": "BH33",
@@ -9286,10 +9390,10 @@ const FERMENTERS = [
           11,
           12
         ],
-        "firstEvidence": "2026-10-28",
+        "firstEvidence": "2026-10-27",
         "lastEvidence": "2026-11-02",
-        "brewDate": null,
-        "vicinityResidentAsOf": null,
+        "brewDate": "2026-10-27",
+        "vicinityResidentAsOf": "2026-10-27",
         "cellarLastReading": "2026-11-02",
         "cellarLastReadingValues": {
           "temp": 53.0,
@@ -9309,7 +9413,7 @@ const FERMENTERS = [
         "vicinityDepartedAt": null,
         "vacated": false,
         "readingAgeDays": 2,
-        "batchAgeDays": 7
+        "batchAgeDays": 8
       },
       {
         "tank": "BH33",
@@ -9737,6 +9841,12 @@ const FERMENTERS = [
     "vicinityOccupants": [
       {
         "product": "BGAL",
+        "lot": "BGAL26008",
+        "label": "Beer Girl: Amber Lager",
+        "qtyBbl": 196.5
+      },
+      {
+        "product": "BGAL",
         "lot": "BGAL26007",
         "label": "Beer Girl: Amber Lager",
         "qtyBbl": 204.5
@@ -9750,10 +9860,10 @@ const FERMENTERS = [
           7,
           8
         ],
-        "firstEvidence": "2026-10-28",
+        "firstEvidence": "2026-10-27",
         "lastEvidence": "2026-11-03",
-        "brewDate": null,
-        "vicinityResidentAsOf": null,
+        "brewDate": "2026-10-27",
+        "vicinityResidentAsOf": "2026-10-27",
         "cellarLastReading": "2026-11-03",
         "cellarLastReadingValues": {
           "temp": null,
@@ -9773,7 +9883,7 @@ const FERMENTERS = [
         "vicinityDepartedAt": null,
         "vacated": false,
         "readingAgeDays": 1,
-        "batchAgeDays": 7
+        "batchAgeDays": 8
       },
       {
         "tank": "BH39",
@@ -10487,7 +10597,20 @@ const FERMENTERS = [
     "tank": "BH46",
     "status": "active",
     "occupantIds": [],
-    "vicinityOccupants": [],
+    "vicinityOccupants": [
+      {
+        "product": "BGLL",
+        "lot": "BGLL26013",
+        "label": "Beer Girl: Lighter Lager",
+        "qtyBbl": 209.0
+      },
+      {
+        "product": "BGLL",
+        "lot": "BGLL26014",
+        "label": "Beer Girl: Lighter Lager",
+        "qtyBbl": 214.0
+      }
+    ],
     "resolvedOccupancy": [
       {
         "tank": "BH46",
@@ -10496,10 +10619,10 @@ const FERMENTERS = [
           13,
           14
         ],
-        "firstEvidence": "2026-10-29",
+        "firstEvidence": "2026-10-28",
         "lastEvidence": "2026-11-03",
-        "brewDate": null,
-        "vicinityResidentAsOf": null,
+        "brewDate": "2026-10-28",
+        "vicinityResidentAsOf": "2026-10-28",
         "cellarLastReading": "2026-11-03",
         "cellarLastReadingValues": {
           "temp": null,
@@ -10519,7 +10642,7 @@ const FERMENTERS = [
         "vicinityDepartedAt": null,
         "vacated": false,
         "readingAgeDays": 1,
-        "batchAgeDays": 6
+        "batchAgeDays": 7
       },
       {
         "tank": "BH46",
@@ -11659,7 +11782,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-11-04",
-  "lastSync": "Nov 4, 2026 \u00b7 12:11 PM"
+  "lastSync": "Nov 4, 2026 \u00b7 4:11 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
