@@ -3976,6 +3976,78 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 403.0
+      },
+      {
+        "date": "2026-11-03",
+        "action": "FILTER",
+        "from": "BH35",
+        "to": "BT21",
+        "volume": 56.0,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10473393385",
+        "completed": false,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-11-03",
+        "action": "FILTER",
+        "from": "BH35",
+        "to": "BT22",
+        "volume": 56.0,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10473394257",
+        "completed": false,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-11-03",
+        "action": "FILTER",
+        "from": "BH35",
+        "to": "BT23",
+        "volume": 56.0,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10473394771",
+        "completed": false,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-11-03",
+        "action": "FILTER",
+        "from": "BH35",
+        "to": "BT24",
+        "volume": 56.0,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10473395437",
+        "completed": false,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-11-03",
+        "action": "FILTER",
+        "from": "BH35",
+        "to": "BT28",
+        "volume": 112.0,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10473397362",
+        "completed": false,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-11-03",
+        "action": "FILTER",
+        "from": "BH35",
+        "to": "BT26",
+        "volume": null,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10473399460",
+        "completed": false,
+        "remainingBbl": null
       }
     ],
     "packagingLog": [],
@@ -4319,6 +4391,78 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 200.0
+      },
+      {
+        "date": "2026-11-03",
+        "action": "FILTER",
+        "from": "BH35",
+        "to": "BT21",
+        "volume": 56.0,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10473393385",
+        "completed": false,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-11-03",
+        "action": "FILTER",
+        "from": "BH35",
+        "to": "BT22",
+        "volume": 56.0,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10473394257",
+        "completed": false,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-11-03",
+        "action": "FILTER",
+        "from": "BH35",
+        "to": "BT23",
+        "volume": 56.0,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10473394771",
+        "completed": false,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-11-03",
+        "action": "FILTER",
+        "from": "BH35",
+        "to": "BT24",
+        "volume": 56.0,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10473395437",
+        "completed": false,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-11-03",
+        "action": "FILTER",
+        "from": "BH35",
+        "to": "BT28",
+        "volume": 112.0,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10473397362",
+        "completed": false,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-11-03",
+        "action": "FILTER",
+        "from": "BH35",
+        "to": "BT26",
+        "volume": null,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10473399460",
+        "completed": false,
+        "remainingBbl": null
       }
     ],
     "packagingLog": [],
@@ -10839,7 +10983,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-11-03",
-  "lastSync": "Nov 3, 2026 \u00b7 4:12 PM"
+  "lastSync": "Nov 3, 2026 \u00b7 8:12 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
