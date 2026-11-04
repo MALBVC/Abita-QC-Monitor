@@ -4725,7 +4725,7 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10473393385",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       },
       {
@@ -5453,6 +5453,65 @@ const BATCHES = [
       "stage": "FERM",
       "date": "2026-10-07"
     }
+  },
+  {
+    "id": "AMB 063, 064, 065",
+    "product": "AMB",
+    "section": "brewhouse",
+    "brewNums": [
+      63,
+      64,
+      65
+    ],
+    "brewDate": "2026-11-04",
+    "brewDateSource": "basecamp",
+    "brewer": null,
+    "brewVolumeBbl": null,
+    "vicinityStage": null,
+    "age": 0,
+    "stage": "Fermenting",
+    "tank": "BH51",
+    "labTank": "BH51",
+    "tankSource": "lab",
+    "tankRemainingBbl": null,
+    "tankBrewedBbl": null,
+    "tankConflicts": [],
+    "lastReading": null,
+    "lastSource": null,
+    "numReadings": 1,
+    "readings": [],
+    "fermLog": [],
+    "yeastPitches": [
+      {
+        "date": "2026-11-04",
+        "tank": "BH51",
+        "cellCount": 1020000000.0,
+        "viability": 0.8039,
+        "pitchRate": 357.0,
+        "yeastGen": "L-6",
+        "yeastSource": "BH30",
+        "yeastBrewNum": "AMB 61-62",
+        "countType": "YEAST"
+      }
+    ],
+    "transferLog": [
+      {
+        "date": "2026-11-04",
+        "action": "BREW",
+        "from": "",
+        "to": "BH51",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10471385999",
+        "completed": false,
+        "remainingBbl": null
+      }
+    ],
+    "packagingLog": [],
+    "basecampAlerts": [],
+    "aeLatest": null,
+    "abvLatest": null
   },
   {
     "id": "AND 030",
@@ -9675,7 +9734,14 @@ const FERMENTERS = [
     "tank": "BH39",
     "status": "active",
     "occupantIds": [],
-    "vicinityOccupants": [],
+    "vicinityOccupants": [
+      {
+        "product": "BGAL",
+        "lot": "BGAL26007",
+        "label": "Beer Girl: Amber Lager",
+        "qtyBbl": 204.5
+      }
+    ],
     "resolvedOccupancy": [
       {
         "tank": "BH39",
@@ -10939,7 +11005,9 @@ const FERMENTERS = [
   {
     "tank": "BH51",
     "status": "active",
-    "occupantIds": [],
+    "occupantIds": [
+      "AMB 063, 064, 065"
+    ],
     "vicinityOccupants": [
       {
         "product": "4",
@@ -11591,7 +11659,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-11-04",
-  "lastSync": "Nov 4, 2026 \u00b7 8:11 AM"
+  "lastSync": "Nov 4, 2026 \u00b7 12:11 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
