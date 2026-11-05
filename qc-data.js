@@ -4841,7 +4841,7 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10473397362",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       },
       {
@@ -4853,7 +4853,7 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10473399460",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -5533,7 +5533,7 @@ const BATCHES = [
     ],
     "brewDate": "2026-11-04",
     "brewDateSource": "basecamp",
-    "brewer": null,
+    "brewer": "Laren Ball",
     "brewVolumeBbl": null,
     "vicinityStage": null,
     "age": 0,
@@ -5546,7 +5546,7 @@ const BATCHES = [
     "tankConflicts": [],
     "lastReading": null,
     "lastSource": null,
-    "numReadings": 1,
+    "numReadings": 2,
     "readings": [],
     "fermLog": [],
     "yeastPitches": [
@@ -5560,6 +5560,17 @@ const BATCHES = [
         "yeastSource": "BH30",
         "yeastBrewNum": "AMB 61-62",
         "countType": "YEAST"
+      },
+      {
+        "date": "2026-11-04",
+        "tank": "BH51",
+        "cellCount": 63191227.0,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": null
       }
     ],
     "transferLog": [
@@ -5572,7 +5583,7 @@ const BATCHES = [
         "detail": null,
         "project": "brewhouse",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10471385999",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -11782,7 +11793,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-11-04",
-  "lastSync": "Nov 4, 2026 \u00b7 4:11 PM"
+  "lastSync": "Nov 4, 2026 \u00b7 8:12 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
