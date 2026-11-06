@@ -1433,10 +1433,20 @@ const BATCHES = [
     "tankRemainingBbl": 152.5,
     "tankBrewedBbl": 152.5,
     "tankConflicts": [],
-    "lastReading": "2026-11-03",
+    "lastReading": "2026-11-06",
     "lastSource": "FERM",
-    "numReadings": 7,
+    "numReadings": 8,
     "readings": [
+      {
+        "date": "2026-11-06",
+        "sample": "JOC 13 BH9",
+        "stage": "FERM",
+        "tank": "BH9",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "JJ",
+        "ABV": 6.17,
+        "AE": 3.04
+      },
       {
         "date": "2026-11-03",
         "sample": "JOC 013 BH9",
@@ -2739,10 +2749,32 @@ const BATCHES = [
     "tankRemainingBbl": 306.0,
     "tankBrewedBbl": 306.0,
     "tankConflicts": [],
-    "lastReading": "2026-10-30",
-    "lastSource": "WORT",
-    "numReadings": 8,
+    "lastReading": "2026-11-06",
+    "lastSource": "FERM",
+    "numReadings": 10,
     "readings": [
+      {
+        "date": "2026-11-06",
+        "sample": "AND 53-54 BH18",
+        "stage": "FERM",
+        "tank": "BH18",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 8.2,
+        "Turbidity": 576.789439201355,
+        "AE": 3.4
+      },
+      {
+        "date": "2026-11-06",
+        "sample": "AND 53,54 BH18",
+        "stage": "GC",
+        "tank": "BH18",
+        "sourceFile": "gc 2026.xlsx",
+        "sourceSheet": "NOV",
+        "Diacetyl": 0.0,
+        "Pentanedione": 0.0,
+        "Total VDK": 0.0
+      },
       {
         "date": "2026-10-30",
         "sample": "AND 053 BH18",
@@ -2920,10 +2952,32 @@ const BATCHES = [
     "tankRemainingBbl": 149.5,
     "tankBrewedBbl": 149.5,
     "tankConflicts": [],
-    "lastReading": "2026-10-29",
-    "lastSource": "WORT",
-    "numReadings": 7,
+    "lastReading": "2026-11-06",
+    "lastSource": "FERM",
+    "numReadings": 9,
     "readings": [
+      {
+        "date": "2026-11-06",
+        "sample": "STG 016 BH19",
+        "stage": "FERM",
+        "tank": "BH19",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 7.71,
+        "Turbidity": 178.27391409873962,
+        "AE": 3.39
+      },
+      {
+        "date": "2026-11-06",
+        "sample": "SGT 16 BH19",
+        "stage": "GC",
+        "tank": "BH19",
+        "sourceFile": "gc 2026.xlsx",
+        "sourceSheet": "NOV",
+        "Diacetyl": 0.0,
+        "Pentanedione": 0.0,
+        "Total VDK": 0.0
+      },
       {
         "date": "2026-10-29",
         "sample": "STG 016 BH19",
@@ -4999,7 +5053,7 @@ const BATCHES = [
         "detail": "1026 CASES",
         "project": "packaging",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10461034379",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -7574,8 +7628,8 @@ const FERMENTERS = [
           "gravity": 5.0,
           "ph": 4.06
         },
-        "abvLastReading": "2026-11-03",
-        "abvLastValue": 5.81,
+        "abvLastReading": "2026-11-06",
+        "abvLastValue": 6.17,
         "vdkLastReading": "2026-11-03",
         "vdkLastValue": 0.0,
         "vicinityDepartedAt": null,
@@ -8303,10 +8357,10 @@ const FERMENTERS = [
           "gravity": 11.1,
           "ph": 4.4
         },
-        "abvLastReading": null,
-        "abvLastValue": null,
-        "vdkLastReading": null,
-        "vdkLastValue": null,
+        "abvLastReading": "2026-11-06",
+        "abvLastValue": 8.2,
+        "vdkLastReading": "2026-11-06",
+        "vdkLastValue": 0.0,
         "vicinityDepartedAt": null,
         "vacated": false,
         "readingAgeDays": 4,
@@ -8406,10 +8460,10 @@ const FERMENTERS = [
           "gravity": 7.4,
           "ph": 4.39
         },
-        "abvLastReading": null,
-        "abvLastValue": null,
-        "vdkLastReading": null,
-        "vdkLastValue": null,
+        "abvLastReading": "2026-11-06",
+        "abvLastValue": 7.71,
+        "vdkLastReading": "2026-11-06",
+        "vdkLastValue": 0.0,
         "vicinityDepartedAt": null,
         "vacated": false,
         "readingAgeDays": 4,
@@ -12137,7 +12191,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-11-06",
-  "lastSync": "Nov 6, 2026 \u00b7 12:12 PM"
+  "lastSync": "Nov 6, 2026 \u00b7 4:11 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
