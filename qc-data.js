@@ -5116,10 +5116,69 @@ const BATCHES = [
     "tankRemainingBbl": null,
     "tankBrewedBbl": null,
     "tankConflicts": [],
-    "lastReading": null,
-    "lastSource": null,
-    "numReadings": 2,
-    "readings": [],
+    "lastReading": "2026-11-05",
+    "lastSource": "WORT",
+    "numReadings": 5,
+    "readings": [
+      {
+        "date": "2026-11-05",
+        "sample": "AMB 65 BH51",
+        "stage": "WORT",
+        "tank": "BH51",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "A",
+        "Wort pH": 5.18,
+        "SRM": 17.67766497461929,
+        "IBU (W)": 23.95,
+        "Calories": 153.74,
+        "ADF": -0.21,
+        "RDF": -0.19,
+        "OG": 10.5,
+        "AE": 10.52,
+        "RE": 10.52,
+        "HAZE": 1991.9351692199707,
+        "SG": 1.04214,
+        "ABV": -0.01
+      },
+      {
+        "date": "2026-11-05",
+        "sample": "AMB 64 BH51",
+        "stage": "WORT",
+        "tank": "BH51",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "A",
+        "Wort pH": 5.15,
+        "SRM": 18.248730964467004,
+        "IBU (W)": 18.0,
+        "Calories": 152.38,
+        "ADF": -0.68,
+        "RDF": -0.58,
+        "OG": 10.4,
+        "AE": 10.47,
+        "RE": 10.46,
+        "SG": 1.04195,
+        "ABV": -0.04
+      },
+      {
+        "date": "2026-11-05",
+        "sample": "AMB 63 BH51",
+        "stage": "WORT",
+        "tank": "BH51",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "A",
+        "Wort pH": 5.07,
+        "SRM": 18.05837563451777,
+        "IBU (W)": 20.3,
+        "Calories": 153.08,
+        "ADF": -0.64,
+        "RDF": -0.55,
+        "OG": 10.45,
+        "AE": 10.52,
+        "RE": 10.5,
+        "SG": 1.04212,
+        "ABV": -0.04
+      }
+    ],
     "fermLog": [],
     "yeastPitches": [
       {
@@ -5180,15 +5239,35 @@ const BATCHES = [
     "age": 30,
     "stage": "Aging",
     "tank": "BH35",
-    "labTank": "TK26",
+    "labTank": "TK28",
     "tankSource": "vicinity",
     "tankRemainingBbl": 394.5,
     "tankBrewedBbl": 394.5,
     "tankConflicts": [],
     "lastReading": "2026-11-05",
     "lastSource": "FIN",
-    "numReadings": 24,
+    "numReadings": 25,
     "readings": [
+      {
+        "date": "2026-11-05",
+        "sample": "AMB 59-60 TK28",
+        "stage": "FIN",
+        "tank": "TK28",
+        "sourceFile": "finished abita beer 2026.xlsx",
+        "sourceSheet": "A",
+        "pH": 4.31,
+        "DO": 54.0,
+        "CO2 Vols": 2.74,
+        "Calories": 141.83,
+        "ADF": 78.52,
+        "RDF": 64.7,
+        "OG": 10.8,
+        "AE": 2.32,
+        "RE": 3.96,
+        "HAZE": 37.36377364397049,
+        "SG": 1.00904,
+        "ABV": 4.48
+      },
       {
         "date": "2026-11-05",
         "sample": "AMB 59-60 TK26",
@@ -5616,7 +5695,7 @@ const BATCHES = [
         "detail": "1295 CASES",
         "project": "packaging",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10461008198",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       },
       {
@@ -5635,18 +5714,30 @@ const BATCHES = [
     "basecampAlerts": [
       {
         "metric": "AE",
-        "value": 2.33,
+        "value": 2.32,
         "low": 1.4,
         "high": 2.2,
         "date": "2026-11-05",
         "stage": "FIN",
-        "sample": "AMB 59-60 TK26",
+        "sample": "AMB 59-60 TK28",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10474118325",
         "acknowledged": false,
         "ackBy": null,
         "ackAt": null,
         "ackNote": null,
         "also": [
+          {
+            "value": 2.32,
+            "date": "2026-11-05",
+            "stage": "FIN",
+            "sample": "AMB 59-60 TK28"
+          },
+          {
+            "value": 2.33,
+            "date": "2026-11-05",
+            "stage": "FIN",
+            "sample": "AMB 59-60 TK26"
+          },
           {
             "value": 2.33,
             "date": "2026-11-05",
@@ -5732,12 +5823,12 @@ const BATCHES = [
       }
     ],
     "aeLatest": {
-      "v": 2.33,
+      "v": 2.32,
       "stage": "FIN",
       "date": "2026-11-05"
     },
     "abvLatest": {
-      "v": 4.49,
+      "v": 4.48,
       "stage": "FIN",
       "date": "2026-11-05"
     }
@@ -11943,7 +12034,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-11-05",
-  "lastSync": "Nov 5, 2026 \u00b7 4:14 PM"
+  "lastSync": "Nov 5, 2026 \u00b7 8:12 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
