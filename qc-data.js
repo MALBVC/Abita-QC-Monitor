@@ -12191,7 +12191,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-11-08",
-  "lastSync": "Nov 8, 2026 \u00b7 12:02 PM"
+  "lastSync": "Nov 8, 2026 \u00b7 4:02 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
