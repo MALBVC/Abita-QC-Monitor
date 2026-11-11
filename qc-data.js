@@ -1986,7 +1986,7 @@ const BATCHES = [
     "tankConflicts": [],
     "lastReading": "2026-07-20",
     "lastSource": "WORT",
-    "numReadings": 14,
+    "numReadings": 15,
     "readings": [
       {
         "date": "2026-07-20",
@@ -2149,6 +2149,17 @@ const BATCHES = [
         "yeastSource": "BH39",
         "yeastBrewNum": "BGAL008",
         "countType": "Yeast"
+      },
+      {
+        "date": "2026-11-11",
+        "tank": "BH14",
+        "cellCount": 24479484.333333332,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": "L-6",
+        "yeastSource": "BH39",
+        "yeastBrewNum": "BGAL008",
+        "countType": "FV"
       }
     ],
     "transferLog": [
@@ -6980,7 +6991,7 @@ const FERMENTERS = [
           2
         ],
         "firstEvidence": "2026-11-10",
-        "lastEvidence": "2026-11-10",
+        "lastEvidence": "2026-11-11",
         "brewDate": null,
         "vicinityResidentAsOf": null,
         "cellarLastReading": null,
@@ -6989,8 +7000,8 @@ const FERMENTERS = [
         "cellarPrevReadingValues": null,
         "abvLastReading": null,
         "abvLastValue": null,
-        "vdkLastReading": "2026-11-10",
-        "vdkLastValue": 0.1387,
+        "vdkLastReading": "2026-11-11",
+        "vdkLastValue": 0.0128,
         "vicinityDepartedAt": null,
         "vacated": false,
         "readingAgeDays": null,
@@ -11981,7 +11992,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-11-11",
-  "lastSync": "Nov 11, 2026 \u00b7 12:11 PM"
+  "lastSync": "Nov 11, 2026 \u00b7 4:11 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
