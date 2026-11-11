@@ -1428,7 +1428,7 @@ const BATCHES = [
         "detail": null,
         "project": "cellar",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10494936875",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
@@ -11913,7 +11913,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-11-10",
-  "lastSync": "Nov 10, 2026 \u00b7 4:11 PM"
+  "lastSync": "Nov 10, 2026 \u00b7 8:12 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
