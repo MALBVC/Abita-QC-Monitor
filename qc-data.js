@@ -1503,6 +1503,50 @@ const BATCHES = [
     "abvLatest": null
   },
   {
+    "id": "STG 017",
+    "product": "STG",
+    "section": "brewhouse",
+    "brewNums": [
+      17
+    ],
+    "brewDate": null,
+    "brewDateSource": null,
+    "brewer": null,
+    "brewVolumeBbl": null,
+    "vicinityStage": null,
+    "age": null,
+    "stage": "Fermenting",
+    "tank": "BH8",
+    "labTank": "BH8",
+    "tankSource": "lab",
+    "tankRemainingBbl": null,
+    "tankBrewedBbl": null,
+    "tankConflicts": [],
+    "lastReading": null,
+    "lastSource": null,
+    "numReadings": 1,
+    "readings": [],
+    "fermLog": [],
+    "yeastPitches": [
+      {
+        "date": "2026-11-11",
+        "tank": "BH8",
+        "cellCount": 1350000000.0,
+        "viability": 0.919,
+        "pitchRate": 95.58,
+        "yeastGen": "L-6",
+        "yeastSource": "BH39",
+        "yeastBrewNum": "BGAL008",
+        "countType": "Yeast"
+      }
+    ],
+    "transferLog": [],
+    "packagingLog": [],
+    "basecampAlerts": [],
+    "aeLatest": null,
+    "abvLatest": null
+  },
+  {
     "id": "JOC 013",
     "product": "JOC",
     "section": "brewhouse",
@@ -1920,11 +1964,12 @@ const BATCHES = [
     "abvLatest": null
   },
   {
-    "id": "GLD 054",
+    "id": "GLD 054, 075",
     "product": "GLD",
     "section": "brewhouse",
     "brewNums": [
-      54
+      54,
+      75
     ],
     "brewDate": "2026-07-17",
     "brewDateSource": "basecamp",
@@ -1941,7 +1986,7 @@ const BATCHES = [
     "tankConflicts": [],
     "lastReading": "2026-07-20",
     "lastSource": "WORT",
-    "numReadings": 13,
+    "numReadings": 14,
     "readings": [
       {
         "date": "2026-07-20",
@@ -2093,6 +2138,17 @@ const BATCHES = [
         "yeastSource": null,
         "yeastBrewNum": null,
         "countType": "FV (manual)"
+      },
+      {
+        "date": "2026-11-11",
+        "tank": "BH14",
+        "cellCount": 1350000000.0,
+        "viability": 0.919,
+        "pitchRate": 73.46,
+        "yeastGen": "L-6",
+        "yeastSource": "BH39",
+        "yeastBrewNum": "BGAL008",
+        "countType": "Yeast"
       }
     ],
     "transferLog": [
@@ -2144,6 +2200,18 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 394.0
+      },
+      {
+        "date": "2026-11-11",
+        "action": "BREW",
+        "from": "",
+        "to": "BH14",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10495904755",
+        "completed": false,
+        "remainingBbl": null
       }
     ],
     "packagingLog": [
@@ -7734,7 +7802,7 @@ const FERMENTERS = [
     "tank": "BH14",
     "status": "active",
     "occupantIds": [
-      "GLD 054",
+      "GLD 054, 075",
       "LHT 005"
     ],
     "vicinityOccupants": [],
@@ -11913,7 +11981,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-11-11",
-  "lastSync": "Nov 11, 2026 \u00b7 8:11 AM"
+  "lastSync": "Nov 11, 2026 \u00b7 12:11 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
