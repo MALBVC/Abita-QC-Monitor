@@ -1236,16 +1236,36 @@ const BATCHES = [
     "vicinityStage": null,
     "age": 1,
     "stage": "Fermenting",
-    "tank": "BH08",
-    "labTank": "BH08",
+    "tank": "BH8",
+    "labTank": "BH8",
     "tankSource": "lab",
     "tankRemainingBbl": null,
     "tankBrewedBbl": null,
     "tankConflicts": [],
-    "lastReading": null,
-    "lastSource": null,
-    "numReadings": 3,
-    "readings": [],
+    "lastReading": "2026-11-13",
+    "lastSource": "WORT",
+    "numReadings": 4,
+    "readings": [
+      {
+        "date": "2026-11-13",
+        "sample": "STG 017 BH8",
+        "stage": "WORT",
+        "tank": "BH8",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "SG",
+        "Wort pH": 5.23,
+        "SRM": 7.030456852791879,
+        "IBU (W)": 22.1,
+        "Calories": 255.68,
+        "ADF": -0.04,
+        "RDF": -0.04,
+        "OG": 16.95,
+        "AE": 16.95,
+        "RE": 16.95,
+        "SG": 1.06949,
+        "ABV": 0.0
+      }
+    ],
     "fermLog": [
       {
         "date": "2026-11-12",
@@ -1656,10 +1676,30 @@ const BATCHES = [
     "tankRemainingBbl": 203.0,
     "tankBrewedBbl": 218.0,
     "tankConflicts": [],
-    "lastReading": "2026-07-20",
+    "lastReading": "2026-11-13",
     "lastSource": "WORT",
-    "numReadings": 16,
+    "numReadings": 17,
     "readings": [
+      {
+        "date": "2026-11-13",
+        "sample": "GLD 075 BH14",
+        "stage": "WORT",
+        "tank": "BH14",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "G",
+        "Wort pH": 5.09,
+        "SRM": 5.469543147208122,
+        "IBU (W)": 14.95,
+        "Calories": 144.55,
+        "ADF": 0.5,
+        "RDF": 0.41,
+        "OG": 9.91,
+        "AE": 9.86,
+        "RE": 9.87,
+        "HAZE": 2226.8795585632324,
+        "SG": 1.0394,
+        "ABV": 0.03
+      },
       {
         "date": "2026-07-20",
         "sample": "GLD 054 BH14",
@@ -4983,15 +5023,35 @@ const BATCHES = [
     "age": 22,
     "stage": "Aging",
     "tank": "BH07",
-    "labTank": "TK31",
+    "labTank": "TK23",
     "tankSource": "vicinity",
     "tankRemainingBbl": 155.0,
     "tankBrewedBbl": 155.0,
     "tankConflicts": [],
-    "lastReading": "2026-11-12",
+    "lastReading": "2026-11-13",
     "lastSource": "FIN",
-    "numReadings": 14,
+    "numReadings": 15,
     "readings": [
+      {
+        "date": "2026-11-13",
+        "sample": "ALG 008 TK23",
+        "stage": "FIN",
+        "tank": "TK23",
+        "sourceFile": "finished abita beer 2026.xlsx",
+        "sourceSheet": "ALPHA",
+        "pH": 4.57,
+        "DO": 42.0,
+        "CO2 Vols": 2.75,
+        "Calories": 262.99,
+        "ADF": 84.81,
+        "RDF": 70.86,
+        "OG": 19.38,
+        "AE": 2.94,
+        "RE": 6.08,
+        "HAZE": 5113.96696472168,
+        "SG": 1.0115,
+        "ABV": 9.15
+      },
       {
         "date": "2026-11-12",
         "sample": "ALG 008 TK31",
@@ -5218,20 +5278,20 @@ const BATCHES = [
         "detail": "1783 CASES",
         "project": "packaging",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10477068181",
-        "completed": false,
+        "completed": true,
         "remainingBbl": null
       }
     ],
     "basecampAlerts": [],
     "aeLatest": {
-      "v": 2.95,
+      "v": 2.94,
       "stage": "FIN",
-      "date": "2026-11-12"
+      "date": "2026-11-13"
     },
     "abvLatest": {
       "v": 9.15,
       "stage": "FIN",
-      "date": "2026-11-12"
+      "date": "2026-11-13"
     }
   },
   {
@@ -6653,9 +6713,7 @@ const FERMENTERS = [
   {
     "tank": "BH08",
     "status": "active",
-    "occupantIds": [
-      "STG 017"
-    ],
+    "occupantIds": [],
     "vicinityOccupants": [],
     "resolvedOccupancy": [
       {
@@ -11318,7 +11376,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-11-13",
-  "lastSync": "Nov 13, 2026 \u00b7 12:12 AM"
+  "lastSync": "Nov 13, 2026 \u00b7 4:12 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
