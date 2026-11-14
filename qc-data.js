@@ -4238,10 +4238,50 @@ const BATCHES = [
     "tankRemainingBbl": null,
     "tankBrewedBbl": null,
     "tankConflicts": [],
-    "lastReading": null,
-    "lastSource": null,
-    "numReadings": 2,
-    "readings": [],
+    "lastReading": "2026-11-13",
+    "lastSource": "WORT",
+    "numReadings": 4,
+    "readings": [
+      {
+        "date": "2026-11-13",
+        "sample": "AND 55 BH35",
+        "stage": "WORT",
+        "tank": "BH35",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "AG",
+        "Wort pH": 5.09,
+        "SRM": 7.753807106598985,
+        "IBU (W)": 26.150000000000002,
+        "Calories": 276.41,
+        "ADF": 0.06,
+        "RDF": 0.05,
+        "OG": 18.22,
+        "AE": 18.21,
+        "RE": 18.21,
+        "HAZE": 2437.2028999328613,
+        "SG": 1.07497,
+        "ABV": 0.01
+      },
+      {
+        "date": "2026-11-13",
+        "sample": "AND 56 BH35",
+        "stage": "WORT",
+        "tank": "BH35",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "AG",
+        "Wort pH": 5.11,
+        "SRM": 7.779187817258883,
+        "IBU (W)": 27.0,
+        "Calories": 277.85,
+        "ADF": 0.22,
+        "RDF": 0.19,
+        "OG": 18.31,
+        "AE": 18.27,
+        "RE": 18.28,
+        "SG": 1.07524,
+        "ABV": 0.02
+      }
+    ],
     "fermLog": [],
     "yeastPitches": [
       {
@@ -4282,7 +4322,30 @@ const BATCHES = [
       }
     ],
     "packagingLog": [],
-    "basecampAlerts": [],
+    "basecampAlerts": [
+      {
+        "metric": "OG",
+        "value": 18.22,
+        "low": 17.8,
+        "high": 18.2,
+        "date": "2026-11-13",
+        "stage": "WORT",
+        "sample": "AND 55 BH35",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10509867451",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
+        "also": [
+          {
+            "value": 18.31,
+            "date": "2026-11-13",
+            "stage": "WORT",
+            "sample": "AND 56 BH35"
+          }
+        ]
+      }
+    ],
     "aeLatest": null,
     "abvLatest": null
   },
@@ -4573,10 +4636,50 @@ const BATCHES = [
     "tankRemainingBbl": null,
     "tankBrewedBbl": null,
     "tankConflicts": [],
-    "lastReading": null,
-    "lastSource": null,
-    "numReadings": 2,
-    "readings": [],
+    "lastReading": "2026-11-13",
+    "lastSource": "WORT",
+    "numReadings": 4,
+    "readings": [
+      {
+        "date": "2026-11-13",
+        "sample": "AMB 66 BH45",
+        "stage": "WORT",
+        "tank": "BH45",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "A",
+        "Wort pH": 5.1,
+        "SRM": 16.446700507614214,
+        "IBU (W)": 18.55,
+        "Calories": 154.82,
+        "ADF": -0.03,
+        "RDF": -0.04,
+        "OG": 10.57,
+        "AE": 10.57,
+        "RE": 10.57,
+        "HAZE": 3916.067699432373,
+        "SG": 1.04236,
+        "ABV": 0.0
+      },
+      {
+        "date": "2026-11-13",
+        "sample": "AMB 67 BH45",
+        "stage": "WORT",
+        "tank": "BH45",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "A",
+        "Wort pH": 5.11,
+        "SRM": 16.852791878172592,
+        "IBU (W)": 24.3,
+        "Calories": 153.74,
+        "ADF": -0.12,
+        "RDF": -0.11,
+        "OG": 10.5,
+        "AE": 10.51,
+        "RE": 10.51,
+        "SG": 1.0421,
+        "ABV": -0.01
+      }
+    ],
     "fermLog": [],
     "yeastPitches": [
       {
@@ -10971,7 +11074,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-11-14",
-  "lastSync": "Nov 14, 2026 \u00b7 12:11 AM"
+  "lastSync": "Nov 14, 2026 \u00b7 4:11 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
