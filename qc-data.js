@@ -6698,7 +6698,7 @@ const BATCHES = [
     "tankConflicts": [],
     "lastReading": "2026-11-16",
     "lastSource": "BBT",
-    "numReadings": 59,
+    "numReadings": 61,
     "readings": [
       {
         "date": "2026-11-16",
@@ -6809,6 +6809,8 @@ const BATCHES = [
         "SRM": 23.84517766497462,
         "IBU": 19.8,
         "pH": 4.38,
+        "DO": 44.0,
+        "CO2 Vols": 2.65,
         "Calories": 116.21,
         "ADF": 79.66,
         "RDF": 65.36,
@@ -6818,6 +6820,48 @@ const BATCHES = [
         "HAZE": 82.1502674818039,
         "SG": 1.00709,
         "ABV": 3.72
+      },
+      {
+        "date": "2026-11-16",
+        "sample": "BGAL 7-8 BT28",
+        "stage": "BBT",
+        "tank": "BT28",
+        "sourceFile": "bbt contract beer 2026.xlsx",
+        "sourceSheet": "BGAL",
+        "SRM": 22.766497461928935,
+        "IBU": 19.950000000000003,
+        "pH": 4.34,
+        "DO": 48.0,
+        "CO2 Vols": 2.68,
+        "Calories": 116.05,
+        "ADF": 79.42,
+        "RDF": 65.16,
+        "OG": 8.94,
+        "AE": 1.84,
+        "RE": 3.21,
+        "HAZE": 60.99681454896927,
+        "SG": 1.00716,
+        "ABV": 3.7
+      },
+      {
+        "date": "2026-11-16",
+        "sample": "BGAL 7-8 BT27",
+        "stage": "BBT",
+        "tank": "BT27",
+        "sourceFile": "bbt contract beer 2026.xlsx",
+        "sourceSheet": "BGAL",
+        "SRM": 22.728426395939085,
+        "IBU": 20.25,
+        "pH": 4.36,
+        "Calories": 116.84,
+        "ADF": 79.73,
+        "RDF": 65.42,
+        "OG": 9.0,
+        "AE": 1.82,
+        "RE": 3.21,
+        "HAZE": 56.5266575217247,
+        "SG": 1.0071,
+        "ABV": 3.74
       },
       {
         "date": "2026-11-13",
@@ -7656,10 +7700,34 @@ const BATCHES = [
         "ackNote": null,
         "also": [
           {
+            "value": 19.950000000000003,
+            "date": "2026-11-16",
+            "stage": "BBT",
+            "sample": "BGAL 7-8 BT28"
+          },
+          {
+            "value": 20.25,
+            "date": "2026-11-16",
+            "stage": "BBT",
+            "sample": "BGAL 7-8 BT27"
+          },
+          {
             "value": 19.8,
             "date": "2026-11-16",
             "stage": "BBT",
             "sample": "BGAL 7-8 BT31"
+          },
+          {
+            "value": 19.950000000000003,
+            "date": "2026-11-16",
+            "stage": "BBT",
+            "sample": "BGAL 7-8 BT28"
+          },
+          {
+            "value": 20.25,
+            "date": "2026-11-16",
+            "stage": "BBT",
+            "sample": "BGAL 7-8 BT27"
           }
         ]
       }
@@ -15426,7 +15494,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-11-17",
-  "lastSync": "Nov 17, 2026 \u00b7 12:14 AM"
+  "lastSync": "Nov 17, 2026 \u00b7 4:14 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
