@@ -1979,6 +1979,133 @@ function computeOOS(readings, product) {
 
 const BATCHES = [
   {
+    "id": "AMB 068, 069, 070",
+    "product": "AMB",
+    "section": "brewhouse",
+    "brewNums": [
+      68,
+      69,
+      70
+    ],
+    "brewDate": "2025-10-30",
+    "brewDateSource": "basecamp",
+    "brewer": "Jamie Killian",
+    "brewVolumeBbl": null,
+    "vicinityStage": null,
+    "age": 383,
+    "stage": "Fermenting",
+    "tank": "BH",
+    "labTank": "BH",
+    "tankSource": "lab",
+    "tankRemainingBbl": null,
+    "tankBrewedBbl": null,
+    "tankConflicts": [],
+    "lastReading": "2026-11-16",
+    "lastSource": "GC",
+    "numReadings": 3,
+    "readings": [
+      {
+        "date": "2026-11-16",
+        "sample": "AMB 66,67,68,69 BH45",
+        "stage": "GC",
+        "tank": "BH45",
+        "sourceFile": "gc 2026.xlsx",
+        "sourceSheet": "NOV",
+        "Diacetyl": 0.0228,
+        "Pentanedione": 0.0376,
+        "Total VDK": 0.0604
+      },
+      {
+        "date": "2026-11-16",
+        "sample": "AMB 66-69 BH45",
+        "stage": "FERM",
+        "tank": "BH45",
+        "sourceFile": "bh samples 2026.xlsx",
+        "sourceSheet": "Abita Brews",
+        "ABV": 4.39,
+        "Turbidity": 419.2074279785156,
+        "AE": 2.22
+      }
+    ],
+    "fermLog": [],
+    "yeastPitches": [
+      {
+        "date": "2026-11-17",
+        "tank": "BH",
+        "cellCount": null,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "Yeast"
+      }
+    ],
+    "transferLog": [
+      {
+        "date": "2025-10-29",
+        "action": "BREW",
+        "from": "",
+        "to": "BH54",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/9190474607",
+        "completed": true,
+        "remainingBbl": null
+      }
+    ],
+    "packagingLog": [],
+    "basecampAlerts": [],
+    "aeLatest": null,
+    "abvLatest": null
+  },
+  {
+    "id": "AND 057, 058",
+    "product": "AND",
+    "section": "brewhouse",
+    "brewNums": [
+      57,
+      58
+    ],
+    "brewDate": null,
+    "brewDateSource": null,
+    "brewer": null,
+    "brewVolumeBbl": null,
+    "vicinityStage": null,
+    "age": null,
+    "stage": "Fermenting",
+    "tank": "BH",
+    "labTank": "BH",
+    "tankSource": "lab",
+    "tankRemainingBbl": null,
+    "tankBrewedBbl": null,
+    "tankConflicts": [],
+    "lastReading": null,
+    "lastSource": null,
+    "numReadings": 1,
+    "readings": [],
+    "fermLog": [],
+    "yeastPitches": [
+      {
+        "date": "2026-11-18",
+        "tank": "BH",
+        "cellCount": null,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "Yeast"
+      }
+    ],
+    "transferLog": [],
+    "packagingLog": [],
+    "basecampAlerts": [],
+    "aeLatest": null,
+    "abvLatest": null
+  },
+  {
     "id": "TBD 007",
     "product": "TBD",
     "section": "brewhouse",
@@ -6227,6 +6354,30 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 199.5
+      },
+      {
+        "date": "2026-11-17",
+        "action": "CENT",
+        "from": "BH42",
+        "to": "BT26",
+        "volume": 50.0,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10518114685",
+        "completed": false,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-11-17",
+        "action": "CENT",
+        "from": "BH42",
+        "to": "BT29",
+        "volume": null,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10518117025",
+        "completed": false,
+        "remainingBbl": null
       }
     ],
     "packagingLog": [
@@ -6255,6 +6406,18 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 0.0
+      },
+      {
+        "date": "2026-11-17",
+        "action": "PACKAGE",
+        "from": "BT29,BT26",
+        "to": "",
+        "volume": null,
+        "detail": "2530 CASES",
+        "project": "packaging",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10514313651",
+        "completed": false,
+        "remainingBbl": null
       }
     ],
     "basecampAlerts": [],
@@ -6853,6 +7016,8 @@ const BATCHES = [
         "SRM": 22.728426395939085,
         "IBU": 20.25,
         "pH": 4.36,
+        "DO": 43.0,
+        "CO2 Vols": 2.65,
         "Calories": 116.84,
         "ADF": 79.73,
         "RDF": 65.42,
@@ -9104,75 +9269,6 @@ const BATCHES = [
     }
   },
   {
-    "id": "AMB 068, 069",
-    "product": "AMB",
-    "section": "brewhouse",
-    "brewNums": [
-      68,
-      69
-    ],
-    "brewDate": "2025-10-30",
-    "brewDateSource": "basecamp",
-    "brewer": "Jamie Killian",
-    "brewVolumeBbl": null,
-    "vicinityStage": null,
-    "age": 383,
-    "stage": "Fermenting",
-    "tank": "",
-    "labTank": "",
-    "tankSource": "lab",
-    "tankRemainingBbl": null,
-    "tankBrewedBbl": null,
-    "tankConflicts": [],
-    "lastReading": "2026-11-16",
-    "lastSource": "GC",
-    "numReadings": 2,
-    "readings": [
-      {
-        "date": "2026-11-16",
-        "sample": "AMB 66,67,68,69 BH45",
-        "stage": "GC",
-        "tank": "BH45",
-        "sourceFile": "gc 2026.xlsx",
-        "sourceSheet": "NOV",
-        "Diacetyl": 0.0228,
-        "Pentanedione": 0.0376,
-        "Total VDK": 0.0604
-      },
-      {
-        "date": "2026-11-16",
-        "sample": "AMB 66-69 BH45",
-        "stage": "FERM",
-        "tank": "BH45",
-        "sourceFile": "bh samples 2026.xlsx",
-        "sourceSheet": "Abita Brews",
-        "ABV": 4.39,
-        "Turbidity": 419.2074279785156,
-        "AE": 2.22
-      }
-    ],
-    "fermLog": [],
-    "yeastPitches": [],
-    "transferLog": [
-      {
-        "date": "2025-10-29",
-        "action": "BREW",
-        "from": "",
-        "to": "BH54",
-        "volume": null,
-        "detail": null,
-        "project": "brewhouse",
-        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/9190474607",
-        "completed": true,
-        "remainingBbl": null
-      }
-    ],
-    "packagingLog": [],
-    "basecampAlerts": [],
-    "aeLatest": null,
-    "abvLatest": null
-  },
-  {
     "id": "ALG 007",
     "product": "ALG",
     "section": "brite",
@@ -9722,11 +9818,13 @@ const BATCHES = [
     }
   },
   {
-    "id": "GLD 075",
+    "id": "GLD 075, 076, 077",
     "product": "GLD",
     "section": "brite",
     "brewNums": [
-      75
+      75,
+      76,
+      77
     ],
     "brewDate": "2026-11-12",
     "brewDateSource": "basecamp",
@@ -9743,7 +9841,7 @@ const BATCHES = [
     "tankConflicts": [],
     "lastReading": "2026-11-16",
     "lastSource": "FERM",
-    "numReadings": 7,
+    "numReadings": 8,
     "readings": [
       {
         "date": "2026-11-16",
@@ -9833,6 +9931,17 @@ const BATCHES = [
         "yeastSource": "BH39",
         "yeastBrewNum": "BGAL008",
         "countType": "FV"
+      },
+      {
+        "date": "2026-11-18",
+        "tank": "BH14",
+        "cellCount": null,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": null,
+        "yeastBrewNum": null,
+        "countType": "Yeast"
       }
     ],
     "transferLog": [
@@ -15494,7 +15603,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-11-17",
-  "lastSync": "Nov 17, 2026 \u00b7 8:14 AM"
+  "lastSync": "Nov 17, 2026 \u00b7 12:16 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
