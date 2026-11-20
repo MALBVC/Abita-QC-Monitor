@@ -701,10 +701,15 @@ function DetailPanel({ batch, onClose }) {
                           color:'var(--muted)', marginBottom:10 }}>Latest Values vs Spec</div>
             <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10 }}>
               {specMetrics.map(m => {
-                const { v, stage } = latestVals[m];
+                const { v, stage: readStage, date: readDate } = latestVals[m];
+                const spec = (SPECS[batch.product]||{})[m];
+                // A fermenter ABV/AE reading is compared to the finished-beer
+                // range (the spec's own stages are BBT/FIN only), the same
+                // way the Cellar tile does, and labelled as in-fermenter.
+                const inFerm = readStage === 'FERM' && (m === 'ABV' || m === 'AE');
+                const stage = inFerm ? spec.stages[0] : readStage;
                 const status = checkSpec(m, v, stage, batch.product);
                 const isOOS = status && status !== 'OK';
-                const spec = (SPECS[batch.product]||{})[m];
                 return (
                   <div key={m} style={{ background:'var(--card)', borderRadius:7, padding:'10px 12px',
                                          border:`1px solid ${isOOS ? 'var(--red-br)' : 'var(--border)'}` }}>
@@ -726,6 +731,11 @@ function DetailPanel({ batch, onClose }) {
                     {spec.maxOnly && (
                       <div style={{ fontSize:11, color:'var(--muted2)', marginTop:2 }}>
                         max {spec.high}{spec.unit}
+                      </div>
+                    )}
+                    {inFerm && (
+                      <div style={{ fontSize:10, color:'var(--muted2)', marginTop:3 }}>
+                        in fermenter{readDate ? ', ' + readDate.slice(5).replace('-', '/') : ''}
                       </div>
                     )}
                   </div>
