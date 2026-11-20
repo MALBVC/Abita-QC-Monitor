@@ -108,6 +108,16 @@ const SPECS = {
       "high": 80.0,
       "unit": "",
       "maxOnly": true
+    },
+    "Ferm Temp": {
+      "stages": [
+        "FERM"
+      ],
+      "target": 56.0,
+      "low": null,
+      "high": 61.6,
+      "unit": "",
+      "maxOnly": true
     }
   },
   "ALG": {
@@ -214,6 +224,16 @@ const SPECS = {
       "target": null,
       "low": null,
       "high": 80.0,
+      "unit": "",
+      "maxOnly": true
+    },
+    "Ferm Temp": {
+      "stages": [
+        "FERM"
+      ],
+      "target": 70.0,
+      "low": null,
+      "high": 77.0,
       "unit": "",
       "maxOnly": true
     }
@@ -324,6 +344,16 @@ const SPECS = {
       "high": 80.0,
       "unit": "",
       "maxOnly": true
+    },
+    "Ferm Temp": {
+      "stages": [
+        "FERM"
+      ],
+      "target": 56.0,
+      "low": null,
+      "high": 61.6,
+      "unit": "",
+      "maxOnly": true
     }
   },
   "BEC": {
@@ -430,6 +460,16 @@ const SPECS = {
       "target": null,
       "low": null,
       "high": 80.0,
+      "unit": "",
+      "maxOnly": true
+    },
+    "Ferm Temp": {
+      "stages": [
+        "FERM"
+      ],
+      "target": 56.0,
+      "low": null,
+      "high": 61.6,
       "unit": "",
       "maxOnly": true
     }
@@ -540,6 +580,16 @@ const SPECS = {
       "high": 50.0,
       "unit": "",
       "maxOnly": true
+    },
+    "Ferm Temp": {
+      "stages": [
+        "FERM"
+      ],
+      "target": 65.0,
+      "low": null,
+      "high": 71.5,
+      "unit": "",
+      "maxOnly": true
     }
   },
   "GLD": {
@@ -646,6 +696,16 @@ const SPECS = {
       "target": null,
       "low": null,
       "high": 80.0,
+      "unit": "",
+      "maxOnly": true
+    },
+    "Ferm Temp": {
+      "stages": [
+        "FERM"
+      ],
+      "target": 60.0,
+      "low": null,
+      "high": 66.0,
       "unit": "",
       "maxOnly": true
     }
@@ -756,6 +816,16 @@ const SPECS = {
       "high": 80.0,
       "unit": "",
       "maxOnly": true
+    },
+    "Ferm Temp": {
+      "stages": [
+        "FERM"
+      ],
+      "target": 68.0,
+      "low": null,
+      "high": 74.8,
+      "unit": "",
+      "maxOnly": true
     }
   },
   "STG": {
@@ -862,6 +932,16 @@ const SPECS = {
       "target": null,
       "low": null,
       "high": 100.0,
+      "unit": "",
+      "maxOnly": true
+    },
+    "Ferm Temp": {
+      "stages": [
+        "FERM"
+      ],
+      "target": 56.0,
+      "low": null,
+      "high": 61.6,
       "unit": "",
       "maxOnly": true
     }
@@ -972,6 +1052,16 @@ const SPECS = {
       "high": 80.0,
       "unit": "",
       "maxOnly": true
+    },
+    "Ferm Temp": {
+      "stages": [
+        "FERM"
+      ],
+      "target": 65.0,
+      "low": null,
+      "high": 71.5,
+      "unit": "",
+      "maxOnly": true
     }
   },
   "DGT": {
@@ -1078,6 +1168,16 @@ const SPECS = {
       "target": null,
       "low": null,
       "high": 80.0,
+      "unit": "",
+      "maxOnly": true
+    },
+    "Ferm Temp": {
+      "stages": [
+        "FERM"
+      ],
+      "target": 70.0,
+      "low": null,
+      "high": 77.0,
       "unit": "",
       "maxOnly": true
     }
@@ -1188,6 +1288,16 @@ const SPECS = {
       "high": 80.0,
       "unit": "",
       "maxOnly": true
+    },
+    "Ferm Temp": {
+      "stages": [
+        "FERM"
+      ],
+      "target": 56.0,
+      "low": null,
+      "high": 61.6,
+      "unit": "",
+      "maxOnly": true
     }
   },
   "BTT": {
@@ -1296,6 +1406,16 @@ const SPECS = {
       "high": 80.0,
       "unit": "",
       "maxOnly": true
+    },
+    "Ferm Temp": {
+      "stages": [
+        "FERM"
+      ],
+      "target": 60.0,
+      "low": null,
+      "high": 66.0,
+      "unit": "",
+      "maxOnly": true
     }
   },
   "SHL": {
@@ -1402,6 +1522,16 @@ const SPECS = {
       "target": null,
       "low": null,
       "high": 50.0,
+      "unit": "",
+      "maxOnly": true
+    },
+    "Ferm Temp": {
+      "stages": [
+        "FERM"
+      ],
+      "target": 68.0,
+      "low": null,
+      "high": 74.8,
       "unit": "",
       "maxOnly": true
     }
@@ -1836,6 +1966,16 @@ const SPECS = {
       "high": 50.0,
       "unit": "",
       "maxOnly": true
+    },
+    "Ferm Temp": {
+      "stages": [
+        "FERM"
+      ],
+      "target": 63.0,
+      "low": null,
+      "high": 69.3,
+      "unit": "",
+      "maxOnly": true
     }
   },
   "RADG": {
@@ -1993,14 +2133,14 @@ const BATCHES = [
     "age": 8,
     "stage": "Fermenting",
     "tank": "BH08",
-    "labTank": "BH8",
+    "labTank": "BH08",
     "tankSource": "vicinity",
     "tankRemainingBbl": 153.5,
     "tankBrewedBbl": 153.5,
     "tankConflicts": [],
     "lastReading": "2026-11-19",
     "lastSource": "FERM",
-    "numReadings": 7,
+    "numReadings": 11,
     "readings": [
       {
         "date": "2026-11-19",
@@ -2065,6 +2205,46 @@ const BATCHES = [
         "actions": null,
         "sourceFile": "cellar records 2026.xlsx",
         "sourceSheet": "SGT"
+      },
+      {
+        "date": "2026-11-13",
+        "tank": "BH08",
+        "temp": 56.0,
+        "gravity": 12.7,
+        "ph": 4.56,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "SGT"
+      },
+      {
+        "date": "2026-11-15",
+        "tank": "BH08",
+        "temp": 56.0,
+        "gravity": 5.6,
+        "ph": null,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "SGT"
+      },
+      {
+        "date": "2026-11-16",
+        "tank": "BH08",
+        "temp": 56.0,
+        "gravity": 4.6,
+        "ph": 4.35,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "SGT"
+      },
+      {
+        "date": "2026-11-17",
+        "tank": "BH08",
+        "temp": 56.0,
+        "gravity": 3.6,
+        "ph": 4.41,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "SGT"
       }
     ],
     "yeastPitches": [
@@ -2119,7 +2299,11 @@ const BATCHES = [
     "packagingLog": [],
     "basecampAlerts": [],
     "aeLatest": null,
-    "abvLatest": null
+    "abvLatest": {
+      "v": 7.64,
+      "stage": "FERM",
+      "date": "2026-11-19"
+    }
   },
   {
     "id": "RADG 004",
@@ -2143,7 +2327,7 @@ const BATCHES = [
     "tankConflicts": [],
     "lastReading": "2026-11-19",
     "lastSource": "FERM",
-    "numReadings": 9,
+    "numReadings": 11,
     "readings": [
       {
         "date": "2026-11-19",
@@ -2230,6 +2414,26 @@ const BATCHES = [
         "actions": null,
         "sourceFile": "cellar records 2026.xlsx",
         "sourceSheet": "RARH"
+      },
+      {
+        "date": "2026-11-13",
+        "tank": "BH10",
+        "temp": 70.0,
+        "gravity": 3.8,
+        "ph": 4.38,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "RARH"
+      },
+      {
+        "date": "2026-11-15",
+        "tank": "BH10",
+        "temp": 69.0,
+        "gravity": 3.5,
+        "ph": null,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "RARH"
       }
     ],
     "yeastPitches": [
@@ -2296,7 +2500,11 @@ const BATCHES = [
     "packagingLog": [],
     "basecampAlerts": [],
     "aeLatest": null,
-    "abvLatest": null
+    "abvLatest": {
+      "v": 6.8,
+      "stage": "FERM",
+      "date": "2026-11-19"
+    }
   },
   {
     "id": "DGT 010",
@@ -2311,7 +2519,7 @@ const BATCHES = [
     "brewVolumeBbl": 154.0,
     "vicinityStage": "Ops-Closed",
     "age": 14,
-    "stage": "Fermenting",
+    "stage": "Aging",
     "tank": "BH11",
     "labTank": "BH11",
     "tankSource": "vicinity",
@@ -2320,7 +2528,7 @@ const BATCHES = [
     "tankConflicts": [],
     "lastReading": "2026-11-20",
     "lastSource": "FERM",
-    "numReadings": 9,
+    "numReadings": 10,
     "readings": [
       {
         "date": "2026-11-20",
@@ -2424,6 +2632,16 @@ const BATCHES = [
         "actions": null,
         "sourceFile": "cellar records 2026.xlsx",
         "sourceSheet": "DGT"
+      },
+      {
+        "date": "2026-11-13",
+        "tank": "BH11",
+        "temp": 70.0,
+        "gravity": 2.4,
+        "ph": 4.25,
+        "actions": "dropped",
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "DGT"
       }
     ],
     "yeastPitches": [],
@@ -2482,11 +2700,26 @@ const BATCHES = [
         "ackBy": null,
         "ackAt": null,
         "ackNote": null,
-        "also": []
+        "also": [
+          {
+            "value": 2.4,
+            "date": "2026-11-13",
+            "stage": "FERM",
+            "sample": "DGT 10 BH11"
+          }
+        ]
       }
     ],
-    "aeLatest": null,
-    "abvLatest": null
+    "aeLatest": {
+      "v": 2.4,
+      "stage": "FERM",
+      "date": "2026-11-13"
+    },
+    "abvLatest": {
+      "v": 9.47,
+      "stage": "FERM",
+      "date": "2026-11-20"
+    }
   },
   {
     "id": "LHT 006",
@@ -2826,7 +3059,7 @@ const BATCHES = [
     "tankConflicts": [],
     "lastReading": "2026-11-16",
     "lastSource": "FERM",
-    "numReadings": 7,
+    "numReadings": 8,
     "readings": [
       {
         "date": "2026-11-16",
@@ -2890,6 +3123,16 @@ const BATCHES = [
         "gravity": 7.9,
         "ph": 4.58,
         "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "GLD"
+      },
+      {
+        "date": "2026-11-13",
+        "tank": "BH14",
+        "temp": 68.0,
+        "gravity": 3.1,
+        "ph": 4.1,
+        "actions": "shut-in",
         "sourceFile": "cellar records 2026.xlsx",
         "sourceSheet": "GLD"
       }
@@ -2960,7 +3203,11 @@ const BATCHES = [
     "packagingLog": [],
     "basecampAlerts": [],
     "aeLatest": null,
-    "abvLatest": null
+    "abvLatest": {
+      "v": 4.27,
+      "stage": "FERM",
+      "date": "2026-11-16"
+    }
   },
   {
     "id": "BTT 007",
@@ -3127,7 +3374,11 @@ const BATCHES = [
     "packagingLog": [],
     "basecampAlerts": [],
     "aeLatest": null,
-    "abvLatest": null
+    "abvLatest": {
+      "v": 4.81,
+      "stage": "FERM",
+      "date": "2026-11-19"
+    }
   },
   {
     "id": "FFLV 004",
@@ -3850,7 +4101,11 @@ const BATCHES = [
       "stage": "FERM",
       "date": "2026-11-10"
     },
-    "abvLatest": null
+    "abvLatest": {
+      "v": 7.71,
+      "stage": "FERM",
+      "date": "2026-11-06"
+    }
   },
   {
     "id": "BTT 006",
@@ -5061,7 +5316,7 @@ const BATCHES = [
     "tankConflicts": [],
     "lastReading": "2026-11-19",
     "lastSource": "GC",
-    "numReadings": 6,
+    "numReadings": 7,
     "readings": [
       {
         "date": "2026-11-19",
@@ -5125,7 +5380,18 @@ const BATCHES = [
         "ABV": 0.02
       }
     ],
-    "fermLog": [],
+    "fermLog": [
+      {
+        "date": "2026-11-13",
+        "tank": "BH35",
+        "temp": 56.0,
+        "gravity": 16.7,
+        "ph": 4.64,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "AND"
+      }
+    ],
     "yeastPitches": [
       {
         "date": "2026-11-12",
@@ -5212,7 +5478,11 @@ const BATCHES = [
       }
     ],
     "aeLatest": null,
-    "abvLatest": null
+    "abvLatest": {
+      "v": 8.29,
+      "stage": "FERM",
+      "date": "2026-11-19"
+    }
   },
   {
     "id": "GLD 073, 074",
@@ -5228,7 +5498,7 @@ const BATCHES = [
     "brewVolumeBbl": 418.5,
     "vicinityStage": "Ops-Closed",
     "age": 38,
-    "stage": "Fermenting",
+    "stage": "Aging",
     "tank": "BH40",
     "labTank": "BH40",
     "tankSource": "vicinity",
@@ -5380,7 +5650,7 @@ const BATCHES = [
         "temp": 68.0,
         "gravity": 1.6,
         "ph": 3.94,
-        "actions": null,
+        "actions": "DROPPED",
         "sourceFile": "cellar records 2026.xlsx",
         "sourceSheet": "GLD"
       },
@@ -5477,8 +5747,16 @@ const BATCHES = [
     ],
     "packagingLog": [],
     "basecampAlerts": [],
-    "aeLatest": null,
-    "abvLatest": null
+    "aeLatest": {
+      "v": 1.8,
+      "stage": "FERM",
+      "date": "2026-11-08"
+    },
+    "abvLatest": {
+      "v": 4.26,
+      "stage": "FERM",
+      "date": "2026-10-16"
+    }
   },
   {
     "id": "GLD 076, 077",
@@ -5636,7 +5914,7 @@ const BATCHES = [
     "tankConflicts": [],
     "lastReading": "2026-11-19",
     "lastSource": "FERM",
-    "numReadings": 9,
+    "numReadings": 10,
     "readings": [
       {
         "date": "2026-11-19",
@@ -5733,7 +6011,18 @@ const BATCHES = [
         "ABV": -0.01
       }
     ],
-    "fermLog": [],
+    "fermLog": [
+      {
+        "date": "2026-11-13",
+        "tank": "BH45",
+        "temp": 56.0,
+        "gravity": 9.9,
+        "ph": 4.67,
+        "actions": null,
+        "sourceFile": "cellar records 2026.xlsx",
+        "sourceSheet": "AMB"
+      }
+    ],
     "yeastPitches": [
       {
         "date": "2026-11-12",
@@ -5797,7 +6086,11 @@ const BATCHES = [
     "packagingLog": [],
     "basecampAlerts": [],
     "aeLatest": null,
-    "abvLatest": null
+    "abvLatest": {
+      "v": 4.47,
+      "stage": "FERM",
+      "date": "2026-11-19"
+    }
   },
   {
     "id": "AMB 063, 064, 065",
@@ -6245,7 +6538,11 @@ const BATCHES = [
     "packagingLog": [],
     "basecampAlerts": [],
     "aeLatest": null,
-    "abvLatest": null
+    "abvLatest": {
+      "v": 4.44,
+      "stage": "FERM",
+      "date": "2026-11-17"
+    }
   },
   {
     "id": "AND 051, 052",
@@ -7609,7 +7906,11 @@ const BATCHES = [
     "packagingLog": [],
     "basecampAlerts": [],
     "aeLatest": null,
-    "abvLatest": null
+    "abvLatest": {
+      "v": 4.55,
+      "stage": "FERM",
+      "date": "2026-11-18"
+    }
   },
   {
     "id": "ALG 007",
@@ -11983,24 +12284,28 @@ const FERMENTERS = [
           17
         ],
         "firstEvidence": "2026-11-11",
-        "lastEvidence": "2026-11-12",
+        "lastEvidence": "2026-11-17",
         "brewDate": "2026-11-11",
         "vicinityResidentAsOf": "2026-11-11",
-        "cellarLastReading": "2026-11-12",
+        "cellarLastReading": "2026-11-17",
         "cellarLastReadingValues": {
           "temp": 56.0,
-          "gravity": 14.9,
-          "ph": 4.81
+          "gravity": 3.6,
+          "ph": 4.41
         },
-        "cellarPrevReading": null,
-        "cellarPrevReadingValues": null,
+        "cellarPrevReading": "2026-11-16",
+        "cellarPrevReadingValues": {
+          "temp": 56.0,
+          "gravity": 4.6,
+          "ph": 4.35
+        },
         "abvLastReading": "2026-11-19",
         "abvLastValue": 7.64,
         "vdkLastReading": "2026-11-17",
         "vdkLastValue": 0.0,
         "vicinityDepartedAt": null,
         "vacated": false,
-        "readingAgeDays": 8,
+        "readingAgeDays": 3,
         "batchAgeDays": 9
       },
       {
@@ -12175,20 +12480,20 @@ const FERMENTERS = [
           4
         ],
         "firstEvidence": "2026-11-10",
-        "lastEvidence": "2026-11-12",
+        "lastEvidence": "2026-11-15",
         "brewDate": "2026-11-10",
         "vicinityResidentAsOf": "2026-11-10",
-        "cellarLastReading": "2026-11-12",
+        "cellarLastReading": "2026-11-15",
         "cellarLastReadingValues": {
-          "temp": 70.0,
-          "gravity": 4.9,
-          "ph": 4.32
+          "temp": 69.0,
+          "gravity": 3.5,
+          "ph": null
         },
-        "cellarPrevReading": "2026-11-11",
+        "cellarPrevReading": "2026-11-13",
         "cellarPrevReadingValues": {
           "temp": 70.0,
-          "gravity": 11.8,
-          "ph": 4.62
+          "gravity": 3.8,
+          "ph": 4.38
         },
         "abvLastReading": "2026-11-19",
         "abvLastValue": 6.8,
@@ -12196,7 +12501,7 @@ const FERMENTERS = [
         "vdkLastValue": 0.0,
         "vicinityDepartedAt": null,
         "vacated": false,
-        "readingAgeDays": 8,
+        "readingAgeDays": 5,
         "batchAgeDays": 10
       },
       {
@@ -12278,20 +12583,20 @@ const FERMENTERS = [
           10
         ],
         "firstEvidence": "2026-11-06",
-        "lastEvidence": "2026-11-12",
+        "lastEvidence": "2026-11-13",
         "brewDate": "2026-11-06",
         "vicinityResidentAsOf": "2026-11-09",
-        "cellarLastReading": "2026-11-12",
+        "cellarLastReading": "2026-11-13",
         "cellarLastReadingValues": {
           "temp": 70.0,
-          "gravity": 2.6,
-          "ph": 4.24
+          "gravity": 2.4,
+          "ph": 4.25
         },
-        "cellarPrevReading": "2026-11-11",
+        "cellarPrevReading": "2026-11-12",
         "cellarPrevReadingValues": {
           "temp": 70.0,
           "gravity": 2.6,
-          "ph": 4.39
+          "ph": 4.24
         },
         "abvLastReading": "2026-11-20",
         "abvLastValue": 9.47,
@@ -12299,7 +12604,7 @@ const FERMENTERS = [
         "vdkLastValue": 0.0,
         "vicinityDepartedAt": null,
         "vacated": false,
-        "readingAgeDays": 8,
+        "readingAgeDays": 7,
         "batchAgeDays": 14
       },
       {
@@ -12474,24 +12779,28 @@ const FERMENTERS = [
           75
         ],
         "firstEvidence": "2026-11-11",
-        "lastEvidence": "2026-11-12",
+        "lastEvidence": "2026-11-13",
         "brewDate": "2026-11-11",
         "vicinityResidentAsOf": null,
-        "cellarLastReading": "2026-11-12",
+        "cellarLastReading": "2026-11-13",
         "cellarLastReadingValues": {
+          "temp": 68.0,
+          "gravity": 3.1,
+          "ph": 4.1
+        },
+        "cellarPrevReading": "2026-11-12",
+        "cellarPrevReadingValues": {
           "temp": 67.0,
           "gravity": 7.9,
           "ph": 4.58
         },
-        "cellarPrevReading": null,
-        "cellarPrevReadingValues": null,
         "abvLastReading": "2026-11-16",
         "abvLastValue": 4.27,
         "vdkLastReading": "2026-11-13",
         "vdkLastValue": 0.0,
         "vicinityDepartedAt": "2026-11-13",
         "vacated": false,
-        "readingAgeDays": 8,
+        "readingAgeDays": 7,
         "batchAgeDays": 9
       },
       {
@@ -14496,11 +14805,15 @@ const FERMENTERS = [
           56
         ],
         "firstEvidence": "2026-11-12",
-        "lastEvidence": "2026-11-12",
+        "lastEvidence": "2026-11-13",
         "brewDate": "2026-11-12",
         "vicinityResidentAsOf": "2026-11-12",
-        "cellarLastReading": null,
-        "cellarLastReadingValues": null,
+        "cellarLastReading": "2026-11-13",
+        "cellarLastReadingValues": {
+          "temp": 56.0,
+          "gravity": 16.7,
+          "ph": 4.64
+        },
         "cellarPrevReading": null,
         "cellarPrevReadingValues": null,
         "abvLastReading": "2026-11-19",
@@ -14509,7 +14822,7 @@ const FERMENTERS = [
         "vdkLastValue": 0.0,
         "vicinityDepartedAt": null,
         "vacated": false,
-        "readingAgeDays": null,
+        "readingAgeDays": 7,
         "batchAgeDays": 8
       },
       {
@@ -15360,11 +15673,15 @@ const FERMENTERS = [
           69
         ],
         "firstEvidence": "2026-11-12",
-        "lastEvidence": "2026-11-12",
+        "lastEvidence": "2026-11-13",
         "brewDate": "2026-11-12",
         "vicinityResidentAsOf": "2026-11-12",
-        "cellarLastReading": null,
-        "cellarLastReadingValues": null,
+        "cellarLastReading": "2026-11-13",
+        "cellarLastReadingValues": {
+          "temp": 56.0,
+          "gravity": 9.9,
+          "ph": 4.67
+        },
         "cellarPrevReading": null,
         "cellarPrevReadingValues": null,
         "abvLastReading": "2026-11-19",
@@ -15373,7 +15690,7 @@ const FERMENTERS = [
         "vdkLastValue": 0.0404,
         "vicinityDepartedAt": null,
         "vacated": false,
-        "readingAgeDays": null,
+        "readingAgeDays": 7,
         "batchAgeDays": 8
       },
       {
@@ -16626,7 +16943,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-11-20",
-  "lastSync": "Nov 20, 2026 \u00b7 12:13 PM"
+  "lastSync": "Nov 20, 2026 \u00b7 4:12 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
