@@ -6865,6 +6865,8 @@ const BATCHES = [
         "SRM": 6.687817258883249,
         "IBU": 20.200000000000003,
         "pH": 4.37,
+        "DO": 43.0,
+        "CO2 Vols": 2.66,
         "Calories": 255.2,
         "ADF": 88.05,
         "RDF": 73.33,
@@ -7581,6 +7583,18 @@ const BATCHES = [
         "project": "packaging",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10514374841",
         "completed": true,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-11-23",
+        "action": "PACKAGE",
+        "from": "BT23",
+        "to": "",
+        "volume": null,
+        "detail": "350 CASES",
+        "project": "packaging",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/43304307/todos/10530628462",
+        "completed": false,
         "remainingBbl": null
       }
     ],
@@ -17051,7 +17065,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-11-22",
-  "lastSync": "Nov 22, 2026 \u00b7 4:02 PM"
+  "lastSync": "Nov 22, 2026 \u00b7 8:14 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
