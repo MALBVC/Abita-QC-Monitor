@@ -7659,15 +7659,35 @@ const BATCHES = [
     "age": 18,
     "stage": "Aging",
     "tank": "BH11",
-    "labTank": "TK30",
+    "labTank": "TK26",
     "tankSource": "vicinity",
     "tankRemainingBbl": 154.0,
     "tankBrewedBbl": 154.0,
     "tankConflicts": [],
-    "lastReading": "2026-11-23",
+    "lastReading": "2026-11-24",
     "lastSource": "FIN",
-    "numReadings": 13,
+    "numReadings": 14,
     "readings": [
+      {
+        "date": "2026-11-24",
+        "sample": "DTG 010 TK26",
+        "stage": "FIN",
+        "tank": "TK26",
+        "sourceFile": "finished abita beer 2026.xlsx",
+        "sourceSheet": "DGT",
+        "pH": 4.3,
+        "DO": 38.0,
+        "CO2 Vols": 2.71,
+        "Calories": 253.88,
+        "ADF": 88.21,
+        "RDF": 73.45,
+        "OG": 18.85,
+        "AE": 2.22,
+        "RE": 5.39,
+        "HAZE": 4521.877876281738,
+        "SG": 1.00866,
+        "ABV": 9.2
+      },
       {
         "date": "2026-11-23",
         "sample": "DTG 010 TK30",
@@ -7891,15 +7911,21 @@ const BATCHES = [
         "value": 2.22,
         "low": 2.7,
         "high": 3.5,
-        "date": "2026-11-23",
+        "date": "2026-11-24",
         "stage": "FIN",
-        "sample": "DTG 010 TK30",
+        "sample": "DTG 010 TK26",
         "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10533267943",
         "acknowledged": false,
         "ackBy": null,
         "ackAt": null,
         "ackNote": null,
         "also": [
+          {
+            "value": 2.22,
+            "date": "2026-11-23",
+            "stage": "FIN",
+            "sample": "DTG 010 TK30"
+          },
           {
             "value": 2.38,
             "date": "2026-11-20",
@@ -7967,12 +7993,12 @@ const BATCHES = [
     "aeLatest": {
       "v": 2.22,
       "stage": "FIN",
-      "date": "2026-11-23"
+      "date": "2026-11-24"
     },
     "abvLatest": {
-      "v": 9.18,
+      "v": 9.2,
       "stage": "FIN",
-      "date": "2026-11-23"
+      "date": "2026-11-24"
     }
   },
   {
@@ -17383,7 +17409,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-11-24",
-  "lastSync": "Nov 24, 2026 \u00b7 12:13 AM"
+  "lastSync": "Nov 24, 2026 \u00b7 4:13 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
