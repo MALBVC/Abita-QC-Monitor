@@ -6004,6 +6004,54 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 595.0
+      },
+      {
+        "date": "2026-11-24",
+        "action": "FILTER",
+        "from": "BH51",
+        "to": "BT29",
+        "volume": 180.0,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10542680389",
+        "completed": false,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-11-24",
+        "action": "FILTER",
+        "from": "BH51",
+        "to": "BT31",
+        "volume": 112.0,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10542971749",
+        "completed": false,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-11-24",
+        "action": "FILTER",
+        "from": "BH51",
+        "to": "BT28",
+        "volume": 112.0,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10542991259",
+        "completed": false,
+        "remainingBbl": null
+      },
+      {
+        "date": "2026-11-24",
+        "action": "FILTER",
+        "from": "BH51",
+        "to": "BT30",
+        "volume": null,
+        "detail": null,
+        "project": "cellar",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217542/todos/10542994879",
+        "completed": false,
+        "remainingBbl": null
       }
     ],
     "packagingLog": [],
@@ -8354,12 +8402,12 @@ const BATCHES = [
     "brewNums": [
       2
     ],
-    "brewDate": null,
-    "brewDateSource": null,
+    "brewDate": "2026-11-24",
+    "brewDateSource": "basecamp",
     "brewer": null,
     "brewVolumeBbl": null,
     "vicinityStage": null,
-    "age": null,
+    "age": 0,
     "stage": "Fermenting",
     "tank": "",
     "labTank": "",
@@ -8385,7 +8433,20 @@ const BATCHES = [
     ],
     "fermLog": [],
     "yeastPitches": [],
-    "transferLog": [],
+    "transferLog": [
+      {
+        "date": "2026-11-24",
+        "action": "BREW",
+        "from": "",
+        "to": "BH20",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10543289424",
+        "completed": false,
+        "remainingBbl": null
+      }
+    ],
     "packagingLog": [],
     "basecampAlerts": [],
     "aeLatest": null,
@@ -17409,7 +17470,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-11-24",
-  "lastSync": "Nov 24, 2026 \u00b7 8:13 AM"
+  "lastSync": "Nov 24, 2026 \u00b7 12:14 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
