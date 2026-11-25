@@ -3941,7 +3941,7 @@ const BATCHES = [
     "tankConflicts": [],
     "lastReading": "2026-11-18",
     "lastSource": "FERM",
-    "numReadings": 4,
+    "numReadings": 5,
     "readings": [
       {
         "date": "2026-11-18",
@@ -3989,6 +3989,17 @@ const BATCHES = [
         "yeastSource": "BH13",
         "yeastBrewNum": null,
         "countType": "FV"
+      },
+      {
+        "date": "2026-11-25",
+        "tank": "BH20",
+        "cellCount": 75000000.0,
+        "viability": 0.914,
+        "pitchRate": null,
+        "yeastGen": null,
+        "yeastSource": "BH13",
+        "yeastBrewNum": null,
+        "countType": "24hr"
       }
     ],
     "transferLog": [
@@ -5099,6 +5110,64 @@ const BATCHES = [
       "stage": "FERM",
       "date": "2026-10-15"
     }
+  },
+  {
+    "id": "AND 059, 060",
+    "product": "AND",
+    "section": "brewhouse",
+    "brewNums": [
+      59,
+      60
+    ],
+    "brewDate": "2026-11-25",
+    "brewDateSource": "basecamp",
+    "brewer": null,
+    "brewVolumeBbl": null,
+    "vicinityStage": null,
+    "age": 0,
+    "stage": "Fermenting",
+    "tank": "BH27",
+    "labTank": "BH27",
+    "tankSource": "lab",
+    "tankRemainingBbl": null,
+    "tankBrewedBbl": null,
+    "tankConflicts": [],
+    "lastReading": null,
+    "lastSource": null,
+    "numReadings": 1,
+    "readings": [],
+    "fermLog": [],
+    "yeastPitches": [
+      {
+        "date": "2026-11-25",
+        "tank": "BH27",
+        "cellCount": 3100000000.0,
+        "viability": 0.946,
+        "pitchRate": 85.62,
+        "yeastGen": "L-7",
+        "yeastSource": "BH45",
+        "yeastBrewNum": "AMB67",
+        "countType": "Yeast"
+      }
+    ],
+    "transferLog": [
+      {
+        "date": "2026-11-25",
+        "action": "BREW",
+        "from": "",
+        "to": "BH27",
+        "volume": null,
+        "detail": null,
+        "project": "brewhouse",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/41217528/todos/10543310558",
+        "completed": false,
+        "remainingBbl": null
+      }
+    ],
+    "packagingLog": [],
+    "basecampAlerts": [],
+    "aeLatest": null,
+    "abvLatest": null
   },
   {
     "id": "AND 057, 058",
@@ -7791,6 +7860,20 @@ const BATCHES = [
       {
         "date": "2026-11-18",
         "action": "TRANSFER",
+        "from": "BT25",
+        "to": "BT29",
+        "volume": 26.0,
+        "lossBbl": 0.0,
+        "sameLot": false,
+        "destComponentPrefix": "BBT",
+        "detail": null,
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 26.0
+      },
+      {
+        "date": "2026-11-18",
+        "action": "TRANSFER",
         "from": "UV33",
         "to": "BT29",
         "volume": 152.0,
@@ -7803,18 +7886,18 @@ const BATCHES = [
         "remainingBbl": 228.0
       },
       {
-        "date": "2026-11-18",
+        "date": "2026-11-19",
         "action": "TRANSFER",
         "from": "BT25",
-        "to": "BT29",
-        "volume": 26.0,
+        "to": "BT33",
+        "volume": 17.0,
         "lossBbl": 0.0,
         "sameLot": false,
         "destComponentPrefix": "BBT",
         "detail": null,
         "project": "vicinity",
         "completed": true,
-        "remainingBbl": 178.0
+        "remainingBbl": 17.0
       },
       {
         "date": "2026-11-19",
@@ -7829,20 +7912,6 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 0.0
-      },
-      {
-        "date": "2026-11-19",
-        "action": "TRANSFER",
-        "from": "BT25",
-        "to": "BT33",
-        "volume": 17.0,
-        "lossBbl": 0.0,
-        "sameLot": false,
-        "destComponentPrefix": "BBT",
-        "detail": null,
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 245.0
       },
       {
         "date": "2026-11-19",
@@ -13785,7 +13854,9 @@ const FERMENTERS = [
   {
     "tank": "BH27",
     "status": "active",
-    "occupantIds": [],
+    "occupantIds": [
+      "AND 059, 060"
+    ],
     "vicinityOccupants": [],
     "resolvedOccupancy": [
       {
@@ -16683,7 +16754,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-11-25",
-  "lastSync": "Nov 25, 2026 \u00b7 8:13 AM"
+  "lastSync": "Nov 25, 2026 \u00b7 12:11 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
