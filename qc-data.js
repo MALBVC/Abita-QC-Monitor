@@ -7791,20 +7791,6 @@ const BATCHES = [
       {
         "date": "2026-11-18",
         "action": "TRANSFER",
-        "from": "BT25",
-        "to": "BT29",
-        "volume": 26.0,
-        "lossBbl": 0.0,
-        "sameLot": false,
-        "destComponentPrefix": "BBT",
-        "detail": null,
-        "project": "vicinity",
-        "completed": true,
-        "remainingBbl": 26.0
-      },
-      {
-        "date": "2026-11-18",
-        "action": "TRANSFER",
         "from": "UV33",
         "to": "BT29",
         "volume": 152.0,
@@ -7815,6 +7801,20 @@ const BATCHES = [
         "project": "vicinity",
         "completed": true,
         "remainingBbl": 228.0
+      },
+      {
+        "date": "2026-11-18",
+        "action": "TRANSFER",
+        "from": "BT25",
+        "to": "BT29",
+        "volume": 26.0,
+        "lossBbl": 0.0,
+        "sameLot": false,
+        "destComponentPrefix": "BBT",
+        "detail": null,
+        "project": "vicinity",
+        "completed": true,
+        "remainingBbl": 178.0
       },
       {
         "date": "2026-11-19",
@@ -16683,7 +16683,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-11-25",
-  "lastSync": "Nov 25, 2026 \u00b7 4:13 AM"
+  "lastSync": "Nov 25, 2026 \u00b7 8:13 AM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
