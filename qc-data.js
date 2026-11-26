@@ -3800,10 +3800,30 @@ const BATCHES = [
     "tankRemainingBbl": null,
     "tankBrewedBbl": null,
     "tankConflicts": [],
-    "lastReading": "2026-11-18",
-    "lastSource": "FERM",
-    "numReadings": 5,
+    "lastReading": "2026-11-25",
+    "lastSource": "WORT",
+    "numReadings": 6,
     "readings": [
+      {
+        "date": "2026-11-25",
+        "sample": "SHL 002 BH20",
+        "stage": "WORT",
+        "tank": "BH20",
+        "sourceFile": "wort abita samples 2026.xlsx",
+        "sourceSheet": "SHL",
+        "Wort pH": 5.3,
+        "SRM": 3.6675126903553297,
+        "IBU (W)": 11.4,
+        "Calories": 130.42,
+        "ADF": -1.03,
+        "RDF": -0.88,
+        "OG": 8.96,
+        "AE": 9.06,
+        "RE": 9.04,
+        "HAZE": 1658.6175327301025,
+        "SG": 1.0361,
+        "ABV": -0.05
+      },
       {
         "date": "2026-11-18",
         "sample": "SHL 01-02 BH23",
@@ -3878,7 +3898,23 @@ const BATCHES = [
       }
     ],
     "packagingLog": [],
-    "basecampAlerts": [],
+    "basecampAlerts": [
+      {
+        "metric": "OG",
+        "value": 8.96,
+        "low": 9.0,
+        "high": 9.4,
+        "date": "2026-11-25",
+        "stage": "WORT",
+        "sample": "SHL 002 BH20",
+        "basecampUrl": "https://app.basecamp.com/3359742/buckets/47764115/todos/10548922386",
+        "acknowledged": false,
+        "ackBy": null,
+        "ackAt": null,
+        "ackNote": null,
+        "also": []
+      }
+    ],
     "aeLatest": null,
     "abvLatest": {
       "v": 4.55,
@@ -4995,7 +5031,7 @@ const BATCHES = [
     "tankConflicts": [],
     "lastReading": null,
     "lastSource": null,
-    "numReadings": 1,
+    "numReadings": 2,
     "readings": [],
     "fermLog": [],
     "yeastPitches": [
@@ -5009,6 +5045,17 @@ const BATCHES = [
         "yeastSource": "BH45",
         "yeastBrewNum": "AMB67",
         "countType": "Yeast"
+      },
+      {
+        "date": "2026-11-25",
+        "tank": "BH27",
+        "cellCount": 43333040.666666664,
+        "viability": null,
+        "pitchRate": null,
+        "yeastGen": "L-7",
+        "yeastSource": "BH45",
+        "yeastBrewNum": "AMB67",
+        "countType": "FV"
       }
     ],
     "transferLog": [
@@ -6343,7 +6390,7 @@ const BATCHES = [
     ],
     "packagingLog": [
       {
-        "date": "2026-11-24",
+        "date": "2026-11-18",
         "action": "PACKAGE",
         "from": "BT31",
         "to": "",
@@ -6407,7 +6454,7 @@ const BATCHES = [
     "tankConflicts": [],
     "lastReading": "2026-11-25",
     "lastSource": "FERM",
-    "numReadings": 1,
+    "numReadings": 2,
     "readings": [
       {
         "date": "2026-11-25",
@@ -6419,6 +6466,17 @@ const BATCHES = [
         "ABV": 5.51,
         "Turbidity": 990.2244501113892,
         "AE": 2.69
+      },
+      {
+        "date": "2026-11-25",
+        "sample": "TBD 8 BH22",
+        "stage": "GC",
+        "tank": "BH22",
+        "sourceFile": "gc 2026.xlsx",
+        "sourceSheet": "NOV",
+        "Diacetyl": 0.0,
+        "Pentanedione": 0.0,
+        "Total VDK": 0.0
       }
     ],
     "fermLog": [],
@@ -7218,15 +7276,35 @@ const BATCHES = [
     "age": 21,
     "stage": "Brite",
     "tank": "BT30",
-    "labTank": "BT28",
+    "labTank": "BT30",
     "tankSource": "vicinity",
     "tankRemainingBbl": 0.0,
     "tankBrewedBbl": 595.0,
     "tankConflicts": [],
-    "lastReading": "2026-11-24",
+    "lastReading": "2026-11-25",
     "lastSource": "BBT",
-    "numReadings": 15,
+    "numReadings": 16,
     "readings": [
+      {
+        "date": "2026-11-25",
+        "sample": "AMB 63-65 BT30",
+        "stage": "BBT",
+        "tank": "BT30",
+        "sourceFile": "bbt abita beer - control charts 2026 updated.xlsx",
+        "sourceSheet": "A",
+        "SRM": 16.39593908629442,
+        "IBU": 11.799999999999999,
+        "pH": 4.19,
+        "Calories": 136.37,
+        "ADF": 81.87,
+        "RDF": 67.33,
+        "OG": 10.46,
+        "AE": 1.9,
+        "RE": 3.54,
+        "HAZE": 20.763404577970505,
+        "SG": 1.00738,
+        "ABV": 4.5
+      },
       {
         "date": "2026-11-24",
         "sample": "AMB 63-65 BT28",
@@ -7237,6 +7315,8 @@ const BATCHES = [
         "SRM": 16.51015228426396,
         "IBU": 13.55,
         "pH": 4.0,
+        "DO": 70.0,
+        "CO2 Vols": 2.66,
         "Calories": 136.36,
         "ADF": 81.9,
         "RDF": 67.35,
@@ -7258,7 +7338,7 @@ const BATCHES = [
         "IBU": 12.4,
         "pH": 3.98,
         "DO": 41.0,
-        "CO2 Vols": 2.61,
+        "CO2 Vols": 2.63,
         "Calories": 136.77,
         "ADF": 81.95,
         "RDF": 67.39,
@@ -7279,8 +7359,8 @@ const BATCHES = [
         "SRM": 16.941624365482234,
         "IBU": 12.15,
         "pH": 4.01,
-        "DO": 38.0,
-        "CO2 Vols": 2.66,
+        "DO": 41.0,
+        "CO2 Vols": 2.61,
         "Calories": 136.99,
         "ADF": 81.91,
         "RDF": 67.37,
@@ -7645,14 +7725,14 @@ const BATCHES = [
       }
     ],
     "aeLatest": {
-      "v": 1.89,
+      "v": 1.9,
       "stage": "BBT",
-      "date": "2026-11-24"
+      "date": "2026-11-25"
     },
     "abvLatest": {
-      "v": 4.51,
+      "v": 4.5,
       "stage": "BBT",
-      "date": "2026-11-24"
+      "date": "2026-11-25"
     }
   },
   {
@@ -13004,8 +13084,8 @@ const FERMENTERS = [
         "cellarPrevReadingValues": null,
         "abvLastReading": "2026-11-25",
         "abvLastValue": 5.51,
-        "vdkLastReading": null,
-        "vdkLastValue": null,
+        "vdkLastReading": "2026-11-25",
+        "vdkLastValue": 0.0,
         "vicinityDepartedAt": null,
         "vacated": false,
         "readingAgeDays": null,
@@ -16356,7 +16436,7 @@ const PIPELINE_META = {
     "TBD"
   ],
   "lastRun": "2026-11-25",
-  "lastSync": "Nov 25, 2026 \u00b7 4:13 PM"
+  "lastSync": "Nov 25, 2026 \u00b7 8:13 PM"
 };
 
 Object.assign(window, { SPECS, BATCHES, FERMENTERS, PIPELINE_META, checkSpec, computeOOS });
